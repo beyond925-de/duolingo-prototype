@@ -52,7 +52,8 @@ export default function Beyond925() {
     : null;
 
   const completedCount = levels.filter((l) => l.status === "completed").length;
-  const progress = (completedCount / levels.length) * 100;
+  const progress =
+    levels.length > 0 ? (completedCount / levels.length) * 100 : 0;
 
   const handleJobSelect = (job: Job) => {
     setSelectedJob(job);

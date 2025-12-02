@@ -132,7 +132,68 @@ export function InteractionView({
   }, [particleIdCounter]);
 
   return (
-    <div className="flex h-screen flex-col bg-white">
+    <div className="relative flex h-screen flex-col bg-white">
+      <header className="absolute left-0 right-0 top-0 z-50 flex items-center justify-between gap-3 px-2 py-2">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={onExit}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100/50 backdrop-blur-sm transition hover:bg-slate-100"
+            aria-label="Zurück"
+          >
+            <X className="h-5 w-5 text-slate-600" />
+          </button>
+          <button
+            onClick={() => {
+              spawnParticle();
+            }}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100/50 backdrop-blur-sm transition hover:bg-slate-200"
+          >
+            ⚙️
+          </button>
+        </div>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => {
+              setHelpOpen(true);
+              setLoading(true);
+              // Simulate loading a tip
+              setTimeout(() => {
+                setHelpText(
+                  "💡 Tipp: Denk daran, dass Sicherheit und Qualität bei TechSteel immer Priorität haben!"
+                );
+                setLoading(false);
+              }, 500);
+            }}
+            className="flex items-center gap-2 rounded-full bg-slate-100/50 px-2 py-2 text-sm font-semibold text-slate-700 backdrop-blur-sm transition hover:bg-slate-200"
+          >
+            <span>?</span>
+            Tip holen
+          </button>
+          <div className="flex grow items-center justify-center">
+            <div className="size-10 rounded-full bg-slate-100/50 backdrop-blur-sm">
+              <CircularProgressbarWithChildren
+                value={progressPercentage}
+                styles={{
+                  path: {
+                    stroke: "#8b5cf6",
+                    strokeLinecap: "round",
+                    transition: "stroke-dashoffset 0.5s ease 0s",
+                  },
+                  trail: {
+                    stroke: "#e5e7eb",
+                  },
+                }}
+              >
+                <div className="flex flex-col items-center justify-center">
+                  <span className="text-xs font-bold text-purple-600">
+                    {currentScenarioIndex + 1}/{totalScenarios}
+                  </span>
+                </div>
+              </CircularProgressbarWithChildren>
+            </div>
+          </div>
+        </div>
+      </header>
       <div className="flex-1 overflow-auto pb-6">
         <div className="mx-auto max-w-2xl">
           <div className="relative overflow-hidden border-b-0 border-purple-200 bg-slate-100">
@@ -141,68 +202,6 @@ export function InteractionView({
               alt={currentLevel.title}
               className="h-[150px] w-full object-cover lg:h-[320px]"
             />
-
-            <header className="absolute left-0 right-0 top-0 flex items-center justify-between gap-3 px-2 py-2">
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={onExit}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100/50 backdrop-blur-sm transition hover:bg-slate-100"
-                  aria-label="Zurück"
-                >
-                  <X className="h-5 w-5 text-slate-600" />
-                </button>
-                <button
-                  onClick={() => {
-                    spawnParticle();
-                  }}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100/50 backdrop-blur-sm transition hover:bg-slate-200"
-                >
-                  ⚙️
-                </button>
-              </div>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => {
-                    setHelpOpen(true);
-                    setLoading(true);
-                    // Simulate loading a tip
-                    setTimeout(() => {
-                      setHelpText(
-                        "💡 Tipp: Denk daran, dass Sicherheit und Qualität bei TechSteel immer Priorität haben!"
-                      );
-                      setLoading(false);
-                    }, 500);
-                  }}
-                  className="flex items-center gap-2 rounded-full bg-slate-100/50 px-2 py-2 text-sm font-semibold text-slate-700 backdrop-blur-sm transition hover:bg-slate-200"
-                >
-                  <span>?</span>
-                  Tip holen
-                </button>
-                <div className="flex grow items-center justify-center">
-                  <div className="size-10 rounded-full bg-slate-100/50 backdrop-blur-sm">
-                    <CircularProgressbarWithChildren
-                      value={progressPercentage}
-                      styles={{
-                        path: {
-                          stroke: "#8b5cf6",
-                          strokeLinecap: "round",
-                          transition: "stroke-dashoffset 0.5s ease 0s",
-                        },
-                        trail: {
-                          stroke: "#e5e7eb",
-                        },
-                      }}
-                    >
-                      <div className="flex flex-col items-center justify-center">
-                        <span className="text-xs font-bold text-purple-600">
-                          {currentScenarioIndex + 1}/{totalScenarios}
-                        </span>
-                      </div>
-                    </CircularProgressbarWithChildren>
-                  </div>
-                </div>
-              </div>
-            </header>
           </div>
 
           <div className="mb-6 rounded-b-3xl border-purple-200 bg-purple-50 px-4 py-4">
@@ -506,6 +505,7 @@ export function InteractionView({
         }}
       >
         <DialogContent
+          showCloseButton={false}
           onInteractOutside={(e) => {
             e.preventDefault();
           }}
@@ -532,6 +532,7 @@ export function InteractionView({
         }}
       >
         <DialogContent
+          showCloseButton={false}
           onInteractOutside={(e) => {
             e.preventDefault();
           }}
@@ -558,6 +559,7 @@ export function InteractionView({
         }}
       >
         <DialogContent
+          showCloseButton={false}
           onInteractOutside={(e) => {
             e.preventDefault();
           }}
