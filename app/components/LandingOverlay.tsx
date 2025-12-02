@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+
 import { config } from "../config";
 
 interface LandingOverlayProps {

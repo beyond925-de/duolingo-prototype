@@ -1,8 +1,9 @@
-import { Settings } from "lucide-react";
-import { Check, Lock } from "lucide-react";
+import { Check, Lock, Settings } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
+
 import { config } from "../config";
 import { Level } from "../types";
 

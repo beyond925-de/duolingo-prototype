@@ -1,15 +1,17 @@
 "use client";
 
 import { useState } from "react";
+
 import { useWindowSize } from "react-use";
-import { config } from "./config";
-import { Screen, Level } from "./types";
+
 import { LandingOverlay } from "./components/LandingOverlay";
 import { SettingsModal } from "./components/SettingsModal";
 import { MapView } from "./components/MapView";
 import { InteractionView } from "./components/InteractionView";
 import { VictoryView } from "./components/VictoryView";
 import { ExpressApplyView } from "./components/ExpressApplyView";
+import { config } from "./config";
+import { Screen, Level } from "./types";
 
 export default function Beyond925() {
   const { width, height } = useWindowSize();
@@ -22,7 +24,7 @@ export default function Beyond925() {
   const [textAnswer, setTextAnswer] = useState("");
   const [status, setStatus] = useState<"none" | "wrong" | "correct">("none");
   const [showConfetti, setShowConfetti] = useState(false);
-  const [score, setScore] = useState(0);
+  const [_score, setScore] = useState(0);
   const [formData, setFormData] = useState({
     firstName: "",
     phoneType: "",

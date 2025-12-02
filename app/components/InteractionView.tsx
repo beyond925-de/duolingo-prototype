@@ -1,4 +1,7 @@
-import { ArrowRight, Settings } from "lucide-react";
+import { useCallback, useState } from "react";
+
+import { ArrowRight } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -8,9 +11,9 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-import { Level } from "../types";
+
 import { config } from "../config";
-import { useCallback, useState } from "react";
+import { Level } from "../types";
 
 interface InteractionViewProps {
   currentLevel: Level;
@@ -44,7 +47,7 @@ export function InteractionView({
   onOptionSelect,
   onTextAnswerChange,
   onContinue,
-  onSettingsClick,
+  onSettingsClick: _onSettingsClick,
   onHintToggle,
   onExpressApply,
 }: InteractionViewProps) {
@@ -58,7 +61,7 @@ export function InteractionView({
   const [helpOpen, setHelpOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [helpText, setHelpText] = useState("");
-  const [gearClickCount, setGearClickCount] = useState(0);
+  const [, setGearClickCount] = useState(0);
   const [funDialogOpen, setFunDialogOpen] = useState(false);
   const [funDialog50Open, setFunDialog50Open] = useState(false);
   const [funDialog100Open, setFunDialog100Open] = useState(false);
@@ -218,7 +221,6 @@ export function InteractionView({
                   value={textAnswer}
                   onChange={(e) => {
                     onTextAnswerChange(e.target.value);
-                    onOptionSelect(undefined as any);
                   }}
                   placeholder="Bedienungsanleitung suchen?  Kollegen fragen?"
                   className="w-full rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 pr-14 text-base focus:border-purple-300 focus:outline-none"

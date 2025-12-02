@@ -1,5 +1,5 @@
-import { Level } from "./types";
 import { images } from "./images";
+import { Level } from "./types";
 
 export const config = {
   company: {

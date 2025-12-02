@@ -1,8 +1,11 @@
+import { useState } from "react";
+
 import { X, ChevronDown } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
 import { config } from "../config";
-import { useState } from "react";
 
 interface ExpressApplyViewProps {
   formData: {

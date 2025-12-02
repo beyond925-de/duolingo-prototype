@@ -1,5 +1,7 @@
 import Confetti from "react-confetti";
+
 import { Button } from "@/components/ui/button";
+
 import { config } from "../config";
 
 interface VictoryViewProps {
