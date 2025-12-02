@@ -20,7 +20,7 @@ const QuestsPage = async () => {
 
   if (!userProgress || !userProgress.activeCourse) redirect("/courses");
 
-  const isPro = !!userSubscription?.isActive;
+  const isPro = true;
 
   return (
     <div className="flex flex-row-reverse gap-[48px] px-6">
