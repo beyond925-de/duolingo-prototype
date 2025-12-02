@@ -1,6 +1,35 @@
 import { images } from "./images";
 import { Job } from "./types";
 
+/**
+ * Level Type Examples:
+ *
+ * 1. single-select-correct: Single select with correct answer
+ *    - Options have correct: true/false
+ *    - Shows correct/wrong feedback
+ *    - User must select correct answer to proceed
+ *
+ * 2. single-select-no-correct: Single select with no right answer
+ *    - Options don't need correct property
+ *    - Shows feedback for any selection
+ *    - User can select any option to proceed
+ *
+ * 3. multiple-select: Multiple select
+ *    - Options have correct: true/false
+ *    - User can select multiple options
+ *    - All correct options must be selected (and no incorrect ones)
+ *
+ * 4. text-field: Custom answer text field
+ *    - No options needed (or empty array)
+ *    - User enters free text
+ *    - allowTextInput is automatically true
+ *
+ * 5. single-select-or-text: Single select or custom text input
+ *    - Options available for selection
+ *    - OR user can enter custom text
+ *    - allowTextInput should be true
+ */
+
 export const config = {
   company: {
     name: "Sollich",
@@ -75,7 +104,7 @@ export const config = {
               scenario:
                 "Auf der Werkbank liegen viele verschiedene Feilen: grobe, feine, runde und flache 🛠️. Du musst eine runde Ecke in das Metall formen. Welche nimmst du? 🧐",
               imageUrl: images[1].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -112,7 +141,7 @@ export const config = {
               scenario:
                 "Du hast das Material ausgewählt. Bevor du loslegst, solltest du es mit der Schieblehre prüfen. Dein Ausbilder sagt: 'Immer erst messen, dann arbeiten.' Warum ist das wichtig? 📐",
               imageUrl: images[3].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -137,6 +166,50 @@ export const config = {
                 },
               ],
             },
+            {
+              id: 3,
+              scenario:
+                "Bevor du mit der Arbeit beginnst, musst du die richtige Schutzausrüstung anlegen. Welche der folgenden Sicherheitsmaßnahmen sind wichtig? (Wähle alle zutreffenden) 🛡️",
+              imageUrl: images[1].uploadUrl,
+              type: "multiple-select" as const,
+              options: [
+                {
+                  id: 1,
+                  text: "Schutzbrille tragen",
+                  correct: true,
+                  feedback:
+                    "Richtig! Schutzbrillen schützen deine Augen vor Funken und Spänen. 👓",
+                },
+                {
+                  id: 2,
+                  text: "Handschuhe anziehen",
+                  correct: true,
+                  feedback:
+                    "Genau! Handschuhe schützen vor Schnitten und Verbrennungen. 🧤",
+                },
+                {
+                  id: 3,
+                  text: "Gehörschutz verwenden",
+                  correct: true,
+                  feedback:
+                    "Korrekt! Lärm kann das Gehör dauerhaft schädigen. 🎧",
+                },
+                {
+                  id: 4,
+                  text: "Lange Haare offen tragen",
+                  correct: false,
+                  feedback:
+                    "Falsch! Lange Haare müssen zusammengebunden werden, damit sie nicht in Maschinen geraten. ⚠️",
+                },
+                {
+                  id: 5,
+                  text: "Schmuck ablegen",
+                  correct: true,
+                  feedback:
+                    "Richtig! Schmuck kann in Maschinen hängen bleiben und zu Verletzungen führen. 💍",
+                },
+              ],
+            },
           ],
         },
         {
@@ -146,11 +219,11 @@ export const config = {
           icon: "📋",
           scenarios: [
             {
-              id: 3,
+              id: 4,
               scenario:
                 "Du hast die Zeichnung vor dir. Dein Werkstück soll genau nach Plan entstehen. Wie gehst du vor? 📐",
               imageUrl: images[8].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -176,11 +249,11 @@ export const config = {
               ],
             },
             {
-              id: 4,
+              id: 5,
               scenario:
                 "Dein Werkstück ist fertig. Jetzt kommt die Qualitätskontrolle mit der Messschraube. Du findest eine minimale Abweichung von 0,1mm. Was machst du? 🔍",
               imageUrl: images[5].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -205,6 +278,15 @@ export const config = {
                 },
               ],
             },
+            {
+              id: 6,
+              scenario:
+                "Du hast ein Problem bei der Fertigung: Das Werkstück passt nicht richtig zusammen. Beschreibe kurz, wie du vorgehen würdest, um das Problem zu lösen. 💭",
+              imageUrl: images[8].uploadUrl,
+              type: "text-field" as const,
+              options: [],
+              allowTextInput: true,
+            },
           ],
         },
         {
@@ -214,11 +296,12 @@ export const config = {
           icon: "🏁",
           scenarios: [
             {
-              id: 5,
+              id: 7,
               scenario:
                 "Du hast alle Aufgaben gemeistert! Zeit für den wichtigsten Check: Passt die Ausbildung bei Sollich zu dir? Wir starten entspannt um 9:00 Uhr, unterstützen dich beim Führerschein und geben dir von Anfang an Verantwortung. 🌅",
               imageUrl: images[7].uploadUrl,
-              type: "reflection" as const,
+              type: "single-select-or-text" as const,
+              allowTextInput: true,
               options: [
                 {
                   id: 1,
@@ -238,7 +321,6 @@ export const config = {
                     "Nice! Genau die richtige Einstellung. Let's go! 🔥",
                 },
               ],
-              allowTextInput: false,
             },
           ],
         },
@@ -262,7 +344,7 @@ export const config = {
               scenario:
                 "Du sitzt das erste Mal am CAD-Computer 🖥️. Dein Ausbilder legt dir eine Handskizze von einem einfachen Metallwürfel mit einer Bohrung hin. Er fragt dich: 'Wie fängst du am besten an, das hier im 3D-Programm zu bauen?' 🤔",
               imageUrl: images[12].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -299,7 +381,7 @@ export const config = {
               scenario:
                 "Du sollst ein einfaches Drehteil nach Skizze modellieren. Die Skizze zeigt einen Zylinder mit einer Nut. Wie gehst du vor? 🔧",
               imageUrl: images[12].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -329,7 +411,7 @@ export const config = {
               scenario:
                 "Du brauchst Schrauben und Lager für deine Baugruppe. Wo findest du diese am schnellsten? 🔍",
               imageUrl: images[12].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -355,11 +437,38 @@ export const config = {
               ],
             },
             {
+              id: 5,
+              scenario:
+                "Du arbeitest an einem neuen Projekt. Wie fühlst du dich dabei? 🎨",
+              imageUrl: images[12].uploadUrl,
+              type: "single-select-no-correct" as const,
+              options: [
+                {
+                  id: 1,
+                  text: "Sehr motiviert und neugierig",
+                  feedback:
+                    "Das ist genau die richtige Einstellung! Neugierde treibt Innovation voran. 🚀",
+                },
+                {
+                  id: 2,
+                  text: "Etwas unsicher, aber bereit zu lernen",
+                  feedback:
+                    "Unsicherheit ist völlig normal am Anfang. Bei Sollich unterstützen wir dich dabei! 💪",
+                },
+                {
+                  id: 3,
+                  text: "Aufgeregt und gespannt",
+                  feedback:
+                    "Perfekt! Diese Energie bringt frischen Wind ins Team. ✨",
+                },
+              ],
+            },
+            {
               id: 4,
               scenario:
                 "Dein 3D-Modell ist fertig. Jetzt braucht die Werkstatt eine 2D-Zeichnung für die Fertigung. Wie erstellst du diese? 📐",
               imageUrl: images[8].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -397,7 +506,7 @@ export const config = {
               scenario:
                 "Du konstruierst gerade einen Antrieb für ein Förderband bei SOLLICH 🍫. Am Bildschirm führst du eine 'Kollisionsprüfung' durch und siehst: Der Motor ragt 5mm in ein Halteblech hinein 💥. In der echten Montage könnte das später krachen! Was tust du? 🛠️",
               imageUrl: images[12].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -434,7 +543,7 @@ export const config = {
               scenario:
                 "Du konstruierst ein Pumpengehäuse mit mehreren Teilen. Wie stellst du sicher, dass alles montierbar ist? 🔩",
               imageUrl: images[8].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -464,7 +573,7 @@ export const config = {
               scenario:
                 "Deine Baugruppe ist fertig konstruiert. Jetzt braucht die Fertigung eine Stückliste. Was gehört alles rein? 📝",
               imageUrl: images[12].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -502,7 +611,7 @@ export const config = {
               scenario:
                 "Ein großer Kunde aus den USA 🇺🇸 möchte eine riesige Überzieh-Linie kaufen. Er schickt dir den Hallenplan. Problem: Eine Betonsäule steht genau dort, wo unsere Maschine hinsoll. Der Kunde fragt: 'Können wir die Maschine irgendwie um die Säule herum bauen?' 🏗️",
               imageUrl: images[11].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -539,7 +648,7 @@ export const config = {
               scenario:
                 "Du planst die Anordnung der Maschine in der Kundenhalle. Was musst du beachten? 🏭",
               imageUrl: images[11].uploadUrl,
-              type: "validation" as const,
+              type: "single-select-correct" as const,
               options: [
                 {
                   id: 1,
@@ -577,7 +686,7 @@ export const config = {
               scenario:
                 "Du hast alle Aufgaben gemeistert! Zeit für den wichtigsten Check: Passt die Ausbildung bei Sollich zu dir? Wir starten entspannt um 9:00 Uhr, unterstützen dich beim Führerschein und geben dir von Anfang an Verantwortung. 🌅",
               imageUrl: images[7].uploadUrl,
-              type: "reflection" as const,
+              type: "single-select-no-correct" as const,
               options: [
                 {
                   id: 1,
@@ -625,7 +734,7 @@ export const config = {
     // The Nudge (Integrierte Benefits)
     nudgeHeadline: "Mal ehrlich...",
     nudgeText:
-      "Du stellst dich hier besser an als viele andere. Wir sollten uns kennenlernen. Ganz ohne Stress und Anzug. Übrigens: Bei uns startest du entspannt um 9:00 Uhr und den Führerschein supporten wir auch. ✨",
+      "Du stellst dich hier besser an als viele andere. Wir sollten uns kennenlernen. Ganz ohne Stress und Anzug. ✨",
 
     // Form Labels
     firstName: "Wie heißt du?",

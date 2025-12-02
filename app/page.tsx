@@ -24,6 +24,7 @@ export default function Beyond925() {
   const [currentLevelId, setCurrentLevelId] = useState<number | null>(null);
   const [currentScenarioIndex, setCurrentScenarioIndex] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState<number>();
+  const [selectedOptions, setSelectedOptions] = useState<number[]>([]); // For multiple-select
   const [textAnswer, setTextAnswer] = useState("");
   const [status, setStatus] = useState<"none" | "wrong" | "correct">("none");
   const [showConfetti, setShowConfetti] = useState(false);
@@ -69,6 +70,7 @@ export default function Beyond925() {
     setCurrentLevelId(null);
     setCurrentScenarioIndex(0);
     setSelectedOption(undefined);
+    setSelectedOptions([]);
     setTextAnswer("");
     setStatus("none");
     setShowHint(false);
@@ -104,15 +106,58 @@ export default function Beyond925() {
     setCurrentScenarioIndex(0);
   };
 
-  const handleOptionSelect = (id: number) => {
-    if (status !== "none") return;
+  const handleOptionSelect = (id: number | undefined) => {
+    if (status !== "none" && currentScenario?.type === "single-select-correct")
+      return;
     setSelectedOption(id);
+  };
+
+  const handleOptionsToggle = (id: number) => {
+    if (status !== "none") return;
+    setSelectedOptions((prev) =>
+      prev.includes(id) ? prev.filter((optId) => optId !== id) : [...prev, id]
+    );
   };
 
   const handleContinue = () => {
     if (!currentLevel || !currentScenario) return;
 
-    if (currentScenario.type === "reflection") {
+    const scenarioType = currentScenario.type;
+
+    // Handle text-field type
+    if (scenarioType === "text-field") {
+      if (!textAnswer.trim()) return;
+      // Check if this is the last scenario in the level
+      if (currentScenarioIndex === currentLevel.scenarios.length - 1) {
+        handleLevelComplete();
+      } else {
+        // Move to next scenario
+        setCurrentScenarioIndex((prev) => prev + 1);
+        setTextAnswer("");
+        setStatus("none");
+        setShowHint(false);
+      }
+      return;
+    }
+
+    // Handle single-select-no-correct type
+    if (scenarioType === "single-select-no-correct") {
+      if (!selectedOption) return;
+      // Check if this is the last scenario in the level
+      if (currentScenarioIndex === currentLevel.scenarios.length - 1) {
+        handleLevelComplete();
+      } else {
+        // Move to next scenario
+        setCurrentScenarioIndex((prev) => prev + 1);
+        setSelectedOption(undefined);
+        setStatus("none");
+        setShowHint(false);
+      }
+      return;
+    }
+
+    // Handle single-select-or-text type
+    if (scenarioType === "single-select-or-text") {
       if (!selectedOption && !textAnswer.trim()) return;
       // Check if this is the last scenario in the level
       if (currentScenarioIndex === currentLevel.scenarios.length - 1) {
@@ -128,38 +173,85 @@ export default function Beyond925() {
       return;
     }
 
-    if (!selectedOption) return;
+    // Handle multiple-select type
+    if (scenarioType === "multiple-select") {
+      if (selectedOptions.length === 0) return;
 
-    if (status === "wrong") {
-      setStatus("none");
-      setSelectedOption(undefined);
-      return;
-    }
-
-    if (status === "correct") {
-      // Check if this is the last scenario in the level
-      if (currentScenarioIndex === currentLevel.scenarios.length - 1) {
-        handleLevelComplete();
-      } else {
-        // Move to next scenario
-        setCurrentScenarioIndex((prev) => prev + 1);
-        setSelectedOption(undefined);
+      if (status === "wrong") {
         setStatus("none");
-        setShowHint(false);
+        setSelectedOptions([]);
+        return;
+      }
+
+      if (status === "correct") {
+        // Check if this is the last scenario in the level
+        if (currentScenarioIndex === currentLevel.scenarios.length - 1) {
+          handleLevelComplete();
+        } else {
+          // Move to next scenario
+          setCurrentScenarioIndex((prev) => prev + 1);
+          setSelectedOptions([]);
+          setStatus("none");
+          setShowHint(false);
+        }
+        return;
+      }
+
+      // Validate multiple select: all selected options must be correct
+      const allSelectedCorrect = selectedOptions.every((id) => {
+        const option = currentScenario.options.find((o) => o.id === id);
+        return option?.correct === true;
+      });
+
+      // Also check that all correct options are selected
+      const allCorrectSelected = currentScenario.options
+        .filter((o) => o.correct === true)
+        .every((o) => selectedOptions.includes(o.id));
+
+      if (allSelectedCorrect && allCorrectSelected) {
+        setStatus("correct");
+      } else {
+        setStatus("wrong");
       }
       return;
     }
 
-    const selectedOptionData = currentScenario.options.find(
-      (o) => o.id === selectedOption
-    );
+    // Handle single-select-correct type (original validation logic)
+    if (scenarioType === "single-select-correct") {
+      if (!selectedOption) return;
 
-    if (!selectedOptionData) return;
+      if (status === "wrong") {
+        setStatus("none");
+        setSelectedOption(undefined);
+        return;
+      }
 
-    if (selectedOptionData.correct) {
-      setStatus("correct");
-    } else {
-      setStatus("wrong");
+      if (status === "correct") {
+        // Check if this is the last scenario in the level
+        if (currentScenarioIndex === currentLevel.scenarios.length - 1) {
+          handleLevelComplete();
+        } else {
+          // Move to next scenario
+          setCurrentScenarioIndex((prev) => prev + 1);
+          setSelectedOption(undefined);
+          setStatus("none");
+          setShowHint(false);
+        }
+        return;
+      }
+
+      const selectedOptionData = currentScenario.options.find(
+        (o) => o.id === selectedOption
+      );
+
+      if (!selectedOptionData) return;
+
+      if (selectedOptionData.correct) {
+        setStatus("correct");
+      } else {
+        setStatus("wrong");
+      }
+      return;
     }
   };
 
@@ -168,6 +260,7 @@ export default function Beyond925() {
       setCurrentLevelId(level.id);
       setCurrentScenarioIndex(0);
       setSelectedOption(undefined);
+      setSelectedOptions([]);
       setTextAnswer("");
       setStatus("none");
       setShowHint(false);
@@ -249,10 +342,12 @@ export default function Beyond925() {
           totalLevels={levels.length}
           completedLevels={completedCount}
           selectedOption={selectedOption}
+          selectedOptions={selectedOptions}
           textAnswer={textAnswer}
           status={status}
           showHint={showHint}
           onOptionSelect={handleOptionSelect}
+          onOptionsToggle={handleOptionsToggle}
           onTextAnswerChange={setTextAnswer}
           onContinue={handleContinue}
           onSettingsClick={() => setShowSettings(true)}
@@ -262,6 +357,7 @@ export default function Beyond925() {
             setCurrentScreen("map");
             setCurrentScenarioIndex(0);
             setSelectedOption(undefined);
+            setSelectedOptions([]);
             setTextAnswer("");
             setStatus("none");
             setShowHint(false);
@@ -284,6 +380,8 @@ export default function Beyond925() {
               setCurrentLevelId(nextLevel.id);
               setCurrentScenarioIndex(0);
               setSelectedOption(undefined);
+              setSelectedOptions([]);
+              setTextAnswer("");
               setStatus("none");
               setCurrentScreen("interaction");
             } else {
@@ -297,6 +395,8 @@ export default function Beyond925() {
               setCurrentScreen("campus");
             }
             setSelectedOption(undefined);
+            setSelectedOptions([]);
+            setTextAnswer("");
             setStatus("none");
           }}
         />

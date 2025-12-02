@@ -7,18 +7,25 @@ export type Screen =
   | "expressApply";
 export type LevelStatus = "locked" | "unlocked" | "completed";
 
+export type ScenarioType =
+  | "single-select-correct" // single select with correct answer
+  | "single-select-no-correct" // single select with no right answer
+  | "multiple-select" // multiple select
+  | "text-field" // custom answer text field
+  | "single-select-or-text"; // single select or custom text input
+
 export interface Scenario {
   id: number;
   scenario: string;
   imageUrl: string;
-  type: "validation" | "reflection";
+  type: ScenarioType;
   options: Array<{
     id: number;
     text: string;
-    correct?: boolean;
+    correct?: boolean; // Required for single-select-correct and multiple-select
     feedback: string;
   }>;
-  allowTextInput?: boolean;
+  allowTextInput?: boolean; // For text-field and single-select-or-text types
 }
 
 export interface Level {

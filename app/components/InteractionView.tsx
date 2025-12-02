@@ -27,10 +27,12 @@ interface InteractionViewProps {
   totalLevels: number;
   completedLevels: number;
   selectedOption?: number;
+  selectedOptions?: number[]; // For multiple-select type
   textAnswer: string;
   status: "none" | "wrong" | "correct";
   showHint: boolean;
-  onOptionSelect: (id: number) => void;
+  onOptionSelect: (id: number | undefined) => void;
+  onOptionsToggle?: (id: number) => void; // For multiple-select type
   onTextAnswerChange: (value: string) => void;
   onContinue: () => void;
   onSettingsClick: () => void;
@@ -53,10 +55,12 @@ export function InteractionView({
   totalLevels,
   completedLevels,
   selectedOption,
+  selectedOptions = [],
   textAnswer,
   status,
   showHint,
   onOptionSelect,
+  onOptionsToggle,
   onTextAnswerChange,
   onContinue,
   onSettingsClick: _onSettingsClick,
@@ -64,12 +68,25 @@ export function InteractionView({
   onExpressApply,
   onExit,
 }: InteractionViewProps) {
-  const isReflection = currentScenario.type === "reflection";
+  const isMultipleSelect = currentScenario.type === "multiple-select";
+  const isTextField = currentScenario.type === "text-field";
+  const isSingleSelectOrText = currentScenario.type === "single-select-or-text";
+  const isSingleSelectNoCorrect =
+    currentScenario.type === "single-select-no-correct";
+  const isSingleSelectCorrect =
+    currentScenario.type === "single-select-correct";
+  const isTextInputType = isTextField || isSingleSelectOrText;
+  const isReflection =
+    isSingleSelectNoCorrect || isTextField || isSingleSelectOrText;
+
   const isLastScenarioInLevel = currentScenarioIndex === totalScenarios - 1;
   const isFinalStage = currentLevelId === totalLevels && isLastScenarioInLevel;
-  const hasAnswer = isReflection
-    ? selectedOption !== undefined || textAnswer.trim() !== ""
-    : selectedOption !== undefined;
+
+  const hasAnswer = isMultipleSelect
+    ? selectedOptions.length > 0
+    : isTextInputType
+      ? selectedOption !== undefined || textAnswer.trim() !== ""
+      : selectedOption !== undefined;
 
   // Calculate progress: completed levels + progress within current level
   const levelProgress = isLastScenarioInLevel
@@ -115,214 +132,271 @@ export function InteractionView({
   }, [particleIdCounter]);
 
   return (
-    <div className="flex h-full flex-col bg-white">
-      <header className="flex items-center justify-between gap-3 px-4 py-3">
-        <button
-          onClick={onExit}
-          className="flex h-10 w-10 items-center justify-center rounded-full transition hover:bg-slate-100"
-          aria-label="Zurück"
-        >
-          <X className="h-5 w-5 text-slate-600" />
-        </button>
-
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => {
-              spawnParticle();
-            }}
-            className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 transition hover:bg-slate-200"
-          >
-            ⚙️
-          </button>
-          <button
-            onClick={() => {
-              setHelpOpen(true);
-              setLoading(true);
-              // Simulate loading a tip
-              setTimeout(() => {
-                setHelpText(
-                  "💡 Tipp: Denk daran, dass Sicherheit und Qualität bei TechSteel immer Priorität haben!"
-                );
-                setLoading(false);
-              }, 500);
-            }}
-            className="flex items-center gap-2 rounded-2xl bg-slate-100 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-200"
-          >
-            <span>?</span>
-            Tip holen
-          </button>
-          <div className="flex grow items-center justify-center">
-            <div className="h-12 w-12">
-              <CircularProgressbarWithChildren
-                value={progressPercentage}
-                styles={{
-                  path: {
-                    stroke: "#8b5cf6",
-                    strokeLinecap: "round",
-                    transition: "stroke-dashoffset 0.5s ease 0s",
-                  },
-                  trail: {
-                    stroke: "#e5e7eb",
-                  },
-                }}
-              >
-                <div className="flex flex-col items-center justify-center">
-                  <span className="text-xs font-bold text-purple-600">
-                    {currentScenarioIndex + 1}/{totalScenarios}
-                  </span>
-                </div>
-              </CircularProgressbarWithChildren>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <div className="flex-1 overflow-auto px-4 pb-6">
+    <div className="flex h-screen flex-col bg-white">
+      <div className="flex-1 overflow-auto pb-6">
         <div className="mx-auto max-w-2xl">
-          <div className="overflow-hidden rounded-t-3xl border-4 border-b-0 border-purple-200 bg-slate-100">
+          <div className="relative overflow-hidden border-b-0 border-purple-200 bg-slate-100">
             <img
               src={currentScenario.imageUrl}
               alt={currentLevel.title}
               className="h-[150px] w-full object-cover lg:h-[320px]"
             />
+
+            <header className="absolute left-0 right-0 top-0 flex items-center justify-between gap-3 px-2 py-2">
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={onExit}
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100/50 backdrop-blur-sm transition hover:bg-slate-100"
+                  aria-label="Zurück"
+                >
+                  <X className="h-5 w-5 text-slate-600" />
+                </button>
+                <button
+                  onClick={() => {
+                    spawnParticle();
+                  }}
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100/50 backdrop-blur-sm transition hover:bg-slate-200"
+                >
+                  ⚙️
+                </button>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => {
+                    setHelpOpen(true);
+                    setLoading(true);
+                    // Simulate loading a tip
+                    setTimeout(() => {
+                      setHelpText(
+                        "💡 Tipp: Denk daran, dass Sicherheit und Qualität bei TechSteel immer Priorität haben!"
+                      );
+                      setLoading(false);
+                    }, 500);
+                  }}
+                  className="flex items-center gap-2 rounded-full bg-slate-100/50 px-2 py-2 text-sm font-semibold text-slate-700 backdrop-blur-sm transition hover:bg-slate-200"
+                >
+                  <span>?</span>
+                  Tip holen
+                </button>
+                <div className="flex grow items-center justify-center">
+                  <div className="size-10 rounded-full bg-slate-100/50 backdrop-blur-sm">
+                    <CircularProgressbarWithChildren
+                      value={progressPercentage}
+                      styles={{
+                        path: {
+                          stroke: "#8b5cf6",
+                          strokeLinecap: "round",
+                          transition: "stroke-dashoffset 0.5s ease 0s",
+                        },
+                        trail: {
+                          stroke: "#e5e7eb",
+                        },
+                      }}
+                    >
+                      <div className="flex flex-col items-center justify-center">
+                        <span className="text-xs font-bold text-purple-600">
+                          {currentScenarioIndex + 1}/{totalScenarios}
+                        </span>
+                      </div>
+                    </CircularProgressbarWithChildren>
+                  </div>
+                </div>
+              </div>
+            </header>
           </div>
 
-          <div className="mb-6 rounded-b-3xl border-4 border-t-0 border-purple-200 bg-purple-50 px-6 py-4">
+          <div className="mb-6 rounded-b-3xl border-purple-200 bg-purple-50 px-4 py-4">
             <p className="text-base leading-relaxed text-slate-800 lg:text-lg">
               {currentScenario.scenario}
             </p>
           </div>
 
-          {showHint && (
-            <div className="mb-6 rounded-2xl border-2 border-blue-200 bg-blue-50 p-4">
-              <p className="text-sm text-blue-800">
-                💡 Tipp: Denk daran, dass Sicherheit und Qualität bei TechSteel
-                immer Priorität haben!
-              </p>
-            </div>
-          )}
+          <div className="px-4">
+            {showHint && (
+              <div className="mb-6 rounded-2xl border-2 border-blue-200 bg-blue-50 p-4">
+                <p className="text-sm text-blue-800">
+                  💡 Tipp: Denk daran, dass Sicherheit und Qualität bei
+                  TechSteel immer Priorität haben!
+                </p>
+              </div>
+            )}
 
-          <h3 className="font-semibold text-slate-800">
-            {isReflection ? "Ich werde zuerst..." : "Wähle deine Antwort"}
-          </h3>
+            <h3 className="font-semibold text-slate-800">
+              {isTextField
+                ? "Gib deine Antwort ein"
+                : isMultipleSelect
+                  ? "Wähle alle zutreffenden Antworten"
+                  : isSingleSelectOrText
+                    ? "Wähle eine Antwort oder gib deine eigene ein"
+                    : isSingleSelectNoCorrect
+                      ? "Wähle deine Antwort"
+                      : "Wähle deine Antwort"}
+            </h3>
 
-          <div className="space-y-3">
-            {currentScenario.options.map((option) => {
-              const isSelected = selectedOption === option.id;
-              const showFeedback =
-                isSelected &&
-                ((isReflection && hasAnswer) ||
-                  (!isReflection && status !== "none"));
+            {/* Show options for types that have options */}
+            {!isTextField && currentScenario.options.length > 0 && (
+              <div className="space-y-3">
+                {currentScenario.options.map((option) => {
+                  const isSelected = isMultipleSelect
+                    ? selectedOptions.includes(option.id)
+                    : selectedOption === option.id;
+                  const showFeedback = isMultipleSelect
+                    ? selectedOptions.includes(option.id) && status !== "none"
+                    : isSelected &&
+                      ((isSingleSelectNoCorrect && hasAnswer) ||
+                        (isSingleSelectOrText && hasAnswer) ||
+                        (isSingleSelectCorrect && status !== "none"));
 
-              return (
-                <div key={option.id}>
-                  <button
-                    onClick={() => {
-                      onOptionSelect(option.id);
-                      onTextAnswerChange("");
-                    }}
-                    disabled={!isReflection && status === "correct"}
-                    className={cn(
-                      "w-full rounded-2xl border-2 px-5 py-3 text-left text-base font-medium transition",
-                      isSelected &&
-                        isReflection &&
-                        "border-purple-300 bg-purple-50 text-purple-800",
-                      isSelected &&
-                        !isReflection &&
-                        status === "none" &&
-                        "border-sky-300 bg-sky-50",
-                      isSelected &&
-                        status === "correct" &&
-                        "border-green-300 bg-green-50 text-green-700",
-                      isSelected &&
-                        status === "wrong" &&
-                        "border-rose-300 bg-rose-50 text-rose-700",
-                      !isSelected &&
-                        "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
-                    )}
-                  >
-                    {option.text}
-                  </button>
+                  return (
+                    <div key={option.id}>
+                      <button
+                        onClick={() => {
+                          if (isMultipleSelect && onOptionsToggle) {
+                            onOptionsToggle(option.id);
+                          } else {
+                            onOptionSelect(option.id);
+                            if (isSingleSelectOrText) {
+                              onTextAnswerChange("");
+                            }
+                          }
+                        }}
+                        disabled={isSingleSelectCorrect && status === "correct"}
+                        className={cn(
+                          "w-full rounded-2xl border-2 px-5 py-3 text-left text-base font-medium transition",
+                          isMultipleSelect &&
+                            isSelected &&
+                            "border-purple-300 bg-purple-50 text-purple-800",
+                          !isMultipleSelect &&
+                            isSelected &&
+                            isSingleSelectNoCorrect &&
+                            "border-purple-300 bg-purple-50 text-purple-800",
+                          !isMultipleSelect &&
+                            isSelected &&
+                            isSingleSelectOrText &&
+                            "border-purple-300 bg-purple-50 text-purple-800",
+                          !isMultipleSelect &&
+                            isSelected &&
+                            isSingleSelectCorrect &&
+                            status === "none" &&
+                            "border-sky-300 bg-sky-50",
+                          !isMultipleSelect &&
+                            isSelected &&
+                            isSingleSelectCorrect &&
+                            status === "correct" &&
+                            "border-green-300 bg-green-50 text-green-700",
+                          !isMultipleSelect &&
+                            isSelected &&
+                            isSingleSelectCorrect &&
+                            status === "wrong" &&
+                            "border-rose-300 bg-rose-50 text-rose-700",
+                          !isSelected &&
+                            "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
+                        )}
+                      >
+                        {isMultipleSelect && (
+                          <span className="mr-2">{isSelected ? "✓" : "○"}</span>
+                        )}
+                        {option.text}
+                      </button>
 
-                  {showFeedback && (
-                    <div
-                      className={cn(
-                        "mt-2 rounded-xl border-2 p-3 text-sm",
-                        isReflection &&
-                          "border-purple-200 bg-purple-50 text-purple-800",
-                        status === "correct" &&
-                          "border-green-300 bg-green-50 text-green-700",
-                        status === "wrong" &&
-                          "border-rose-300 bg-rose-50 text-rose-700"
+                      {showFeedback && (
+                        <div
+                          className={cn(
+                            "mt-2 rounded-xl border-2 p-3 text-sm",
+                            (isSingleSelectNoCorrect ||
+                              isSingleSelectOrText ||
+                              isMultipleSelect) &&
+                              "border-purple-200 bg-purple-50 text-purple-800",
+                            isSingleSelectCorrect &&
+                              status === "correct" &&
+                              "border-green-300 bg-green-50 text-green-700",
+                            isSingleSelectCorrect &&
+                              status === "wrong" &&
+                              "border-rose-300 bg-rose-50 text-rose-700"
+                          )}
+                        >
+                          {option.feedback}
+                        </div>
                       )}
-                    >
-                      {option.feedback}
                     </div>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Show text input for text-field and single-select-or-text types */}
+            {(isTextField || isSingleSelectOrText) && (
+              <div
+                className={cn(
+                  "mt-6",
+                  isSingleSelectOrText && "border-t-2 border-slate-200 pt-6"
+                )}
+              >
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={textAnswer}
+                    onChange={(e) => {
+                      onTextAnswerChange(e.target.value);
+                      if (isSingleSelectOrText) {
+                        // Clear selected option when typing
+                        onOptionSelect(undefined);
+                      }
+                    }}
+                    placeholder={
+                      isTextField
+                        ? "Gib deine Antwort ein..."
+                        : "Oder gib deine eigene Antwort ein..."
+                    }
+                    className="w-full rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 pr-14 text-base focus:border-purple-300 focus:outline-none"
+                  />
+                  {isTextField && (
+                    <button
+                      onClick={onContinue}
+                      disabled={!textAnswer.trim()}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-purple-500 p-2 text-white transition hover:bg-purple-600 disabled:bg-slate-300"
+                    >
+                      <ArrowRight className="h-5 w-5" />
+                    </button>
                   )}
                 </div>
-              );
-            })}
+
+                {isSingleSelectOrText && (
+                  <div className="mt-4 flex items-center justify-between">
+                    <button
+                      onClick={() => onTextAnswerChange("")}
+                      className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700"
+                    >
+                      <span className="text-lg">🗑️</span>
+                      Leeren
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
-
-          {isReflection && currentScenario.allowTextInput && (
-            <div className="mt-6">
-              <div className="relative">
-                <input
-                  type="text"
-                  value={textAnswer}
-                  onChange={(e) => {
-                    onTextAnswerChange(e.target.value);
-                  }}
-                  placeholder="Bedienungsanleitung suchen?  Kollegen fragen?"
-                  className="w-full rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 pr-14 text-base focus:border-purple-300 focus:outline-none"
-                />
-                <button
-                  onClick={onContinue}
-                  disabled={!textAnswer.trim()}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-purple-500 p-2 text-white transition hover:bg-purple-600 disabled:bg-slate-300"
-                >
-                  <ArrowRight className="h-5 w-5" />
-                </button>
-              </div>
-
-              <div className="mt-4 flex items-center justify-between">
-                <button
-                  onClick={() => onTextAnswerChange("")}
-                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700"
-                >
-                  <span className="text-lg">🗑️</span>
-                  Leeren
-                </button>
-                <button
-                  onClick={onHintToggle}
-                  className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700"
-                >
-                  <span>⌄</span>
-                  Vorschläge anzeigen
-                </button>
-              </div>
-            </div>
-          )}
         </div>
       </div>
 
-      {isReflection && isFinalStage && (
-        <footer className="border-t-2 bg-white px-4 py-4">
-          <div className="mx-auto max-w-2xl">
-            <Button
-              disabled={!hasAnswer}
-              onClick={onExpressApply}
-              size="lg"
-              variant="primary"
-              className="w-full"
-            >
-              {config.copy.submit}
-            </Button>
-          </div>
-        </footer>
-      )}
+      {/* Footer buttons */}
+      {(isSingleSelectNoCorrect || isTextField || isSingleSelectOrText) &&
+        isFinalStage && (
+          <footer className="border-t-2 bg-white px-4 py-4">
+            <div className="mx-auto max-w-2xl">
+              <Button
+                disabled={!hasAnswer}
+                onClick={onExpressApply}
+                size="lg"
+                variant="primary"
+                className="w-full"
+              >
+                {config.copy.submit}
+              </Button>
+            </div>
+          </footer>
+        )}
 
-      {!isReflection && (
+      {(isSingleSelectCorrect || isMultipleSelect) && (
         <footer className="border-t-2 bg-white px-4 py-4">
           <div className="mx-auto max-w-2xl">
             <Button
@@ -345,6 +419,24 @@ export function InteractionView({
           </div>
         </footer>
       )}
+
+      {/* Footer for non-final reflection scenarios */}
+      {(isSingleSelectNoCorrect || isTextField || isSingleSelectOrText) &&
+        !isFinalStage && (
+          <footer className="border-t-2 bg-white px-4 py-4">
+            <div className="mx-auto max-w-2xl">
+              <Button
+                disabled={!hasAnswer}
+                onClick={onContinue}
+                size="lg"
+                variant="primary"
+                className="w-full"
+              >
+                Weiter
+              </Button>
+            </div>
+          </footer>
+        )}
 
       {/* Particle container - fixed to viewport */}
       <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">
