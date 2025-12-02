@@ -9,6 +9,7 @@ import { useAudio, useWindowSize, useMount } from "react-use";
 import { toast } from "sonner";
 
 import { upsertChallengeProgress } from "@/actions/challenge-progress";
+import { advanceLessonProgress } from "@/actions/lesson-progress";
 import { reduceHearts } from "@/actions/user-progress";
 import { MAX_HEARTS } from "@/constants";
 import { challengeOptions, challenges, userSubscription } from "@/db/schema";
@@ -197,7 +198,13 @@ export const Quiz = ({
         <Footer
           lessonId={lessonId}
           status="completed"
-          onCheck={() => router.push("/learn")}
+          onCheck={() => {
+            startTransition(() => {
+              advanceLessonProgress(lessonId).then(() => {
+                router.push("/learn");
+              });
+            });
+          }}
         />
       </>
     );

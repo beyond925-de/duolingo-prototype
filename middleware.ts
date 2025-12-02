@@ -1,15 +1,24 @@
-import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+// Clerk middleware disabled for demo mode
+// import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
-const isPublicRoute = createRouteMatcher([
-  "/",
-  "/sign-in(.*)",
-  "/sign-up(.*)",
-  "/api/webhooks/stripe",
-]);
+// const isPublicRoute = createRouteMatcher([
+//   "/",
+//   "/sign-in(.*)",
+//   "/sign-up(.*)",
+//   "/api/webhooks/stripe",
+// ]);
 
-export default clerkMiddleware(async (auth, request) => {
-  if (!isPublicRoute(request)) await auth.protect();
-});
+// export default clerkMiddleware(async (auth, request) => {
+//   if (!isPublicRoute(request)) await auth.protect();
+// });
+
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+
+// Pass-through middleware - no auth required for demo
+export default function middleware(request: NextRequest) {
+  return NextResponse.next();
+}
 
 export const config = {
   matcher: [

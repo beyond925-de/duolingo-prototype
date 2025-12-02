@@ -1,4 +1,5 @@
-import { ClerkProvider } from "@clerk/nextjs";
+// ClerkProvider disabled for demo mode
+// import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata, Viewport } from "next";
 import { Nunito } from "next/font/google";
 
@@ -24,17 +25,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider
-      appearance={{
-        layout: {
-          logoImageUrl: "/favicon.ico",
-        },
-        variables: {
-          colorPrimary: "#22C55E",
-        },
-      }}
-      afterSignOutUrl="/"
-    >
+    // ClerkProvider removed for demo mode - uncomment to enable
+    // <ClerkProvider
+    //   appearance={{
+    //     layout: {
+    //       logoImageUrl: "/favicon.ico",
+    //     },
+    //     variables: {
+    //       colorPrimary: "#22C55E",
+    //     },
+    //   }}
+    //   afterSignOutUrl="/"
+    // >
       <html lang="en">
         <body className={font.className}>
           <Toaster theme="light" richColors closeButton />
@@ -44,6 +46,6 @@ export default function RootLayout({
           {children}
         </body>
       </html>
-    </ClerkProvider>
+    // </ClerkProvider>
   );
 }

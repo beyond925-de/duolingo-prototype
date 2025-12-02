@@ -1,11 +1,12 @@
-import {
-  ClerkLoaded,
-  ClerkLoading,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-} from "@clerk/nextjs";
+// Clerk components disabled for demo mode - keeping imports commented for reference
+// import {
+//   ClerkLoaded,
+//   ClerkLoading,
+//   SignInButton,
+//   SignUpButton,
+//   SignedIn,
+//   SignedOut,
+// } from "@clerk/nextjs";
 import { Loader } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +26,8 @@ export default function MarketingPage() {
         </h1>
 
         <div className="flex w-full max-w-[330px] flex-col items-center gap-y-3">
-          <ClerkLoading>
+          {/* Clerk components disabled for demo mode */}
+          {/* <ClerkLoading>
             <Loader className="h-5 w-5 animate-spin text-muted-foreground" />
           </ClerkLoading>
 
@@ -49,7 +51,10 @@ export default function MarketingPage() {
                 <Link href="/learn">Continue Learning</Link>
               </Button>
             </SignedIn>
-          </ClerkLoaded>
+          </ClerkLoaded> */}
+          <Button size="lg" variant="secondary" className="w-full" asChild>
+            <Link href="/learn">Continue Learning</Link>
+          </Button>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
-import { ClerkLoading, ClerkLoaded, UserButton } from "@clerk/nextjs";
+// Clerk components disabled for demo mode - keeping imports commented for reference
+// import { ClerkLoading, ClerkLoaded, UserButton } from "@clerk/nextjs";
 import { Loader } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,8 +41,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
         <SidebarItem label="Shop" href="/shop" iconSrc="/shop.svg" />
       </div>
 
+      {/* Clerk components disabled for demo mode */}
       <div className="p-4">
-        <ClerkLoading>
+        {/* <ClerkLoading>
           <Loader className="h-5 w-5 animate-spin text-muted-foreground" />
         </ClerkLoading>
 
@@ -52,7 +54,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
               elements: { userButtonPopoverCard: { pointerEvents: "initial" } },
             }}
           />
-        </ClerkLoaded>
+        </ClerkLoaded> */}
       </div>
     </div>
   );
