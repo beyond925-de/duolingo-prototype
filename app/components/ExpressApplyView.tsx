@@ -99,59 +99,6 @@ export function ExpressApplyView({
                 </select>
               </div>
 
-              <div>
-                <button
-                  type="button"
-                  onClick={() => setShowFunFacts(!showFunFacts)}
-                  className="flex w-full items-center justify-between rounded-xl border-2 border-slate-300 bg-white px-4 py-3 text-left text-sm font-medium text-neutral-700 transition-all hover:border-green-300"
-                >
-                  <span>Fun Facts</span>
-                  <ChevronDown
-                    className={cn(
-                      "h-4 w-4 transition-transform",
-                      showFunFacts && "rotate-180"
-                    )}
-                  />
-                </button>
-                {showFunFacts && (
-                  <div className="mt-3 transition-all duration-200 ease-in-out">
-                    <label className="mb-2 block text-sm font-medium text-neutral-700">
-                      {config.copy.phoneType}
-                    </label>
-                    <div className="grid grid-cols-2 gap-3">
-                      <button
-                        type="button"
-                        onClick={() =>
-                          onFormDataChange({ phoneType: "android" })
-                        }
-                        className={cn(
-                          "rounded-xl border-2 px-4 py-3 transition-all",
-                          formData.phoneType === "android"
-                            ? "border-green-500 bg-green-50 font-medium text-green-700"
-                            : "border-slate-300 bg-white text-neutral-700 hover:border-green-300"
-                        )}
-                      >
-                        {config.copy.android}
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() =>
-                          onFormDataChange({ phoneType: "iphone" })
-                        }
-                        className={cn(
-                          "rounded-xl border-2 px-4 py-3 transition-all",
-                          formData.phoneType === "iphone"
-                            ? "border-green-500 bg-green-50 font-medium text-green-700"
-                            : "border-slate-300 bg-white text-neutral-700 hover:border-green-300"
-                        )}
-                      >
-                        {config.copy.iphone}
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
-
               <Button
                 type="submit"
                 size="lg"
@@ -165,7 +112,15 @@ export function ExpressApplyView({
 
           <p className="text-center text-xs text-neutral-500">
             Deine Daten werden sicher gespeichert und nur für die Bewerbung
-            verwendet.
+            verwendet.{" "}
+            <a
+              href="https://docs.beyond925.de/datenschutz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              Datenschutzerklärung
+            </a>
           </p>
         </div>
       </div>

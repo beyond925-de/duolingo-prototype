@@ -1,6 +1,9 @@
 import { useCallback, useState } from "react";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
+import { CircularProgressbarWithChildren } from "react-circular-progressbar";
+
+import "react-circular-progressbar/dist/styles.css";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,12 +16,16 @@ import {
 import { cn } from "@/lib/utils";
 
 import { config } from "../config";
-import { Level } from "../types";
+import { Level, Scenario } from "../types";
 
 interface InteractionViewProps {
   currentLevel: Level;
+  currentScenario: Scenario;
   currentLevelId: number;
+  currentScenarioIndex: number;
+  totalScenarios: number;
   totalLevels: number;
+  completedLevels: number;
   selectedOption?: number;
   textAnswer: string;
   status: "none" | "wrong" | "correct";
@@ -29,6 +36,7 @@ interface InteractionViewProps {
   onSettingsClick: () => void;
   onHintToggle: () => void;
   onExpressApply: () => void;
+  onExit: () => void;
 }
 
 interface Particle {
@@ -38,8 +46,12 @@ interface Particle {
 
 export function InteractionView({
   currentLevel,
+  currentScenario,
   currentLevelId,
+  currentScenarioIndex,
+  totalScenarios,
   totalLevels,
+  completedLevels,
   selectedOption,
   textAnswer,
   status,
@@ -50,12 +62,23 @@ export function InteractionView({
   onSettingsClick: _onSettingsClick,
   onHintToggle,
   onExpressApply,
+  onExit,
 }: InteractionViewProps) {
-  const isReflection = currentLevel.type === "reflection";
-  const isFinalStage = currentLevelId === totalLevels;
+  const isReflection = currentScenario.type === "reflection";
+  const isLastScenarioInLevel = currentScenarioIndex === totalScenarios - 1;
+  const isFinalStage = currentLevelId === totalLevels && isLastScenarioInLevel;
   const hasAnswer = isReflection
     ? selectedOption !== undefined || textAnswer.trim() !== ""
     : selectedOption !== undefined;
+
+  // Calculate progress: completed levels + progress within current level
+  const levelProgress = isLastScenarioInLevel
+    ? 1
+    : (currentScenarioIndex + 1) / totalScenarios;
+  const progressPercentage =
+    totalLevels > 0
+      ? ((completedLevels + levelProgress) / totalLevels) * 100
+      : 0;
   const [particles, setParticles] = useState<Particle[]>([]);
   const [particleIdCounter, setParticleIdCounter] = useState(0);
   const [helpOpen, setHelpOpen] = useState(false);
@@ -93,52 +116,80 @@ export function InteractionView({
 
   return (
     <div className="flex h-full flex-col bg-white">
-      <header className="flex items-center justify-end gap-3 px-4 py-3">
-        <div className="flex grow items-center justify-start">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border-4 border-purple-500 bg-white text-sm font-bold text-purple-500">
-            {currentLevelId}/{totalLevels}
+      <header className="flex items-center justify-between gap-3 px-4 py-3">
+        <button
+          onClick={onExit}
+          className="flex h-10 w-10 items-center justify-center rounded-full transition hover:bg-slate-100"
+          aria-label="Zurück"
+        >
+          <X className="h-5 w-5 text-slate-600" />
+        </button>
+
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => {
+              spawnParticle();
+            }}
+            className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 transition hover:bg-slate-200"
+          >
+            ⚙️
+          </button>
+          <button
+            onClick={() => {
+              setHelpOpen(true);
+              setLoading(true);
+              // Simulate loading a tip
+              setTimeout(() => {
+                setHelpText(
+                  "💡 Tipp: Denk daran, dass Sicherheit und Qualität bei TechSteel immer Priorität haben!"
+                );
+                setLoading(false);
+              }, 500);
+            }}
+            className="flex items-center gap-2 rounded-2xl bg-slate-100 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-200"
+          >
+            <span>?</span>
+            Tip holen
+          </button>
+          <div className="flex grow items-center justify-center">
+            <div className="h-12 w-12">
+              <CircularProgressbarWithChildren
+                value={progressPercentage}
+                styles={{
+                  path: {
+                    stroke: "#8b5cf6",
+                    strokeLinecap: "round",
+                    transition: "stroke-dashoffset 0.5s ease 0s",
+                  },
+                  trail: {
+                    stroke: "#e5e7eb",
+                  },
+                }}
+              >
+                <div className="flex flex-col items-center justify-center">
+                  <span className="text-xs font-bold text-purple-600">
+                    {currentScenarioIndex + 1}/{totalScenarios}
+                  </span>
+                </div>
+              </CircularProgressbarWithChildren>
+            </div>
           </div>
         </div>
-        <button
-          onClick={() => {
-            spawnParticle();
-          }}
-          className=" flex h-12 w-12  items-center justify-center rounded-2xl bg-slate-100 transition hover:bg-slate-200"
-        >
-          ⚙️
-        </button>
-        <button
-          onClick={() => {
-            setHelpOpen(true);
-            setLoading(true);
-            // Simulate loading a tip
-            setTimeout(() => {
-              setHelpText(
-                "💡 Tipp: Denk daran, dass Sicherheit und Qualität bei TechSteel immer Priorität haben!"
-              );
-              setLoading(false);
-            }, 500);
-          }}
-          className="flex items-center gap-2 rounded-2xl bg-slate-100 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-200"
-        >
-          <span>?</span>
-          Tip holen
-        </button>
       </header>
 
       <div className="flex-1 overflow-auto px-4 pb-6">
         <div className="mx-auto max-w-2xl">
           <div className="overflow-hidden rounded-t-3xl border-4 border-b-0 border-purple-200 bg-slate-100">
             <img
-              src={currentLevel.imageUrl}
+              src={currentScenario.imageUrl}
               alt={currentLevel.title}
-              className="h-[200px] w-full object-cover lg:h-[320px]"
+              className="h-[150px] w-full object-cover lg:h-[320px]"
             />
           </div>
 
           <div className="mb-6 rounded-b-3xl border-4 border-t-0 border-purple-200 bg-purple-50 px-6 py-4">
             <p className="text-base leading-relaxed text-slate-800 lg:text-lg">
-              {currentLevel.content.scenario}
+              {currentScenario.scenario}
             </p>
           </div>
 
@@ -151,12 +202,12 @@ export function InteractionView({
             </div>
           )}
 
-          <h3 className="mb-4 text-lg font-semibold text-slate-800">
+          <h3 className="font-semibold text-slate-800">
             {isReflection ? "Ich werde zuerst..." : "Wähle deine Antwort"}
           </h3>
 
           <div className="space-y-3">
-            {currentLevel.content.options.map((option) => {
+            {currentScenario.options.map((option) => {
               const isSelected = selectedOption === option.id;
               const showFeedback =
                 isSelected &&
@@ -172,7 +223,7 @@ export function InteractionView({
                     }}
                     disabled={!isReflection && status === "correct"}
                     className={cn(
-                      "w-full rounded-2xl border-2 px-5 py-4 text-left text-base font-medium transition",
+                      "w-full rounded-2xl border-2 px-5 py-3 text-left text-base font-medium transition",
                       isSelected &&
                         isReflection &&
                         "border-purple-300 bg-purple-50 text-purple-800",
@@ -213,7 +264,7 @@ export function InteractionView({
             })}
           </div>
 
-          {isReflection && currentLevel.content.allowTextInput && (
+          {isReflection && currentScenario.allowTextInput && (
             <div className="mt-6">
               <div className="relative">
                 <input
