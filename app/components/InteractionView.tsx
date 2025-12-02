@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { Level } from "../types";
+import { config } from "../config";
 import { useCallback, useState } from "react";
 
 interface InteractionViewProps {
@@ -24,6 +25,7 @@ interface InteractionViewProps {
   onContinue: () => void;
   onSettingsClick: () => void;
   onHintToggle: () => void;
+  onExpressApply: () => void;
 }
 
 interface Particle {
@@ -44,8 +46,10 @@ export function InteractionView({
   onContinue,
   onSettingsClick,
   onHintToggle,
+  onExpressApply,
 }: InteractionViewProps) {
   const isReflection = currentLevel.type === "reflection";
+  const isFinalStage = currentLevelId === totalLevels;
   const hasAnswer = isReflection
     ? selectedOption !== undefined || textAnswer.trim() !== ""
     : selectedOption !== undefined;
@@ -121,15 +125,15 @@ export function InteractionView({
 
       <div className="flex-1 overflow-auto px-4 pb-6">
         <div className="mx-auto max-w-2xl">
-          <div className="mb-6 overflow-hidden rounded-3xl">
+          <div className="overflow-hidden rounded-t-3xl border-4 border-b-0 border-purple-200 bg-slate-100">
             <img
               src={currentLevel.imageUrl}
               alt={currentLevel.title}
-              className="h-[240px] w-full object-cover lg:h-[320px]"
+              className="h-[200px] w-full object-cover lg:h-[320px]"
             />
           </div>
 
-          <div className="mb-6 rounded-3xl border-4 border-purple-200 bg-purple-50 p-6">
+          <div className="mb-6 rounded-b-3xl border-4 border-t-0 border-purple-200 bg-purple-50 px-6 py-4">
             <p className="text-base leading-relaxed text-slate-800 lg:text-lg">
               {currentLevel.content.scenario}
             </p>
@@ -228,21 +232,6 @@ export function InteractionView({
                 </button>
               </div>
 
-              <div className="mt-6">
-                <div className="mb-2 flex items-center justify-between text-sm text-slate-600">
-                  <span>Min.</span>
-                  <span>Gut</span>
-                  <span>Perfekt</span>
-                </div>
-                <input
-                  type="range"
-                  min="0"
-                  max="100"
-                  defaultValue="50"
-                  className="h-2 w-full cursor-pointer appearance-none rounded-full bg-slate-200"
-                />
-              </div>
-
               <div className="mt-4 flex items-center justify-between">
                 <button
                   onClick={() => onTextAnswerChange("")}
@@ -263,6 +252,22 @@ export function InteractionView({
           )}
         </div>
       </div>
+
+      {isReflection && isFinalStage && (
+        <footer className="border-t-2 bg-white px-4 py-4">
+          <div className="mx-auto max-w-2xl">
+            <Button
+              disabled={!hasAnswer}
+              onClick={onExpressApply}
+              size="lg"
+              variant="primary"
+              className="w-full"
+            >
+              {config.copy.submit}
+            </Button>
+          </div>
+        </footer>
+      )}
 
       {!isReflection && (
         <footer className="border-t-2 bg-white px-4 py-4">

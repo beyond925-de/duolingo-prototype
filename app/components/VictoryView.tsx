@@ -26,7 +26,7 @@ export function VictoryView({
   onMenu,
 }: VictoryViewProps) {
   const isLastLevel = currentLevelId === totalLevels;
-  const showNudge = currentLevelId === 3;
+  const showNudge = currentLevelId === 4; // Show nudge on second-to-last level
 
   return (
     <>

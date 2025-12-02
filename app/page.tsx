@@ -27,6 +27,7 @@ export default function Beyond925() {
     firstName: "",
     phoneType: "",
     schoolType: "",
+    emailOrPhone: "",
   });
   const [settings, setSettings] = useState({
     showStartScreen: true,
@@ -60,7 +61,8 @@ export default function Beyond925() {
 
     setScore((prev) => prev + 100);
 
-    if (currentLevelId === 4) {
+    // If it's the final "Teamfit checken" level, go directly to apply
+    if (currentLevelId === 5) {
       setCurrentScreen("expressApply");
     } else {
       setShowConfetti(true);
@@ -128,7 +130,12 @@ export default function Beyond925() {
     e.preventDefault();
     alert(`Danke ${formData.firstName}! Wir melden uns bei dir. 📞`);
     setCurrentScreen("map");
-    setFormData({ firstName: "", phoneType: "", schoolType: "" });
+    setFormData({
+      firstName: "",
+      phoneType: "",
+      schoolType: "",
+      emailOrPhone: "",
+    });
   };
 
   const handleSettingChange = (key: string, value: boolean) => {
@@ -174,6 +181,7 @@ export default function Beyond925() {
           onContinue={handleContinue}
           onSettingsClick={() => setShowSettings(true)}
           onHintToggle={() => setShowHint(!showHint)}
+          onExpressApply={handleExpressApply}
         />
       )}
 
