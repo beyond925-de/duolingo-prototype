@@ -103,39 +103,25 @@ export const config = {
             {
               id: 1,
               scenario:
-                "Auf der Werkbank liegen viele verschiedene Feilen: grobe, feine, runde und flache 🛠️. Du musst eine runde Ecke in das Metall formen. Welche nimmst du? 🧐",
+                "Du stehst in der großen Montagehalle bei SOLLICH und baust an einer neuen Anlage für Schokoriegel 🍫. Ein schweres Bauteil will sich einfach nicht in den Rahmen schieben lassen, obwohl es laut Plan passen müsste. Ein falscher Handgriff könnte das teure Material beschädigen. Was machst du? 🛠️",
               imageUrl: images[2].uploadUrl,
-              type: "single-select-correct" as const,
-              options: [
-                {
-                  id: 1,
-                  text: "Die Rundfeile",
-                  correct: true,
-                  feedback:
-                    "Genau richtig! Die Rundfeile ist perfekt für runde Ecken. Du denkst schon wie ein Profi! 🔧",
-                },
-                {
-                  id: 2,
-                  text: "Die flache Feile",
-                  correct: false,
-                  feedback:
-                    "Die flache Feile ist gut für gerade Flächen, aber für runde Ecken brauchst du eine Rundfeile. Probier's nochmal! 💪",
-                },
-                {
-                  id: 3,
-                  text: "Die Säge",
-                  correct: false,
-                  feedback:
-                    "Die Säge ist zum Abtrennen, nicht zum Formen. Für runde Ecken brauchst du eine Feile! 🪚",
-                },
-                {
-                  id: 4,
-                  text: "Den Hammer",
-                  correct: false,
-                  feedback:
-                    "Mit dem Hammer würdest du das Metall nur verformen. Für präzise Arbeit brauchst du die richtige Feile! 🔨",
-                },
-              ],
+              type: "llm-interactive" as const,
+              options: [],
+              initialPrompt: `Du bist ein erfahrener Ausbilder bei Sollich, einem Unternehmen, das Maschinen für die Süßwarenindustrie baut. Du leitest einen neuen Auszubildenden durch praktische Situationen in der Werkstatt.
+
+Dein Ziel ist es, den Auszubildenden durch eine realistische Situation zu führen, in der er/sie ein Problem lösen muss. Entwickle die Situation basierend auf den Antworten des Auszubildenden weiter. 
+
+Wichtige Prinzipien:
+- Sei präzise, hilfreich und realistisch
+- Baue auf den Antworten des Auszubildenden auf
+- Stelle neue Herausforderungen oder Komplikationen vor, wenn die Situation es erfordert
+- Erkenne gute Lösungsansätze an und entwickle sie weiter
+- Wenn der Auszubildende einen Fehler macht, zeige die Konsequenzen auf, aber biete konstruktive Hilfe
+- Antworte immer auf Deutsch
+- Halte die Antworten prägnant (maximal 3-4 Sätze)
+- Verwende Emojis sparsam, nur wenn es die Situation verdeutlicht
+
+Die Situation entwickelt sich dynamisch basierend auf den Entscheidungen des Auszubildenden.`,
             },
             {
               id: 2,

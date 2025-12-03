@@ -219,6 +219,24 @@ export default function Beyond925() {
 
     const scenarioType = currentScenario.type;
 
+    // Handle llm-interactive type
+    if (scenarioType === "llm-interactive") {
+      // For LLM interactive, we don't auto-advance on continue
+      // The user needs to explicitly complete the scenario
+      // This will be handled by the InteractionView component
+      // Just check if this is the last scenario
+      if (currentScenarioIndex === currentLevel.scenarios.length - 1) {
+        handleLevelComplete();
+      } else {
+        // Move to next scenario
+        setCurrentScenarioIndex((prev) => prev + 1);
+        setTextAnswer("");
+        setStatus("none");
+        setShowHint(false);
+      }
+      return;
+    }
+
     // Handle text-field type
     if (scenarioType === "text-field") {
       if (!textAnswer.trim()) return;

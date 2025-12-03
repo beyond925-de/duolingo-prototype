@@ -1,6 +1,6 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-import { ArrowRight, X } from "lucide-react";
+import { ArrowRight, Loader2, X } from "lucide-react";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 
 import "react-circular-progressbar/dist/styles.css";
@@ -17,6 +17,8 @@ import { cn } from "@/lib/utils";
 
 import { config } from "../config";
 import { Level, Scenario } from "../types";
+import { useLLM } from "../hooks/useLLM";
+import { systemPrompt, taskPrompt } from "@/lib/promtps/journey-prompts";
 
 interface InteractionViewProps {
   currentLevel: Level;
@@ -75,9 +77,120 @@ export function InteractionView({
     currentScenario.type === "single-select-no-correct";
   const isSingleSelectCorrect =
     currentScenario.type === "single-select-correct";
-  const isTextInputType = isTextField || isSingleSelectOrText;
+  const isLLMInteractive = currentScenario.type === "llm-interactive";
+  const isTextInputType =
+    isTextField || isSingleSelectOrText || isLLMInteractive;
   const isReflection =
-    isSingleSelectNoCorrect || isTextField || isSingleSelectOrText;
+    isSingleSelectNoCorrect ||
+    isTextField ||
+    isSingleSelectOrText ||
+    isLLMInteractive;
+
+  // LLM Interactive state
+  const [conversationHistory, setConversationHistory] = useState<
+    Array<{ role: "user" | "assistant"; content: string }>
+  >(currentScenario.conversationHistory || []);
+  const [currentScenarioText, setCurrentScenarioText] = useState(
+    currentScenario.scenario
+  );
+  const [quickReplies, setQuickReplies] = useState<string[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [isLLMLoading, setIsLLMLoading] = useState(false);
+  const { mutate: sendLLMMessage } = useLLM();
+
+  // Initialize conversation history if this is the first time
+  useEffect(() => {
+    if (isLLMInteractive && conversationHistory.length === 0) {
+      setCurrentScenarioText(currentScenario.scenario);
+      setQuickReplies([]);
+      setShowSuggestions(false);
+    }
+  }, [isLLMInteractive, currentScenario.scenario, conversationHistory.length]);
+
+  const handleLLMSubmit = useCallback(() => {
+    if (!textAnswer.trim() || isLLMLoading) return;
+
+    if (conversationHistory.length === 0) {
+      // Add initial prompt to conversation history
+      setConversationHistory([
+        { role: "assistant" as const, content: currentScenario.scenario },
+      ]);
+      return;
+    }
+
+    const userMessage = textAnswer.trim();
+    onTextAnswerChange("");
+    setIsLLMLoading(true);
+
+    // Add user message to conversation history
+    const updatedHistory = [
+      ...conversationHistory,
+      { role: "user" as const, content: userMessage },
+    ];
+    setConversationHistory(updatedHistory);
+
+    // Build messages for LLM
+    const messages = [
+      {
+        role: "system" as const,
+        content: systemPrompt,
+      },
+      {
+        role: "user" as const,
+        content: taskPrompt,
+      },
+      ...updatedHistory.map((msg) => ({
+        role: msg.role,
+        content: msg.content,
+      })),
+    ];
+
+    console.log(messages);
+    sendLLMMessage(
+      {
+        messages,
+        temperature: 0.8,
+        max_tokens: 500,
+      },
+      {
+        onSuccess: (response) => {
+          const assistantResponse = response.content;
+          const newHistory = [
+            ...updatedHistory,
+            { role: "assistant" as const, content: assistantResponse },
+          ];
+          setConversationHistory(newHistory);
+          setCurrentScenarioText(assistantResponse);
+          // Store quickReplies if provided
+          if (response.quickReplies && response.quickReplies.length > 0) {
+            setQuickReplies(response.quickReplies);
+            setShowSuggestions(false); // Reset suggestions visibility
+          }
+          setIsLLMLoading(false);
+        },
+        onError: (error) => {
+          console.error("LLM error:", error);
+          setIsLLMLoading(false);
+          // Show error message to user
+          const errorHistory = [
+            ...updatedHistory,
+            {
+              role: "assistant" as const,
+              content:
+                "Entschuldigung, es gab einen Fehler. Bitte versuche es erneut.",
+            },
+          ];
+          setConversationHistory(errorHistory);
+        },
+      }
+    );
+  }, [
+    textAnswer,
+    isLLMLoading,
+    conversationHistory,
+    currentScenario.initialPrompt,
+    sendLLMMessage,
+  ]);
 
   const isLastScenarioInLevel = currentScenarioIndex === totalScenarios - 1;
   const isFinalStage = currentLevelId === totalLevels && isLastScenarioInLevel;
@@ -85,7 +198,9 @@ export function InteractionView({
   const hasAnswer = isMultipleSelect
     ? selectedOptions.length > 0
     : isTextInputType
-      ? selectedOption !== undefined || textAnswer.trim() !== ""
+      ? isLLMInteractive
+        ? conversationHistory.length > 0 && !isLLMLoading
+        : selectedOption !== undefined || textAnswer.trim() !== ""
       : selectedOption !== undefined;
 
   // Calculate progress: completed levels + progress within current level
@@ -205,9 +320,30 @@ export function InteractionView({
           </div>
 
           <div className="mb-6 rounded-b-3xl border-purple-200 bg-purple-50 px-4 py-4">
-            <p className="text-base leading-relaxed text-slate-800 lg:text-lg">
-              {currentScenario.scenario}
-            </p>
+            {isLLMInteractive ? (
+              <div>
+                {/* Loading indicator */}
+                {isLLMLoading ? (
+                  <div className="flex items-center gap-2 rounded-xl ">
+                    <Loader2 className="h-5 w-5 animate-spin text-purple-600" />
+                    <p className="text-base text-purple-600 lg:text-lg">
+                      Lade nächste Situation...
+                    </p>
+                  </div>
+                ) : (
+                  /* Current scenario text */
+                  <div className="rounded-xl ">
+                    <p className="text-base leading-relaxed text-slate-800 lg:text-lg">
+                      {currentScenarioText}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <p className="text-base leading-relaxed text-slate-800 lg:text-lg">
+                {currentScenario.scenario}
+              </p>
+            )}
           </div>
 
           <div className="px-4">
@@ -221,15 +357,17 @@ export function InteractionView({
             )}
 
             <h3 className="font-semibold text-slate-800">
-              {isTextField
-                ? "Gib deine Antwort ein"
-                : isMultipleSelect
-                  ? "Wähle alle zutreffenden Antworten"
-                  : isSingleSelectOrText
-                    ? "Wähle eine Antwort oder gib deine eigene ein"
-                    : isSingleSelectNoCorrect
-                      ? "Wähle deine Antwort"
-                      : "Wähle deine Antwort"}
+              {isLLMInteractive
+                ? "Ich werde zuerst..."
+                : isTextField
+                  ? "Gib deine Antwort ein"
+                  : isMultipleSelect
+                    ? "Wähle alle zutreffenden Antworten"
+                    : isSingleSelectOrText
+                      ? "Wähle eine Antwort oder gib deine eigene ein"
+                      : isSingleSelectNoCorrect
+                        ? "Wähle deine Antwort"
+                        : "Wähle deine Antwort"}
             </h3>
 
             {/* Show options for types that have options */}
@@ -324,51 +462,109 @@ export function InteractionView({
             )}
 
             {/* Show text input for text-field and single-select-or-text types */}
-            {(isTextField || isSingleSelectOrText) && (
+            {(isTextField || isSingleSelectOrText || isLLMInteractive) && (
               <div
                 className={cn(
                   "mt-6",
-                  isSingleSelectOrText && "border-t-2 border-slate-200 pt-6"
+                  (isSingleSelectOrText || isLLMInteractive) &&
+                    "border-t-2 border-slate-200 pt-6"
                 )}
               >
                 <div className="relative">
-                  <input
-                    type="text"
-                    value={textAnswer}
-                    onChange={(e) => {
-                      onTextAnswerChange(e.target.value);
-                      if (isSingleSelectOrText) {
-                        // Clear selected option when typing
-                        onOptionSelect(undefined);
+                  {isLLMInteractive ? (
+                    <textarea
+                      value={textAnswer}
+                      onChange={(e) => {
+                        onTextAnswerChange(e.target.value);
+                      }}
+                      placeholder="Bedienungsanleitung suchen? Kollegen fragen?"
+                      rows={3}
+                      disabled={isLLMLoading}
+                      className="w-full resize-none rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 pr-14 text-base focus:border-purple-300 focus:outline-none disabled:bg-slate-50 disabled:text-slate-500"
+                    />
+                  ) : (
+                    <input
+                      type="text"
+                      value={textAnswer}
+                      onChange={(e) => {
+                        onTextAnswerChange(e.target.value);
+                        if (isSingleSelectOrText) {
+                          // Clear selected option when typing
+                          onOptionSelect(undefined);
+                        }
+                      }}
+                      placeholder={
+                        isTextField
+                          ? "Gib deine Antwort ein..."
+                          : "Oder gib deine eigene Antwort ein..."
                       }
-                    }}
-                    placeholder={
-                      isTextField
-                        ? "Gib deine Antwort ein..."
-                        : "Oder gib deine eigene Antwort ein..."
-                    }
-                    className="w-full rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 pr-14 text-base focus:border-purple-300 focus:outline-none"
-                  />
-                  {isTextField && (
+                      className="w-full rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 pr-14 text-base focus:border-purple-300 focus:outline-none"
+                    />
+                  )}
+                  {(isTextField || isLLMInteractive) && (
                     <button
-                      onClick={onContinue}
-                      disabled={!textAnswer.trim()}
+                      onClick={isLLMInteractive ? handleLLMSubmit : onContinue}
+                      disabled={!textAnswer.trim() || isLLMLoading}
                       className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-purple-500 p-2 text-white transition hover:bg-purple-600 disabled:bg-slate-300"
                     >
-                      <ArrowRight className="h-5 w-5" />
+                      {isLLMLoading ? (
+                        <Loader2 className="h-5 w-5 animate-spin" />
+                      ) : (
+                        <ArrowRight className="h-5 w-5" />
+                      )}
                     </button>
                   )}
                 </div>
 
-                {isSingleSelectOrText && (
-                  <div className="mt-4 flex items-center justify-between">
-                    <button
-                      onClick={() => onTextAnswerChange("")}
-                      className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700"
-                    >
-                      <span className="text-lg">🗑️</span>
-                      Leeren
-                    </button>
+                {(isSingleSelectOrText || isLLMInteractive) && (
+                  <div className="mt-4">
+                    <div className="flex items-center justify-between">
+                      <button
+                        onClick={() => onTextAnswerChange("")}
+                        disabled={isLLMLoading}
+                        className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700 disabled:opacity-50"
+                      >
+                        <span className="text-lg">🗑️</span>
+                        Leeren
+                      </button>
+                      {isLLMInteractive && quickReplies.length > 0 && (
+                        <button
+                          onClick={() => setShowSuggestions(!showSuggestions)}
+                          className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700 disabled:opacity-50"
+                          disabled={isLLMLoading}
+                        >
+                          Vorschläge anzeigen
+                          <span
+                            className={cn(
+                              "text-lg transition-transform",
+                              showSuggestions && "rotate-180"
+                            )}
+                          >
+                            ⌄
+                          </span>
+                        </button>
+                      )}
+                    </div>
+                    {/* Quick Replies Suggestions */}
+                    {isLLMInteractive &&
+                      showSuggestions &&
+                      quickReplies.length > 0 && (
+                        <div className="mt-4 space-y-2">
+                          {quickReplies.map((reply, index) => (
+                            <button
+                              key={index}
+                              onClick={() => {
+                                onTextAnswerChange(reply);
+                                setShowSuggestions(false);
+                              }}
+                              disabled={isLLMLoading}
+                              className="w-full rounded-xl border-2 border-purple-200 bg-purple-50 px-4 py-3 text-left text-sm font-medium text-purple-800 transition hover:border-purple-300 hover:bg-purple-100 disabled:opacity-50"
+                            >
+                              {reply}
+                            </button>
+                          ))}
+                        </div>
+                      )}
                   </div>
                 )}
               </div>
@@ -378,7 +574,10 @@ export function InteractionView({
       </div>
 
       {/* Footer buttons */}
-      {(isSingleSelectNoCorrect || isTextField || isSingleSelectOrText) &&
+      {(isSingleSelectNoCorrect ||
+        isTextField ||
+        isSingleSelectOrText ||
+        isLLMInteractive) &&
         isFinalStage && (
           <footer
             className="border-t-2 bg-white px-4 py-4"
@@ -388,7 +587,7 @@ export function InteractionView({
           >
             <div className="mx-auto max-w-2xl">
               <Button
-                disabled={!hasAnswer}
+                disabled={!hasAnswer || isLLMLoading}
                 onClick={onExpressApply}
                 size="lg"
                 variant="primary"
@@ -428,7 +627,10 @@ export function InteractionView({
       )}
 
       {/* Footer for non-final reflection scenarios */}
-      {(isSingleSelectNoCorrect || isTextField || isSingleSelectOrText) &&
+      {(isSingleSelectNoCorrect ||
+        isTextField ||
+        isSingleSelectOrText ||
+        isLLMInteractive) &&
         !isFinalStage && (
           <footer
             className="border-t-2 bg-white px-4 py-4"
@@ -438,7 +640,7 @@ export function InteractionView({
           >
             <div className="mx-auto max-w-2xl">
               <Button
-                disabled={!hasAnswer}
+                disabled={!hasAnswer || isLLMLoading}
                 onClick={onContinue}
                 size="lg"
                 variant="primary"
