@@ -188,7 +188,6 @@ export function InteractionView({
     textAnswer,
     isLLMLoading,
     conversationHistory,
-    currentScenario.initialPrompt,
     sendLLMMessage,
   ]);
 

@@ -28,7 +28,6 @@ export interface Scenario {
   }>;
   allowTextInput?: boolean; // For text-field and single-select-or-text types
   // For llm-interactive type:
-  initialPrompt?: string; // System prompt for the LLM
   conversationHistory?: Array<{
     role: "user" | "assistant";
     content: string;
@@ -41,6 +40,9 @@ export interface Level {
   status: LevelStatus;
   icon: string;
   scenarios: Scenario[];
+  // Optional graph structure for branching/merging
+  row?: number; // Row number (0-based). Multiple levels can share the same row.
+  nextLevelIds?: number[]; // IDs of levels this connects to. If not provided, connects to next sequential level.
 }
 
 export interface Job {

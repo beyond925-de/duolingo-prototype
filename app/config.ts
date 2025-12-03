@@ -107,21 +107,6 @@ export const config = {
               imageUrl: images[2].uploadUrl,
               type: "llm-interactive" as const,
               options: [],
-              initialPrompt: `Du bist ein erfahrener Ausbilder bei Sollich, einem Unternehmen, das Maschinen für die Süßwarenindustrie baut. Du leitest einen neuen Auszubildenden durch praktische Situationen in der Werkstatt.
-
-Dein Ziel ist es, den Auszubildenden durch eine realistische Situation zu führen, in der er/sie ein Problem lösen muss. Entwickle die Situation basierend auf den Antworten des Auszubildenden weiter. 
-
-Wichtige Prinzipien:
-- Sei präzise, hilfreich und realistisch
-- Baue auf den Antworten des Auszubildenden auf
-- Stelle neue Herausforderungen oder Komplikationen vor, wenn die Situation es erfordert
-- Erkenne gute Lösungsansätze an und entwickle sie weiter
-- Wenn der Auszubildende einen Fehler macht, zeige die Konsequenzen auf, aber biete konstruktive Hilfe
-- Antworte immer auf Deutsch
-- Halte die Antworten prägnant (maximal 3-4 Sätze)
-- Verwende Emojis sparsam, nur wenn es die Situation verdeutlicht
-
-Die Situation entwickelt sich dynamisch basierend auf den Entscheidungen des Auszubildenden.`,
             },
             {
               id: 2,
@@ -326,6 +311,8 @@ Die Situation entwickelt sich dynamisch basierend auf den Entscheidungen des Aus
           title: "Ausbildungsstart",
           status: "unlocked" as const,
           icon: "🖥️",
+          row: 0, // First row
+          nextLevelIds: [2, 3], // Branches to levels 2 and 3
           scenarios: [
             {
               id: 1,
@@ -485,9 +472,11 @@ Die Situation entwickelt sich dynamisch basierend auf den Entscheidungen des Aus
         },
         {
           id: 2,
-          title: "Azubi 2./3. Lehrjahr",
+          title: "CAD Spezialist",
           status: "locked" as const,
           icon: "🔧",
+          row: 1, // Second row, left branch
+          nextLevelIds: [4], // Merges into level 4
           scenarios: [
             {
               id: 5,
@@ -590,9 +579,81 @@ Die Situation entwickelt sich dynamisch basierend auf den Entscheidungen des Aus
         },
         {
           id: 3,
+          title: "Projektplanung",
+          status: "locked" as const,
+          icon: "📊",
+          row: 1, // Second row, right branch (same row as level 2)
+          nextLevelIds: [4], // Also merges into level 4
+          scenarios: [
+            {
+              id: 10,
+              scenario:
+                "Du planst ein neues Projekt für eine Schokoladenproduktionslinie. Wie strukturierst du die Arbeit? 📋",
+              imageUrl: images[11].uploadUrl,
+              type: "single-select-correct" as const,
+              options: [
+                {
+                  id: 1,
+                  text: "Ich erstelle einen Zeitplan, definiere Meilensteine und teile die Arbeit in Phasen ein",
+                  correct: true,
+                  feedback:
+                    "Perfekt! Strukturierte Projektplanung ist essentiell. Genau so arbeiten wir bei Sollich. 🎯",
+                },
+                {
+                  id: 2,
+                  text: "Ich fange einfach an und schaue, wie weit ich komme",
+                  correct: false,
+                  feedback:
+                    "Bei Sollich planen wir professionell! Ein klarer Plan hilft, Deadlines einzuhalten. 📊",
+                },
+                {
+                  id: 3,
+                  text: "Das plant der Projektleiter",
+                  correct: false,
+                  feedback:
+                    "Bei Sollich übernimmst du Verantwortung! Projektplanung ist Teil deiner Aufgaben. ✨",
+                },
+              ],
+            },
+            {
+              id: 11,
+              scenario:
+                "Du musst mehrere Zeichnungen für ein Projekt erstellen. Wie priorisierst du? 🎯",
+              imageUrl: images[8].uploadUrl,
+              type: "single-select-correct" as const,
+              options: [
+                {
+                  id: 1,
+                  text: "Ich beginne mit den kritischen Bauteilen, die für die Montage zuerst gebraucht werden",
+                  correct: true,
+                  feedback:
+                    "Exzellent! Priorisierung nach Dringlichkeit und Abhängigkeiten – genau so arbeiten wir bei Sollich. 🎯",
+                },
+                {
+                  id: 2,
+                  text: "Ich mache die einfachsten zuerst",
+                  correct: false,
+                  feedback:
+                    "Bei Sollich denken wir strategisch! Kritische Teile zuerst, dann der Rest. 🧠",
+                },
+                {
+                  id: 3,
+                  text: "Ich mache sie alle gleichzeitig",
+                  correct: false,
+                  feedback:
+                    "Fokussiertes Arbeiten ist wichtig! Bei Sollich lernst du, Prioritäten zu setzen. 💪",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: 4,
           title: "Nach der Ausbildung",
           status: "locked" as const,
           icon: "🌍",
+          row: 2, // Third row (merged path)
+          nextLevelIds: [5], // Continues to level 5
           scenarios: [
             {
               id: 8,
@@ -664,10 +725,11 @@ Die Situation entwickelt sich dynamisch basierend auf den Entscheidungen des Aus
           ],
         },
         {
-          id: 4,
+          id: 5,
           title: "Teamfit checken",
           status: "locked" as const,
           icon: "🏁",
+          row: 3, // Fourth row
           scenarios: [
             {
               id: 10,

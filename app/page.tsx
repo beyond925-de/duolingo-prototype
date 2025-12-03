@@ -59,6 +59,35 @@ export default function Beyond925() {
   });
   const [showHint, setShowHint] = useState(false);
 
+  // Helper function to recalculate unlock states based on completed prerequisites
+  const recalculateUnlockStates = (levelsToUpdate: Level[]): Level[] => {
+    return levelsToUpdate.map((level) => {
+      // Don't change status of completed or already unlocked levels
+      if (level.status === "completed" || level.status === "unlocked") {
+        return level;
+      }
+
+      // Check if any level that connects to this one is completed
+      const hasCompletedPrerequisite = levelsToUpdate.some((otherLevel) => {
+        if (otherLevel.status !== "completed") return false;
+        // Check if this level is in otherLevel's nextLevelIds
+        return otherLevel.nextLevelIds?.includes(level.id) ?? false;
+      });
+
+      // If using sequential structure, check if previous level is completed
+      const hasSequentialPrerequisite =
+        !levelsToUpdate.some((l) => l.nextLevelIds !== undefined) &&
+        level.id > 1 &&
+        levelsToUpdate.find((l) => l.id === level.id - 1)?.status === "completed";
+
+      if (hasCompletedPrerequisite || hasSequentialPrerequisite) {
+        return { ...level, status: "unlocked" as const };
+      }
+
+      return level;
+    });
+  };
+
   // Load state from local storage on mount
   useEffect(() => {
     const storedState = localStorage.getItem(STORAGE_KEY);
@@ -70,7 +99,11 @@ export default function Beyond925() {
         if (parsedState.showLanding !== undefined)
           setShowLanding(parsedState.showLanding);
         if (parsedState.selectedJob) setSelectedJob(parsedState.selectedJob);
-        if (parsedState.levels) setLevels(parsedState.levels);
+        if (parsedState.levels) {
+          // Recalculate unlock states when loading from storage
+          const recalculatedLevels = recalculateUnlockStates(parsedState.levels);
+          setLevels(recalculatedLevels);
+        }
         if (parsedState.currentLevelId !== undefined)
           setCurrentLevelId(parsedState.currentLevelId);
         if (parsedState.currentScenarioIndex !== undefined)
@@ -175,17 +208,32 @@ export default function Beyond925() {
     const finalLevel = levels.find((l) => l.id === currentLevelId);
     const isTeamfitChecken = finalLevel?.title === "Teamfit checken";
 
-    setLevels((prev) =>
-      prev.map((level) => {
+    setLevels((prev) => {
+      // Find the completed level to get its nextLevelIds
+      const completedLevel = prev.find((l) => l.id === currentLevelId);
+      const nextLevelIds = completedLevel?.nextLevelIds;
+
+      return prev.map((level) => {
+        // Mark current level as completed
         if (level.id === currentLevelId) {
           return { ...level, status: "completed" };
         }
-        if (level.id === currentLevelId + 1) {
+
+        // If using graph structure with nextLevelIds, unlock all connected levels
+        if (nextLevelIds && nextLevelIds.includes(level.id)) {
+          // Only unlock if currently locked (don't override if already unlocked/completed)
+          if (level.status === "locked") {
+            return { ...level, status: "unlocked" };
+          }
+        }
+        // Fallback to sequential behavior for backward compatibility
+        else if (!nextLevelIds && level.id === currentLevelId + 1) {
           return { ...level, status: "unlocked" };
         }
+
         return level;
-      })
-    );
+      });
+    });
 
     setScore((prev) => prev + 100);
 

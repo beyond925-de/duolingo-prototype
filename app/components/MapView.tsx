@@ -50,7 +50,7 @@ function StartTooltip({ isFirst }: { isFirst: boolean }) {
     };
   }, [isFirst]);
 
-  if (!isVisible) return null;
+  if (!isVisible || !isFirst) return null;
 
   return (
     <div
@@ -86,50 +86,115 @@ export function MapView({
 }: MapViewProps) {
   const [isApplyDialogOpen, setIsApplyDialogOpen] = useState(false);
 
+  // Create a map for quick level lookup
+  const levelMap = new Map(levels.map((level) => [level.id, level]));
+
+  // Determine if we're using graph structure (has row or nextLevelIds)
+  const usesGraphStructure = levels.some(
+    (level) => level.row !== undefined || level.nextLevelIds !== undefined
+  );
+
   // Pre-calculate positions
   const levelPositions = levels.map((level, index) => {
-    const cycleLength = 8;
-    const cycleIndex = index % cycleLength;
-    let indentationLevel;
+    // Use row if provided, otherwise use index
+    const row = level.row !== undefined ? level.row : index;
 
-    if (cycleIndex <= 2) indentationLevel = cycleIndex;
-    else if (cycleIndex <= 4) indentationLevel = 4 - cycleIndex;
-    else if (cycleIndex <= 6) indentationLevel = 4 - cycleIndex;
-    else indentationLevel = cycleIndex - 8;
+    // Calculate y position based on row
+    const y = row * ROW_HEIGHT + 60; // Start with some padding
 
-    // Calculate x offset (negative because original 'right' property moved it left)
-    const xOffset = -indentationLevel * OFFSET_X;
+    // For x position: if using graph structure and multiple levels on same row, distribute them
+    let x;
+    if (usesGraphStructure && level.row !== undefined) {
+      // Find all levels on the same row
+      const levelsOnSameRow = levels.filter((l) => l.row === level.row);
+      const indexInRow = levelsOnSameRow.findIndex((l) => l.id === level.id);
 
-    const x = CENTER_X + xOffset;
-    const y = index * ROW_HEIGHT + 60; // Start with some padding
+      if (levelsOnSameRow.length === 1) {
+        // Single level on row, center it
+        x = CENTER_X;
+      } else {
+        // Multiple levels on same row, distribute evenly
+        const spacing = SVG_WIDTH / (levelsOnSameRow.length + 1);
+        x = spacing * (indexInRow + 1);
+      }
+    } else {
+      // Fallback to original zigzag pattern for backward compatibility
+      const cycleLength = 8;
+      const cycleIndex = index % cycleLength;
+      let indentationLevel;
 
-    return { level, x, y, index };
+      if (cycleIndex <= 2) indentationLevel = cycleIndex;
+      else if (cycleIndex <= 4) indentationLevel = 4 - cycleIndex;
+      else if (cycleIndex <= 6) indentationLevel = 4 - cycleIndex;
+      else indentationLevel = cycleIndex - 8;
+
+      const xOffset = -indentationLevel * OFFSET_X;
+      x = CENTER_X + xOffset;
+    }
+
+    return { level, x, y, index, row };
   });
 
-  const totalHeight = levels.length * ROW_HEIGHT + 100;
+  // Calculate total height based on max row
+  const maxRow = usesGraphStructure
+    ? Math.max(...levels.map((l) => l.row ?? 0), levels.length - 1)
+    : levels.length - 1;
+  const totalHeight = (maxRow + 1) * ROW_HEIGHT + 100;
 
-  // Generate path data connecting the centers
-  let pathData = "";
-  let completedPathData = "";
+  // Generate path data connecting levels based on graph structure
+  const generatePathSegment = (
+    from: { x: number; y: number },
+    to: { x: number; y: number }
+  ) => {
+    const midY = (from.y + to.y) / 2;
+    return ` C ${from.x} ${midY}, ${to.x} ${midY}, ${to.x} ${to.y}`;
+  };
 
-  if (levelPositions.length > 1) {
-    const startPos = levelPositions[0];
-    pathData = `M ${startPos.x} ${startPos.y}`;
-    completedPathData = `M ${startPos.x} ${startPos.y}`;
+  // Generate all paths (for base and completed)
+  const allPaths: Array<{
+    from: { level: Level; x: number; y: number };
+    to: { level: Level; x: number; y: number };
+  }> = [];
 
-    for (let i = 0; i < levelPositions.length - 1; i++) {
-      const curr = levelPositions[i];
-      const next = levelPositions[i + 1];
-      const midY = (curr.y + next.y) / 2;
-      const segment = ` C ${curr.x} ${midY}, ${next.x} ${midY}, ${next.x} ${next.y}`;
-
-      pathData += segment;
-
-      if (curr.level.status === "completed") {
-        completedPathData += segment;
+  if (usesGraphStructure) {
+    // Use graph structure: follow nextLevelIds
+    levelPositions.forEach((pos) => {
+      const level = pos.level;
+      if (level.nextLevelIds && level.nextLevelIds.length > 0) {
+        level.nextLevelIds.forEach((nextId) => {
+          const nextPos = levelPositions.find((p) => p.level.id === nextId);
+          if (nextPos) {
+            allPaths.push({ from: pos, to: nextPos });
+          }
+        });
       }
+    });
+  } else {
+    // Fallback to sequential connections for backward compatibility
+    for (let i = 0; i < levelPositions.length - 1; i++) {
+      allPaths.push({
+        from: levelPositions[i],
+        to: levelPositions[i + 1],
+      });
     }
   }
+
+  // Generate path strings
+  const pathSegments: string[] = [];
+  const completedPathSegments: string[] = [];
+
+  allPaths.forEach(({ from, to }) => {
+    const segment = generatePathSegment(from, to);
+    pathSegments.push(`M ${from.x} ${from.y}${segment}`);
+
+    // Only add to completed path if the source level is completed
+    if (from.level.status === "completed") {
+      completedPathSegments.push(`M ${from.x} ${from.y}${segment}`);
+    }
+  });
+
+  const pathData = pathSegments.join(" ");
+  const completedPathData = completedPathSegments.join(" ");
 
   return (
     <div className="relative flex min-h-[100dvh] w-full flex-col overflow-hidden bg-slate-50">
@@ -250,11 +315,28 @@ export function MapView({
               </svg>
 
               {/* Levels */}
-              {levelPositions.map(({ level, x, y, index }) => {
+              {levelPositions.map(({ level, x, y, index, row }) => {
                 const isCompleted = level.status === "completed";
                 const isLocked = level.status === "locked";
-                const isCurrent = level.status === "unlocked" && !isCompleted;
-                const isFirst = index === 0;
+                const isUnlocked = level.status === "unlocked";
+                // Find the first unlocked but not completed level to be the "current" one
+                const firstUnlockedNotCompleted = levelPositions.find(
+                  (pos) => {
+                    const posCompleted = pos.level.status === "completed";
+                    return pos.level.status === "unlocked" && !posCompleted;
+                  }
+                );
+                const isCurrent =
+                  isUnlocked &&
+                  !isCompleted &&
+                  firstUnlockedNotCompleted?.level.id === level.id;
+                const isUnlockedButNotCurrent =
+                  isUnlocked && !isCompleted && !isCurrent;
+                // First level is the one with row 0 (or index 0 if not using graph structure)
+                const isFirst =
+                  usesGraphStructure
+                    ? row === 0
+                    : index === 0;
 
                 return (
                   <div
@@ -309,6 +391,15 @@ export function MapView({
                         >
                           {isLocked ? (
                             <Lock className="h-10 w-10 fill-neutral-400 stroke-neutral-400 text-neutral-400" />
+                          ) : isUnlockedButNotCurrent ? (
+                            <span
+                              className="text-3xl"
+                              style={{
+                                filter: "grayscale(100%) brightness(0) opacity(0.4)",
+                              }}
+                            >
+                              {level.icon}
+                            </span>
                           ) : (
                             <span className="text-3xl">{level.icon}</span>
                           )}
