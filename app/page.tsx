@@ -80,6 +80,10 @@ export default function Beyond925() {
   const handleLevelComplete = () => {
     if (!currentLevelId) return;
 
+    // Check the level before updating state to avoid stale closure
+    const finalLevel = levels.find((l) => l.id === currentLevelId);
+    const isTeamfitChecken = finalLevel?.title === "Teamfit checken";
+
     setLevels((prev) =>
       prev.map((level) => {
         if (level.id === currentLevelId) {
@@ -95,8 +99,7 @@ export default function Beyond925() {
     setScore((prev) => prev + 100);
 
     // If it's the final "Teamfit checken" level, go directly to apply
-    const finalLevel = levels.find((l) => l.id === currentLevelId);
-    if (finalLevel && finalLevel.title === "Teamfit checken") {
+    if (isTeamfitChecken) {
       setCurrentScreen("expressApply");
     } else {
       setShowConfetti(true);

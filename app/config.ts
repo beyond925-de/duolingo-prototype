@@ -103,7 +103,7 @@ export const config = {
               id: 1,
               scenario:
                 "Auf der Werkbank liegen viele verschiedene Feilen: grobe, feine, runde und flache 🛠️. Du musst eine runde Ecke in das Metall formen. Welche nimmst du? 🧐",
-              imageUrl: images[1].uploadUrl,
+              imageUrl: images[2].uploadUrl,
               type: "single-select-correct" as const,
               options: [
                 {
@@ -170,7 +170,7 @@ export const config = {
               id: 3,
               scenario:
                 "Bevor du mit der Arbeit beginnst, musst du die richtige Schutzausrüstung anlegen. Welche der folgenden Sicherheitsmaßnahmen sind wichtig? (Wähle alle zutreffenden) 🛡️",
-              imageUrl: images[1].uploadUrl,
+              imageUrl: images[14].uploadUrl,
               type: "multiple-select" as const,
               options: [
                 {
@@ -252,7 +252,7 @@ export const config = {
               id: 5,
               scenario:
                 "Dein Werkstück ist fertig. Jetzt kommt die Qualitätskontrolle mit der Messschraube. Du findest eine minimale Abweichung von 0,1mm. Was machst du? 🔍",
-              imageUrl: images[5].uploadUrl,
+              imageUrl: images[3].uploadUrl,
               type: "single-select-correct" as const,
               options: [
                 {
@@ -282,7 +282,7 @@ export const config = {
               id: 6,
               scenario:
                 "Du hast ein Problem bei der Fertigung: Das Werkstück passt nicht richtig zusammen. Beschreibe kurz, wie du vorgehen würdest, um das Problem zu lösen. 💭",
-              imageUrl: images[8].uploadUrl,
+              imageUrl: images[10].uploadUrl,
               type: "text-field" as const,
               options: [],
               allowTextInput: true,
@@ -542,7 +542,7 @@ export const config = {
               id: 6,
               scenario:
                 "Du konstruierst ein Pumpengehäuse mit mehreren Teilen. Wie stellst du sicher, dass alles montierbar ist? 🔩",
-              imageUrl: images[8].uploadUrl,
+              imageUrl: images[7].uploadUrl,
               type: "single-select-correct" as const,
               options: [
                 {
@@ -572,7 +572,7 @@ export const config = {
               id: 7,
               scenario:
                 "Deine Baugruppe ist fertig konstruiert. Jetzt braucht die Fertigung eine Stückliste. Was gehört alles rein? 📝",
-              imageUrl: images[12].uploadUrl,
+              imageUrl: images[8].uploadUrl,
               type: "single-select-correct" as const,
               options: [
                 {
