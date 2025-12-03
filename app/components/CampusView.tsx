@@ -61,8 +61,6 @@ export function CampusView({
                   style={{ backgroundColor: job.color }}
                 ></div>
 
-                <div className="h-full bg-red-500">foo</div>
-
                 {/* Content */}
                 <div className="relative z-10">
                   <div className="mb-4 text-4xl">{job.icon}</div>
