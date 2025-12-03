@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 
 import { config } from "../config";
 import { Level } from "../types";
+import { ApplyDialog } from "./ApplyDialog";
 
 interface MapViewProps {
   jobTitle: string;
@@ -54,8 +55,10 @@ function StartTooltip({ isFirst }: { isFirst: boolean }) {
   return (
     <div
       className={cn(
-        "absolute -top-12 z-10 whitespace-nowrap rounded-xl border-2 bg-white px-3 py-2.5 font-bold uppercase tracking-wide text-green-500 transition-opacity duration-500",
-        isFading ? "opacity-0" : "animate-bounce opacity-100"
+        "absolute -top-12 z-10 animate-bounce whitespace-nowrap rounded-xl border-2 bg-white",
+        "px-3 py-2.5 font-bold uppercase tracking-wide text-green-500 opacity-100 ",
+        "transition-opacity duration-700",
+        isFading ? "opacity-0" : ""
       )}
     >
       {isFirst ? "Start" : "Weiter"}
@@ -76,6 +79,8 @@ export function MapView({
   onExpressApply,
   onBackToCampus,
 }: MapViewProps) {
+  const [isApplyDialogOpen, setIsApplyDialogOpen] = useState(false);
+
   // Pre-calculate positions
   const levelPositions = levels.map((level, index) => {
     const cycleLength = 8;
@@ -123,6 +128,11 @@ export function MapView({
 
   return (
     <div className="flex h-full flex-col">
+      <ApplyDialog
+        isOpen={isApplyDialogOpen}
+        onClose={() => setIsApplyDialogOpen(false)}
+        onConfirm={onExpressApply}
+      />
       <header className="mx-auto flex w-full max-w-[1140px] items-center justify-between gap-x-7 px-6 pt-[20px] lg:pt-[50px]">
         <div className="flex items-center gap-3">
           <button
@@ -139,7 +149,7 @@ export function MapView({
           </button>
         </div>
         <button
-          onClick={onExpressApply}
+          onClick={() => setIsApplyDialogOpen(true)}
           className="flex items-center gap-2 whitespace-nowrap rounded-full border-2 border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-slate-50"
         >
           <span>🏁</span>

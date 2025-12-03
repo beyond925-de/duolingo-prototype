@@ -92,6 +92,7 @@ export const config = {
       description: "Maschinen bauen, reparieren und optimieren",
       icon: "🛠️",
       color: "#3b82f6",
+      tags: ["🛠️ Hands on", "⚙️ Technik"],
       levels: [
         {
           id: 1,
@@ -332,6 +333,7 @@ export const config = {
       description: "Vom Blatt Papier zum digitalen 3D-Modell",
       icon: "📐",
       color: "#8b5cf6",
+      tags: ["📐 Genauigkeit", "🖥️ Digital"],
       levels: [
         {
           id: 1,

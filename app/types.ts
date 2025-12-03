@@ -42,6 +42,7 @@ export interface Job {
   description: string;
   icon: string;
   color: string;
+  tags: string[];
   levels: Level[];
 }
 

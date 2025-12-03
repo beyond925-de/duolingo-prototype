@@ -1,6 +1,7 @@
 import { Settings } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import Carousel from "@/components/Carousel";
 
 import { config } from "../config";
 import { Job } from "../types";
@@ -28,8 +29,8 @@ export function CampusView({
         <div className="flex-1" />
       </header>
 
-      <div className="flex-1 overflow-auto px-4 pb-6">
-        <div className="mx-auto max-w-4xl">
+      <div className="flex-1 overflow-auto pb-6">
+        <div className="mx-auto max-w-4xl px-4">
           <div className="mb-8 text-center">
             <div className="mb-4 text-6xl">{config.company.logoUrl}</div>
             <h1 className="mb-2 text-2xl font-bold text-neutral-700 lg:text-3xl">
@@ -39,38 +40,67 @@ export function CampusView({
               {config.campus.subline}
             </p>
           </div>
+        </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {jobs.map((job) => (
+        <div className="mx-auto h-full w-fit">
+          <Carousel
+            items={jobs}
+            baseWidth={350}
+            loop={false} // true would be nicer, but there is a bug when swiping quickly at the looping border
+            renderItem={(job, index) => (
               <button
-                key={job.id}
                 onClick={() => onJobSelect(job)}
-                className="group relative overflow-hidden rounded-3xl border-4 border-slate-200 bg-white p-6 text-left shadow-lg transition-all hover:scale-105 hover:border-slate-300 hover:shadow-xl"
+                className="group relative h-full w-full overflow-hidden rounded-3xl border-4 border-slate-200 bg-white p-6 text-left shadow-lg transition-all hover:border-slate-300 hover:shadow-xl"
                 style={{
                   borderColor: job.color,
                 }}
               >
+                {/* Dekorativer Hintergrund-Klecks */}
                 <div
-                  className="absolute inset-0 opacity-5 transition-opacity group-hover:opacity-10"
+                  className="absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-20 blur-2xl"
                   style={{ backgroundColor: job.color }}
-                />
-                <div className="relative">
-                  <div className="mb-4 text-5xl">{job.icon}</div>
-                  <h2 className="mb-2 text-xl font-bold text-neutral-700">
+                ></div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="mb-4 text-4xl">{job.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900">
                     {job.title}
-                  </h2>
-                  <p className="text-sm text-neutral-600">{job.description}</p>
-                  <div className="mt-4 flex items-center gap-2 text-sm font-semibold">
-                    <span style={{ color: job.color }}>Mission starten</span>
-                    <span className="text-lg">→</span>
+                  </h3>
+
+                  {/* Skill Tags */}
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {job.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-blue-100 px-2 py-1 text-xs font-bold "
+                        style={{
+                          color: job.color,
+                          backgroundColor: job.color + "20",
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
+
+                  <p className="mt-4 text-sm text-gray-500">
+                    {job.description}
+                  </p>
+
+                  <button
+                    className="mt-6 w-full rounded-lg py-2 font-bold text-white opacity-90 shadow-lg transition-all hover:opacity-100 active:opacity-100"
+                    style={{ backgroundColor: job.color }}
+                  >
+                    Mission starten 🚀
+                  </button>
                 </div>
               </button>
-            ))}
-          </div>
+            )}
+            getItemKey={(job) => job.id}
+          />
         </div>
       </div>
     </div>
   );
 }
-
