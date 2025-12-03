@@ -127,7 +127,7 @@ export function MapView({
   }
 
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex h-[100dvh] flex-col">
       <ApplyDialog
         isOpen={isApplyDialogOpen}
         onClose={() => setIsApplyDialogOpen(false)}

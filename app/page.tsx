@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useWindowSize } from "react-use";
 
@@ -14,8 +14,24 @@ import { VictoryView } from "./components/VictoryView";
 import { config } from "./config";
 import { Job, Level, Screen } from "./types";
 
+const STORAGE_KEY = "duolingo-mockup-state";
+
+function LoadingScreen() {
+  return (
+    <div className="flex h-[100dvh] w-full flex-col items-center justify-center bg-white">
+      <div className="flex flex-col items-center gap-4">
+        <div className="animate-spin text-6xl">⚙️</div>
+        <p className="animate-pulse text-lg font-medium text-slate-600">
+          Lade...
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function Beyond925() {
   const { width, height } = useWindowSize();
+  const [isLoaded, setIsLoaded] = useState(false);
   const [currentScreen, setCurrentScreen] = useState<Screen>("campus");
   const [showLanding, setShowLanding] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
@@ -42,6 +58,81 @@ export default function Beyond925() {
     animation: true,
   });
   const [showHint, setShowHint] = useState(false);
+
+  // Load state from local storage on mount
+  useEffect(() => {
+    const storedState = localStorage.getItem(STORAGE_KEY);
+    if (storedState) {
+      try {
+        const parsedState = JSON.parse(storedState);
+        if (parsedState.currentScreen)
+          setCurrentScreen(parsedState.currentScreen);
+        if (parsedState.showLanding !== undefined)
+          setShowLanding(parsedState.showLanding);
+        if (parsedState.selectedJob) setSelectedJob(parsedState.selectedJob);
+        if (parsedState.levels) setLevels(parsedState.levels);
+        if (parsedState.currentLevelId !== undefined)
+          setCurrentLevelId(parsedState.currentLevelId);
+        if (parsedState.currentScenarioIndex !== undefined)
+          setCurrentScenarioIndex(parsedState.currentScenarioIndex);
+        if (parsedState.selectedOption !== undefined)
+          setSelectedOption(parsedState.selectedOption);
+        if (parsedState.selectedOptions)
+          setSelectedOptions(parsedState.selectedOptions);
+        if (parsedState.textAnswer !== undefined)
+          setTextAnswer(parsedState.textAnswer);
+        if (parsedState.status) setStatus(parsedState.status);
+        if (parsedState.score !== undefined) setScore(parsedState.score);
+        if (parsedState.formData) setFormData(parsedState.formData);
+        if (parsedState.settings) setSettings(parsedState.settings);
+      } catch (e) {
+        console.error("Failed to load state from local storage:", e);
+      }
+    }
+    setIsLoaded(true);
+  }, []);
+
+  // Save state to local storage whenever it changes
+  useEffect(() => {
+    if (!isLoaded) return;
+
+    const stateToSave = {
+      currentScreen,
+      showLanding,
+      selectedJob,
+      levels,
+      currentLevelId,
+      currentScenarioIndex,
+      selectedOption,
+      selectedOptions,
+      textAnswer,
+      status,
+      score: _score,
+      formData,
+      settings,
+    };
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave));
+  }, [
+    isLoaded,
+    currentScreen,
+    showLanding,
+    selectedJob,
+    levels,
+    currentLevelId,
+    currentScenarioIndex,
+    selectedOption,
+    selectedOptions,
+    textAnswer,
+    status,
+    _score,
+    formData,
+    settings,
+  ]);
+
+  if (!isLoaded) {
+    return <LoadingScreen />;
+  }
 
   const currentLevel = currentLevelId
     ? levels.find((l) => l.id === currentLevelId)

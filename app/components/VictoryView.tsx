@@ -41,7 +41,7 @@ export function VictoryView({
           height={height}
         />
       )}
-      <div className="flex h-full flex-col">
+      <div className="flex h-[100dvh] flex-col">
         <header className="mx-auto flex w-full max-w-[1140px] items-center justify-end gap-x-7 px-10 pt-[20px] lg:pt-[50px]">
           <button
             onClick={onExpressApply}
@@ -58,7 +58,9 @@ export function VictoryView({
             <h1 className="text-lg font-bold text-neutral-700 lg:text-3xl">
               {config.copy.victoryHeadline}
               <br />
-              <span className="text-green-500">{config.copy.victorySubtext}</span>
+              <span className="text-green-500">
+                {config.copy.victorySubtext}
+              </span>
             </h1>
 
             {showNudge && (
@@ -86,7 +88,12 @@ export function VictoryView({
                 {config.copy.nextLevel}
               </Button>
             )}
-            <Button size="lg" variant="default" className="ml-auto" onClick={onMenu}>
+            <Button
+              size="lg"
+              variant="default"
+              className="ml-auto"
+              onClick={onMenu}
+            >
               {config.copy.menu}
             </Button>
           </div>
@@ -95,4 +102,3 @@ export function VictoryView({
     </>
   );
 }
-

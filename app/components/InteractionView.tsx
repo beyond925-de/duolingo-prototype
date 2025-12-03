@@ -132,7 +132,7 @@ export function InteractionView({
   }, [particleIdCounter]);
 
   return (
-    <div className="relative flex h-screen flex-col bg-white">
+    <div className="relative flex h-[100dvh] flex-col bg-white">
       <header className="absolute left-0 right-0 top-0 z-50 flex items-center justify-between gap-3 px-2 py-2">
         <div className="flex items-center gap-2">
           <button
@@ -215,7 +215,7 @@ export function InteractionView({
               <div className="mb-6 rounded-2xl border-2 border-blue-200 bg-blue-50 p-4">
                 <p className="text-sm text-blue-800">
                   💡 Tipp: Denk daran, dass Sicherheit und Qualität bei
-                  TechSteel immer Priorität haben!
+                  {config.company.name} immer Priorität haben!
                 </p>
               </div>
             )}
@@ -380,7 +380,12 @@ export function InteractionView({
       {/* Footer buttons */}
       {(isSingleSelectNoCorrect || isTextField || isSingleSelectOrText) &&
         isFinalStage && (
-          <footer className="border-t-2 bg-white px-4 py-4">
+          <footer
+            className="border-t-2 bg-white px-4 py-4"
+            style={{
+              paddingBottom: `calc(1rem + env(safe-area-inset-bottom))`,
+            }}
+          >
             <div className="mx-auto max-w-2xl">
               <Button
                 disabled={!hasAnswer}
@@ -396,7 +401,10 @@ export function InteractionView({
         )}
 
       {(isSingleSelectCorrect || isMultipleSelect) && (
-        <footer className="border-t-2 bg-white px-4 py-4">
+        <footer
+          className="border-t-2 bg-white px-4 py-4"
+          style={{ paddingBottom: `calc(1rem + env(safe-area-inset-bottom))` }}
+        >
           <div className="mx-auto max-w-2xl">
             <Button
               disabled={!hasAnswer}
@@ -422,7 +430,12 @@ export function InteractionView({
       {/* Footer for non-final reflection scenarios */}
       {(isSingleSelectNoCorrect || isTextField || isSingleSelectOrText) &&
         !isFinalStage && (
-          <footer className="border-t-2 bg-white px-4 py-4">
+          <footer
+            className="border-t-2 bg-white px-4 py-4"
+            style={{
+              paddingBottom: `calc(1rem + env(safe-area-inset-bottom))`,
+            }}
+          >
             <div className="mx-auto max-w-2xl">
               <Button
                 disabled={!hasAnswer}

@@ -18,7 +18,7 @@ export function CampusView({
   onSettingsClick,
 }: CampusViewProps) {
   return (
-    <div className="flex h-full flex-col bg-gradient-to-b from-slate-50 to-white">
+    <div className="flex h-[100dvh] flex-col bg-gradient-to-b from-slate-50 to-white">
       <header className="mx-auto flex w-full max-w-[1140px] items-center justify-between gap-x-7 px-6 pt-[20px] lg:pt-[50px]">
         <button
           onClick={onSettingsClick}
@@ -60,6 +60,8 @@ export function CampusView({
                   className="absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-20 blur-2xl"
                   style={{ backgroundColor: job.color }}
                 ></div>
+
+                <div className="h-full bg-red-500">foo</div>
 
                 {/* Content */}
                 <div className="relative z-10">

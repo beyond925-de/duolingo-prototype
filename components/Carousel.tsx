@@ -49,6 +49,8 @@ export default function Carousel<T>({
   const [isResetting, setIsResetting] = useState<boolean>(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
+  const isDragging = useRef(false);
+
   useEffect(() => {
     if (pauseOnHover && containerRef.current) {
       const container = containerRef.current;
@@ -99,10 +101,18 @@ export default function Carousel<T>({
     }
   };
 
+  const handleDragStart = () => {
+    isDragging.current = true;
+  };
+
   const handleDragEnd = (
     _: MouseEvent | TouchEvent | PointerEvent,
     info: PanInfo
   ): void => {
+    setTimeout(() => {
+      isDragging.current = false;
+    }, 50);
+
     const offset = info.offset.x;
     const velocity = info.velocity.x;
 
@@ -138,7 +148,7 @@ export default function Carousel<T>({
       }`}
       style={{
         width: `${baseWidth}px`,
-        ...(round && { height: `${baseWidth}px` }),
+        height: round ? `${baseWidth}px` : "100%",
       }}
     >
       <motion.div
@@ -152,7 +162,14 @@ export default function Carousel<T>({
           perspectiveOrigin: `${currentIndex * trackItemOffset + itemWidth / 2}px 50%`,
           x,
         }}
+        onDragStart={handleDragStart}
         onDragEnd={handleDragEnd}
+        onClickCapture={(e) => {
+          if (isDragging.current) {
+            e.stopPropagation();
+            e.preventDefault();
+          }
+        }}
         animate={{ x: -(currentIndex * trackItemOffset) }}
         transition={effectiveTransition}
         onAnimationComplete={handleAnimationComplete}

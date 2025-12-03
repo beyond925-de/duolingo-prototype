@@ -12,9 +12,11 @@ body {
   background: rgb(var(--background-start-rgb));
 }
 
-
-
 @layer base {
+  html,
+  body {
+    height: 100%;
+  }
   :root {
     --background: 0 0% 100%;
     --foreground: 20 14.3% 4.1%;
@@ -70,8 +72,6 @@ body {
   }
 }
 
-
-
 @layer base {
   * {
     @apply border-border;
@@ -80,4 +80,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-

@@ -12,8 +12,8 @@ export function LandingOverlay({ onStart }: LandingOverlayProps) {
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
-    <div className="h-screen w-full">
-      <div className="relative mx-auto flex h-screen w-full max-w-[988px] flex-1 flex-col items-center justify-center gap-2 overflow-y-hidden p-4 lg:flex-row">
+    <div className="h-[100dvh] w-full">
+      <div className="relative mx-auto flex h-full w-full max-w-[988px] flex-1 flex-col items-center justify-center gap-2 overflow-y-hidden p-4 lg:flex-row">
         <div className="flex h-full flex-col items-center gap-y-8 ">
           <div className="grid gap-y-4 text-center">
             <img
@@ -53,7 +53,12 @@ export function LandingOverlay({ onStart }: LandingOverlayProps) {
           </div>
         </div>
 
-        <div className="absolute bottom-0 flex w-full flex-col items-center gap-y-3 px-4 pb-4 pt-12">
+        <div
+          className="absolute bottom-0 flex w-full flex-col items-center gap-y-3 px-4 pt-12"
+          style={{
+            paddingBottom: "calc(1rem + env(safe-area-inset-bottom))",
+          }}
+        >
           {/* Gradient blur background */}
           <div
             className="absolute inset-0 bg-white/50 backdrop-blur-sm"

@@ -28,7 +28,7 @@ export function ExpressApplyView({
   const [showFunFacts, setShowFunFacts] = useState(false);
 
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex h-[100dvh] flex-col">
       <header className="mx-auto flex w-full max-w-[1140px] items-center justify-between gap-x-7 px-10 pt-[20px] lg:pt-[50px]">
         <X
           onClick={onClose}
