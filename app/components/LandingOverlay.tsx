@@ -12,8 +12,47 @@ export function LandingOverlay({ onStart }: LandingOverlayProps) {
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
-    <div className="h-[100dvh] w-full">
-      <div className="relative mx-auto flex h-full w-full max-w-[988px] flex-1 flex-col items-center justify-center gap-2 overflow-y-hidden p-4 lg:flex-row">
+    <div className="relative flex min-h-[100dvh] w-full flex-col overflow-hidden bg-slate-50">
+      {/* Background Elements */}
+      <div className="absolute inset-0 z-0">
+        {/* 1. Blueprint Grid Pattern */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px), 
+                            linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)`,
+            backgroundSize: "40px 40px",
+            maskImage:
+              "linear-gradient(to bottom, black 60%, transparent 100%)", // Fade out at bottom
+          }}
+        />
+
+        {/* 2. Atmosphere Glow - Wide gradient instead of blobs */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background: `radial-gradient(100% 100% at 50% -10%, ${config.company.primaryColor}20 0%, transparent 60%)`,
+          }}
+        />
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background: `radial-gradient(60% 60% at 90% 40%, ${config.company.primaryColor}10 0%, transparent 100%)`,
+          }}
+        />
+
+        {/* 3. Floating Particles */}
+        <div className="animate-float-slow pointer-events-none absolute right-10 top-20 select-none text-[150px] opacity-10 blur-[2px]">
+          {config.company.logoUrl}
+        </div>
+        <div className="animate-float-slower pointer-events-none absolute bottom-40 left-10 select-none text-[100px] opacity-10 blur-[2px]">
+          {config.company.logoUrl}
+        </div>
+      </div>
+
+      {/* Content Layer */}
+      <div className="relative z-10 h-[100dvh] w-full">
+        <div className="relative mx-auto flex h-full w-full max-w-[988px] flex-1 flex-col items-center justify-center gap-2 overflow-y-hidden p-4 lg:flex-row">
         <div className="flex h-full flex-col items-center gap-y-8 ">
           <div className="grid gap-y-4 text-center">
             <img
@@ -79,6 +118,7 @@ export function LandingOverlay({ onStart }: LandingOverlayProps) {
             {config.landing.startButtonText}
           </Button>
         </div>
+      </div>
       </div>
     </div>
   );
