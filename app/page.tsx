@@ -194,8 +194,6 @@ export default function Beyond925() {
     : null;
 
   const completedCount = levels.filter((l) => l.status === "completed").length;
-  const progress =
-    levels.length > 0 ? (completedCount / levels.length) * 100 : 0;
 
   const handleJobSelect = (job: Job) => {
     setSelectedJob(job);
@@ -507,9 +505,9 @@ export default function Beyond925() {
 
       {currentScreen === "map" && selectedJob && (
         <MapView
-          jobTitle={selectedJob.title}
+          job={selectedJob}
+          jobs={config.jobs}
           levels={levels}
-          progress={progress}
           onLevelClick={handleLevelClick}
           onSettingsClick={() => setShowSettings(true)}
           onExpressApply={handleExpressApply}

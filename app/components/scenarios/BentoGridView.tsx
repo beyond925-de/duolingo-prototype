@@ -33,7 +33,7 @@ export function BentoGridView({ scenario, onContinue }: BentoGridViewProps) {
         <div
           className={cn(
             "flex flex-col gap-4",
-            "grid grid-cols-1 grid-cols-2",
+            "grid grid-cols-2",
             "auto-rows-[minmax(120px,auto)]"
           )}
         >

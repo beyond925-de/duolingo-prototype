@@ -86,6 +86,7 @@ export const config = {
     ],
   },
   jobs: [
+    // Choose the visual layout via pathModeId (see app/pathModes.ts for presets)
     {
       id: "industriemechaniker",
       title: "Industriemechaniker:in",
@@ -93,6 +94,7 @@ export const config = {
       icon: "🛠️",
       color: "#3b82f6",
       tags: ["🛠️ Hands on", "⚙️ Technik"],
+      pathModeId: "linear",
       levels: [
         {
           id: 1,
@@ -305,6 +307,7 @@ export const config = {
       icon: "📐",
       color: "#8b5cf6",
       tags: ["📐 Genauigkeit", "🖥️ Digital"],
+      pathModeId: "branching",
       levels: [
         {
           id: 1,
@@ -725,6 +728,17 @@ export const config = {
           ],
         },
       ],
+    },
+    {
+      id: "karriere-map",
+      title: "Alle Ausbildungswege",
+      description:
+        "Erkunde alle Pfade gleichzeitig – zoomen, pannen und vergleichen.",
+      icon: "🗺️",
+      color: "#f97316",
+      tags: ["🌍 Explorer", "🧭 Überblick"],
+      pathModeId: "global-map",
+      levels: [],
     },
   ] as Job[],
   copy: {

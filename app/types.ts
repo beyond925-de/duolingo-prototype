@@ -7,6 +7,40 @@ export type Screen =
   | "expressApply";
 export type LevelStatus = "locked" | "unlocked" | "completed";
 
+export type PathLayoutStrategy = "linear" | "branching" | "global";
+export type PathModeId = "linear" | "branching" | "global-map";
+
+export interface PathModeConfig {
+  id: PathModeId;
+  label: string;
+  description: string;
+  layoutStrategy: PathLayoutStrategy;
+  geometry: {
+    width: number;
+    rowHeight: number;
+    zigzagOffset?: number;
+  };
+  branch?: {
+    align?: "center" | "justify";
+  };
+  globalLayout?: {
+    columns: number;
+    columnGap: number;
+    rowGap: number;
+    clusterWidth: number;
+  };
+  connection: {
+    type: "bezier" | "straight";
+    curvature: number;
+  };
+  zoom?: {
+    enabled: boolean;
+    min: number;
+    max: number;
+    defaultScale: number;
+  };
+}
+
 export type ScenarioType =
   | "single-select-correct" // single select with correct answer
   | "single-select-no-correct" // single select with no right answer
@@ -56,6 +90,13 @@ export interface Level {
   nextLevelIds?: number[]; // IDs of levels this connects to. If not provided, connects to next sequential level.
 }
 
+export interface JobPathOverrides {
+  global?: {
+    column?: number;
+    row?: number;
+  };
+}
+
 export interface Job {
   id: string;
   title: string;
@@ -64,6 +105,8 @@ export interface Job {
   color: string;
   tags: string[];
   levels: Level[];
+  pathModeId?: PathModeId;
+  pathOverrides?: JobPathOverrides;
 }
 
 export interface ImageData {
