@@ -23,6 +23,7 @@ import {
   TextFieldView,
   SingleSelectOrTextView,
   LLMInteractiveView,
+  BentoGridView,
   ScenarioText,
 } from "./scenarios";
 
@@ -39,6 +40,7 @@ interface InteractionViewProps {
   textAnswer: string;
   status: "none" | "wrong" | "correct";
   showHint: boolean;
+  debugMode?: boolean;
   onOptionSelect: (id: number | undefined) => void;
   onOptionsToggle?: (id: number) => void; // For multiple-select type
   onTextAnswerChange: (value: string) => void;
@@ -47,6 +49,7 @@ interface InteractionViewProps {
   onHintToggle: () => void;
   onExpressApply: () => void;
   onExit: () => void;
+  onDebugCompleteLevel?: () => void;
 }
 
 interface Particle {
@@ -67,6 +70,7 @@ export function InteractionView({
   textAnswer,
   status,
   showHint,
+  debugMode = false,
   onOptionSelect,
   onOptionsToggle,
   onTextAnswerChange,
@@ -75,6 +79,7 @@ export function InteractionView({
   onHintToggle,
   onExpressApply,
   onExit,
+  onDebugCompleteLevel,
 }: InteractionViewProps) {
   const isMultipleSelect = currentScenario.type === "multiple-select";
   const isTextField = currentScenario.type === "text-field";
@@ -84,6 +89,7 @@ export function InteractionView({
   const isSingleSelectCorrect =
     currentScenario.type === "single-select-correct";
   const isLLMInteractive = currentScenario.type === "llm-interactive";
+  const isBentoGrid = currentScenario.type === "bento-grid";
 
   // LLM Interactive state for ScenarioText display
   const [currentScenarioText, setCurrentScenarioText] = useState(
@@ -94,13 +100,15 @@ export function InteractionView({
   const isLastScenarioInLevel = currentScenarioIndex === totalScenarios - 1;
   const isFinalStage = currentLevelId === totalLevels && isLastScenarioInLevel;
 
-  const hasAnswer = isMultipleSelect
-    ? selectedOptions.length > 0
-    : isTextField || isSingleSelectOrText || isLLMInteractive
-      ? isLLMInteractive
-        ? currentScenarioText !== currentScenario.scenario && !isLLMLoading
-        : selectedOption !== undefined || textAnswer.trim() !== ""
-      : selectedOption !== undefined;
+  const hasAnswer = isBentoGrid
+    ? true // Bento grid is informational, always has "answer" to proceed
+    : isMultipleSelect
+      ? selectedOptions.length > 0
+      : isTextField || isSingleSelectOrText || isLLMInteractive
+        ? isLLMInteractive
+          ? currentScenarioText !== currentScenario.scenario && !isLLMLoading
+          : selectedOption !== undefined || textAnswer.trim() !== ""
+        : selectedOption !== undefined;
 
   // Calculate progress: completed levels + progress within current level
   const levelProgress = isLastScenarioInLevel
@@ -164,6 +172,15 @@ export function InteractionView({
           >
             ⚙️
           </button>
+          {debugMode && onDebugCompleteLevel && (
+            <button
+              onClick={onDebugCompleteLevel}
+              className="flex items-center gap-1 rounded-full bg-red-500/90 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-sm transition hover:bg-red-600"
+              title="Debug: Complete Level (Ctrl/Cmd + Shift + C)"
+            >
+              ⚡ Finish Level
+            </button>
+          )}
         </div>
         <div className="flex items-center gap-2">
           <button
@@ -324,6 +341,21 @@ export function InteractionView({
                 onLoadingChange={setIsLLMLoading}
               />
             )}
+
+            {currentScenario.type === "bento-grid" && (
+              <BentoGridView
+                scenario={currentScenario}
+                hasAnswer={hasAnswer}
+                onContinue={onContinue}
+                selectedOption={selectedOption}
+                selectedOptions={selectedOptions}
+                textAnswer={textAnswer}
+                status={status}
+                onOptionSelect={onOptionSelect}
+                onOptionsToggle={onOptionsToggle}
+                onTextAnswerChange={onTextAnswerChange}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -332,7 +364,8 @@ export function InteractionView({
       {(isSingleSelectNoCorrect ||
         isTextField ||
         isSingleSelectOrText ||
-        isLLMInteractive) &&
+        isLLMInteractive ||
+        isBentoGrid) &&
         isFinalStage && (
           <footer
             className="border-t-2 bg-white px-4 py-4"
@@ -385,7 +418,8 @@ export function InteractionView({
       {(isSingleSelectNoCorrect ||
         isTextField ||
         isSingleSelectOrText ||
-        isLLMInteractive) &&
+        isLLMInteractive ||
+        isBentoGrid) &&
         !isFinalStage && (
           <footer
             className="border-t-2 bg-white px-4 py-4"

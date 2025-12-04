@@ -56,6 +56,7 @@ export default function Beyond925() {
     vibration: true,
     sound: true,
     animation: true,
+    debugMode: false,
   });
   const [showHint, setShowHint] = useState(false);
 
@@ -78,7 +79,8 @@ export default function Beyond925() {
       const hasSequentialPrerequisite =
         !levelsToUpdate.some((l) => l.nextLevelIds !== undefined) &&
         level.id > 1 &&
-        levelsToUpdate.find((l) => l.id === level.id - 1)?.status === "completed";
+        levelsToUpdate.find((l) => l.id === level.id - 1)?.status ===
+          "completed";
 
       if (hasCompletedPrerequisite || hasSequentialPrerequisite) {
         return { ...level, status: "unlocked" as const };
@@ -101,7 +103,9 @@ export default function Beyond925() {
         if (parsedState.selectedJob) setSelectedJob(parsedState.selectedJob);
         if (parsedState.levels) {
           // Recalculate unlock states when loading from storage
-          const recalculatedLevels = recalculateUnlockStates(parsedState.levels);
+          const recalculatedLevels = recalculateUnlockStates(
+            parsedState.levels
+          );
           setLevels(recalculatedLevels);
         }
         if (parsedState.currentLevelId !== undefined)
@@ -162,6 +166,20 @@ export default function Beyond925() {
     formData,
     settings,
   ]);
+
+  // Keyboard shortcut for debug mode (Ctrl/Cmd + Shift + D)
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      // Toggle debug mode: Ctrl/Cmd + Shift + D
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === "D") {
+        e.preventDefault();
+        setSettings((prev) => ({ ...prev, debugMode: !prev.debugMode }));
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, []);
 
   if (!isLoaded) {
     return <LoadingScreen />;
@@ -247,6 +265,12 @@ export default function Beyond925() {
     }
     // Reset scenario index for next level
     setCurrentScenarioIndex(0);
+  };
+
+  // Debug mode: instantly complete current level
+  const handleDebugCompleteLevel = () => {
+    if (!settings.debugMode || !currentLevelId) return;
+    handleLevelComplete();
   };
 
   const handleOptionSelect = (id: number | undefined) => {
@@ -507,6 +531,7 @@ export default function Beyond925() {
           textAnswer={textAnswer}
           status={status}
           showHint={showHint}
+          debugMode={settings.debugMode}
           onOptionSelect={handleOptionSelect}
           onOptionsToggle={handleOptionsToggle}
           onTextAnswerChange={setTextAnswer}
@@ -523,6 +548,7 @@ export default function Beyond925() {
             setStatus("none");
             setShowHint(false);
           }}
+          onDebugCompleteLevel={handleDebugCompleteLevel}
         />
       )}
 

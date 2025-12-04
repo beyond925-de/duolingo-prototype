@@ -13,7 +13,8 @@ export type ScenarioType =
   | "multiple-select" // multiple select
   | "text-field" // custom answer text field
   | "single-select-or-text" // single select or custom text input
-  | "llm-interactive"; // dynamic LLM-powered interactive scenario
+  | "llm-interactive" // dynamic LLM-powered interactive scenario
+  | "bento-grid"; // informational bento grid layout
 
 export interface Scenario {
   id: number;
@@ -32,6 +33,16 @@ export interface Scenario {
     role: "user" | "assistant";
     content: string;
   }>; // Conversation history for dynamic scenarios
+  // For bento-grid type:
+  facts?: Array<{
+    title: string;
+    value: string;
+    icon: string;
+    layout?: {
+      colSpan?: number; // 1-2
+      rowSpan?: number; // 1-2
+    };
+  }>;
 }
 
 export interface Level {

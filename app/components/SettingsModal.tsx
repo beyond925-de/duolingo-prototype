@@ -14,6 +14,7 @@ interface SettingsModalProps {
     vibration: boolean;
     sound: boolean;
     animation: boolean;
+    debugMode: boolean;
   };
   onSettingChange: (key: string, value: boolean) => void;
 }
@@ -59,6 +60,10 @@ export function SettingsModal({
             { key: "vibration", label: config.copy.settings.vibration },
             { key: "sound", label: config.copy.settings.sound },
             { key: "animation", label: config.copy.settings.animation },
+            {
+              key: "debugMode",
+              label: "Debug Mode (Ctrl/Cmd + Shift + D)",
+            },
           ].map(({ key, label }) => (
             <div
               key={key}

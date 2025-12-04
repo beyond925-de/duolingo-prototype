@@ -658,67 +658,31 @@ export const config = {
             {
               id: 8,
               scenario:
-                "Ein großer Kunde aus den USA 🇺🇸 möchte eine riesige Überzieh-Linie kaufen. Er schickt dir den Hallenplan. Problem: Eine Betonsäule steht genau dort, wo unsere Maschine hinsoll. Der Kunde fragt: 'Können wir die Maschine irgendwie um die Säule herum bauen?' 🏗️",
+                "Lerne mehr über die Vorteile bei Sollich und was dich nach der Ausbildung erwartet.",
               imageUrl: images[11].uploadUrl,
-              type: "single-select-correct" as const,
-              options: [
+              type: "bento-grid" as const,
+              options: [],
+              facts: [
                 {
-                  id: 1,
-                  text: "Ja, wir planen eine Kurve ↩️",
-                  correct: true,
-                  feedback:
-                    "Genau richtig! Kreative Lösungen für Kundenwünsche – das ist Ingenieurskunst. Genau das machen wir bei Sollich. 🎯",
+                  title: "Führerschein-Support",
+                  value:
+                    "Wir lassen dich nicht stehen. Wir unterstützen dich finanziell bei deinem Führerschein.",
+                  icon: "🚗",
+                  layout: { colSpan: 1, rowSpan: 1 },
                 },
                 {
-                  id: 2,
-                  text: "Nein, die Säule muss weg 🔨",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich finden wir Lösungen! Kundenwünsche sind Herausforderungen, die wir kreativ lösen. 💡",
+                  title: "Ausschlafen inklusive",
+                  value:
+                    "Morgenmuffel? Kein Thema. Bei uns geht's entspannt um 9:00 Uhr los.",
+                  icon: "⏰",
+                  layout: { colSpan: 1, rowSpan: 1 },
                 },
                 {
-                  id: 3,
-                  text: "Wir bauen die Maschine kürzer 📉",
-                  correct: false,
-                  feedback:
-                    "Das würde die Funktion beeinträchtigen! Bei Sollich lernen wir, sowohl technisch als auch kreativ zu denken. 🧠",
-                },
-                {
-                  id: 4,
-                  text: "Das muss der Chef entscheiden 📞",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich übertragen wir dir Verantwortung! Du lernst, eigenständig Lösungen zu entwickeln. ✨",
-                },
-              ],
-            },
-            {
-              id: 9,
-              scenario:
-                "Du planst die Anordnung der Maschine in der Kundenhalle. Was musst du beachten? 🏭",
-              imageUrl: images[11].uploadUrl,
-              type: "single-select-correct" as const,
-              options: [
-                {
-                  id: 1,
-                  text: "Hallenmaße, Zugänge, Wartungsbereiche, Sicherheitsabstände und bestehende Infrastruktur",
-                  correct: true,
-                  feedback:
-                    "Perfekt! Layout-Planung ist komplex. Bei Sollich lernst du, alle Faktoren zu berücksichtigen. 🎯",
-                },
-                {
-                  id: 2,
-                  text: "Hauptsache die Maschine passt rein",
-                  correct: false,
-                  feedback:
-                    "Es gibt mehr zu beachten! Bei Sollich lernst du, ganzheitlich zu denken. 🧠",
-                },
-                {
-                  id: 3,
-                  text: "Das macht der Kunde selbst",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich übernehmen wir Verantwortung! Layout-Planung ist Teil unseres Service. 💪",
+                  title: "Echte Missionen",
+                  value:
+                    "Kaffee kochen tun andere. Du kriegst bei uns ab Tag 1 echte Verantwortung.",
+                  icon: "🔥",
+                  layout: { colSpan: 2, rowSpan: 1 },
                 },
               ],
             },

@@ -227,10 +227,10 @@ export function MapView({
         />
 
         {/* 3. Floating Particles */}
-        <div className="animate-float-slow pointer-events-none absolute right-10 top-20 select-none text-[150px] opacity-10 blur-[2px]">
+        <div className="pointer-events-none absolute right-10 top-20 animate-float-slow select-none text-[150px] opacity-10 blur-[2px]">
           {config.company.logoUrl}
         </div>
-        <div className="animate-float-slower pointer-events-none absolute bottom-40 left-10 select-none text-[100px] opacity-10 blur-[2px]">
+        <div className="pointer-events-none absolute bottom-40 left-10 animate-float-slower select-none text-[100px] opacity-10 blur-[2px]">
           {config.company.logoUrl}
         </div>
       </div>
@@ -319,24 +319,42 @@ export function MapView({
                 const isCompleted = level.status === "completed";
                 const isLocked = level.status === "locked";
                 const isUnlocked = level.status === "unlocked";
-                // Find the first unlocked but not completed level to be the "current" one
-                const firstUnlockedNotCompleted = levelPositions.find(
-                  (pos) => {
-                    const posCompleted = pos.level.status === "completed";
-                    return pos.level.status === "unlocked" && !posCompleted;
-                  }
+
+                // Check if this level is part of a branch (multiple levels on same row)
+                const levelsOnSameRow = levelPositions.filter(
+                  (pos) => pos.row === row && pos.level.id !== level.id
                 );
+                const isPartOfBranch = levelsOnSameRow.length > 0;
+
+                // Find the first unlocked but not completed level to be the "current" one
+                // Only mark as current if it's not part of a branch (single path forward)
+                const firstUnlockedNotCompleted = levelPositions.find((pos) => {
+                  const posCompleted = pos.level.status === "completed";
+                  const posUnlocked = pos.level.status === "unlocked";
+                  if (!posUnlocked || posCompleted) return false;
+
+                  // Check if this level is part of a branch
+                  const posLevelsOnSameRow = levelPositions.filter(
+                    (p) => p.row === pos.row && p.level.id !== pos.level.id
+                  );
+                  const posIsPartOfBranch = posLevelsOnSameRow.length > 0;
+
+                  // Only mark as current if it's not part of a branch
+                  return !posIsPartOfBranch;
+                });
+
+                // If part of a branch, don't mark any as "current" - style them all the same
+                // When branching, all unlocked levels on the same row should look the same (regular unlocked, not silhouette)
                 const isCurrent =
                   isUnlocked &&
                   !isCompleted &&
+                  !isPartOfBranch &&
                   firstUnlockedNotCompleted?.level.id === level.id;
+                // Don't show silhouette if part of a branch - show as regular unlocked
                 const isUnlockedButNotCurrent =
-                  isUnlocked && !isCompleted && !isCurrent;
+                  isUnlocked && !isCompleted && !isCurrent && !isPartOfBranch;
                 // First level is the one with row 0 (or index 0 if not using graph structure)
-                const isFirst =
-                  usesGraphStructure
-                    ? row === 0
-                    : index === 0;
+                const isFirst = usesGraphStructure ? row === 0 : index === 0;
 
                 return (
                   <div
@@ -395,7 +413,8 @@ export function MapView({
                             <span
                               className="text-3xl"
                               style={{
-                                filter: "grayscale(100%) brightness(0) opacity(0.4)",
+                                filter:
+                                  "grayscale(100%) brightness(0) opacity(0.4)",
                               }}
                             >
                               {level.icon}
