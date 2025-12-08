@@ -216,6 +216,8 @@ export default function Beyond925() {
     setTextAnswer("");
     setStatus("none");
     setShowHint(false);
+    setSelectedJob(null);
+    setLevels([]);
   };
 
   const handleLevelComplete = () => {
@@ -317,6 +319,21 @@ export default function Beyond925() {
       } else {
         // Move to next scenario
         setCurrentScenarioIndex((prev) => prev + 1);
+        setTextAnswer("");
+        setStatus("none");
+        setShowHint(false);
+      }
+      return;
+    }
+
+    // Handle bento-grid type (informational)
+    if (scenarioType === "bento-grid") {
+      if (currentScenarioIndex === currentLevel.scenarios.length - 1) {
+        handleLevelComplete();
+      } else {
+        setCurrentScenarioIndex((prev) => prev + 1);
+        setSelectedOption(undefined);
+        setSelectedOptions([]);
         setTextAnswer("");
         setStatus("none");
         setShowHint(false);
@@ -459,7 +476,7 @@ export default function Beyond925() {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert(`Danke ${formData.firstName}! Wir melden uns bei dir. 📞`);
-    setCurrentScreen("campus");
+    handleBackToCampus();
     setFormData({
       firstName: "",
       phoneType: "",
@@ -610,7 +627,8 @@ export default function Beyond925() {
             setFormData((prev) => ({ ...prev, ...data }))
           }
           onSubmit={handleFormSubmit}
-          onClose={() => setCurrentScreen("campus")}
+          onClose={handleBackToCampus}
+          onExploreJobs={handleBackToCampus}
         />
       )}
     </>

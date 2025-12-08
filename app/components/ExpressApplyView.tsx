@@ -17,6 +17,7 @@ interface ExpressApplyViewProps {
   onFormDataChange: (data: Partial<ExpressApplyViewProps["formData"]>) => void;
   onSubmit: (e: React.FormEvent) => void;
   onClose: () => void;
+  onExploreJobs?: () => void;
 }
 
 export function ExpressApplyView({
@@ -24,6 +25,7 @@ export function ExpressApplyView({
   onFormDataChange,
   onSubmit,
   onClose,
+  onExploreJobs,
 }: ExpressApplyViewProps) {
   const [showFunFacts, setShowFunFacts] = useState(false);
 
@@ -108,6 +110,20 @@ export function ExpressApplyView({
                 {config.copy.submit}
               </Button>
             </form>
+
+            {onExploreJobs && (
+              <div className="mt-4">
+                <Button
+                  type="button"
+                  size="lg"
+                  variant="ghost"
+                  className="w-full text-sm font-semibold text-slate-600"
+                  onClick={onExploreJobs}
+                >
+                  Erstmal andere Jobs entdecken
+                </Button>
+              </div>
+            )}
           </div>
 
           <p className="text-center text-xs text-neutral-500">

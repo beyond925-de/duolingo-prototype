@@ -60,41 +60,50 @@ export function SettingsModal({
             { key: "vibration", label: config.copy.settings.vibration },
             { key: "sound", label: config.copy.settings.sound },
             { key: "animation", label: config.copy.settings.animation },
-            {
-              key: "debugMode",
-              label: "Debug Mode (Ctrl/Cmd + Shift + D)",
-            },
-          ].map(({ key, label }) => (
-            <div
-              key={key}
-              className="flex items-center justify-between rounded-xl border-2 border-slate-200 p-4"
-            >
-              <span className="font-medium text-neutral-700">{label}</span>
-              <button
-                onClick={() =>
-                  onSettingChange(key, !settings[key as keyof typeof settings])
-                }
-                className={cn(
-                  "relative h-7 w-12 rounded-full transition-colors",
-                  settings[key as keyof typeof settings]
-                    ? "bg-green-500"
-                    : "bg-slate-300"
-                )}
+          ]
+            .concat(
+              process.env.NODE_ENV === "development"
+                ? [
+                    {
+                      key: "debugMode",
+                      label: "Debug Mode (Ctrl/Cmd + Shift + D)",
+                    },
+                  ]
+                : []
+            )
+            .map(({ key, label }) => (
+              <div
+                key={key}
+                className="flex items-center justify-between rounded-xl border-2 border-slate-200 p-4"
               >
-                <div
+                <span className="font-medium text-neutral-700">{label}</span>
+                <button
+                  onClick={() =>
+                    onSettingChange(
+                      key,
+                      !settings[key as keyof typeof settings]
+                    )
+                  }
                   className={cn(
-                    "absolute top-0.5 h-6 w-6 rounded-full bg-white transition-transform",
+                    "relative h-7 w-12 rounded-full transition-colors",
                     settings[key as keyof typeof settings]
-                      ? "translate-x-[22px]"
-                      : "translate-x-0.5"
+                      ? "bg-green-500"
+                      : "bg-slate-300"
                   )}
-                />
-              </button>
-            </div>
-          ))}
+                >
+                  <div
+                    className={cn(
+                      "absolute top-0.5 h-6 w-6 rounded-full bg-white transition-transform",
+                      settings[key as keyof typeof settings]
+                        ? "translate-x-[22px]"
+                        : "translate-x-0.5"
+                    )}
+                  />
+                </button>
+              </div>
+            ))}
         </div>
       </div>
     </div>
   );
 }
-

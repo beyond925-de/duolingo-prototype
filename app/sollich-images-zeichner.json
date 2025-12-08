@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "scene": "Arbeitsplatz / Intro",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. Clean black ink outlines, colored with alcohol markers. Visualizing a modern desk with dual monitors, a caliper, and a hand-sketched paper note. Through a large window in the background, a glimpse of a manufacturing hall. Bright, professional atmosphere, no text.",
+    "description": "a black and white line-art illustration of a modern desk with dual monitors displaying technical diagrams, a digital caliper showing 1.60, technical drawings on paper, and a large window in the background showing a factory floor with industrial machinery, CNC machines, and overhead pipes",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGsI4iyqZSOa5oGfeQw0igHmDClury4RAtNT1b",
+    "tags": [
+      "desk",
+      "monitors",
+      "caliper",
+      "technical-drawings",
+      "factory",
+      "window",
+      "overview"
+    ]
+  },
+  {
+    "id": 2,
+    "scene": "Handskizze / Idee",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. First-person view looking down at a sheet of paper. A hand holding a pencil is sketching a rough mechanical cube concept. Eraser shavings nearby. Artistic, creative focus, clean lines, soft lighting, no text.",
+    "description": "a high-angle close-up of a hand holding a mechanical pencil drawing a detailed isometric technical illustration of a mechanical assembly with gears, shafts, and a spring mechanism on white paper, with pencil shavings and an eraser nearby",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGrQ3UmIoLx1pZiT3K4VDNbFJalWARdm6foQGr",
+    "tags": [
+      "sketching",
+      "technical-drawing",
+      "isometric",
+      "gears",
+      "mechanical-assembly",
+      "pencil",
+      "detail"
+    ]
+  },
+  {
+    "id": 3,
+    "scene": "CAD Drahtgitter",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. Close-up of a computer monitor displaying a neon-green 3D wireframe model of a mechanical part on a dark background. A hand rests on a 3D space mouse. Digital meets analog art style, sharp details, no text.",
+    "description": "a close-up view of a computer monitor displaying a bright neon-green 3D wireframe model of a complex mechanical component against a dark textured background, with a hand operating a gray computer mouse next to it, and a CAD software interface visible in the corner",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGzbtdmAgIJHSe5mTKodNBAZy13xLqUcnzE7P4",
+    "tags": [
+      "digital",
+      "wireframe",
+      "CAD",
+      "computer",
+      "monitor",
+      "3D-model",
+      "design"
+    ]
+  },
+  {
+    "id": 4,
+    "scene": "3D-Drucker / Prototyping",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. Visualizing a character standing in front of a glass-enclosed 3D printer. Inside, a plastic part is being built layer by layer. Modern maker-space vibe, clean outlines, vibrant marker colors, no text.",
+    "description": "a person wearing a light blue shirt and dark blue apron standing in front of a large glass-enclosed 3D printer with a complex mechanical object being printed on the illuminated print bed, with a control panel on the workbench and a workshop background with shelves and tools",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxG8fM8EUKpVATEMkn9gidZwvPHcrDbsyI0F1XB",
+    "tags": [
+      "3D-printer",
+      "prototyping",
+      "workshop",
+      "print-bed",
+      "person",
+      "model",
+      "shop"
+    ]
+  },
+  {
+    "id": 5,
+    "scene": "Maße eintragen / Detailarbeit",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. Focus on a monitor screen showing a 2D technical drawing. Red dimension lines and numbers are being placed. Character looks focused. Precision aesthetic, clean linework, architectural style, no text.",
+    "description": "a person from behind looking at a computer monitor displaying a technical diagram with two mechanical components, both with red-glowing central areas and diagonal arrows forming an X pattern between them, indicating interaction or collision, with the person's hand on their chin in contemplation",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGm3Oq6HMFodsMg0pf6abPAN8Q57e1OcDqvuwL",
+    "tags": [
+      "collision",
+      "error",
+      "computer",
+      "diagram",
+      "problem-solving",
+      "contemplation",
+      "focus",
+      "detail"
+    ]
+  },
+  {
+    "id": 6,
+    "scene": "Kollision / Fehler",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. On a screen, two mechanical parts are highlighted in red where they overlap (collision). Character in foreground looks pensive, hand on chin. Problem-solving atmosphere, clear contrast, no text.",
+    "description": "a person from behind looking at a computer monitor displaying a technical diagram with two mechanical components, both with red-glowing central areas and diagonal arrows forming an X pattern between them, indicating interaction or collision, with the person's hand on their chin in contemplation",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGm3Oq6HMFodsMg0pf6abPAN8Q57e1OcDqvuwL",
+    "tags": [
+      "collision",
+      "error",
+      "computer",
+      "diagram",
+      "problem-solving",
+      "contemplation"
+    ]
+  },
+  {
+    "id": 7,
+    "scene": "Recherche / Normen",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. A desk cluttered with thick open catalogs and reference books about screws and materials. Character comparing values. Studious atmosphere, detailed textures of paper, soft coloring, no text.",
+    "description": "a person with glasses wearing a light blue shirt studying multiple open technical manuals and blueprints on a wooden desk, actively drawing with a mechanical pencil in one book while pointing at diagrams in another, with books showing detailed drawings of screws, bolts, and mechanical components",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGfkCcPxmOlGwh2tk47Nmb0FcsyoQ9DzXpJLdu",
+    "tags": [
+      "research",
+      "books",
+      "blueprints",
+      "technical-manuals",
+      "screws",
+      "bolts",
+      "study",
+      "focus",
+      "desk"
+    ]
+  },
+  {
+    "id": 8,
+    "scene": "Meeting Werkstatt / Schnittstelle",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. A product designer with a tablet standing next to a mechanic in blue overalls in a workshop setting. They are pointing at a metal machine part. Contrast between clean office wear and rough workshop environment, distinct outlines, no text.",
+    "description": "a woman in a light blue shirt holding a tablet and a man in blue overalls standing side-by-side in a workshop, both pointing at a large silver mechanical component on a workbench, with industrial machinery and tools visible in the background",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGl4XVzAEhsMuDVbkoejf1IAxSiQ96ZycP2nBL",
+    "tags": [
+      "collaboration",
+      "workshop",
+      "mechanical-component",
+      "teamwork",
+      "pointing",
+      "communication",
+      "two-people"
+    ]
+  },
+  {
+    "id": 9,
+    "scene": "Explosionsansicht / Komplexität",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. A large monitor displaying a complex exploded view of a gearbox, parts floating in space. Character admiring the complexity. High-tech engineering vibe, very detailed line art, neutral background colors, no text.",
+    "description": "a man in a white lab coat with his hand on his chin looking intently at a large monitor displaying an exploded view diagram of a complex gearbox assembly with numerous gears, shafts, and mechanical parts floating in space on a bright yellow background",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGI58z2JNe8YP9rULlHW6twAGpNyO5KuodC1R0",
+    "tags": [
+      "exploded-view",
+      "gearbox",
+      "diagram",
+      "complexity",
+      "lab-coat",
+      "monitor",
+      "analysis"
+    ]
+  },
+  {
+    "id": 10,
+    "scene": "Material-Check / Haptik",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. Close-up of hands holding two different material samples (shiny aluminum vs matte black rubber). Samples lying on the desk. Focus on texture representation through drawing, soft shading, no text.",
+    "description": "two hands holding two rectangular blocks - the left block is light grey with numerous white intersecting scratch lines covering its surface, and the right block is solid black with a rough granular texture of light-colored dots embedded in the material",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGqQestfJmJFi6t8Hsn0RVKzcG9xNIuw2rOjXC",
+    "tags": [
+      "materials",
+      "samples",
+      "texture",
+      "comparison",
+      "hands",
+      "haptics"
+    ]
+  },
+  {
+    "id": 11,
+    "scene": "Video call / International",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. View over the shoulder at a monitor showing a grid of video feeds from colleagues diverse ethnicities. One colleague holds up a component to the camera. Global teamwork vibe, office setting, marker coloring, no text.",
+    "description": "a person from behind wearing glasses and a blue shirt drawing a detailed circuit diagram on paper while a computer monitor displays a grid of nine video conference participants, with one colleague holding up a green circuit board to the camera",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqoCmdz97Aj1hznsJlaW5tFZHNPDuCodmTU2",
+    "tags": [
+      "video-call",
+      "circuit-diagram",
+      "collaboration",
+      "international",
+      "drawing",
+      "computer",
+      "monitor"
+    ]
+  },
+  {
+    "id": 12,
+    "scene": "Kundenpräsentation / Verkauf",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. Character standing in a conference room pointing at a projector screen showing a finished machine render. Suited clients watching. Business atmosphere, clean lines, bright lighting, no text.",
+    "description": "a black and white line-art illustration of a professional meeting with five people around a conference table, a man standing and gesturing towards a projector screen displaying a detailed line drawing of a multi-jointed industrial robotic arm, with blueprints spread on the table and an industrial workshop visible through a large window",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGJ18MJJmlpvPZCiHSaRuT75GFr4y1bM2gnDLX",
+    "tags": [
+      "presentation",
+      "meeting",
+      "robotic-arm",
+      "conference",
+      "business",
+      "projector",
+      "multiple-people"
+    ]
+  },
+  {
+    "id": 13,
+    "scene": "Der große Plot / Ergebnis",
+    "prompt": "A high-quality hand-drawn illustration in the style of technical concept art. Character holding up a large A0 paper blueprint fresh from a plotter. The paper is white with black lines. Feeling of accomplishment, detailed character expression, warm office light, no text.",
+    "description": "a person seen from behind with a ponytail holding up a large A0 blueprint with intricate black line drawings, in a workspace with a drafting table on the left with warm yellow lighting, and on the right two computer monitors displaying 3D CAD models, with shelves of binders and wall-mounted technical diagrams",
+    "uploadUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGolmmMys8YWEkrBcDVnqv7lxtwb9CGjsIUPNK",
+    "tags": [
+      "blueprint",
+      "A0",
+      "drafting-table",
+      "CAD",
+      "accomplishment",
+      "result",
+      "monitors"
+    ]
+  }
+]

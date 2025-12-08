@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { X } from "lucide-react";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/dialog";
 
 import { config } from "../config";
-import { Level } from "../types";
+import { Level, Scenario } from "../types";
 import {
   SingleSelectCorrectView,
   SingleSelectNoCorrectView,
@@ -96,19 +96,29 @@ export function InteractionView({
     currentScenario.scenario
   );
   const [isLLMLoading, setIsLLMLoading] = useState(false);
+  const [llmTurns, setLlmTurns] = useState(0);
+  const llmSubmitRef = useRef<(() => void) | null>(null);
+
+  // Reset LLM state when the scenario changes to avoid carrying over prior text
+  useEffect(() => {
+    setCurrentScenarioText(currentScenario.scenario);
+    setIsLLMLoading(false);
+    setLlmTurns(0);
+    llmSubmitRef.current = null;
+  }, [currentScenario.id, currentScenario.scenario]);
 
   const isLastScenarioInLevel = currentScenarioIndex === totalScenarios - 1;
   const isFinalStage = currentLevelId === totalLevels && isLastScenarioInLevel;
 
   const hasAnswer = isBentoGrid
     ? true // Bento grid is informational, always has "answer" to proceed
-    : isMultipleSelect
-      ? selectedOptions.length > 0
-      : isTextField || isSingleSelectOrText || isLLMInteractive
-        ? isLLMInteractive
-          ? currentScenarioText !== currentScenario.scenario && !isLLMLoading
-          : selectedOption !== undefined || textAnswer.trim() !== ""
-        : selectedOption !== undefined;
+    : isLLMInteractive
+      ? textAnswer.trim().length > 0 && !isLLMLoading
+      : isMultipleSelect
+        ? selectedOptions.length > 0
+        : isTextField || isSingleSelectOrText
+          ? selectedOption !== undefined || textAnswer.trim() !== ""
+          : selectedOption !== undefined;
 
   // Calculate progress: completed levels + progress within current level
   const levelProgress = isLastScenarioInLevel
@@ -272,6 +282,7 @@ export function InteractionView({
                 selectedOption={selectedOption}
                 hasAnswer={hasAnswer}
                 onOptionSelect={onOptionSelect}
+                textAnswer={textAnswer}
                 onTextAnswerChange={onTextAnswerChange}
                 selectedOptions={selectedOptions}
                 status={status}
@@ -339,6 +350,9 @@ export function InteractionView({
                 onOptionsToggle={onOptionsToggle}
                 onScenarioTextChange={setCurrentScenarioText}
                 onLoadingChange={setIsLLMLoading}
+                registerSubmit={(fn) => {
+                  llmSubmitRef.current = fn;
+                }}
               />
             )}
 
@@ -375,13 +389,32 @@ export function InteractionView({
           >
             <div className="mx-auto max-w-2xl">
               <Button
-                disabled={!hasAnswer || isLLMLoading}
-                onClick={onExpressApply}
+                disabled={
+                  isLLMInteractive
+                    ? isLLMLoading || textAnswer.trim().length === 0
+                    : !hasAnswer || isLLMLoading
+                }
+                onClick={() => {
+                  if (isLLMInteractive) {
+                    if (llmSubmitRef.current) {
+                      llmSubmitRef.current();
+                    }
+                    const nextTurns = llmTurns + 1;
+                    setLlmTurns(nextTurns);
+                    onContinue();
+                  } else {
+                    onExpressApply();
+                  }
+                }}
                 size="lg"
                 variant="primary"
                 className="w-full"
               >
-                {config.copy.submit}
+                {isLLMInteractive
+                  ? llmTurns >= 3
+                    ? "Beenden"
+                    : "Weiter"
+                  : config.copy.submit}
               </Button>
             </div>
           </footer>
@@ -429,13 +462,36 @@ export function InteractionView({
           >
             <div className="mx-auto max-w-2xl">
               <Button
-                disabled={!hasAnswer || isLLMLoading}
-                onClick={onContinue}
+                disabled={
+                  isLLMInteractive
+                    ? isLLMLoading || textAnswer.trim().length === 0
+                    : !hasAnswer || isLLMLoading
+                }
+                onClick={() => {
+                  if (isLLMInteractive) {
+                    if (llmSubmitRef.current) {
+                      llmSubmitRef.current();
+                    }
+                    setLlmTurns((prev) => {
+                      const next = prev + 1;
+                      if (next >= 4) {
+                        onContinue();
+                      }
+                      return next;
+                    });
+                  } else {
+                    onContinue();
+                  }
+                }}
                 size="lg"
                 variant="primary"
                 className="w-full"
               >
-                Weiter
+                {isLLMInteractive
+                  ? llmTurns >= 3
+                    ? "Beenden"
+                    : "Weiter"
+                  : "Weiter"}
               </Button>
             </div>
           </footer>

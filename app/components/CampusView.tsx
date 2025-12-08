@@ -81,7 +81,7 @@ export function CampusView({
             </div>
           </div>
 
-          <div className="mx-auto h-full w-fit">
+          <div className="mx-auto w-fit">
             <Carousel
               items={jobs}
               baseWidth={350}

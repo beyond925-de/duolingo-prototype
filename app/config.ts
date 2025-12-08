@@ -1,5 +1,7 @@
-import { images } from "./images";
 import { Job } from "./types";
+
+import * as mechanikerImages from "./sollich-images.json";
+import * as zeichnerImages from "./sollich-images-zeichner.json";
 
 /**
  * Level Type Examples:
@@ -88,99 +90,67 @@ export const config = {
   jobs: [
     // Choose the visual layout via pathModeId (see app/pathModes.ts for presets)
     {
-      id: "industriemechaniker",
-      title: "Industriemechaniker:in",
-      description: "Maschinen bauen, reparieren und optimieren",
-      icon: "🛠️",
-      color: "#3b82f6",
-      tags: ["🛠️ Hands on", "⚙️ Technik"],
-      pathModeId: "linear",
+      id: "technischer-produktdesigner",
+      title: "Technische:r Produktdesigner:in",
+      description: "Designe die Schoko-Fabriken der Zukunft am PC! 🖥️🍫",
+      icon: "📐",
+      color: "#8b5cf6",
+      tags: ["🖥️ Digital & 3D", "🧠 Logik-Profi", "🍫 High-Tech"],
+      pathModeId: "branching",
       levels: [
         {
           id: 1,
-          title: "Ausbildungsstart",
-          status: "unlocked" as const,
-          icon: "🛠️",
+          title: "Startblock",
+          status: "unlocked",
+          icon: "👀",
+          row: 0,
+          nextLevelIds: [2, 3], // BRANCHING: User chooses a mission
           scenarios: [
             {
               id: 1,
               scenario:
-                "Du stehst in der großen Montagehalle bei SOLLICH und baust an einer neuen Anlage für Schokoriegel 🍫. Ein schweres Bauteil will sich einfach nicht in den Rahmen schieben lassen, obwohl es laut Plan passen müsste. Ein falscher Handgriff könnte das teure Material beschädigen. Was machst du? 🛠️",
-              imageUrl: images[2].uploadUrl,
-              type: "llm-interactive" as const,
-              options: [],
-            },
-            {
-              id: 2,
-              scenario:
-                "Du hast das Material ausgewählt. Bevor du loslegst, solltest du es mit der Schieblehre prüfen. Dein Ausbilder sagt: 'Immer erst messen, dann arbeiten.' Warum ist das wichtig? 📐",
-              imageUrl: images[3].uploadUrl,
-              type: "single-select-correct" as const,
+                "Hi! 👋 Als Produktdesigner:in bist du das Bindeglied zwischen Idee und Maschine. Ein Ingenieur gibt dir eine Skizze für einen neuen Keks-Greifer. Was ist dein erster Job?",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGsI4iyqZSOa5oGfeQw0igHmDClury4RAtNT1b",
+              type: "single-select-correct",
               options: [
                 {
                   id: 1,
-                  text: "Damit ich weiß, ob das Material die richtige Größe hat",
-                  correct: true,
+                  text: "Ich baue das Teil sofort in der Werkstatt zusammen 🔨",
+                  correct: false,
                   feedback:
-                    "Perfekt! Genau so arbeitet man professionell. Erst prüfen, dann fertigen. 🎯",
+                    "Nicht ganz! Du arbeitest digital. Erst muss das Modell am Computer stehen. 💻",
                 },
                 {
                   id: 2,
-                  text: "Weil der Ausbilder es so will",
-                  correct: false,
+                  text: "Ich erstelle ein 3D-Modell am CAD-Computer 🖥️",
+                  correct: true,
                   feedback:
-                    "Es gibt einen guten Grund: Falsche Maße führen zu Ausschuss. Denk immer mit! 💭",
-                },
-                {
-                  id: 3,
-                  text: "Das ist eigentlich nicht so wichtig",
-                  correct: false,
-                  feedback:
-                    "Doch, ist es! Präzision ist das A und O in der Industrie. Jeder Fehler kostet Zeit und Geld. ⚠️",
+                    "Volltreffer! 🎯 Du konstruierst das Bauteil virtuell, bevor es gebaut wird.",
                 },
               ],
             },
             {
-              id: 3,
+              id: 2,
               scenario:
-                "Bevor du mit der Arbeit beginnst, musst du die richtige Schutzausrüstung anlegen. Welche der folgenden Sicherheitsmaßnahmen sind wichtig? (Wähle alle zutreffenden) 🛡️",
-              imageUrl: images[14].uploadUrl,
-              type: "multiple-select" as const,
+                "Damit das Teil später auch passt, brauchst du ein super räumliches Vorstellungsvermögen. Stell dir einen Würfel vor. Wir schneiden eine Ecke gerade ab. Wie sieht die Schnittfläche aus?",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGrQ3UmIoLx1pZiT3K4VDNbFJalWARdm6foQGr",
+              type: "single-select-correct",
               options: [
                 {
                   id: 1,
-                  text: "Schutzbrille tragen",
-                  correct: true,
+                  text: "Quadratisch ▪️",
+                  correct: false,
                   feedback:
-                    "Richtig! Schutzbrillen schützen deine Augen vor Funken und Spänen. 👓",
+                    "Knapp daneben! Denk an die drei Seiten, die an der Ecke zusammentreffen.",
                 },
                 {
                   id: 2,
-                  text: "Handschuhe anziehen",
+                  text: "Dreieckig 🔺",
                   correct: true,
                   feedback:
-                    "Genau! Handschuhe schützen vor Schnitten und Verbrennungen. 🧤",
-                },
-                {
-                  id: 3,
-                  text: "Gehörschutz verwenden",
-                  correct: true,
-                  feedback:
-                    "Korrekt! Lärm kann das Gehör dauerhaft schädigen. 🎧",
-                },
-                {
-                  id: 4,
-                  text: "Lange Haare offen tragen",
-                  correct: false,
-                  feedback:
-                    "Falsch! Lange Haare müssen zusammengebunden werden, damit sie nicht in Maschinen geraten. ⚠️",
-                },
-                {
-                  id: 5,
-                  text: "Schmuck ablegen",
-                  correct: true,
-                  feedback:
-                    "Richtig! Schmuck kann in Maschinen hängen bleiben und zu Verletzungen führen. 💍",
+                    "Stark! 🧠 Genau diesen 'Röntgenblick' brauchst du, wenn du komplexe Anlagen planst.",
                 },
               ],
             },
@@ -188,111 +158,208 @@ export const config = {
         },
         {
           id: 2,
-          title: "Fertigung",
-          status: "locked" as const,
-          icon: "📋",
+          title: "Mission: Konstruktion",
+          status: "locked",
+          icon: "🖱️",
+          row: 1, // Branch Option A
+          nextLevelIds: [4], // Merges to Level 4
           scenarios: [
             {
-              id: 4,
+              id: 1,
               scenario:
-                "Du hast die Zeichnung vor dir. Dein Werkstück soll genau nach Plan entstehen. Wie gehst du vor? 📐",
-              imageUrl: images[8].uploadUrl,
-              type: "single-select-correct" as const,
-              options: [
-                {
-                  id: 1,
-                  text: "Ich schaue mir die Zeichnung genau an, markiere wichtige Maße und arbeite Schritt für Schritt",
-                  correct: true,
-                  feedback:
-                    "Exzellent! Systematisches Arbeiten nach Zeichnung ist genau das, was wir bei Sollich brauchen. 🎯",
-                },
-                {
-                  id: 2,
-                  text: "Ich fange einfach an und schaue, was passiert",
-                  correct: false,
-                  feedback:
-                    "Ohne Plan entsteht nur Schrott. Die Zeichnung ist dein Fahrplan – nutze sie! 📊",
-                },
-                {
-                  id: 3,
-                  text: "Ich frage erstmal, ob jemand anders das machen kann",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich übertragen wir dir von Anfang an Verantwortung. Trau dich, du schaffst das! ✨",
-                },
-              ],
-            },
-            {
-              id: 5,
-              scenario:
-                "Dein Werkstück ist fertig. Jetzt kommt die Qualitätskontrolle mit der Messschraube. Du findest eine minimale Abweichung von 0,1mm. Was machst du? 🔍",
-              imageUrl: images[3].uploadUrl,
-              type: "single-select-correct" as const,
-              options: [
-                {
-                  id: 1,
-                  text: "Passt schon, 0,1mm fällt niemandem auf",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich zählt jedes Zehntelmillimeter. Präzision ist unser Markenzeichen. 📏",
-                },
-                {
-                  id: 2,
-                  text: "Ich messe nochmal genau nach und korrigiere falls nötig",
-                  correct: true,
-                  feedback:
-                    "Genau richtig! Dieser Blick fürs Detail und die Bereitschaft, es richtig zu machen, suchen wir. 🎯",
-                },
-                {
-                  id: 3,
-                  text: "Ich hoffe, dass es keiner merkt",
-                  correct: false,
-                  feedback:
-                    "Bei uns geht Qualität vor Geschwindigkeit. Ehrlichkeit und Präzision zählen. 💎",
-                },
-              ],
-            },
-            {
-              id: 6,
-              scenario:
-                "Du hast ein Problem bei der Fertigung: Das Werkstück passt nicht richtig zusammen. Beschreibe kurz, wie du vorgehen würdest, um das Problem zu lösen. 💭",
-              imageUrl: images[10].uploadUrl,
-              type: "text-field" as const,
+                "Du arbeitest an einer neuen Pralinen-Anlage. 🍬 Plötzlich siehst du im 3D-Modell ein Problem: Der Motor für das Förderband ist zu groß und ragt in den Tunnel, wo die Pralinen langfahren. Das nennt man 'Kollision'. Du musst das lösen, bevor die Teile gefertigt werden! Sprich mit dem Projektleiter.",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGm3Oq6HMFodsMg0pf6abPAN8Q57e1OcDqvuwL",
+              type: "llm-interactive",
               options: [],
-              allowTextInput: true,
+              conversationHistory: [
+                {
+                  role: "assistant",
+                  content:
+                    "Mist, gut, dass du das gesehen hast! Wenn wir das so bauen, gibt es Pralinen-Matsch. 🍫 Was schlägst du vor? Sollen wir einen kleineren, schwächeren Motor suchen oder den Tunnel breiter konstruieren?",
+                },
+              ],
             },
           ],
         },
         {
           id: 3,
-          title: "Teamfit checken",
-          status: "locked" as const,
-          icon: "🏁",
+          title: "Mission: Werkstatt-Call",
+          status: "locked",
+          icon: "📞",
+          row: 1, // Branch Option B
+          nextLevelIds: [4], // Merges to Level 4
           scenarios: [
             {
-              id: 7,
+              id: 1,
               scenario:
-                "Du hast alle Aufgaben gemeistert! Zeit für den wichtigsten Check: Passt die Ausbildung bei Sollich zu dir? Wir starten entspannt um 9:00 Uhr, unterstützen dich beim Führerschein und geben dir von Anfang an Verantwortung. 🌅",
-              imageUrl: images[7].uploadUrl,
-              type: "single-select-or-text" as const,
+                "Alarm! 🚨 Dein Telefon klingelt. Ein Industriemechaniker aus der Halle ist dran. Er will gerade die Welle für die Keks-Maschine drehen, aber auf deiner Zeichnung fehlt ein wichtiges Maß. Die Maschine steht still. Du musst reagieren – schnell und präzise.",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGl4XVzAEhsMuDVbkoejf1IAxSiQ96ZycP2nBL",
+              type: "llm-interactive",
+              options: [],
+              conversationHistory: [
+                {
+                  role: "assistant",
+                  content:
+                    "Hier ist Alex aus der Fertigung. Sag mal, ich steh hier an der Drehbank. Auf Zeichnung 204 fehlt der Durchmesser für den Lagerzapfen. Soll ich das schätzen oder kannst du das im 3D-Modell nachmessen? Wir haben Zeitdruck!",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: 4,
+          title: "Der SOLLICH-Check",
+          status: "locked",
+          icon: "✅",
+          row: 2, // Merged Level
+          nextLevelIds: [5, 6], // Splitting again
+          scenarios: [
+            {
+              id: 1,
+              scenario:
+                "Puh, Problem gelöst! 😅 Als Produktdesigner:in arbeitest du viel mit dem Kopf. Damit du fit bleibst, schauen wir, was SOLLICH dir bietet:",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqoCmdz97Aj1hznsJlaW5tFZHNPDuCodmTU2",
+              type: "bento-grid",
+              options: [],
+              facts: [
+                {
+                  title: "Arbeitsplatz",
+                  value: "High-End CAD-Rechner & moderne Büros.",
+                  icon: "🖥️",
+                  layout: { colSpan: 2, rowSpan: 1 },
+                },
+                {
+                  title: "Arbeitszeit",
+                  value: "35h-Woche & Gleitzeit.",
+                  icon: "⏰",
+                  layout: { colSpan: 1, rowSpan: 1 },
+                },
+                {
+                  title: "No Overtime",
+                  value: "Keine Überstunden für Azubis!",
+                  icon: "🧘",
+                  layout: { colSpan: 1, rowSpan: 1 },
+                },
+              ],
+            },
+            {
+              id: 2,
+              scenario:
+                "Neben der Technik ist uns das Miteinander wichtig. Was denkst du, wie läuft es hier?",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqoCmdz97Aj1hznsJlaW5tFZHNPDuCodmTU2",
+              type: "single-select-no-correct",
+              options: [
+                {
+                  id: 1,
+                  text: "Jeder kämpft für sich allein 🐺",
+                  feedback:
+                    "Zum Glück nicht! Wir arbeiten als ein großes Team zusammen.",
+                },
+                {
+                  id: 2,
+                  text: "Familiär und unterstützend 🤝",
+                  feedback:
+                    "Genau so ist es. Wir sind per Du und helfen uns gegenseitig.",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: 5,
+          title: "Weg: Weiterbildung",
+          status: "locked",
+          icon: "📈",
+          row: 3, // Branch Option A
+          nextLevelIds: [7], // Merges to Final
+          scenarios: [
+            {
+              id: 1,
+              scenario:
+                "Nach den 3,5 Jahren Ausbildung (oder 3, wenn du gut bist!) stehen dir alle Türen offen. Welcher dieser Titel klingt spannender für dich?",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGfkCcPxmOlGwh2tk47Nmb0FcsyoQ9DzXpJLdu",
+              type: "single-select-no-correct",
+              options: [
+                {
+                  id: 1,
+                  text: "Staatlich geprüfte:r Techniker:in 🎓",
+                  feedback:
+                    "Sehr beliebt! Damit übernimmst du komplexere Projekte und Verantwortung.",
+                },
+                {
+                  id: 2,
+                  text: "Fachwirt:in (IHK) 💼",
+                  feedback:
+                    "Gute Wahl, wenn du auch kaufmännische Aufgaben spannend findest.",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: 6,
+          title: "Weg: Studium",
+          status: "locked",
+          icon: "🎓",
+          row: 3, // Branch Option B
+          nextLevelIds: [7], // Merges to Final
+          scenarios: [
+            {
+              id: 1,
+              scenario:
+                "Du willst noch tiefer in die Theorie? Bei uns kannst du das 'Kooperative Studium' machen. Ausbildung + Bachelor (z.B. Maschinenbau) parallel. 📚",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxG8fM8EUKpVATEMkn9gidZwvPHcrDbsyI0F1XB",
+              type: "single-select-no-correct",
+              options: [
+                {
+                  id: 1,
+                  text: "Das klingt hart, aber lohnt sich! 💪",
+                  feedback:
+                    "Stimmt! Es ist fordernd, aber du hast Theorie & Praxis und verdienst schon Geld.",
+                },
+                {
+                  id: 2,
+                  text: "Lieber erst Ausbildung, dann mal sehen. 👀",
+                  feedback:
+                    "Auch ein super Weg. Viele entscheiden sich erst später für ein Studium.",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: 7,
+          title: "Dein Start",
+          status: "locked",
+          icon: "🚀",
+          row: 4, // Final Merge
+          scenarios: [
+            {
+              id: 1,
+              scenario:
+                "Bist du bereit, die Schoko-Welt digital zu gestalten? Uwe Heiland, unser Ausbildungsleiter für Produktdesigner, freut sich auf dich! 😎",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGolmmMys8YWEkrBcDVnqv7lxtwb9CGjsIUPNK",
+              type: "single-select-or-text",
               allowTextInput: true,
               options: [
                 {
                   id: 1,
-                  text: "Ja, das klingt genau nach mir!",
-                  feedback: "Perfekt! Lass uns quatschen. 🚀",
+                  text: "Ich bin dabei! Bewerbung geht raus. 📧",
+                  feedback:
+                    "Klasse! Einfach PDF an bewerbung@sollich.com. Wir sind gespannt!",
                 },
                 {
                   id: 2,
-                  text: "Klingt gut, aber ich bin noch unsicher",
+                  text: "Ich möchte erst ein Praktikum machen. 🔍",
                   feedback:
-                    "Kein Problem! Wir beantworten alle deine Fragen. 💬",
-                },
-                {
-                  id: 3,
-                  text: "Auf jeden Fall! Wo kann ich mich bewerben?",
-                  feedback:
-                    "Nice! Genau die richtige Einstellung. Let's go! 🔥",
+                    "Sehr gute Idee! So lernst du das Team und die Aufgaben live kennen. Meld dich einfach!",
                 },
               ],
             },
@@ -301,173 +368,72 @@ export const config = {
       ],
     },
     {
-      id: "technischer-zeichner",
-      title: "Technischer Zeichner:in",
-      description: "Vom Blatt Papier zum digitalen 3D-Modell",
-      icon: "📐",
-      color: "#8b5cf6",
-      tags: ["📐 Genauigkeit", "🖥️ Digital"],
+      id: "industriemechaniker",
+      title: "Industriemechaniker:in",
+      description: "Schrauben, Tüfteln, High-Tech – Deine Mission! 🔧🍫",
+      icon: "⚙️",
+      color: "#3b82f6",
+      tags: ["🍫 Schoko-Tech", "🔧 Hands-on", "🌍 Weltmarktführer"],
       pathModeId: "branching",
       levels: [
         {
           id: 1,
-          title: "Ausbildungsstart",
-          status: "unlocked" as const,
-          icon: "🖥️",
-          row: 0, // First row
-          nextLevelIds: [2, 3], // Branches to levels 2 and 3
+          title: "Startblock",
+          status: "unlocked",
+          icon: "🏁",
+          row: 0,
+          nextLevelIds: [2, 3], // BRANCHING into Level 2 or 3
           scenarios: [
             {
               id: 1,
               scenario:
-                "Du sitzt das erste Mal am CAD-Computer 🖥️. Dein Ausbilder legt dir eine Handskizze von einem einfachen Metallwürfel mit einer Bohrung hin. Er fragt dich: 'Wie fängst du am besten an, das hier im 3D-Programm zu bauen?' 🤔",
-              imageUrl: images[12].uploadUrl,
-              type: "single-select-correct" as const,
+                "Willkommen im Team! Wir bauen die Maschinen, die weltweit Schokoriegel und Kekse produzieren. 🌍 Hast du schon mal an etwas herumgeschraubt?",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGl4XVzAEhsMuDVbkoejf1IAxSiQ96ZycP2nBL",
+              type: "single-select-no-correct",
               options: [
                 {
                   id: 1,
-                  text: "Erst eine 2D-Skizze zeichnen ✏️",
-                  correct: true,
+                  text: "Na klar! Am Fahrrad, Moped oder PC. 🚲",
                   feedback:
-                    "Genau richtig! Bei Sollich arbeiten wir systematisch: Erst die Skizze, dann das 3D-Modell. Du denkst schon wie ein Profi! 🎯",
+                    "Perfekt! Genau dieses technische Verständnis brauchst du hier.",
                 },
                 {
                   id: 2,
-                  text: "Sofort den 3D-Würfel ziehen 🧊",
-                  correct: false,
+                  text: "Weniger, aber ich will lernen, wie Technik funktioniert. 🧐",
                   feedback:
-                    "Fast! Aber ohne Skizze fehlt dir die Basis. Bei uns lernst du Schritt für Schritt – erst die 2D-Skizze, dann das 3D-Modell. 💪",
-                },
-                {
-                  id: 3,
-                  text: "Erst das Material auswählen 🧱",
-                  correct: false,
-                  feedback:
-                    "Das Material kommt später! Erst brauchst du die Form. Bei Sollich lernst du den richtigen Ablauf: Skizze → Modell → Material. 📐",
-                },
-                {
-                  id: 4,
-                  text: "Die Farbe aussuchen 🎨",
-                  correct: false,
-                  feedback:
-                    "Die Farbe ist nicht wichtig für die Konstruktion! Bei uns lernst du, was wirklich zählt: Präzision und Funktion. 🎯",
+                    "Gute Einstellung! Wir bringen dir alles von der Pike auf bei.",
                 },
               ],
             },
             {
               id: 2,
               scenario:
-                "Du sollst ein einfaches Drehteil nach Skizze modellieren. Die Skizze zeigt einen Zylinder mit einer Nut. Wie gehst du vor? 🔧",
-              imageUrl: images[12].uploadUrl,
-              type: "single-select-correct" as const,
+                "Bevor es in die Halle geht: Sicherheit ist Nr. 1. Du siehst eine ölverschmierte Stelle am Boden neben einer Fräsmaschine. Was machst du? (Wähle alle sinnvollen Optionen)",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGqQestfJmJFi6t8Hsn0RVKzcG9xNIuw2rOjXC",
+              type: "multiple-select",
               options: [
                 {
                   id: 1,
-                  text: "Ich zeichne die 2D-Kontur, rotiere sie um die Achse, dann füge ich die Nut ein",
+                  text: "Sofort sauber machen oder abstreuen 🧹",
                   correct: true,
                   feedback:
-                    "Perfekt! Genau so arbeitet man professionell im CAD. Bei Sollich lernst du diese Methoden Schritt für Schritt. 🎯",
+                    "Richtig. Rutschgefahr ist in der Werkstatt extrem gefährlich.",
                 },
                 {
                   id: 2,
-                  text: "Ich ziehe einfach einen Zylinder und hoffe, dass es passt",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich arbeiten wir präzise! Die Skizze ist dein Fahrplan – nutze sie systematisch. 📊",
-                },
-                {
-                  id: 3,
-                  text: "Ich frage, ob jemand anders das machen kann",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich übertragen wir dir von Anfang an Verantwortung. Trau dich, du schaffst das! ✨",
-                },
-              ],
-            },
-            {
-              id: 3,
-              scenario:
-                "Du brauchst Schrauben und Lager für deine Baugruppe. Wo findest du diese am schnellsten? 🔍",
-              imageUrl: images[12].uploadUrl,
-              type: "single-select-correct" as const,
-              options: [
-                {
-                  id: 1,
-                  text: "In der CAD-Datenbank nach Normteilen suchen",
+                  text: "Dem Kollegen Bescheid sagen, damit keiner ausrutscht 🗣️",
                   correct: true,
                   feedback:
-                    "Genau richtig! Normteile aus der Datenbank sparen Zeit und sind standardisiert. Genau so arbeiten wir bei Sollich. 🎯",
-                },
-                {
-                  id: 2,
-                  text: "Ich zeichne sie selbst",
-                  correct: false,
-                  feedback:
-                    "Das wäre viel zu aufwendig! Bei Sollich lernst du, effizient zu arbeiten – Normteile aus der Datenbank nutzen. 💡",
+                    "Kommunikation ist alles! Wir arbeiten hier als ein großes Team.",
                 },
                 {
                   id: 3,
-                  text: "Ich schaue im Internet",
+                  text: "Drübersteigen, ist ja nicht mein Öl 🤷",
                   correct: false,
                   feedback:
-                    "Die CAD-Datenbank ist der richtige Ort! Bei uns lernst du, die professionellen Tools zu nutzen. 🛠️",
-                },
-              ],
-            },
-            {
-              id: 5,
-              scenario:
-                "Du arbeitest an einem neuen Projekt. Wie fühlst du dich dabei? 🎨",
-              imageUrl: images[12].uploadUrl,
-              type: "single-select-no-correct" as const,
-              options: [
-                {
-                  id: 1,
-                  text: "Sehr motiviert und neugierig",
-                  feedback:
-                    "Das ist genau die richtige Einstellung! Neugierde treibt Innovation voran. 🚀",
-                },
-                {
-                  id: 2,
-                  text: "Etwas unsicher, aber bereit zu lernen",
-                  feedback:
-                    "Unsicherheit ist völlig normal am Anfang. Bei Sollich unterstützen wir dich dabei! 💪",
-                },
-                {
-                  id: 3,
-                  text: "Aufgeregt und gespannt",
-                  feedback:
-                    "Perfekt! Diese Energie bringt frischen Wind ins Team. ✨",
-                },
-              ],
-            },
-            {
-              id: 4,
-              scenario:
-                "Dein 3D-Modell ist fertig. Jetzt braucht die Werkstatt eine 2D-Zeichnung für die Fertigung. Wie erstellst du diese? 📐",
-              imageUrl: images[8].uploadUrl,
-              type: "single-select-correct" as const,
-              options: [
-                {
-                  id: 1,
-                  text: "Ich leite Ansichten aus dem 3D-Modell ab und ergänze Maße und Toleranzen",
-                  correct: true,
-                  feedback:
-                    "Perfekt! Genau so funktioniert professionelle Konstruktion. Bei Sollich lernst du, wie 3D und 2D zusammenhängen. 🎯",
-                },
-                {
-                  id: 2,
-                  text: "Ich zeichne alles nochmal von Hand",
-                  correct: false,
-                  feedback:
-                    "Das Modell ist schon da! Bei Sollich lernst du, effizient zu arbeiten – Ansichten automatisch ableiten. 💡",
-                },
-                {
-                  id: 3,
-                  text: "Die Werkstatt soll sich das Modell anschauen",
-                  correct: false,
-                  feedback:
-                    "Die Werkstatt braucht 2D-Zeichnungen mit Maßen! Bei uns lernst du, was wirklich gebraucht wird. 📏",
+                    "No way! Bei SOLLICH achten wir aufeinander. Jeder übernimmt Verantwortung.",
                 },
               ],
             },
@@ -475,106 +441,25 @@ export const config = {
         },
         {
           id: 2,
-          title: "CAD Spezialist",
-          status: "locked" as const,
-          icon: "🔧",
-          row: 1, // Second row, left branch
-          nextLevelIds: [4], // Merges into level 4
+          title: "Mission: Montage",
+          status: "locked",
+          icon: "🏗️",
+          row: 1, // Branch Option A
+          nextLevelIds: [4], // Merges back to Level 4
           scenarios: [
             {
-              id: 5,
+              id: 1,
               scenario:
-                "Du konstruierst gerade einen Antrieb für ein Förderband bei SOLLICH 🍫. Am Bildschirm führst du eine 'Kollisionsprüfung' durch und siehst: Der Motor ragt 5mm in ein Halteblech hinein 💥. In der echten Montage könnte das später krachen! Was tust du? 🛠️",
-              imageUrl: images[12].uploadUrl,
-              type: "single-select-correct" as const,
-              options: [
+                "Du bist in der Montage. 🏗️ Wir bauen eine riesige 'Conbar'-Anlage für einen Kunden in den USA. Du sollst eine Seitenwand montieren, aber die Bohrlöcher sitzen 2mm zu weit links. Das Blech passt nicht. Der Meister ist gerade im Meeting. Du musst das lösen. Beschreibe mir, wie du vorgehst oder was du prüfst! 🛠️",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGm3Oq6HMFodsMg0pf6abPAN8Q57e1OcDqvuwL",
+              type: "llm-interactive",
+              options: [],
+              conversationHistory: [
                 {
-                  id: 1,
-                  text: "Blech im CAD anpassen ✏️",
-                  correct: true,
-                  feedback:
-                    "Genau richtig! Kollisionsprüfung ist wichtig. Bei Sollich lernst du, Probleme am Bildschirm zu lösen, bevor sie in der Werkstatt entstehen. 🎯",
-                },
-                {
-                  id: 2,
-                  text: "Hoffen, dass es passt 🤞",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich arbeiten wir professionell! Probleme am Bildschirm lösen spart Zeit und Geld. 💎",
-                },
-                {
-                  id: 3,
-                  text: "Motor einfach weglassen 🚫",
-                  correct: false,
-                  feedback:
-                    "Der Motor ist wichtig! Bei uns lernst du, konstruktiv zu denken – das Blech anpassen, nicht den Motor weglassen. 🔧",
-                },
-                {
-                  id: 4,
-                  text: "Werkstatt fragen, ob sie feilen 🔧",
-                  correct: false,
-                  feedback:
-                    "Die Konstruktion muss stimmen! Bei Sollich lernst du, Verantwortung zu übernehmen – Probleme im CAD lösen, nicht in der Werkstatt. ✨",
-                },
-              ],
-            },
-            {
-              id: 6,
-              scenario:
-                "Du konstruierst ein Pumpengehäuse mit mehreren Teilen. Wie stellst du sicher, dass alles montierbar ist? 🔩",
-              imageUrl: images[7].uploadUrl,
-              type: "single-select-correct" as const,
-              options: [
-                {
-                  id: 1,
-                  text: "Ich prüfe Montagefolge, Zugänglichkeit und ob alle Schrauben erreichbar sind",
-                  correct: true,
-                  feedback:
-                    "Exzellent! Montierbarkeit ist genauso wichtig wie die Funktion. Genau das lernen wir dir bei Sollich. 🎯",
-                },
-                {
-                  id: 2,
-                  text: "Wenn es im CAD passt, passt es auch in echt",
-                  correct: false,
-                  feedback:
-                    "CAD ist nur die Hälfte! Bei Sollich lernst du, auch an die Montage zu denken. 🛠️",
-                },
-                {
-                  id: 3,
-                  text: "Das ist Aufgabe der Werkstatt",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich arbeiten wir im Team! Die Konstruktion muss montierbar sein – das ist deine Verantwortung. 💪",
-                },
-              ],
-            },
-            {
-              id: 7,
-              scenario:
-                "Deine Baugruppe ist fertig konstruiert. Jetzt braucht die Fertigung eine Stückliste. Was gehört alles rein? 📝",
-              imageUrl: images[8].uploadUrl,
-              type: "single-select-correct" as const,
-              options: [
-                {
-                  id: 1,
-                  text: "Alle Bauteile mit Bezeichnung, Material, Menge und Zeichnungsnummer",
-                  correct: true,
-                  feedback:
-                    "Perfekt! Eine vollständige Stückliste ist essentiell. Genau so arbeiten wir bei Sollich. 🎯",
-                },
-                {
-                  id: 2,
-                  text: "Nur die wichtigsten Teile",
-                  correct: false,
-                  feedback:
-                    "Die Fertigung braucht alle Teile! Bei Sollich lernst du, vollständig und präzise zu arbeiten. 📊",
-                },
-                {
-                  id: 3,
-                  text: "Die Werkstatt weiß schon, was sie braucht",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich übernimmst du Verantwortung! Eine vollständige Stückliste ist deine Aufgabe. ✨",
+                  role: "assistant",
+                  content:
+                    "Mist, das Blech klemmt. Einfach neue Löcher bohren könnte das Bauteil ruinieren. Hast du eine Idee, was wir zuerst messen oder prüfen sollten?",
                 },
               ],
             },
@@ -582,69 +467,25 @@ export const config = {
         },
         {
           id: 3,
-          title: "Projektplanung",
-          status: "locked" as const,
-          icon: "📊",
-          row: 1, // Second row, right branch (same row as level 2)
-          nextLevelIds: [4], // Also merges into level 4
+          title: "Mission: Wartung",
+          status: "locked",
+          icon: "🩺",
+          row: 1, // Branch Option B (Parallel to Level 2)
+          nextLevelIds: [4], // Merges back to Level 4
           scenarios: [
             {
-              id: 10,
+              id: 1,
               scenario:
-                "Du planst ein neues Projekt für eine Schokoladenproduktionslinie. Wie strukturierst du die Arbeit? 📋",
-              imageUrl: images[11].uploadUrl,
-              type: "single-select-correct" as const,
-              options: [
+                "Du begleitest einen Techniker zur Wartung. Eine Überziehmaschine macht seltsame 'Klacker'-Geräusche im Antrieb. 🔊 Es klingt metallisch und rhythmisch. Wenn die Anlage ausfällt, steht die Schoko-Produktion still. Du darfst den Fehler suchen. Was schaust du dir an? 🕵️‍♂️",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGI58z2JNe8YP9rULlHW6twAGpNyO5KuodC1R0",
+              type: "llm-interactive",
+              options: [],
+              conversationHistory: [
                 {
-                  id: 1,
-                  text: "Ich erstelle einen Zeitplan, definiere Meilensteine und teile die Arbeit in Phasen ein",
-                  correct: true,
-                  feedback:
-                    "Perfekt! Strukturierte Projektplanung ist essentiell. Genau so arbeiten wir bei Sollich. 🎯",
-                },
-                {
-                  id: 2,
-                  text: "Ich fange einfach an und schaue, wie weit ich komme",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich planen wir professionell! Ein klarer Plan hilft, Deadlines einzuhalten. 📊",
-                },
-                {
-                  id: 3,
-                  text: "Das plant der Projektleiter",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich übernimmst du Verantwortung! Projektplanung ist Teil deiner Aufgaben. ✨",
-                },
-              ],
-            },
-            {
-              id: 11,
-              scenario:
-                "Du musst mehrere Zeichnungen für ein Projekt erstellen. Wie priorisierst du? 🎯",
-              imageUrl: images[8].uploadUrl,
-              type: "single-select-correct" as const,
-              options: [
-                {
-                  id: 1,
-                  text: "Ich beginne mit den kritischen Bauteilen, die für die Montage zuerst gebraucht werden",
-                  correct: true,
-                  feedback:
-                    "Exzellent! Priorisierung nach Dringlichkeit und Abhängigkeiten – genau so arbeiten wir bei Sollich. 🎯",
-                },
-                {
-                  id: 2,
-                  text: "Ich mache die einfachsten zuerst",
-                  correct: false,
-                  feedback:
-                    "Bei Sollich denken wir strategisch! Kritische Teile zuerst, dann der Rest. 🧠",
-                },
-                {
-                  id: 3,
-                  text: "Ich mache sie alle gleichzeitig",
-                  correct: false,
-                  feedback:
-                    "Fokussiertes Arbeiten ist wichtig! Bei Sollich lernst du, Prioritäten zu setzen. 💪",
+                  role: "assistant",
+                  content:
+                    "Okay, hör mal genau hin. Das Klackern kommt aus der Nähe des Hauptmotors. Sollen wir den Riemen prüfen oder eher das Lager? Was meinst du?",
                 },
               ],
             },
@@ -652,40 +493,65 @@ export const config = {
         },
         {
           id: 4,
-          title: "Nach der Ausbildung",
-          status: "locked" as const,
-          icon: "🌍",
-          row: 2, // Third row (merged path)
-          nextLevelIds: [5], // Continues to level 5
+          title: "Der SOLLICH-Deal",
+          status: "locked",
+          icon: "🤝",
+          row: 2, // Merged Level
+          nextLevelIds: [5, 6], // Splitting again for development paths
           scenarios: [
             {
-              id: 8,
+              id: 1,
               scenario:
-                "Lerne mehr über die Vorteile bei Sollich und was dich nach der Ausbildung erwartet.",
-              imageUrl: images[11].uploadUrl,
-              type: "bento-grid" as const,
+                "Gute Arbeit vorhin! 💪 Nach der Arbeit ist vor der Arbeit. Wie sieht dein Feierabend aus? Hier sind die Hard Facts:",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGJ18MJJmlpvPZCiHSaRuT75GFr4y1bM2gnDLX",
+              type: "bento-grid",
               options: [],
               facts: [
                 {
-                  title: "Führerschein-Support",
-                  value:
-                    "Wir lassen dich nicht stehen. Wir unterstützen dich finanziell bei deinem Führerschein.",
-                  icon: "🚗",
-                  layout: { colSpan: 1, rowSpan: 1 },
-                },
-                {
-                  title: "Ausschlafen inklusive",
-                  value:
-                    "Morgenmuffel? Kein Thema. Bei uns geht's entspannt um 9:00 Uhr los.",
+                  title: "35 Stunden",
+                  value: "Vollzeit heißt bei uns 35h/Woche & Gleitzeit.",
                   icon: "⏰",
                   layout: { colSpan: 1, rowSpan: 1 },
                 },
                 {
-                  title: "Echte Missionen",
-                  value:
-                    "Kaffee kochen tun andere. Du kriegst bei uns ab Tag 1 echte Verantwortung.",
-                  icon: "🔥",
+                  title: "Null Überstunden",
+                  value: "Azubis machen keine Überstunden. Punkt.",
+                  icon: "🚫",
+                  layout: { colSpan: 1, rowSpan: 1 },
+                },
+                {
+                  title: "Kohle & Extras",
+                  value: "Metall-Tarif NRW, Fahrtgeld & Urlaubsprämie.",
+                  icon: "💸",
                   layout: { colSpan: 2, rowSpan: 1 },
+                },
+              ],
+            },
+            {
+              id: 2,
+              scenario:
+                "Klingt fair, oder? Was wäre dir bei einem Arbeitgeber am wichtigsten?",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqoCmdz97Aj1hznsJlaW5tFZHNPDuCodmTU2",
+              type: "single-select-no-correct",
+              options: [
+                {
+                  id: 1,
+                  text: "Dass ich pünktlich rauskomme und Freizeit habe 🕒",
+                  feedback: "Das klappt hier definitiv. 35h-Woche regelt!",
+                },
+                {
+                  id: 2,
+                  text: "Dass das Geld stimmt 💰",
+                  feedback:
+                    "Mit dem Metall-Tarif NRW bist du da sehr gut aufgestellt.",
+                },
+                {
+                  id: 3,
+                  text: "Ein cooles Team, das zusammenhält 🤜🤛",
+                  feedback:
+                    "Wir sind über 450 Leute, aber arbeiten wie eine große Familie.",
                 },
               ],
             },
@@ -693,42 +559,91 @@ export const config = {
         },
         {
           id: 5,
-          title: "Teamfit checken",
-          status: "locked" as const,
-          icon: "🏁",
-          row: 3, // Fourth row
+          title: "Weg: Praktiker",
+          status: "locked",
+          icon: "🎓",
+          row: 3, // Branch Option A (Development)
+          nextLevelIds: [7], // Merges to Final
           scenarios: [
             {
-              id: 10,
+              id: 1,
               scenario:
-                "Du hast alle Aufgaben gemeistert! Zeit für den wichtigsten Check: Passt die Ausbildung bei Sollich zu dir? Wir starten entspannt um 9:00 Uhr, unterstützen dich beim Führerschein und geben dir von Anfang an Verantwortung. 🌅",
-              imageUrl: images[7].uploadUrl,
-              type: "single-select-no-correct" as const,
+                "Du willst nach der Ausbildung richtig anpacken und aufsteigen? 🚀 Bei SOLLICH ist nach dem Gesellenbrief nicht Schluss. Welcher Titel klingt für dich mächtiger?",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGfkCcPxmOlGwh2tk47Nmb0FcsyoQ9DzXpJLdu",
+              type: "single-select-no-correct",
               options: [
                 {
                   id: 1,
-                  text: "Ja, das klingt genau nach mir!",
-                  feedback: "Perfekt! Lass uns quatschen. 🚀",
+                  text: "Industriemeister:in – Der Chef in der Halle 🏭",
+                  feedback:
+                    "Klassischer Weg! Du übernimmst Führung und Verantwortung.",
                 },
                 {
                   id: 2,
-                  text: "Klingt gut, aber ich bin noch unsicher",
+                  text: "Techniker:in – Der Problemlöser mit Tiefgang 🧠",
                   feedback:
-                    "Kein Problem! Wir beantworten alle deine Fragen. 💬",
-                },
-                {
-                  id: 3,
-                  text: "Auf jeden Fall! Wo kann ich mich bewerben?",
-                  feedback:
-                    "Nice! Genau die richtige Einstellung. Let's go! 🔥",
+                    "Sehr gut. Damit tauchst du noch tiefer in die Technik ein.",
                 },
               ],
-              allowTextInput: false,
+            },
+          ],
+        },
+        {
+          id: 6,
+          title: "Weg: Student",
+          status: "locked",
+          icon: "📚",
+          row: 3, // Branch Option B (Development)
+          nextLevelIds: [7], // Merges to Final
+          scenarios: [
+            {
+              id: 1,
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxG8fM8EUKpVATEMkn9gidZwvPHcrDbsyI0F1XB",
+              type: "text-field",
+              allowTextInput: true,
+              options: [],
+              scenario:
+                "Was reizt dich an einem Studium in Kombination mit Arbeit? (Tipp einfach kurz deine Gedanken ein)",
+            },
+          ],
+        },
+        {
+          id: 7,
+          title: "Dein Start",
+          status: "locked",
+          icon: "🚀",
+          row: 4, // Final Merge
+          scenarios: [
+            {
+              id: 1,
+              scenario:
+                "Ob Meister oder Studium – der erste Schritt ist die Ausbildung zum Industriemechaniker:in. Interesse geweckt? 😎",
+              imageUrl:
+                "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGsI4iyqZSOa5oGfeQw0igHmDClury4RAtNT1b",
+              type: "single-select-or-text",
+              allowTextInput: true,
+              options: [
+                {
+                  id: 1,
+                  text: "Auf jeden Fall! Wo bewerbe ich mich? 📝",
+                  feedback:
+                    "Klasse! Schick deine Unterlagen (PDF) an bewerbung@sollich.com. Dominik Höke ist dein Ansprechpartner.",
+                },
+                {
+                  id: 2,
+                  text: "Ich will erst mal schnuppern (Praktikum). 👀",
+                  feedback:
+                    "Sehr gerne! Ein Schülerpraktikum ist der beste Weg, uns kennenzulernen. Melde dich einfach!",
+                },
+              ],
             },
           ],
         },
       ],
     },
+    /*
     {
       id: "karriere-map",
       title: "Alle Ausbildungswege",
@@ -740,6 +655,7 @@ export const config = {
       pathModeId: "global-map",
       levels: [],
     },
+    */
   ] as Job[],
   copy: {
     continueButton: "Weiter",

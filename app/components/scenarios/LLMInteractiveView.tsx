@@ -9,6 +9,7 @@ interface LLMInteractiveViewProps extends BaseScenarioViewProps {
   hasAnswer: boolean;
   onScenarioTextChange?: (text: string) => void;
   onLoadingChange?: (loading: boolean) => void;
+  registerSubmit?: (fn: () => void) => void;
 }
 
 export function LLMInteractiveView({
@@ -19,6 +20,7 @@ export function LLMInteractiveView({
   onContinue,
   onScenarioTextChange,
   onLoadingChange,
+  registerSubmit,
 }: LLMInteractiveViewProps) {
   const [conversationHistory, setConversationHistory] = useState<
     Array<{ role: "user" | "assistant"; content: string }>
@@ -125,11 +127,17 @@ export function LLMInteractiveView({
     onLoadingChange,
   ]);
 
+  useEffect(() => {
+    if (registerSubmit) {
+      registerSubmit(handleLLMSubmit);
+    }
+  }, [handleLLMSubmit, registerSubmit]);
+
   return (
     <>
       <h3 className="font-semibold text-slate-800">Ich werde zuerst...</h3>
 
-      <div className="mt-6 border-t-2 border-slate-200 pt-6">
+      <div className="border-slate-200 pt-2">
         <div className="relative">
           <textarea
             value={textAnswer}

@@ -5,7 +5,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 import { config } from "../config";
-import { images } from "../images";
 import { Job } from "../types";
 
 interface QuestionnaireViewProps {
