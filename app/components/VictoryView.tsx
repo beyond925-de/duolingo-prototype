@@ -64,7 +64,7 @@ export function VictoryView({
             </h1>
 
             {showNudge && (
-              <div className="mt-8 w-full max-w-md rounded-xl border-2 border-blue-300 bg-blue-50 p-6">
+              <div className="mx-4 mt-8 w-full max-w-md rounded-xl border-2 border-blue-300 bg-blue-50 p-6">
                 <p className="mb-4 text-lg font-medium text-slate-800">
                   {config.copy.nudgeText}
                 </p>
@@ -83,11 +83,6 @@ export function VictoryView({
 
         <footer className="h-[100px] border-t-2 lg:h-[140px]">
           <div className="mx-auto flex h-full max-w-[1140px] items-center justify-between px-6 lg:px-10">
-            {!isLastLevel && (
-              <Button size="lg" variant="secondary" onClick={onNextLevel}>
-                {config.copy.nextLevel}
-              </Button>
-            )}
             <Button
               size="lg"
               variant="default"
@@ -96,6 +91,12 @@ export function VictoryView({
             >
               {config.copy.menu}
             </Button>
+
+            {!isLastLevel && (
+              <Button size="lg" variant="secondary" onClick={onNextLevel}>
+                {config.copy.nextLevel}
+              </Button>
+            )}
           </div>
         </footer>
       </div>
