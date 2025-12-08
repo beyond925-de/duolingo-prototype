@@ -1,5 +1,6 @@
 export type Screen =
   | "landing"
+  | "questionnaire"
   | "campus"
   | "map"
   | "interaction"

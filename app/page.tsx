@@ -9,6 +9,7 @@ import { ExpressApplyView } from "./components/ExpressApplyView";
 import { InteractionView } from "./components/InteractionView";
 import { LandingOverlay } from "./components/LandingOverlay";
 import { MapView } from "./components/MapView";
+import { QuestionnaireView } from "./components/QuestionnaireView";
 import { SettingsModal } from "./components/SettingsModal";
 import { VictoryView } from "./components/VictoryView";
 import { config } from "./config";
@@ -479,7 +480,7 @@ export default function Beyond925() {
       <LandingOverlay
         onStart={() => {
           setShowLanding(false);
-          setCurrentScreen("campus");
+          setCurrentScreen("questionnaire");
         }}
       />
     );
@@ -494,6 +495,21 @@ export default function Beyond925() {
         settings={settings}
         onSettingChange={handleSettingChange}
       />
+
+      {currentScreen === "questionnaire" && (
+        <QuestionnaireView
+          onComplete={(suggestedJob) => {
+            if (suggestedJob) {
+              handleJobSelect(suggestedJob);
+            } else {
+              setCurrentScreen("campus");
+            }
+          }}
+          onViewAllJobs={() => {
+            setCurrentScreen("campus");
+          }}
+        />
+      )}
 
       {currentScreen === "campus" && (
         <CampusView
