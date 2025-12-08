@@ -72,7 +72,7 @@ function StartTooltip({
         color: accentColor,
       }}
     >
-      {isFirst ? "Start" : config.copy.continueButton}
+      {isFirst ? "Start" : "Weiter"}
       <div
         className="absolute -bottom-2 left-1/2 h-0 w-0 -translate-x-1/2 transform border-x-8 border-t-8 border-x-transparent"
         style={{ borderTopColor: accentColor }}

@@ -1,0 +1,243 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Company Configuration",
+  "description": "Configuration schema for Beyond925 company profiles",
+  "type": "object",
+  "required": ["company", "landing", "campus", "jobs", "copy"],
+  "properties": {
+    "company": {
+      "type": "object",
+      "required": [
+        "name",
+        "logoUrl",
+        "primaryColor",
+        "secondaryColor",
+        "city",
+        "website",
+        "industryVibe"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Company name",
+          "minLength": 1
+        },
+        "logoUrl": {
+          "type": "string",
+          "description": "Emoji or URL to company logo"
+        },
+        "primaryColor": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "description": "Primary brand color in hex format"
+        },
+        "secondaryColor": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "description": "Secondary brand color in hex format"
+        },
+        "city": {
+          "type": "string",
+          "minLength": 1
+        },
+        "website": {
+          "type": "string",
+          "format": "uri"
+        },
+        "industryVibe": {
+          "type": "string",
+          "description": "Short description of company/industry",
+          "minLength": 10
+        },
+        "organizationFacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["title", "value", "icon"],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "landing": {
+      "type": "object",
+      "required": ["headline", "subline", "startButtonText"],
+      "properties": {
+        "headline": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subline": {
+          "type": "string",
+          "minLength": 1
+        },
+        "startButtonText": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "campus": {
+      "type": "object",
+      "required": ["headline", "subline"],
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "subline": {
+          "type": "string"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "title", "jobId"],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "jobId": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "jobs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "description",
+          "icon",
+          "color",
+          "tags",
+          "levels"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#[0-9A-Fa-f]{6}$"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pathModeId": {
+            "type": "string",
+            "enum": ["linear", "branching", "global-map"]
+          },
+          "levels": {
+            "type": "array",
+            "minItems": 1
+          }
+        }
+      }
+    },
+    "copy": {
+      "type": "object",
+      "required": [
+        "checkChances",
+        "expressApply",
+        "jobMerken",
+        "submit",
+        "submitSuccess",
+        "victoryHeadline",
+        "victorySubtext",
+        "nudgeText",
+        "firstName",
+        "schoolType"
+      ],
+      "properties": {
+        "checkChances": {
+          "type": "string"
+        },
+        "expressApply": {
+          "type": "string"
+        },
+        "jobMerken": {
+          "type": "string"
+        },
+        "submit": {
+          "type": "string"
+        },
+        "submitSuccess": {
+          "type": "string"
+        },
+        "victoryHeadline": {
+          "type": "string"
+        },
+        "victorySubtext": {
+          "type": "string"
+        },
+        "nudgeHeadline": {
+          "type": "string"
+        },
+        "nudgeText": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "phoneType": {
+          "type": "string"
+        },
+        "schoolType": {
+          "type": "string"
+        },
+        "android": {
+          "type": "string"
+        },
+        "iphone": {
+          "type": "string"
+        },
+        "realschule": {
+          "type": "string"
+        },
+        "gymnasium": {
+          "type": "string"
+        },
+        "andere": {
+          "type": "string"
+        },
+        "expressApplyIntro": {
+          "type": "string"
+        },
+        "exploreOtherJobs": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

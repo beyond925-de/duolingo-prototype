@@ -32,9 +32,7 @@ export function SettingsModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
       <div className="mx-4 w-full max-w-md rounded-2xl border-2 bg-white p-6 shadow-xl">
         <div className="mb-6 flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-neutral-700">
-            {config.copy.settings.title}
-          </h2>
+          <h2 className="text-2xl font-bold text-neutral-700">Einstellungen</h2>
           <button
             onClick={onClose}
             className="rounded-full p-2 transition hover:bg-slate-100"
@@ -53,13 +51,13 @@ export function SettingsModal({
               onClose();
             }}
           >
-            {config.copy.settings.showStartScreen}
+            Intro nochmal zeigen
           </Button>
 
           {[
-            { key: "vibration", label: config.copy.settings.vibration },
-            { key: "sound", label: config.copy.settings.sound },
-            { key: "animation", label: config.copy.settings.animation },
+            { key: "vibration", label: "Haptisches Feedback" },
+            { key: "sound", label: "Soundeffekte" },
+            { key: "animation", label: "Animationen" },
           ]
             .concat(
               process.env.NODE_ENV === "development"

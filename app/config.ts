@@ -658,11 +658,7 @@ export const config = {
     */
   ] as Job[],
   copy: {
-    continueButton: "Weiter",
-    nextLevel: "Nächstes Level",
-    menu: "Menü",
-
-    // Low-Threshold Conversion Wording
+    // Low-Threshold Conversion Wording (Company-specific)
     checkChances: "Meine Chancen checken",
     expressApply: "Lass uns quatschen",
     jobMerken: "Job merken",
@@ -670,17 +666,17 @@ export const config = {
     submit: "Teamfit prüfen",
     submitSuccess: "Top! Wir schauen uns das an und melden uns in max. 24h.",
 
-    // Victory Screen (Psychologische Brücke)
+    // Victory Screen (Psychologische Brücke) - Company-specific
     victoryHeadline: "Sauber gelöst. 🍫",
     victorySubtext:
       "Du hast technisches Verständnis bewiesen. Genau diese Präzision suchen wir bei Sollich.",
 
-    // The Nudge (Integrierte Benefits)
+    // The Nudge (Integrierte Benefits) - Company-specific
     nudgeHeadline: "Mal ehrlich...",
     nudgeText:
       "Du stellst dich hier besser an als viele andere. Wir sollten uns kennenlernen. Ganz ohne Stress und Anzug. ✨",
 
-    // Form Labels
+    // Form Labels (Company-specific)
     firstName: "Wie heißt du?",
     phoneType: "Welches Handy nutzt du? (Egal, nur Neugier)",
     schoolType: "Auf welcher Schule bist du?",
@@ -690,12 +686,8 @@ export const config = {
     gymnasium: "Gymnasium",
     andere: "Andere / Ich hab schon Abschluss",
 
-    settings: {
-      title: "Einstellungen",
-      showStartScreen: "Intro nochmal zeigen",
-      vibration: "Haptisches Feedback",
-      sound: "Soundeffekte",
-      animation: "Animationen",
-    },
+    // Express Apply Form (Company-specific)
+    expressApplyIntro: "Ein paar kurze Infos genügen. Wir melden uns bei dir!",
+    exploreOtherJobs: "Erstmal andere Jobs entdecken",
   },
 };

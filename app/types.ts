@@ -118,3 +118,69 @@ export interface ImageData {
   tags: string[];
   uploadUrl: string;
 }
+
+// Company Config Types
+export interface OrganizationFact {
+  title: string;
+  value: string;
+  icon: string;
+}
+
+export interface CompanyInfo {
+  name: string;
+  logoUrl: string;
+  primaryColor: string;
+  secondaryColor: string;
+  city: string;
+  website: string;
+  industryVibe: string;
+  organizationFacts: OrganizationFact[];
+}
+
+export interface LandingConfig {
+  headline: string;
+  subline: string;
+  startButtonText: string;
+}
+
+export interface CampusCategory {
+  id: string;
+  title: string;
+  jobId: string;
+}
+
+export interface CampusConfig {
+  headline: string;
+  subline: string;
+  categories: CampusCategory[];
+}
+
+export interface CopyConfig {
+  checkChances: string;
+  expressApply: string;
+  jobMerken: string;
+  submit: string;
+  submitSuccess: string;
+  victoryHeadline: string;
+  victorySubtext: string;
+  nudgeHeadline?: string;
+  nudgeText: string;
+  firstName: string;
+  phoneType?: string;
+  schoolType: string;
+  android?: string;
+  iphone?: string;
+  realschule: string;
+  gymnasium: string;
+  andere: string;
+  expressApplyIntro: string;
+  exploreOtherJobs: string;
+}
+
+export interface CompanyConfig {
+  company: CompanyInfo;
+  landing: LandingConfig;
+  campus: CampusConfig;
+  jobs: Job[];
+  copy: CopyConfig;
+}

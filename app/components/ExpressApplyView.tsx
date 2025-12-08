@@ -46,7 +46,7 @@ export function ExpressApplyView({
         <div className="mx-auto flex h-full max-w-lg flex-col items-center justify-center gap-y-4 px-6">
           <div className="w-full rounded-xl border-slate-200 bg-white pt-6">
             <p className="mb-6 text-center text-neutral-600">
-              Ein paar kurze Infos genügen. Wir melden uns bei dir!
+              {config.copy.expressApplyIntro}
             </p>
 
             <form onSubmit={onSubmit} className="space-y-6">
@@ -120,7 +120,7 @@ export function ExpressApplyView({
                   className="w-full text-sm font-semibold text-slate-600"
                   onClick={onExploreJobs}
                 >
-                  Erstmal andere Jobs entdecken
+                  {config.copy.exploreOtherJobs}
                 </Button>
               </div>
             )}

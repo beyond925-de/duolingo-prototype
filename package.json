@@ -11,7 +11,9 @@
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "db:studio": "npx drizzle-kit studio",
     "db:push": "npx drizzle-kit push",
-    "db:prod": "tsx ./scripts/prod.ts"
+    "db:prod": "tsx ./scripts/prod.ts",
+    "sync-config": "tsx ./scripts/sync-config.ts",
+    "validate-config": "node ./configs/.validate-config.js"
   },
   "author": {
     "name": "Aaron Richter",

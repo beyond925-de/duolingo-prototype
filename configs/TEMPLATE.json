@@ -1,0 +1,120 @@
+{
+  "_instructions": "Copy this template to create a new company config. Replace all placeholder values with your company's information.",
+  "_filename": "Save as: configs/[company-name]/config.json (e.g., configs/bosch/config.json)",
+
+  "company": {
+    "name": "YOUR_COMPANY_NAME",
+    "logoUrl": "🏢",
+    "primaryColor": "#3b82f6",
+    "secondaryColor": "#10b981",
+    "city": "YOUR_CITY",
+    "website": "https://your-company.com",
+    "industryVibe": "A short, catchy description of what makes your company unique. Keep it under 2 sentences.",
+    "organizationFacts": [
+      {
+        "title": "Benefit Title 1",
+        "value": "A compelling description of this benefit or company perk.",
+        "icon": "🚗"
+      },
+      {
+        "title": "Benefit Title 2",
+        "value": "Another great reason to work at your company.",
+        "icon": "⏰"
+      },
+      {
+        "title": "Benefit Title 3",
+        "value": "What else makes your company stand out?",
+        "icon": "🔥"
+      }
+    ]
+  },
+
+  "landing": {
+    "headline": "Your catchy headline here! 🚀",
+    "subline": "A brief explanation of what this experience is about. Keep it engaging!",
+    "startButtonText": "Let's Start! 🎯"
+  },
+
+  "campus": {
+    "headline": "Choose Your Path",
+    "subline": "What type of role interests you?",
+    "categories": [
+      {
+        "id": "category-1",
+        "title": "Category 1 Title",
+        "jobId": "job-1-id"
+      },
+      {
+        "id": "category-2",
+        "title": "Category 2 Title",
+        "jobId": "job-2-id"
+      }
+    ]
+  },
+
+  "jobs": [
+    {
+      "id": "example-job",
+      "title": "Job Title",
+      "description": "Brief job description that appears on the job card",
+      "icon": "🛠️",
+      "color": "#3b82f6",
+      "tags": ["Tag 1", "Tag 2", "Tag 3"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Level Title",
+          "status": "unlocked",
+          "icon": "🏁",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Your scenario question or text goes here. Make it engaging!",
+              "imageUrl": "https://example.com/image.jpg",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Option 1",
+                  "correct": true,
+                  "feedback": "Feedback for this option"
+                },
+                {
+                  "id": 2,
+                  "text": "Option 2",
+                  "correct": false,
+                  "feedback": "Feedback explaining why this isn't correct"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "copy": {
+    "checkChances": "Check My Fit",
+    "expressApply": "Quick Apply",
+    "jobMerken": "Save Job",
+    "submit": "Submit",
+    "submitSuccess": "Thanks! We'll get back to you within 24 hours.",
+    "victoryHeadline": "Great job! 🎉",
+    "victorySubtext": "You've shown what we're looking for. Let's talk!",
+    "nudgeHeadline": "Honestly...",
+    "nudgeText": "You're doing better than most. We should get to know each other!",
+    "firstName": "What's your name?",
+    "phoneType": "What phone do you use?",
+    "schoolType": "What school are you attending?",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Secondary School",
+    "gymnasium": "High School",
+    "andere": "Other / Already Graduated",
+    "expressApplyIntro": "Just a few quick details and we'll reach out!",
+    "exploreOtherJobs": "Explore Other Roles"
+  }
+}

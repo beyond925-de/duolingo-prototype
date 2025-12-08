@@ -1,0 +1,71 @@
+{
+  "company": {
+    "name": "Sollich",
+    "logoUrl": "🍫",
+    "primaryColor": "#c8102e",
+    "secondaryColor": "#10b981",
+    "city": "Bad Salzuflen",
+    "website": "https://sollich.com",
+    "industryVibe": "Wir bauen die Maschinen, die die Welt mit Schokolade versorgen. High-Tech aus Bad Salzuflen.",
+    "organizationFacts": [
+      {
+        "title": "Führerschein-Support",
+        "value": "Wir lassen dich nicht stehen. Wir unterstützen dich finanziell bei deinem Führerschein.",
+        "icon": "🚗"
+      },
+      {
+        "title": "Ausschlafen inklusive",
+        "value": "Morgenmuffel? Kein Thema. Bei uns geht's entspannt um 9:00 Uhr los.",
+        "icon": "⏰"
+      },
+      {
+        "title": "Echte Missionen",
+        "value": "Kaffee kochen tun andere. Du kriegst bei uns ab Tag 1 echte Verantwortung.",
+        "icon": "🔥"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Deine Zukunft schmeckt süß. 🍫",
+    "subline": "Sollich baut Maschinen für die Süßwarenindustrie. Finde heraus, ob du ins Team passt – in 3 Minuten.",
+    "startButtonText": "1. Tag bestreiten 🚀"
+  },
+  "campus": {
+    "headline": "Dein Talent. Dein Job.",
+    "subline": "Bist du eher der Macher an der Maschine oder der Planer am PC?",
+    "categories": [
+      {
+        "id": "technik",
+        "title": "Für Macher (Handwerk)",
+        "jobId": "mechaniker"
+      },
+      {
+        "id": "planung",
+        "title": "Für Planer (Digital)",
+        "jobId": "zeichner"
+      }
+    ]
+  },
+  "jobs": "__SEE_SEPARATE_FILE__",
+  "copy": {
+    "checkChances": "Meine Chancen checken",
+    "expressApply": "Lass uns quatschen",
+    "jobMerken": "Job merken",
+    "submit": "Teamfit prüfen",
+    "submitSuccess": "Top! Wir schauen uns das an und melden uns in max. 24h.",
+    "victoryHeadline": "Sauber gelöst. 🍫",
+    "victorySubtext": "Du hast technisches Verständnis bewiesen. Genau diese Präzision suchen wir bei Sollich.",
+    "nudgeHeadline": "Mal ehrlich...",
+    "nudgeText": "Du stellst dich hier besser an als viele andere. Wir sollten uns kennenlernen. Ganz ohne Stress und Anzug. ✨",
+    "firstName": "Wie heißt du?",
+    "phoneType": "Welches Handy nutzt du? (Egal, nur Neugier)",
+    "schoolType": "Auf welcher Schule bist du?",
+    "android": "Android Team",
+    "iphone": "iPhone Team",
+    "realschule": "Realschule",
+    "gymnasium": "Gymnasium",
+    "andere": "Andere / Ich hab schon Abschluss",
+    "expressApplyIntro": "Ein paar kurze Infos genügen. Wir melden uns bei dir!",
+    "exploreOtherJobs": "Erstmal andere Jobs entdecken"
+  }
+}

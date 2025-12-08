@@ -89,12 +89,12 @@ export function VictoryView({
               className="ml-auto"
               onClick={onMenu}
             >
-              {config.copy.menu}
+              Menü
             </Button>
 
             {!isLastLevel && (
               <Button size="lg" variant="secondary" onClick={onNextLevel}>
-                {config.copy.nextLevel}
+                Nächstes Level
               </Button>
             )}
           </div>
