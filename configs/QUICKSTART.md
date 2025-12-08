@@ -1,4 +1,4 @@
-# Quick Start for Your Co-Founder
+# Quick Start for Marco
 
 Hey! 👋 This is the simplest guide to adding a new company config.
 
@@ -23,6 +23,10 @@ Hey! 👋 This is the simplest guide to adding a new company config.
 
 ### Step 2: Create Your Config File
 
+<img width="948" height="290" alt="SCR-20251208-qebf" src="https://github.com/user-attachments/assets/15a43694-2d8e-41ce-a6fc-31a5bb989347" />
+
+<img width="1200" height="919" alt="SCR-20251208-qdtr" src="https://github.com/user-attachments/assets/0b78781c-5923-4d22-add3-398d3b39ac5d" />
+
 1. Click the **"Add file"** button (top right)
 2. Select **"Create new file"**
 3. In the filename box, type: `your-company-name/config.json`
@@ -30,7 +34,7 @@ Hey! 👋 This is the simplest guide to adding a new company config.
    - Use lowercase, no spaces (use dashes if needed)
 4. Press Enter - this creates the folder and file
 
-### Step 3: Copy the Template
+### Step 3: Copy the Template (Optional)
 
 1. Open a new tab and go to: `https://github.com/YOUR-REPO/duolingo-mockup/blob/main/configs/TEMPLATE.json`
 2. Click the **"Raw"** button (top right of the file)
@@ -88,25 +92,13 @@ This is the big one! Each job needs:
 
 ### Step 5: Validate Your Config
 
-Before submitting, let's make sure it's correct:
-
-1. Go to: https://jsonlint.com/
-2. Copy your entire config file
-3. Paste it into JSONLint
-4. Click **"Validate JSON"**
-5. If it says ✅ "Valid JSON" - great!
-6. If it shows ❌ errors - fix them and try again
-
-**Common Errors:**
-
-- Missing comma (,) between items
-- Extra comma after the last item
-- Missing closing bracket } or ]
-- Forgot quotes around text
+Dance!
 
 ### Step 6: Submit Your Config
 
-1. Scroll to the bottom of GitHub
+<img width="1200" height="763" alt="SCR-20251208-qeji" src="https://github.com/user-attachments/assets/9d057d9c-b15a-4027-874a-9f147894924a" />
+
+1. Click "Commit"
 2. In the "Commit changes" box:
    - Title: `Add config for [Your Company]`
    - Description: Optional, add any notes
@@ -114,85 +106,31 @@ Before submitting, let's make sure it's correct:
 4. Click **"Propose changes"**
 5. Click **"Create pull request"**
 
+<img width="664" height="724" alt="SCR-20251208-qenu" src="https://github.com/user-attachments/assets/373b4240-55ae-4e36-b0a3-d401cb020222" />
+
+<img width="1190" height="808" alt="SCR-20251208-qewb" src="https://github.com/user-attachments/assets/ac2b404f-bf54-4d0b-ac2d-f16b6dd3a2fd" />
+
+
 Done! 🎉
 
-### Step 7: Wait for Review
+### Step 7: Review and merge
 
-A developer will:
 
-- Check your config
-- Run automatic validation
-- Merge it if everything looks good
-- Comment if anything needs fixing
 
-You'll get an email when it's reviewed!
+<img width="1188" height="925" alt="SCR-20251208-qfbo" src="https://github.com/user-attachments/assets/a6b38d70-2fd4-4517-a638-6b725e0b32a2" />
+
 
 ---
 
 ## ❓ Common Questions
 
-### Q: What if I make a mistake?
-
-**A:** No problem! You can edit the file after creating the Pull Request:
-
-1. Go to your Pull Request
-2. Click on the "Files changed" tab
-3. Click the three dots (...) next to your file
-4. Select "Edit file"
-5. Make your changes
-6. Click "Commit changes"
-
-### Q: What's a hex color code?
-
-**A:** It's a way to specify colors using numbers and letters after a `#`.
-
-Examples:
-
-- `#FF0000` = Red
-- `#00FF00` = Green
-- `#0000FF` = Blue
-- `#c8102e` = Sollich Red (from example)
-
-**How to find yours:**
-
-- Use a color picker tool: https://www.google.com/search?q=color+picker
-- Or copy from your website's logo
-
-### Q: I don't have an logo URL, just an emoji?
-
-**A:** That's fine! Just use an emoji:
-
-```json
-"logoUrl": "🏭"
-```
-
-Pick one that represents your company!
-
-### Q: How do I know if my config was added successfully?
-
-**A:** You'll see it in the Pull Request:
-
-1. Go to your PR
-2. Look for a green checkmark ✅ next to "Validate Company Configs"
-3. If it's green = success!
-4. If it's red = something needs fixing (check the error message)
-
-### Q: Can I see what others have done?
-
-**A:** Yes! Look at the example:
-
-- Go to `configs/sollich/config.json`
-- This is a complete, working example
-- You can copy the structure and change the content
-
----
 
 ## 🆘 Need Help?
 
 1. **Check the error message** - it usually tells you what's wrong
 2. **Look at the example** - `configs/sollich/config.json`
 3. **Validate your JSON** - https://jsonlint.com/
-4. **Ask a developer** - Create an issue or send a message
+4. **Ask a developer** - @aaron 👀
 
 ---
 
