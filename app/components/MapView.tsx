@@ -8,11 +8,11 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 import { ApplyDialog } from "./ApplyDialog";
-import { config } from "../config";
 import { getPathModeConfig } from "../pathModes";
-import { Job, Level, PathModeConfig } from "../types";
+import { CompanyConfig, Job, Level, PathModeConfig } from "../types";
 
 interface MapViewProps {
+  config: CompanyConfig;
   job: Job;
   jobs: Job[];
   levels: Level[];
@@ -83,6 +83,7 @@ function StartTooltip({
 }
 
 export function MapView({
+  config,
   job,
   jobs,
   levels,
@@ -325,6 +326,7 @@ export function MapView({
       </div>
 
       <ApplyDialog
+        config={config}
         isOpen={isApplyDialogOpen}
         onClose={() => setIsApplyDialogOpen(false)}
         onConfirm={onExpressApply}

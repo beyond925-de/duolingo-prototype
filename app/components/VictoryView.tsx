@@ -2,9 +2,10 @@ import Confetti from "react-confetti";
 
 import { Button } from "@/components/ui/button";
 
-import { config } from "../config";
+import { CompanyConfig } from "../types";
 
 interface VictoryViewProps {
+  config: CompanyConfig;
   currentLevelId: number;
   totalLevels: number;
   showConfetti: boolean;
@@ -17,6 +18,7 @@ interface VictoryViewProps {
 }
 
 export function VictoryView({
+  config,
   currentLevelId,
   totalLevels,
   showConfetti,

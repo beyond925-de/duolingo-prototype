@@ -2,6 +2,7 @@
   "company": {
     "name": "Sollich",
     "logoUrl": "🍫",
+    "logoImageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sollich.com%2Ffileadmin%2Fimages%2Fsollich-logo.png&f=1&nofb=1&ipt=8de60a20c164c16dceb58cf1273f841cdda463ddd61badc6ef65ec9b174d0335",
     "primaryColor": "#c8102e",
     "secondaryColor": "#10b981",
     "city": "Bad Salzuflen",
@@ -45,6 +46,94 @@
         "jobId": "zeichner"
       }
     ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "environment",
+        "question": "Wo fühlst du dich wohler?",
+        "options": [
+          {
+            "id": "workshop",
+            "label": "In der Werkstatt",
+            "icon": "🛠️",
+            "imageUrl": "https://cdn.pixabay.com/photo/2021/05/11/12/12/welding-6245746_1280.jpg",
+            "score": {
+              "industriemechaniker": 2,
+              "technischer-produktdesigner": 0
+            }
+          },
+          {
+            "id": "office",
+            "label": "Am Computer",
+            "icon": "🖥️",
+            "imageUrl": "https://cdn.pixabay.com/photo/2018/09/18/19/55/woman-3687080_1280.jpg",
+            "score": {
+              "industriemechaniker": 0,
+              "technischer-produktdesigner": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "workstyle",
+        "question": "Wie arbeitest du lieber?",
+        "options": [
+          {
+            "id": "hands-on",
+            "label": "Hands-on, praktisch",
+            "icon": "✋",
+            "imageUrl": "https://cdn.pixabay.com/photo/2020/11/12/16/58/worker-5736096_1280.jpg",
+            "score": {
+              "industriemechaniker": 2,
+              "technischer-produktdesigner": 1
+            }
+          },
+          {
+            "id": "planning",
+            "label": "Digital, planen, sauber und ordentlich",
+            "icon": "📐",
+            "imageUrl": "https://cdn.pixabay.com/photo/2016/11/24/20/30/floor-plan-1857175_1280.jpg",
+            "score": {
+              "industriemechaniker": 1,
+              "technischer-produktdesigner": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "teamwork",
+        "question": "Team oder alleine?",
+        "options": [
+          {
+            "id": "team",
+            "label": "Mit vielen Menschen, im (lauten) Team",
+            "icon": "👥",
+            "imageUrl": "https://images.pexels.com/photos/3184428/pexels-photo-3184428.jpeg",
+            "score": {
+              "industriemechaniker": 1,
+              "technischer-produktdesigner": 1
+            }
+          },
+          {
+            "id": "solo",
+            "label": "In Ruhe, fokussiert",
+            "icon": "🎯",
+            "imageUrl": "https://cdn.pixabay.com/photo/2021/01/28/03/13/person-5956897_1280.jpg",
+            "score": {
+              "industriemechaniker": 1,
+              "technischer-produktdesigner": 1
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Wir empfehlen dir:",
+      "startButtonText": "Ersten Beruf erleben",
+      "viewAllButtonText": "Alle Berufe ansehen",
+      "skipButtonText": "Überspringen um alle Berufe zu sehen"
+    }
   },
   "jobs": [
     {

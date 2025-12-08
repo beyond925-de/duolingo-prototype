@@ -4,127 +4,43 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 
-import { config } from "../config";
-import { Job } from "../types";
+import { CompanyConfig, Job } from "../types";
 
 interface QuestionnaireViewProps {
+  config: CompanyConfig;
   onComplete: (suggestedJob: Job | null) => void;
   onViewAllJobs: () => void;
 }
 
-interface Question {
-  id: string;
-  question: string;
-  imageUrl?: string; // Optional image for the question
-  options: Array<{
-    id: string;
-    label: string;
-    icon: string;
-    imageUrl?: string; // Optional image for the option
-    score: Record<string, number>; // jobId -> score
-  }>;
-}
-
-const questions: Question[] = [
-  {
-    id: "environment",
-    question: "Wo fühlst du dich wohler?",
-    // Optional: Add an imageUrl here to show an image above the question
-    // imageUrl: images[0].uploadUrl,
-    options: [
-      {
-        id: "workshop",
-        label: "In der Werkstatt",
-        icon: "🛠️",
-        // Optional: Add an imageUrl here to replace the icon with an image
-        // imageUrl: images[1].uploadUrl,
-        imageUrl:
-          "https://cdn.pixabay.com/photo/2021/05/11/12/12/welding-6245746_1280.jpg",
-        score: {
-          industriemechaniker: 2,
-          "technischer-zeichner": 0,
-        },
-      },
-      {
-        id: "office",
-        label: "Am Computer",
-        icon: "🖥️",
-        // Optional: Add an imageUrl here to replace the icon with an image
-        // imageUrl: images[12].uploadUrl,
-        imageUrl:
-          "https://cdn.pixabay.com/photo/2018/09/18/19/55/woman-3687080_1280.jpg",
-        score: {
-          industriemechaniker: 0,
-          "technischer-zeichner": 2,
-        },
-      },
-    ],
-  },
-  {
-    id: "workstyle",
-    question: "Wie arbeitest du lieber?",
-    options: [
-      {
-        id: "hands-on",
-        label: "Hands-on, praktisch",
-        icon: "✋",
-        imageUrl:
-          "https://cdn.pixabay.com/photo/2020/11/12/16/58/worker-5736096_1280.jpg",
-        score: {
-          industriemechaniker: 2,
-          "technischer-zeichner": 1,
-        },
-      },
-      {
-        id: "planning",
-        label: "Digital, planen, sauber und ordentlich",
-        icon: "📐",
-        imageUrl:
-          "https://cdn.pixabay.com/photo/2016/11/24/20/30/floor-plan-1857175_1280.jpg",
-        score: {
-          industriemechaniker: 1,
-          "technischer-zeichner": 2,
-        },
-      },
-    ],
-  },
-  {
-    id: "teamwork",
-    question: "Team oder alleine?",
-    options: [
-      {
-        id: "team",
-        label: "Mit vielen Menschen, im (lauten) Team",
-        icon: "👥",
-        imageUrl:
-          "https://images.pexels.com/photos/3184428/pexels-photo-3184428.jpeg",
-        score: {
-          industriemechaniker: 1,
-          "technischer-zeichner": 1,
-        },
-      },
-      {
-        id: "solo",
-        label: "In Ruhe, fokussiert",
-        icon: "🎯",
-        imageUrl:
-          "https://cdn.pixabay.com/photo/2021/01/28/03/13/person-5956897_1280.jpg",
-        score: {
-          industriemechaniker: 1,
-          "technischer-zeichner": 1,
-        },
-      },
-    ],
-  },
-];
-
 export function QuestionnaireView({
+  config,
   onComplete,
   onViewAllJobs,
 }: QuestionnaireViewProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [suggestedJob, setSuggestedJob] = useState<Job | null>(null);
+
+  // Use config-based questions
+  const questions = config.questionnaire?.questions || [];
+
+  // If no questions configured, show a message and allow skipping
+  if (questions.length === 0) {
+    return (
+      <div className="relative flex min-h-[100dvh] w-full flex-col overflow-hidden bg-slate-50">
+        <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6">
+          <div className="mx-auto max-w-md text-center">
+            <p className="mb-8 text-lg text-neutral-700">
+              Keine Fragen konfiguriert. Bitte alle Jobs ansehen.
+            </p>
+            <Button size="lg" onClick={onViewAllJobs} className="w-full">
+              Alle Jobs ansehen
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const currentQuestion = questions[currentQuestionIndex];
   const isLastQuestion = currentQuestionIndex === questions.length - 1;
@@ -209,7 +125,8 @@ export function QuestionnaireView({
           <div className="mx-auto max-w-2xl text-center">
             <div className="mb-6 text-6xl">{suggestedJob.icon}</div>
             <h1 className="mb-4 text-3xl font-bold text-neutral-700">
-              Wir empfehlen dir:
+              {config.questionnaire?.suggestionText?.headline ||
+                "Wir empfehlen dir:"}
             </h1>
             <h2
               className="g mb-6 text-4xl font-bold [word-wrap:anywhere]"
@@ -226,7 +143,8 @@ export function QuestionnaireView({
                 className="w-full"
                 onClick={handleStartSuggestedJob}
               >
-                Ersten Beruf erleben
+                {config.questionnaire?.suggestionText?.startButtonText ||
+                  "Ersten Beruf erleben"}
               </Button>
               <Button
                 size="lg"
@@ -234,7 +152,8 @@ export function QuestionnaireView({
                 className="w-full"
                 onClick={handleViewAllJobs}
               >
-                Alle Berufe ansehen
+                {config.questionnaire?.suggestionText?.viewAllButtonText ||
+                  "Alle Berufe ansehen"}
               </Button>
             </div>
           </div>
@@ -346,7 +265,8 @@ export function QuestionnaireView({
               className="w-full"
               onClick={handleViewAllJobs}
             >
-              Überspringen um alle Berufe zu sehen
+              {config.questionnaire?.suggestionText?.skipButtonText ||
+                "Überspringen um alle Berufe zu sehen"}
             </Button>
           </div>
         </div>

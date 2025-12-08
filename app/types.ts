@@ -128,7 +128,8 @@ export interface OrganizationFact {
 
 export interface CompanyInfo {
   name: string;
-  logoUrl: string;
+  logoUrl: string; // Emoji or URL
+  logoImageUrl?: string; // Optional image URL for logo (takes precedence over logoUrl if provided)
   primaryColor: string;
   secondaryColor: string;
   city: string;
@@ -153,6 +154,29 @@ export interface CampusConfig {
   headline: string;
   subline: string;
   categories: CampusCategory[];
+}
+
+export interface QuestionnaireQuestion {
+  id: string;
+  question: string;
+  imageUrl?: string;
+  options: Array<{
+    id: string;
+    label: string;
+    icon: string;
+    imageUrl?: string;
+    score: Record<string, number>; // jobId -> score
+  }>;
+}
+
+export interface QuestionnaireConfig {
+  questions: QuestionnaireQuestion[];
+  suggestionText?: {
+    headline?: string;
+    startButtonText?: string;
+    viewAllButtonText?: string;
+    skipButtonText?: string;
+  };
 }
 
 export interface CopyConfig {
@@ -181,6 +205,7 @@ export interface CompanyConfig {
   company: CompanyInfo;
   landing: LandingConfig;
   campus: CampusConfig;
+  questionnaire?: QuestionnaireConfig;
   jobs: Job[];
   copy: CopyConfig;
 }

@@ -3,16 +3,17 @@ import { Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Carousel from "@/components/Carousel";
 
-import { config } from "../config";
-import { Job } from "../types";
+import { CompanyConfig, Job } from "../types";
 
 interface CampusViewProps {
+  config: CompanyConfig;
   jobs: Job[];
   onJobSelect: (job: Job) => void;
   onSettingsClick: () => void;
 }
 
 export function CampusView({
+  config,
   jobs,
   onJobSelect,
   onSettingsClick,

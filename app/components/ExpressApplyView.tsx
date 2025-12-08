@@ -5,9 +5,10 @@ import { X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-import { config } from "../config";
+import { CompanyConfig } from "../types";
 
 interface ExpressApplyViewProps {
+  config: CompanyConfig;
   formData: {
     firstName: string;
     phoneType: string;
@@ -21,6 +22,7 @@ interface ExpressApplyViewProps {
 }
 
 export function ExpressApplyView({
+  config,
   formData,
   onFormDataChange,
   onSubmit,

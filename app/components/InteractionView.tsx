@@ -14,8 +14,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-import { config } from "../config";
-import { Level, Scenario } from "../types";
+import { CompanyConfig, Level, Scenario } from "../types";
 import {
   SingleSelectCorrectView,
   SingleSelectNoCorrectView,
@@ -28,6 +27,7 @@ import {
 } from "./scenarios";
 
 interface InteractionViewProps {
+  config: CompanyConfig;
   currentLevel: Level;
   currentScenario: Scenario;
   currentLevelId: number;
@@ -58,6 +58,7 @@ interface Particle {
 }
 
 export function InteractionView({
+  config,
   currentLevel,
   currentScenario,
   currentLevelId,

@@ -10,15 +10,21 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
-import { config } from "../config";
+import { CompanyConfig } from "../types";
 
 interface ApplyDialogProps {
+  config: CompanyConfig;
   isOpen: boolean;
   onClose: () => void;
   onConfirm: () => void;
 }
 
-export function ApplyDialog({ isOpen, onClose, onConfirm }: ApplyDialogProps) {
+export function ApplyDialog({
+  config,
+  isOpen,
+  onClose,
+  onConfirm,
+}: ApplyDialogProps) {
   const handleWhatsAppClick = () => {
     const phoneNumber = "14155238886";
     // Create a fake session ID for demo purposes
