@@ -1,0 +1,68 @@
+name: Validate Company Configs
+
+on:
+  pull_request:
+    paths:
+      - "configs/**/*.json"
+  push:
+    branches:
+      - main
+    paths:
+      - "configs/**/*.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Find changed config files
+        id: changed-files
+        uses: tj-actions/changed-files@v41
+        with:
+          files: |
+            configs/**/*.json
+            !configs/TEMPLATE.json
+            !configs/schema.json
+
+      - name: Validate JSON syntax and structure
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          echo "📋 Validating config files..."
+
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo "🔍 Validating: $file"
+            
+            # Check if it's a config.json file
+            if [[ "$file" == *"/config.json" ]]; then
+              node configs/.validate-config.js "$file"
+              
+              if [ $? -eq 0 ]; then
+                echo "✅ $file is valid"
+              else
+                echo "❌ $file validation failed"
+                exit 1
+              fi
+            fi
+          done
+
+          echo "✅ All configs valid!"
+
+      - name: Comment on PR
+        if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ Config validation failed! Please check the errors above and fix your config file. See `configs/README.md` for help.'
+            })

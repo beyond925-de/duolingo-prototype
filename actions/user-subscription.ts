@@ -5,9 +5,9 @@
 
 // import { getUserSubscription } from "@/db/queries";
 // import { stripe } from "@/lib/stripe";
-import { absoluteUrl } from "@/lib/utils";
+//import { absoluteUrl } from "@/lib/utils";
 
-const returnUrl = absoluteUrl("/shop");
+const returnUrl = "/"; // absoluteUrl("/shop");
 
 export const createStripeUrl = async () => {
   // Auth and Stripe disabled for demo mode

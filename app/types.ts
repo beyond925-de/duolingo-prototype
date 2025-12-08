@@ -1,0 +1,186 @@
+export type Screen =
+  | "landing"
+  | "questionnaire"
+  | "campus"
+  | "map"
+  | "interaction"
+  | "victory"
+  | "expressApply";
+export type LevelStatus = "locked" | "unlocked" | "completed";
+
+export type PathLayoutStrategy = "linear" | "branching" | "global";
+export type PathModeId = "linear" | "branching" | "global-map";
+
+export interface PathModeConfig {
+  id: PathModeId;
+  label: string;
+  description: string;
+  layoutStrategy: PathLayoutStrategy;
+  geometry: {
+    width: number;
+    rowHeight: number;
+    zigzagOffset?: number;
+  };
+  branch?: {
+    align?: "center" | "justify";
+  };
+  globalLayout?: {
+    columns: number;
+    columnGap: number;
+    rowGap: number;
+    clusterWidth: number;
+  };
+  connection: {
+    type: "bezier" | "straight";
+    curvature: number;
+  };
+  zoom?: {
+    enabled: boolean;
+    min: number;
+    max: number;
+    defaultScale: number;
+  };
+}
+
+export type ScenarioType =
+  | "single-select-correct" // single select with correct answer
+  | "single-select-no-correct" // single select with no right answer
+  | "multiple-select" // multiple select
+  | "text-field" // custom answer text field
+  | "single-select-or-text" // single select or custom text input
+  | "llm-interactive" // dynamic LLM-powered interactive scenario
+  | "bento-grid"; // informational bento grid layout
+
+export interface Scenario {
+  id: number;
+  scenario: string;
+  imageUrl: string;
+  type: ScenarioType;
+  options: Array<{
+    id: number;
+    text: string;
+    correct?: boolean; // Required for single-select-correct and multiple-select
+    feedback: string;
+  }>;
+  allowTextInput?: boolean; // For text-field and single-select-or-text types
+  // For llm-interactive type:
+  conversationHistory?: Array<{
+    role: "user" | "assistant";
+    content: string;
+  }>; // Conversation history for dynamic scenarios
+  // For bento-grid type:
+  facts?: Array<{
+    title: string;
+    value: string;
+    icon: string;
+    layout?: {
+      colSpan?: number; // 1-2
+      rowSpan?: number; // 1-2
+    };
+  }>;
+}
+
+export interface Level {
+  id: number;
+  title: string;
+  status: LevelStatus;
+  icon: string;
+  scenarios: Scenario[];
+  // Optional graph structure for branching/merging
+  row?: number; // Row number (0-based). Multiple levels can share the same row.
+  nextLevelIds?: number[]; // IDs of levels this connects to. If not provided, connects to next sequential level.
+}
+
+export interface JobPathOverrides {
+  global?: {
+    column?: number;
+    row?: number;
+  };
+}
+
+export interface Job {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+  tags: string[];
+  levels: Level[];
+  pathModeId?: PathModeId;
+  pathOverrides?: JobPathOverrides;
+}
+
+export interface ImageData {
+  id: number;
+  scene: string;
+  prompt: string;
+  description: string;
+  tags: string[];
+  uploadUrl: string;
+}
+
+// Company Config Types
+export interface OrganizationFact {
+  title: string;
+  value: string;
+  icon: string;
+}
+
+export interface CompanyInfo {
+  name: string;
+  logoUrl: string;
+  primaryColor: string;
+  secondaryColor: string;
+  city: string;
+  website: string;
+  industryVibe: string;
+  organizationFacts: OrganizationFact[];
+}
+
+export interface LandingConfig {
+  headline: string;
+  subline: string;
+  startButtonText: string;
+}
+
+export interface CampusCategory {
+  id: string;
+  title: string;
+  jobId: string;
+}
+
+export interface CampusConfig {
+  headline: string;
+  subline: string;
+  categories: CampusCategory[];
+}
+
+export interface CopyConfig {
+  checkChances: string;
+  expressApply: string;
+  jobMerken: string;
+  submit: string;
+  submitSuccess: string;
+  victoryHeadline: string;
+  victorySubtext: string;
+  nudgeHeadline?: string;
+  nudgeText: string;
+  firstName: string;
+  phoneType?: string;
+  schoolType: string;
+  android?: string;
+  iphone?: string;
+  realschule: string;
+  gymnasium: string;
+  andere: string;
+  expressApplyIntro: string;
+  exploreOtherJobs: string;
+}
+
+export interface CompanyConfig {
+  company: CompanyInfo;
+  landing: LandingConfig;
+  campus: CampusConfig;
+  jobs: Job[];
+  copy: CopyConfig;
+}

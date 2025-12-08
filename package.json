@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -11,12 +11,14 @@
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "db:studio": "npx drizzle-kit studio",
     "db:push": "npx drizzle-kit push",
-    "db:prod": "tsx ./scripts/prod.ts"
+    "db:prod": "tsx ./scripts/prod.ts",
+    "sync-config": "tsx ./scripts/sync-config.ts",
+    "validate-config": "node ./configs/.validate-config.js"
   },
   "author": {
-    "name": "Sanidhya Kumar Verma",
-    "email": "sanidhya.verma12345@gmail.com",
-    "url": "https://github.com/sanidhyy"
+    "name": "Aaron Richter",
+    "email": "tech@beyond925.de",
+    "url": "https://github.com/ac40"
   },
   "description": "Interactive platform for language learning with lessons, quizzes, and progress tracking.",
   "keywords": [
@@ -54,7 +56,6 @@
     "html",
     "css"
   ],
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/sanidhyy/duolingo-clone.git"
@@ -75,18 +76,23 @@
     }
   ],
   "dependencies": {
+    "@ai-sdk/google": "^2.0.44",
     "@clerk/nextjs": "^6.22.0",
     "@neondatabase/serverless": "^1.0.1",
     "@radix-ui/react-avatar": "^1.0.4",
-    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-progress": "^1.0.3",
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
+    "@tanstack/react-query": "^5.90.11",
+    "@tanstack/react-query-devtools": "^5.91.1",
+    "ai": "^5.0.106",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.44.2",
     "lucide-react": "^0.359.0",
+    "motion": "^12.23.12",
     "next": "^14.2.33",
     "next-themes": "^0.3.0",
     "ra-data-simple-rest": "^5.8.4",
@@ -95,11 +101,13 @@
     "react-circular-progressbar": "^2.1.0",
     "react-confetti": "^6.1.0",
     "react-dom": "^18",
+    "react-icons": "^5.5.0",
     "react-use": "^17.5.0",
     "sonner": "^1.4.32",
     "stripe": "^14.22.0",
-    "tailwind-merge": "^2.2.2",
+    "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
+    "zod": "^4.1.13",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
