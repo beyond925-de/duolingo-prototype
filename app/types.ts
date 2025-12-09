@@ -130,6 +130,7 @@ export interface CompanyInfo {
   name: string;
   logoUrl: string; // Emoji or URL
   logoImageUrl?: string; // Optional image URL for logo (takes precedence over logoUrl if provided)
+  signatureEmoji?: string; // Emoji used for background floating images/blobs
   primaryColor: string;
   secondaryColor: string;
   city: string;

@@ -181,7 +181,7 @@ export function InteractionView({
             }}
             className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100/50 backdrop-blur-sm transition hover:bg-slate-200"
           >
-            ⚙️
+            {config.company.signatureEmoji || "⚙️"}
           </button>
           {debugMode && onDebugCompleteLevel && (
             <button
@@ -509,7 +509,7 @@ export function InteractionView({
               top: "-5rem",
             }}
           >
-            ⚙️
+            {config.company.signatureEmoji || "⚙️"}
           </div>
         ))}
       </div>
@@ -572,11 +572,12 @@ export function InteractionView({
           }}
         >
           <DialogHeader>
-            <DialogTitle>⚙️</DialogTitle>
+            <DialogTitle>{config.company.signatureEmoji || "⚙️"}</DialogTitle>
           </DialogHeader>
           <p>
-            Hey, cool dass dir das Zahnrad Spaß macht. Hier passiert leider
-            nichts weiter, das ist nur zum Zeitvertreib 😉
+            Hey, cool dass dir das {config.company.signatureEmoji || "⚙️"} Spaß
+            macht. Hier passiert leider nichts weiter, das ist nur zum
+            Zeitvertreib 😉
           </p>
           <DialogFooter>
             <Button onClick={() => setFunDialogOpen(false)}>Okay</Button>
@@ -599,11 +600,14 @@ export function InteractionView({
           }}
         >
           <DialogHeader>
-            <DialogTitle>⚙️⚙️</DialogTitle>
+            <DialogTitle>
+              {(config.company.signatureEmoji || "⚙️").repeat(2)}
+            </DialogTitle>
           </DialogHeader>
           <p>
-            Wow, du machst ja immer noch weiter! Das Zahnrad scheint dich echt
-            zu fesseln 😄
+            Wow, du machst ja immer noch weiter! Das{" "}
+            {config.company.signatureEmoji || "⚙️"} scheint dich echt zu fesseln
+            😄
           </p>
           <DialogFooter>
             <Button onClick={() => setFunDialog50Open(false)}>Okay</Button>
@@ -626,11 +630,12 @@ export function InteractionView({
           }}
         >
           <DialogHeader>
-            <DialogTitle>🏆⚙️</DialogTitle>
+            <DialogTitle>🏆{config.company.signatureEmoji || "⚙️"}</DialogTitle>
           </DialogHeader>
           <p>
             Respekt! Du bist definitiv der ungekrönte Klick-Meister. 100 Mal auf
-            ein Zahnrad klicken – das ist schon eine Leistung! 🎯
+            das {config.company.signatureEmoji || "⚙️"} klicken – das ist schon
+            eine Leistung! 🎯
           </p>
           <DialogFooter>
             <Button onClick={() => setFunDialog100Open(false)}>Okay</Button>

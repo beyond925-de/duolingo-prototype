@@ -31,6 +31,10 @@
           "format": "uri",
           "description": "Optional image URL for company logo (takes precedence over logoUrl if provided)"
         },
+        "signatureEmoji": {
+          "type": "string",
+          "description": "Optional emoji used for background floating images/blobs. If not provided, background blobs will not be displayed."
+        },
         "primaryColor": {
           "type": "string",
           "pattern": "^#[0-9A-Fa-f]{6}$",

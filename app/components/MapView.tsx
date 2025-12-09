@@ -29,9 +29,11 @@ const DEFAULT_OFFSET_X = 50;
 function StartTooltip({
   isFirst,
   accentColor,
+  onLevelClick,
 }: {
   isFirst: boolean;
   accentColor: string;
+  onLevelClick: () => void;
 }) {
   const [isVisible, setIsVisible] = useState(true);
   const [isFading, setIsFading] = useState(false);
@@ -60,7 +62,7 @@ function StartTooltip({
   if (!isVisible || !isFirst) return null;
 
   return (
-    <div
+    <button
       className={cn(
         "absolute -top-12 z-10 animate-bounce whitespace-nowrap rounded-xl border-2 bg-white",
         "px-3 py-2.5 font-bold uppercase tracking-wide opacity-100 ",
@@ -71,6 +73,7 @@ function StartTooltip({
         borderColor: accentColor,
         color: accentColor,
       }}
+      onClick={onLevelClick}
     >
       {isFirst ? "Start" : "Weiter"}
       <div
@@ -78,7 +81,7 @@ function StartTooltip({
         style={{ borderTopColor: accentColor }}
         aria-hidden
       />
-    </div>
+    </button>
   );
 }
 
@@ -317,12 +320,16 @@ export function MapView({
         />
 
         {/* 3. Floating Particles */}
-        <div className="pointer-events-none absolute right-10 top-20 animate-float-slow select-none text-[150px] opacity-10 blur-[2px]">
-          {config.company.logoUrl}
-        </div>
-        <div className="pointer-events-none absolute bottom-40 left-10 animate-float-slower select-none text-[100px] opacity-10 blur-[2px]">
-          {config.company.logoUrl}
-        </div>
+        {config.company.signatureEmoji && (
+          <>
+            <div className="pointer-events-none absolute right-10 top-20 animate-float-slow select-none text-[150px] opacity-10 blur-[2px]">
+              {config.company.signatureEmoji}
+            </div>
+            <div className="pointer-events-none absolute bottom-40 left-10 animate-float-slower select-none text-[100px] opacity-10 blur-[2px]">
+              {config.company.signatureEmoji}
+            </div>
+          </>
+        )}
       </div>
 
       <ApplyDialog
@@ -353,7 +360,7 @@ export function MapView({
             onClick={() => setIsApplyDialogOpen(true)}
             className="flex items-center gap-2 whitespace-nowrap rounded-full border-2 border-slate-200 bg-white/90 px-4 py-2 text-sm font-bold text-slate-700 shadow-sm backdrop-blur-sm transition hover:border-slate-300 hover:bg-white"
           >
-            <span>🏁</span>
+            <span>📝</span>
             {config.copy.jobMerken}
           </button>
         </header>
@@ -481,6 +488,7 @@ export function MapView({
                           <StartTooltip
                             isFirst={isFirst}
                             accentColor={nodeAccent}
+                            onLevelClick={() => onLevelClick(level)}
                           />
                           <Button
                             size="rounded"
@@ -541,13 +549,14 @@ export function MapView({
                         </div>
                       )}
 
-                      <div
+                      <button
                         className={cn(
                           "mt-3 whitespace-nowrap rounded-xl border-2 bg-white px-3 py-1.5 text-center text-sm font-bold shadow-lg",
                           isCompleted || isCurrent
                             ? ""
                             : "border-slate-300 text-slate-600"
                         )}
+                        onClick={() => onLevelClick(level)}
                         style={
                           isGlobalMode
                             ? {
@@ -563,7 +572,7 @@ export function MapView({
                         }
                       >
                         {level.title}
-                      </div>
+                      </button>
                     </div>
                   );
                 })}

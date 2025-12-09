@@ -6,6 +6,7 @@
     "name": "YOUR_COMPANY_NAME",
     "logoUrl": "🏢",
     "logoImageUrl": "https://example.com/logo.png",
+    "signatureEmoji": "🏢",
     "primaryColor": "#3b82f6",
     "secondaryColor": "#10b981",
     "city": "YOUR_CITY",

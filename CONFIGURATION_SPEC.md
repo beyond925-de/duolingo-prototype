@@ -6,11 +6,12 @@ This document describes all configuration options for Jobs, Levels, and Scenario
 
 ## Table of Contents
 
-1. [Job Configuration](#job-configuration)
-2. [Level Configuration](#level-configuration)
-3. [Scenario Configuration](#scenario-configuration)
-4. [Path Mode Options](#path-mode-options)
-5. [Complete Examples](#complete-examples)
+1. [Company Configuration](#company-configuration)
+2. [Job Configuration](#job-configuration)
+3. [Level Configuration](#level-configuration)
+4. [Scenario Configuration](#scenario-configuration)
+5. [Path Mode Options](#path-mode-options)
+6. [Complete Examples](#complete-examples)
 
 ---
 
@@ -41,7 +42,7 @@ A **Job** represents a complete career path or training program that users can e
   // - "linear": Single zig-zag trail (default)
   // - "branching": Graph with explicit branches/merges
   // - "global-map": Part of a multi-job zoomable canvas
-  
+
   pathOverrides?: {
     global?: {
       column?: number;           // Column position in global-map mode (0-based)
@@ -79,7 +80,7 @@ A **Level** represents a stage or milestone within a job path. Users progress th
   // - "locked": User cannot access yet (default for all except first level)
   // - "unlocked": User can start this level (first level should be "unlocked")
   // - "completed": User has finished this level
-  
+
   icon: string;                 // Emoji or icon (e.g., "🛠️")
   scenarios: Scenario[];         // Array of scenarios (see Scenario Configuration below)
 }
@@ -92,7 +93,7 @@ A **Level** represents a stage or milestone within a job path. Users progress th
   row?: number;                  // Row number (0-based). Multiple levels can share the same row.
   // Used with pathModeId: "branching" to create parallel branches.
   // Example: Levels 2 and 3 both have row: 1, creating a branch from level 1.
-  
+
   nextLevelIds?: number[];      // Array of level IDs this level connects to.
   // If omitted, connects to the next sequential level (id + 1).
   // Used with pathModeId: "branching" to create explicit graph connections.
@@ -126,11 +127,11 @@ A **Scenario** is an interactive question, task, or information display within a
 
 ```typescript
 {
-  id: number;                    // Unique identifier within the level (typically 1, 2, 3...)
-  scenario: string;              // The question, prompt, or information text
-  imageUrl: string;              // URL to an image displayed with the scenario
-  type: ScenarioType;            // One of the scenario types (see below)
-  options: Array<Option>;        // Array of answer options (see Option Configuration below)
+  id: number; // Unique identifier within the level (typically 1, 2, 3...)
+  scenario: string; // The question, prompt, or information text
+  imageUrl: string; // URL to an image displayed with the scenario
+  type: ScenarioType; // One of the scenario types (see below)
+  options: Array<Option>; // Array of answer options (see Option Configuration below)
 }
 ```
 
@@ -154,6 +155,7 @@ A **Scenario** is an interactive question, task, or information display within a
 **Purpose**: Multiple choice question with one correct answer.
 
 **Required**:
+
 - `options` array with at least 2 options
 - Each option must have `correct: true` (exactly one) or `correct: false`
 - Each option must have `feedback` string
@@ -161,6 +163,7 @@ A **Scenario** is an interactive question, task, or information display within a
 **Behavior**: User must select the correct answer to proceed. Shows immediate feedback.
 
 **Example**:
+
 ```typescript
 {
   id: 1,
@@ -191,6 +194,7 @@ A **Scenario** is an interactive question, task, or information display within a
 **Purpose**: Multiple choice question with no right/wrong answer (opinion, preference, etc.).
 
 **Required**:
+
 - `options` array with at least 2 options
 - Each option must have `feedback` string
 - `correct` property is NOT needed (and ignored if present)
@@ -198,6 +202,7 @@ A **Scenario** is an interactive question, task, or information display within a
 **Behavior**: User can select any option to proceed. Shows feedback for the selected option.
 
 **Example**:
+
 ```typescript
 {
   id: 1,
@@ -226,6 +231,7 @@ A **Scenario** is an interactive question, task, or information display within a
 **Purpose**: Multiple choice question where user must select ALL correct options.
 
 **Required**:
+
 - `options` array with at least 2 options
 - Each option must have `correct: true` or `correct: false`
 - At least one option must be `correct: true`
@@ -234,6 +240,7 @@ A **Scenario** is an interactive question, task, or information display within a
 **Behavior**: User can select multiple options. Must select ALL correct options (and no incorrect ones) to proceed.
 
 **Example**:
+
 ```typescript
 {
   id: 1,
@@ -270,6 +277,7 @@ A **Scenario** is an interactive question, task, or information display within a
 **Purpose**: Free-text answer input.
 
 **Required**:
+
 - `options` can be empty array `[]` or omitted
 - `allowTextInput: true` (required)
 - No `correct` properties needed
@@ -277,6 +285,7 @@ A **Scenario** is an interactive question, task, or information display within a
 **Behavior**: User enters free text. Can proceed once text is entered (no validation).
 
 **Example**:
+
 ```typescript
 {
   id: 1,
@@ -295,6 +304,7 @@ A **Scenario** is an interactive question, task, or information display within a
 **Purpose**: User can either select from options OR enter custom text.
 
 **Required**:
+
 - `options` array with at least 1 option
 - `allowTextInput: true` (required)
 - Each option must have `feedback` string
@@ -303,6 +313,7 @@ A **Scenario** is an interactive question, task, or information display within a
 **Behavior**: User can select a predefined option OR type custom text. Both paths allow progression.
 
 **Example**:
+
 ```typescript
 {
   id: 1,
@@ -332,12 +343,14 @@ A **Scenario** is an interactive question, task, or information display within a
 **Purpose**: Dynamic conversation powered by an LLM (Large Language Model).
 
 **Required**:
+
 - `options` can be empty array `[]` or omitted
 - `conversationHistory` is optional (used to resume conversations)
 
 **Behavior**: User has a free-form conversation with an AI. The scenario text serves as the initial prompt/context.
 
 **Example**:
+
 ```typescript
 {
   id: 1,
@@ -355,25 +368,28 @@ A **Scenario** is an interactive question, task, or information display within a
 **Purpose**: Informational display in a grid layout (no interaction required).
 
 **Required**:
+
 - `facts` array with at least 1 fact
 - `options` can be empty array `[]` or omitted
 
 **Facts Structure**:
+
 ```typescript
 facts: Array<{
-  title: string;                 // Fact title/heading
-  value: string;                 // Fact description/content
-  icon: string;                  // Emoji or icon
+  title: string; // Fact title/heading
+  value: string; // Fact description/content
+  icon: string; // Emoji or icon
   layout?: {
-    colSpan?: number;            // Column span (1-2, default: 1)
-    rowSpan?: number;            // Row span (1-2, default: 1)
+    colSpan?: number; // Column span (1-2, default: 1)
+    rowSpan?: number; // Row span (1-2, default: 1)
   };
-}>
+}>;
 ```
 
 **Behavior**: Displays information in a grid. User can proceed immediately (no answer required).
 
 **Example**:
+
 ```typescript
 {
   id: 1,
@@ -416,6 +432,7 @@ Each option in a scenario's `options` array has the following structure:
 ```
 
 **Notes**:
+
 - `id` must be unique within the scenario
 - `text` should be concise (typically 1-2 sentences)
 - `correct` is only used for types that have right/wrong answers
@@ -448,10 +465,12 @@ Path modes control how job paths are visualized on the map screen.
 **Best For**: Role trees, career paths with multiple specializations, decision points.
 
 **Level Requirements**:
+
 - Use `row` to place multiple levels on the same row (creates branches)
 - Use `nextLevelIds` to explicitly define which levels connect to which
 
 **Example**:
+
 ```typescript
 {
   id: 1,
@@ -493,6 +512,7 @@ Path modes control how job paths are visualized on the map screen.
 **Level Requirements**: Same as `"linear"` (sequential connections).
 
 **Job Requirements**: Use `pathOverrides.global` to position the job on the canvas:
+
 ```typescript
 {
   id: "job-id",
@@ -764,19 +784,19 @@ levels: [
     id: 1,
     title: "Grundlagen",
     scenarios: [
-      { type: "single-select-correct", /* easy question */ },
-      { type: "single-select-correct", /* medium question */ }
-    ]
+      { type: "single-select-correct" /* easy question */ },
+      { type: "single-select-correct" /* medium question */ },
+    ],
   },
   {
     id: 2,
     title: "Vertiefung",
     scenarios: [
-      { type: "multiple-select", /* harder question */ },
-      { type: "text-field", /* open-ended */ }
-    ]
-  }
-]
+      { type: "multiple-select" /* harder question */ },
+      { type: "text-field" /* open-ended */ },
+    ],
+  },
+];
 ```
 
 ### Pattern 2: Mix of Question Types
@@ -785,12 +805,12 @@ Vary question types to keep users engaged:
 
 ```typescript
 scenarios: [
-  { type: "single-select-correct" },    // Knowledge check
-  { type: "multiple-select" },          // Comprehensive check
+  { type: "single-select-correct" }, // Knowledge check
+  { type: "multiple-select" }, // Comprehensive check
   { type: "single-select-no-correct" }, // Opinion/preference
-  { type: "llm-interactive" },          // Open conversation
-  { type: "bento-grid" }                // Information display
-]
+  { type: "llm-interactive" }, // Open conversation
+  { type: "bento-grid" }, // Information display
+];
 ```
 
 ### Pattern 3: Branching Career Paths
@@ -820,6 +840,71 @@ Create decision points that lead to different specializations:
 
 ---
 
+## Company Configuration
+
+The company configuration defines branding, visual identity, and company-specific content.
+
+### Company Fields
+
+```typescript
+{
+  name: string;                    // Company name
+  logoUrl: string;                 // Emoji or URL for the company logo (displayed at top)
+  logoImageUrl?: string;           // Optional image URL for logo (takes precedence over logoUrl)
+  signatureEmoji?: string;         // Optional emoji used for background floating images/blobs
+  primaryColor: string;             // Hex color code (e.g., "#3b82f6")
+  secondaryColor: string;           // Hex color code (e.g., "#10b981")
+  city: string;                     // Company location city
+  website: string;                 // Company website URL
+  industryVibe: string;            // Short description of company/industry
+  organizationFacts: Array<{       // Array of company benefits/facts
+    title: string;
+    value: string;
+    icon: string;
+  }>;
+}
+```
+
+### Field Descriptions
+
+- **name**: Company name displayed throughout the application
+- **logoUrl**: Emoji or URL for the company logo. Used for the logo displayed at the top of screens (Landing, Campus, etc.). If it's a URL starting with "http", it will be rendered as an image. Otherwise, it's treated as an emoji.
+- **logoImageUrl**: Optional image URL for the company logo. If provided, takes precedence over `logoUrl` for logo display.
+- **signatureEmoji**: Optional emoji used for background floating images/blobs. This emoji appears as decorative floating elements in the background of Landing, Campus, and Map views. If not provided, background blobs will not be displayed. This is separate from `logoUrl` - the logo is for the actual company logo at the top, while `signatureEmoji` is for decorative background elements.
+- **primaryColor**: Primary brand color in hex format. Used for buttons, borders, progress indicators, and accents.
+- **secondaryColor**: Secondary brand color in hex format.
+- **city**: City where the company is located.
+- **website**: Company website URL.
+- **industryVibe**: Short, catchy description of what makes the company unique (typically 1-2 sentences).
+- **organizationFacts**: Array of company benefits or facts displayed to users. Each fact has a title, value (description), and icon (emoji).
+
+### Example
+
+```typescript
+{
+  "company": {
+    "name": "Sollich",
+    "logoUrl": "🍫",
+    "logoImageUrl": "https://example.com/logo.png",
+    "signatureEmoji": "🍫",
+    "primaryColor": "#c8102e",
+    "secondaryColor": "#10b981",
+    "city": "Bad Salzuflen",
+    "website": "https://sollich.com",
+    "industryVibe": "Weltmarktführer für Schokoladen- und Süßwarenmaschinen.",
+    "organizationFacts": [
+      {
+        "title": "35h-Woche & Gleitzeit",
+        "value": "Vollzeit heißt bei uns 35 Stunden pro Woche mit flexibler Zeiteinteilung.",
+        "icon": "⏰"
+      }
+    ]
+  }
+}
+```
+
+---
+
 ## Summary Checklist
 
 When creating a new job, ensure:
@@ -839,4 +924,3 @@ When creating a new job, ensure:
 
 **Last Updated**: 2024
 **Version**: 1.0
-

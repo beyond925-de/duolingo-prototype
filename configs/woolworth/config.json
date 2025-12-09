@@ -1,1 +1,475 @@
+{
+  "_instructions": "Copy this template to create a new company config. Replace all placeholder values with your company's information.",
+  "_filename": "configs/woolworth/config.json",
 
+  "company": {
+    "name": "Woolworth",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Woolworth_Logo.svg/2560px-Woolworth_Logo.svg.png",
+    "signatureEmoji": "🛒",
+    "primaryColor": "#DC0732",
+    "secondaryColor": "#FFFFFF",
+    "city": "Unna",
+    "website": "https://woolworth.de/karriere/aus-und-weiterbildung",
+    "industryVibe": "Vergiss langweiliges Regaleinräumen. Bei uns im 'Home of Discount' heißt es: Tempo, Action und Verantwortung ab Tag 1. Wir wachsen mit 100 neuen Stores pro Jahr – und du wächst mit uns. Vom Azubi zur Filialleitung? Hier ist das der Plan.",
+    "organizationFacts": [
+      {
+        "title": "Karriere-Turbo",
+        "value": "Wir expandieren massiv. Das bedeutet für dich: Beste Übernahmechancen und der schnellste Weg zur Führungskraft.",
+        "icon": "🚀"
+      },
+      {
+        "title": "Money & Shopping",
+        "value": "Attraktive Ausbildungsvergütung plus 15% Personalrabatt auf alles für dich und deine Familie.",
+        "icon": "💸"
+      },
+      {
+        "title": "Team #vollmeinding",
+        "value": "Wir sind per Du, helfen uns gegenseitig und feiern Erfolge. Kein Anzugzwang, sondern Ärmel hochkrempeln.",
+        "icon": "🤜🏼🤛🏼"
+      }
+    ]
+  },
+
+  "landing": {
+    "headline": "Starte deine Karriere dort, wo du sofort echten Einfluss hast.",
+    "subline": "Keine Lust auf Kaffeeholen? Bei uns übernimmst du Verantwortung, wenn andere noch zuschauen. Finde heraus, ob du das Zeug zum Handels-Profi hast.",
+    "startButtonText": "Match checken! 🎯"
+  },
+
+  "campus": {
+    "headline": "Dein Weg bei uns",
+    "subline": "Wo siehst du deine Stärken?",
+    "categories": [
+      {
+        "id": "vertrieb",
+        "title": "Im Store (Vertrieb)",
+        "jobId": "kaufmann-einzelhandel"
+      },
+      {
+        "id": "zentrale",
+        "title": "Zentrale (Unna)",
+        "jobId": "kaufmann-buero"
+      }
+    ]
+  },
+
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "environment",
+        "question": "Wo fühlst du dich wohler?",
+        "options": [
+          {
+            "id": "store",
+            "label": "Mitten im Geschehen (Store)",
+            "icon": "🛒",
+            "imageUrl": "https://images.unsplash.com/photo-1572584642822-6f8de0243c93?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "kaufmann-einzelhandel": 2,
+              "kaufmann-buero": 0
+            }
+          },
+          {
+            "id": "office",
+            "label": "Am Schreibtisch (Zentrale)",
+            "icon": "💻",
+            "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "kaufmann-einzelhandel": 0,
+              "kaufmann-buero": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "workstyle",
+        "question": "Wie arbeitest du lieber?",
+        "options": [
+          {
+            "id": "action",
+            "label": "Anpacken, bewegen, Action",
+            "icon": "⚡",
+            "imageUrl": "https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "kaufmann-einzelhandel": 2,
+              "kaufmann-buero": 1
+            }
+          },
+          {
+            "id": "planning",
+            "label": "Organisieren, planen, strukturieren",
+            "icon": "📅",
+            "imageUrl": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "kaufmann-einzelhandel": 1,
+              "kaufmann-buero": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "social",
+        "question": "Dein Kontakt zu Menschen?",
+        "options": [
+          {
+            "id": "customers",
+            "label": "Jeden Tag viele neue Gesichter (Kunden)",
+            "icon": "🗣️",
+            "imageUrl": "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "kaufmann-einzelhandel": 2,
+              "kaufmann-buero": 0
+            }
+          },
+          {
+            "id": "team",
+            "label": "Festes Team & Kollegen",
+            "icon": "👥",
+            "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "kaufmann-einzelhandel": 1,
+              "kaufmann-buero": 2
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Unser Match für dich:",
+      "startButtonText": "Beruf entdecken",
+      "viewAllButtonText": "Alle Ausbildungen ansehen",
+      "skipButtonText": "Überspringen"
+    }
+  },
+
+  "jobs": [
+    {
+      "id": "kaufmann-einzelhandel",
+      "title": "Ausbildung Kaufmann im Einzelhandel (m/w/d)",
+      "description": "Werde zum Allrounder im Store: Von Warenpräsentation 📸 bis Filialleitung 💪🏼.",
+      "icon": "🛒",
+      "color": "#DC0732",
+      "tags": ["Kundenkontakt", "Verantwortung", "Aufstiegschancen"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Reality-Check",
+          "status": "unlocked",
+          "icon": "🏁",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Es ist Samstagmittag, der Laden ist voll. 🛍️ An der Kasse wird es hektisch. Gleichzeitig fragt dich ein Kunde, wo er die Weihnachtsdeko findet. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich rufe laut nach der Filialleitung. Ich bin ja nur Azubi.",
+                  "correct": false,
+                  "feedback": "Nicht ganz. Bei uns packen alle an! Du bist Teil der Lösung, nicht das Problem."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich rufe kurz Unterstützung für eine zweite Kasse und zeige dem Kunden freundlich die Richtung.",
+                  "correct": true,
+                  "feedback": "Genau das ist der Spirit! Kunden glücklich machen und im Team Lösungen finden."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Kunde",
+          "status": "locked",
+          "icon": "💬",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein Kunde beschwert sich, dass ein Aktions-Artikel aus dem Prospekt schon vergriffen ist. Er ist ziemlich sauer. 😤 Du musst ihn beruhigen und eine Lösung finden. Was sagst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Das ist doch Mist! Ich bin extra 20 Kilometer gefahren für dieses Kofferset und jetzt ist das Regal leer! Was können Sie da für mich tun?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Macher-Mentalität",
+          "status": "locked",
+          "icon": "📦",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 2,
+              "scenario": "Eine große Lieferung neuer Ware ist angekommen. Die Paletten stehen im Weg, aber der Laden hat schon geöffnet. Wie reagierst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Sicherheit geht vor! Ich sorge dafür, dass die Wege frei bleiben und beginne zügig einzuräumen.",
+                  "correct": true,
+                  "feedback": "Top! Ein ordentlicher Store verkauft besser und ist sicher für unsere Kunden."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich lasse es erstmal stehen und mache Pause.",
+                  "correct": false,
+                  "feedback": "Bei Woolworth heißt es: Ärmel hochkrempeln. Ware im Gang stört den Verkauf."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Der Woolworth-Deal",
+          "status": "locked",
+          "icon": "✅",
+          "row": 2,
+          "nextLevelIds": [5],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du gibst Gas, wir geben was zurück. Hier sind die Fakten für deine Ausbildung:",
+              "imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Gehalt (Beispiel)",
+                  "value": "Top Vergütung (z.B. Handelsfachwirt ab 1.200€)",
+                  "icon": "💰",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Personalrabatt",
+                  "value": "15% auf ALLES für dich & Familie",
+                  "icon": "🛍️",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Karriere",
+                  "value": "Chance auf Filialleitung",
+                  "icon": "🚀",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Klingt gut? Was wäre dir am wichtigsten?",
+              "imageUrl": "https://images.unsplash.com/photo-1556740758-90de29b94f1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Schnell aufsteigen und Chef werden 🚀",
+                  "feedback": "Dann bist du hier richtig. Unsere Expansion schafft ständig neue Stellen."
+                },
+                {
+                  "id": 2,
+                  "text": "Gutes Geld und Rabatte 💸",
+                  "feedback": "Fair Pay ist bei uns Standard. Und Shoppen macht so noch mehr Spaß."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 3,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit für deine Karriere im Home of Discount? 😎",
+              "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, ich will mich bewerben! 📝",
+                  "feedback": "Klasse! Nutze einfach unser Online-Formular. Wir freuen uns auf dich!"
+                },
+                {
+                  "id": 2,
+                  "text": "Erstmal Praktikum machen. 🔍",
+                  "feedback": "Gute Idee! Ein Schülerpraktikum ist perfekt zum Reinschnuppern."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kaufmann-buero",
+      "title": "Kaufmann für Büromanagement (m/w/d)",
+      "description": "Organisiere den Erfolg aus unserer Zentrale in Unna.",
+      "icon": "💻",
+      "color": "#333333",
+      "tags": ["Organisation", "Teamwork", "Zentrale"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Organisationstalent",
+          "status": "unlocked",
+          "icon": "📅",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein wichtiger Termin muss verschoben werden, aber der Abteilungsleiter ist im Urlaub. 🏖️ Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich warte, bis er wiederkommt.",
+                  "correct": false,
+                  "feedback": "Zu passiv. Wir suchen Mitdenker, die den Laden am Laufen halten."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich informiere alle, suche neue Termine und bereite alles vor.",
+                  "correct": true,
+                  "feedback": "Perfekt! Das nennen wir Eigeninitiative."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Event",
+          "status": "locked",
+          "icon": "🎉",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du hilfst bei der Planung der großen Woolworth-Weihnachtsfeier. 🎄 Die Catering-Firma hat gerade abgesagt - eine Woche vorher! Deine Chefin fragt dich nach Ideen. Was schlägst du vor?",
+              "imageUrl": "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Oh nein, das Buffet fällt ins Wasser! 😱 Hast du eine schnelle Idee, wen wir in Unna anrufen könnten oder was wir stattdessen machen? Foodtrucks vielleicht?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Zentralen-Check",
+          "status": "locked",
+          "icon": "🏢",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Arbeiten in der Zentrale Unna hat Vorteile. Hier sind deine Benefits:",
+              "imageUrl": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Work-Life",
+                  "value": "Gleitzeit & Home-Office Optionen",
+                  "icon": "⏰",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Verpflegung",
+                  "value": "Betriebskantine & Wasserspender",
+                  "icon": "🍽️",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Gesundheit",
+                  "value": "Massagen & Gesundheitstage",
+                  "icon": "🧘",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 3,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Passt das zu dir? Dann werde Teil des Teams in der Zentrale! 🤝",
+              "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Bewerbung geht raus! 📧",
+                  "feedback": "Super! Wir freuen uns auf deine Unterlagen."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich hab noch Fragen... 🤔",
+                  "feedback": "Kein Problem! Check unsere Karriere-Seite oder ruf einfach mal an."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "copy": {
+    "checkChances": "Passt das zu mir?",
+    "expressApply": "Jetzt durchstarten 🚀",
+    "jobMerken": "Job merken",
+    "submit": "Checken ob's passt🤝🏼",
+    "submitSuccess": "Top! Wir melden uns schnell bei dir.",
+    "victoryHeadline": "Willkommen im Team #vollmeinding! 🎉",
+    "victorySubtext": "Du hast genau die Hands-On Mentalität, die wir suchen. Lass uns quatschen!",
+    "nudgeHeadline": "Na, noch unsicher? Bei uns zählt Persönlichkeit mehr als Noten. Probier's einfach!",
+    "nudgeText": "Das lief doch super! Wir sollten uns unbedingt kennenlernen.",
+    "firstName": "Verrätst du uns deinen Namen?",
+    "phoneType": "Auf welchem Handy tippst du gerade?",
+    "schoolType": "Welche Schule besuchst du aktuell?",
+    "android": "Android 🤖",
+    "iphone": "iPhone 🍎",
+    "realschule": "Realschule / Mittlere Reife",
+    "gymnasium": "Gymnasium / Abitur",
+    "andere": "Andere / Schule schon fertig",
+    "expressApplyIntro": "Kurz noch ein paar Infos, dann melden wir uns!",
+    "exploreOtherJobs": "Andere Ausbildungen checken"
+  }
+}

@@ -1,4 +1,4 @@
-import { ArrowRight, Loader2 } from "lucide-react";
+import { ArrowRight, Loader2, SkipForward } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { BaseScenarioViewProps } from "./ScenarioViewProps";
@@ -133,16 +133,35 @@ export function LLMInteractiveView({
     }
   }, [handleLLMSubmit, registerSubmit]);
 
+  const hasConversationStarted = conversationHistory.length > 0;
+
   return (
     <>
-      <h3 className="font-semibold text-slate-800">Ich werde zuerst...</h3>
+      <div className="flex items-center justify-between">
+        <h3 className="font-semibold text-slate-800">Ich werde zuerst...</h3>
+        {hasConversationStarted && (
+          <button
+            onClick={onContinue}
+            disabled={isLLMLoading}
+            className="flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
+            title="Überspringen"
+          >
+            <SkipForward className="h-3 w-3" />
+            Überspringen
+          </button>
+        )}
+      </div>
 
       <div className="border-slate-200 pt-2">
         <div className="relative">
           <textarea
             value={textAnswer}
             onChange={(e) => onTextAnswerChange(e.target.value)}
-            placeholder="Bedienungsanleitung suchen? Kollegen fragen?"
+            placeholder={
+              quickReplies.length <= 0
+                ? "Bedienungsanleitung suchen? Kollegen fragen?"
+                : quickReplies[0] + "? " + quickReplies[1] + "?"
+            }
             rows={3}
             disabled={isLLMLoading}
             className="w-full resize-none rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 pr-14 text-base focus:border-purple-300 focus:outline-none disabled:bg-slate-50 disabled:text-slate-500"

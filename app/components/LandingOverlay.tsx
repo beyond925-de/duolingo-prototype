@@ -43,12 +43,16 @@ export function LandingOverlay({ config, onStart }: LandingOverlayProps) {
         />
 
         {/* 3. Floating Particles */}
-        <div className="pointer-events-none absolute right-10 top-20 animate-float-slow select-none text-[150px] opacity-10 blur-[2px]">
-          {config.company.logoUrl}
-        </div>
-        <div className="pointer-events-none absolute bottom-40 left-10 animate-float-slower select-none text-[100px] opacity-10 blur-[2px]">
-          {config.company.logoUrl}
-        </div>
+        {config.company.signatureEmoji && (
+          <>
+            <div className="pointer-events-none absolute right-10 top-20 animate-float-slow select-none text-[150px] opacity-10 blur-[2px]">
+              {config.company.signatureEmoji}
+            </div>
+            <div className="pointer-events-none absolute bottom-40 left-10 animate-float-slower select-none text-[100px] opacity-10 blur-[2px]">
+              {config.company.signatureEmoji}
+            </div>
+          </>
+        )}
       </div>
 
       {/* Content Layer */}
@@ -100,6 +104,11 @@ export function LandingOverlay({ config, onStart }: LandingOverlayProps) {
                 muted
                 autoPlay
                 loop
+                playsInline
+                webkit-playsinline="true"
+                controls={false}
+                controlsList="nodownload nofullscreen noplaybackrate"
+                disablePictureInPicture
                 onCanPlay={() => setVideoLoaded(true)}
               ></video>
             </div>

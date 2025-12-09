@@ -49,12 +49,16 @@ export function CampusView({
         />
 
         {/* 3. Floating Particles */}
-        <div className="pointer-events-none absolute right-10 top-20 animate-float-slow select-none text-[150px] opacity-10 blur-[2px]">
-          {config.company.logoUrl}
-        </div>
-        <div className="pointer-events-none absolute bottom-40 left-10 animate-float-slower select-none text-[100px] opacity-10 blur-[2px]">
-          {config.company.logoUrl}
-        </div>
+        {config.company.signatureEmoji && (
+          <>
+            <div className="pointer-events-none absolute right-10 top-20 animate-float-slow select-none text-[150px] opacity-10 blur-[2px]">
+              {config.company.signatureEmoji}
+            </div>
+            <div className="pointer-events-none absolute bottom-40 left-10 animate-float-slower select-none text-[100px] opacity-10 blur-[2px]">
+              {config.company.signatureEmoji}
+            </div>
+          </>
+        )}
       </div>
 
       {/* Content Layer */}
@@ -72,7 +76,21 @@ export function CampusView({
         <div className="flex-1 overflow-auto pb-6">
           <div className="mx-auto max-w-4xl px-4">
             <div className="mb-8 text-center">
-              <div className="mb-4 text-6xl">{config.company.logoUrl}</div>
+              {config.company.logoImageUrl ? (
+                <img
+                  src={config.company.logoImageUrl}
+                  alt={config.company.name}
+                  className="mx-auto mb-4 h-24 w-auto"
+                />
+              ) : config.company.logoUrl.startsWith("http") ? (
+                <img
+                  src={config.company.logoUrl}
+                  alt={config.company.name}
+                  className="mx-auto mb-4 h-24 w-auto"
+                />
+              ) : (
+                <div className="mb-4 text-6xl">{config.company.logoUrl}</div>
+              )}
               <h1 className="mb-2 text-2xl font-bold text-neutral-700 lg:text-3xl">
                 {config.campus.headline}
               </h1>

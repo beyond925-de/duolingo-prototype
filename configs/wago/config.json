@@ -3,6 +3,7 @@
     "name": "WAGO",
     "logoUrl": "🟢",
     "logoImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/WAGO_Logo_Green-Black.svg/2560px-WAGO_Logo_Green-Black.svg.png",
+    "signatureEmoji": "⚡",
     "primaryColor": "#009639",
     "secondaryColor": "#333333",
     "city": "Minden",
@@ -343,7 +344,6 @@
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Du willst Praxis UND Theorie? Bei WAGO kannst du auch dual studieren. Zum Beispiel Elektrotechnik.",
               "imageUrl": "https://cdn.pixabay.com/photo/2015/07/17/22/42/student-849821_1280.jpg",
               "type": "text-field",
               "allowTextInput": true,
