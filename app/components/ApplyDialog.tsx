@@ -43,8 +43,9 @@ export function ApplyDialog({
           <DialogTitle>Job merken</DialogTitle>
           <DialogDescription>
             <strong>Lass uns mal quatschen. </strong>
-            Falls du nocht nicht bereit bist empfehlen wir dir, deinen
-            Spielstand für später zu speichern.
+            Dein Spielstand wird immer lokal gespeichert. Wenn du aber
+            unterwegs, auf einem Gerät weiter spielen möchtest, schicken wir dir
+            per whatsapp einen Link zu.
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-3 py-4">
@@ -79,7 +80,7 @@ export function ApplyDialog({
             size="lg"
           >
             <MessageCircle className="h-5 w-5 text-green-600" />
-            Spielstand speichern
+            Spielstand übertragen
           </Button>
         </div>
       </DialogContent>

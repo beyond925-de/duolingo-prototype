@@ -58,6 +58,7 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
     phoneType: "",
     schoolType: "",
     emailOrPhone: "",
+    interestType: "",
   });
   const [settings, setSettings] = useState({
     showStartScreen: true,
@@ -662,6 +663,8 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
   };
 
   const handleExpressApply = () => {
+    // Reset interestType when opening express apply to show the selection screen
+    setFormData((prev) => ({ ...prev, interestType: "" }));
     setCurrentScreen("expressApply");
   };
 
@@ -674,6 +677,7 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
       phoneType: "",
       schoolType: "",
       emailOrPhone: "",
+      interestType: "",
     });
   };
 
