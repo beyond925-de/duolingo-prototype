@@ -5,6 +5,7 @@
   "company": {
     "name": "YOUR_COMPANY_NAME",
     "logoUrl": "🏢",
+    "logoImageUrl": "https://example.com/logo.png",
     "primaryColor": "#3b82f6",
     "secondaryColor": "#10b981",
     "city": "YOUR_CITY",
@@ -50,6 +51,43 @@
         "jobId": "job-2-id"
       }
     ]
+  },
+
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "example-question-1",
+        "question": "What type of work environment do you prefer?",
+        "imageUrl": "https://example.com/question-image.jpg",
+        "options": [
+          {
+            "id": "option-1",
+            "label": "Option 1 Label",
+            "icon": "🛠️",
+            "imageUrl": "https://example.com/option-image.jpg",
+            "score": {
+              "example-job": 2,
+              "another-job": 0
+            }
+          },
+          {
+            "id": "option-2",
+            "label": "Option 2 Label",
+            "icon": "💻",
+            "score": {
+              "example-job": 0,
+              "another-job": 2
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "We recommend:",
+      "startButtonText": "Start First Job",
+      "viewAllButtonText": "View All Jobs",
+      "skipButtonText": "Skip to see all jobs"
+    }
   },
 
   "jobs": [

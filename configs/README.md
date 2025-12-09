@@ -18,7 +18,7 @@ Hey! 👋 This is the simplest guide to adding a new company config.
 ### Step 1: Go to GitHub
 
 1. Open your web browser
-2. Go to: `https://github.com/YOUR-REPO/duolingo-mockup/tree/main/configs`
+2. Go to: `https://github.com/beyond925-de/duolingo-prototype/tree/main/configs`
 3. Log in to GitHub
 
 ### Step 2: Create Your Config File
@@ -36,7 +36,7 @@ Hey! 👋 This is the simplest guide to adding a new company config.
 
 ### Step 3: Copy the Template (Optional)
 
-1. Open a new tab and go to: `https://github.com/YOUR-REPO/duolingo-mockup/blob/main/configs/TEMPLATE.json`
+1. Open a new tab and go to: `https://github.com/beyond925-de/duolingo-prototype/tree/main/configs/TEMPLATE.json`
 2. Click the **"Raw"** button (top right of the file)
 3. **Select all** (Ctrl+A or Cmd+A)
 4. **Copy** (Ctrl+C or Cmd+C)
@@ -53,6 +53,7 @@ Now replace the placeholder text with your company's real information:
 "company": {
   "name": "Your Company Name",        ← Put your company name here
   "logoUrl": "🏢",                    ← Put an emoji or logo URL
+  "logoImageUrl": "https://...",      ← Optional: Image URL for logo (takes precedence)
   "primaryColor": "#3b82f6",          ← Your brand color (hex code)
   "secondaryColor": "#10b981",        ← Secondary color
   "city": "Your City",                ← Where are you located?
@@ -77,6 +78,42 @@ Now replace the placeholder text with your company's real information:
   "startButtonText": "Start Now!"          ← Button text
 }
 ```
+
+#### Questionnaire Section (Optional)
+
+The questionnaire helps suggest jobs to users based on their preferences:
+
+```json
+"questionnaire": {
+  "questions": [
+    {
+      "id": "work-environment",
+      "question": "Where do you feel more comfortable?",
+      "imageUrl": "https://...",  ← Optional image
+      "options": [
+        {
+          "id": "workshop",
+          "label": "In the workshop",
+          "icon": "🛠️",
+          "imageUrl": "https://...",  ← Optional image
+          "score": {
+            "job-id-1": 2,  ← Score for this job (higher = better match)
+            "job-id-2": 0
+          }
+        }
+      ]
+    }
+  ],
+  "suggestionText": {
+    "headline": "We recommend:",
+    "startButtonText": "Start First Job",
+    "viewAllButtonText": "View All Jobs",
+    "skipButtonText": "Skip to see all jobs"
+  }
+}
+```
+
+**Tip:** Each option's `score` object maps job IDs to numeric scores. Higher scores mean better matches!
 
 #### Jobs Section
 
@@ -110,20 +147,15 @@ Dance!
 
 <img width="1190" height="808" alt="SCR-20251208-qewb" src="https://github.com/user-attachments/assets/ac2b404f-bf54-4d0b-ac2d-f16b6dd3a2fd" />
 
-
 Done! 🎉
 
 ### Step 7: Review and merge
 
-
-
 <img width="1188" height="925" alt="SCR-20251208-qfbo" src="https://github.com/user-attachments/assets/a6b38d70-2fd4-4517-a638-6b725e0b32a2" />
-
 
 ---
 
 ## ❓ Common Questions
-
 
 ## 🆘 Need Help?
 

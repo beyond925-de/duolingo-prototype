@@ -1,0 +1,1645 @@
+Du bist ein experte im Datendesign.
+
+Deine Aufgabe ist es, eine konfigurationsdatei im JSON-Format für eine Anwendung zu erstellen. Nutze das angegebene JSON Schema exakt.
+
+Ziel der Anwendung: Schülern zwischen 15 und 17 die Ausbildungsberufe des entsprechenden Unternehmens spielerisch nahebringen.
+Sprache: Verwende einfache, Zielgruppengerechte Sprache. Nutze keine Fachwörter. Setze kein Wissen vorraus.
+Inhalt: Die Inhalte sollen den Zweck erfüllen, dem Schüler die konkreten Berufe und Entwicklungsmöglichkeiten nahezubringen (Vorteile, Aufgabenbereiche, Arbeitsorte, etc.)
+
+Orientiere dich für inhaltliche und sprachliche Gestaltung an den im Folgenden angegebenen Beispielen. Lass dich, wo sinnvoll, inspirieren, ändere was nicht für das aktuelle Unternehmen passt.
+
+<Beispiele>
+<Beispiel1 name="Sollich">
+{
+  "company": {
+    "name": "Sollich",
+    "logoUrl": "🍫",
+    "logoImageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sollich.com%2Ffileadmin%2Fimages%2Fsollich-logo.png&f=1&nofb=1&ipt=8de60a20c164c16dceb58cf1273f841cdda463ddd61badc6ef65ec9b174d0335",
+    "primaryColor": "#c8102e",
+    "secondaryColor": "#10b981",
+    "city": "Bad Salzuflen",
+    "website": "https://sollich.com",
+    "industryVibe": "Wir bauen die Maschinen, die die Welt mit Schokolade versorgen. High-Tech aus Bad Salzuflen.",
+    "organizationFacts": [
+      {
+        "title": "Führerschein-Support",
+        "value": "Wir lassen dich nicht stehen. Wir unterstützen dich finanziell bei deinem Führerschein.",
+        "icon": "🚗"
+      },
+      {
+        "title": "Ausschlafen inklusive",
+        "value": "Morgenmuffel? Kein Thema. Bei uns geht's entspannt um 9:00 Uhr los.",
+        "icon": "⏰"
+      },
+      {
+        "title": "Echte Missionen",
+        "value": "Kaffee kochen tun andere. Du kriegst bei uns ab Tag 1 echte Verantwortung.",
+        "icon": "🔥"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Deine Zukunft schmeckt süß. 🍫",
+    "subline": "Sollich baut Maschinen für die Süßwarenindustrie. Finde heraus, ob du ins Team passt – in 3 Minuten.",
+    "startButtonText": "1. Tag bestreiten 🚀"
+  },
+  "campus": {
+    "headline": "Dein Talent. Dein Job.",
+    "subline": "Bist du eher der Macher an der Maschine oder der Planer am PC?",
+    "categories": [
+      {
+        "id": "technik",
+        "title": "Für Macher (Handwerk)",
+        "jobId": "mechaniker"
+      },
+      {
+        "id": "planung",
+        "title": "Für Planer (Digital)",
+        "jobId": "zeichner"
+      }
+    ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "environment",
+        "question": "Wo fühlst du dich wohler?",
+        "options": [
+          {
+            "id": "workshop",
+            "label": "In der Werkstatt",
+            "icon": "🛠️",
+            "imageUrl": "https://cdn.pixabay.com/photo/2021/05/11/12/12/welding-6245746_1280.jpg",
+            "score": {
+              "industriemechaniker": 2,
+              "technischer-produktdesigner": 0
+            }
+          },
+          {
+            "id": "office",
+            "label": "Am Computer",
+            "icon": "🖥️",
+            "imageUrl": "https://cdn.pixabay.com/photo/2018/09/18/19/55/woman-3687080_1280.jpg",
+            "score": {
+              "industriemechaniker": 0,
+              "technischer-produktdesigner": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "workstyle",
+        "question": "Wie arbeitest du lieber?",
+        "options": [
+          {
+            "id": "hands-on",
+            "label": "Hands-on, praktisch",
+            "icon": "✋",
+            "imageUrl": "https://cdn.pixabay.com/photo/2020/11/12/16/58/worker-5736096_1280.jpg",
+            "score": {
+              "industriemechaniker": 2,
+              "technischer-produktdesigner": 1
+            }
+          },
+          {
+            "id": "planning",
+            "label": "Digital, planen, sauber und ordentlich",
+            "icon": "📐",
+            "imageUrl": "https://cdn.pixabay.com/photo/2016/11/24/20/30/floor-plan-1857175_1280.jpg",
+            "score": {
+              "industriemechaniker": 1,
+              "technischer-produktdesigner": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "teamwork",
+        "question": "Team oder alleine?",
+        "options": [
+          {
+            "id": "team",
+            "label": "Mit vielen Menschen, im (lauten) Team",
+            "icon": "👥",
+            "imageUrl": "https://images.pexels.com/photos/3184428/pexels-photo-3184428.jpeg",
+            "score": {
+              "industriemechaniker": 1,
+              "technischer-produktdesigner": 1
+            }
+          },
+          {
+            "id": "solo",
+            "label": "In Ruhe, fokussiert",
+            "icon": "🎯",
+            "imageUrl": "https://cdn.pixabay.com/photo/2021/01/28/03/13/person-5956897_1280.jpg",
+            "score": {
+              "industriemechaniker": 1,
+              "technischer-produktdesigner": 1
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Wir empfehlen dir:",
+      "startButtonText": "Ersten Beruf erleben",
+      "viewAllButtonText": "Alle Berufe ansehen",
+      "skipButtonText": "Überspringen um alle Berufe zu sehen"
+    }
+  },
+  "jobs": [
+    {
+      "id": "technischer-produktdesigner",
+      "title": "Technische:r Produktdesigner:in",
+      "description": "Designe die Schoko-Fabriken der Zukunft am PC! 🖥️🍫",
+      "icon": "📐",
+      "color": "#8b5cf6",
+      "tags": ["🖥️ Digital & 3D", "🧠 Logik-Profi", "🍫 High-Tech"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Startblock",
+          "status": "unlocked",
+          "icon": "👀",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hi! 👋 Als Produktdesigner:in bist du das Bindeglied zwischen Idee und Maschine. Ein Ingenieur gibt dir eine Skizze für einen neuen Keks-Greifer. Was ist dein erster Job?",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGsI4iyqZSOa5oGfeQw0igHmDClury4RAtNT1b",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich baue das Teil sofort in der Werkstatt zusammen 🔨",
+                  "correct": false,
+                  "feedback": "Nicht ganz! Du arbeitest digital. Erst muss das Modell am Computer stehen. 💻"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich erstelle ein 3D-Modell am CAD-Computer 🖥️",
+                  "correct": true,
+                  "feedback": "Volltreffer! 🎯 Du konstruierst das Bauteil virtuell, bevor es gebaut wird."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Damit das Teil später auch passt, brauchst du ein super räumliches Vorstellungsvermögen. Stell dir einen Würfel vor. Wir schneiden eine Ecke gerade ab. Wie sieht die Schnittfläche aus?",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGrQ3UmIoLx1pZiT3K4VDNbFJalWARdm6foQGr",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Quadratisch ▪️",
+                  "correct": false,
+                  "feedback": "Knapp daneben! Denk an die drei Seiten, die an der Ecke zusammentreffen."
+                },
+                {
+                  "id": 2,
+                  "text": "Dreieckig 🔺",
+                  "correct": true,
+                  "feedback": "Stark! 🧠 Genau diesen 'Röntgenblick' brauchst du, wenn du komplexe Anlagen planst."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Konstruktion",
+          "status": "locked",
+          "icon": "🖱️",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du arbeitest an einer neuen Pralinen-Anlage. 🍬 Plötzlich siehst du im 3D-Modell ein Problem: Der Motor für das Förderband ist zu groß und ragt in den Tunnel, wo die Pralinen langfahren. Das nennt man 'Kollision'. Du musst das lösen, bevor die Teile gefertigt werden! Sprich mit dem Projektleiter.",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGm3Oq6HMFodsMg0pf6abPAN8Q57e1OcDqvuwL",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Mist, gut, dass du das gesehen hast! Wenn wir das so bauen, gibt es Pralinen-Matsch. 🍫 Was schlägst du vor? Sollen wir einen kleineren, schwächeren Motor suchen oder den Tunnel breiter konstruieren?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Werkstatt-Call",
+          "status": "locked",
+          "icon": "📞",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Alarm! 🚨 Dein Telefon klingelt. Ein Industriemechaniker aus der Halle ist dran. Er will gerade die Welle für die Keks-Maschine drehen, aber auf deiner Zeichnung fehlt ein wichtiges Maß. Die Maschine steht still. Du musst reagieren – schnell und präzise.",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGl4XVzAEhsMuDVbkoejf1IAxSiQ96ZycP2nBL",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Hier ist Alex aus der Fertigung. Sag mal, ich steh hier an der Drehbank. Auf Zeichnung 204 fehlt der Durchmesser für den Lagerzapfen. Soll ich das schätzen oder kannst du das im 3D-Modell nachmessen? Wir haben Zeitdruck!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Der SOLLICH-Check",
+          "status": "locked",
+          "icon": "✅",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Puh, Problem gelöst! 😅 Als Produktdesigner:in arbeitest du viel mit dem Kopf. Damit du fit bleibst, schauen wir, was SOLLICH dir bietet:",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqoCmdz97Aj1hznsJlaW5tFZHNPDuCodmTU2",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Arbeitsplatz",
+                  "value": "High-End CAD-Rechner & moderne Büros.",
+                  "icon": "🖥️",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Arbeitszeit",
+                  "value": "35h-Woche & Gleitzeit.",
+                  "icon": "⏰",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "No Overtime",
+                  "value": "Keine Überstunden für Azubis!",
+                  "icon": "🧘",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Neben der Technik ist uns das Miteinander wichtig. Was denkst du, wie läuft es hier?",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqoCmdz97Aj1hznsJlaW5tFZHNPDuCodmTU2",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Jeder kämpft für sich allein 🐺",
+                  "feedback": "Zum Glück nicht! Wir arbeiten als ein großes Team zusammen."
+                },
+                {
+                  "id": 2,
+                  "text": "Familiär und unterstützend 🤝",
+                  "feedback": "Genau so ist es. Wir sind per Du und helfen uns gegenseitig."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Weiterbildung",
+          "status": "locked",
+          "icon": "📈",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nach den 3,5 Jahren Ausbildung (oder 3, wenn du gut bist!) stehen dir alle Türen offen. Welcher dieser Titel klingt spannender für dich?",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGfkCcPxmOlGwh2tk47Nmb0FcsyoQ9DzXpJLdu",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Staatlich geprüfte:r Techniker:in 🎓",
+                  "feedback": "Sehr beliebt! Damit übernimmst du komplexere Projekte und Verantwortung."
+                },
+                {
+                  "id": 2,
+                  "text": "Fachwirt:in (IHK) 💼",
+                  "feedback": "Gute Wahl, wenn du auch kaufmännische Aufgaben spannend findest."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Studium",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du willst noch tiefer in die Theorie? Bei uns kannst du das 'Kooperative Studium' machen. Ausbildung + Bachelor (z.B. Maschinenbau) parallel. 📚",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxG8fM8EUKpVATEMkn9gidZwvPHcrDbsyI0F1XB",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Das klingt hart, aber lohnt sich! 💪",
+                  "feedback": "Stimmt! Es ist fordernd, aber du hast Theorie & Praxis und verdienst schon Geld."
+                },
+                {
+                  "id": 2,
+                  "text": "Lieber erst Ausbildung, dann mal sehen. 👀",
+                  "feedback": "Auch ein super Weg. Viele entscheiden sich erst später für ein Studium."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bist du bereit, die Schoko-Welt digital zu gestalten? Uwe Heiland, unser Ausbildungsleiter für Produktdesigner, freut sich auf dich! 😎",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGolmmMys8YWEkrBcDVnqv7lxtwb9CGjsIUPNK",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich bin dabei! Bewerbung geht raus. 📧",
+                  "feedback": "Klasse! Einfach PDF an bewerbung@sollich.com. Wir sind gespannt!"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich möchte erst ein Praktikum machen. 🔍",
+                  "feedback": "Sehr gute Idee! So lernst du das Team und die Aufgaben live kennen. Meld dich einfach!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industriemechaniker",
+      "title": "Industriemechaniker:in",
+      "description": "Schrauben, Tüfteln, High-Tech – Deine Mission! 🔧🍫",
+      "icon": "⚙️",
+      "color": "#3b82f6",
+      "tags": ["🍫 Schoko-Tech", "🔧 Hands-on", "🌍 Weltmarktführer"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Startblock",
+          "status": "unlocked",
+          "icon": "🏁",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Willkommen im Team! Wir bauen die Maschinen, die weltweit Schokoriegel und Kekse produzieren. 🌍 Hast du schon mal an etwas herumgeschraubt?",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGl4XVzAEhsMuDVbkoejf1IAxSiQ96ZycP2nBL",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Na klar! Am Fahrrad, Moped oder PC. 🚲",
+                  "feedback": "Perfekt! Genau dieses technische Verständnis brauchst du hier."
+                },
+                {
+                  "id": 2,
+                  "text": "Weniger, aber ich will lernen, wie Technik funktioniert. 🧐",
+                  "feedback": "Gute Einstellung! Wir bringen dir alles von der Pike auf bei."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Bevor es in die Halle geht: Sicherheit ist Nr. 1. Du siehst eine ölverschmierte Stelle am Boden neben einer Fräsmaschine. Was machst du? (Wähle alle sinnvollen Optionen)",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGqQestfJmJFi6t8Hsn0RVKzcG9xNIuw2rOjXC",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Sofort sauber machen oder abstreuen 🧹",
+                  "correct": true,
+                  "feedback": "Richtig. Rutschgefahr ist in der Werkstatt extrem gefährlich."
+                },
+                {
+                  "id": 2,
+                  "text": "Dem Kollegen Bescheid sagen, damit keiner ausrutscht 🗣️",
+                  "correct": true,
+                  "feedback": "Kommunikation ist alles! Wir arbeiten hier als ein großes Team."
+                },
+                {
+                  "id": 3,
+                  "text": "Drübersteigen, ist ja nicht mein Öl 🤷",
+                  "correct": false,
+                  "feedback": "No way! Bei SOLLICH achten wir aufeinander. Jeder übernimmt Verantwortung."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Montage",
+          "status": "locked",
+          "icon": "🏗️",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du bist in der Montage. 🏗️ Wir bauen eine riesige 'Conbar'-Anlage für einen Kunden in den USA. Du sollst eine Seitenwand montieren, aber die Bohrlöcher sitzen 2mm zu weit links. Das Blech passt nicht. Der Meister ist gerade im Meeting. Du musst das lösen. Beschreibe mir, wie du vorgehst oder was du prüfst! 🛠️",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGm3Oq6HMFodsMg0pf6abPAN8Q57e1OcDqvuwL",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Mist, das Blech klemmt. Einfach neue Löcher bohren könnte das Bauteil ruinieren. Hast du eine Idee, was wir zuerst messen oder prüfen sollten?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Wartung",
+          "status": "locked",
+          "icon": "🩺",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du begleitest einen Techniker zur Wartung. Eine Überziehmaschine macht seltsame 'Klacker'-Geräusche im Antrieb. 🔊 Es klingt metallisch und rhythmisch. Wenn die Anlage ausfällt, steht die Schoko-Produktion still. Du darfst den Fehler suchen. Was schaust du dir an? 🕵️‍♂️",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGI58z2JNe8YP9rULlHW6twAGpNyO5KuodC1R0",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Okay, hör mal genau hin. Das Klackern kommt aus der Nähe des Hauptmotors. Sollen wir den Riemen prüfen oder eher das Lager? Was meinst du?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Der SOLLICH-Deal",
+          "status": "locked",
+          "icon": "🤝",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Gute Arbeit vorhin! 💪 Nach der Arbeit ist vor der Arbeit. Wie sieht dein Feierabend aus? Hier sind die Hard Facts:",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGJ18MJJmlpvPZCiHSaRuT75GFr4y1bM2gnDLX",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "35 Stunden",
+                  "value": "Vollzeit heißt bei uns 35h/Woche & Gleitzeit.",
+                  "icon": "⏰",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Null Überstunden",
+                  "value": "Azubis machen keine Überstunden. Punkt.",
+                  "icon": "🚫",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Kohle & Extras",
+                  "value": "Metall-Tarif NRW, Fahrtgeld & Urlaubsprämie.",
+                  "icon": "💸",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Klingt fair, oder? Was wäre dir bei einem Arbeitgeber am wichtigsten?",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqoCmdz97Aj1hznsJlaW5tFZHNPDuCodmTU2",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Dass ich pünktlich rauskomme und Freizeit habe 🕒",
+                  "feedback": "Das klappt hier definitiv. 35h-Woche regelt!"
+                },
+                {
+                  "id": 2,
+                  "text": "Dass das Geld stimmt 💰",
+                  "feedback": "Mit dem Metall-Tarif NRW bist du da sehr gut aufgestellt."
+                },
+                {
+                  "id": 3,
+                  "text": "Ein cooles Team, das zusammenhält 🤜🤛",
+                  "feedback": "Wir sind über 450 Leute, aber arbeiten wie eine große Familie."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Praktiker",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du willst nach der Ausbildung richtig anpacken und aufsteigen? 🚀 Bei SOLLICH ist nach dem Gesellenbrief nicht Schluss. Welcher Titel klingt für dich mächtiger?",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGfkCcPxmOlGwh2tk47Nmb0FcsyoQ9DzXpJLdu",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Industriemeister:in – Der Chef in der Halle 🏭",
+                  "feedback": "Klassischer Weg! Du übernimmst Führung und Verantwortung."
+                },
+                {
+                  "id": 2,
+                  "text": "Techniker:in – Der Problemlöser mit Tiefgang 🧠",
+                  "feedback": "Sehr gut. Damit tauchst du noch tiefer in die Technik ein."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Student",
+          "status": "locked",
+          "icon": "📚",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxG8fM8EUKpVATEMkn9gidZwvPHcrDbsyI0F1XB",
+              "type": "text-field",
+              "allowTextInput": true,
+              "options": [],
+              "scenario": "Was reizt dich an einem Studium in Kombination mit Arbeit? (Tipp einfach kurz deine Gedanken ein)"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ob Meister oder Studium – der erste Schritt ist die Ausbildung zum Industriemechaniker:in. Interesse geweckt? 😎",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGsI4iyqZSOa5oGfeQw0igHmDClury4RAtNT1b",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Auf jeden Fall! Wo bewerbe ich mich? 📝",
+                  "feedback": "Klasse! Schick deine Unterlagen (PDF) an bewerbung@sollich.com. Dominik Höke ist dein Ansprechpartner."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich will erst mal schnuppern (Praktikum). 👀",
+                  "feedback": "Sehr gerne! Ein Schülerpraktikum ist der beste Weg, uns kennenzulernen. Melde dich einfach!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "checkChances": "Meine Chancen checken",
+    "expressApply": "Lass uns quatschen",
+    "jobMerken": "Job merken",
+    "submit": "Teamfit prüfen",
+    "submitSuccess": "Top! Wir schauen uns das an und melden uns in max. 24h.",
+    "victoryHeadline": "Sauber gelöst. 🍫",
+    "victorySubtext": "Du hast technisches Verständnis bewiesen. Genau diese Präzision suchen wir bei Sollich.",
+    "nudgeHeadline": "Mal ehrlich...",
+    "nudgeText": "Du stellst dich hier besser an als viele andere. Wir sollten uns kennenlernen. Ganz ohne Stress und Anzug. ✨",
+    "firstName": "Wie heißt du?",
+    "phoneType": "Welches Handy nutzt du? (Egal, nur Neugier)",
+    "schoolType": "Auf welcher Schule bist du?",
+    "android": "Android Team",
+    "iphone": "iPhone Team",
+    "realschule": "Realschule",
+    "gymnasium": "Gymnasium",
+    "andere": "Andere / Ich hab schon Abschluss",
+    "expressApplyIntro": "Ein paar kurze Infos genügen. Wir melden uns bei dir!",
+    "exploreOtherJobs": "Erstmal andere Jobs entdecken"
+  }
+}
+</Beispiel1>
+
+<Beispiel2 name="techflow">
+{
+  "company": {
+    "name": "TechFlow",
+    "logoUrl": "💻",
+    "primaryColor": "#6366f1",
+    "secondaryColor": "#8b5cf6",
+    "city": "Berlin",
+    "website": "https://techflow.example.com",
+    "industryVibe": "Wir bauen die digitalen Welten von morgen. Apps, Websites & Co. – einfach und für alle.",
+    "organizationFacts": [
+      {
+        "title": "Arbeiten wo du willst",
+        "value": "Ob im Büro, zu Hause oder am Strand – Hauptsache du hast WLAN.",
+        "icon": "🌍"
+      },
+      {
+        "title": "Lernen & Wachsen",
+        "value": "Wir zahlen dir Kurse, Bücher und alles, was dich schlauer macht.",
+        "icon": "📚"
+      },
+      {
+        "title": "Dein Leben, deine Zeit",
+        "value": "Gleitzeit und 4-Tage-Woche möglich. Freizeit ist uns heilig.",
+        "icon": "⏰"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Starte deine digitale Reise. 🚀",
+    "subline": "Bei TechFlow suchen wir kreative Köpfe für die digitale Zukunft. Finde deinen Traumjob in 3 Minuten.",
+    "startButtonText": "Los geht's! 🎯"
+  },
+  "campus": {
+    "headline": "Was liegt dir am meisten?",
+    "subline": "Finde den Bereich, der zu dir passt.",
+    "categories": [
+      {
+        "id": "development",
+        "title": "Bauen & Tüfteln",
+        "jobId": "software-developer"
+      },
+      {
+        "id": "design",
+        "title": "Gestalten & Kreativ sein",
+        "jobId": "ux-designer"
+      },
+      {
+        "id": "data",
+        "title": "Rätsel & Zahlen lösen",
+        "jobId": "data-analyst"
+      },
+      {
+        "id": "infrastructure",
+        "title": "Managen & Organisieren",
+        "jobId": "devops-engineer"
+      }
+    ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "work-style",
+        "question": "Was ist dir lieber?",
+        "options": [
+          {
+            "id": "data-facts",
+            "label": "Zahlen, Daten, Fakten",
+            "icon": "📊",
+            "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+            "score": {
+              "software-developer": 2,
+              "ux-designer": 0,
+              "data-analyst": 3,
+              "devops-engineer": 2
+            }
+          },
+          {
+            "id": "ideas-visual",
+            "label": "Ideen, Visualisierungen, Kreativität",
+            "icon": "💡",
+            "imageUrl": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800",
+            "score": {
+              "software-developer": 1,
+              "ux-designer": 3,
+              "data-analyst": 0,
+              "devops-engineer": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "problem-approach",
+        "question": "Wie gehst du an Herausforderungen ran?",
+        "options": [
+          {
+            "id": "systematic",
+            "label": "Systematisch, Schritt für Schritt",
+            "icon": "🔧",
+            "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+            "score": {
+              "software-developer": 2,
+              "ux-designer": 1,
+              "data-analyst": 2,
+              "devops-engineer": 3
+            }
+          },
+          {
+            "id": "creative",
+            "label": "Kreativ, ausprobieren und experimentieren",
+            "icon": "🎨",
+            "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
+            "score": {
+              "software-developer": 1,
+              "ux-designer": 3,
+              "data-analyst": 1,
+              "devops-engineer": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "work-environment",
+        "question": "Wo fühlst du dich produktiver?",
+        "options": [
+          {
+            "id": "focused",
+            "label": "Allein, fokussiert und in Ruhe",
+            "icon": "🎯",
+            "imageUrl": "https://cdn.pixabay.com/photo/2021/01/28/03/13/person-5956897_1280.jpg",
+            "score": {
+              "software-developer": 2,
+              "ux-designer": 2,
+              "data-analyst": 2,
+              "devops-engineer": 2
+            }
+          },
+          {
+            "id": "collaborative",
+            "label": "Im Team, mit Austausch und Diskussion",
+            "icon": "👥",
+            "imageUrl": "https://images.pexels.com/photos/3184428/pexels-photo-3184428.jpeg",
+            "score": {
+              "software-developer": 1,
+              "ux-designer": 1,
+              "data-analyst": 1,
+              "devops-engineer": 1
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Das könnte dein Ding sein:",
+      "startButtonText": "Beruf entdecken",
+      "viewAllButtonText": "Alle Berufe ansehen",
+      "skipButtonText": "Erstmal alles anschauen"
+    }
+  },
+  "jobs": [
+    {
+      "id": "software-developer",
+      "title": "App-Entwickler:in",
+      "description": "Bau die Apps, die jeder auf dem Handy hat! 📱",
+      "icon": "👨‍💻",
+      "color": "#3b82f6",
+      "tags": ["💻 Digital", "🧠 Problemlöser", "🚀 Kreativ"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Start",
+          "status": "unlocked",
+          "icon": "🏁",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hi! 👋 Stell dir vor, du hast eine geniale Idee für eine neue App. Was ist dein allererster Schritt?",
+              "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich tippe wild auf der Tastatur los ⌨️",
+                  "correct": false,
+                  "feedback": "Klingt filmreif, aber in echt überlegen wir erst, was die App genau können soll."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich skizziere meine Idee und überlege, wie sie funktioniert 📝",
+                  "correct": true,
+                  "feedback": "Genau! 🎯 Ein guter Plan ist die halbe Miete."
+                },
+                {
+                  "id": 3,
+                  "text": "Ich frage jemanden, ob er sie für mich baut 🤷",
+                  "correct": false,
+                  "feedback": "Hey, du bist hier, um es selbst zu lernen! 😉"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Super! Damit die App später jeder versteht, ist Ordnung wichtig. Was hilft dir dabei? (Wähle was passt)",
+              "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Notizen machen, was mein Code tut 📝",
+                  "correct": true,
+                  "feedback": "Richtig! So wissen auch deine Kollegen Bescheid."
+                },
+                {
+                  "id": 2,
+                  "text": "Alles schön übersichtlich halten 🎨",
+                  "correct": true,
+                  "feedback": "Genau! Ordnung muss sein, auch digital."
+                },
+                {
+                  "id": 3,
+                  "text": "Alles durcheinander schreiben, Hauptsache fertig 🌪️",
+                  "correct": false,
+                  "feedback": "Lieber nicht! Das versteht später keiner mehr."
+                },
+                {
+                  "id": 4,
+                  "text": "Ausprobieren, ob alles klappt ✅",
+                  "correct": true,
+                  "feedback": "Klar! Testen ist super wichtig."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Kreativ werden",
+          "status": "locked",
+          "icon": "🎨",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du willst ein cooles neues Feature einbauen. Ein Kollege hat eine Idee, wie es schneller geht. Wie entscheidest du?",
+              "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
+              "type": "text-field",
+              "options": [],
+              "allowTextInput": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Team-Held",
+          "status": "locked",
+          "icon": "🦸",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Oh nein! In der App funktioniert der 'Kaufen'-Button nicht mehr. Nutzer beschweren sich. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Mist, der Button streikt! 🚨 Was meinst du, sollen wir erstmal schauen, wo genau der Fehler liegt, oder schnell irgendwas ändern?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Ziel erreicht",
+          "status": "locked",
+          "icon": "🎉",
+          "row": 3,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du hast echt das Zeug zum App-Profi! Hast du Lust, mehr darüber zu erfahren?",
+              "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, klingt spannend! 🚀",
+                  "feedback": "Cool! Wir freuen uns, von dir zu hören."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich will erst noch mehr wissen 📚",
+                  "feedback": "Kein Problem! Schreib uns einfach."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ux-designer",
+      "title": "Digital-Designer:in",
+      "description": "Mach Technik schön und kinderleicht zu bedienen! 🎨",
+      "icon": "🎨",
+      "color": "#ec4899",
+      "tags": ["🎨 Design", "👥 Menschen-Versteher", "✨ Kreativ"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Start",
+          "status": "unlocked",
+          "icon": "🖌️",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du gestaltest eine neue App. Was ist dir am allerwichtigsten?",
+              "imageUrl": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Dass es mega stylisch aussieht 🎨",
+                  "feedback": "Style ist cool, aber man muss es auch bedienen können."
+                },
+                {
+                  "id": 2,
+                  "text": "Dass jeder sofort kapiert, wie es geht 👥",
+                  "feedback": "Genau! Wenn Oma es versteht, ist es perfekt."
+                },
+                {
+                  "id": 3,
+                  "text": "Dass es die neuesten Trends hat ✨",
+                  "feedback": "Trends kommen und gehen, einfache Bedienung bleibt."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Deine Werkzeuge",
+          "status": "locked",
+          "icon": "📐",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bevor wir loslegen, schau mal, was wir dir bieten:",
+              "imageUrl": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Kreativ-Tools",
+                  "value": "Die besten Programme zum Zeichnen und Entwerfen.",
+                  "icon": "🛠️",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Inspiration",
+                  "value": "Budget für Kurse und Events.",
+                  "icon": "💡",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Freiheit",
+                  "value": "Arbeite wann und wo du am kreativsten bist.",
+                  "icon": "⏰",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Kreativ-Team",
+                  "value": "Lerne von erfahrenen Profis.",
+                  "icon": "👥",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Zeig was du kannst",
+          "status": "locked",
+          "icon": "📁",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hast du schon mal was am Computer gestaltet oder gezeichnet? Erzähl mal!",
+              "imageUrl": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, ich hab da ein paar Sachen... 📱",
+                  "feedback": "Cool! Zeig uns das gerne mal."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich fange gerade erst an 🏗️",
+                  "feedback": "Kein Stress! Wir bringen dir alles bei."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Abschluss",
+          "status": "locked",
+          "icon": "🎉",
+          "row": 3,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du hast ein Auge für Design! Bereit, die digitale Welt schöner zu machen?",
+              "imageUrl": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Auf jeden Fall! 🚀",
+                  "feedback": "Wir freuen uns auf dich!"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich will mehr Infos 📧",
+                  "feedback": "Gerne! Meld dich einfach bei uns."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-analyst",
+      "title": "Daten-Detektiv:in",
+      "description": "Finde spannende Geheimnisse in Zahlen! 🔍",
+      "icon": "🕵️",
+      "color": "#10b981",
+      "tags": ["📊 Zahlen-Fan", "🧮 Logik", "🔍 Neugierig"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Start",
+          "status": "unlocked",
+          "icon": "📈",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Willkommen! Du bekommst eine Liste mit Verkaufszahlen. Was machst du zuerst?",
+              "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich male sofort bunte Diagramme 📊",
+                  "correct": false,
+                  "feedback": "Langsam! Erstmal gucken, ob die Zahlen überhaupt stimmen."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich schau mir die Liste genau an und checke auf Fehler 🔍",
+                  "correct": true,
+                  "feedback": "Perfekt! 🎯 Wie ein echter Detektiv."
+                },
+                {
+                  "id": 3,
+                  "text": "Ich rate einfach, was das bedeutet 🧪",
+                  "correct": false,
+                  "feedback": "Raten ist beim Lotto gut, hier lieber Wissen!"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Womit arbeitest du gerne? (Kannst mehreres wählen)",
+              "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Programmieren (z.B. Python) 🐍",
+                  "correct": true,
+                  "feedback": "Super mächtig für Daten!"
+                },
+                {
+                  "id": 2,
+                  "text": "Datenbanken durchsuchen 💾",
+                  "correct": true,
+                  "feedback": "Das ist wie die Bibliothek für Daten."
+                },
+                {
+                  "id": 3,
+                  "text": "Nur Stift und Papier 📗",
+                  "correct": false,
+                  "feedback": "Bei großen Datenmengen wird das schwierig!"
+                },
+                {
+                  "id": 4,
+                  "text": "Coole Grafiken erstellen 📊",
+                  "correct": true,
+                  "feedback": "Damit verstehen alle, was du gefunden hast."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Zahlen-Check",
+          "status": "locked",
+          "icon": "📉",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du vergleichst zwei Webseiten-Designs. Wie findest du heraus, welches besser ankommt?",
+              "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+              "type": "text-field",
+              "options": [],
+              "allowTextInput": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Storytelling",
+          "status": "locked",
+          "icon": "📖",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Dein Chef fragt: 'Was kaufen die Leute am liebsten?'. Wie zeigst du es ihm?",
+              "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Mit einer riesigen Excel-Tabelle 📊",
+                  "feedback": "Puh, das ist anstrengend zu lesen."
+                },
+                {
+                  "id": 2,
+                  "text": "Mit einer einfachen Grafik und kurzer Erklärung 📖",
+                  "feedback": "Genau! So versteht es jeder sofort."
+                },
+                {
+                  "id": 3,
+                  "text": "Ich lese ihm alle Zahlen vor 📋",
+                  "feedback": "Da schläft er bestimmt ein... 😴"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Das bieten wir",
+          "status": "locked",
+          "icon": "🎁",
+          "row": 2,
+          "nextLevelIds": [5],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Als Daten-Detektiv:in bei TechFlow erwartet dich:",
+              "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Moderne Technik",
+                  "value": "Wir nutzen die neuesten Tools und Programme.",
+                  "icon": "💻",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Echte Daten",
+                  "value": "Finde Dinge heraus, die wirklich wichtig sind.",
+                  "icon": "📊",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Weiterbildung",
+                  "value": "2000€ für dein Wissen.",
+                  "icon": "🎓",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Freiheit",
+                  "value": "Arbeite flexibel, wie es dir passt.",
+                  "icon": "🏠",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Kniffliger Fall",
+          "status": "locked",
+          "icon": "🧩",
+          "row": 3,
+          "nextLevelIds": [6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein Rätsel: Plötzlich kaufen viel weniger Leute ein. Du musst herausfinden, warum. Wie gehst du vor?",
+              "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Spannender Fall! 🕵️‍♂️ Die Käufe sind runtergegangen. Hast du eine Idee, wo wir zuerst suchen? Vielleicht ob es an einem bestimmten Tag lag oder an einer bestimmten Gruppe von Leuten?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Abschluss",
+          "status": "locked",
+          "icon": "🏆",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du hast den Durchblick! Bereit für deine Karriere als Daten-Profi?",
+              "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, ich bin dabei! 🚀",
+                  "feedback": "Fantastisch! Wir freuen uns auf dich."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich habe noch Fragen 📧",
+                  "feedback": "Gerne! Wir quatschen einfach mal."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devops-engineer",
+      "title": "Cloud-Manager:in",
+      "description": "Halt die Technik am Laufen und sorg für Speed! ⚙️",
+      "icon": "☁️",
+      "color": "#f59e0b",
+      "tags": ["☁️ Cloud", "🔧 Technik-Fan", "🚀 Macher"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Start",
+          "status": "unlocked",
+          "icon": "🏁",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Willkommen im Team! 🚀 Eine App lässt sich nicht öffnen. Was ist dein erster Gedanke?",
+              "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich lösche alles und fange neu an 🔨",
+                  "correct": false,
+                  "feedback": "Lieber nicht! Erstmal schauen, was los ist."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich suche nach Hinweisen, wo der Fehler liegt 🔍",
+                  "correct": true,
+                  "feedback": "Perfekt! 🎯 Wie ein Detektiv auf Fehlersuche."
+                },
+                {
+                  "id": 3,
+                  "text": "Ich starte einfach neu, wird schon gehen 🔄",
+                  "correct": false,
+                  "feedback": "Manchmal hilft das, aber wir wollen ja wissen, warum es passiert ist."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Was ist wichtig, damit Apps immer gut laufen? (Wähle was passt)",
+              "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Dinge automatisieren, damit man sie nicht dauernd selbst machen muss 🤖",
+                  "correct": true,
+                  "feedback": "Genau! Das spart Zeit und Nerven."
+                },
+                {
+                  "id": 2,
+                  "text": "Regelmäßige Updates machen 🔄",
+                  "correct": true,
+                  "feedback": "Wichtig, damit alles sicher und frisch bleibt."
+                },
+                {
+                  "id": 3,
+                  "text": "Jeden Server per Hand einstellen 🖐️",
+                  "correct": false,
+                  "feedback": "Puh, das dauert zu lange und macht Fehler."
+                },
+                {
+                  "id": 4,
+                  "text": "Immer im Blick behalten, ob alles läuft (Monitoring) 👀",
+                  "correct": true,
+                  "feedback": "Absolut! Damit wir Fehler finden, bevor es die Nutzer merken."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Die Cloud",
+          "status": "locked",
+          "icon": "☁️",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Wir wollen eine App in die 'Cloud' bringen. Wie würdest du das einem Freund erklären?",
+              "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+              "type": "text-field",
+              "options": [],
+              "allowTextInput": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Automatisierung",
+          "status": "locked",
+          "icon": "🤖",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Eine Aufgabe nervt, weil man sie jeden Tag 5x machen muss. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich baue mir ein kleines Programm, das es für mich macht 🤖",
+                  "feedback": "Genau! Faulheit kann schlau sein. 😉"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich schreibe eine Anleitung, damit es schneller geht 📝",
+                  "feedback": "Gut, aber automatisch ist noch besser."
+                },
+                {
+                  "id": 3,
+                  "text": "Ich mache es einfach weiter so 🖐️",
+                  "feedback": "Och nö, das ist doch langweilig und fehleranfällig."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Alarm!",
+          "status": "locked",
+          "icon": "🚨",
+          "row": 2,
+          "nextLevelIds": [5],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Die Website ist plötzlich weg! Alle sind panisch. Du bleibst cool. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Oh je! 🚨 Nichts geht mehr. Was ist dein erster Schritt? Sollen wir gucken, was zuletzt geändert wurde, oder ob die Server noch Strom haben?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Dein Team",
+          "status": "locked",
+          "icon": "💼",
+          "row": 3,
+          "nextLevelIds": [6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Als Cloud-Manager:in bei TechFlow erwartet dich:",
+              "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Modernste Technik",
+                  "value": "Arbeite mit den großen Clouds (Amazon, Google, Microsoft).",
+                  "icon": "☁️",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Coole Tools",
+                  "value": "Wir nutzen Werkzeuge, die dir die Arbeit erleichtern.",
+                  "icon": "🛠️",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Gute Balance",
+                  "value": "Keine Nachtschichten für Azubis. Freizeit ist wichtig.",
+                  "icon": "📞",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Lernbudget",
+                  "value": "2000€ damit du immer besser wirst.",
+                  "icon": "🎓",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Abschluss",
+          "status": "locked",
+          "icon": "🎉",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du hast das Zeug zum Technik-Versteher! Bereit für deine Zukunft?",
+              "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, ich bin dabei! ⚙️",
+                  "feedback": "Fantastisch! Wir freuen uns auf dich."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich möchte mehr erfahren 📧",
+                  "feedback": "Gerne! Wir quatschen einfach mal."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "checkChances": "Checke meine Chancen",
+    "expressApply": "Schnell bewerben",
+    "jobMerken": "Job merken",
+    "submit": "Absenden",
+    "submitSuccess": "Top! Wir melden uns in max. 24 Stunden.",
+    "victoryHeadline": "Stark gemacht! 🎉",
+    "victorySubtext": "Du hast gezeigt, dass du das Zeug dazu hast. Lass uns reden!",
+    "nudgeHeadline": "Mal ehrlich...",
+    "nudgeText": "Du stellst dich hier echt gut an. Wir sollten uns kennenlernen – ganz locker. ✨",
+    "firstName": "Wie heißt du?",
+    "phoneType": "Welches Handy hast du?",
+    "schoolType": "Auf welcher Schule bist du?",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule",
+    "gymnasium": "Gymnasium",
+    "andere": "Andere / Hab schon Abschluss",
+    "expressApplyIntro": "Nur ein paar kurze Infos und wir melden uns bei dir!",
+    "exploreOtherJobs": "Andere Jobs entdecken"
+  }
+}
+
+</Beispiel2>
+</Beispiele>

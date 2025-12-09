@@ -1,0 +1,573 @@
+{
+  "company": {
+    "name": "WAGO",
+    "logoUrl": "🟢",
+    "logoImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/WAGO_Logo_Green-Black.svg/2560px-WAGO_Logo_Green-Black.svg.png",
+    "primaryColor": "#009639",
+    "secondaryColor": "#333333",
+    "city": "Minden",
+    "website": "https://www.wago.com/de/karriere/ausbildung",
+    "industryVibe": "Wir sorgen dafür, dass der Strom fließt und Daten sicher ankommen. Mit dem berühmten „Klack“.",
+    "organizationFacts": [
+      {
+        "title": "International",
+        "value": "Von Minden in die ganze Welt. Wir sind überall da, wo Technik verbindet.",
+        "icon": "🌍"
+      },
+      {
+        "title": "Zukunftssicher",
+        "value": "Energie und Daten werden immer wichtiger. Dein Job hier hat Zukunft.",
+        "icon": "🚀"
+      },
+      {
+        "title": "Echtes Team",
+        "value": "Bei uns bist du keine Nummer. Wir sind ein Familienunternehmen.",
+        "icon": "🤝"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Mach mal „Klack“. ⚡",
+    "subline": "Du kennst unsere Klemmen. Aber WAGO ist viel mehr: Hightech, Automation & Code. Finde deinen Platz!",
+    "startButtonText": "Verbindung herstellen 🔌"
+  },
+  "campus": {
+    "headline": "Deine Welt bei WAGO",
+    "subline": "Lieber Strom in den Adern oder Code im Kopf?",
+    "categories": [
+      {
+        "id": "technik",
+        "title": "Hardware & Strom",
+        "jobId": "elektroniker"
+      },
+      {
+        "id": "digital",
+        "title": "Code & Daten",
+        "jobId": "fachinformatiker"
+      }
+    ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "interest",
+        "question": "Was fasziniert dich mehr?",
+        "options": [
+          {
+            "id": "circuits",
+            "label": "Wie Strom eine Maschine zum Leben erweckt ⚡",
+            "icon": "🔋",
+            "imageUrl": "https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_1280.jpg",
+            "score": {
+              "elektroniker": 3,
+              "fachinformatiker": 0
+            }
+          },
+          {
+            "id": "logic",
+            "label": "Wie eine App das Licht steuert 📱",
+            "icon": "📲",
+            "imageUrl": "https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg",
+            "score": {
+              "elektroniker": 0,
+              "fachinformatiker": 3
+            }
+          }
+        ]
+      },
+      {
+        "id": "activity",
+        "question": "Ein Gerät funktioniert nicht. Was machst du?",
+        "options": [
+          {
+            "id": "screw",
+            "label": "Ich schraube es auf und prüfe die Kabel",
+            "icon": "🪛",
+            "imageUrl": "https://cdn.pixabay.com/photo/2019/09/27/14/36/electrician-4508466_1280.jpg",
+            "score": {
+              "elektroniker": 2,
+              "fachinformatiker": 1
+            }
+          },
+          {
+            "id": "debug",
+            "label": "Ich checke die Einstellungen und die Software",
+            "icon": "💻",
+            "imageUrl": "https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_1280.jpg",
+            "score": {
+              "elektroniker": 1,
+              "fachinformatiker": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "result",
+        "question": "Am Ende des Tages...",
+        "options": [
+          {
+            "id": "visible",
+            "label": "...will ich sehen, dass sich was bewegt (Licht an, Motor läuft)",
+            "icon": "💡",
+            "imageUrl": "https://cdn.pixabay.com/photo/2017/04/05/01/16/light-bulb-2203739_1280.jpg",
+            "score": {
+              "elektroniker": 2,
+              "fachinformatiker": 0
+            }
+          },
+          {
+            "id": "smart",
+            "label": "...will ich, dass komplexe Systeme schlau und automatisch laufen",
+            "icon": "🧠",
+            "imageUrl": "https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg",
+            "score": {
+              "elektroniker": 1,
+              "fachinformatiker": 2
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Wir glauben, das passt zu dir:",
+      "startButtonText": "Ausbildung checken",
+      "viewAllButtonText": "Alles ansehen",
+      "skipButtonText": "Überspringen"
+    }
+  },
+  "jobs": [
+    {
+      "id": "elektroniker",
+      "title": "Elektroniker:in Automatisierung",
+      "description": "Bringe Maschinen bei, was sie tun sollen. High-Voltage & High-Tech! ⚡🤖",
+      "icon": "⚡",
+      "color": "#009639",
+      "tags": ["🔋 Power", "🤖 Roboter", "🔧 Handwerk"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Startblock",
+          "status": "unlocked",
+          "icon": "🏁",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Moin! 👋 Bei uns geht's um Strom und smarte Steuerung. Stell dir vor, du hast eine Batterie, einen Schalter und eine Lampe. Wie muss der Stromkreis sein?",
+              "imageUrl": "https://cdn.pixabay.com/photo/2017/03/28/12/11/circuit-2182069_1280.jpg",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Unterbrochen, damit Luft dran kommt 💨",
+                  "correct": false,
+                  "feedback": "Ne, Strom braucht eine geschlossene Bahn, sonst fließt nichts!"
+                },
+                {
+                  "id": 2,
+                  "text": "Geschlossen: Batterie -> Schalter -> Lampe -> Batterie 🔄",
+                  "correct": true,
+                  "feedback": "Genau! Der Kreis muss geschlossen sein. Das ist Basis-Wissen! ✅"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Super! In der Ausbildung lernst du, riesige Anlagen zu verkabeln. Sicherheit ist dabei das A und O. Bevor du anfasst, was machst du?",
+              "imageUrl": "https://cdn.pixabay.com/photo/2012/03/03/23/56/industry-21683_1280.jpg",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich frage den Kollegen, ob Strom drauf ist 🗣️",
+                  "correct": false,
+                  "feedback": "Vertrauen ist gut, Kontrolle ist besser! Immer selbst messen."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich messe selbst nach: Spannungsfreiheit feststellen! 📏",
+                  "correct": true,
+                  "feedback": "Korrekt! Deine Sicherheit geht immer vor."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Schaltschrank",
+          "status": "locked",
+          "icon": "🔌",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du baust einen Schaltschrank für eine Förderanlage. Ein Kabel ist locker und hängt raus. Wenn du das so lässt, bleibt das Band stehen. Der Chef ist gerade nicht da. Was machst du?",
+              "imageUrl": "https://cdn.pixabay.com/photo/2016/01/29/13/26/control-cabinet-1167887_1280.jpg",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Da hängt ein Kabel lose rum! 😱 Wenn wir das einschalten, funkt's vielleicht. Hast du eine Idee, welches Werkzeug oder welche Klemme wir brauchen, um das sicher zu verbinden?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Fehlersuche",
+          "status": "locked",
+          "icon": "🔎",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Eine Maschine in der Produktion blinkt rot. 🚨 Nichts geht mehr. Der Bediener sagt: 'Sie ist einfach ausgegangen.' Du bist der Detektiv. Wo schaust du zuerst?",
+              "imageUrl": "https://cdn.pixabay.com/photo/2016/11/29/09/32/concept-1868728_1280.jpg",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Okay, Ruhe bewahren. Die Maschine ist tot. Liegt es am Strom oder an der Programmierung? Was würdest du als erstes prüfen?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "WAGO Benefits",
+          "status": "locked",
+          "icon": "🎁",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Puh, Fehler gefunden! 🙌 Gute Arbeit wird bei WAGO belohnt. Schau mal, was wir dir bieten:",
+              "imageUrl": "https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_1280.jpg",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Top Ausbildungswerkstatt",
+                  "value": "Modernste Technik zum Lernen und Ausprobieren.",
+                  "icon": "🛠️",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Gutes Geld",
+                  "value": "Tarifliche Vergütung – da bleibt was übrig.",
+                  "icon": "💶",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "35 Stunden",
+                  "value": "Vollzeit, aber genug Zeit für Hobbys.",
+                  "icon": "⏰",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Klingt gut? Was wäre dir am wichtigsten?",
+              "imageUrl": "https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_1280.jpg",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Gutes Equipment 🛠️",
+                  "feedback": "Das bekommst du hier garantiert. Profi-Werkzeug für Profis."
+                },
+                {
+                  "id": 2,
+                  "text": "Nette Kollegen 🤜🤛",
+                  "feedback": "Wir sind bekannt für unser familiäres Klima. Hier hilft man sich."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Weiterbildung",
+          "status": "locked",
+          "icon": "📈",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nach der Ausbildung ist noch lange nicht Schluss. Willst du später Teams führen oder Technik-Spezialist werden?",
+              "imageUrl": "https://cdn.pixabay.com/photo/2017/02/09/16/58/success-2052912_1280.jpg",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Industriemeister:in werden 🎓",
+                  "feedback": "Der Klassiker! Damit kannst du Verantwortung übernehmen."
+                },
+                {
+                  "id": 2,
+                  "text": "Techniker:in machen 🧠",
+                  "feedback": "Super, wenn du noch tiefer in die komplexe Automatisierung willst."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Studium",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du willst Praxis UND Theorie? Bei WAGO kannst du auch dual studieren. Zum Beispiel Elektrotechnik.",
+              "imageUrl": "https://cdn.pixabay.com/photo/2015/07/17/22/42/student-849821_1280.jpg",
+              "type": "text-field",
+              "allowTextInput": true,
+              "options": [],
+              "scenario": "Was denkst du, ist der größte Vorteil am dualen Studium? (Tipp einfach ein)"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit für den „Klack“? Wir würden dich gerne kennenlernen! 😎",
+              "imageUrl": "https://cdn.pixabay.com/photo/2016/11/29/06/16/holding-hands-1867752_1280.jpg",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Klar! Wo kann ich mich bewerben? 📝",
+                  "feedback": "Klasse! Schau auf wago.com/karriere vorbei. Wir freuen uns!"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich will erst ein Praktikum machen. 👀",
+                  "feedback": "Sehr gute Idee! Komm vorbei und schau dir die Werkstatt live an."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fachinformatiker",
+      "title": "Fachinformatiker:in",
+      "description": "Programmiere die Zukunft. Mach alles smart und vernetzt! 💻🌍",
+      "icon": "💻",
+      "color": "#333333",
+      "tags": ["🖥️ Digital", "🌐 IoT", "🧠 Logik"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Startblock",
+          "status": "unlocked",
+          "icon": "🏁",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hi! 👋 WAGO macht Hardware, aber ohne Software ist die 'dumm'. Du machst sie schlau. Ein Kunde will, dass das Licht angeht, WENN es dunkel ist UND jemand im Raum ist. Wie heißt diese Logik?",
+              "imageUrl": "https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "ODER-Verknüpfung",
+                  "correct": false,
+                  "feedback": "Knapp daneben. ODER hieße: Licht an, auch wenn keiner da ist."
+                },
+                {
+                  "id": 2,
+                  "text": "UND-Verknüpfung",
+                  "correct": true,
+                  "feedback": "Bingo! 🎯 Beide Bedingungen müssen erfüllt sein."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Smart Factory",
+          "status": "locked",
+          "icon": "🏭",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Wir vernetzen ganze Fabriken. Stell dir vor, ein Roboter meldet einen Fehler, aber keiner sieht es. Was programmierst du?",
+              "imageUrl": "https://cdn.pixabay.com/photo/2017/05/02/15/34/display-2278677_1280.jpg",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Eine automatische E-Mail an den Techniker 📧",
+                  "feedback": "Gute Lösung! Schnell und direkt."
+                },
+                {
+                  "id": 2,
+                  "text": "Ein Dashboard, das rot blinkt 🔴",
+                  "feedback": "Auch super! Visualisierung ist wichtig, damit man den Überblick behält."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Bug Hunter",
+          "status": "locked",
+          "icon": "👾",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hilfe! Ein Code für eine Heizungssteuerung funktioniert nicht. Die Heizung geht im Sommer an. ☀️ Was könnte falsch sein? Beschreibe deine Idee.",
+              "imageUrl": "https://cdn.pixabay.com/photo/2015/09/17/17/25/code-944499_1280.jpg",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Das ist ja Energieverschwendung! 🥵 Die Heizung läuft bei 30 Grad. Vielleicht ist ein 'Größer-Als' (>) Zeichen vertauscht? Was meinst du, wo schauen wir im Code nach?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Digital Life",
+          "status": "locked",
+          "icon": "✨",
+          "row": 3,
+          "nextLevelIds": [5],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Programmieren macht hungrig (und müde). Das bietet dir WAGO:",
+              "imageUrl": "https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Top Hardware",
+                  "value": "Moderne Laptops und Monitore.",
+                  "icon": "💻",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Flexibel",
+                  "value": "Gleitzeit und mobiles Arbeiten möglich.",
+                  "icon": "🏠",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Innovation",
+                  "value": "Arbeite an Cloud- und IoT-Themen.",
+                  "icon": "☁️",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Abschluss",
+          "status": "locked",
+          "icon": "🎉",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du hast das logische Denken drauf! Lust, die digitale Welt von WAGO mitzugestalten?",
+              "imageUrl": "https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, ich will coden! 💻",
+                  "feedback": "Mega! Bewirb dich als Fachinformatiker:in bei uns."
+                },
+                {
+                  "id": 2,
+                  "text": "Erzählt mir mehr über die Projekte 🤖",
+                  "feedback": "Gerne! Auf unserer Website siehst du, was wir alles automatisieren."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "checkChances": "Passt das zu mir?",
+    "expressApply": "Direkt Kontakt",
+    "jobMerken": "Merken",
+    "submit": "Checken",
+    "submitSuccess": "Sauber! Wir melden uns schnell bei dir.",
+    "victoryHeadline": "Verbindung steht! 🟢",
+    "victorySubtext": "Du hast gezeigt, dass du clever bist. Genau solche Leute brauchen wir bei WAGO.",
+    "nudgeHeadline": "Ehrlich gesagt...",
+    "nudgeText": "Das lief echt gut. Wir sollten uns mal unterhalten – ganz entspannt.",
+    "firstName": "Wie heißt du?",
+    "phoneType": "Dein Handy?",
+    "schoolType": "Deine Schule?",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule",
+    "gymnasium": "Gymnasium",
+    "andere": "Andere / Abschluss",
+    "expressApplyIntro": "Lass uns Kontaktdaten austauschen, wir melden uns!",
+    "exploreOtherJobs": "Andere Jobs ansehen"
+  }
+}
