@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { useWindowSize } from "react-use";
 
@@ -16,11 +16,12 @@ import { CompanyConfig, Job, Level, Screen } from "../types";
 
 const STORAGE_KEY_PREFIX = "duolingo-mockup-state";
 
-function LoadingScreen() {
+function LoadingScreen({ config }: { config: CompanyConfig }) {
+  const emoji = config.company.signatureEmoji || "⚙️";
   return (
     <div className="flex h-[100dvh] w-full flex-col items-center justify-center bg-white">
       <div className="flex flex-col items-center gap-4">
-        <div className="animate-spin text-6xl">⚙️</div>
+        <div className="animate-spin text-6xl">{emoji}</div>
         <p className="animate-pulse text-lg font-medium text-slate-600">
           Lade...
         </p>
@@ -42,6 +43,7 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
   const [showLanding, setShowLanding] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [jobProgress, setJobProgress] = useState<Record<string, Level[]>>({});
   const [levels, setLevels] = useState<Level[]>([]);
   const [currentLevelId, setCurrentLevelId] = useState<number | null>(null);
   const [currentScenarioIndex, setCurrentScenarioIndex] = useState<number>(0);
@@ -65,6 +67,56 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
     debugMode: false,
   });
   const [showHint, setShowHint] = useState(false);
+
+  // Use ref to track latest state for saving on unmount
+  const stateRef = useRef({
+    currentScreen,
+    showLanding,
+    selectedJob,
+    levels,
+    currentLevelId,
+    currentScenarioIndex,
+    selectedOption,
+    selectedOptions,
+    textAnswer,
+    status,
+    score: _score,
+    formData,
+    settings,
+  });
+
+  // Update ref whenever state changes
+  useEffect(() => {
+    stateRef.current = {
+      currentScreen,
+      showLanding,
+      selectedJob,
+      levels,
+      currentLevelId,
+      currentScenarioIndex,
+      selectedOption,
+      selectedOptions,
+      textAnswer,
+      status,
+      score: _score,
+      formData,
+      settings,
+    };
+  }, [
+    currentScreen,
+    showLanding,
+    selectedJob,
+    levels,
+    currentLevelId,
+    currentScenarioIndex,
+    selectedOption,
+    selectedOptions,
+    textAnswer,
+    status,
+    _score,
+    formData,
+    settings,
+  ]);
 
   // Helper function to recalculate unlock states based on completed prerequisites
   const recalculateUnlockStates = (levelsToUpdate: Level[]): Level[] => {
@@ -106,14 +158,77 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
           setCurrentScreen(parsedState.currentScreen);
         if (parsedState.showLanding !== undefined)
           setShowLanding(parsedState.showLanding);
-        if (parsedState.selectedJob) setSelectedJob(parsedState.selectedJob);
-        if (parsedState.levels) {
-          // Recalculate unlock states when loading from storage
+
+        // Restore selectedJob and levels together
+        if (parsedState.selectedJob) {
+          const savedJob = parsedState.selectedJob;
+          const currentJob = config.jobs.find((j) => j.id === savedJob.id);
+
+          if (currentJob) {
+            // Found the job in config, restore it
+            setSelectedJob(currentJob);
+
+            // Restore levels by merging saved state with current config
+            if (
+              parsedState.levels &&
+              Array.isArray(parsedState.levels) &&
+              parsedState.levels.length > 0
+            ) {
+              const mergedLevels = currentJob.levels.map((jobLevel) => {
+                const savedLevel = parsedState.levels.find(
+                  (sl: Level) => sl.id === jobLevel.id
+                );
+                if (savedLevel && savedLevel.status) {
+                  // Preserve status and other state from saved level
+                  return { ...jobLevel, status: savedLevel.status };
+                }
+                // If no saved state for this level, use default from config
+                return jobLevel;
+              });
+              // Recalculate unlock states when loading from storage
+              const recalculatedLevels = recalculateUnlockStates(mergedLevels);
+              setLevels(recalculatedLevels);
+            } else {
+              // No saved levels or invalid levels, initialize from job config
+              const initializedLevels = currentJob.levels.map(
+                (level, index) => ({
+                  ...level,
+                  status: index === 0 ? ("unlocked" as const) : level.status,
+                })
+              );
+              setLevels(initializedLevels);
+            }
+          } else {
+            // Job not found in config, but we have saved state - restore what we can
+            setSelectedJob(parsedState.selectedJob);
+            if (
+              parsedState.levels &&
+              Array.isArray(parsedState.levels) &&
+              parsedState.levels.length > 0
+            ) {
+              const recalculatedLevels = recalculateUnlockStates(
+                parsedState.levels
+              );
+              setLevels(recalculatedLevels);
+            } else {
+              // No valid levels, clear selectedJob since we can't restore it properly
+              setSelectedJob(null);
+              setLevels([]);
+            }
+          }
+        } else if (
+          parsedState.levels &&
+          Array.isArray(parsedState.levels) &&
+          parsedState.levels.length > 0
+        ) {
+          // No selected job but we have levels - restore them
           const recalculatedLevels = recalculateUnlockStates(
             parsedState.levels
           );
           setLevels(recalculatedLevels);
         }
+
+        // Restore other state
         if (parsedState.currentLevelId !== undefined)
           setCurrentLevelId(parsedState.currentLevelId);
         if (parsedState.currentScenarioIndex !== undefined)
@@ -133,7 +248,8 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
       }
     }
     setIsLoaded(true);
-  }, [STORAGE_KEY]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [STORAGE_KEY]); // Only depend on STORAGE_KEY, not config.jobs to avoid re-running
 
   // Save state to local storage whenever it changes
   useEffect(() => {
@@ -155,7 +271,11 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
       settings,
     };
 
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave));
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave));
+    } catch (e) {
+      console.error("Failed to save state to local storage:", e);
+    }
   }, [
     isLoaded,
     STORAGE_KEY,
@@ -174,6 +294,20 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
     settings,
   ]);
 
+  // Save state on unmount to ensure it's persisted before navigation
+  useEffect(() => {
+    return () => {
+      // Save state one final time before component unmounts using ref
+      if (isLoaded) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(stateRef.current));
+        } catch (e) {
+          console.error("Failed to save state on unmount:", e);
+        }
+      }
+    };
+  }, [isLoaded, STORAGE_KEY]);
+
   // Keyboard shortcut for debug mode (Ctrl/Cmd + Shift + D)
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -189,7 +323,7 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
   }, []);
 
   if (!isLoaded) {
-    return <LoadingScreen />;
+    return <LoadingScreen config={config} />;
   }
 
   const currentLevel = currentLevelId
@@ -204,17 +338,69 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
 
   const handleJobSelect = (job: Job) => {
     setSelectedJob(job);
-    // Initialize levels with first level unlocked
-    const initializedLevels = job.levels.map((level, index) => ({
-      ...level,
-      status: index === 0 ? ("unlocked" as const) : level.status,
-    }));
-    setLevels(initializedLevels);
+
+    // Check if there's saved state for this job
+    const storedState = localStorage.getItem(STORAGE_KEY);
+    if (storedState) {
+      try {
+        const parsedState = JSON.parse(storedState);
+        // If we have saved levels for this job, restore them
+        if (parsedState.selectedJob?.id === job.id && parsedState.levels) {
+          const savedLevels = parsedState.levels;
+          // Merge saved levels with job config to ensure we have all level data
+          const restoredLevels = job.levels.map((jobLevel) => {
+            const savedLevel = savedLevels.find(
+              (sl: Level) => sl.id === jobLevel.id
+            );
+            if (savedLevel) {
+              // Preserve status and other state from saved level
+              return { ...jobLevel, status: savedLevel.status };
+            }
+            // If no saved state, initialize first level as unlocked
+            return {
+              ...jobLevel,
+              status:
+                jobLevel.id === job.levels[0].id
+                  ? ("unlocked" as const)
+                  : jobLevel.status,
+            };
+          });
+          // Recalculate unlock states based on completed prerequisites
+          const recalculatedLevels = recalculateUnlockStates(restoredLevels);
+          setLevels(recalculatedLevels);
+        } else {
+          // No saved state for this job, initialize from scratch
+          const initializedLevels = job.levels.map((level, index) => ({
+            ...level,
+            status: index === 0 ? ("unlocked" as const) : level.status,
+          }));
+          setLevels(initializedLevels);
+        }
+      } catch (e) {
+        console.error("Failed to restore job state:", e);
+        // Fallback to initialization if restore fails
+        const initializedLevels = job.levels.map((level, index) => ({
+          ...level,
+          status: index === 0 ? ("unlocked" as const) : level.status,
+        }));
+        setLevels(initializedLevels);
+      }
+    } else {
+      // No saved state at all, initialize from scratch
+      const initializedLevels = job.levels.map((level, index) => ({
+        ...level,
+        status: index === 0 ? ("unlocked" as const) : level.status,
+      }));
+      setLevels(initializedLevels);
+    }
+
     setCurrentScreen("map");
   };
 
   const handleBackToCampus = () => {
     setCurrentScreen("campus");
+    // Clear current level/scenario state but preserve job and levels
+    // so they can be restored when selecting the same job again
     setCurrentLevelId(null);
     setCurrentScenarioIndex(0);
     setSelectedOption(undefined);
@@ -222,8 +408,8 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
     setTextAnswer("");
     setStatus("none");
     setShowHint(false);
-    setSelectedJob(null);
-    setLevels([]);
+    // Don't clear selectedJob and levels - they will be preserved in localStorage
+    // and can be restored when selecting the job again
   };
 
   const handleLevelComplete = () => {

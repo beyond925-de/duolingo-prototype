@@ -2,6 +2,7 @@
   "company": {
     "name": "TechFlow",
     "logoUrl": "💻",
+    "signatureEmoji": "💻",
     "primaryColor": "#6366f1",
     "secondaryColor": "#8b5cf6",
     "city": "Berlin",

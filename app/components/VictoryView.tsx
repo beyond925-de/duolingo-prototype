@@ -49,7 +49,7 @@ export function VictoryView({
             onClick={onExpressApply}
             className="flex items-center gap-2 whitespace-nowrap rounded-full border-2 border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-slate-50"
           >
-            <span>🏁</span>
+            <span>📝</span>
             {config.copy.jobMerken}
           </button>
         </header>
@@ -84,13 +84,8 @@ export function VictoryView({
         </div>
 
         <footer className="h-[100px] border-t-2 lg:h-[140px]">
-          <div className="mx-auto flex h-full max-w-[1140px] items-center justify-between px-6 lg:px-10">
-            <Button
-              size="lg"
-              variant="default"
-              className="ml-auto"
-              onClick={onMenu}
-            >
+          <div className="mx-auto flex h-full max-w-[1140px] items-center justify-between gap-4 px-6 lg:px-10">
+            <Button size="lg" variant="default" onClick={onMenu}>
               Menü
             </Button>
 
