@@ -104,6 +104,11 @@ export function LandingOverlay({ config, onStart }: LandingOverlayProps) {
                 muted
                 autoPlay
                 loop
+                playsInline
+                webkit-playsinline="true"
+                controls={false}
+                controlsList="nodownload nofullscreen noplaybackrate"
+                disablePictureInPicture
                 onCanPlay={() => setVideoLoaded(true)}
               ></video>
             </div>

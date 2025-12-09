@@ -29,9 +29,11 @@ const DEFAULT_OFFSET_X = 50;
 function StartTooltip({
   isFirst,
   accentColor,
+  onLevelClick,
 }: {
   isFirst: boolean;
   accentColor: string;
+  onLevelClick: () => void;
 }) {
   const [isVisible, setIsVisible] = useState(true);
   const [isFading, setIsFading] = useState(false);
@@ -60,7 +62,7 @@ function StartTooltip({
   if (!isVisible || !isFirst) return null;
 
   return (
-    <div
+    <button
       className={cn(
         "absolute -top-12 z-10 animate-bounce whitespace-nowrap rounded-xl border-2 bg-white",
         "px-3 py-2.5 font-bold uppercase tracking-wide opacity-100 ",
@@ -71,6 +73,7 @@ function StartTooltip({
         borderColor: accentColor,
         color: accentColor,
       }}
+      onClick={onLevelClick}
     >
       {isFirst ? "Start" : "Weiter"}
       <div
@@ -78,7 +81,7 @@ function StartTooltip({
         style={{ borderTopColor: accentColor }}
         aria-hidden
       />
-    </div>
+    </button>
   );
 }
 
@@ -485,6 +488,7 @@ export function MapView({
                           <StartTooltip
                             isFirst={isFirst}
                             accentColor={nodeAccent}
+                            onLevelClick={() => onLevelClick(level)}
                           />
                           <Button
                             size="rounded"
@@ -545,13 +549,14 @@ export function MapView({
                         </div>
                       )}
 
-                      <div
+                      <button
                         className={cn(
                           "mt-3 whitespace-nowrap rounded-xl border-2 bg-white px-3 py-1.5 text-center text-sm font-bold shadow-lg",
                           isCompleted || isCurrent
                             ? ""
                             : "border-slate-300 text-slate-600"
                         )}
+                        onClick={() => onLevelClick(level)}
                         style={
                           isGlobalMode
                             ? {
@@ -567,7 +572,7 @@ export function MapView({
                         }
                       >
                         {level.title}
-                      </div>
+                      </button>
                     </div>
                   );
                 })}
