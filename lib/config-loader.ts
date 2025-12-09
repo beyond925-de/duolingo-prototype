@@ -22,7 +22,7 @@ export function loadCompanyConfig(companyId: string): CompanyConfig {
   }
 
   const configContent = fs.readFileSync(configPath, "utf8");
-  const config = JSON.parse(configContent);
+  const config = JSON.parse(configContent) as CompanyConfig;
 
   return config;
 }

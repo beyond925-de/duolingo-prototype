@@ -142,7 +142,11 @@ export function LLMInteractiveView({
           <textarea
             value={textAnswer}
             onChange={(e) => onTextAnswerChange(e.target.value)}
-            placeholder="Bedienungsanleitung suchen? Kollegen fragen?"
+            placeholder={
+              quickReplies.length <= 0
+                ? "Bedienungsanleitung suchen? Kollegen fragen?"
+                : quickReplies[0] + "? " + quickReplies[1] + "?"
+            }
             rows={3}
             disabled={isLLMLoading}
             className="w-full resize-none rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 pr-14 text-base focus:border-purple-300 focus:outline-none disabled:bg-slate-50 disabled:text-slate-500"
