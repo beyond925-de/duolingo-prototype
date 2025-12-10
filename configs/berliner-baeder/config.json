@@ -1,0 +1,410 @@
+{
+  "_instructions": "Copy this template to create a new company config. Replace all placeholder values with your company's information.",
+  "_filename": "configs/berliner-baeder/config.json",
+
+  "company": {
+    "name": "Berliner Bäder",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Berliner_B%C3%A4der-Betriebe_Logo.svg/2560px-Berliner_B%C3%A4der-Betriebe_Logo.svg.png",
+    "primaryColor": "#005596",
+    "secondaryColor": "#FFFFFF",
+    "city": "Berlin",
+    "website": "https://www.berlinerbaeder.de/karriere/ausbildung/",
+    "industryVibe": "Komm ins größte Team der Stadt! Wir betreiben 67 Bäder und sorgen dafür, dass Berlin schwimmt. Kein 08/15 Bürojob, sondern Sport, Technik und Verantwortung im coolsten Arbeitsumfeld Europas.",
+    "organizationFacts": [
+      {
+        "title": "Übertariflich",
+        "value": "Fetter Start: 1.218 € Gehalt schon im 1. Jahr (ab 2026). Das schlägt fast jede andere Ausbildung.",
+        "icon": "💶"
+      },
+      {
+        "title": "Sicherer Hafen",
+        "value": "Öffentlicher Dienst heißt: Krisensicherer Job, 30 Tage Urlaub & hohe Übernahmechance.",
+        "icon": "⚓"
+      },
+      {
+        "title": "Free Swim",
+        "value": "Nutzung aller Bäder kostenlos – dein Fitnessstudio ist inklusive.",
+        "icon": "🏊"
+      }
+    ]
+  },
+
+  "landing": {
+    "headline": "Arbeite dort, wo Berlin Urlaub macht.",
+    "subline": "Werde Retter, Trainer, Techniker und Event-Manager in einem. Schnapp dir den Job mit der meisten Action.",
+    "startButtonText": "Rein ins Becken! 💦"
+  },
+
+  "campus": {
+    "headline": "Dein Startblock",
+    "subline": "Welche Bahn nimmst du?",
+    "categories": [
+      {
+        "id": "pool",
+        "title": "Am Beckenrand (Ausbildung)",
+        "jobId": "fab"
+      },
+      {
+        "id": "studium",
+        "title": "Duales Studium (Management)",
+        "jobId": "duales-studium"
+      }
+    ]
+  },
+
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "element",
+        "question": "Dein Verhältnis zu Wasser?",
+        "options": [
+          {
+            "id": "wet",
+            "label": "Ich bin eine Wasserratte 🐟",
+            "icon": "🌊",
+            "imageUrl": "https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "fab": 2,
+              "duales-studium": 0
+            }
+          },
+          {
+            "id": "dry",
+            "label": "Lieber trocken & organisiert 📝",
+            "icon": "📋",
+            "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "fab": 0,
+              "duales-studium": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "activity",
+        "question": "Wie viel Action brauchst du?",
+        "options": [
+          {
+            "id": "action",
+            "label": "Viel Bewegung, Sport ist muss! 🏃",
+            "icon": "💪",
+            "imageUrl": "https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "fab": 2,
+              "duales-studium": 1
+            }
+          },
+          {
+            "id": "manage",
+            "label": "Ich plane und steuere lieber im Hintergrund 🧠",
+            "icon": "🎯",
+            "imageUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "fab": 0,
+              "duales-studium": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "schedule",
+        "question": "Thema Arbeitszeiten?",
+        "options": [
+          {
+            "id": "shift",
+            "label": "Schichtdienst ist okay, dafür hab ich unter der Woche frei.",
+            "icon": "🔄",
+            "imageUrl": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "fab": 2,
+              "duales-studium": 1
+            }
+          },
+          {
+            "id": "regular",
+            "label": "Ich brauche geregelte Zeiten (Mo-Fr).",
+            "icon": "📅",
+            "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "fab": 0,
+              "duales-studium": 2
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Unser Bademeister-Tipp für dich:",
+      "startButtonText": "Zum Traumjob",
+      "viewAllButtonText": "Alles ansehen",
+      "skipButtonText": "Überspringen"
+    }
+  },
+
+  "jobs": [
+    {
+      "id": "fab",
+      "title": "Fachangestellte:r für Bäderbetriebe (FAB)",
+      "description": "Mehr als nur am Beckenrand stehen: Du bist Lifeguard, Techniker und Coach.",
+      "icon": "🛟",
+      "color": "#005596",
+      "tags": ["Action", "Technik", "Menschen"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Fitness-Check",
+          "status": "unlocked",
+          "icon": "⏱️",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bevor wir starten, müssen wir wissen: Bist du fit? Für die Einstellung gibt es einen Sporttest. Hand aufs Herz: Schaffst du das?",
+              "imageUrl": "https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "50m Schwimmen in unter 60 Sekunden? Locker! 🏊‍♂️",
+                  "correct": true,
+                  "feedback": "Stark! Das ist die wichtigste Voraussetzung. Dazu kommen noch Tauchen (Strecke & Tiefe)."
+                },
+                {
+                  "id": 2,
+                  "text": "Puh, ich gehe lieber nur planschen. 🛁",
+                  "correct": false,
+                  "feedback": "Ehrlichkeit zählt! Aber für diesen Job musst du im Wasser fit sein. Vielleicht trainierst du noch etwas?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Rettung",
+          "status": "locked",
+          "icon": "🛟",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Es ist Hochsommer im Freibad. Tausende Gäste. Plötzlich siehst du jemanden im tiefen Becken wild mit den Armen rudern und untergehen. Du hast Aufsicht. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich rufe sofort einen Kollegen per Funk und springe rein, um die Person zu retten.",
+                  "correct": true,
+                  "feedback": "Richtig! Schnelligkeit rettet Leben. Du lernst bei uns alle Rettungsgriffe."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich rufe laut 'Alles okay?' und warte kurz ab.",
+                  "correct": false,
+                  "feedback": "Zu riskant! Im Wasser zählt jede Sekunde. Zögern ist keine Option."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Technik",
+          "status": "locked",
+          "icon": "⚙️",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "FABs sind auch Techniker! Im Keller piept die Anlage: Der pH-Wert im Becken ist zu hoch. Das Wasser könnte Hautrötungen verursachen. Der Badegast-Service ruft schon an. Wie gehst du vor?",
+              "imageUrl": "https://images.unsplash.com/photo-1581092921461-eab62e97a782?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Hier ist der Serviceraum. Die Gäste beschweren sich über brennende Augen! Die Anzeige hier unten blinkt rot. Hast du in der Berufsschule aufgepasst? Was müssen wir dem Wasser zugeben – Säure oder Lauge?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Der Berliner-Deal",
+          "status": "locked",
+          "icon": "✅",
+          "row": 2,
+          "nextLevelIds": [5],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Harte Arbeit wird bei uns fürstlich belohnt. Hier sind die Fakten (TVAöD):",
+              "imageUrl": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Gehalt (1. Jahr)",
+                  "value": "1.218 € monatlich (ab 2026)",
+                  "icon": "💰",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Urlaub",
+                  "value": "30 Tage frei + Weihnachtsgeld",
+                  "icon": "🎄",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Bonus",
+                  "value": "400 € Prämie bei Abschluss",
+                  "icon": "🎓",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Dazu gibt's das Firmenticket und kostenloses Schwimmen. Was ist dir wichtiger?",
+              "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Das hohe Gehalt! 💸",
+                  "feedback": "Verständlich! Damit liegst du weit über dem Durchschnitt."
+                },
+                {
+                  "id": 2,
+                  "text": "Die Sicherheit (Öffentlicher Dienst) 🏛️",
+                  "feedback": "Sehr schlau. Wir übernehmen fast alle Azubis nach der Prüfung."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Startsprung",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 3,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bist du bereit, Verantwortung zu übernehmen und Berlin sicher zu machen? Wir freuen uns auf dich!",
+              "imageUrl": "https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich bewerbe mich sofort! 📝",
+                  "feedback": "Super! Geh auf berlinerbaeder.de/karriere. Tipp: Nutz die Walk-In Tage für den Sporttest!"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich will erst mal den Sporttest üben. 🏊‍♂️",
+                  "feedback": "Guter Plan! Komm in eines unserer Bäder und trainier. Wir laufen nicht weg."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "duales-studium",
+      "title": "Duales Studium (BWL/Bau)",
+      "description": "Kombiniere Theorie und Praxis: Manage die Bäder oder plane neue Anlagen.",
+      "icon": "🎓",
+      "color": "#333333",
+      "tags": ["Management", "Studium", "Organisation"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Check-In",
+          "status": "unlocked",
+          "icon": "🤔",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein Duales Studium bei uns bedeutet: Management im Schwimmbad-Kontext. Das Angebot wechselt jährlich. Hast du schon geprüft, was aktuell offen ist?",
+              "imageUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, ich checke regelmäßig die Jobbörse.",
+                  "correct": true,
+                  "feedback": "Perfekt. Eigeninitiative ist hier das A und O."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich dachte, das gibt es immer?",
+                  "correct": false,
+                  "feedback": "Nicht ganz. Wir bilden nach Bedarf aus (z.B. BWL oder Bauingenieurwesen). Immer Augen offen halten!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Dein Impact",
+          "status": "locked",
+          "icon": "📈",
+          "row": 1,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Als Student:in arbeitest du an Projekten wie Energieeffizienz oder Personalplanung für 800 Mitarbeiter. Klingt das spannend?",
+              "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Auf jeden Fall! Ich will mitgestalten.",
+                  "feedback": "Dann bewirb dich initiativ oder auf Ausschreibungen!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "copy": {
+    "checkChances": "Bin ich ein Bäder-Typ?",
+    "expressApply": "Jetzt eintauchen 🌊",
+    "jobMerken": "Job merken",
+    "submit": "Mal testschwimmen? 🤓",
+    "submitSuccess": "Klasse! Wir melden uns bei dir.",
+    "victoryHeadline": "Volltreffer! 🥇",
+    "victorySubtext": "Du hast das Zeug zum Bäder-Profi. Berlin braucht Leute wie dich!",
+    "nudgeHeadline": "Nicht zögern...",
+    "nudgeText": "Du hast Talent. Trau dich und komm zum Probetraining/Walk-In Tag!",
+    "firstName": "Wie heißt du?",
+    "phoneType": "Welches Smartphone nutzt du?",
+    "schoolType": "Welchen Abschluss peilst du an?",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "MSA / Realschule",
+    "gymnasium": "Abitur / Fachabi",
+    "andere": "BBR / Hauptschule",
+    "expressApplyIntro": "Kurz noch ein paar Infos, dann geht's los!",
+    "exploreOtherJobs": "Andere Jobs ansehen"
+  }
+}
