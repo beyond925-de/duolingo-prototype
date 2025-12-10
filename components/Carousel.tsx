@@ -18,6 +18,8 @@ export interface CarouselProps<T> {
   pauseOnHover?: boolean;
   loop?: boolean;
   round?: boolean;
+  initialIndex?: number;
+  onIndexChange?: (index: number) => void;
   renderItem: (item: T, index: number) => ReactNode;
   getItemKey?: (item: T, index: number) => string | number;
 }
@@ -35,6 +37,8 @@ export default function Carousel<T>({
   pauseOnHover = false,
   loop = false,
   round = false,
+  initialIndex = 0,
+  onIndexChange,
   renderItem,
   getItemKey = (_, index) => index,
 }: CarouselProps<T>): JSX.Element {
@@ -43,13 +47,35 @@ export default function Carousel<T>({
   const trackItemOffset = itemWidth + GAP;
 
   const carouselItems = loop ? [...items, items[0]] : items;
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const x = useMotionValue(0);
+  const [currentIndex, setCurrentIndex] = useState<number>(initialIndex);
+  const x = useMotionValue(-(initialIndex * trackItemOffset));
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [isResetting, setIsResetting] = useState<boolean>(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
+  const isSyncingFromProp = useRef(false);
+
+  // Sync internal state with initialIndex prop when it changes externally
+  useEffect(() => {
+    if (initialIndex !== currentIndex) {
+      isSyncingFromProp.current = true;
+      setCurrentIndex(initialIndex);
+      x.set(-(initialIndex * trackItemOffset));
+      // Reset flag after state update
+      setTimeout(() => {
+        isSyncingFromProp.current = false;
+      }, 0);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialIndex]);
+
+  // Call onIndexChange whenever currentIndex changes (but not when syncing from prop)
+  useEffect(() => {
+    if (onIndexChange && !isSyncingFromProp.current) {
+      onIndexChange(currentIndex);
+    }
+  }, [currentIndex, onIndexChange]);
 
   useEffect(() => {
     if (pauseOnHover && containerRef.current) {

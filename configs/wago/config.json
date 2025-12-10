@@ -210,6 +210,11 @@
               "imageUrl": "https://cdn.pixabay.com/photo/2016/01/29/13/26/control-cabinet-1167887_1280.jpg",
               "type": "llm-interactive",
               "options": [],
+              "initialQuickReplies": [
+                "Ich schalte die Anlage sicher ab und prüfe die Spannungsfreiheit.",
+                "Ich befestige das Kabel mit der passenden Klemme gemäß Plan.",
+                "Ich kontrolliere zuerst den Schaltplan, bevor ich etwas anschließe."
+              ],
               "conversationHistory": [
                 {
                   "role": "assistant",
@@ -233,6 +238,11 @@
               "imageUrl": "https://cdn.pixabay.com/photo/2016/11/29/09/32/concept-1868728_1280.jpg",
               "type": "llm-interactive",
               "options": [],
+              "initialQuickReplies": [
+                "Ich prüfe zuerst die Stromversorgung und Sicherungen.",
+                "Ich schaue mir Meldungen in der Steuerung oder am Display an.",
+                "Ich kontrolliere, ob Not-Aus oder Sensoren ausgelöst haben."
+              ],
               "conversationHistory": [
                 {
                   "role": "assistant",
@@ -463,6 +473,11 @@
               "imageUrl": "https://cdn.pixabay.com/photo/2015/09/17/17/25/code-944499_1280.jpg",
               "type": "llm-interactive",
               "options": [],
+              "initialQuickReplies": [
+                "Ich prüfe zuerst die Vergleichsoperatoren im Code.",
+                "Ich schaue mir die if-Bedingungen zur Temperatursteuerung an.",
+                "Ich logge Eingangs- und Ausgangswerte, um die Logik zu verstehen."
+              ],
               "conversationHistory": [
                 {
                   "role": "assistant",

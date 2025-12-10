@@ -14,7 +14,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-import { CompanyConfig, Level, Scenario } from "../types";
+import { CompanyConfig, Level, Scenario, ScenarioType } from "../types";
 import {
   SingleSelectCorrectView,
   SingleSelectNoCorrectView,
@@ -57,6 +57,51 @@ interface Particle {
   left: number;
 }
 
+interface InteractiveTipContext {
+  currentScenario: Scenario;
+  status: "none" | "wrong" | "correct";
+}
+
+const createInteractiveTip = (context: InteractiveTipContext): string => {
+  const { currentScenario, status } = context;
+
+  const lines: string[] = [];
+
+  if (status === "wrong") {
+    lines.push(
+      "⚠️ Deine letzte Antwort passt noch nicht ganz. Schau dir die Situation noch einmal genau an."
+    );
+  }
+
+  const scenarioTypeGuidance: Record<ScenarioType, string> = {
+    "single-select-correct":
+      "🔎 Lies die Optionen genau und wähle die, die am besten zur Situation passt.",
+    "single-select-no-correct":
+      "🤝 Es gibt hier kein Richtig oder Falsch – wähle, was sich für dich am stimmigsten anfühlt.",
+    "multiple-select":
+      "✅ Es können mehrere Antworten zusammenpassen. Überleg, welche Kombination im Alltag wirklich funktionieren würde.",
+    "text-field":
+      "📝 Schreib in einfachen Worten, was du tun würdest – Stichworte reichen völlig.",
+    "single-select-or-text":
+      "🧠 Du kannst eine Option wählen oder in eigenen Worten beschreiben, was du tun würdest.",
+    "llm-interactive":
+      "💬 Formuliere eine kurze Nachricht dazu, was du als Nächstes machen oder wissen möchtest.",
+    "bento-grid":
+      "📊 Schau dir die Kacheln an und orientier dich an den Infos, die am besten zu der Frage passen.",
+  };
+
+  const typeHint = scenarioTypeGuidance[currentScenario.type];
+  if (typeHint) {
+    lines.push(typeHint);
+  }
+
+  lines.push(
+    "Tipp: Überleg, was im echten Arbeitsalltag am sinnvollsten und sichersten wäre. Wenn du einen Fachbegriff nicht kennst, wähl die Antwort, die sich für dich am klarsten und nachvollziehbarsten anfühlt."
+  );
+
+  return lines.join("\n\n");
+};
+
 export function InteractionView({
   config,
   currentLevel,
@@ -98,6 +143,7 @@ export function InteractionView({
   );
   const [isLLMLoading, setIsLLMLoading] = useState(false);
   const [llmTurns, setLlmTurns] = useState(0);
+  const [llmInteractionCount, setLlmInteractionCount] = useState(0);
   const llmSubmitRef = useRef<(() => void) | null>(null);
 
   // Reset LLM state when the scenario changes to avoid carrying over prior text
@@ -105,6 +151,7 @@ export function InteractionView({
     setCurrentScenarioText(currentScenario.scenario);
     setIsLLMLoading(false);
     setLlmTurns(0);
+    setLlmInteractionCount(0);
     llmSubmitRef.current = null;
   }, [currentScenario.id, currentScenario.scenario]);
 
@@ -121,14 +168,21 @@ export function InteractionView({
           ? selectedOption !== undefined || textAnswer.trim() !== ""
           : selectedOption !== undefined;
 
-  // Calculate progress: completed levels + progress within current level
-  const levelProgress = isLastScenarioInLevel
-    ? 1
-    : (currentScenarioIndex + 1) / totalScenarios;
-  const progressPercentage =
-    totalLevels > 0
-      ? ((completedLevels + levelProgress) / totalLevels) * 100
-      : 0;
+  // Calculate progress for display
+  // For llm-interactive: show interactions/5
+  // For regular scenarios: show current scenario/total scenarios
+  const maxInteractions = 5;
+  const displayCurrent = isLLMInteractive
+    ? llmInteractionCount
+    : currentScenarioIndex + 1;
+  const displayTotal = isLLMInteractive ? maxInteractions : totalScenarios;
+
+  // Calculate progress percentage for the circle
+  // For llm-interactive: complete circle when reaching 5 interactions
+  // For regular scenarios: complete circle when reaching each scenario
+  const progressPercentage = isLLMInteractive
+    ? (llmInteractionCount / maxInteractions) * 100
+    : ((currentScenarioIndex + 1) / totalScenarios) * 100;
   const [particles, setParticles] = useState<Particle[]>([]);
   const [particleIdCounter, setParticleIdCounter] = useState(0);
   const [helpOpen, setHelpOpen] = useState(false);
@@ -138,6 +192,46 @@ export function InteractionView({
   const [funDialogOpen, setFunDialogOpen] = useState(false);
   const [funDialog50Open, setFunDialog50Open] = useState(false);
   const [funDialog100Open, setFunDialog100Open] = useState(false);
+  const [highlightTipButton, setHighlightTipButton] = useState(false);
+
+  // Nudge: highlight the tip button if the user
+  // hasn't interacted with the LLM input shortly after entering
+  useEffect(() => {
+    setHighlightTipButton(false);
+
+    if (!isLLMInteractive) {
+      return;
+    }
+
+    // If the user already started typing, don't show the nudge
+    if (textAnswer.trim().length > 0) {
+      return;
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      // Still no input after 15 seconds → highlight tip button once
+      if (textAnswer.trim().length === 0) {
+        setHighlightTipButton(true);
+      }
+    }, 15_000);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, [isLLMInteractive, currentScenario.id, textAnswer]);
+
+  const handleTipRequest = useCallback(() => {
+    setHelpOpen(true);
+    setLoading(true);
+    const tip = createInteractiveTip({
+      currentScenario,
+      status,
+    });
+    setTimeout(() => {
+      setHelpText(tip);
+      setLoading(false);
+    }, 500);
+  }, [currentScenario, status]);
 
   const spawnParticle = useCallback(() => {
     const id = particleIdCounter;
@@ -195,18 +289,12 @@ export function InteractionView({
         </div>
         <div className="flex items-center gap-2">
           <button
-            onClick={() => {
-              setHelpOpen(true);
-              setLoading(true);
-              // Simulate loading a tip
-              setTimeout(() => {
-                setHelpText(
-                  "💡 Tipp: Denk daran, dass Sicherheit und Qualität bei TechSteel immer Priorität haben!"
-                );
-                setLoading(false);
-              }, 500);
-            }}
-            className="flex items-center gap-2 rounded-full bg-slate-100/50 px-2 py-2 text-sm font-semibold text-slate-700 backdrop-blur-sm transition hover:bg-slate-200"
+            onClick={handleTipRequest}
+            className={`flex items-center gap-2 rounded-full bg-slate-100/50 px-2 py-2 text-sm font-semibold text-slate-700 backdrop-blur-sm transition hover:bg-slate-200 ${
+              highlightTipButton
+                ? "animate-pulse-glow ring-2 ring-blue-400 ring-offset-2 ring-offset-slate-50"
+                : ""
+            }`}
           >
             <span>?</span>
             Tip holen
@@ -228,7 +316,7 @@ export function InteractionView({
               >
                 <div className="flex flex-col items-center justify-center">
                   <span className="text-xs font-bold text-purple-600">
-                    {currentScenarioIndex + 1}/{totalScenarios}
+                    {displayCurrent}/{displayTotal}
                   </span>
                 </div>
               </CircularProgressbarWithChildren>
@@ -351,6 +439,7 @@ export function InteractionView({
                 onOptionsToggle={onOptionsToggle}
                 onScenarioTextChange={setCurrentScenarioText}
                 onLoadingChange={setIsLLMLoading}
+                onInteractionCountChange={setLlmInteractionCount}
                 registerSubmit={(fn) => {
                   llmSubmitRef.current = fn;
                 }}

@@ -68,6 +68,7 @@ export interface Scenario {
     role: "user" | "assistant";
     content: string;
   }>; // Conversation history for dynamic scenarios
+  initialQuickReplies?: string[]; // Initial quick reply suggestions shown with the initial prompt
   // For bento-grid type:
   facts?: Array<{
     title: string;

@@ -356,6 +356,11 @@ export function MapView({
               <Settings className="h-5 w-5 text-slate-500" />
             </button>
           </div>
+
+          <p className="text-center text-sm text-muted-foreground">
+            Wir speichern deinen Spielstand automatisch. Du kannst jederzeit
+            wechseln.
+          </p>
           <button
             onClick={() => setIsApplyDialogOpen(true)}
             className="flex items-center gap-2 whitespace-nowrap rounded-full border-2 border-slate-200 bg-white/90 px-4 py-2 text-sm font-bold text-slate-700 shadow-sm backdrop-blur-sm transition hover:border-slate-300 hover:bg-white"

@@ -230,6 +230,11 @@
               "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGm3Oq6HMFodsMg0pf6abPAN8Q57e1OcDqvuwL",
               "type": "llm-interactive",
               "options": [],
+              "initialQuickReplies": [
+                "Wir könnten den Motor kleiner wählen.",
+                "Vielleicht den Tunnel anpassen oder verbreitern.",
+                "Lass uns prüfen, ob wir die Einbaulage ändern können."
+              ],
               "conversationHistory": [
                 {
                   "role": "assistant",
@@ -253,6 +258,11 @@
               "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGl4XVzAEhsMuDVbkoejf1IAxSiQ96ZycP2nBL",
               "type": "llm-interactive",
               "options": [],
+              "initialQuickReplies": [
+                "Ich messe das fehlende Maß im 3D-Modell nach.",
+                "Ich prüfe die Zeichnung und rufe Dominik sofort zurück.",
+                "Ich frage nach der Artikelnummer und hole alle Daten aus dem System."
+              ],
               "conversationHistory": [
                 {
                   "role": "assistant",
@@ -494,6 +504,11 @@
               "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGm3Oq6HMFodsMg0pf6abPAN8Q57e1OcDqvuwL",
               "type": "llm-interactive",
               "options": [],
+              "initialQuickReplies": [
+                "Ich messe zuerst alle relevanten Abstände nach.",
+                "Ich vergleiche Zeichnung, Bauteil und Bohrbild genau.",
+                "Ich spreche mit dem Projektleiter, bevor wir neue Löcher bohren."
+              ],
               "conversationHistory": [
                 {
                   "role": "assistant",
@@ -517,6 +532,11 @@
               "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGI58z2JNe8YP9rULlHW6twAGpNyO5KuodC1R0",
               "type": "llm-interactive",
               "options": [],
+              "initialQuickReplies": [
+                "Ich prüfe zuerst Riemen und Spannrolle.",
+                "Ich schaue mir Lager und Schmierung genauer an.",
+                "Ich höre mir das Geräusch im Leerlauf und unter Last an."
+              ],
               "conversationHistory": [
                 {
                   "role": "assistant",

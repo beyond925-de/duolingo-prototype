@@ -10,6 +10,8 @@ interface CampusViewProps {
   jobs: Job[];
   onJobSelect: (job: Job) => void;
   onSettingsClick: () => void;
+  carouselIndex: number;
+  onCarouselIndexChange: (index: number) => void;
 }
 
 export function CampusView({
@@ -17,6 +19,8 @@ export function CampusView({
   jobs,
   onJobSelect,
   onSettingsClick,
+  carouselIndex,
+  onCarouselIndexChange,
 }: CampusViewProps) {
   return (
     <div className="relative flex min-h-[100dvh] w-full flex-col overflow-hidden bg-slate-50">
@@ -101,10 +105,15 @@ export function CampusView({
           </div>
 
           <div className="mx-auto w-fit">
+            <p className="mb-4 text-center text-xs text-slate-400">
+              ← wische, um weitere Berufe zu erkunden →
+            </p>
             <Carousel
               items={jobs}
               baseWidth={350}
               loop={false} // true would be nicer, but there is a bug when swiping quickly at the looping border
+              initialIndex={carouselIndex}
+              onIndexChange={onCarouselIndexChange}
               renderItem={(job, index) => (
                 <button
                   onClick={() => onJobSelect(job)}

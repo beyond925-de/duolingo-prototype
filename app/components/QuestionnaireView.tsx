@@ -123,18 +123,22 @@ export function QuestionnaireView({
         {/* Content */}
         <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="mb-6 text-6xl">{suggestedJob.icon}</div>
-            <h1 className="mb-4 text-3xl font-bold text-neutral-700">
-              {config.questionnaire?.suggestionText?.headline ||
-                "Wir empfehlen dir:"}
-            </h1>
-            <h2
-              className="g mb-6 text-4xl font-bold [word-wrap:anywhere]"
+            <div className="mb-8 text-6xl">{suggestedJob.icon}</div>
+
+            <p className="mb-3 text-sm font-medium uppercase tracking-wide text-slate-500">
+              Unser Tip für den Start:
+            </p>
+
+            <h1
+              className="mb-4 text-4xl font-bold leading-tight [word-wrap:anywhere]"
               style={{ color: suggestedJob.color }}
             >
               {suggestedJob.title}
-            </h2>
-            <p className="text-l mb-8 text-wrap">{suggestedJob.description}</p>
+            </h1>
+
+            <p className="mb-2 text-base leading-relaxed text-slate-600">
+              {suggestedJob.description}
+            </p>
 
             <div className="flex flex-col gap-3">
               <Button
@@ -155,6 +159,10 @@ export function QuestionnaireView({
                 {config.questionnaire?.suggestionText?.viewAllButtonText ||
                   "Alle Berufe ansehen"}
               </Button>
+              <p className="mt-2 text-sm text-slate-400">
+                Hinweis: Du kannst jederzeit wechseln. Wir speichern deinen
+                Spielstand.
+              </p>
             </div>
           </div>
         </div>

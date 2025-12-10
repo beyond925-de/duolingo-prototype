@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { toast } from "sonner";
 
 import { useWindowSize } from "react-use";
 
@@ -68,6 +69,7 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
     debugMode: false,
   });
   const [showHint, setShowHint] = useState(false);
+  const [carouselIndex, setCarouselIndex] = useState<number>(0);
 
   // Use ref to track latest state for saving on unmount
   const stateRef = useRef({
@@ -84,7 +86,11 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
     score: _score,
     formData,
     settings,
+    carouselIndex,
   });
+
+  // Track whether we've already nudged the user for a given job
+  const jobNudgeShownRef = useRef<Record<string, boolean>>({});
 
   // Update ref whenever state changes
   useEffect(() => {
@@ -102,6 +108,7 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
       score: _score,
       formData,
       settings,
+      carouselIndex,
     };
   }, [
     currentScreen,
@@ -117,7 +124,45 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
     _score,
     formData,
     settings,
+    carouselIndex,
   ]);
+
+  // After a user has been mit demselben Job eine Weile unterwegs,
+  // nudge them once to also explore other jobs.
+  useEffect(() => {
+    if (!selectedJob) return;
+
+    const jobId = selectedJob.id;
+
+    if (jobNudgeShownRef.current[jobId]) {
+      return;
+    }
+
+    const timeoutId = window.setTimeout(
+      () => {
+        jobNudgeShownRef.current[jobId] = true;
+
+        toast(`Schon eine Weile bei „${selectedJob.title}“ unterwegs?`, {
+          description:
+            "Wir haben auch andere spannende Jobs. Möchtest du sie dir ansehen oder erstmal hier weiterspielen?",
+          action: {
+            label: "Andere Jobs ansehen",
+            onClick: () => {
+              setCurrentScreen("campus");
+            },
+          },
+          cancel: {
+            label: "Hier bleiben",
+          },
+        });
+      },
+      5 * 60 * 1000
+    ); // 5 Minuten
+
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, [selectedJob]);
 
   // Helper function to recalculate unlock states based on completed prerequisites
   const recalculateUnlockStates = (levelsToUpdate: Level[]): Level[] => {
@@ -244,6 +289,8 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
         if (parsedState.score !== undefined) setScore(parsedState.score);
         if (parsedState.formData) setFormData(parsedState.formData);
         if (parsedState.settings) setSettings(parsedState.settings);
+        if (parsedState.carouselIndex !== undefined)
+          setCarouselIndex(parsedState.carouselIndex);
       } catch (e) {
         console.error("Failed to load state from local storage:", e);
       }
@@ -270,6 +317,7 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
       score: _score,
       formData,
       settings,
+      carouselIndex,
     };
 
     try {
@@ -293,6 +341,7 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
     _score,
     formData,
     settings,
+    carouselIndex,
   ]);
 
   // Save state on unmount to ensure it's persisted before navigation
@@ -732,6 +781,8 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
           jobs={config.jobs}
           onJobSelect={handleJobSelect}
           onSettingsClick={() => setShowSettings(true)}
+          carouselIndex={carouselIndex}
+          onCarouselIndexChange={setCarouselIndex}
         />
       )}
 

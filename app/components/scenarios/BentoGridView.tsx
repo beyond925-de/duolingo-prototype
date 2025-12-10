@@ -42,12 +42,10 @@ export function BentoGridView({ scenario, onContinue }: BentoGridViewProps) {
               <article
                 key={`${fact.title}-${index}`}
                 className={cn(
-                  "group relative overflow-hidden rounded-2xl",
-                  "border-2 border-slate-200",
-                  "bg-gradient-to-br from-white via-slate-50/50 to-white",
-                  "shadow-md backdrop-blur-sm",
-                  "p-5 transition-transform duration-300 ease-out",
-                  "hover:scale-[1.02] hover:shadow-lg"
+                  "relative overflow-hidden rounded-lg",
+                  "border-[3px] border-slate-100",
+                  "bg-white",
+                  "p-5"
                 )}
                 style={layoutClassStyle(fact.layout)}
               >

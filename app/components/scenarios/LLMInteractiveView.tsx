@@ -10,6 +10,7 @@ interface LLMInteractiveViewProps extends BaseScenarioViewProps {
   onScenarioTextChange?: (text: string) => void;
   onLoadingChange?: (loading: boolean) => void;
   registerSubmit?: (fn: () => void) => void;
+  onInteractionCountChange?: (count: number) => void;
 }
 
 export function LLMInteractiveView({
@@ -21,6 +22,7 @@ export function LLMInteractiveView({
   onScenarioTextChange,
   onLoadingChange,
   registerSubmit,
+  onInteractionCountChange,
 }: LLMInteractiveViewProps) {
   const [conversationHistory, setConversationHistory] = useState<
     Array<{ role: "user" | "assistant"; content: string }>
@@ -28,7 +30,9 @@ export function LLMInteractiveView({
   const [currentScenarioText, setCurrentScenarioText] = useState(
     scenario.scenario
   );
-  const [quickReplies, setQuickReplies] = useState<string[]>([]);
+  const [quickReplies, setQuickReplies] = useState<string[]>(
+    scenario.initialQuickReplies || []
+  );
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [isLLMLoading, setIsLLMLoading] = useState(false);
   const { mutate: sendLLMMessage } = useLLM();
@@ -36,10 +40,24 @@ export function LLMInteractiveView({
   useEffect(() => {
     if (conversationHistory.length === 0) {
       setCurrentScenarioText(scenario.scenario);
-      setQuickReplies([]);
+      setQuickReplies(scenario.initialQuickReplies || []);
       setShowSuggestions(false);
+      onInteractionCountChange?.(0);
     }
-  }, [scenario.scenario, conversationHistory.length]);
+  }, [
+    scenario.scenario,
+    scenario.initialQuickReplies,
+    conversationHistory.length,
+    onInteractionCountChange,
+  ]);
+
+  // Calculate interaction count (user messages)
+  useEffect(() => {
+    const userMessageCount = conversationHistory.filter(
+      (msg) => msg.role === "user"
+    ).length;
+    onInteractionCountChange?.(userMessageCount);
+  }, [conversationHistory, onInteractionCountChange]);
 
   const handleLLMSubmit = useCallback(() => {
     if (!textAnswer.trim() || isLLMLoading) return;

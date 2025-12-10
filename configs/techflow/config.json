@@ -267,6 +267,11 @@
               "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
               "type": "llm-interactive",
               "options": [],
+              "initialQuickReplies": [
+                "Ich teste zuerst, ob das Problem bei allen Nutzern auftritt.",
+                "Ich prüfe Fehlerlogs und Konsole für Hinweise.",
+                "Ich rolle notfalls auf eine stabile Version zurück."
+              ],
               "conversationHistory": [
                 {
                   "role": "assistant",
@@ -658,6 +663,11 @@
               "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
               "type": "llm-interactive",
               "options": [],
+              "initialQuickReplies": [
+                "Ich vergleiche aktuelle Zahlen mit den Vorwochen.",
+                "Ich prüfe, ob sich Preise, Aktionen oder die Website geändert haben.",
+                "Ich spreche mit dem Team und sammle Hypothesen."
+              ],
               "conversationHistory": [
                 {
                   "role": "assistant",
@@ -839,6 +849,11 @@
               "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
               "type": "llm-interactive",
               "options": [],
+              "initialQuickReplies": [
+                "Ich prüfe zuerst den Server-Status und Monitoring-Tools.",
+                "Ich schaue in Logs und Fehlerberichte der Hosting-Plattform.",
+                "Ich aktiviere eine einfache Wartungsseite und informiere das Team."
+              ],
               "conversationHistory": [
                 {
                   "role": "assistant",
