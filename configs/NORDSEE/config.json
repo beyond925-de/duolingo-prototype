@@ -1,0 +1,410 @@
+{
+  "_instructions": "Copy this template to create a new company config. Replace all placeholder values with your company's information.",
+  "_filename": "configs/nordsee/config.json",
+
+  "company": {
+    "name": "NORDSEE",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nordsee_Logo.svg/2560px-Nordsee_Logo.svg.png",
+    "primaryColor": "#E30613",
+    "secondaryColor": "#FFFFFF",
+    "city": "Bremerhaven",
+    "website": "https://www.nordsee.com/de/karriere/ausbildung/",
+    "industryVibe": "Butter bei die Fische: Wir sind die Nr. 1 für Fisch-Genuss. Aber wir suchen keine stummen Fische, sondern echte Haie im Verkauf. Bei uns gibt's klare Prozesse, ein starkes Team und Nachhaltigkeit, die schmeckt.",
+    "organizationFacts": [
+      {
+        "title": "Klares Cash",
+        "value": "Pünktliche Bezahlung über Tarif (1.061 € Start) + Urlaubs- & Weihnachtsgeld.",
+        "icon": "💸"
+      },
+      {
+        "title": "Bleib an Bord",
+        "value": "Bei Note 3 oder besser hast du die unbefristete Übernahme sicher in der Tasche.",
+        "icon": "⚓"
+      },
+      {
+        "title": "Deine Kreation",
+        "value": "Im 'Azubi-Projekt' entwickelst du deinen eigenen Snack – von der Idee bis in die Theke.",
+        "icon": "🍔"
+      }
+    ]
+  },
+
+  "landing": {
+    "headline": "Starte deine Karriere auf der Überholspur.",
+    "subline": "Komm ins Team 'Systemgastronomie'. Action statt Langeweile, Verantwortung ab Tag 1 und Fisch, der glücklich macht. Bist du bereit?",
+    "startButtonText": "Leinen los! 🚢"
+  },
+
+  "campus": {
+    "headline": "Dein Kurs",
+    "subline": "Wo wirfst du den Anker?",
+    "categories": [
+      {
+        "id": "gastro",
+        "title": "Im Restaurant (Action)",
+        "jobId": "systemgastronomie"
+      },
+      {
+        "id": "hq",
+        "title": "Zentrale Bremerhaven (Büro)",
+        "jobId": "buero"
+      }
+    ]
+  },
+
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "vibe",
+        "question": "Wie magst du es bei der Arbeit?",
+        "options": [
+          {
+            "id": "fast",
+            "label": "Zackig, strukturiert & viel los ⚡",
+            "icon": "🍟",
+            "imageUrl": "https://images.unsplash.com/photo-1550966871-3ed3c47e2ce2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "systemgastronomie": 2,
+              "buero": 0
+            }
+          },
+          {
+            "id": "calm",
+            "label": "Ruhig, planbar & am PC 💻",
+            "icon": "📅",
+            "imageUrl": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "systemgastronomie": 0,
+              "buero": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "question": "Dein ideales Team?",
+        "options": [
+          {
+            "id": "colorful",
+            "label": "Bunt gemischt, 80 Nationen, alle per Du 🌍",
+            "icon": "🤝",
+            "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "systemgastronomie": 2,
+              "buero": 1
+            }
+          },
+          {
+            "id": "small",
+            "label": "Kleine, feste Abteilung 👥",
+            "icon": "office",
+            "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "systemgastronomie": 0,
+              "buero": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "food",
+        "question": "Thema Fisch & Essen?",
+        "options": [
+          {
+            "id": "love",
+            "label": "Liebe ich! Und Nachhaltigkeit ist mir wichtig. 🐟",
+            "icon": "❤️",
+            "imageUrl": "https://images.unsplash.com/photo-1519708227418-e8d316e88549?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "systemgastronomie": 2,
+              "buero": 1
+            }
+          },
+          {
+            "id": "meh",
+            "label": "Hauptsache der Job ist sicher. 🛡️",
+            "icon": "😐",
+            "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "systemgastronomie": 1,
+              "buero": 1
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Unser Fang für dich:",
+      "startButtonText": "Job an Land ziehen",
+      "viewAllButtonText": "Alle Jobs ansehen",
+      "skipButtonText": "Direkt zur Kombüse"
+    }
+  },
+
+  "jobs": [
+    {
+      "id": "systemgastronomie",
+      "title": "Fachmann/-frau für Systemgastronomie",
+      "description": "Werde Manager deines Restaurants. Hier lernst du Kochen, Service UND Business.",
+      "icon": "🏪",
+      "color": "#E30613",
+      "tags": ["Action", "Management", "Teamwork"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Mittags-Ansturm",
+          "status": "unlocked",
+          "icon": "⏱️",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Es ist 12:30 Uhr. Die Schlange steht bis zur Tür. 🕒 'Systemgastronomie' heißt: Wir haben klare Abläufe, damit es schnell geht. Ein Gast fragt dich aber Löcher in den Bauch zur Herkunft des Seelachs. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich werde nervös und rufe den Manager, damit die Schlange nicht länger wird.",
+                  "correct": false,
+                  "feedback": "Cool bleiben! Du bist der Experte. Wir bringen dir alles über unsere Nachhaltigkeit bei."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich antworte kurz & kompetent (82% Wildfang!), empfehle ihm das Gericht und bediene zügig weiter.",
+                  "correct": true,
+                  "feedback": "Top! Genau das ist die Kunst: Freundlichkeit mit Tempo verbinden."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Snack-Boss",
+          "status": "locked",
+          "icon": "🎨",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Jetzt wird's kreativ! Im 'Azubi-Projekt' darfst du einen neuen Snack entwickeln. 💡 Welchen Namen gibst du deinem neuen Bremer-Bagel?",
+              "imageUrl": "https://images.unsplash.com/photo-1529566657458-9c5d3620f95d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Hey! Ich bin dein Mentor Sandra. Wir brauchen was Cooles, das junge Leute anspricht. Hast du eine Idee für einen knackigen Namen für unser neues Fisch-Brötchen?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Qualität",
+          "status": "locked",
+          "icon": "🔍",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Qualität ist heilig. 🐟 Du siehst, dass ein Kollege im Stress die Temperaturkontrolle bei den Garnelen vergessen hat. Das entspricht nicht dem Standard. Wie reagierst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1556910103-1c02745a30bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich spreche ihn sofort freundlich an und wir holen das gemeinsam nach.",
+                  "correct": true,
+                  "feedback": "Klasse! 'Wer Vertrauen hat, braucht keine Kontrolle' - aber wir achten aufeinander."
+                },
+                {
+                  "id": 2,
+                  "text": "Egal, die Kunden merken das schon nicht.",
+                  "correct": false,
+                  "feedback": "No way! Frische ist unser Versprechen. Da machen wir keine Kompromisse."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Der NORDSEE-Deal",
+          "status": "locked",
+          "icon": "✅",
+          "row": 2,
+          "nextLevelIds": [5],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Wir verlangen viel Power, aber wir geben auch zurück. Hier sind die Fakten (Stand 2026):",
+              "imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Gehalt (1. Jahr)",
+                  "value": "1.061 € (über Tarif!)",
+                  "icon": "💰",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Sicherheit",
+                  "value": "Unbefristete Übernahme (ab Note 3)",
+                  "icon": "🤝",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Extras",
+                  "value": "Urlaubs-/Weihnachtsgeld + Team-Bonus",
+                  "icon": "🎁",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Dazu kommen Rabatte auf alle Produkte. Klingt das fair für dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Absolut! Sicherheit & Gehalt stimmen. 👍",
+                  "feedback": "Das finden wir auch. Wir wollen langfristig mit dir planen."
+                },
+                {
+                  "id": 2,
+                  "text": "Die Aufstiegschancen reizen mich mehr. 🚀",
+                  "feedback": "Perfekt. Vom Azubi zum Restaurant Manager – das ist bei uns der klassische Weg."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Anheuern",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 3,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bist du bereit, gemeinsam auf der Überholspur zu schwimmen? 🏎️🐟",
+              "imageUrl": "https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich bewerb mich - per WhatsApp! 📱",
+                  "feedback": "Mega! Das geht bei uns super easy und schnell. Wir freuen uns!"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich will erst ein Praktikum machen. 👀",
+                  "feedback": "Gute Idee! Komm vorbei, lern das Team kennen und iss dich satt. Meld dich einfach!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "buero",
+      "title": "Kaufmann/-frau für Büromanagement",
+      "description": "Steuere die Flotte aus dem Headquarter in Bremerhaven.",
+      "icon": "🏢",
+      "color": "#333333",
+      "tags": ["Organisation", "Bremerhaven", "Flexibel"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "HQ-Check",
+          "status": "unlocked",
+          "icon": "⚓",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Moin aus Bremerhaven! 🏙️ Hier laufen die Fäden zusammen. Marketing, Einkauf, HR. Ein hybrides Gleitzeitmodell (Home Office möglich) klingt gut für dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja! Flexibilität ist mir wichtig.",
+                  "correct": true,
+                  "feedback": "Dann passt du zu uns. Wir arbeiten modern und vertrauensbasiert."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich brauche feste Zeiten ohne 'Wenn und Aber'.",
+                  "correct": false,
+                  "feedback": "Wir haben Gleitzeit (7-19 Uhr). Etwas Eigenorganisation brauchst du schon!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Event",
+          "status": "locked",
+          "icon": "🎉",
+          "row": 1,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du organisierst den 'Welcome Day' für alle neuen Azubis in der Zentrale. 🎈 Was darf auf keinen Fall fehlen?",
+              "imageUrl": "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Eine Führung durch die Produktion & Fisch-Verkostung! 🐟",
+                  "feedback": "Genau! Wer NORDSEE verstehen will, muss den Fisch probieren."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "copy": {
+    "checkChances": "Passt NORDSEE zu mir?",
+    "expressApply": "Anheuern ⚓",
+    "jobMerken": "In den Kescher",
+    "submit": "Bewerbung per WhatsApp starten 📱",
+    "submitSuccess": "Ahoi! Nachricht ist raus. Wir melden uns!",
+    "victoryHeadline": "Fetter Fang! 🐟",
+    "victorySubtext": "Du hast das Zeug zum NORDSEE-Profi. Wir sollten uns kennenlernen!",
+    "nudgeHeadline": "Nicht zappeln...",
+    "nudgeText": "Spring ins kalte Wasser - es lohnt sich! Top Team & Gehalt warten.",
+    "firstName": "Wie heißt du, Matrose?",
+    "phoneType": "Womit funkst du?",
+    "schoolType": "Schulabschluss?",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule / MSA",
+    "gymnasium": "Abitur / Fachabi",
+    "andere": "Hauptschule / Andere",
+    "expressApplyIntro": "Kurz Daten eingeben, dann geht's an Bord!",
+    "exploreOtherJobs": "Andere Gewässer prüfen"
+  }
+}
