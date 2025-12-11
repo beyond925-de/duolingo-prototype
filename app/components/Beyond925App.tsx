@@ -153,6 +153,9 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
           },
           cancel: {
             label: "Hier bleiben",
+            onClick: () => {
+              // Just dismiss the toast
+            },
           },
         });
       },

@@ -437,7 +437,10 @@ export function MapView({
                       color: accentColor,
                     }}
                   >
-                    {Math.round((completedCount / levels.length) * 100)}%
+                    {levels.length > 0
+                      ? Math.round((completedCount / levels.length) * 100)
+                      : 0}
+                    %
                   </span>
                 </div>
               </div>
@@ -445,7 +448,7 @@ export function MapView({
                 <div
                   className="absolute left-0 top-0 h-full rounded-full transition-all duration-700 ease-out"
                   style={{
-                    width: `${(completedCount / levels.length) * 100}%`,
+                    width: `${levels.length > 0 ? (completedCount / levels.length) * 100 : 0}%`,
                     backgroundColor: accentColor,
                     boxShadow: `0 0 10px ${accentColor}40`,
                   }}
@@ -455,28 +458,34 @@ export function MapView({
                   )}
                 </div>
                 {/* Milestone markers on progress bar */}
-                {[25, 50, 75].map((milestone) => (
-                  <div
-                    key={milestone}
-                    className="absolute top-0 h-full w-0.5 bg-white/60"
-                    style={{
-                      left: `${milestone}%`,
-                    }}
-                  >
-                    {(completedCount / levels.length) * 100 >= milestone && (
-                      <div
-                        className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs"
-                        style={{ color: accentColor }}
-                      >
-                        {milestone === 25
-                          ? "🎯"
-                          : milestone === 50
-                            ? "🔥"
-                            : "💎"}
-                      </div>
-                    )}
-                  </div>
-                ))}
+                {[25, 50, 75].map((milestone) => {
+                  const progressPercentage =
+                    levels.length > 0
+                      ? (completedCount / levels.length) * 100
+                      : 0;
+                  return (
+                    <div
+                      key={milestone}
+                      className="absolute top-0 h-full w-0.5 bg-white/60"
+                      style={{
+                        left: `${milestone}%`,
+                      }}
+                    >
+                      {progressPercentage >= milestone && (
+                        <div
+                          className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs"
+                          style={{ color: accentColor }}
+                        >
+                          {milestone === 25
+                            ? "🎯"
+                            : milestone === 50
+                              ? "🔥"
+                              : "💎"}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -967,13 +976,9 @@ function buildLocalLayout(
         x = width / 2;
       } else {
         // Use 1.5x width for spacing calculation to spread nodes out more
-        const randomXOffset = Math.random() * 10;
         const effectiveWidth = width * 1.5;
         const spacing = effectiveWidth / (levelsOnSameRow.length + 1);
-        x =
-          spacing * (indexInRow + 1) -
-          (effectiveWidth - width) / 2 +
-          randomXOffset;
+        x = spacing * (indexInRow + 1) - (effectiveWidth - width) / 2;
       }
     } else {
       const cycleLength = 8;
