@@ -94,6 +94,7 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        float: "float 4s ease-in-out infinite",
         "float-slow": "float 6s ease-in-out infinite",
         "float-slower": "float 8s ease-in-out infinite",
         flow: "dash 15s linear infinite",

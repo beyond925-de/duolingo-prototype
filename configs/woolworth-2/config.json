@@ -1,0 +1,1677 @@
+{
+  "_instructions": "Copy this template to create a new company config. Replace all placeholder values with your company's information.",
+  "_filename": "configs/woolworth/config.json",
+
+  "company": {
+    "name": "Woolworth-2",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Woolworth_Logo.svg/2560px-Woolworth_Logo.svg.png",
+    "signatureEmoji": "🛒",
+    "primaryColor": "#DC0732",
+    "secondaryColor": "#FFFFFF",
+    "city": "Unna",
+    "website": "https://woolworth.de/karriere/aus-und-weiterbildung",
+    "industryVibe": "Vergiss langweiliges Regaleinräumen. Bei uns im 'Home of Discount' heißt es: Tempo, Action und Verantwortung ab Tag 1. Wir wachsen mit 100 neuen Stores pro Jahr – und du wächst mit uns. Vom Azubi zur Filialleitung? Hier ist das der Plan.",
+    "organizationFacts": [
+      {
+        "title": "Karriere-Turbo",
+        "value": "Wir expandieren massiv. Das bedeutet für dich: Beste Übernahmechancen und der schnellste Weg zur Führungskraft.",
+        "icon": "🚀"
+      },
+      {
+        "title": "Money & Shopping",
+        "value": "Attraktive Ausbildungsvergütung plus 15% Personalrabatt auf alles für dich und deine Familie.",
+        "icon": "💸"
+      },
+      {
+        "title": "Team #vollmeinding",
+        "value": "Wir sind per Du, helfen uns gegenseitig und feiern Erfolge. Kein Anzugzwang, sondern Ärmel hochkrempeln.",
+        "icon": "🤜🏼🤛🏼"
+      }
+    ]
+  },
+
+  "landing": {
+    "headline": "Starte deine Karriere dort, wo du sofort echten Einfluss hast.",
+    "subline": "Keine Lust auf Kaffeeholen? Bei uns übernimmst du Verantwortung, wenn andere noch zuschauen. Finde heraus, ob du das Zeug zum Handels-Profi hast.",
+    "startButtonText": "Match checken! 🎯"
+  },
+
+  "campus": {
+    "headline": "Dein Weg bei uns",
+    "subline": "Wo siehst du deine Stärken?",
+    "categories": [
+      {
+        "id": "vertrieb",
+        "title": "Im Store (Vertrieb)",
+        "jobId": "kaufmann-einzelhandel"
+      },
+      {
+        "id": "zentrale",
+        "title": "Zentrale (Unna)",
+        "jobId": "kaufmann-buero"
+      }
+    ]
+  },
+
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "environment",
+        "question": "Wo fühlst du dich wohler?",
+        "options": [
+          {
+            "id": "store",
+            "label": "Mitten im Geschehen (Store)",
+            "icon": "🛒",
+            "imageUrl": "https://images.unsplash.com/photo-1572584642822-6f8de0243c93?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "kaufmann-einzelhandel": 2,
+              "kaufmann-buero": 0
+            }
+          },
+          {
+            "id": "office",
+            "label": "Am Schreibtisch (Zentrale)",
+            "icon": "💻",
+            "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "kaufmann-einzelhandel": 0,
+              "kaufmann-buero": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "workstyle",
+        "question": "Wie arbeitest du lieber?",
+        "options": [
+          {
+            "id": "action",
+            "label": "Anpacken, bewegen, Action",
+            "icon": "⚡",
+            "imageUrl": "https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "kaufmann-einzelhandel": 2,
+              "kaufmann-buero": 1
+            }
+          },
+          {
+            "id": "planning",
+            "label": "Organisieren, planen, strukturieren",
+            "icon": "📅",
+            "imageUrl": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "kaufmann-einzelhandel": 1,
+              "kaufmann-buero": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "social",
+        "question": "Dein Kontakt zu Menschen?",
+        "options": [
+          {
+            "id": "customers",
+            "label": "Jeden Tag viele neue Gesichter (Kunden)",
+            "icon": "🗣️",
+            "imageUrl": "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "kaufmann-einzelhandel": 2,
+              "kaufmann-buero": 0
+            }
+          },
+          {
+            "id": "team",
+            "label": "Festes Team & Kollegen",
+            "icon": "👥",
+            "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "kaufmann-einzelhandel": 1,
+              "kaufmann-buero": 2
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Unser Match für dich:",
+      "startButtonText": "Beruf entdecken",
+      "viewAllButtonText": "Alle Ausbildungen ansehen",
+      "skipButtonText": "Überspringen"
+    }
+  },
+
+  "jobs": [
+    {
+      "id": "kaufmann-einzelhandel",
+      "title": "Ausbildung Kaufmann im Einzelhandel (m/w/d)",
+      "description": "Werde zum Allrounder im Store: Von Warenpräsentation 📸 bis Filialleitung 💪🏼.",
+      "icon": "🛒",
+      "color": "#DC0732",
+      "tags": ["Kundenkontakt", "Verantwortung", "Aufstiegschancen"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Reality-Check",
+          "status": "unlocked",
+          "icon": "🏁",
+          "row": 0,
+          "nextLevelIds": [2, 3, 4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Es ist Samstagmittag, der Laden ist voll. 🛍️ An der Kasse wird es hektisch. Gleichzeitig fragt dich ein Kunde, wo er die Weihnachtsdeko findet. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich rufe laut nach der Filialleitung. Ich bin ja nur Azubi.",
+                  "correct": false,
+                  "feedback": "Nicht ganz. Bei uns packen alle an! Du bist Teil der Lösung, nicht das Problem."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich rufe kurz Unterstützung für eine zweite Kasse und zeige dem Kunden freundlich die Richtung.",
+                  "correct": true,
+                  "feedback": "Genau das ist der Spirit! Kunden glücklich machen und im Team Lösungen finden."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Kundenservice Excellence",
+          "status": "locked",
+          "icon": "💬",
+          "row": 1,
+          "nextLevelIds": [7, 8],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein Kunde beschwert sich, dass ein Aktions-Artikel aus dem Prospekt schon vergriffen ist. Er ist ziemlich sauer. 😤 Du musst ihn beruhigen und eine Lösung finden. Was sagst du?",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGFIGPxQn9AikgRNOoq6CpbKjM0JYUExWXuPd4",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich entschuldige mich und suche eine faire Alternative.",
+                "Ich biete einen ähnlichen Artikel oder Gutschein an.",
+                "Ich erkläre ruhig die Situation und bleibe freundlich."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Das ist doch Mist! Ich bin extra 20 Kilometer gefahren für dieses Kofferset und jetzt ist das Regal leer! Was können Sie da für mich tun?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Warenlogistik & Lager",
+          "status": "locked",
+          "icon": "📦",
+          "row": 1,
+          "nextLevelIds": [8, 9],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Eine große Lieferung neuer Ware ist angekommen. Die Paletten stehen im Weg, aber der Laden hat schon geöffnet. Wie reagierst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Sicherheit geht vor! Ich sorge dafür, dass die Wege frei bleiben und beginne zügig einzuräumen.",
+                  "correct": true,
+                  "feedback": "Top! Ein ordentlicher Store verkauft besser und ist sicher für unsere Kunden."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich lasse es erstmal stehen und mache Pause.",
+                  "correct": false,
+                  "feedback": "Bei Woolworth heißt es: Ärmel hochkrempeln. Ware im Gang stört den Verkauf."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Du checkst die Lieferung ab. 5 Kartons fehlen laut Lieferschein. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich dokumentiere die Differenz und informiere den Filialleiter.",
+                "Ich schaue nochmal auf dem LKW nach, ob noch was steht.",
+                "Ich notiere es und kontaktiere das Lager."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Der Fahrer sagt, er hat alles abgeladen und will los. Aber laut Liste fehlt noch was. Was schlägst du vor?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Visual Merchandising",
+          "status": "locked",
+          "icon": "🎨",
+          "row": 1,
+          "nextLevelIds": [7, 10],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Die neue Frühjahrs-Kollektion ist da! Du sollst eine Eye-Catcher-Zone im Eingangsbereich gestalten. Worauf achtest du?",
+              "imageUrl": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Farben kombinieren, die zusammenpassen 🎨",
+                  "correct": true,
+                  "feedback": "Genau! Farbharmonie zieht Blicke an."
+                },
+                {
+                  "id": 2,
+                  "text": "Die teuersten Artikel nach vorne 💰",
+                  "correct": false,
+                  "feedback": "Nicht nur Preis – auch Optik und Saisonalität zählen!"
+                },
+                {
+                  "id": 3,
+                  "text": "Beleuchtung und Höhen variieren 💡",
+                  "correct": true,
+                  "feedback": "Super! Verschiedene Ebenen schaffen Spannung."
+                },
+                {
+                  "id": 4,
+                  "text": "Deko-Elemente einsetzen (Pflanzen, Schilder) 🌿",
+                  "correct": true,
+                  "feedback": "Perfekt! Dekoration macht den Unterschied."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Kassenmanagement",
+          "status": "locked",
+          "icon": "💳",
+          "row": 2,
+          "nextLevelIds": [11, 12],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Feierabend-Rush! 🏃 Die Schlange an deiner Kasse ist 10 Leute lang. Zwei andere Kassen sind geschlossen. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich rufe per Funk nach Verstärkung für weitere Kassen 📢",
+                  "feedback": "Smart! Teamwork ist key. Kunden warten ungern."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich scanne schneller und bleibe freundlich 😊",
+                  "feedback": "Auch gut! Effizienz und gute Laune sind wichtig."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Am Ende deiner Schicht ist die Kasse 20€ zu viel. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich melde es sofort dem Schichtleiter und dokumentiere es.",
+                  "correct": true,
+                  "feedback": "Korrekt! Transparenz und Ehrlichkeit sind das A und O."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich behalte es, ist ja nicht mein Fehler.",
+                  "correct": false,
+                  "feedback": "No way! Integrität ist bei uns nicht verhandelbar."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Reklamationen & Umtausch",
+          "status": "locked",
+          "icon": "🔄",
+          "row": 2,
+          "nextLevelIds": [11, 13],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Eine Kundin will einen Pullover ohne Kassenbon umtauschen. Er hat noch das Etikett, aber sie sagt, er kratzt. Wie reagierst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich frage nach dem Kaufdatum und prüfe unser System.",
+                "Ich biete einen Gutschein im Warenwert an.",
+                "Ich hole den Filialleiter für die finale Entscheidung."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Ich hab den letzte Woche gekauft, aber den Bon weggeworfen. Der Pullover ist viel zu kratzig! Können Sie mir da helfen?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Inventur & Bestandsführung",
+          "status": "locked",
+          "icon": "📊",
+          "row": 5,
+          "nextLevelIds": [12, 14],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Inventur-Tag! 📝 Du zählst das Spielwarenlager. Ein Regal voller Kartons ohne Barcode. Wie gehst du vor?",
+              "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich scanne einen Artikel aus dem Karton und multipliziere mit der Stückzahl.",
+                  "correct": true,
+                  "feedback": "Richtig! Systematisch und effizient."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich schätze die Anzahl nach Augenmaß.",
+                  "correct": false,
+                  "feedback": "Zu ungenau! Bei Inventur zählt Präzision."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Im System sind 30 Wasserkocher gelistet. Du findest nur 22. Was jetzt?",
+              "imageUrl": "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "text-field",
+              "options": [],
+              "allowTextInput": true
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Seasonal Campaigns",
+          "status": "locked",
+          "icon": "🎄",
+          "row": 2,
+          "nextLevelIds": [13, 14],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Weihnachten naht! 🎅 Du sollst die Aktionsware prominent platzieren. Wo baust du die Sonderaufsteller auf?",
+              "imageUrl": "https://images.unsplash.com/photo-1512916206820-bd3665a48cf7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Direkt am Eingang – erster Eindruck! 🚪",
+                  "correct": true,
+                  "feedback": "Ja! Die meisten Kunden laufen rechts rein."
+                },
+                {
+                  "id": 2,
+                  "text": "Bei den Kassen – Impulskauf-Zone! 💳",
+                  "correct": true,
+                  "feedback": "Smart! Wartende Kunden greifen gern spontan zu."
+                },
+                {
+                  "id": 3,
+                  "text": "Ganz hinten im Store – damit Leute durchlaufen 🚶",
+                  "correct": false,
+                  "feedback": "Riskant. Viele schaffen es nicht bis ganz hinten."
+                },
+                {
+                  "id": 4,
+                  "text": "Auf Hauptlaufwegen mit viel Frequenz 🛤️",
+                  "correct": true,
+                  "feedback": "Genau! Dort, wo jeder vorbeikommt."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "title": "Team-Lead: Schichtplanung",
+          "status": "locked",
+          "icon": "📅",
+          "row": 9,
+          "nextLevelIds": [15, 16],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Der Filialleiter lässt dich heute die Schichten koordinieren. Ein Kollege hat sich krankgemeldet. Samstag, viel zu tun. Wie löst du das?",
+              "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich rufe andere Kollegen an und frage, wer einspringen kann.",
+                "Ich verteile die Aufgaben um und übernehme selbst mehr.",
+                "Ich priorisiere kritische Tasks und verschiebe, was geht."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Alex ist krank. Wir sind unterbesetzt. Kasse, Lager, Kundenbetreuung – alles muss laufen. Was ist dein Plan?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Digitale Kasse & Self-Checkout",
+          "status": "locked",
+          "icon": "🤖",
+          "row": 3,
+          "nextLevelIds": [15, 17],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Wir führen Self-Checkout ein! Eine ältere Dame steht ratlos davor. Wie hilfst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1556742208-999815fca738?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich zeige ihr Schritt für Schritt, wie es geht 👵",
+                  "feedback": "Super! Geduld und Erklären schafft Vertrauen."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich scanne für sie und erkläre dabei 🛒",
+                  "feedback": "Auch ok! Manche lernen besser durch Zuschauen."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Ein Kunde behauptet, das Self-Checkout-System hat ihn doppelt belastet. Wie gehst du damit um?",
+              "imageUrl": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "text-field",
+              "options": [],
+              "allowTextInput": true
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "title": "Loss Prevention",
+          "status": "locked",
+          "icon": "🔒",
+          "row": 3,
+          "nextLevelIds": [16, 18],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du siehst einen Jugendlichen, der nervös ein Parfüm in seine Jacke steckt. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1556740758-90de29b94f1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich spreche ihn laut an: 'Hey, das gehört nicht dir!'",
+                  "correct": false,
+                  "feedback": "Zu direkt und potenziell gefährlich. Sicherheit geht vor!"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich informiere diskret den Filialleiter oder Security.",
+                  "correct": true,
+                  "feedback": "Richtig! Professionelles Vorgehen schützt dich und andere."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Nach Feierabend bemerkst du, dass viele hochpreisige Artikel fehlen. Was könnten Präventionsmaßnahmen sein?",
+              "imageUrl": "https://images.unsplash.com/photo-1563906267088-b029e7101114?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Kamera-Überwachung verstärken 📹",
+                  "correct": true,
+                  "feedback": "Wirkt abschreckend!"
+                },
+                {
+                  "id": 2,
+                  "text": "Sicherheitsetiketten an teuren Artikeln 🏷️",
+                  "correct": true,
+                  "feedback": "Standard im Handel!"
+                },
+                {
+                  "id": 3,
+                  "text": "Alle Kunden beim Verlassen durchsuchen 🚨",
+                  "correct": false,
+                  "feedback": "Zu extrem und rechtlich problematisch!"
+                },
+                {
+                  "id": 4,
+                  "text": "Mitarbeiter-Präsenz auf der Fläche erhöhen 👀",
+                  "correct": true,
+                  "feedback": "Ja! Sichtbarkeit wirkt präventiv."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Category Management",
+          "status": "locked",
+          "icon": "📈",
+          "row": 3,
+          "nextLevelIds": [17, 18],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Dein Filialleiter fragt: 'Welche Warengruppe läuft gerade am besten?' Du checkst die Zahlen. Haushaltsware +15%, Mode -5%, Spielzeug +30%. Was schlägst du vor?",
+              "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Spielzeug-Fläche vergrößern, Mode reduzieren.",
+                "Spielzeug nachbestellen und prominent platzieren.",
+                "Mode-Aktionen starten, um den Abverkauf anzukurbeln."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Die Daten sind klar: Spielzeug boomt, Mode schwächelt. Was würdest du tun, um unseren Umsatz zu optimieren?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "title": "Stellvertretende Filialleitung",
+          "status": "locked",
+          "icon": "🎯",
+          "row": 4,
+          "nextLevelIds": [19, 21],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Der Filialleiter ist im Urlaub. DU bist heute der Chef! 💼 Ein Lieferant kommt unangemeldet mit Extra-Ware. Das Lager ist voll. Wie entscheidest du?",
+              "imageUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich lehne höflich ab und verweise auf den Bestellprozess.",
+                "Ich prüfe, ob wir Platz schaffen können und entscheide dann.",
+                "Ich rufe den Filialleiter an und hole mir grünes Licht."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Der Lieferant steht vor der Tür: 'Ich hab noch 50 Kartons Deko dabei, Sonderpreis! Nehmen Sie die?' Was sagst du?"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Heute ist Personal knapp, die Kasse streikt, und ein Kunde beschwert sich lautstark. Wie priorisierst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "text-field",
+              "options": [],
+              "allowTextInput": true
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "title": "Azubi-Training & Onboarding",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 4,
+          "nextLevelIds": [19, 21],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du bekommst einen neuen Azubi zugeteilt! Was zeigst du ihm am ersten Tag?",
+              "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Store-Rundgang & Team vorstellen 👋",
+                  "correct": true,
+                  "feedback": "Wichtig! Orientierung ist key."
+                },
+                {
+                  "id": 2,
+                  "text": "Kassensystem Schritt für Schritt erklären 💳",
+                  "correct": true,
+                  "feedback": "Absolut! Das braucht jeder."
+                },
+                {
+                  "id": 3,
+                  "text": "Sofort an die Kasse setzen und schauen, ob er es kann 🏃",
+                  "correct": false,
+                  "feedback": "Zu schnell! Erstmal Training, dann Praxis."
+                },
+                {
+                  "id": 4,
+                  "text": "Notfallprozesse & Sicherheit erklären 🚨",
+                  "correct": true,
+                  "feedback": "Unverzichtbar! Sicherheit first."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "title": "E-Commerce & Omnichannel",
+          "status": "locked",
+          "icon": "🌐",
+          "row": 4,
+          "nextLevelIds": [20, 21],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Woolworth startet Click & Collect! Kunden bestellen online und holen im Store ab. Du bist für die Abholung zuständig. Worauf achtest du?",
+              "imageUrl": "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Schnelle Abwicklung – maximal 3 Minuten pro Kunde ⏱️",
+                  "feedback": "Ja! Zeit ist Gold, besonders für Online-Besteller."
+                },
+                {
+                  "id": 2,
+                  "text": "Vollständigkeit prüfen und persönlich übergeben 📦",
+                  "feedback": "Genau! Service-Qualität bleibt wichtig."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Ein Kunde beschwert sich: 'Online stand, der Artikel sei verfügbar, aber hier im Store ist er aus!' Wie reagierst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich prüfe den Online-Bestand und bestelle nach.",
+                "Ich biete eine Alternative oder Express-Lieferung an.",
+                "Ich entschuldige mich und prüfe andere Filialen."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Ihr System sagt 'auf Lager', aber das Regal ist leer! Wie soll ich Ihnen da noch vertrauen?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "title": "Expansion & Store-Opening",
+          "status": "locked",
+          "icon": "🏗️",
+          "row": 4,
+          "nextLevelIds": [20, 21],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Woolworth eröffnet einen neuen Store! Du wirst für 2 Wochen zur Unterstützung dorthin geschickt. Was sind deine Aufgaben?",
+              "imageUrl": "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Ware einräumen",
+                  "value": "Kompletter Warenaufbau von Null auf 100.",
+                  "icon": "📦",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Team schulen",
+                  "value": "Neue Kollegen in Prozesse einarbeiten.",
+                  "icon": "🎓",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Store-Layout",
+                  "value": "Optimale Präsentation aufbauen.",
+                  "icon": "🎨",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Grand Opening",
+                  "value": "Eröffnungstag: Kunden-Rush managen!",
+                  "icon": "🎉",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "title": "Filialleitung",
+          "status": "locked",
+          "icon": "👔",
+          "row": 5,
+          "nextLevelIds": [21],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Glückwunsch! Du bist jetzt Filialleiter! 🎉 Dein Store macht 2 Mio € Umsatz im Jahr. Deine erste Woche: Was sind deine Top-3-Prioritäten?",
+              "imageUrl": "https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "text-field",
+              "options": [],
+              "allowTextInput": true
+            },
+            {
+              "id": 2,
+              "scenario": "Dein Team verliert Motivation. Umsätze sinken. Wie drehst du das Ruder?",
+              "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich führe Team-Meetings ein und hole Feedback.",
+                "Ich setze klare Ziele und motiviere mit Anreizen.",
+                "Ich analysiere die Probleme und gehe sie gezielt an."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Das Team wirkt müde. Der Umsatz ist 15% unter Plan. Was machst du als Chef, um das zu ändern?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "title": "Sustainability & CSR",
+          "status": "locked",
+          "icon": "🌱",
+          "row": 5,
+          "nextLevelIds": [21],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Woolworth will nachhaltiger werden. Du sollst Ideen einbringen. Was schlägst du vor?",
+              "imageUrl": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Plastiktüten abschaffen, Stofftaschen anbieten 🛍️",
+                  "correct": true,
+                  "feedback": "Standard! Viele Kunden wollen das."
+                },
+                {
+                  "id": 2,
+                  "text": "LED-Beleuchtung im gesamten Store 💡",
+                  "correct": true,
+                  "feedback": "Spart Energie und Kosten!"
+                },
+                {
+                  "id": 3,
+                  "text": "Bio-Produkte komplett aus dem Sortiment nehmen 🚫",
+                  "correct": false,
+                  "feedback": "Falsche Richtung! Bio ist wichtig für Nachhaltigkeit."
+                },
+                {
+                  "id": 4,
+                  "text": "Retouren-Ware spenden statt wegwerfen 📦",
+                  "correct": true,
+                  "feedback": "Super Idee! Sozial und nachhaltig."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "title": "Regional Manager",
+          "status": "locked",
+          "icon": "🗺️",
+          "row": 5,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du bist jetzt für 10 Filialen verantwortlich! 🏢 Welche Skills brauchst du jetzt am meisten?",
+              "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Leadership",
+                  "value": "10 Filialleiter führen und motivieren.",
+                  "icon": "👥",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Strategie",
+                  "value": "Regionale Umsatzziele setzen und erreichen.",
+                  "icon": "🎯",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Analyse",
+                  "value": "KPIs tracken und Optimierungen ableiten.",
+                  "icon": "📊",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Bereit, die Karriereleiter bis ganz nach oben zu klettern? Von hier aus geht's zur Zentrale! 🚀",
+              "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, ich will mich jetzt bewerben! 📝",
+                  "feedback": "Perfekt! Deine Reise bei Woolworth beginnt hier."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich will mehr über die Karrierechancen erfahren 🔍",
+                  "feedback": "Gerne! Check unsere Karriereseite oder ruf uns an."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kaufmann-buero",
+      "title": "Kaufmann für Büromanagement (m/w/d)",
+      "description": "Organisiere den Erfolg aus unserer Zentrale in Unna.",
+      "icon": "💻",
+      "color": "#333333",
+      "tags": ["Organisation", "Teamwork", "Zentrale"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Organisationstalent",
+          "status": "unlocked",
+          "icon": "📅",
+          "row": 0,
+          "nextLevelIds": [2, 3, 4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein wichtiger Termin muss verschoben werden, aber der Abteilungsleiter ist im Urlaub. 🏖️ Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich warte, bis er wiederkommt.",
+                  "correct": false,
+                  "feedback": "Zu passiv. Wir suchen Mitdenker, die den Laden am Laufen halten."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich informiere alle, suche neue Termine und bereite alles vor.",
+                  "correct": true,
+                  "feedback": "Perfekt! Das nennen wir Eigeninitiative."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Du bekommst 50 E-Mails am Tag. Wie organisierst du dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ordner und Kategorien anlegen 📁",
+                  "correct": true,
+                  "feedback": "Struktur ist alles!"
+                },
+                {
+                  "id": 2,
+                  "text": "Prioritäten setzen: dringend vs. wichtig ⚡",
+                  "correct": true,
+                  "feedback": "Eisenhower-Matrix! Top."
+                },
+                {
+                  "id": 3,
+                  "text": "Alle sofort beantworten, auch nachts 🌙",
+                  "correct": false,
+                  "feedback": "Work-Life-Balance! Qualität > Geschwindigkeit."
+                },
+                {
+                  "id": 4,
+                  "text": "Automatische Antworten & Vorlagen nutzen 🤖",
+                  "correct": true,
+                  "feedback": "Effizienz! Zeit sparen für wichtige Aufgaben."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "HR: Recruiting",
+          "status": "locked",
+          "icon": "👥",
+          "row": 1,
+          "nextLevelIds": [7, 8],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Woolworth sucht 20 neue Azubis! Du hilfst beim Screening der Bewerbungen. Worauf achtest du?",
+              "imageUrl": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Motivation & Persönlichkeit 💪",
+                  "correct": true,
+                  "feedback": "Bei uns zählt Einstellung mehr als Noten!"
+                },
+                {
+                  "id": 2,
+                  "text": "Nur 1,0-Schüler nehmen 📚",
+                  "correct": false,
+                  "feedback": "Zu eng! Potential und Hands-on-Mentalität zählen."
+                },
+                {
+                  "id": 3,
+                  "text": "Erfahrung im Einzelhandel ✅",
+                  "correct": true,
+                  "feedback": "Plus, aber kein Muss! Wir bilden aus."
+                },
+                {
+                  "id": 4,
+                  "text": "Teamfähigkeit & Kommunikation 🗣️",
+                  "correct": true,
+                  "feedback": "Absolut! Bei uns arbeitet man nie allein."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Du führst ein Vorstellungsgespräch. Der Kandidat ist super nervös und verhaspelt sich. Wie reagierst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich stelle lockere Fragen, um die Atmosphäre zu entspannen.",
+                "Ich erkläre, dass Nervosität normal ist und ermutige ihn.",
+                "Ich konzentriere mich auf seine Stärken und hole das Beste raus."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Der Bewerber zittert, stottert, kann kaum einen Satz beenden. Du merkst: Dahinter steckt Potential. Wie hilfst du ihm, sich zu zeigen?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Finance: Rechnungswesen",
+          "status": "locked",
+          "icon": "💰",
+          "row": 1,
+          "nextLevelIds": [8, 9],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Monatsabschluss steht an! Du checkst die Eingangsrechnungen. Eine Rechnung über 5.000€ hat kein Datum. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich buche sie trotzdem, ist ja nicht mein Problem.",
+                  "correct": false,
+                  "feedback": "Nope! Sauberkeit im Rechnungswesen ist Pflicht."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich kontaktiere den Lieferanten und bitte um eine korrigierte Rechnung.",
+                  "correct": true,
+                  "feedback": "Exakt! Compliance und Sorgfalt sind key."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Budgetplanung für Q1! Deine Abteilung will 30% mehr ausgeben als letztes Jahr. Wie gehst du damit um?",
+              "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "text-field",
+              "options": [],
+              "allowTextInput": true
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Marketing: Kampagnen",
+          "status": "locked",
+          "icon": "📣",
+          "row": 1,
+          "nextLevelIds": [7, 10],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Woolworth startet eine Social-Media-Kampagne für den Herbst! 🍂 Du sollst Content-Ideen sammeln. Was schlägst du vor?",
+              "imageUrl": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Behind-the-Scenes aus den Stores zeigen.",
+                "Gewinnspiel: 'Teile deinen Woolworth-Herbst-Look!'",
+                "Mitarbeiter-Stories: 'Warum ich bei Woolworth arbeite.'"
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Wir brauchen frischen Wind auf Instagram & TikTok! Zielgruppe: 16-30 Jahre. Was postet man, damit es viral geht?"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Ein Influencer (50k Follower) bietet an, Woolworth zu bewerben. Kosten: 2.000€. Lohnt sich das?",
+              "imageUrl": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, wenn die Zielgruppe passt! 🎯",
+                  "feedback": "Richtig! Reichweite ist nur gut, wenn sie relevant ist."
+                },
+                {
+                  "id": 2,
+                  "text": "Nein, zu teuer. Lieber selbst Content machen. 📸",
+                  "feedback": "Auch vertretbar! Authentizität > gekaufte Reichweite."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "HR: Onboarding & Development",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 2,
+          "nextLevelIds": [11, 12],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "10 neue Mitarbeiter starten am Montag! Du organisierst das Onboarding. Was gehört dazu?",
+              "imageUrl": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Welcome-Paket",
+                  "value": "IT-Equipment, Zugangs-Karten, Infos.",
+                  "icon": "📦",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Team-Vorstellung",
+                  "value": "Meet & Greet mit allen Abteilungen.",
+                  "icon": "👋",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Schulungen",
+                  "value": "Systeme, Prozesse, Compliance.",
+                  "icon": "🖥️",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Mentorship",
+                  "value": "Jeder bekommt einen Buddy.",
+                  "icon": "🤝",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Finance: Controlling",
+          "status": "locked",
+          "icon": "📊",
+          "row": 2,
+          "nextLevelIds": [12, 13],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du analysierst die Umsatzzahlen. Filiale Hamburg läuft super (+20%), Filiale Berlin schwächelt (-10%). Was empfiehlst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich analysiere die Gründe: Personal, Sortiment, Standort?",
+                "Ich schlage Best-Practice-Transfer von Hamburg nach Berlin vor.",
+                "Ich empfehle Marketing-Push für Berlin."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Die Zahlen sind eindeutig: Hamburg boomt, Berlin lahmt. Was sind mögliche Ursachen und Lösungen?"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "CFO fragt: 'Wo können wir 100.000€ einsparen?' Du hast 3 Ideen. Welche wählst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "text-field",
+              "options": [],
+              "allowTextInput": true
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Finance: Kreditorenbuchhaltung",
+          "status": "locked",
+          "icon": "🧾",
+          "row": 2,
+          "nextLevelIds": [13, 14],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein Lieferant mahnt: 'Rechnung aus März ist immer noch nicht bezahlt!' Du checkst das System. Rechnung wurde nie gebucht. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich ignoriere die Mahnung, ist ja nicht mein Fehler.",
+                  "correct": false,
+                  "feedback": "Falsch! Supplier Relations sind wichtig fürs Business."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich entschuldige mich, kläre den Fehler und veranlasse sofortige Zahlung.",
+                  "correct": true,
+                  "feedback": "Perfekt! Professionalität und schnelle Lösung."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Marketing: Digital & E-Commerce",
+          "status": "locked",
+          "icon": "🌐",
+          "row": 2,
+          "nextLevelIds": [14, 15],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Woolworth will Online-Werbung schalten. Budget: 10.000€. Google Ads oder Facebook/Instagram? Oder beides?",
+              "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Google Ads – Leute suchen aktiv nach Produkten! 🔍",
+                  "feedback": "Smart! Hohe Kaufabsicht bei Suchanzeigen."
+                },
+                {
+                  "id": 2,
+                  "text": "Social Media – jüngere Zielgruppe erreichen! 📱",
+                  "feedback": "Auch gut! Brand Awareness und Engagement."
+                },
+                {
+                  "id": 3,
+                  "text": "50/50 Mix – Test & Learn! 🧪",
+                  "feedback": "Top! Daten sammeln und optimieren."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "SEO-Check! Die Website rankt schlecht für 'Discount Store Unna'. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Keywords auf der Seite optimieren.",
+                "Local SEO: Google My Business pflegen.",
+                "Backlinks von lokalen Medien aufbauen."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Wir sind auf Seite 3 bei Google. Niemand klickt uns. Wie bringen wir die Website nach vorne?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "title": "HR: Compensation & Benefits",
+          "status": "locked",
+          "icon": "💎",
+          "row": 3,
+          "nextLevelIds": [16],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Mitarbeiterbefragung zeigt: Viele wünschen sich mehr Flexibilität. Was bietest du an?",
+              "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Home-Office 2 Tage/Woche 🏠",
+                  "correct": true,
+                  "feedback": "Work-Life-Balance ist wichtig!"
+                },
+                {
+                  "id": 2,
+                  "text": "Gleitzeit: flexibler Start/Ende ⏰",
+                  "correct": true,
+                  "feedback": "Super für Familie & Pendler!"
+                },
+                {
+                  "id": 3,
+                  "text": "Alle müssen 8-17 Uhr im Büro sein 🚫",
+                  "correct": false,
+                  "feedback": "Zu starr! Moderne Arbeitswelt braucht Flexibilität."
+                },
+                {
+                  "id": 4,
+                  "text": "Sabbatical-Option nach 3 Jahren 🌴",
+                  "correct": true,
+                  "feedback": "Innovativ! Retention-Tool für Talente."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Projekt: Store Expansion",
+          "status": "locked",
+          "icon": "🏗️",
+          "row": 3,
+          "nextLevelIds": [16, 17],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "100 neue Stores in 2 Jahren! Du koordinierst das Projekt. Was sind die kritischen Schritte?",
+              "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Standort-Analyse",
+                  "value": "Frequenz, Konkurrenz, Mietkosten prüfen.",
+                  "icon": "🗺️",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Bauplanung",
+                  "value": "Architekten, Genehmigungen, Timeline.",
+                  "icon": "📐",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Personal-Recruiting",
+                  "value": "100 Stores = 1.000+ neue Mitarbeiter!",
+                  "icon": "👥",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Marketing-Launch",
+                  "value": "Jede Eröffnung als Event inszenieren.",
+                  "icon": "🎉",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "title": "Finance: Treasury & Cash Management",
+          "status": "locked",
+          "icon": "🏦",
+          "row": 3,
+          "nextLevelIds": [17, 18],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Woolworth hat 5 Mio € Cash auf dem Konto. Banken zahlen kaum Zinsen. Was tust du mit dem Geld?",
+              "imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "In sichere Anleihen investieren.",
+                "Liquidität für Expansion reservieren.",
+                "Lieferanten-Rechnungen früher zahlen mit Skonto."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Das Geld liegt rum und bringt nichts. CFO will Rendite. Aber Sicherheit ist wichtig. Was empfiehlst du?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Legal & Compliance",
+          "status": "locked",
+          "icon": "⚖️",
+          "row": 3,
+          "nextLevelIds": [18, 19],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "DSGVO-Prüfung steht an! Du musst sicherstellen, dass alle Kundendaten geschützt sind. Worauf achtest du?",
+              "imageUrl": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Verschlüsselung aller Datenbanken 🔒",
+                  "correct": true,
+                  "feedback": "Pflicht! Datensicherheit hat oberste Priorität."
+                },
+                {
+                  "id": 2,
+                  "text": "Lösch-Prozesse für alte Kundendaten 🗑️",
+                  "correct": true,
+                  "feedback": "Richtig! Datensparsamkeit ist ein DSGVO-Grundsatz."
+                },
+                {
+                  "id": 3,
+                  "text": "Mitarbeiter-Schulungen zu Datenschutz 🎓",
+                  "correct": true,
+                  "feedback": "Unerlässlich! Jeder muss die Regeln kennen."
+                },
+                {
+                  "id": 4,
+                  "text": "Kundendaten an Dritte verkaufen 💰",
+                  "correct": false,
+                  "feedback": "Illegal! DSGVO-Verstoß mit hohen Strafen."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "title": "IT & Digitalisierung",
+          "status": "locked",
+          "icon": "💻",
+          "row": 3,
+          "nextLevelIds": [19],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Woolworth führt ein neues ERP-System ein. Du koordinierst das Change Management. Wie holst du alle ins Boot?",
+              "imageUrl": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Schulungen vor dem Go-Live für alle Abteilungen.",
+                "Change Champions in jeder Abteilung benennen.",
+                "Feedback-Kanäle öffnen und Ängste ernst nehmen."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Die Leute haben Angst vor dem neuen System. 'Zu kompliziert!', 'Warum ändern wir das Alte?' Wie managst du den Widerstand?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "title": "HR Director",
+          "status": "locked",
+          "icon": "👔",
+          "row": 4,
+          "nextLevelIds": [20],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du leitest jetzt die gesamte HR-Abteilung! 500+ Mitarbeiter in der Zentrale, 3.000+ in den Stores. Was sind deine Top-3-Prioritäten?",
+              "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "text-field",
+              "options": [],
+              "allowTextInput": true
+            },
+            {
+              "id": 2,
+              "scenario": "Fluktuation ist zu hoch (25%). Wie senkst du sie?",
+              "imageUrl": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Exit-Interviews: Warum gehen die Leute?",
+                "Gehälter & Benefits benchmarken und anpassen.",
+                "Karrierepfade klarer kommunizieren."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Jeder 4. Mitarbeiter verlässt uns innerhalb von 2 Jahren. Das kostet Geld und Know-how. Was ist dein Plan?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "title": "CFO Track",
+          "status": "locked",
+          "icon": "💼",
+          "row": 4,
+          "nextLevelIds": [20],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du wirst zum Head of Finance befördert! Die Geschäftsführung will von dir: Quartalsberichte, Budgets, M&A-Analysen. Ready?",
+              "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Financial Planning",
+                  "value": "Jahresbudget für 500+ Mio € Umsatz.",
+                  "icon": "📈",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Investor Relations",
+                  "value": "Zahlen transparent kommunizieren.",
+                  "icon": "📊",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Risk Management",
+                  "value": "Finanzielle Risiken minimieren.",
+                  "icon": "🛡️",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "title": "Head of Legal",
+          "status": "locked",
+          "icon": "⚖️",
+          "row": 4,
+          "nextLevelIds": [20],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein Kunde verklagt Woolworth wegen eines Unfalls im Store. Wie gehst du vor?",
+              "imageUrl": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich sammle alle Beweise: Fotos, Zeugen, Protokolle.",
+                "Ich schalte unsere Rechtsanwälte ein.",
+                "Ich prüfe, ob ein Vergleich möglich ist."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Der Kunde ist gefallen, sagt der Boden war nass. Klage über 50.000€. Was ist deine Strategie?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "title": "CMO: Marketing Director",
+          "status": "locked",
+          "icon": "🎯",
+          "row": 4,
+          "nextLevelIds": [20],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du leitest jetzt das gesamte Marketing! Budget: 5 Mio €. Welche Kanäle bespielen wir?",
+              "imageUrl": "https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "TV-Werbung zur Prime Time 📺",
+                  "correct": true,
+                  "feedback": "Klassisch, aber teuer. Reichweite ist gut!"
+                },
+                {
+                  "id": 2,
+                  "text": "Social Media & Influencer 📱",
+                  "correct": true,
+                  "feedback": "Must-have! Junge Zielgruppe erreichen."
+                },
+                {
+                  "id": 3,
+                  "text": "Print-Anzeigen in Tageszeitungen 📰",
+                  "correct": false,
+                  "feedback": "Zu old-school für unsere Zielgruppe!"
+                },
+                {
+                  "id": 4,
+                  "text": "Performance Marketing (Google, Meta) 🎯",
+                  "correct": true,
+                  "feedback": "ROI-stark! Messbar und skalierbar."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "title": "C-Level: Executive Board",
+          "status": "locked",
+          "icon": "🏆",
+          "row": 5,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du bist jetzt Teil der Geschäftsführung! 🎉 Woolworth wächst auf 500 Stores. Deine Vision für die nächsten 5 Jahre?",
+              "imageUrl": "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "text-field",
+              "options": [],
+              "allowTextInput": true
+            },
+            {
+              "id": 2,
+              "scenario": "Bereit für die Spitze? Von hier aus gestaltest du die Zukunft des Unternehmens! 🚀",
+              "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, ich will mich jetzt bewerben! 📝",
+                  "feedback": "Großartig! Deine Karriere bei Woolworth beginnt hier."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich will mehr über die Karrierechancen erfahren 🔍",
+                  "feedback": "Gerne! Schau auf unserer Karriereseite vorbei oder ruf uns an."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "copy": {
+    "checkChances": "Passt das zu mir?",
+    "expressApply": "Jetzt durchstarten 🚀",
+    "jobMerken": "Job merken",
+    "submit": "Checken ob's passt🤝🏼",
+    "submitSuccess": "Top! Wir melden uns schnell bei dir.",
+    "victoryHeadline": "Willkommen im Team #vollmeinding! 🎉",
+    "victorySubtext": "Du hast genau die Hands-On Mentalität, die wir suchen. Lass uns quatschen!",
+    "nudgeHeadline": "Na, noch unsicher? Bei uns zählt Persönlichkeit mehr als Noten. Probier's einfach!",
+    "nudgeText": "Das lief doch super! Wir sollten uns unbedingt kennenlernen.",
+    "firstName": "Verrätst du uns deinen Namen?",
+    "phoneType": "Auf welchem Handy tippst du gerade?",
+    "schoolType": "Welche Schule besuchst du aktuell?",
+    "android": "Android 🤖",
+    "iphone": "iPhone 🍎",
+    "realschule": "Realschule / Mittlere Reife",
+    "gymnasium": "Gymnasium / Abitur",
+    "andere": "Andere / Schule schon fertig",
+    "expressApplyIntro": "Kurz noch ein paar Infos, dann melden wir uns!",
+    "exploreOtherJobs": "Andere Ausbildungen checken"
+  }
+}

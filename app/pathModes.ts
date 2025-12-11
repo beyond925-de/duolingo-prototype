@@ -76,4 +76,3 @@ export function getPathModeConfig(mode?: PathModeId): PathModeConfig {
   if (!mode) return pathModes.linear;
   return pathModes[mode] ?? pathModes.linear;
 }
-

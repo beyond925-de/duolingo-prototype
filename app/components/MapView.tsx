@@ -157,6 +157,11 @@ export function MapView({
   const clusterLabels = isGlobalMode ? (globalLayout?.labels ?? []) : [];
   const usesGraphStructure = localLayout?.usesGraph ?? false;
 
+  const completedCount = useMemo(
+    () => levels.filter((l) => l.status === "completed").length,
+    [levels]
+  );
+
   const firstUnlockedNotCompleted = useMemo(() => {
     if (isGlobalMode) return undefined;
     return levelPositions.find((pos) => {
@@ -319,7 +324,7 @@ export function MapView({
           }}
         />
 
-        {/* 3. Floating Particles */}
+        {/* 3. Floating Particles & Decorative Elements */}
         {config.company.signatureEmoji && (
           <>
             <div className="pointer-events-none absolute right-10 top-20 animate-float-slow select-none text-[150px] opacity-10 blur-[2px]">
@@ -328,8 +333,28 @@ export function MapView({
             <div className="pointer-events-none absolute bottom-40 left-10 animate-float-slower select-none text-[100px] opacity-10 blur-[2px]">
               {config.company.signatureEmoji}
             </div>
+            <div className="animate-float pointer-events-none absolute left-1/4 top-1/3 select-none text-[80px] opacity-10 blur-[2px]">
+              {config.company.signatureEmoji}
+            </div>
+            <div className="pointer-events-none absolute right-1/4 top-2/3 animate-float-slow select-none text-[120px] opacity-10 blur-[2px]">
+              {config.company.signatureEmoji}
+            </div>
           </>
         )}
+
+        {/* Ambient floating orbs */}
+        <div
+          className="pointer-events-none absolute left-1/3 top-1/4 h-32 w-32 animate-float-slower rounded-full opacity-5 blur-2xl"
+          style={{ backgroundColor: accentColor }}
+        />
+        <div
+          className="pointer-events-none absolute right-1/4 top-1/2 h-40 w-40 animate-float-slow rounded-full opacity-5 blur-2xl"
+          style={{ backgroundColor: accentColor }}
+        />
+        <div
+          className="animate-float pointer-events-none absolute bottom-1/4 left-1/2 h-24 w-24 rounded-full opacity-5 blur-2xl"
+          style={{ backgroundColor: accentColor }}
+        />
       </div>
 
       <ApplyDialog
@@ -355,6 +380,26 @@ export function MapView({
             >
               <Settings className="h-5 w-5 text-slate-500" />
             </button>
+            {/* XP Counter */}
+            <div
+              className="flex items-center gap-2 rounded-full border-2 bg-white/90 px-4 py-2 shadow-md backdrop-blur-sm"
+              style={{
+                borderColor: `${accentColor}40`,
+              }}
+            >
+              <span className="text-lg">⭐</span>
+              <div className="flex flex-col">
+                <span
+                  className="text-xs font-bold uppercase tracking-wider"
+                  style={{ color: accentColor }}
+                >
+                  XP
+                </span>
+                <span className="text-sm font-bold text-slate-700">
+                  {completedCount * 100}
+                </span>
+              </div>
+            </div>
           </div>
 
           <p className="text-center text-sm text-muted-foreground">
@@ -372,9 +417,68 @@ export function MapView({
 
         <div className="flex-1 overflow-y-auto">
           <div className="mx-auto mt-2 h-full max-w-[912px] px-3">
-            <h1 className="mb-5 text-center text-2xl font-bold text-neutral-700">
+            <h1 className="mb-3 text-center text-2xl font-bold text-neutral-700">
               {job.title}
             </h1>
+
+            {/* Progress bar */}
+            <div className="mx-auto mb-5 max-w-md">
+              <div className="mb-2 flex items-center justify-between text-xs font-semibold text-slate-600">
+                <span>Fortschritt</span>
+                <div className="flex items-center gap-2">
+                  <span>
+                    {completedCount}/{levels.length} Levels
+                  </span>
+                  {/* Percentage badge */}
+                  <span
+                    className="rounded-full px-2 py-0.5 text-xs font-bold"
+                    style={{
+                      backgroundColor: `${accentColor}20`,
+                      color: accentColor,
+                    }}
+                  >
+                    {Math.round((completedCount / levels.length) * 100)}%
+                  </span>
+                </div>
+              </div>
+              <div className="relative h-3 overflow-hidden rounded-full bg-slate-200 shadow-inner">
+                <div
+                  className="absolute left-0 top-0 h-full rounded-full transition-all duration-700 ease-out"
+                  style={{
+                    width: `${(completedCount / levels.length) * 100}%`,
+                    backgroundColor: accentColor,
+                    boxShadow: `0 0 10px ${accentColor}40`,
+                  }}
+                >
+                  {completedCount > 0 && (
+                    <div className="absolute inset-0 animate-pulse rounded-full bg-white/20" />
+                  )}
+                </div>
+                {/* Milestone markers on progress bar */}
+                {[25, 50, 75].map((milestone) => (
+                  <div
+                    key={milestone}
+                    className="absolute top-0 h-full w-0.5 bg-white/60"
+                    style={{
+                      left: `${milestone}%`,
+                    }}
+                  >
+                    {(completedCount / levels.length) * 100 >= milestone && (
+                      <div
+                        className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs"
+                        style={{ color: accentColor }}
+                      >
+                        {milestone === 25
+                          ? "🎯"
+                          : milestone === 50
+                            ? "🔥"
+                            : "💎"}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
 
             <div
               className={containerClasses}
@@ -405,13 +509,25 @@ export function MapView({
                         opacity="0.15"
                       />
                       {completedPathData && (
-                        <path
-                          d={completedPathData}
-                          fill="none"
-                          stroke={accentColor}
-                          strokeWidth="8"
-                          strokeLinecap="round"
-                        />
+                        <>
+                          <path
+                            d={completedPathData}
+                            fill="none"
+                            stroke={accentColor}
+                            strokeWidth="8"
+                            strokeLinecap="round"
+                          />
+                          {/* Glowing overlay on completed paths */}
+                          <path
+                            d={completedPathData}
+                            fill="none"
+                            stroke={accentColor}
+                            strokeWidth="12"
+                            strokeLinecap="round"
+                            opacity="0.1"
+                            className="blur-sm"
+                          />
+                        </>
                       )}
                       <path
                         d={pathData}
@@ -422,6 +538,18 @@ export function MapView({
                         strokeLinecap="round"
                         className="animate-flow opacity-40"
                       />
+                      {/* Flowing particles on completed paths */}
+                      {completedPathData && (
+                        <path
+                          d={completedPathData}
+                          fill="none"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeDasharray="2 30"
+                          strokeLinecap="round"
+                          className="animate-flow opacity-60"
+                        />
+                      )}
                     </>
                   )}
                 </svg>
@@ -477,6 +605,9 @@ export function MapView({
                   const buttonDisabled = isLocked || isGlobalMode;
                   const levelKey = `${jobMeta?.id ?? job.id}-${level.id}`;
 
+                  // Milestone detection
+                  const isMilestone = level.id % 5 === 0 && isCompleted;
+
                   return (
                     <div
                       key={levelKey}
@@ -488,6 +619,127 @@ export function MapView({
                         zIndex: 10,
                       }}
                     >
+                      {/* Floating decorative spheres around the node */}
+                      {isCurrent && (
+                        <>
+                          <div
+                            className="pointer-events-none absolute -left-16 -top-4 h-8 w-8 animate-float-slow rounded-full opacity-30 blur-sm"
+                            style={{
+                              backgroundColor: nodeAccent,
+                            }}
+                          />
+                          <div
+                            className="pointer-events-none absolute -right-14 top-2 h-6 w-6 animate-float-slower rounded-full opacity-25 blur-sm"
+                            style={{
+                              backgroundColor: nodeAccent,
+                            }}
+                          />
+                          <div
+                            className="animate-float pointer-events-none absolute -bottom-6 left-12 h-5 w-5 rounded-full opacity-20 blur-sm"
+                            style={{
+                              backgroundColor: nodeAccent,
+                            }}
+                          />
+                        </>
+                      )}
+
+                      {/* Sparkles for completed levels */}
+                      {isCompleted && (
+                        <>
+                          <div className="pointer-events-none absolute -left-12 top-0 animate-pulse text-xl opacity-60">
+                            ✨
+                          </div>
+                          <div
+                            className="pointer-events-none absolute -right-10 top-4 animate-pulse text-sm opacity-50"
+                            style={{ animationDelay: "0.5s" }}
+                          >
+                            ⭐
+                          </div>
+                          {/* Floating skill badges for some completed levels */}
+                          {index % 3 === 0 && (
+                            <div
+                              className="pointer-events-none absolute -left-20 top-8 animate-float-slow whitespace-nowrap rounded-full px-2 py-1 text-xs font-bold opacity-70 shadow-sm"
+                              style={{
+                                backgroundColor: `${nodeAccent}20`,
+                                color: nodeAccent,
+                                border: `1px solid ${nodeAccent}40`,
+                              }}
+                            >
+                              🎯 Skills
+                            </div>
+                          )}
+                          {index % 4 === 0 && (
+                            <div
+                              className="pointer-events-none absolute -right-24 top-12 animate-float-slower whitespace-nowrap rounded-full px-2 py-1 text-xs font-bold opacity-70 shadow-sm"
+                              style={{
+                                backgroundColor: `${nodeAccent}20`,
+                                color: nodeAccent,
+                                border: `1px solid ${nodeAccent}40`,
+                              }}
+                            >
+                              🤝 Team
+                            </div>
+                          )}
+                          {index % 5 === 0 && (
+                            <div
+                              className="animate-float pointer-events-none absolute -right-20 -top-4 whitespace-nowrap rounded-full px-2 py-1 text-xs font-bold opacity-70 shadow-sm"
+                              style={{
+                                backgroundColor: `${nodeAccent}20`,
+                                color: nodeAccent,
+                                border: `1px solid ${nodeAccent}40`,
+                              }}
+                            >
+                              💰 Benefits
+                            </div>
+                          )}
+                        </>
+                      )}
+
+                      {/* Glow ring for current level */}
+                      {isCurrent && (
+                        <>
+                          <div
+                            className="pointer-events-none absolute left-1/2 top-[35px] h-[90px] w-[90px] -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full opacity-20 blur-md"
+                            style={{
+                              backgroundColor: nodeAccent,
+                            }}
+                          />
+                          {/* Orbiting particles around current level */}
+                          <div
+                            className="pointer-events-none absolute left-1/2 top-[35px] h-[110px] w-[110px] -translate-x-1/2 -translate-y-1/2"
+                            style={{
+                              animation: "spin 8s linear infinite",
+                            }}
+                          >
+                            <div
+                              className="absolute left-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full shadow-sm"
+                              style={{
+                                backgroundColor: nodeAccent,
+                                opacity: 0.4,
+                              }}
+                            />
+                            <div
+                              className="absolute right-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full shadow-sm"
+                              style={{
+                                backgroundColor: nodeAccent,
+                                opacity: 0.4,
+                              }}
+                            />
+                          </div>
+                        </>
+                      )}
+
+                      {/* Subtle glow for unlocked non-current levels */}
+                      {isUnlockedButNotCurrent && (
+                        <div
+                          className="pointer-events-none absolute left-1/2 top-[35px] h-[80px] w-[80px] -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full opacity-10 blur-lg"
+                          style={{
+                            backgroundColor: nodeAccent,
+                            animationDuration: "3s",
+                          }}
+                        />
+                      )}
+
                       {isCurrent ? (
                         <>
                           <StartTooltip
@@ -544,14 +796,33 @@ export function MapView({
                       )}
 
                       {isCompleted && (
-                        <div
-                          className="absolute -right-1 -top-1 rounded-full p-1 shadow-sm"
-                          style={{
-                            backgroundColor: nodeAccent,
-                          }}
-                        >
-                          <Check className="h-4 w-4 text-white" />
-                        </div>
+                        <>
+                          <div
+                            className="absolute -right-1 -top-1 rounded-full p-1 shadow-sm"
+                            style={{
+                              backgroundColor: nodeAccent,
+                            }}
+                          >
+                            <Check className="h-4 w-4 text-white" />
+                          </div>
+
+                          {/* Milestone badge for every 5th level */}
+                          {isMilestone && (
+                            <div className="pointer-events-none absolute -left-16 -top-6 animate-float-slow">
+                              <div
+                                className="flex items-center gap-1 rounded-full border-2 px-2 py-1 text-xs font-bold shadow-lg"
+                                style={{
+                                  backgroundColor: `${nodeAccent}15`,
+                                  borderColor: `${nodeAccent}60`,
+                                  color: nodeAccent,
+                                }}
+                              >
+                                <span>🏆</span>
+                                <span>Level {level.id}</span>
+                              </div>
+                            </div>
+                          )}
+                        </>
                       )}
 
                       <button
@@ -578,6 +849,20 @@ export function MapView({
                       >
                         {level.title}
                       </button>
+
+                      {/* XP badge for completed levels */}
+                      {isCompleted && (
+                        <div
+                          className="mt-1 flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-bold shadow-sm"
+                          style={{
+                            backgroundColor: `${nodeAccent}15`,
+                            color: nodeAccent,
+                          }}
+                        >
+                          <span className="text-[10px]">⭐</span>
+                          <span>+100 XP</span>
+                        </div>
+                      )}
                     </div>
                   );
                 })}
@@ -681,8 +966,14 @@ function buildLocalLayout(
       if (levelsOnSameRow.length === 1) {
         x = width / 2;
       } else {
-        const spacing = width / (levelsOnSameRow.length + 1);
-        x = spacing * (indexInRow + 1);
+        // Use 1.5x width for spacing calculation to spread nodes out more
+        const randomXOffset = Math.random() * 10;
+        const effectiveWidth = width * 1.5;
+        const spacing = effectiveWidth / (levelsOnSameRow.length + 1);
+        x =
+          spacing * (indexInRow + 1) -
+          (effectiveWidth - width) / 2 +
+          randomXOffset;
       }
     } else {
       const cycleLength = 8;
