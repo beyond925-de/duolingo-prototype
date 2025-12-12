@@ -77,6 +77,34 @@ export function MapView({
     }
   }, [job.id, isGlobalMode]);
 
+  // Prevent scroll container from scrolling when panning is active
+  useEffect(() => {
+    if (!scrollContainerRef.current || !supportsZoom) return;
+
+    const container = scrollContainerRef.current;
+
+    const preventScroll = (e: Event) => {
+      if (isPanning) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    };
+
+    if (isPanning) {
+      container.addEventListener("scroll", preventScroll, { passive: false });
+      container.addEventListener("wheel", preventScroll, { passive: false });
+      container.addEventListener("touchmove", preventScroll, {
+        passive: false,
+      });
+    }
+
+    return () => {
+      container.removeEventListener("scroll", preventScroll);
+      container.removeEventListener("wheel", preventScroll);
+      container.removeEventListener("touchmove", preventScroll);
+    };
+  }, [isPanning, supportsZoom]);
+
   const panStateRef = useRef<PanState>({
     pointerId: null,
     startX: 0,
@@ -179,8 +207,22 @@ export function MapView({
 
   const handlePointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
     if (!supportsZoom) return;
+
+    // Only handle primary pointer (left mouse button or first touch)
+    // Ignore secondary pointers (right click, multi-touch)
+    if (event.button !== 0 && event.button !== undefined) return;
+
+    // Prevent default touch behaviors like scrolling and zooming
     event.preventDefault();
-    event.currentTarget.setPointerCapture(event.pointerId);
+    event.stopPropagation();
+
+    // Capture pointer for consistent tracking across moves
+    try {
+      event.currentTarget.setPointerCapture(event.pointerId);
+    } catch (e) {
+      // Some browsers may not support pointer capture, continue anyway
+    }
+
     panStateRef.current = {
       pointerId: event.pointerId,
       startX: event.clientX,
@@ -194,7 +236,11 @@ export function MapView({
   const handlePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
     if (!supportsZoom || !isPanning) return;
     if (panStateRef.current.pointerId !== event.pointerId) return;
+
+    // Prevent default to avoid scrolling while panning
     event.preventDefault();
+    event.stopPropagation();
+
     const deltaX = event.clientX - panStateRef.current.startX;
     const deltaY = event.clientY - panStateRef.current.startY;
     setViewport((prev) => ({
@@ -205,13 +251,29 @@ export function MapView({
   };
 
   const handlePointerUp = (event: React.PointerEvent<HTMLDivElement>) => {
-    if (!supportsZoom || !isPanning) return;
+    if (!supportsZoom) return;
     if (panStateRef.current.pointerId !== event.pointerId) return;
+
     event.preventDefault();
+    event.stopPropagation();
+
     try {
       event.currentTarget.releasePointerCapture(event.pointerId);
     } catch {
       // ignore release failures (e.g. pointer already released)
+    }
+    panStateRef.current.pointerId = null;
+    setIsPanning(false);
+  };
+
+  const handlePointerCancel = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (!supportsZoom) return;
+    if (panStateRef.current.pointerId !== event.pointerId) return;
+
+    try {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    } catch {
+      // ignore release failures
     }
     panStateRef.current.pointerId = null;
     setIsPanning(false);
@@ -241,7 +303,12 @@ export function MapView({
           ? "grabbing"
           : "grab"
         : undefined,
-    touchAction: supportsZoom ? "none" : undefined,
+    // Prevent default touch behaviors when zoom/pan is enabled
+    touchAction: supportsZoom ? "none" : "pan-x pan-y",
+    // Ensure smooth interaction on mobile
+    WebkitTouchCallout: "none",
+    WebkitUserSelect: "none",
+    userSelect: "none",
   };
 
   const containerClasses = cn(
@@ -256,6 +323,11 @@ export function MapView({
         transform: `translate(${viewport.x}px, ${viewport.y}px) scale(${viewport.scale})`,
         transformOrigin: "center center",
         touchAction: "none",
+        // Ensure smooth transforms on mobile
+        willChange: "transform",
+        // Prevent text selection during pan
+        WebkitUserSelect: "none",
+        userSelect: "none",
       }
     : undefined;
 
@@ -292,6 +364,10 @@ export function MapView({
       <div
         ref={scrollContainerRef}
         className="relative z-10 h-full w-full overflow-auto scroll-smooth [-webkit-overflow-scrolling:touch]"
+        style={{
+          // When zoom/pan is enabled, prevent native scrolling interference
+          touchAction: supportsZoom ? "none" : "pan-x pan-y",
+        }}
       >
         {/* Side fades fixed, not scrolling with canvas */}
         <div className="pointer-events-none fixed left-0 top-0 z-20 h-full w-8 bg-gradient-to-r from-slate-50 to-transparent" />
@@ -303,8 +379,15 @@ export function MapView({
           onPointerDown={supportsZoom ? handlePointerDown : undefined}
           onPointerMove={supportsZoom ? handlePointerMove : undefined}
           onPointerUp={supportsZoom ? handlePointerUp : undefined}
+          onPointerCancel={supportsZoom ? handlePointerCancel : undefined}
           onPointerLeave={supportsZoom ? handlePointerLeave : undefined}
           onWheel={supportsZoom ? handleWheel : undefined}
+          // Prevent context menu on long press (mobile)
+          onContextMenu={(e) => {
+            if (supportsZoom) {
+              e.preventDefault();
+            }
+          }}
         >
           <div
             className="absolute left-0 top-0 h-full w-full"
