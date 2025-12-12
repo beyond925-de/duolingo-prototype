@@ -21,7 +21,7 @@ export function MapHeader({
   onExpressApply,
 }: MapHeaderProps) {
   return (
-    <div className=" bg-white/70 p-4 pt-20 backdrop-blur-xl">
+    <div className=" bg-white/70 p-4 backdrop-blur-xl">
       <header className="pointer-events-auto mx-auto flex w-full max-w-[1140px] items-center justify-between gap-x-7">
         <div className="flex items-center gap-3">
           <button
