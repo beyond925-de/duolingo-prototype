@@ -85,7 +85,7 @@ const config = {
         },
         float: {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-20px)" },
+          "50%": { transform: "translateY(-5px)" },
         },
         dash: {
           to: { strokeDashoffset: "-300" },

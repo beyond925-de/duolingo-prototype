@@ -7,6 +7,67 @@ import { Level } from "../../types";
 import { PositionedLevel } from "./mapTypes";
 import { StartTooltip } from "./StartTooltip";
 
+interface CompletedLevelDecorationsProps {
+  index: number;
+  nodeAccent: string;
+}
+
+function CompletedLevelDecorations({
+  index,
+  nodeAccent,
+}: CompletedLevelDecorationsProps) {
+  return (
+    <>
+      <div className="pointer-events-none absolute -left-12 top-0 animate-pulse text-xl opacity-60">
+        ✨
+      </div>
+      <div
+        className="pointer-events-none absolute -right-10 top-4 animate-pulse text-sm opacity-50"
+        style={{ animationDelay: "0.5s" }}
+      >
+        ⭐
+      </div>
+      {/* Floating skill badges for some completed levels */}
+      {index % 3 === 0 && (
+        <div
+          className="pointer-events-none absolute -left-12 top-8 animate-float-slow whitespace-nowrap rounded-full px-2 py-1 text-xs font-bold opacity-70 shadow-sm"
+          style={{
+            backgroundColor: `${nodeAccent}20`,
+            color: nodeAccent,
+            border: `1px solid ${nodeAccent}40`,
+          }}
+        >
+          🎯 Skills
+        </div>
+      )}
+      {index % 4 === 0 && (
+        <div
+          className="pointer-events-none absolute -right-16 top-12 animate-float-slower whitespace-nowrap rounded-full px-2 py-1 text-xs font-bold opacity-70 shadow-sm"
+          style={{
+            backgroundColor: `${nodeAccent}20`,
+            color: nodeAccent,
+            border: `1px solid ${nodeAccent}40`,
+          }}
+        >
+          🤝 Team
+        </div>
+      )}
+      {index % 5 === 0 && (
+        <div
+          className="pointer-events-none absolute -right-16 -top-4 animate-float whitespace-nowrap rounded-full px-2 py-1 text-xs font-bold opacity-70 shadow-sm"
+          style={{
+            backgroundColor: `${nodeAccent}20`,
+            color: nodeAccent,
+            border: `1px solid ${nodeAccent}40`,
+          }}
+        >
+          💰 Benefits
+        </div>
+      )}
+    </>
+  );
+}
+
 interface LevelNodeProps {
   position: PositionedLevel;
   isGlobalMode: boolean;
@@ -85,54 +146,7 @@ export function LevelNode({
 
       {/* Sparkles for completed levels */}
       {isCompleted && (
-        <>
-          <div className="pointer-events-none absolute -left-12 top-0 animate-pulse text-xl opacity-60">
-            ✨
-          </div>
-          <div
-            className="pointer-events-none absolute -right-10 top-4 animate-pulse text-sm opacity-50"
-            style={{ animationDelay: "0.5s" }}
-          >
-            ⭐
-          </div>
-          {/* Floating skill badges for some completed levels */}
-          {index % 3 === 0 && (
-            <div
-              className="pointer-events-none absolute -left-20 top-8 animate-float-slow whitespace-nowrap rounded-full px-2 py-1 text-xs font-bold opacity-70 shadow-sm"
-              style={{
-                backgroundColor: `${nodeAccent}20`,
-                color: nodeAccent,
-                border: `1px solid ${nodeAccent}40`,
-              }}
-            >
-              🎯 Skills
-            </div>
-          )}
-          {index % 4 === 0 && (
-            <div
-              className="pointer-events-none absolute -right-24 top-12 animate-float-slower whitespace-nowrap rounded-full px-2 py-1 text-xs font-bold opacity-70 shadow-sm"
-              style={{
-                backgroundColor: `${nodeAccent}20`,
-                color: nodeAccent,
-                border: `1px solid ${nodeAccent}40`,
-              }}
-            >
-              🤝 Team
-            </div>
-          )}
-          {index % 5 === 0 && (
-            <div
-              className="pointer-events-none absolute -right-20 -top-4 animate-float whitespace-nowrap rounded-full px-2 py-1 text-xs font-bold opacity-70 shadow-sm"
-              style={{
-                backgroundColor: `${nodeAccent}20`,
-                color: nodeAccent,
-                border: `1px solid ${nodeAccent}40`,
-              }}
-            >
-              💰 Benefits
-            </div>
-          )}
-        </>
+        <CompletedLevelDecorations index={index} nodeAccent={nodeAccent} />
       )}
 
       {/* Glow ring for current level */}
@@ -265,7 +279,8 @@ export function LevelNode({
 
       <button
         className={cn(
-          "mt-3 w-fit max-w-48  rounded-xl border-2 bg-white px-3 py-1.5 text-center text-sm font-bold shadow-lg",
+          "mt-3 w-fit max-w-48 rounded-xl border-2 bg-white px-3 py-1.5 text-center text-sm font-bold shadow-lg",
+          "relative",
           isCompleted || isCurrent ? "" : "border-slate-300 text-slate-600"
         )}
         onClick={() => onLevelClick(level)}
@@ -284,21 +299,38 @@ export function LevelNode({
         }
       >
         {level.title}
+        {isCompleted && <XPBadge levelId={level.id} />}
       </button>
-
-      {/* XP badge for completed levels */}
-      {isCompleted && (
-        <div
-          className="mt-1 flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-bold shadow-sm"
-          style={{
-            backgroundColor: `${nodeAccent}15`,
-            color: nodeAccent,
-          }}
-        >
-          <span className="text-[10px]">⭐</span>
-          <span>+100 XP</span>
-        </div>
-      )}
     </div>
   );
 }
+
+interface XPBadgeProps {
+  levelId: number;
+}
+
+const XPBadge = ({ levelId }: XPBadgeProps) => {
+  const corners = ["top-left", "top-right", "bottom-left", "bottom-right"];
+  // Use levelId to deterministically select a corner (same level always gets same corner)
+  const cornerIndex = levelId % corners.length;
+  const corner = corners[cornerIndex];
+
+  const cornerClass = {
+    "top-left": "-left-8 -top-4 -rotate-12",
+    "top-right": "-right-8 -top-4 rotate-12",
+    "bottom-left": "-left-4 -bottom-4 rotate-12",
+    "bottom-right": "-right-4 -bottom-4 -rotate-12",
+  };
+
+  return (
+    <div
+      className={cn(
+        "absolute mt-1 flex rotate-12 items-center gap-1 rounded-full bg-black/50 px-2 py-0.5 text-xs font-bold text-white shadow-sm backdrop-blur-sm",
+        cornerClass[corner as keyof typeof cornerClass]
+      )}
+    >
+      <span className="text-[10px]">⭐</span>
+      <span>+100 XP</span>
+    </div>
+  );
+};

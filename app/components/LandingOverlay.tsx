@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 import { CompanyConfig } from "../types";
+import { cn } from "@/lib/utils";
 
 interface LandingOverlayProps {
   config: CompanyConfig;
@@ -77,9 +78,21 @@ export function LandingOverlay({ config, onStart }: LandingOverlayProps) {
                   {config.company.logoUrl} {config.company.name}
                 </div>
               )}
-              <p className="mb-4 text-sm text-neutral-500 lg:text-base">
-                {config.company.industryVibe}
-              </p>
+              <div
+                className="group relative mb-4 overflow-hidden rounded-3xl border-4 bg-white p-6 shadow-lg transition-all hover:shadow-xl"
+                style={{
+                  borderColor: config.company.primaryColor,
+                }}
+              >
+                {/* Dekorativer Hintergrund-Klecks */}
+                <div
+                  className="absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-20 blur-2xl"
+                  style={{ backgroundColor: config.company.primaryColor }}
+                ></div>
+                <p className="relative z-10 text-sm text-neutral-500 lg:text-base">
+                  {config.company.industryVibe}
+                </p>
+              </div>
             </div>
 
             {/*
@@ -90,17 +103,17 @@ export function LandingOverlay({ config, onStart }: LandingOverlayProps) {
           </h1>
           */}
 
-            <div className="relative h-full md:h-2/3">
+            <div className={cn("relative h-full w-full ")}>
               {!videoLoaded && (
                 <img
                   src="https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGt0JJDlqTZ7VdmgwaGhY1XcyqSC4ArUIjzOfk"
                   alt="Video placeholder"
-                  className="absolute inset-0 h-full w-full object-contain"
+                  className="absolute inset-0 h-full w-2/3 object-contain"
                 />
               )}
               <video
                 src="https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxG39CYlDSu7t21r4oJbRUANXySaKckLzIV5hvl"
-                className="h-full w-full object-contain"
+                className="mx-auto h-full w-2/3 object-contain"
                 muted
                 autoPlay
                 loop
