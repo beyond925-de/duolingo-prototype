@@ -106,6 +106,7 @@ export interface Job {
   icon: string;
   color: string;
   tags: string[];
+  biomeThemeId?: string;
   levels: Level[];
   pathModeId?: PathModeId;
   pathOverrides?: JobPathOverrides;

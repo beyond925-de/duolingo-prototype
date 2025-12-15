@@ -333,7 +333,7 @@ export function MapView({
 
   return (
     <div className="relative h-[100dvh] w-full overflow-hidden bg-slate-50">
-      <MapBackground config={config} />
+      <MapBackground config={config} job={job} />
 
       <ApplyDialog
         config={config}

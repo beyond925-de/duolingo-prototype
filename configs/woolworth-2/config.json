@@ -150,6 +150,7 @@
       "icon": "🛒",
       "color": "#DC0732",
       "tags": ["Kundenkontakt", "Verantwortung", "Aufstiegschancen"],
+      "biomeThemeId": "craft",
       "pathModeId": "branching",
       "levels": [
         {
@@ -700,6 +701,7 @@
       "icon": "💻",
       "color": "#333333",
       "tags": ["Organisation", "Teamwork", "Zentrale"],
+      "biomeThemeId": "office",
       "pathModeId": "branching",
       "levels": [
         {
