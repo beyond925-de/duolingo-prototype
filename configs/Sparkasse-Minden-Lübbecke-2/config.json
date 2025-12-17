@@ -1,0 +1,366 @@
+{
+  "_instructions": "Sparkasse Minden-Lübbecke. Authentisch, regional verwurzelt, humorvoll (Ostwestfalen-Style).",
+  "_filename": "configs/sparkasse-minden-luebbecke/config_final.json",
+
+  "company": {
+    "name": "Sparkasse Minden-Lübbecke",
+    "logoUrl": "https://www.sparkasse-minden-luebbecke.de/content/dam/myif/sk-minden-luebbecke/work/bilder/nbf-logos/logo_rot.svg",
+    "primaryColor": "#E2001A",
+    "secondaryColor": "#FFFFFF",
+    "city": "Minden / Lübbecke",
+    "website": "https://www.spk-mi-lk.de/karriere",
+    "industryVibe": "Wir sind nicht Wall Street, wir sind Mühlenkreis. Bei uns finanzierst du den neuen Ofen vom Bäcker nebenan, nicht irgendein Startup in Berlin. Echte Werte, sicherer Hafen und ja: Mettbrötchen gehören zur Kultur.",
+    "organizationFacts": [
+      {
+        "title": "Dein erstes Ziel",
+        "value": "Der eigene Wagen. Ohne Auto bist du hier aufgeschmissen. Dein Gehalt macht's möglich.",
+        "icon": "🚗"
+      },
+      {
+        "title": "Tech-Stack",
+        "value": "iPad Pro & OSPlus. Wir geben dir die Tools, aber Netflix bitte erst nach Feierabend.",
+        "icon": "📱"
+      },
+      {
+        "title": "Atmosphäre",
+        "value": "Business Smart. Saubere Sneaker? Ja. Kaputter Hoodie? Nein.",
+        "icon": "👟"
+      }
+    ]
+  },
+
+  "landing": {
+    "headline": "Hier zu Hause. Und bald dein Revier?",
+    "subline": "Vergiss sterile Bank-Klischees. Check in 3 Minuten, ob du 'Sparkasse' im Blut hast. Vom Dresscode-Check bis zum Mettbrötchen-Mittwoch.",
+    "startButtonText": "Heimat-Mission starten 🚩"
+  },
+
+  "campus": {
+    "headline": "Wähle deine Laufbahn",
+    "subline": "Wo willst du hin?",
+    "categories": [
+      {
+        "id": "ausbildung",
+        "title": "Bankkaufmann/-frau (Der Klassiker 2.0)",
+        "jobId": "bankkaufmann"
+      },
+      {
+        "id": "studium",
+        "title": "Duales Studium (Bachelor of Arts)",
+        "jobId": "duales-studium"
+      }
+    ]
+  },
+
+  "jobs": [
+    {
+      "id": "bankkaufmann",
+      "title": "Bankkaufmann/-frau",
+      "description": "Berater, Kümmerer & Local Hero. Mach die Region stark.",
+      "icon": "🔴",
+      "color": "#E2001A",
+      "tags": ["Kundenhalle", "Beratung", "Sicherheit"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Level 1: Der Style-Check",
+          "status": "unlocked",
+          "icon": "👔",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Erster Tag in der Kundenhalle. Der Schrank ist voll. Was ziehst du an, um 'Business Smart' zu treffen?",
+              "imageUrl": "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Mein gemütlicher Hoodie mit fettem Logo. Ist doch Start-up Style.",
+                  "correct": false,
+                  "feedback": "Kann man machen, muss man aber nicht. Chef sagt: 'Schicker Pulli, aber morgen bitte mit Kragen.' Wir verwalten Vermögen, da zählt Vertrauen."
+                },
+                {
+                  "id": 2,
+                  "text": "Hemd/Bluse, Chino und saubere weiße Sneaker.",
+                  "correct": true,
+                  "feedback": "Perfekt! Modern, gepflegt, aber nicht steif. Willkommen im Team!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Level 2: Das System",
+          "status": "locked",
+          "icon": "💻",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du sitzt am PC. Vor dir: OSPlus. Das Herz der Bank. Du sollst eine Überweisung tätigen und vertippst dich. 50.000 € statt 50,00 €. Enter gedrückt. Dein Herz rast. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1526304640152-d4619684e484?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich lösche den Verlauf und hoffe, dass es niemand merkt.",
+                  "correct": false,
+                  "feedback": "Ganz falsch! Das kommt eh raus. Verstecken gilt nicht."
+                },
+                {
+                  "id": 2,
+                  "text": "Sofort zum Ausbilder: 'Mist gebaut, bitte helfen!'",
+                  "correct": true,
+                  "feedback": "Richtig. Tief durchatmen. Das 4-Augen-Prinzip rettet dich. Wir reißen hier niemandem den Kopf ab, wenn man ehrlich ist."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Level 3: Why us?",
+          "status": "locked",
+          "icon": "🏘️",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Dein Kumpel schwärmt von N26 und Trade Republic. 'Da ist alles per App, voll easy.' Was entgegnest du ihm, warum du bei der Sparkasse bist?",
+              "imageUrl": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Weil ich hier sehe, wo das Geld hingeht. Der Bäcker nebenan hat seinen Ofen durch uns.",
+                  "correct": true,
+                  "feedback": "Treffer. Wir sind das Rückgrat der Region. Startups kommen und gehen, wir bleiben."
+                },
+                {
+                  "id": 2,
+                  "text": "Weil die App auch ganz okay ist.",
+                  "correct": false,
+                  "feedback": "Zu schwach. Unser USP ist der Impact vor Ort!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Level 4: Boss-Begegnung",
+          "status": "locked",
+          "icon": "elevator",
+          "row": 3,
+          "nextLevelIds": [5],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Aufzug-Szene! Die Tür geht auf, Vorstand Markus Schaly steigt ein. Nur ihr zwei. Totenstille. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1554774853-719586f8c277?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Auf den Boden gucken und hoffen, dass die Fahrt schnell endet.",
+                  "correct": false,
+                  "feedback": "Schade. Chance vertan. Unsere Chefs beißen nicht."
+                },
+                {
+                  "id": 2,
+                  "text": "Freundlich grüßen: 'Guten Morgen Herr Schaly, sind Sie auch beim Azubi-Event nächste Woche?'",
+                  "correct": true,
+                  "feedback": "Top! Souverän und interessiert. Das merkt er sich positiv."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Level 5: Immo-Life",
+          "status": "locked",
+          "icon": "🏠",
+          "row": 4,
+          "nextLevelIds": [6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du darfst auf Wunschstation! Alle wollen in die Immobilien-Abteilung. Warum ist die so beliebt?",
+              "imageUrl": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Rausfahren, Villen besichtigen, Makler-Feeling spüren. 😎",
+                  "feedback": "Genau das! Mal raus aus der Kundenhalle, rein ins echte Leben."
+                },
+                {
+                  "id": 2,
+                  "text": "Weil der Kaffee da besser ist.",
+                  "feedback": "Vielleicht auch, aber die Außentermine sind das Highlight."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Finale: Payday",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 5,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Geschafft! Ausbildung im Sack, 400€ Prämie auf dem Konto. Was ist die erste große Investition, die im Mühlenkreis zählt?",
+              "imageUrl": "https://images.unsplash.com/photo-1532911557891-d12f6b98dddc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ein eigenes Auto! Endlich mobil. 🚗",
+                  "feedback": "Absolut verständlich. Gute Fahrt und willkommen als festes Team-Mitglied!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "duales-studium",
+      "title": "Duales Studium (Banking & Sales)",
+      "description": "Theorie an der Hochschule, Praxis am Kunden. Für Durchstarter.",
+      "icon": "🎓",
+      "color": "#333333",
+      "tags": ["Bachelor", "Karriere", "Führung"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Hörsaal vs. Halle",
+          "status": "unlocked",
+          "icon": "⚖️",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "In der Uni lernst du Finanztheorie. In der Filiale steht Oma Erna und schenkt dir Schokolade, weil du ihr geholfen hast. Was zählt mehr?",
+              "imageUrl": "https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Die Theorie. Zahlen lügen nicht.",
+                  "correct": false,
+                  "feedback": "Wichtig, aber: Das Geschäft machen wir mit Menschen. Oma Ernas Vertrauen ist unsere Währung."
+                },
+                {
+                  "id": 2,
+                  "text": "Beides. Ich brauche das Fachwissen, um den Menschen sicher zu helfen.",
+                  "correct": true,
+                  "feedback": "Exakt. Empathie + Kompetenz = Erfolg."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "vibe",
+        "question": "Dein Arbeits-Vibe?",
+        "options": [
+          {
+            "id": "team",
+            "label": "Mettbrötchen-Mittwoch mit dem Team 🥪",
+            "icon": "🤝",
+            "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "bankkaufmann": 2,
+              "duales-studium": 1
+            }
+          },
+          {
+            "id": "solo",
+            "label": "Kopfhörer auf und Bilanzen checken 🎧",
+            "icon": "📊",
+            "imageUrl": "https://images.unsplash.com/photo-1593642632823-8f78536788c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "bankkaufmann": 0,
+              "duales-studium": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "goal",
+        "question": "Was treibt dich an?",
+        "options": [
+          {
+            "id": "local",
+            "label": "Ich will sehen, was ich in der Region bewege. 🏡",
+            "icon": "📍",
+            "imageUrl": "https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "bankkaufmann": 2,
+              "duales-studium": 1
+            }
+          },
+          {
+            "id": "career",
+            "label": "Ich will Verantwortung und schnell nach oben. 🚀",
+            "icon": "📈",
+            "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "bankkaufmann": 1,
+              "duales-studium": 2
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Unser Rat für dich:",
+      "startButtonText": "Simulation starten",
+      "viewAllButtonText": "Alle Wege ansehen",
+      "skipButtonText": "Bewerbung starten"
+    }
+  },
+
+  "copy": {
+    "checkChances": "Passt du zu uns?",
+    "expressApply": "Express-Check ⚡",
+    "jobMerken": "Job merken",
+    "submit": "Karriere im Mühlenkreis starten 🚀",
+    "submitSuccess": "Angekommen! Wir melden uns schneller als du 'Dispo' sagen kannst.",
+    "victoryHeadline": "Du bist ein Sparkässler! 🔴",
+    "victorySubtext": "Du hast das Herz am rechten Fleck und den Kopf für Zahlen. Wir freuen uns auf dich!",
+    "nudgeHeadline": "Noch unsicher?",
+    "nudgeText": "Sicherer Job, iPad, top Gehalt und ein Team, das zusammenhält. Worauf wartest du?",
+    "firstName": "Wie heißt du?",
+    "phoneType": "Dein Smartphone?",
+    "schoolType": "Schulabschluss?",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule / MSA",
+    "gymnasium": "Abitur / Fachabi",
+    "andere": "Anderer Abschluss",
+    "expressApplyIntro": "Lass uns keine Zeit verlieren. Deine Skills zählen.",
+    "exploreOtherJobs": "Andere Berufe"
+  }
+}
