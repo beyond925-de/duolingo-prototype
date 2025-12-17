@@ -1,0 +1,366 @@
+{
+  "_instructions": "High-End Gamification Config für Sparkasse Minden-Lübbecke. Fokus: Modern Banking, Tech-Ausstattung & Regionaler Impact.",
+  "_filename": "configs/sparkasse-minden-luebbecke/config.json",
+
+  "company": {
+    "name": "Sparkasse Minden-Lübbecke",
+    "logoUrl": "https://www.sparkasse-minden-luebbecke.de/content/dam/myif/sk-minden-luebbecke/work/bilder/nbf-logos/logo_rot.svg",
+    "primaryColor": "#E2001A",
+    "secondaryColor": "#FFFFFF",
+    "city": "Minden & Lübbecke",
+    "website": "https://www.spk-mi-lk.de/karriere",
+    "industryVibe": "Vergiss das Klischee vom langweiligen Schalter. Wir sind der Finanz-Motor im Mühlenkreis. Bei uns gibt's keine staubigen Akten, sondern iPads ab Tag 1, fettes Gehalt und echte Verantwortung für die Region.",
+    "organizationFacts": [
+      {
+        "title": "High-Score Gehalt",
+        "value": "Startest mit ~1.268 € im 1. Jahr. Bis zu 1.600 € später. Plus 13. Gehalt.",
+        "icon": "💸"
+      },
+      {
+        "title": "Dein Tech-Stack",
+        "value": "iPad inklusive. Für die Schule, für den Job, für dich. Digital First.",
+        "icon": "📱"
+      },
+      {
+        "title": "Level Up Bonus",
+        "value": "400 € Cash extra, wenn du die Prüfung bestehst. Einfach so.",
+        "icon": "🏆"
+      }
+    ]
+  },
+
+  "landing": {
+    "headline": "Dein Upgrade zum Finanz-Profi.",
+    "subline": "Check in 3 Minuten, ob du das Zeug hast, den Mühlenkreis zu managen. Vom iPad-Setup bis zum ersten großen Deal. Bist du liquide für die Zukunft?",
+    "startButtonText": "Simulation starten 🚀"
+  },
+
+  "campus": {
+    "headline": "Wähle deinen Server",
+    "subline": "Auf welchem Weg willst du durchstarten?",
+    "categories": [
+      {
+        "id": "ausbildung",
+        "title": "Bankkaufleute (Digital & Vertrieb)",
+        "jobId": "bankkaufmann"
+      },
+      {
+        "id": "studium",
+        "title": "Duales Studium (Banking & Sales)",
+        "jobId": "duales-studium"
+      }
+    ]
+  },
+
+  "jobs": [
+    {
+      "id": "bankkaufmann",
+      "title": "Bankkaufmann/-frau (m/w/d)",
+      "description": "Berater, Psychologe & Tech-Nerd in einem. Mach Träume wahr.",
+      "icon": "💳",
+      "color": "#E2001A",
+      "tags": ["Finanzen", "Lifestyle", "Beratung"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Tag 1: The Unboxing",
+          "status": "unlocked",
+          "icon": "📦",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Welcome im Team! 🔴 Bevor du den ersten Kunden siehst, kriegst du dein Arbeitsgerät. Ein nagelneues iPad. Wie richtest du es ein?",
+              "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich lade erstmal Games runter. Zocken muss sein.",
+                  "correct": false,
+                  "feedback": "Nice try, aber wir nutzen das Ding, um Kunden zu begeistern. Erst die Arbeit, dann das Vergnügen."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich checke die Finanz-Apps und Lernplattformen. Ich will vorbereitet sein.",
+                  "correct": true,
+                  "feedback": "Starker Start! Digitalisierung ist unser Core-Business. Du hast den Spirit."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Der erste Kunden-Kontakt",
+          "status": "locked",
+          "icon": "🤝",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du stehst nicht hinter Panzerglas, sondern in der Lounge. Ein junger Kunde will 'irgendwas mit Geldanlage' machen, hat aber null Plan. Er vertraut dir. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich dreh ihm den Bausparvertrag an, den wir gerade bewerben.",
+                  "correct": false,
+                  "feedback": "Stop! 🛑 Wir verkaufen nicht einfach Produkte. Wir lösen Probleme. Hör ihm erst zu."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich nehme das Tablet, wir machen einen Finanz-Check und ich zeige ihm Optionen, die zu IHM passen.",
+                  "correct": true,
+                  "feedback": "Bingo! 🎯 Das ist moderne Beratung. Individuell, visuell und ehrlich."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Skill-Check: Empathie",
+          "status": "locked",
+          "icon": "❤️",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nicht nur Business. Eine ältere Dame kommt rein, ihr Enkel hat Geburtstag und sie kriegt die Überweisung am Automaten nicht hin. Sie ist gestresst. Deine Reaktion?",
+              "imageUrl": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich zeige ihr in Ruhe am Gerät, wie es geht, damit sie es beim nächsten Mal kann.",
+                  "correct": true,
+                  "feedback": "Ehrenmann/Ehrenfrau! 🙌 Hilfe zur Selbsthilfe. Wir lassen niemanden im Regen stehen."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich schick sie zum Schalter, ist nicht mein Job.",
+                  "correct": false,
+                  "feedback": "Falsche Einstellung. Wir sind ein Team – und für die Kunden da. Immer."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Feature: Die Wunschstation",
+          "status": "locked",
+          "icon": "🗺️",
+          "row": 3,
+          "nextLevelIds": [5],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Special Feature freigeschaltet! 🔓 Nach einem Jahr darfst du dir eine Station aussuchen (3 Wochen Deep Dive). Wo willst du hin?",
+              "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Immobilien & Baufinanzierung 🏠",
+                  "feedback": "Big Business! Hier geht's um die ganz großen Summen und Lebensträume."
+                },
+                {
+                  "id": 2,
+                  "text": "Marketing & Social Media 📣",
+                  "feedback": "Kreativ-Modus an! Zeig dem Mühlenkreis, was wir drauf haben."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Boss-Level: Payday",
+          "status": "locked",
+          "icon": "💰",
+          "row": 4,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ausbildung finished! ✅ Du hast die Prüfung gerockt. Auf deinem Konto landet die 400 € Abschlussprämie UND das erste volle Gehalt. Was machst du jetzt?",
+              "imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Weiterbilden zum Fachwirt & Karriereleiter klettern! 📈",
+                  "feedback": "Guter Plan. Die Sparkasse fördert dich weiter. Willkommen im Team!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "duales-studium",
+      "title": "Duales Studium (B.A.)",
+      "description": "Fast-Lane ins Management. Bachelor & Ausbildung in 3,5 Jahren.",
+      "icon": "🎓",
+      "color": "#333333",
+      "tags": ["Bachelor", "Management", "High-Performer"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Doppelbelastung?",
+          "status": "unlocked",
+          "icon": "⚖️",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du studierst 'Banking & Sales' an der Hochschule und arbeitest in der Filiale. Deine Kumpels chillen in den Semesterferien. Du arbeitest. Warum machst du das?",
+              "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Weil ich schon Geld verdiene, während die anderen noch BAföG beantragen. 💸",
+                  "correct": true,
+                  "feedback": "Genau das! Finanzielle Unabhängigkeit ab Tag 1."
+                },
+                {
+                  "id": 2,
+                  "text": "Weil ich gerne lerne.",
+                  "correct": true,
+                  "feedback": "Auch gut. Aber das Gehalt ist der echte Gamechanger."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Strategie-Meeting",
+          "status": "locked",
+          "icon": "📊",
+          "row": 1,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du sitzt im Meeting mit der Geschäftsleitung. Es geht um die Zinswende. Du hast in der Uni gerade Theorien dazu gelernt. Traust du dich, was zu sagen?",
+              "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Klar, ich bringe frischen Wind und Fakten rein! 💡",
+                  "correct": true,
+                  "feedback": "Top! Wir suchen keine Ja-Sager, sondern Mit-Denker."
+                },
+                {
+                  "id": 2,
+                  "text": "Lieber Mund halten, bin ja nur Student.",
+                  "correct": false,
+                  "feedback": "Falsch. Bei uns zählen gute Ideen, egal wer sie hat."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "type",
+        "question": "Welcher Typ bist du?",
+        "options": [
+          {
+            "id": "action",
+            "label": "Macher: Ich will Ergebnisse sehen & Menschen begeistern. 🗣️",
+            "icon": "🚀",
+            "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "bankkaufmann": 2,
+              "duales-studium": 1
+            }
+          },
+          {
+            "id": "brain",
+            "label": "Analytiker: Ich will die Hintergründe verstehen & planen. 🧠",
+            "icon": "♟️",
+            "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "bankkaufmann": 1,
+              "duales-studium": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "money",
+        "question": "Dein Ziel?",
+        "options": [
+          {
+            "id": "safe",
+            "label": "Schnell eigenes Geld & Sicherheit im Mühlenkreis. 🏠",
+            "icon": "⚓",
+            "imageUrl": "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "bankkaufmann": 2,
+              "duales-studium": 1
+            }
+          },
+          {
+            "id": "high",
+            "label": "Maximum rausholen, egal wie stressig es wird. 📈",
+            "icon": "🔥",
+            "imageUrl": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "bankkaufmann": 0,
+              "duales-studium": 2
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Unsere Empfehlung für deine Zukunft:",
+      "startButtonText": "Karriere starten",
+      "viewAllButtonText": "Alles ansehen",
+      "skipButtonText": "Direkt bewerben"
+    }
+  },
+
+  "copy": {
+    "checkChances": "Check deine Skills",
+    "expressApply": "Fast-Track Bewerbung ⚡",
+    "jobMerken": "Job speichern",
+    "submit": "Jetzt Durchstarten 🚀",
+    "submitSuccess": "Daten sind sicher übertragen! Wir checken das und melden uns asap.",
+    "victoryHeadline": "Jackpot! Du passt zu uns. 🎰",
+    "victorySubtext": "Du hast das Mindset, das wir brauchen. Hol dir den Vertrag!",
+    "nudgeHeadline": "Zweifelst du noch?",
+    "nudgeText": "1.300€ Startgehalt + iPad + sicherer Job. Was gibt's da zu überlegen?",
+    "firstName": "Dein Vorname?",
+    "phoneType": "Wie erreichen wir dich?",
+    "schoolType": "Dein Schulabschluss?",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule / MSA",
+    "gymnasium": "Abitur / Fachabi",
+    "andere": "Anderer Abschluss",
+    "expressApplyIntro": "Lass das Anschreiben weg. Deine Skills zählen.",
+    "exploreOtherJobs": "Andere Wege ansehen"
+  }
+}
