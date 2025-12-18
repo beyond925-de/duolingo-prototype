@@ -72,7 +72,7 @@
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Erster Tag! 🎉 Du bekommst dein Dienst-iPad. Wir arbeiten papierlos und smart. Ein älterer Kunde kommt rein und schimpft über die 'neue Technik' beim Online-Banking. Wie reagierst du?",
+              "scenario": "Erster Tag! 🎉 Du bekommst dein Dienst-iPad. Wir arbeiten papierlos und smart. Ein älterer Kunde kommt rein und schimpft über die 'neue Technik' beim Online-Banking. Er droht, zur Konkurrenz zu gehen. Wie reagierst du?",
               "imageUrl": "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
               "type": "single-select-correct",
               "options": [
@@ -80,13 +80,25 @@
                   "id": 1,
                   "text": "Ich schicke ihn zum Schalter, dafür bin ich noch nicht fit genug.",
                   "correct": false,
-                  "feedback": "Trau dich! Wir bringen dir alles bei. Wegschicken ist keine Option."
+                  "feedback": "Zu passiv! Wegschicken löst das Problem nicht. Trau dich!"
                 },
                 {
                   "id": 2,
                   "text": "Ich hole mein iPad, setze mich zu ihm und zeige ihm Schritt für Schritt, wie einfach die App ist.",
                   "correct": true,
-                  "feedback": "Perfekt! Das ist 'Einfühlungsvermögen'. Du nimmst die Angst vor der Technik."
+                  "feedback": "Perfekt! Das ist 'Einfühlungsvermögen'. Du nimmst die Angst vor der Technik und zeigst Kompetenz."
+                },
+                {
+                  "id": 3,
+                  "text": "Ich sage ihm, dass er sich an die Zukunft gewöhnen muss, sonst ist er abgehängt.",
+                  "correct": false,
+                  "feedback": "Autsch! Das ist arrogant und der sicherste Weg, den Kunden zu verlieren."
+                },
+                {
+                  "id": 4,
+                  "text": "Ich gebe ihm eine Broschüre mit, die er zuhause lesen kann.",
+                  "correct": false,
+                  "feedback": "Besser als nichts, aber echte Hilfe sieht anders aus. 'Wir machen es einfach' ist unser Motto."
                 }
               ]
             }
@@ -94,11 +106,39 @@
         },
         {
           "id": 2,
+          "title": "Team-Vibe",
+          "status": "locked",
+          "icon": "🤝",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Mittagspause! 🍔 Das Team bestellt Pizza. Du bist neu. Wie läuft das bei uns?",
+              "imageUrl": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich esse mein Brot alleine im Park.",
+                  "feedback": "Kannst du machen, aber du verpasst was! Wir sind eine Gemeinschaft."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich setze mich dazu und lerne die Kollegen kennen.",
+                  "feedback": "Gute Wahl! Bei uns hilft jeder jedem – das fängt beim Mittagessen an."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
           "title": "Mission: Diskretion",
           "status": "locked",
           "icon": "🤫",
-          "row": 1,
-          "nextLevelIds": [3],
+          "row": 2,
+          "nextLevelIds": [4],
           "scenarios": [
             {
               "id": 1,
@@ -112,12 +152,12 @@
           ]
         },
         {
-          "id": 3,
+          "id": 4,
           "title": "Service & Beratung",
           "status": "locked",
           "icon": "💬",
-          "row": 2,
-          "nextLevelIds": [4],
+          "row": 3,
+          "nextLevelIds": [5],
           "scenarios": [
             {
               "id": 1,
@@ -135,12 +175,76 @@
           ]
         },
         {
-          "id": 4,
+          "id": 5,
+          "title": "Learning: Fehlerkultur",
+          "status": "locked",
+          "icon": "💡",
+          "row": 4,
+          "nextLevelIds": [6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ups! 🛑 Du hast bei einer Überweisung einen Zahlendreher gemacht. Das Geld ist auf dem falschen Konto. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1525785967371-87ba44b3e6cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich hoffe, dass es niemand merkt und buche es heimlich zurück.",
+                  "correct": false,
+                  "feedback": "Ganz schlecht. Vertuschen bricht Vertrauen."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich gehe sofort zu meiner Ausbilderin, beichte den Fehler und wir korrigieren es gemeinsam.",
+                  "correct": true,
+                  "feedback": "Richtig! Fehler passieren. Wichtig ist, offen damit umzugehen und daraus zu lernen."
+                },
+                {
+                  "id": 3,
+                  "text": "Ich rufe den Kunden an, der das Geld bekommen hat, und bitte ihn, es zurückzuschicken.",
+                  "correct": false,
+                  "feedback": "Vorsicht! Das ist ein Datenschutzverstoß und unprofessionell. Intern klären!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Erfolgserlebnis",
+          "status": "locked",
+          "icon": "🏆",
+          "row": 5,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Die Kundin mit dem iPad-Problem von Tag 1 kommt wieder rein. Sie strahlt und bringt eine Schachtel Pralinen mit. 'Danke, dass Sie mir das gezeigt haben! Ich mache jetzt alles per App!' Wie fühlst du dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1513118172236-00b7cc57e1fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Stolz! Ich habe echt geholfen.",
+                  "feedback": "Genau das ist unser Antrieb. Banking ist People Business."
+                },
+                {
+                  "id": 2,
+                  "text": "Die Schokolade ist das Beste daran.",
+                  "feedback": "Auch lecker, aber das Gefühl, ein Problem gelöst zu haben, hält länger!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
           "title": "Highlight: Wunschstation",
           "status": "locked",
           "icon": "⭐",
-          "row": 3,
-          "nextLevelIds": [5],
+          "row": 6,
+          "nextLevelIds": [8],
           "scenarios": [
             {
               "id": 1,
@@ -163,12 +267,12 @@
           ]
         },
         {
-          "id": 5,
+          "id": 8,
           "title": "Der Sparkassen-Deal",
           "status": "locked",
           "icon": "✅",
-          "row": 4,
-          "nextLevelIds": [6],
+          "row": 7,
+          "nextLevelIds": [9],
           "scenarios": [
             {
               "id": 1,
@@ -200,12 +304,12 @@
           ]
         },
         {
-          "id": 6,
+          "id": 9,
           "title": "Karriere: Weiterbildung",
           "status": "locked",
           "icon": "🎓",
-          "row": 5,
-          "nextLevelIds": [7],
+          "row": 8,
+          "nextLevelIds": [10],
           "scenarios": [
             {
               "id": 1,
@@ -228,11 +332,11 @@
           ]
         },
         {
-          "id": 7,
+          "id": 10,
           "title": "Check-Out",
           "status": "locked",
           "icon": "🏁",
-          "row": 6,
+          "row": 9,
           "nextLevelIds": [],
           "scenarios": [
             {
@@ -272,21 +376,33 @@
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Duales Studium heißt: Du bist Azubi UND Student. Das ist stressig, aber lohnt sich. Wie organisierst du dich?",
+              "scenario": "Duales Studium heißt: Du bist Azubi UND Student. Klausurenphase an der Hochschule und in der Bank brennt die Hütte wegen Jahresabschluss. Wie organisierst du dich?",
               "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
               "type": "single-select-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Ich lass alles auf mich zukommen.",
+                  "text": "Ich lass alles auf mich zukommen, wird schon.",
                   "correct": false,
-                  "feedback": "Das wird eng. Zeitmanagement ist hier der Schlüssel!"
+                  "feedback": "Das wird eng. Zeitmanagement und Priorisierung sind hier der Schlüssel!"
                 },
                 {
                   "id": 2,
-                  "text": "Ich nutze mein iPad für Lernpläne und digitale Skripte.",
+                  "text": "Ich erstelle einen Lernplan im iPad und spreche frühzeitig mit meinem Teamleiter über freie Tage.",
                   "correct": true,
-                  "feedback": "Vorbildlich. So schaffst du Uni und Job locker."
+                  "feedback": "Vorbildlich. Kommunikation und Planung sind essenziell für Duale Studenten."
+                },
+                {
+                  "id": 3,
+                  "text": "Ich melde mich in der Bank krank, um zu lernen.",
+                  "correct": false,
+                  "feedback": "No-Go! Das ist unfair gegenüber dem Team und fliegt auf."
+                },
+                {
+                  "id": 4,
+                  "text": "Ich verschiebe die Klausur, der Job geht vor.",
+                  "correct": false,
+                  "feedback": "Vorsicht. Das Studium hat feste Zeiten. Du musst beides unter einen Hut bekommen."
                 }
               ]
             }
@@ -302,7 +418,7 @@
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Ein Firmenkunde braucht einen Kredit für eine neue Maschine. Du analysierst die Bilanz. Worauf achtest du?",
+              "scenario": "Ein Firmenkunde braucht einen Kredit für eine neue Maschine (500.000€). Du analysierst die Bilanz. Worauf achtest du?",
               "imageUrl": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
               "type": "multiple-select",
               "options": [
@@ -323,6 +439,12 @@
                   "text": "Farbe des Logos 🎨",
                   "correct": false,
                   "feedback": "Eher unwichtig für den Kredit ;)"
+                },
+                {
+                  "id": 4,
+                  "text": "Privatvermögen des Chefs 🏠",
+                  "correct": true,
+                  "feedback": "Guter Punkt! Haftet er persönlich? Das minimiert unser Risiko."
                 }
               ]
             }
@@ -330,11 +452,112 @@
         },
         {
           "id": 3,
+          "title": "Präsentation",
+          "status": "locked",
+          "icon": "🎤",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Erfolgserlebnis! 🎉 Du darfst deine Analyse im Kredit-Komitee vor dem Vorstand präsentieren. Du bist nervös. Wie startest du?",
+              "imageUrl": "https://images.unsplash.com/photo-1475721027766-966970794ca4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ähm, ja, also ich habe mir das mal angesehen...",
+                  "correct": false,
+                  "feedback": "Zu unsicher. Verkauf deine Leistung!"
+                },
+                {
+                  "id": 2,
+                  "text": "Guten Morgen. Wir haben eine Chance, einen Top-Kunden zu binden. Hier sind die Zahlen, die dafür sprechen.",
+                  "correct": true,
+                  "feedback": "Stark! Klar, strukturiert und zielorientiert. So überzeugst du Führungskräfte."
+                },
+                {
+                  "id": 3,
+                  "text": "Ich lese einfach die Bilanzkennzahlen vor.",
+                  "correct": false,
+                  "feedback": "Langweilig. Der Vorstand will deine EINSCHÄTZUNG, nicht nur Zahlen."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Learning: Vertrieb",
+          "status": "locked",
+          "icon": "💼",
+          "row": 3,
+          "nextLevelIds": [5],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nicht jeder Termin läuft super. Du hast einem Kunden eine tolle Anlagestrategie vorgestellt, aber er sagt 'Nein' und geht zur Online-Konkurrenz. Wie gehst du damit um?",
+              "imageUrl": "https://images.unsplash.com/photo-1559599238-308793637427?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich nehme es persönlich und zweifle an mir.",
+                  "correct": false,
+                  "feedback": "Nicht doch! Ablehnung gehört zum Vertrieb dazu."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich schimpfe über den geizigen Kunden.",
+                  "correct": false,
+                  "feedback": "Unprofessionell. Jeder Kunde entscheidet selbst."
+                },
+                {
+                  "id": 3,
+                  "text": "Ich analysiere das Gespräch: War ich zu technisch? Habe ich seine Bedürfnisse wirklich verstanden? Nächstes Mal besser!",
+                  "correct": true,
+                  "feedback": "Genau das ist die Gewinner-Mentalität. Lerne aus jedem 'Nein'."
+                },
+                {
+                  "id": 4,
+                  "text": "Ich rufe ihn jeden Tag an, bis er zusagt.",
+                  "correct": false,
+                  "feedback": "Das ist Belästigung. Akzeptiere das Nein und bleib freundlich."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Highlight: Führung",
+          "status": "locked",
+          "icon": "👥",
+          "row": 4,
+          "nextLevelIds": [6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Im 3. Jahr darfst du probeweise eine Gruppe neuer Azubis bei einem Projekt leiten. Einer tanzt aus der Reihe und macht Pause, wenn alle arbeiten. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Ey, chill mal. Die Präsentation hat doch noch Zeit bis morgen. Ich hol mir erst mal nen Kaffee."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
           "title": "Führungskraft von morgen",
           "status": "locked",
           "icon": "🚀",
-          "row": 2,
-          "nextLevelIds": [],
+          "row": 5,
+          "nextLevelIds": [7],
           "scenarios": [
             {
               "id": 1,
@@ -344,6 +567,30 @@
               "allowTextInput": true,
               "options": [],
               "scenario": "Beschreibe kurz dein Traumziel (z.B. Filialleiter, Vermögensberater...)"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Check-Out",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 6,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bachelor + Berufserfahrung = Top-Startchancen. Bewirb dich jetzt für das Duale Studium!",
+              "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Bewerbung ist so gut wie raus! 🎓",
+                  "feedback": "Wir freuen uns auf dich!"
+                }
+              ]
             }
           ]
         }
@@ -436,4 +683,3 @@
     "exploreOtherJobs": "Andere Jobs ansehen"
   }
 }
-
