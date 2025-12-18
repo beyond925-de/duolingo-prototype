@@ -849,6 +849,7 @@ The company configuration defines branding, visual identity, and company-specifi
 ```typescript
 {
   name: string;                    // Company name
+  slug: string;                    // URL-friendly identifier (lowercase, alphanumeric with hyphens only)
   logoUrl: string;                 // Emoji or URL for the company logo (displayed at top)
   logoImageUrl?: string;           // Optional image URL for logo (takes precedence over logoUrl)
   signatureEmoji?: string;         // Optional emoji used for background floating images/blobs
@@ -868,6 +869,7 @@ The company configuration defines branding, visual identity, and company-specifi
 ### Field Descriptions
 
 - **name**: Company name displayed throughout the application
+- **slug**: URL-friendly identifier for the company. Must be lowercase, alphanumeric characters and hyphens only (e.g., "sparkasse-minden-luebbecke"). Used in URLs instead of the company name to avoid special character issues (like "Ü"). Must be unique across all configs.
 - **logoUrl**: Emoji or URL for the company logo. Used for the logo displayed at the top of screens (Landing, Campus, etc.). If it's a URL starting with "http", it will be rendered as an image. Otherwise, it's treated as an emoji.
 - **logoImageUrl**: Optional image URL for the company logo. If provided, takes precedence over `logoUrl` for logo display.
 - **signatureEmoji**: Optional emoji used for background floating images/blobs. This emoji appears as decorative floating elements in the background of Landing, Campus, and Map views. If not provided, background blobs will not be displayed. This is separate from `logoUrl` - the logo is for the actual company logo at the top, while `signatureEmoji` is for decorative background elements.
@@ -884,6 +886,7 @@ The company configuration defines branding, visual identity, and company-specifi
 {
   "company": {
     "name": "Sollich",
+    "slug": "sollich",
     "logoUrl": "🍫",
     "logoImageUrl": "https://example.com/logo.png",
     "signatureEmoji": "🍫",

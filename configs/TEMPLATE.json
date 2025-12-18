@@ -4,6 +4,7 @@
 
   "company": {
     "name": "YOUR_COMPANY_NAME",
+    "slug": "your-company-slug",
     "logoUrl": "🏢",
     "logoImageUrl": "https://example.com/logo.png",
     "signatureEmoji": "🏢",

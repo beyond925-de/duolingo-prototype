@@ -52,6 +52,7 @@ Now replace the placeholder text with your company's real information:
 ```json
 "company": {
   "name": "Your Company Name",        ← Put your company name here
+  "slug": "your-company-slug",        ← URL-friendly identifier (lowercase, no special chars like Ü)
   "logoUrl": "🏢",                    ← Put an emoji or logo URL
   "logoImageUrl": "https://...",      ← Optional: Image URL for logo (takes precedence)
   "primaryColor": "#3b82f6",          ← Your brand color (hex code)
@@ -60,6 +61,12 @@ Now replace the placeholder text with your company's real information:
   "website": "https://yoursite.com",  ← Company website
   "industryVibe": "What makes you special?", ← 1-2 sentences
 ```
+
+**About the slug field:**
+- The slug is used in URLs (e.g., `/your-company-slug`)
+- Must be lowercase, alphanumeric with hyphens only
+- Replace special characters: "Ü" → "ue", "ä" → "ae", "ö" → "oe"
+- Example: "Sparkasse Minden-Lübbecke" → slug: `"sparkasse-minden-luebbecke"`
 
 **Need help with colors?**
 
@@ -171,6 +178,7 @@ Done! 🎉
 Before submitting, make sure:
 
 - [ ] Company name is correct
+- [ ] Slug is lowercase, alphanumeric with hyphens only (e.g., "sparkasse-minden-luebbecke")
 - [ ] Colors are in hex format (like `#FF5733`)
 - [ ] Website URL starts with `https://`
 - [ ] At least one job is configured
