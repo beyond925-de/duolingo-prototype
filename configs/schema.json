@@ -9,6 +9,7 @@
       "type": "object",
       "required": [
         "name",
+        "slug",
         "logoUrl",
         "primaryColor",
         "secondaryColor",
@@ -20,6 +21,12 @@
         "name": {
           "type": "string",
           "description": "Company name",
+          "minLength": 1
+        },
+        "slug": {
+          "type": "string",
+          "description": "URL-friendly identifier for the company (lowercase, no special characters)",
+          "pattern": "^[a-z0-9-]+$",
           "minLength": 1
         },
         "logoUrl": {

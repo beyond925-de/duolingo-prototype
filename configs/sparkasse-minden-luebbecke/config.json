@@ -4,6 +4,7 @@
 
   "company": {
     "name": "Sparkasse Minden-Lübbecke",
+    "slug": "sparkasse-minden-luebbecke",
     "logoUrl": "https://www.sparkasse-minden-luebbecke.de/content/dam/myif/sk-minden-luebbecke/work/bilder/nbf-logos/logo_rot.svg",
     "primaryColor": "#E2001A",
     "secondaryColor": "#FFFFFF",
@@ -238,7 +239,7 @@
                 {
                   "id": 2,
                   "text": "Weil ich gerne lerne.",
-                  "correct": true,
+                  "correct": false,
                   "feedback": "Auch gut. Aber das Gehalt ist der echte Gamechanger."
                 }
               ]

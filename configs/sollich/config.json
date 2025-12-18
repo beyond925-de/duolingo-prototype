@@ -1,6 +1,7 @@
 {
   "company": {
     "name": "Sollich",
+    "slug": "sollich",
     "logoUrl": "🍫",
     "logoImageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sollich.com%2Ffileadmin%2Fimages%2Fsollich-logo.png&f=1&nofb=1&ipt=8de60a20c164c16dceb58cf1273f841cdda463ddd61badc6ef65ec9b174d0335",
     "signatureEmoji": "🍫",

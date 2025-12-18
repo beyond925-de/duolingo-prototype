@@ -13,7 +13,8 @@
     "db:push": "npx drizzle-kit push",
     "db:prod": "tsx ./scripts/prod.ts",
     "sync-config": "tsx ./scripts/sync-config.ts",
-    "validate-config": "node ./configs/.validate-config.js"
+    "validate-config": "node ./configs/.validate-config.js",
+    "validate-all-configs": "node ./scripts/validate-all-configs.js"
   },
   "author": {
     "name": "Aaron Richter",

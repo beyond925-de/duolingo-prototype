@@ -4,6 +4,7 @@
 
   "company": {
     "name": "Woolworth",
+    "slug": "woolworth",
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Woolworth_Logo.svg/2560px-Woolworth_Logo.svg.png",
     "signatureEmoji": "🛒",
     "primaryColor": "#DC0732",

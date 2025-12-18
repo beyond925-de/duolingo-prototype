@@ -1,6 +1,7 @@
 {
   "company": {
     "name": "TechFlow",
+    "slug": "techflow",
     "logoUrl": "💻",
     "signatureEmoji": "💻",
     "primaryColor": "#6366f1",

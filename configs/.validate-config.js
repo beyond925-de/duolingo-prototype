@@ -26,8 +26,15 @@ function validateConfig(filePath) {
     }
 
     // Validate company
-    if (!config.company.name || !config.company.primaryColor) {
-      console.error("❌ Company must have name and primaryColor");
+    if (!config.company.name || !config.company.slug || !config.company.primaryColor) {
+      console.error("❌ Company must have name, slug, and primaryColor");
+      return false;
+    }
+
+    // Validate slug format
+    const slugPattern = /^[a-z0-9-]+$/;
+    if (!slugPattern.test(config.company.slug)) {
+      console.error("❌ company.slug must be lowercase alphanumeric with hyphens only");
       return false;
     }
 

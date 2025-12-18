@@ -4,6 +4,7 @@
 
   "company": {
     "name": "Berliner Bäder",
+    "slug": "berliner-baeder",
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Berliner_B%C3%A4der_Logo_06.2018.svg",
     "primaryColor": "#005596",
     "secondaryColor": "#FFFFFF",

@@ -4,6 +4,7 @@
 
   "company": {
     "name": "NORDSEE",
+    "slug": "nordsee",
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nordsee_Logo.svg/2560px-Nordsee_Logo.svg.png",
     "primaryColor": "#E30613",
     "secondaryColor": "#FFFFFF",

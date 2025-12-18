@@ -130,6 +130,7 @@ export interface OrganizationFact {
 
 export interface CompanyInfo {
   name: string;
+  slug: string; // URL-friendly identifier (lowercase, no special characters)
   logoUrl: string; // Emoji or URL
   logoImageUrl?: string; // Optional image URL for logo (takes precedence over logoUrl if provided)
   signatureEmoji?: string; // Emoji used for background floating images/blobs
