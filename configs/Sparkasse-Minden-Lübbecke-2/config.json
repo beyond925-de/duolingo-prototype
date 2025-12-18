@@ -1,53 +1,52 @@
 {
-  "_instructions": "Expert Config Sparkasse Minden-Lübbecke. Features: Branching Paths, Harder Dilemmas, Authentic 'Westfalen' Vibe.",
-  "_filename": "configs/sparkasse-minden-luebbecke/config_expert.json",
+  "_instructions": "Copy this template to create a new company config. Replace all placeholder values with your company's information.",
+  "_filename": "configs/sparkasse-minden-luebbecke/config.json",
 
   "company": {
     "name": "Sparkasse Minden-Lübbecke",
-    "slug": "sparkasse-minden-luebbecke-2",
     "logoUrl": "https://www.sparkasse-minden-luebbecke.de/content/dam/myif/sk-minden-luebbecke/work/bilder/nbf-logos/logo_rot.svg",
     "primaryColor": "#E2001A",
     "secondaryColor": "#FFFFFF",
-    "city": "Minden / Lübbecke",
-    "website": "https://www.spk-mi-lk.de/karriere",
-    "industryVibe": "Wir suchen keine Jasager. Wir suchen Mitdenker. Im Mühlenkreis verwalten wir echte Werte. Hier musst du entscheiden: Sicherheit oder Chance? Empathie oder Vorschrift? Zeig uns, dass du beides kannst.",
+    "city": "Minden",
+    "website": "https://www.sparkasse-minden-luebbecke.de/karriere",
+    "industryVibe": "Wir sind die Bank für den Mühlenkreis. Aber vergiss Anzug-Zwang und Langeweile. Bei uns startest du mit iPad, Top-Gehalt und einem Team, das dich pusht. Banking ist heute digital, nah und menschlich.",
     "organizationFacts": [
       {
-        "title": "Real Talk",
-        "value": "Kein 'Get Rich Quick'. Wir bauen Vermögen über Generationen auf. Das braucht Geduld und Integrität.",
-        "icon": "🛡️"
+        "title": "Cash-Flow",
+        "value": "Über 1.250 € schon im 1. Jahr + 13. Gehalt (90%). Da können andere einpacken.",
+        "icon": "💸"
       },
       {
-        "title": "Dein Werkzeug",
-        "value": "OSPlus & iPad. Mächtige Tools, aber du musst sie bedienen können (und den Datenschutz beachten!).",
-        "icon": "🔐"
+        "title": "Digital First",
+        "value": "Dein eigenes iPad bekommst du direkt zum Start – für Berufsschule und Job.",
+        "icon": "📱"
       },
       {
-        "title": "Kultur",
-        "value": "Wir duzen uns im Team, siezen den Kunden (meistens). Professionalität trifft westfälische Herzlichkeit.",
-        "icon": "🤝"
+        "title": "Wunschkonzert",
+        "value": "3 Wochen 'Wunschstation': Du entscheidest, wo du reinschnupperst (z.B. Marketing oder Baufinanzierung).",
+        "icon": "❤️"
       }
     ]
   },
 
   "landing": {
-    "headline": "Bereit für echte Verantwortung?",
-    "subline": "Banking ist mehr als Geldzählen. Es ist Psychologie, Recht und Strategie. Wähle deinen Pfad und teste, ob du dem Druck gewachsen bist.",
-    "startButtonText": "Challenge akzeptieren ⚔️"
+    "headline": "Deine Karriere im roten Bereich. (Im positiven Sinne!)",
+    "subline": "Erlebe, wie moderne Ausbildung funktioniert: Digital, regional und mit viel Verantwortung. Teste jetzt, ob du der Sparkassen-Typ bist.",
+    "startButtonText": "Konto eröffnen... äh, Karriere starten! 🚀"
   },
 
   "campus": {
-    "headline": "Dein Karriere-Server",
-    "subline": "Wähle deine Spezialisierung.",
+    "headline": "Dein Karriereweg",
+    "subline": "Wie hoch willst du hinaus?",
     "categories": [
       {
         "id": "ausbildung",
-        "title": "Bankkaufmann/-frau (Der Allrounder)",
+        "title": "Der Klassiker: Bankkaufmann (m/w/d)",
         "jobId": "bankkaufmann"
       },
       {
         "id": "studium",
-        "title": "Duales Studium (Der Stratege)",
+        "title": "Der Turbo: Duales Studium",
         "jobId": "duales-studium"
       }
     ]
@@ -57,37 +56,37 @@
     {
       "id": "bankkaufmann",
       "title": "Bankkaufmann/-frau",
-      "description": "Zwischen Kundenwünschen und Bankgeheimnis. Findest du die Balance?",
-      "icon": "💳",
+      "description": "Die Basis für alles. Lerne Finanzprofi zu sein – digital und persönlich.",
+      "icon": "🔴",
       "color": "#E2001A",
-      "tags": ["Beratung", "Compliance", "Vertrieb"],
-      "pathModeId": "branching",
+      "tags": ["Kommunikation", "Finanzen", "iPad"],
+      "pathModeId": "linear",
       "levels": [
         {
           "id": 1,
-          "title": "Level 1: Compliance-Check",
+          "title": "Onboarding & iPad",
           "status": "unlocked",
-          "icon": "🚨",
+          "icon": "📱",
           "row": 0,
           "nextLevelIds": [2],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Ein guter Bekannter vom Sportverein kommt an den Schalter. Er hat seinen Ausweis vergessen, will aber dringend 500€ abheben. Er sagt: 'Komm, du kennst mich doch seit 10 Jahren!' Was tust du?",
-              "imageUrl": "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "scenario": "Erster Tag! 🎉 Du bekommst dein Dienst-iPad. Wir arbeiten papierlos und smart. Ein älterer Kunde kommt rein und schimpft über die 'neue Technik' beim Online-Banking. Wie reagierst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
               "type": "single-select-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Ich zahle es aus. Man muss auch mal Fünfe gerade sein lassen im Dorf.",
+                  "text": "Ich schicke ihn zum Schalter, dafür bin ich noch nicht fit genug.",
                   "correct": false,
-                  "feedback": "Kritischer Fehler! 🛑 Das ist ein Verstoß gegen die Sicherheitsrichtlinien. Wenn das rauskommt, hast du ein massives Problem. Freundschaft endet am Schalter."
+                  "feedback": "Trau dich! Wir bringen dir alles bei. Wegschicken ist keine Option."
                 },
                 {
                   "id": 2,
-                  "text": "Ich bleibe hart: 'Sorry, ohne Ausweis geht nichts. Vorschrift ist Vorschrift.'",
+                  "text": "Ich hole mein iPad, setze mich zu ihm und zeige ihm Schritt für Schritt, wie einfach die App ist.",
                   "correct": true,
-                  "feedback": "Korrekt, aber hart. Die Kunst ist es jetzt, das so zu sagen, dass er nicht sauer ist. Sicherheit geht vor Bekanntschaft."
+                  "feedback": "Perfekt! Das ist 'Einfühlungsvermögen'. Du nimmst die Angst vor der Technik."
                 }
               ]
             }
@@ -95,57 +94,41 @@
         },
         {
           "id": 2,
-          "title": "Die Weichenstellung",
+          "title": "Mission: Diskretion",
           "status": "locked",
-          "icon": "🔀",
+          "icon": "🤫",
           "row": 1,
-          "nextLevelIds": [3, 4],
+          "nextLevelIds": [3],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Du hast die Basics drauf. Jetzt musst du dich entscheiden: Wo liegt deine Stärke? Wähle deinen Pfad für die nächste Woche.",
-              "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-no-correct",
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Pfad A: Privatkunden & Emotionen (Ich löse Lebensprobleme) 🏠",
-                  "feedback": "Du gehst in die Baufinanzierung und Vorsorge."
-                },
-                {
-                  "id": 2,
-                  "text": "Pfad B: Firmenkunden & Analyse (Ich verstehe Geschäftsmodelle) 🏭",
-                  "feedback": "Du gehst in die Firmenkunden-Betreuung."
-                }
-              ]
+              "scenario": "Du triffst einen Kumpel beim Sport. Er fragt dich: 'Sag mal, der Müller von nebenan, hat der eigentlich viel Geld auf dem Konto? Der fährt so ein dickes Auto.' Dein Test auf Bankgeheimnis.",
+              "imageUrl": "https://images.unsplash.com/photo-1521791136064-7985c1d71799?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "text-field",
+              "allowTextInput": true,
+              "options": [],
+              "scenario": "Was antwortest du ihm? (Tippe deine Antwort kurz ein)"
             }
           ]
         },
         {
           "id": 3,
-          "title": "Pfad A: Der Haustraum",
+          "title": "Service & Beratung",
           "status": "locked",
-          "icon": "🔑",
+          "icon": "💬",
           "row": 2,
-          "nextLevelIds": [5],
+          "nextLevelIds": [4],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Ein junges Paar will ein altes Bauernhaus im Mühlenkreis kaufen. Ihr Budget ist extrem knapp. Die Rate würde sie finanziell fast erwürgen. Aber sie haben sich 'verliebt'. Wie berätst du?",
-              "imageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-correct",
-              "options": [
+              "scenario": "Du sitzt am Schalter. Eine junge Kundin möchte ihren ersten Sparplan für den Führerschein einrichten. Sie hat keine Ahnung von Aktien oder Fonds. Berate sie!",
+              "imageUrl": "https://images.unsplash.com/photo-1556740758-90de29b94f1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
                 {
-                  "id": 1,
-                  "text": "Ich mache die Finanzierung passend. Wenn sie es wollen, ist es ihre Verantwortung.",
-                  "correct": false,
-                  "feedback": "Zu kurz gedacht. Wenn die Zinsen steigen, platzt der Kredit. Wir haben eine Fürsorgepflicht."
-                },
-                {
-                  "id": 2,
-                  "text": "Ich rate ab und zeige auf, was passiert, wenn die Heizung kaputt geht. Auch wenn ich den Abschluss verliere.",
-                  "correct": true,
-                  "feedback": "Stark. Das ist echte Beratung. Du verzichtest auf Umsatz, gewinnst aber langfristiges Vertrauen."
+                  "role": "assistant",
+                  "content": "Hi! Ich will für mein Auto sparen, aber mein Geld soll nicht weniger werden. Aktien sind doch voll gefährlich, oder?"
                 }
               ]
             }
@@ -153,29 +136,27 @@
         },
         {
           "id": 4,
-          "title": "Pfad B: Der Mittelstand",
+          "title": "Highlight: Wunschstation",
           "status": "locked",
-          "icon": "🏗️",
-          "row": 2,
+          "icon": "⭐",
+          "row": 3,
           "nextLevelIds": [5],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Ein lokaler Handwerker braucht eine neue Maschine für 200.000€. Seine Zahlen vom letzten Jahr waren aber schlecht (wegen Krankheit). Er ist ein 'Urgestein' in der Region. Gibst du den Kredit?",
-              "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-correct",
+              "scenario": "Nach dem ersten Jahr darfst du wählen: 3 Wochen 'Wunschstation'. Wo willst du reinschnuppern?",
+              "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Bauchgefühl sagt Ja. Er packt das schon.",
-                  "correct": false,
-                  "feedback": "Gefährlich. Bauchgefühl zahlt keine Raten. Wir brauchen Sicherheiten oder einen Bürgen."
+                  "text": "Marketing & Social Media 📱",
+                  "feedback": "Cool! Da pflegst du unseren Insta-Kanal und planst Events."
                 },
                 {
                   "id": 2,
-                  "text": "Ich fordere einen aktuellen Plan und Sicherheiten an. Wir müssen das Risiko minimieren, auch wenn er meckert.",
-                  "correct": true,
-                  "feedback": "Professionell. Wir unterstützen die Wirtschaft, aber wir zocken nicht."
+                  "text": "Immobilien & Baufinanzierung 🏠",
+                  "feedback": "Spannend! Du begleitest Kunden beim Traum vom Eigenheim."
                 }
               ]
             }
@@ -183,23 +164,88 @@
         },
         {
           "id": 5,
-          "title": "Finale: Dein Profil",
+          "title": "Der Sparkassen-Deal",
           "status": "locked",
-          "icon": "🏆",
-          "row": 3,
+          "icon": "✅",
+          "row": 4,
+          "nextLevelIds": [6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Wir fordern Professionalität, aber wir zahlen auch top. Hier sind deine Hard Facts:",
+              "imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Gehalt (Jahr 1)",
+                  "value": "~ 1.268 € monatlich",
+                  "icon": "💰",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Sonderzahlung",
+                  "value": "90% Weihnachtsgeld",
+                  "icon": "🎄",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Benefits",
+                  "value": "iPad + 40€ VL + 30 Tage Urlaub",
+                  "icon": "🎁",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Karriere: Weiterbildung",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 5,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ausbildung fertig! Und dann? Bei uns ist hier nicht Schluss. Welcher Weg reizt dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Sparkassen-Fachwirt (neben dem Job) 📚",
+                  "feedback": "Der Klassiker für den Aufstieg zur Filialleitung."
+                },
+                {
+                  "id": 2,
+                  "text": "Spezialisierung (z.B. Firmenkunden) 💼",
+                  "feedback": "Perfekt, wenn du Experte für komplexe Themen werden willst."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Check-Out",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 6,
           "nextLevelIds": [],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Egal ob Häuslebauer oder Unternehmer – du hast Rückgrat bewiesen. Das 13. Gehalt ist verdient. Was gönnst du dir?",
-              "imageUrl": "https://images.unsplash.com/photo-1554134499-3571420bc62c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "scenario": "Bereit für den Mühlenkreis? Wir freuen uns auf deine Bewerbung (gerne ohne Anschreiben, aber mit Zeugnis).",
+              "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
               "type": "single-select-or-text",
               "allowTextInput": true,
               "options": [
                 {
                   "id": 1,
-                  "text": "Sparen für die eigene Immobilie im Kreis! 🏡",
-                  "feedback": "Ganz der Profi. Wir freuen uns auf deine Bewerbung!"
+                  "text": "Ich bin dabei! 📝",
+                  "feedback": "Super! Geh auf unser Portal und lad dein Zeugnis hoch."
                 }
               ]
             }
@@ -209,38 +255,38 @@
     },
     {
       "id": "duales-studium",
-      "title": "Duales Studium (B.A.)",
-      "description": "Führungskraft oder Fach-Experte? Hier wird die Luft dünner.",
+      "title": "Duales Studium (Banking & Sales)",
+      "description": "Doppelte Power: Bachelor-Titel und Praxis in 3,5 Jahren.",
       "icon": "🎓",
       "color": "#333333",
-      "tags": ["Management", "Strategie", "Stress-Resistenz"],
-      "pathModeId": "branching",
+      "tags": ["Bachelor", "Karriere", "Führung"],
+      "pathModeId": "linear",
       "levels": [
         {
           "id": 1,
-          "title": "Level 1: Druck-Situation",
+          "title": "Uni & Praxis",
           "status": "unlocked",
-          "icon": "⏳",
+          "icon": "⚖️",
           "row": 0,
           "nextLevelIds": [2],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Morgen ist Klausur an der Hochschule (Recht). Gleichzeitig brennt in der Filiale die Hütte, weil zwei Kollegen krank sind. Der Filialleiter fragt, ob du länger bleiben kannst. Was machst du?",
+              "scenario": "Duales Studium heißt: Du bist Azubi UND Student. Das ist stressig, aber lohnt sich. Wie organisierst du dich?",
               "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
               "type": "single-select-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Ich bleibe. Team geht vor, Klausur schaffe ich schon irgendwie.",
+                  "text": "Ich lass alles auf mich zukommen.",
                   "correct": false,
-                  "feedback": "Falsche Priorität. Wenn du durchfällst, verlierst du deinen Vertrag. Du musst lernen, 'Nein' zu sagen und zu priorisieren."
+                  "feedback": "Das wird eng. Zeitmanagement ist hier der Schlüssel!"
                 },
                 {
                   "id": 2,
-                  "text": "Ich erkläre die Situation und gehe pünktlich zum Lernen. Studium hat Vorrang.",
+                  "text": "Ich nutze mein iPad für Lernpläne und digitale Skripte.",
                   "correct": true,
-                  "feedback": "Richtig. Als dualer Student musst du Selbstmanagement beherrschen. Der Chef wird das respektieren."
+                  "feedback": "Vorbildlich. So schaffst du Uni und Job locker."
                 }
               ]
             }
@@ -248,27 +294,35 @@
         },
         {
           "id": 2,
-          "title": "Die Spezialisierung",
+          "title": "Analyse-Profi",
           "status": "locked",
-          "icon": "🧭",
+          "icon": "📊",
           "row": 1,
-          "nextLevelIds": [3, 4],
+          "nextLevelIds": [3],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Du wirst als Nachwuchsführungskraft aufgebaut. In welche Richtung willst du dich entwickeln?",
-              "imageUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-no-correct",
+              "scenario": "Ein Firmenkunde braucht einen Kredit für eine neue Maschine. Du analysierst die Bilanz. Worauf achtest du?",
+              "imageUrl": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
               "options": [
                 {
                   "id": 1,
-                  "text": "Pfad A: Leadership (Menschen führen & motivieren) 🗣️",
-                  "feedback": "Du übernimmst Verantwortung für ein Team."
+                  "text": "Umsatzentwicklung 📈",
+                  "correct": true,
+                  "feedback": "Wichtig! Wächst die Firma?"
                 },
                 {
                   "id": 2,
-                  "text": "Pfad B: Strategie & Steuerung (Prozesse & Zahlen) 📊",
-                  "feedback": "Du gehst in die Unternehmenssteuerung/Controlling."
+                  "text": "Eigenkapitalquote 💰",
+                  "correct": true,
+                  "feedback": "Essentiell. Wie stabil steht die Firma da?"
+                },
+                {
+                  "id": 3,
+                  "text": "Farbe des Logos 🎨",
+                  "correct": false,
+                  "feedback": "Eher unwichtig für den Kredit ;)"
                 }
               ]
             }
@@ -276,85 +330,20 @@
         },
         {
           "id": 3,
-          "title": "Pfad A: Generationen-Konflikt",
-          "status": "locked",
-          "icon": "👥",
-          "row": 2,
-          "nextLevelIds": [5],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Du sollst eine Änderung im Prozess einführen (Digitales Protokoll). Ein älterer Kollege, der seit 30 Jahren da ist, blockt ab: 'Hab ich noch nie so gemacht, brauch ich nicht.' Du bist 20, er 55. Wie reagierst du?",
-              "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-correct",
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Ich weise ihn an, es zu tun. Ich habe schließlich den Auftrag vom Vorstand.",
-                  "correct": false,
-                  "feedback": "Ganz schlecht. Mit 'Basta'-Mentalität kommst du hier nicht weit. Du verlierst den Respekt."
-                },
-                {
-                  "id": 2,
-                  "text": "Ich setze mich zu ihm, höre mir seine Bedenken an und zeige ihm, wie es ihm Arbeit spart.",
-                  "correct": true,
-                  "feedback": "Exzellent. Führung heißt 'Mitnehmen', nicht 'Befehlen'. Besonders bei erfahrenen Kollegen."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "title": "Pfad B: Das Budget-Dilemma",
-          "status": "locked",
-          "icon": "📉",
-          "row": 2,
-          "nextLevelIds": [5],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Du planst das Budget für ein neues Azubi-Projekt. Die Kosten explodieren. Du musst streichen. Wo setzt du den Rotstift an?",
-              "imageUrl": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-correct",
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Ich streiche das Catering beim Abschlussevent. Mettbrötchen reichen.",
-                  "correct": true,
-                  "feedback": "Pragmatisch und richtig. Inhalte gehen vor Luxus. Das nennt man wirtschaftliches Denken."
-                },
-                {
-                  "id": 2,
-                  "text": "Wir reduzieren die Qualität der Schulungsmaterialien.",
-                  "correct": false,
-                  "feedback": "Falsch. An der Bildung sparen wir nicht. Das ist unser Kapital."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 5,
-          "title": "Finale: Management-Ready",
+          "title": "Führungskraft von morgen",
           "status": "locked",
           "icon": "🚀",
-          "row": 3,
+          "row": 2,
           "nextLevelIds": [],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Du hast bewiesen, dass du nicht nur Theorie kannst, sondern auch schwierige Entscheidungen triffst. Das ist Stoff für den Vorstand.",
-              "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-or-text",
+              "scenario": "Mit dem Bachelor hast du beste Chancen auf Führungspositionen. Wo siehst du dich in 5 Jahren?",
+              "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "text-field",
               "allowTextInput": true,
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Ich bin bereit für die Verantwortung! 🤝",
-                  "feedback": "Dann bewirb dich jetzt für das Duale Studium."
-                }
-              ]
+              "options": [],
+              "scenario": "Beschreibe kurz dein Traumziel (z.B. Filialleiter, Vermögensberater...)"
             }
           ]
         }
@@ -365,85 +354,86 @@
   "questionnaire": {
     "questions": [
       {
-        "id": "values",
-        "question": "Was ist dir wichtiger?",
+        "id": "type",
+        "question": "Zahlen oder Menschen?",
         "options": [
           {
-            "id": "security",
-            "label": "Sicherheit & Regeln einhalten 🛡️",
-            "icon": "📜",
-            "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "id": "people",
+            "label": "Ich will beraten und helfen 🤝",
+            "icon": "🗣️",
+            "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
             "score": {
               "bankkaufmann": 2,
               "duales-studium": 1
             }
           },
           {
-            "id": "innovation",
-            "label": "Neues wagen & Prozesse ändern 💡",
-            "icon": "⚡",
-            "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "id": "numbers",
+            "label": "Ich liebe Analysen & Strategien 📊",
+            "icon": "📈",
+            "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
             "score": {
-              "bankkaufmann": 0,
+              "bankkaufmann": 1,
               "duales-studium": 2
             }
           }
         ]
       },
       {
-        "id": "workstyle",
-        "question": "Wie arbeitest du unter Stress?",
+        "id": "style",
+        "question": "Wie lernst du am besten?",
         "options": [
           {
-            "id": "people",
-            "label": "Ich suche das Gespräch im Team 🗣️",
-            "icon": "👥",
-            "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "id": "practice",
+            "label": "Learning by Doing (Praxis) 🛠️",
+            "icon": "🙌",
+            "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
             "score": {
               "bankkaufmann": 2,
-              "duales-studium": 2
+              "duales-studium": 0
             }
           },
           {
-            "id": "focus",
-            "label": "Ich ziehe mich zurück und arbeite ab 📝",
-            "icon": "🎧",
-            "imageUrl": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "id": "theory",
+            "label": "Theorie durchdringen & anwenden 📚",
+            "icon": "🎓",
+            "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
             "score": {
               "bankkaufmann": 1,
-              "duales-studium": 0
+              "duales-studium": 2
             }
           }
         ]
       }
     ],
     "suggestionText": {
-      "headline": "Deine Eignung:",
-      "startButtonText": "Simulation starten",
-      "viewAllButtonText": "Alle Karrierewege",
-      "skipButtonText": "Direkt bewerben"
+      "headline": "Unser Anlage-Tipp für dich:",
+      "startButtonText": "Job ansehen",
+      "viewAllButtonText": "Alles checken",
+      "skipButtonText": "Direkt zum Tresor"
     }
   },
 
   "copy": {
-    "checkChances": "Bist du tough genug?",
-    "expressApply": "Express-Bewerbung",
-    "jobMerken": "Job merken",
-    "submit": "Challenge abschließen",
-    "submitSuccess": "Respekt! Du hast Rückgrat bewiesen. Wir melden uns.",
-    "victoryHeadline": "Mission erfüllt! 🏁",
-    "victorySubtext": "Du hast gezeigt, dass du das Zeug zum Sparkässler hast.",
-    "nudgeHeadline": "Zu schwierig?",
-    "nudgeText": "Keine Sorge, wir bringen dir das alles bei. Aber die Einstellung muss stimmen.",
-    "firstName": "Dein Vorname?",
-    "phoneType": "Smartphone?",
-    "schoolType": "Abschluss?",
+    "checkChances": "Bin ich der Sparkassen-Typ?",
+    "expressApply": "Karriere starten 🚀",
+    "jobMerken": "Merken",
+    "submit": "Bewerbung abschicken",
+    "submitSuccess": "Top! Wir freuen uns auf dich.",
+    "victoryHeadline": "Kreditwürdig! 🥇",
+    "victorySubtext": "Du passt perfekt ins Team Mühlenkreis.",
+    "nudgeHeadline": "Zögerst du?",
+    "nudgeText": "Komm ins Team Rot. Sicherer und cooler geht's kaum.",
+    "firstName": "Wie heißt du?",
+    "phoneType": "Dein Smartphone?",
+    "schoolType": "Schulabschluss?",
     "android": "Android",
     "iphone": "iPhone",
-    "realschule": "Realschule / MSA",
+    "realschule": "Realschule / Mittlere Reife",
     "gymnasium": "Abitur / Fachabi",
-    "andere": "Sonstiges",
-    "expressApplyIntro": "Kein Anschreiben nötig. Deine Entscheidungen sprechen für dich.",
-    "exploreOtherJobs": "Anderen Pfad wählen"
+    "andere": "Andere",
+    "expressApplyIntro": "Nur noch kurz die Daten, dann geht's los!",
+    "exploreOtherJobs": "Andere Jobs ansehen"
   }
 }
+
