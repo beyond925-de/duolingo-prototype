@@ -1,55 +1,55 @@
 {
-  "_instructions": "Zahlmann Klose Nolting Config - Gamified Tax Experience",
+  "_instructions": "Zahlmann Klose Nolting - Dual Branch Config",
   "_filename": "configs/zahlmann/config.json",
 
   "company": {
     "name": "Zahlmann Klose Nolting",
     "slug": "zahlmann-klose-nolting",
-    "logoUrl": "https://www.zahlmann.de/wp-content/uploads/2016/09/logo-zahlmann-2.png",
+    "logoUrl": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     "signatureEmoji": "🦁",
     "primaryColor": "#1E3A8A",
     "secondaryColor": "#FFFFFF",
     "city": "Löhne",
     "website": "https://www.zahlmann.de/karriere",
-    "industryVibe": "Vergiss verstaubte Aktenberge. Bei uns im #TeamZahlmann steuern wir Unternehmen digital in die Zukunft. Wir sind die 'Paragrafen-Profis' (Focus Money sagt das, nicht nur wir!). Hier bist du kein Kaffeekocher, sondern ab Tag 1 Business-Detektiv und Zukunfts-Gestalter.",
+    "industryVibe": "Steuerberatung ist trocken? Nicht bei uns. Wir sind #TeamZahlmann: Digitaler Vorreiter, familiär wie beste Freunde und erfolgreich seit 1958. Hier wirst du nicht verwaltet, hier gestaltest du mit. In Löhne, für den Mittelstand, für dich.",
     "organizationFacts": [
       {
-        "title": "Digital First",
-        "value": "Kein Papierkram, null Akten-Schleppen. Wir arbeiten High-Tech & Web-basiert. Dein Home-Office Kit wartet schon.",
+        "title": "Digital & Modern",
+        "value": "Web-basierte Prozesse, Home-Office-Kit und papierloses Arbeiten. Wir leben Zukunft.",
         "icon": "💻"
       },
       {
-        "title": "Family & Fun",
-        "value": "Monatliches Team-Frühstück, legendäre Sommerfeste und Überraschungs-Trips. Wir sind #TeamZahlmann.",
-        "icon": "🎉"
+        "title": "Wohlfühl-Faktor",
+        "value": "Massagen, Darts, Garten-Lounge und monatliches Team-Frühstück. Arbeit muss Bock machen.",
+        "icon": "💆"
       },
       {
-        "title": "Level Up",
-        "value": "Vom Azubi zum Partner? Ist bei uns passiert! Dein persönlicher Pate 🤌🏼 und Karriereplan bringen dich ganz nach oben.",
-        "icon": "🚀"
+        "title": "Sicherheit",
+        "value": "Krisensicherer Job, überdurchschnittliches Gehalt und dein persönlicher Pate an der Seite.",
+        "icon": "🛡️"
       }
     ]
   },
 
   "landing": {
-    "headline": "Werde zum Wirtschafts-Hacker in Löhne.",
-    "subline": "Steuern sind langweilig? Nur wenn man sie nicht versteht. Bei uns knackst du den Code, sparst Mandanten bares Geld und wirst zum Helden des Mittelstands. Ready für #TeamZahlmann?",
-    "startButtonText": "Mission starten 🕵️‍♂️"
+    "headline": "Dein Match. Deine Zukunft. Dein #TeamZahlmann.",
+    "subline": "Bist du der Praxis-Macher oder der Strategie-Denker? Finde heraus, ob du in unsere Kanzlei passt und wie steil deine Karriere gehen kann.",
+    "startButtonText": "Zeig mir meine Story 🚀"
   },
 
   "campus": {
-    "headline": "Dein Einstieg bei ZKN",
-    "subline": "Welcher Weg passt zu deinem Style?",
+    "headline": "Wähle deinen Einstieg",
+    "subline": "Welcher Weg führt dich nach Löhne?",
     "categories": [
       {
         "id": "ausbildung",
-        "title": "Ausbildung (Praxis-Held)",
-        "jobId": "steuer-sherlock"
+        "title": "Ausbildung (Steuerfachangestellte/r)",
+        "jobId": "azubi-hero"
       },
       {
         "id": "studium",
-        "title": "Duales Studium (Theorie & Action)",
-        "jobId": "tax-law-pro"
+        "title": "Duales Studium (Steuerrecht)",
+        "jobId": "dual-student"
       }
     ]
   },
@@ -57,138 +57,131 @@
   "questionnaire": {
     "questions": [
       {
-        "id": "vibe",
-        "question": "Was feierst du mehr?",
+        "id": "interest",
+        "question": "Was triggert dich mehr?",
         "options": [
           {
-            "id": "detective",
-            "label": "Fehler finden & Rätsel lösen",
-            "icon": "🔍",
-            "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "id": "praxis",
+            "label": "Geld verdienen & sofort im echten Leben helfen",
+            "icon": "💸",
+            "imageUrl": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
             "score": {
-              "steuer-sherlock": 2,
-              "tax-law-pro": 1
+              "azubi-hero": 2,
+              "dual-student": 0
             }
           },
           {
-            "id": "strategy",
-            "label": "Große Pläne schmieden & Beraten",
-            "icon": "♟️",
-            "imageUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "id": "theorie",
+            "label": "Gesetze wälzen & komplexe Fälle knacken",
+            "icon": "⚖️",
+            "imageUrl": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
             "score": {
-              "steuer-sherlock": 1,
-              "tax-law-pro": 2
+              "azubi-hero": 0,
+              "dual-student": 2
             }
           }
         ]
       },
       {
-        "id": "team_style",
-        "question": "Dein perfekter Arbeits-Vibe?",
+        "id": "workstyle",
+        "question": "Wie lernst du am besten?",
         "options": [
           {
-            "id": "family",
-            "label": "Gemeinsames Frühstück & flache Hierarchien",
-            "icon": "🥐",
-            "imageUrl": "https://images.unsplash.com/photo-1511632765486-a019809dd005?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "id": "doing",
+            "label": "Learning by Doing im Team",
+            "icon": "🤝",
+            "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
             "score": {
-              "steuer-sherlock": 2,
-              "tax-law-pro": 2
+              "azubi-hero": 2,
+              "dual-student": 1
             }
           },
           {
-            "id": "solo",
-            "label": "Kopfhörer auf & Deep Focus",
-            "icon": "🎧",
-            "imageUrl": "https://images.unsplash.com/photo-1593642632823-8f785e67ac73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "id": "analyzing",
+            "label": "Hörsaal & Büro im Wechsel",
+            "icon": "🎓",
+            "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
             "score": {
-              "steuer-sherlock": 1,
-              "tax-law-pro": 1
+              "azubi-hero": 1,
+              "dual-student": 2
             }
           }
         ]
       }
     ],
     "suggestionText": {
-      "headline": "Dein Profil im #TeamZahlmann:",
-      "startButtonText": "Zeig mir die Challenge",
-      "viewAllButtonText": "Alles ansehen",
+      "headline": "Wir sehen dich hier:",
+      "startButtonText": "Story starten",
+      "viewAllButtonText": "Andere Wege",
       "skipButtonText": "Direkt bewerben"
     }
   },
 
   "jobs": [
     {
-      "id": "steuer-sherlock",
-      "title": "Steuerfachangestellte/r (m/w/d)",
-      "description": "Werde zum Vertrauten unserer 500+ Mandanten. Digital, nah dran und mit echter Verantwortung.",
+      "id": "azubi-hero",
+      "title": "Ausbildung Steuerfachangestellte/r (m/w/d)",
+      "description": "Der Klassiker, neu gedacht. Werde zum digitalen Finanz-Profi und Mandanten-Liebling.",
       "icon": "🦁",
       "color": "#1E3A8A",
-      "tags": ["Sicherheit", "Digitalisierung", "Team-Events"],
+      "tags": ["Praxis", "Team", "Digital"],
       "biomeThemeId": "modern-office",
       "pathModeId": "branching",
       "levels": [
         {
           "id": 1,
-          "title": "Onboarding & Der Pate",
+          "title": "Die Weichenstellung",
           "status": "unlocked",
-          "icon": "🤝",
+          "icon": "🔀",
           "row": 0,
-          "nextLevelIds": [2, 3],
+          "nextLevelIds": [2, 10],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Tag 1 bei Zahlmann! 🚀 Du bist nervös, aber Bianca aus HR empfängt dich. Dein persönlicher 'Ausbildungspate' steht bereit. Was fragst du ihn zuerst?",
-              "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-correct",
+              "scenario": "Willkommen bei Zahlmann! Was interessiert dich heute? Willst du wissen, wie dein Alltag im ersten Jahr aussieht, oder wie weit du in 10 Jahren kommen kannst?",
+              "imageUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Wann ist hier eigentlich Feierabend?",
-                  "correct": false,
-                  "feedback": "Ruhig Blut! Erstmal ankommen. Wir haben übrigens flexible Arbeitszeiten."
+                  "text": "Zeig mir den Alltag! (Berufsjahr erleben) 🕵️‍♂️",
+                  "feedback": "Let's go! Tauche ein ins erste Ausbildungsjahr."
                 },
                 {
                   "id": 2,
-                  "text": "Wie läuft das hier im Team und wo kann ich anpacken?",
-                  "correct": true,
-                  "feedback": "Genau der Spirit! Du bist hier ab Tag 1 vollwertiges Mitglied im #TeamZahlmann."
+                  "text": "Wie werde ich Boss? (Karriereleiter) 🏆",
+                  "feedback": "Ambitioniert! Schau dir an, wie du aufsteigst."
                 }
               ]
             }
           ]
         },
+        
         {
           "id": 2,
-          "title": "Digital Detective",
+          "title": "Zweig 1: Onboarding & Team",
           "status": "locked",
-          "icon": "💻",
+          "icon": "👋",
           "row": 1,
-          "nextLevelIds": [4],
+          "nextLevelIds": [3],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Ein Mandant aus Bad Oeynhausen hat Chaos in den Belegen! 😱 Alles durcheinander. Aber wir arbeiten digital. Welches Tool rettet dich?",
-              "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-              "type": "multiple-select",
+              "scenario": "August, dein erster Tag! Bianca aus HR gibt dir dein 'Home-Office Kit' und stellt dir deinen Paten vor. Du bist aufgeregt. Wie startest du?",
+              "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Der gute alte Locher & Ordner 🗄️",
+                  "text": "Ich verstecke mich hinterm Bildschirm und lese Handbücher.",
                   "correct": false,
-                  "feedback": "So 1990! Wir sind digitalisiert und papierlos."
+                  "feedback": "Zu schüchtern! Im #TeamZahlmann sind wir offen."
                 },
                 {
                   "id": 2,
-                  "text": "Unsere Web-Cloud & DATEV Schnittstellen ☁️",
+                  "text": "Ich gehe offen aufs Team zu und komme erstmal beim gemeinsamen Frühstück an.",
                   "correct": true,
-                  "feedback": "Bingo! Belege scannen, hochladen, fertig. So geht Steuerberatung heute."
-                },
-                {
-                  "id": 3,
-                  "text": "Ein riesiger Taschenrechner 🧮",
-                  "correct": false,
-                  "feedback": "Den haben wir auch, aber die Software macht die Heavy Lifting Arbeit."
+                  "feedback": "Perfekt! Das monatliche Frühstück ist unser heiliges Ritual."
                 }
               ]
             }
@@ -196,27 +189,35 @@
         },
         {
           "id": 3,
-          "title": "Team-Rituale & Vibes",
+          "title": "Zweig 1: Digital Working",
           "status": "locked",
-          "icon": "🥐",
-          "row": 1,
-          "nextLevelIds": [5],
+          "icon": "💻",
+          "row": 2,
+          "nextLevelIds": [4],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Es ist der erste Montag im Monat. Das Büro riecht nach Kaffee und Brötchen. Was steht an?",
-              "imageUrl": "https://images.unsplash.com/photo-1604060808942-039c92257d76?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-no-correct",
+              "scenario": "Ein Mandant bringt einen Schuhkarton voller zerknüllter Quittungen. 😱 Bei uns läuft das anders. Was zeigst du ihm?",
+              "imageUrl": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
               "options": [
                 {
                   "id": 1,
-                  "text": "Das gemeinsame Team-Frühstück! ☕",
-                  "feedback": "Richtig! Zeit zum Quatschen, Lachen und Connecten."
+                  "text": "Unsere App zum Belege scannen 📱",
+                  "correct": true,
+                  "feedback": "Genau! Foto machen, hochladen, fertig. DATEV regelt."
                 },
                 {
                   "id": 2,
-                  "text": "Meeting im Konferenzraum 📊",
-                  "feedback": "Auch wichtig, aber erst wird gegessen. Community first!"
+                  "text": "Den Weg zum Altpapier-Container 🗑️",
+                  "correct": false,
+                  "feedback": "Nicht so frech! Wir holen den Mandanten digital ab."
+                },
+                {
+                  "id": 3,
+                  "text": "Wie er digital alles sofort freigibt ✅",
+                  "correct": true,
+                  "feedback": "Top Service! Das spart ihm und uns Zeit."
                 }
               ]
             }
@@ -224,116 +225,401 @@
         },
         {
           "id": 4,
-          "title": "The Money Saver",
+          "title": "Zweig 1: Fun & Balance",
           "status": "locked",
-          "icon": "💰",
-          "row": 2,
-          "nextLevelIds": [6],
+          "icon": "🎉",
+          "row": 3,
+          "nextLevelIds": [20],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Du prüfst den Jahresabschluss eines Handwerkers. Er hat vergessen, seine Fahrtkosten anzugeben. Das sind 2.000€ weniger Steuerlast! Was tust du?",
-              "imageUrl": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-              "type": "llm-interactive",
-              "initialQuickReplies": [
-                "Ich rufe ihn sofort an: 'Ich hab da was gefunden!'",
-                "Ich buche es stillschweigend nach.",
-                "Ich frage meinen Paten, ob das okay ist."
-              ],
-              "conversationHistory": [
+              "scenario": "Die Bilanz-Saison war stressig. Aber jetzt steht der jährliche Betriebsausflug an! Es ist eine Überraschung. Worauf hoffst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
                 {
-                  "role": "assistant",
-                  "content": "Der Mandant ruft an: 'Frau/Herr [Name], ich muss so viel Steuern nachzahlen, das gibt's doch nicht!' Du hast aber gerade die vergessenen Fahrtkosten entdeckt. Was sagst du ihm?"
+                  "id": 1,
+                  "text": "Action-Event mit dem ganzen Team 🛶",
+                  "feedback": "Gut möglich! Wir feiern unsere Erfolge gemeinsam."
+                },
+                {
+                  "id": 2,
+                  "text": "Entspannung bei einer Massage im Büro 💆",
+                  "feedback": "Die gibt's bei uns sogar regelmäßig im Büro!"
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "id": 10,
+          "title": "Zweig 2: Der Einstieg",
+          "status": "locked",
+          "icon": "🌱",
+          "row": 1,
+          "nextLevelIds": [11],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du startest deine Ausbildung. Dein Ziel ist aber nicht der Schreibtisch, sondern der Chefsessel. Deine Basis: 3 Jahre Top-Ausbildung. Was nimmst du mit?",
+              "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "bento-grid",
+              "facts": [
+                {
+                  "title": "Grundlagen",
+                  "value": "Lohn, Fibu, Steuern - das Handwerk.",
+                  "icon": "🛠️",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Netzwerk",
+                  "value": "Kontakt zu 500+ Mittelständlern.",
+                  "icon": "🌐",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Mentor",
+                  "value": "Volker & Michael fördern dich.",
+                  "icon": "👨‍🏫",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
                 }
               ]
             }
           ]
         },
         {
-          "id": 5,
-          "title": "Well-Being & Chill",
+          "id": 11,
+          "title": "Zweig 2: Das Upgrade",
           "status": "locked",
-          "icon": "💆",
+          "icon": "🚀",
           "row": 2,
-          "nextLevelIds": [6],
+          "nextLevelIds": [12],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Harte Woche? Der Rücken zwickt vom Sitzen? Bei ZKN haben wir da was. Wohin gehst du?",
-              "imageUrl": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "scenario": "Ausbildung in der Tasche! 🎓 Aber du willst mehr. Welche Fortbildung zahlt dir ZKN?",
+              "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
               "type": "single-select-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Zur 30-Minuten-Massage im Haus 💆‍♂️",
+                  "text": "Fachassistent (Lohn/Gehalt/Fibu)",
                   "correct": true,
-                  "feedback": "Oh yes! Entspannung gehört bei uns dazu."
+                  "feedback": "Der erste Schritt zum Spezialisten!"
                 },
                 {
                   "id": 2,
-                  "text": "In die Garden Lounge für frische Luft 🌳",
+                  "text": "Steuerfachwirt (Bachelor Professional)",
                   "correct": true,
-                  "feedback": "Auch eine Top-Wahl. Einfach mal durchatmen."
-                },
-                {
-                  "id": 3,
-                  "text": "Eine Runde Darts spielen 🎯",
-                  "correct": true,
-                  "feedback": "Bullseye! Kopf freikriegen am Dartboard."
+                  "feedback": "Der Klassiker! Mehr Verantwortung, mehr Gehalt."
                 }
               ]
             }
           ]
         },
         {
-          "id": 6,
-          "title": "Future Boss?",
+          "id": 12,
+          "title": "Zweig 2: Das Ziel",
           "status": "locked",
           "icon": "🏆",
           "row": 3,
+          "nextLevelIds": [20],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Ausbildung fast fertig! Volker Nolting und Michael Klose holen dich zum Gespräch. 'Wie geht's weiter?' Was ist dein Plan bei ZKN?",
-              "imageUrl": "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "scenario": "Nach einigen Jahren Erfahrung und dem Steuerberater-Examen (wir unterstützen dich!) bist du am Ziel. Was bedeutet das?",
+              "imageUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
               "type": "bento-grid",
               "facts": [
                 {
-                  "title": "Steuerfachwirt",
-                  "value": "Die nächste Stufe: Mehr Wissen, mehr Gehalt.",
-                  "icon": "📚",
+                  "title": "Steuerberater",
+                  "value": "Du hast deine eigenen Mandanten und unterschreibst die Bilanzen.",
+                  "icon": "✒️",
                   "layout": { "colSpan": 2, "rowSpan": 1 }
                 },
                 {
-                  "title": "Steuerberater-Examen",
-                  "value": "Der Gold-Standard. Wir unterstützen dich dabei!",
-                  "icon": "🎓",
-                  "layout": { "colSpan": 1, "rowSpan": 1 }
-                },
-                {
-                  "title": "Bleib im Team",
-                  "value": "Manche Kollegen sind seit 40 Jahren hier. Why not you?",
-                  "icon": "❤️",
+                  "title": "Partnerschaft",
+                  "value": "Vielleicht wirst du wie Herr Nolting Teil der Geschäftsführung?",
+                  "icon": "🤝",
                   "layout": { "colSpan": 1, "rowSpan": 1 }
                 }
               ]
-            },
+            }
+          ]
+        },
+
+        {
+          "id": 20,
+          "title": "Dein Fazit",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 4,
+          "scenarios": [
             {
-              "id": 2,
-              "scenario": "Klingt das nach deiner Zukunft? Dann lass uns keine Zeit verlieren. Wir entscheiden schnell.",
+              "id": 1,
+              "scenario": "Egal ob Alltag oder Karriere-Leiter: Bei Zahlmann stehen dir alle Türen offen. Bock auf ein Kennenlernen?",
               "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
               "type": "single-select-or-text",
               "allowTextInput": true,
               "options": [
                 {
                   "id": 1,
-                  "text": "Kurzbewerbung abschicken (dauert 2 Min) 🚀",
-                  "feedback": "Top! Bianca freut sich auf deine Nachricht."
+                  "text": "Ja, ich schick ne Kurzbewerbung! 🚀",
+                  "feedback": "Klasse! Bianca freut sich."
                 },
                 {
                   "id": 2,
-                  "text": "Ich will erst den 'Probetag' machen 🕵️",
-                  "feedback": "Klar! Komm vorbei, lern das Team kennen und schau dir alles an."
+                  "text": "Ich will erst den Probetag machen. 🕵️",
+                  "feedback": "Gerne! Komm vorbei in Löhne."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "dual-student",
+      "title": "Duales Studium (Steuerrecht)",
+      "description": "Theorie trifft Hardcore-Praxis. Studiere und arbeite parallel an echten Fällen.",
+      "icon": "🎓",
+      "color": "#333333",
+      "tags": ["Bachelor", "Karriere", "Recht"],
+      "biomeThemeId": "university",
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Dein Fokus",
+          "status": "unlocked",
+          "icon": "🔀",
+          "row": 0,
+          "nextLevelIds": [2, 10],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Duales Studium bei Zahlmann heißt: Volle Power. Was willst du wissen?",
+              "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Wie überlebe ich Uni & Arbeit? (Erlebnis-Jahr) 📚",
+                  "feedback": "Gute Frage! Wir zeigen dir den Mix."
+                },
+                {
+                  "id": 2,
+                  "text": "Wie schnell werde ich Wirtschaftsprüfer? (Karriere) 📈",
+                  "feedback": "High Performer! Hier ist dein Fahrplan."
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "id": 2,
+          "title": "Zweig 1: Der Switch",
+          "status": "locked",
+          "icon": "🔄",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Montag: Vorlesung Steuerrecht. Dienstag: Kanzlei in Löhne. Ein Mandant hat eine komplexe Frage zur Erbschaftssteuer. Du hast das gerade in der Uni gehört! Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich sage nichts, ich bin ja noch Student.",
+                  "correct": false,
+                  "feedback": "Falsch! Wir schätzen dein frisches Wissen."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich recherchiere kurz und pitche meine Idee dem Partner.",
+                  "correct": true,
+                  "feedback": "Exakt! Theorie direkt in Praxis verwandeln. Das ist der Deal."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Zweig 1: Stress & Support",
+          "status": "locked",
+          "icon": "🧘",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Klausurenphase UND Jahresabschlüsse. 🤯 Es wird viel. Wie reagiert dein Team bei Zahlmann?",
+              "imageUrl": "https://images.unsplash.com/photo-1516534775068-ba3f7458946b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Pech gehabt, da musst du durch.",
+                  "correct": false,
+                  "feedback": "Niemals! Wir sind ein Familienunternehmen."
+                },
+                {
+                  "id": 2,
+                  "text": "Wir checken deine Stunden und geben dir Freiraum zum Lernen.",
+                  "correct": true,
+                  "feedback": "Richtig. Dein Abschluss ist auch unser Erfolg."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Zweig 1: Impact",
+          "status": "locked",
+          "icon": "💥",
+          "row": 3,
+          "nextLevelIds": [20],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du darfst bei einer Betriebsprüfung dabei sein. Der Prüfer vom Finanzamt stellt kritische Fragen. Michael Klose nimmt dich mit rein. Wie fühlst du dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Nervös aber stolz. Ich lerne von den Besten. 🦁",
+                  "feedback": "So wächst man! Praxis pur."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich notiere alles für meine Bachelorarbeit. 📝",
+                  "feedback": "Clever! Win-Win Situation."
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "id": 10,
+          "title": "Zweig 2: Bachelor & More",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 1,
+          "nextLevelIds": [11],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "3 Jahre, Bachelor of Laws (LL.B.) in der Tasche. Glückwunsch! 🎉 Aber bei Zahlmann ist das erst der Anfang. Was ist der nächste logische Schritt?",
+              "imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "bento-grid",
+              "facts": [
+                {
+                  "title": "Master-Studium",
+                  "value": "Berufsbegleitend zum Master? Wir unterstützen dich.",
+                  "icon": "📜",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Steuerberater-Examen",
+                  "value": "Die Königsklasse. Mit Master verkürzt sich die Wartezeit!",
+                  "icon": "👑",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "title": "Zweig 2: Wirtschaftsprüfer",
+          "status": "locked",
+          "icon": "📊",
+          "row": 2,
+          "nextLevelIds": [12],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du willst nicht nur Steuern, du willst die ganz großen Zahlen prüfen? Volker Nolting ist Wirtschaftsprüfer. Er kann dein Mentor sein für...",
+              "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Das Wirtschaftsprüfer-Examen (WP)",
+                  "correct": true,
+                  "feedback": "Eines der härtesten Examen Deutschlands. Aber wir schaffen das zusammen."
+                },
+                {
+                  "id": 2,
+                  "text": "Einen Buchhaltungskurs",
+                  "correct": false,
+                  "feedback": "Du bist schon weiter! WP ist das nächste Level."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Zweig 2: Partner Track",
+          "status": "locked",
+          "icon": "🤝",
+          "row": 3,
+          "nextLevelIds": [20],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Mit WP-Titel und Steuerberater-Examen bist du fachlich ganz oben. In einer riesigen anonymen Kanzlei wärst du jetzt 'Manager 34'. Bei uns in Löhne bist du...",
+              "imageUrl": "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ein geschätzter Kollege auf Augenhöhe.",
+                  "feedback": "Genau. Flache Hierarchien leben wir."
+                },
+                {
+                  "id": 2,
+                  "text": "Potenzieller Nachfolger und Partner.",
+                  "feedback": "Absolut. Wir suchen Unternehmer, keine Nummern."
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "id": 20,
+          "title": "Deine Entscheidung",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Theorie ist gut, Praxis ist besser. Willst du deine Karriere bei Zahlmann starten?",
+              "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, ich bewerbe mich für das Duale Studium! 🎓",
+                  "feedback": "Exzellent. Wir freuen uns auf dich."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich hab noch Fragen zur Uni/Praxis-Aufteilung. 🤔",
+                  "feedback": "Kein Problem. Ruf Bianca Sundermann einfach an!"
                 }
               ]
             }
@@ -344,24 +630,24 @@
   ],
 
   "copy": {
-    "checkChances": "Passt ZKN zu mir?",
-    "expressApply": "Jetzt Karriere starten 🚀",
-    "jobMerken": "Job merken",
-    "submit": "Match checken 🤝🏼",
-    "submitSuccess": "Klasse! Wir melden uns zeitnah für ein lockeres Gespräch.",
+    "checkChances": "Passt das zu mir?",
+    "expressApply": "Jetzt bewerben 🚀",
+    "jobMerken": "Stelle merken",
+    "submit": "Checken ob's matcht 🤝🏼",
+    "submitSuccess": "Danke! Wir melden uns zeitnah bei dir.",
     "victoryHeadline": "Willkommen im #TeamZahlmann! 🎉",
-    "victorySubtext": "Du hast das Mindset, das wir in Löhne suchen. Digital, menschlich, clever.",
-    "nudgeHeadline": "Noch unsicher? Komm zum Probetag!",
-    "nudgeText": "Lern uns kennen – ganz ohne Zwang. Wir beißen nicht, wir beraten nur.",
-    "firstName": "Wie dürfen wir dich ansprechen?",
-    "phoneType": "Dein Device?",
-    "schoolType": "Dein aktueller Status?",
+    "victorySubtext": "Du hast den Drive, den wir suchen. Egal ob Ausbildung oder Studium – bei uns startest du durch.",
+    "nudgeHeadline": "Klingt gut, oder?",
+    "nudgeText": "Komm einfach mal auf einen Kaffee vorbei und schau dir die Kanzlei an.",
+    "firstName": "Wie heißt du?",
+    "phoneType": "Dein Smartphone?",
+    "schoolType": "Welchen Abschluss peilst du an?",
     "android": "Android",
     "iphone": "iPhone",
-    "realschule": "Realschule / HöHa",
-    "gymnasium": "Abi / Fachabi",
-    "andere": "Anderes / Studium-Abbrecher (Willkommen!)",
-    "expressApplyIntro": "Lass uns Löhne rocken. Deine Daten:",
+    "realschule": "Mittlere Reife",
+    "gymnasium": "Abitur / Fachabi",
+    "andere": "Anderes",
+    "expressApplyIntro": "Fast geschafft! Nur noch ein paar Infos.",
     "exploreOtherJobs": "Zurück zur Übersicht"
   }
 }
