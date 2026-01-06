@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
 import { useWindowSize } from "react-use";
@@ -44,8 +44,21 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
   const [showLanding, setShowLanding] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  // Per-job progress persistence
+  // Per-job progress map: { [jobId]: Level[] }
   const [jobProgress, setJobProgress] = useState<Record<string, Level[]>>({});
-  const [levels, setLevels] = useState<Level[]>([]);
+  const [levels, _setLevels] = useState<Level[]>([]);
+
+  // Wrapper to keep jobProgress in sync
+  const setLevels = (updater: Level[] | ((prev: Level[]) => Level[])) => {
+    _setLevels((prev) => {
+      const nextLevels = typeof updater === "function" ? (updater as any)(prev) : updater;
+      if (selectedJob) {
+        setJobProgress((jp) => ({ ...jp, [selectedJob.id]: nextLevels }));
+      }
+      return nextLevels;
+    });
+  }
   const [currentLevelId, setCurrentLevelId] = useState<number | null>(null);
   const [currentScenarioIndex, setCurrentScenarioIndex] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState<number>();
@@ -70,6 +83,10 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
   });
   const [showHint, setShowHint] = useState(false);
   const [carouselIndex, setCarouselIndex] = useState<number>(0);
+  // Map viewport state per job (for zoom/pan in global-map mode)
+  const [mapViewport, setMapViewport] = useState<Record<string, { scale: number; x: number; y: number }>>({});
+  // Map scroll position per job (for linear/branching modes)
+  const [mapScrollPosition, setMapScrollPosition] = useState<Record<string, number>>({});
 
   // Use ref to track latest state for saving on unmount
   const stateRef = useRef({
@@ -87,6 +104,8 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
     formData,
     settings,
     carouselIndex,
+    mapViewport,
+    mapScrollPosition,
   });
 
   // Track whether we've already nudged the user for a given job
@@ -109,6 +128,8 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
       formData,
       settings,
       carouselIndex,
+      mapViewport,
+      mapScrollPosition,
     };
   }, [
     currentScreen,
@@ -125,6 +146,8 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
     formData,
     settings,
     carouselIndex,
+    mapViewport,
+    mapScrollPosition,
   ]);
 
   // After a user has been mit demselben Job eine Weile unterwegs,
@@ -294,6 +317,10 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
         if (parsedState.settings) setSettings(parsedState.settings);
         if (parsedState.carouselIndex !== undefined)
           setCarouselIndex(parsedState.carouselIndex);
+        if (parsedState.mapViewport)
+          setMapViewport(parsedState.mapViewport);
+        if (parsedState.mapScrollPosition)
+          setMapScrollPosition(parsedState.mapScrollPosition);
       } catch (e) {
         console.error("Failed to load state from local storage:", e);
       }
@@ -321,6 +348,8 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
       formData,
       settings,
       carouselIndex,
+      mapViewport,
+      mapScrollPosition,
     };
 
     try {
@@ -345,6 +374,8 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
     formData,
     settings,
     carouselIndex,
+    mapViewport,
+    mapScrollPosition,
   ]);
 
   // Save state on unmount to ensure it's persisted before navigation
@@ -374,6 +405,50 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
     window.addEventListener("keydown", handleKeyPress);
     return () => window.removeEventListener("keydown", handleKeyPress);
   }, []);
+
+  // Restore levels when navigating back to map view to ensure game state is preserved
+  useEffect(() => {
+    if (currentScreen !== "map" || !selectedJob || !isLoaded) return;
+
+    // Always restore from localStorage when returning to map to ensure we have the latest saved state
+    const storedState = localStorage.getItem(STORAGE_KEY);
+    if (storedState) {
+      try {
+        const parsedState = JSON.parse(storedState);
+        // If we have saved levels for this job, restore them
+        if (parsedState.selectedJob?.id === selectedJob.id && parsedState.levels) {
+          const savedLevels = parsedState.levels;
+          // Merge saved levels with job config to ensure we have all level data
+          const restoredLevels = selectedJob.levels.map((jobLevel) => {
+            const savedLevel = savedLevels.find(
+              (sl: Level) => sl.id === jobLevel.id
+            );
+            if (savedLevel && savedLevel.status) {
+              // Preserve status and other state from saved level
+              return { ...jobLevel, status: savedLevel.status };
+            }
+            // If no saved state, use default from config
+            return jobLevel;
+          });
+          // Recalculate unlock states based on completed prerequisites
+          const recalculatedLevels = recalculateUnlockStates(restoredLevels);
+          // Only update if levels have actually changed to avoid unnecessary re-renders
+          setLevels((currentLevels) => {
+            const levelsChanged = 
+              currentLevels.length !== recalculatedLevels.length ||
+              currentLevels.some((l, i) => 
+                l.id !== recalculatedLevels[i].id || 
+                l.status !== recalculatedLevels[i].status
+              );
+            return levelsChanged ? recalculatedLevels : currentLevels;
+          });
+        }
+      } catch (e) {
+        console.error("Failed to restore levels for current job:", e);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentScreen, selectedJob?.id, isLoaded]);
 
   if (!isLoaded) {
     return <LoadingScreen config={config} />;
@@ -799,6 +874,20 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
           onSettingsClick={() => setShowSettings(true)}
           onExpressApply={handleExpressApply}
           onBackToCampus={handleBackToCampus}
+          viewport={mapViewport[selectedJob.id]}
+          scrollPosition={mapScrollPosition[selectedJob.id]}
+          onViewportChange={(viewport) => {
+            setMapViewport((prev) => ({
+              ...prev,
+              [selectedJob.id]: viewport,
+            }));
+          }}
+          onScrollPositionChange={(scrollPosition) => {
+            setMapScrollPosition((prev) => ({
+              ...prev,
+              [selectedJob.id]: scrollPosition,
+            }));
+          }}
         />
       )}
 

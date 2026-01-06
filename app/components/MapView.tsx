@@ -29,6 +29,10 @@ interface MapViewProps {
   onSettingsClick: () => void;
   onExpressApply: () => void;
   onBackToCampus: () => void;
+  viewport?: { scale: number; x: number; y: number };
+  scrollPosition?: number;
+  onViewportChange?: (viewport: { scale: number; x: number; y: number }) => void;
+  onScrollPositionChange?: (scrollPosition: number) => void;
 }
 
 export function MapView({
@@ -40,6 +44,10 @@ export function MapView({
   onSettingsClick,
   onExpressApply,
   onBackToCampus,
+  viewport: initialViewport,
+  scrollPosition: initialScrollPosition,
+  onViewportChange,
+  onScrollPositionChange,
 }: MapViewProps) {
   const [isApplyDialogOpen, setIsApplyDialogOpen] = useState(false);
   const [isPanning, setIsPanning] = useState(false);
@@ -53,29 +61,111 @@ export function MapView({
   const accentColor = job.color ?? config.company.primaryColor;
   const supportsZoom = isGlobalMode && Boolean(pathMode.zoom?.enabled);
 
-  const [viewport, setViewport] = useState({
-    scale: pathMode.zoom?.defaultScale ?? 1,
-    x: 0,
-    y: 0,
-  });
-
-  useEffect(() => {
-    setViewport({
+  const defaultViewport = useMemo(
+    () => ({
       scale: pathMode.zoom?.defaultScale ?? 1,
       x: 0,
       y: 0,
-    });
-    setIsPanning(false);
-  }, [job.id, pathMode.id, pathMode.zoom?.defaultScale]);
+    }),
+    [pathMode.zoom?.defaultScale]
+  );
 
-  // Center the scroll container horizontally on mount and when job changes
+  const [viewport, setViewport] = useState(
+    initialViewport ?? defaultViewport
+  );
+
+  // Track if this is the initial mount for this job
+  const jobMountRef = useRef<string | null>(null);
+
+  // Restore viewport when job changes
   useEffect(() => {
-    if (scrollContainerRef.current && !isGlobalMode) {
-      const container = scrollContainerRef.current;
-      const scrollX = (container.scrollWidth - container.clientWidth) / 2;
-      container.scrollLeft = scrollX;
+    const isNewJob = jobMountRef.current !== job.id;
+    jobMountRef.current = job.id;
+
+    if (initialViewport) {
+      setViewport(initialViewport);
+    } else {
+      setViewport(defaultViewport);
     }
-  }, [job.id, isGlobalMode]);
+    setIsPanning(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [job.id, pathMode.id]);
+
+  // Notify parent when viewport changes (debounced to avoid too many updates)
+  const viewportUpdateTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  useEffect(() => {
+    if (!onViewportChange || !supportsZoom) return;
+
+    // Clear any pending update
+    if (viewportUpdateTimeoutRef.current) {
+      clearTimeout(viewportUpdateTimeoutRef.current);
+    }
+
+    // Debounce viewport updates to avoid excessive localStorage writes
+    viewportUpdateTimeoutRef.current = setTimeout(() => {
+      onViewportChange(viewport);
+    }, 100);
+
+    return () => {
+      if (viewportUpdateTimeoutRef.current) {
+        clearTimeout(viewportUpdateTimeoutRef.current);
+      }
+    };
+  }, [viewport, onViewportChange, supportsZoom]);
+
+  // Restore scroll position or center the scroll container horizontally on mount and when job changes
+  useEffect(() => {
+    if (!scrollContainerRef.current || isGlobalMode) return;
+
+    const container = scrollContainerRef.current;
+    
+    // Use requestAnimationFrame to ensure DOM is fully laid out
+    const restoreScroll = () => {
+      if (initialScrollPosition !== undefined && initialScrollPosition >= 0) {
+        // Restore saved scroll position
+        container.scrollLeft = initialScrollPosition;
+      } else {
+        // Center horizontally if no saved position
+        const scrollX = (container.scrollWidth - container.clientWidth) / 2;
+        container.scrollLeft = scrollX;
+      }
+    };
+
+    // Try immediately
+    restoreScroll();
+    
+    // Also try after a short delay in case layout isn't ready yet
+    const timeoutId = setTimeout(restoreScroll, 100);
+    
+    return () => clearTimeout(timeoutId);
+  }, [job.id, isGlobalMode, initialScrollPosition]);
+
+  // Track scroll position changes and notify parent (debounced)
+  const scrollUpdateTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  useEffect(() => {
+    if (!scrollContainerRef.current || isGlobalMode || !onScrollPositionChange) return;
+
+    const container = scrollContainerRef.current;
+    const handleScroll = () => {
+      // Clear any pending update
+      if (scrollUpdateTimeoutRef.current) {
+        clearTimeout(scrollUpdateTimeoutRef.current);
+      }
+
+      // Debounce scroll updates to avoid excessive localStorage writes
+      scrollUpdateTimeoutRef.current = setTimeout(() => {
+        onScrollPositionChange(container.scrollLeft);
+      }, 100);
+    };
+
+    container.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+      if (scrollUpdateTimeoutRef.current) {
+        clearTimeout(scrollUpdateTimeoutRef.current);
+      }
+    };
+  }, [isGlobalMode, onScrollPositionChange]);
 
   // Prevent scroll container from scrolling when panning is active
   useEffect(() => {

@@ -262,45 +262,50 @@ export function InteractionView({
     <div className="relative flex h-[100dvh] flex-col bg-white">
       <header className="absolute left-0 right-0 top-0 z-50 flex items-center justify-between gap-3 px-2 py-2">
         <div className="flex items-center gap-2">
-          <button
+          <Button
             onClick={onExit}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100/50 backdrop-blur-sm transition hover:bg-slate-100"
+            size="icon"
+            variant="secondaryOutline"
             aria-label="Zurück"
           >
-            <X className="h-5 w-5 text-slate-600" />
-          </button>
-          <button
+            <X className="h-5 w-5 text-slate-500" />
+          </Button>
+          <Button
             onClick={() => {
               spawnParticle();
             }}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100/50 backdrop-blur-sm transition hover:bg-slate-200"
+            size="icon"
+            variant="secondaryOutline"
           >
             {config.company.signatureEmoji || "⚙️"}
-          </button>
+          </Button>
           {debugMode && onDebugCompleteLevel && (
-            <button
+            <Button
               onClick={onDebugCompleteLevel}
-              className="flex items-center gap-1 rounded-full bg-red-500/90 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-sm transition hover:bg-red-600"
+              size="sm"
+              variant="dangerOutline"
               title="Debug: Complete Level (Ctrl/Cmd + Shift + C)"
             >
               ⚡ Finish Level
-            </button>
+            </Button>
           )}
         </div>
         <div className="flex items-center gap-2">
-          <button
+          <Button
             onClick={handleTipRequest}
-            className={`flex items-center gap-2 rounded-full bg-slate-100/50 px-2 py-2 text-sm font-semibold text-slate-700 backdrop-blur-sm transition hover:bg-slate-200 ${
+            size="sm"
+            variant="secondaryOutline"
+            className={`flex items-center gap-2 ${
               highlightTipButton
                 ? "animate-pulse-glow ring-2 ring-blue-400 ring-offset-2 ring-offset-slate-50"
                 : ""
             }`}
           >
-            <span>?</span>
+            <span className="text-sm">?</span>
             Tip holen
-          </button>
+          </Button>
           <div className="flex grow items-center justify-center">
-            <div className="size-10 rounded-full bg-slate-100/50 backdrop-blur-sm">
+            <div className="size-10 rounded-full bg-slate-100">
               <CircularProgressbarWithChildren
                 value={progressPercentage}
                 styles={{

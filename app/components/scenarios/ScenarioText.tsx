@@ -15,7 +15,7 @@ export function ScenarioText({
   const isLLMInteractive = scenario.type === "llm-interactive";
 
   return (
-    <div className="mb-6 rounded-b-3xl border-purple-200 bg-purple-50 px-4 py-4">
+    <div className="mx-4 mb-6 mt-4 rounded-3xl border-4 border-slate-200 bg-purple-200/50 bg-white px-4 py-4">
       {isLLMInteractive ? (
         <div>
           {isLLMLoading ? (
@@ -41,4 +41,3 @@ export function ScenarioText({
     </div>
   );
 }
-
