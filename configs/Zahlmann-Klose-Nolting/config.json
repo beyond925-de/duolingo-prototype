@@ -5,7 +5,7 @@
   "company": {
     "name": "Zahlmann Klose Nolting",
     "slug": "zahlmann-klose-nolting",
-    "logoUrl": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "logoUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGnOTNML3CW57PksA62NLtzl1f4JaKbhG3DIYH",
     "signatureEmoji": "🦁",
     "primaryColor": "#1E3A8A",
     "secondaryColor": "#FFFFFF",
@@ -64,7 +64,7 @@
             "id": "praxis",
             "label": "Geld verdienen & sofort im echten Leben helfen",
             "icon": "💸",
-            "imageUrl": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGja2TSn8YMRy1UqZdwPX5V82Bh3aQLvEA6kzo",
             "score": {
               "azubi-hero": 2,
               "dual-student": 0
@@ -74,7 +74,7 @@
             "id": "theorie",
             "label": "Gesetze wälzen & komplexe Fälle knacken",
             "icon": "⚖️",
-            "imageUrl": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGNtk2Cj0KfuPD5hzmcYAwiEXGTQM8FOvojVyZ",
             "score": {
               "azubi-hero": 0,
               "dual-student": 2
@@ -90,7 +90,7 @@
             "id": "doing",
             "label": "Learning by Doing im Team",
             "icon": "🤝",
-            "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqJAbNc97Aj1hznsJlaW5tFZHNPDuCodmTU2",
             "score": {
               "azubi-hero": 2,
               "dual-student": 1
@@ -100,7 +100,7 @@
             "id": "analyzing",
             "label": "Hörsaal & Büro im Wechsel",
             "icon": "🎓",
-            "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGNYHSO40KfuPD5hzmcYAwiEXGTQM8FOvojVyZ",
             "score": {
               "azubi-hero": 1,
               "dual-student": 2
@@ -139,7 +139,7 @@
             {
               "id": 1,
               "scenario": "Willkommen bei Zahlmann! Was interessiert dich heute? Willst du wissen, wie dein Alltag im ersten Jahr aussieht, oder wie weit du in 10 Jahren kommen kannst?",
-              "imageUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGZ5SYb9fBvV6qo4HUW3RwAsagPDYz9tJjSKxF",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -156,7 +156,7 @@
             }
           ]
         },
-        
+
         {
           "id": 2,
           "title": "Zweig 1: Onboarding & Team",
@@ -168,7 +168,7 @@
             {
               "id": 1,
               "scenario": "August, dein erster Tag! Bianca aus HR gibt dir dein 'Home-Office Kit' und stellt dir deinen Paten vor. Du bist aufgeregt. Wie startest du?",
-              "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqJAbNc97Aj1hznsJlaW5tFZHNPDuCodmTU2",
               "type": "single-select-correct",
               "options": [
                 {
@@ -198,7 +198,7 @@
             {
               "id": 1,
               "scenario": "Ein Mandant bringt einen Schuhkarton voller zerknüllter Quittungen. 😱 Bei uns läuft das anders. Was zeigst du ihm?",
-              "imageUrl": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGtmnJuz1qTZ7VdmgwaGhY1XcyqSC4ArUIjzOf",
               "type": "multiple-select",
               "options": [
                 {
@@ -234,7 +234,7 @@
             {
               "id": 1,
               "scenario": "Die Bilanz-Saison war stressig. Aber jetzt steht der jährliche Betriebsausflug an! Es ist eine Überraschung. Worauf hoffst du?",
-              "imageUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGRKwnDrtjKZNeS6hF9HWqG8R5P4EJDBsc3ioU",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -263,7 +263,7 @@
             {
               "id": 1,
               "scenario": "Du startest deine Ausbildung. Dein Ziel ist aber nicht der Schreibtisch, sondern der Chefsessel. Deine Basis: 3 Jahre Top-Ausbildung. Was nimmst du mit?",
-              "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGja2TSn8YMRy1UqZdwPX5V82Bh3aQLvEA6kzo",
               "type": "bento-grid",
               "facts": [
                 {
@@ -299,7 +299,7 @@
             {
               "id": 1,
               "scenario": "Ausbildung in der Tasche! 🎓 Aber du willst mehr. Welche Fortbildung zahlt dir ZKN?",
-              "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGNYHSO40KfuPD5hzmcYAwiEXGTQM8FOvojVyZ",
               "type": "single-select-correct",
               "options": [
                 {
@@ -329,7 +329,7 @@
             {
               "id": 1,
               "scenario": "Nach einigen Jahren Erfahrung und dem Steuerberater-Examen (wir unterstützen dich!) bist du am Ziel. Was bedeutet das?",
-              "imageUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGja2TSn8YMRy1UqZdwPX5V82Bh3aQLvEA6kzo",
               "type": "bento-grid",
               "facts": [
                 {
@@ -359,7 +359,7 @@
             {
               "id": 1,
               "scenario": "Egal ob Alltag oder Karriere-Leiter: Bei Zahlmann stehen dir alle Türen offen. Bock auf ein Kennenlernen?",
-              "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGja2TSn8YMRy1UqZdwPX5V82Bh3aQLvEA6kzo",
               "type": "single-select-or-text",
               "allowTextInput": true,
               "options": [
@@ -401,7 +401,7 @@
             {
               "id": 1,
               "scenario": "Duales Studium bei Zahlmann heißt: Volle Power. Was willst du wissen?",
-              "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGNtk2Cj0KfuPD5hzmcYAwiEXGTQM8FOvojVyZ",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -430,7 +430,7 @@
             {
               "id": 1,
               "scenario": "Montag: Vorlesung Steuerrecht. Dienstag: Kanzlei in Löhne. Ein Mandant hat eine komplexe Frage zur Erbschaftssteuer. Du hast das gerade in der Uni gehört! Was tust du?",
-              "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGky9iY7IDlbfKxQz4mvAu10ewBnyVZqG8XjhT",
               "type": "single-select-correct",
               "options": [
                 {
@@ -460,7 +460,7 @@
             {
               "id": 1,
               "scenario": "Klausurenphase UND Jahresabschlüsse. 🤯 Es wird viel. Wie reagiert dein Team bei Zahlmann?",
-              "imageUrl": "https://images.unsplash.com/photo-1516534775068-ba3f7458946b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqJAbNc97Aj1hznsJlaW5tFZHNPDuCodmTU2",
               "type": "single-select-correct",
               "options": [
                 {
@@ -490,7 +490,7 @@
             {
               "id": 1,
               "scenario": "Du darfst bei einer Betriebsprüfung dabei sein. Der Prüfer vom Finanzamt stellt kritische Fragen. Michael Klose nimmt dich mit rein. Wie fühlst du dich?",
-              "imageUrl": "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGYi0nkJBUfbxGHgALKXJ1ZnC6wlozTtP2ahqI",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -519,7 +519,7 @@
             {
               "id": 1,
               "scenario": "3 Jahre, Bachelor of Laws (LL.B.) in der Tasche. Glückwunsch! 🎉 Aber bei Zahlmann ist das erst der Anfang. Was ist der nächste logische Schritt?",
-              "imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGja2TSn8YMRy1UqZdwPX5V82Bh3aQLvEA6kzo",
               "type": "bento-grid",
               "facts": [
                 {
@@ -549,7 +549,7 @@
             {
               "id": 1,
               "scenario": "Du willst nicht nur Steuern, du willst die ganz großen Zahlen prüfen? Volker Nolting ist Wirtschaftsprüfer. Er kann dein Mentor sein für...",
-              "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGja2TSn8YMRy1UqZdwPX5V82Bh3aQLvEA6kzo",
               "type": "single-select-correct",
               "options": [
                 {
@@ -579,7 +579,7 @@
             {
               "id": 1,
               "scenario": "Mit WP-Titel und Steuerberater-Examen bist du fachlich ganz oben. In einer riesigen anonymen Kanzlei wärst du jetzt 'Manager 34'. Bei uns in Löhne bist du...",
-              "imageUrl": "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqJAbNc97Aj1hznsJlaW5tFZHNPDuCodmTU2",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -607,7 +607,7 @@
             {
               "id": 1,
               "scenario": "Theorie ist gut, Praxis ist besser. Willst du deine Karriere bei Zahlmann starten?",
-              "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGZTi2mPfBvV6qo4HUW3RwAsagPDYz9tJjSKxF",
               "type": "single-select-or-text",
               "allowTextInput": true,
               "options": [
