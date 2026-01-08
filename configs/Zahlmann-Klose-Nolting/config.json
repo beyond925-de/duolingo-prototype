@@ -1,5 +1,5 @@
 {
-  "_instructions": "Zahlmann Klose Nolting - Dual Branch Config",
+  "_instructions": "Zahlmann Klose Nolting - Hybrid Mode (Messe & Home)",
   "_filename": "configs/zahlmann/config.json",
 
   "company": {
@@ -11,21 +11,21 @@
     "secondaryColor": "#FFFFFF",
     "city": "Löhne",
     "website": "https://www.zahlmann.de/karriere",
-    "industryVibe": "Steuerberatung ist trocken? Nicht bei uns. Wir sind #TeamZahlmann: Digitaler Vorreiter, familiär wie beste Freunde und erfolgreich seit 1958. Hier wirst du nicht verwaltet, hier gestaltest du mit. In Löhne, für den Mittelstand, für dich.",
+    "industryVibe": "Steuerberatung ist trocken? Nicht bei uns. Wir sind #TeamZahlmann: Digitaler Vorreiter, familiär wie beste Freunde und erfolgreich seit 1958. Hier wirst du nicht verwaltet, hier gestaltest du mit.",
     "organizationFacts": [
       {
         "title": "Digital & Modern",
-        "value": "Web-basierte Prozesse, Home-Office-Kit und papierloses Arbeiten. Wir leben Zukunft.",
+        "value": "Web-basierte Prozesse, Home-Office-Kit und papierloses Arbeiten.",
         "icon": "💻"
       },
       {
         "title": "Wohlfühl-Faktor",
-        "value": "Massagen, Darts, Garten-Lounge und monatliches Team-Frühstück. Arbeit muss Bock machen.",
+        "value": "Massagen, Darts, Garten-Lounge und monatliches Team-Frühstück.",
         "icon": "💆"
       },
       {
         "title": "Sicherheit",
-        "value": "Krisensicherer Job, überdurchschnittliches Gehalt und dein persönlicher Pate an der Seite.",
+        "value": "Krisensicherer Job, überdurchschnittliches Gehalt und dein persönlicher Pate.",
         "icon": "🛡️"
       }
     ]
@@ -33,7 +33,7 @@
 
   "landing": {
     "headline": "Dein Match. Deine Zukunft. Dein #TeamZahlmann.",
-    "subline": "Bist du der Praxis-Macher oder der Strategie-Denker? Finde heraus, ob du in unsere Kanzlei passt und wie steil deine Karriere gehen kann.",
+    "subline": "Bist du der Praxis-Macher oder der Strategie-Denker? Finde heraus, ob du in unsere Kanzlei passt – in 60 Sekunden.",
     "startButtonText": "Zeig mir meine Story 🚀"
   },
 
@@ -41,6 +41,11 @@
     "headline": "Wähle deinen Einstieg",
     "subline": "Welcher Weg führt dich nach Löhne?",
     "categories": [
+      {
+        "id": "messe",
+        "title": "⚡ Speed-Dating (Live am Stand)",
+        "jobId": "messe-match"
+      },
       {
         "id": "ausbildung",
         "title": "Ausbildung (Steuerfachangestellte/r)",
@@ -57,6 +62,34 @@
   "questionnaire": {
     "questions": [
       {
+        "id": "context_check",
+        "question": "Hand aufs Herz: Wo erwischen wir dich gerade?",
+        "options": [
+          {
+            "id": "messe",
+            "label": "Im Messetrubel (Schnell-Check!) 🏃💨",
+            "icon": "🎪",
+            "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGZ5SYb9fBvV6qo4HUW3RwAsagPDYz9tJjSKxF",
+            "score": {
+              "messe-match": 50,
+              "azubi-hero": 0,
+              "dual-student": 0
+            }
+          },
+          {
+            "id": "couch",
+            "label": "Entspannt auf der Couch (Deep Dive) 🛋️",
+            "icon": "☕",
+            "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqJAbNc97Aj1hznsJlaW5tFZHNPDuCodmTU2",
+            "score": {
+              "messe-match": 0,
+              "azubi-hero": 2,
+              "dual-student": 2
+            }
+          }
+        ]
+      },
+      {
         "id": "interest",
         "question": "Was triggert dich mehr?",
         "options": [
@@ -67,7 +100,8 @@
             "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGja2TSn8YMRy1UqZdwPX5V82Bh3aQLvEA6kzo",
             "score": {
               "azubi-hero": 2,
-              "dual-student": 0
+              "dual-student": 0,
+              "messe-match": 0
             }
           },
           {
@@ -77,7 +111,8 @@
             "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGNtk2Cj0KfuPD5hzmcYAwiEXGTQM8FOvojVyZ",
             "score": {
               "azubi-hero": 0,
-              "dual-student": 2
+              "dual-student": 2,
+              "messe-match": 0
             }
           }
         ]
@@ -93,7 +128,8 @@
             "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqJAbNc97Aj1hznsJlaW5tFZHNPDuCodmTU2",
             "score": {
               "azubi-hero": 2,
-              "dual-student": 1
+              "dual-student": 1,
+              "messe-match": 0
             }
           },
           {
@@ -103,21 +139,100 @@
             "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGNYHSO40KfuPD5hzmcYAwiEXGTQM8FOvojVyZ",
             "score": {
               "azubi-hero": 1,
-              "dual-student": 2
+              "dual-student": 2,
+              "messe-match": 0
             }
           }
         ]
       }
     ],
     "suggestionText": {
-      "headline": "Wir sehen dich hier:",
+      "headline": "Unser Vorschlag für dich:",
       "startButtonText": "Story starten",
-      "viewAllButtonText": "Andere Wege",
+      "viewAllButtonText": "Alle Wege",
       "skipButtonText": "Direkt bewerben"
     }
   },
 
   "jobs": [
+    {
+      "id": "messe-match",
+      "title": "Der ZKN-Vibe-Check",
+      "description": "Passt du ins Team? Finde es in 60 Sekunden heraus (live am Stand).",
+      "icon": "🦁",
+      "color": "#E11D48",
+      "tags": ["Speed-Dating", "Live", "Messe"],
+      "biomeThemeId": "modern-office",
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Kultur-Test",
+          "status": "unlocked",
+          "icon": "⚡",
+          "row": 0,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Schau dich mal kurz am Stand um. Der Recruiter neben dir... wirkt der wie ein typischer, spießiger Steuerberater?",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGZ5SYb9fBvV6qo4HUW3RwAsagPDYz9tJjSKxF",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, schon irgendwie. Krawatte und so.",
+                  "correct": false,
+                  "feedback": "Echt jetzt? Guck nochmal genau hin! 😉 Wir sind #TeamZahlmann."
+                },
+                {
+                  "id": 2,
+                  "text": "Ne, eher locker drauf.",
+                  "correct": true,
+                  "feedback": "Treffer! Wir duzen uns und tragen Sneaker. Willkommen im Club."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Stell dir vor, du fängst morgen an. Was ist dir wichtiger als das Gehalt?",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqJAbNc97Aj1hznsJlaW5tFZHNPDuCodmTU2",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Dass ich nicht dumm dastehe (Einarbeitung).",
+                  "feedback": "Verstanden. Deshalb kriegst du sofort einen Paten an die Seite."
+                },
+                {
+                  "id": 2,
+                  "text": "Dass das Team cool ist.",
+                  "feedback": "Safe. Unser monatliches Team-Frühstück ist legendär."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "scenario": "Okay, der Vibe passt schonmal. Der Recruiter würde dir gerne mehr erzählen, aber hier ist es laut. Tauschen wir Kontakte?",
+              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGja2TSn8YMRy1UqZdwPX5V82Bh3aQLvEA6kzo",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Klar, hier ist meine Nummer/Insta! 📱",
+                  "feedback": "Top! Zeig dem Recruiter diesen Screen für ein Goodie."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich nehme erstmal den Flyer mit.",
+                  "feedback": "Auch gut. Aber scan uns bloß nicht aus dem Gedächtnis! 😉"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "azubi-hero",
       "title": "Ausbildung Steuerfachangestellte/r (m/w/d)",
