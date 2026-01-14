@@ -1,0 +1,367 @@
+{
+  "company": {
+    "name": "Eisenführ Speiser",
+    "logoUrl": "⚖️",
+    "logoImageUrl": "https://files.lbr.cloud/public/media/images/300_dpi_eisenfuhr_speiser_characterized_by_ip_kurzer_winkel_negativ_petrol.jpg",
+    "primaryColor": "#003056",
+    "secondaryColor": "#009fe3",
+    "city": "Bremen, München, Berlin, Hamburg",
+    "website": "https://www.eisenfuhr.com/karriere",
+    "industryVibe": "Wir beschützen die Erfindungen der Zukunft. Ob Sneakers, Autos oder Software – wir sichern die Ideen ab.",
+    "organizationFacts": [
+      {
+        "title": "Voll Digital",
+        "value": "Keine verstaubten Aktenberge. Wir arbeiten seit 2011 komplett digital und papierlos.",
+        "icon": "💻"
+      },
+      {
+        "title": "International",
+        "value": "Wir arbeiten mit Partnern auf der ganzen Welt. Englisch gehört bei uns dazu.",
+        "icon": "🌍"
+      },
+      {
+        "title": "Bleib bei uns",
+        "value": "Wir bilden aus, um zu übernehmen. Deine Zukunft ist hier sicher.",
+        "icon": "🤝"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Manager:in für Weltneuheiten. 💡",
+    "subline": "Erfindungen schützen und international managen – komplett digital. Finde heraus, ob du ins Team passt.",
+    "startButtonText": "Mission starten 🚀"
+  },
+  "campus": {
+    "headline": "Dein Talent?",
+    "subline": "Was liegt dir mehr? Finde deinen Einstieg.",
+    "categories": [
+      {
+        "id": "org",
+        "title": "Organisieren & Planen",
+        "jobId": "pafa"
+      },
+      {
+        "id": "law",
+        "title": "Recht & Genauigkeit",
+        "jobId": "pafa"
+      },
+      {
+        "id": "tech",
+        "title": "Digitales & Innovation",
+        "jobId": "pafa"
+      }
+    ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "workstyle",
+        "question": "Wie sieht dein perfekter Schreibtisch aus?",
+        "options": [
+          {
+            "id": "digital",
+            "label": "Clean, modern, zwei Bildschirme, kein Papierkram",
+            "icon": "🖥️",
+            "imageUrl": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800",
+            "score": {
+              "pafa": 3
+            }
+          },
+          {
+            "id": "chaos",
+            "label": "Bunte Zettel überall, kreatives Chaos",
+            "icon": "🎨",
+            "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800",
+            "score": {
+              "pafa": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "interest",
+        "question": "Worum kümmerst du dich lieber?",
+        "options": [
+          {
+            "id": "innovation",
+            "label": "Die neusten Erfindungen und Marken schützen",
+            "icon": "💡",
+            "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800",
+            "score": {
+              "pafa": 2
+            }
+          },
+          {
+            "id": "people",
+            "label": "Nur Menschen beraten, ohne Technik",
+            "icon": "🗣️",
+            "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800",
+            "score": {
+              "pafa": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "question": "Wie arbeitest du?",
+        "options": [
+          {
+            "id": "together",
+            "label": "Im Team, unterstützend und verlässlich",
+            "icon": "🤝",
+            "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800",
+            "score": {
+              "pafa": 2
+            }
+          },
+          {
+            "id": "solo",
+            "label": "Ich mache mein Ding alleine",
+            "icon": "🐺",
+            "imageUrl": "https://images.unsplash.com/photo-1507537297725-24a1c434c67b?w=800",
+            "score": {
+              "pafa": 0
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Wir haben ein Match!",
+      "startButtonText": "Beruf entdecken",
+      "viewAllButtonText": "Alles ansehen",
+      "skipButtonText": "Direkt zu den Fakten"
+    }
+  },
+  "jobs": [
+    {
+      "id": "pafa",
+      "title": "Patentanwaltsfachangestellte:r",
+      "description": "Manager:in für Erfindungen. Schütze Ideen weltweit! 🌍⚖️",
+      "icon": "⚖️",
+      "color": "#003056",
+      "tags": ["💻 Digital", "🌍 International", "🚀 Zukunftssicher"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Die Idee",
+          "status": "unlocked",
+          "icon": "💡",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Stell dir vor: Ein Mandant hat einen Sneaker erfunden, der nie schmutzig wird. 👟✨ Damit das keiner klaut, kommt er zu uns. Was ist dein erster Job?",
+              "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich rufe sofort die Zeitung an! 📰",
+                  "correct": false,
+                  "feedback": "Halt, stopp! 🤫 Erfindungen müssen geheim bleiben, bis sie angemeldet sind."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich bereite die Anmeldung beim Patentamt vor 📝",
+                  "correct": true,
+                  "feedback": "Genau! Wir sorgen dafür, dass die Idee rechtlich geschützt wird."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Digital First",
+          "status": "locked",
+          "icon": "💻",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bei Eisenführ Speiser arbeiten wir anders als viele andere Kanzleien. Der Anwalt gibt dir wichtige Dokumente für den Fall. Wohin damit?",
+              "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Lochen und in den dicken Ordner heften 📂",
+                  "correct": false,
+                  "feedback": "Das war gestern! Wir sind seit 2011 Vorreiter und arbeiten komplett digital."
+                },
+                {
+                  "id": 2,
+                  "text": "In die elektronische Akte einsortieren 💾",
+                  "correct": true,
+                  "feedback": "Exakt! 🚀 Wir sind 'Digital Natives'. Kein Papierchaos, volle Übersicht am PC."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "International",
+          "status": "locked",
+          "icon": "🌍",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Der 'Unschmutzbar-Sneaker' soll auch in Japan verkauft werden. 🇯🇵 Ein Brief muss nach Tokio. Wie fit bist du?",
+              "imageUrl": "https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?w=800",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Ein Brief nach Japan! 🌏 Auf Deutsch verstehen die uns dort wohl nicht. Was meinst du, welche Sprache nutzen wir im Büro dafür?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Deadline!",
+          "status": "locked",
+          "icon": "⏳",
+          "row": 3,
+          "nextLevelIds": [5],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Das Patentamt hat eine Frist gesetzt: Bis Montag muss eine Antwort da sein. Wenn wir das verpassen, ist das Patent weg! 😱 Wie gehst du damit um?",
+              "imageUrl": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich schreibe mir einen Zettel und hoffe, dass ich dran denke 📝",
+                  "correct": false,
+                  "feedback": "Zu riskant! Bei uns geht es um Millionenwerte."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich trage die Frist sofort ins digitale System ein 🛡️",
+                  "correct": true,
+                  "feedback": "Richtig. Unser System überwacht alles. Genauigkeit ist deine Superkraft."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Deine Benefits",
+          "status": "locked",
+          "icon": "🎁",
+          "row": 4,
+          "nextLevelIds": [6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Puh, Frist eingehalten! 🎉 Gute Arbeit wird bei uns belohnt. Was erwartet dich hier?",
+              "imageUrl": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Karriere-Turbo",
+                  "value": "Mit Abi kannst du die Ausbildung auf 2 Jahre verkürzen.",
+                  "icon": "⏩",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Bleib hier",
+                  "value": "Hohe Übernahmechancen nach der Ausbildung.",
+                  "icon": "🤝",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Top Lage",
+                  "value": "Büros direkt in der City (München, Berlin, HH, Bremen).",
+                  "icon": "🏙️",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Events",
+                  "value": "Ausflüge & Feiern mit allen Standorten.",
+                  "icon": "🥂",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 5,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du passt perfekt zu uns! Du magst Technik, bist genau und willst digital arbeiten? Dann bewirb dich jetzt für 2026.",
+              "imageUrl": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Klingt super, ich will mich bewerben! 📝",
+                  "feedback": "Klasse! Wir freuen uns auf deine Bewerbung (gerne per Mail)."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich hab noch Fragen. 🤔",
+                  "feedback": "Kein Problem! Frau Franker aus dem HR-Team hilft dir gerne weiter."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "checkChances": "Checke meine Chancen",
+    "expressApply": "Direkt bewerben",
+    "jobMerken": "Job merken",
+    "submit": "Ergebnisse senden",
+    "submitSuccess": "Top! Wir melden uns schnellstmöglich bei dir.",
+    "victoryHeadline": "Mission erfüllt! 🏆",
+    "victorySubtext": "Du hast das Zeug zum Patent-Profi. Genauigkeit und digitales Denken liegen dir.",
+    "nudgeHeadline": "Mal ehrlich...",
+    "nudgeText": "Du hast echt Talent für den Job. Wir sind keine verstaubte Kanzlei – lern uns kennen! ✨",
+    "firstName": "Wie heißt du?",
+    "phoneType": "Dein Smartphone?",
+    "schoolType": "Deine Schule?",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule",
+    "gymnasium": "Gymnasium / Fachabi",
+    "andere": "Andere / Hab schon Abschluss",
+    "expressApplyIntro": "Lass uns kurz Daten tauschen – wir melden uns bei dir!",
+    "exploreOtherJobs": "Noch mal schauen"
+  }
+}
