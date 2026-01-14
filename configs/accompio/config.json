@@ -1,0 +1,551 @@
+{
+  "company": {
+    "name": "accompio",
+    "logoUrl": "🚀",
+    "logoImageUrl": "https://karriere.accompio.com/assets/images/logo.svg",
+    "primaryColor": "#0e2b42",
+    "secondaryColor": "#8dc63f",
+    "city": "Einbeck (und viele mehr)",
+    "website": "https://karriere.accompio.com",
+    "industryVibe": "Wir sind das IT-Powerhouse. Wir machen Unternehmen digital, sicher und zukunftsfähig.",
+    "organizationFacts": [
+      {
+        "title": "Eis-Flatrate 🍦",
+        "value": "Kein Scherz: Im Sommer gibt's bei uns Eis so viel du willst.",
+        "icon": "❄️"
+      },
+      {
+        "title": "Echte Buddys",
+        "value": "Du bekommst einen Mentor an die Seite. Wir werfen dich nicht ins kalte Wasser.",
+        "icon": "🤝"
+      },
+      {
+        "title": "Events & Fun",
+        "value": "Wir feiern unsere Erfolge. Team-Events gehören fest dazu.",
+        "icon": "🎉"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Dein Start ins digitale Universum. 🌌",
+    "subline": "Bei accompio gestalten wir die IT von morgen. Finde heraus, welcher Tech-Job zu dir passt – in 3 Minuten.",
+    "startButtonText": "Mission starten 🚀"
+  },
+  "campus": {
+    "headline": "Welcher Tech-Typ bist du?",
+    "subline": "Finde deinen Platz in unserem Team.",
+    "categories": [
+      {
+        "id": "code",
+        "title": "Coden & Erschaffen",
+        "jobId": "fiae"
+      },
+      {
+        "id": "admin",
+        "title": "Vernetzen & Lösen",
+        "jobId": "fisi"
+      },
+      {
+        "id": "hardware",
+        "title": "Schrauben & Installieren",
+        "jobId": "itse"
+      }
+    ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "interest",
+        "question": "Was macht dir am meisten Spaß?",
+        "options": [
+          {
+            "id": "logic",
+            "label": "Rätsel lösen und Dinge programmieren",
+            "icon": "💻",
+            "imageUrl": "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=800",
+            "score": {
+              "fiae": 3,
+              "fisi": 1,
+              "itse": 0
+            }
+          },
+          {
+            "id": "help",
+            "label": "Anderen helfen, wenn der PC streikt",
+            "icon": "🆘",
+            "imageUrl": "https://images.unsplash.com/photo-1556740758-90de374c12ad?w=800",
+            "score": {
+              "fiae": 1,
+              "fisi": 3,
+              "itse": 1
+            }
+          },
+          {
+            "id": "craft",
+            "label": "Hardware zusammenbauen und Kabel verlegen",
+            "icon": "🔌",
+            "imageUrl": "https://images.unsplash.com/photo-1581092921461-eab62e97a782?w=800",
+            "score": {
+              "fiae": 0,
+              "fisi": 1,
+              "itse": 3
+            }
+          }
+        ]
+      },
+      {
+        "id": "environment",
+        "question": "Wo arbeitest du am liebsten?",
+        "options": [
+          {
+            "id": "screen",
+            "label": "Am Monitor, tief im Tunnel",
+            "icon": "🖥️",
+            "imageUrl": "https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800",
+            "score": {
+              "fiae": 2,
+              "fisi": 1,
+              "itse": 0
+            }
+          },
+          {
+            "id": "mix",
+            "label": "Mal am PC, mal am Server, mal im Meeting",
+            "icon": "🔄",
+            "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800",
+            "score": {
+              "fiae": 1,
+              "fisi": 2,
+              "itse": 1
+            }
+          },
+          {
+            "id": "active",
+            "label": "Unterwegs und direkt beim Kunden",
+            "icon": "🚗",
+            "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800",
+            "score": {
+              "fiae": 0,
+              "fisi": 1,
+              "itse": 2
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Das passt zu dir:",
+      "startButtonText": "Beruf entdecken",
+      "viewAllButtonText": "Alle Berufe ansehen",
+      "skipButtonText": "Erstmal stöbern"
+    }
+  },
+  "jobs": [
+    {
+      "id": "fiae",
+      "title": "Fachinformatiker:in Anwendungsentwicklung",
+      "description": "Programmiere die Software von morgen! 💻✨",
+      "icon": "👨‍💻",
+      "color": "#8dc63f",
+      "tags": ["🧠 Logik", "📱 Apps bauen", "☕ Kaffee & Code"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Code-Check",
+          "status": "unlocked",
+          "icon": "🔍",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hi! 👋 Wir entwickeln Software für unsere Kunden. Stell dir vor, ein Kunde will einen Online-Shop für Sneaker. Was ist der allererste Schritt?",
+              "imageUrl": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich fange sofort an zu programmieren ⌨️",
+                  "correct": false,
+                  "feedback": "Lieber nicht! Ohne Plan entsteht Chaos."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich plane genau, was der Shop können muss 📝",
+                  "correct": true,
+                  "feedback": "Genau! 🎯 Erst das Konzept, dann der Code."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Bug-Jagd",
+          "status": "locked",
+          "icon": "🐞",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hilfe! 🚨 Die App stürzt ab, wenn man auf 'Bezahlen' klickt. Der Kunde ist nervös. Wie reagierst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Mist, ein Bug! 🐞 Keine Panik. Sollen wir wild im Code was ändern oder uns erstmal die Fehlermeldung genau ansehen?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "accompio-Vorteile",
+          "status": "locked",
+          "icon": "🎁",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Coden strengt den Kopf an. Deshalb sorgen wir gut für dich. Schau mal:",
+              "imageUrl": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Ausstattung",
+                  "value": "Top Laptop & Headset – auch für die Berufsschule.",
+                  "icon": "💻",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Eis-Flatrate",
+                  "value": "Im Sommer: Eis for free! 🍦",
+                  "icon": "☀️",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Homeoffice",
+                  "value": "Flexibel arbeiten möglich.",
+                  "icon": "🏠",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 3,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du hast das Zeug zum Entwickler! Willst du lernen, wie man digitale Welten erschafft?",
+              "imageUrl": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, ich will Coden lernen! 💻",
+                  "feedback": "Cool! Bewirb dich für Einbeck oder unsere anderen Standorte."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fisi",
+      "title": "Fachinformatiker:in Systemintegration",
+      "description": "Der Held, wenn das Internet weg ist! 🦸‍♂️🔌",
+      "icon": "📡",
+      "color": "#00a8e8",
+      "tags": ["🌐 Netzwerke", "🔧 Admin", "🆘 Retter"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Ausfall",
+          "status": "unlocked",
+          "icon": "⚠️",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Montagmorgen bei einem Kunden. Niemand kommt ins Internet, keine E-Mails gehen raus. Panik! 😱 Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich verstecke mich, bis es wieder geht 🙈",
+                  "correct": false,
+                  "feedback": "Haha, nein. Wir sind die Problemlöser!"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich checke systematisch Server und Router 🔍",
+                  "correct": true,
+                  "feedback": "Richtig! Ruhe bewahren und Fehler suchen."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Cyber Security",
+          "status": "locked",
+          "icon": "🛡️",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Sicherheit ist bei accompio riesig. Ein Kunde kriegt eine Mail: 'Klicken Sie hier für 1 Mio Euro'. 💸 Was rätst du ihm?",
+              "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Das klingt verdächtig nach Phishing! 🎣 Was soll der Kunde tun? Klicken, löschen oder uns Bescheid sagen?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Team & Fun",
+          "status": "locked",
+          "icon": "🎉",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Wir arbeiten hart, aber wir feiern auch. Wie sieht das bei accompio aus?",
+              "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Du-Kultur",
+                  "value": "Wir begegnen uns alle auf Augenhöhe.",
+                  "icon": "🤜🤛",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Mentoring",
+                  "value": "Ein Pate hilft dir beim Start.",
+                  "icon": "🧭",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Karriere",
+                  "value": "Vom Azubi zum Experten.",
+                  "icon": "📈",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Deine Mission",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 3,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Systemintegration ist genau dein Ding? Dann komm in unser Team!",
+              "imageUrl": "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=800",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich bin dabei! 🚀",
+                  "feedback": "Super! Wir suchen dich an vielen Standorten."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "itse",
+      "title": "IT-Systemelektroniker:in",
+      "description": "Technik zum Anfassen und Installieren! 🛠️🔌",
+      "icon": "⚡",
+      "color": "#f59e0b",
+      "tags": ["🛠️ Hardware", "🔌 Kabel & Strom", "🚗 Unterwegs"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Baustelle IT",
+          "status": "unlocked",
+          "icon": "🏗️",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hi! 👋 Hier packst du richtig an. Ein Kunde braucht in seinem neuen Büro Netzwerk in jedem Raum. Was nimmst du mit?",
+              "imageUrl": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800",
+              "type": "multiple-select",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Werkzeugkoffer & Kabel 🧰",
+                  "correct": true,
+                  "feedback": "Ohne Werkzeug läuft nichts!"
+                },
+                {
+                  "id": 2,
+                  "text": "Nur meinen Laptop 💻",
+                  "correct": false,
+                  "feedback": "Zu wenig. Du musst ja Dosen installieren und Kabel ziehen."
+                },
+                {
+                  "id": 3,
+                  "text": "Messgeräte zum Prüfen 📟",
+                  "correct": true,
+                  "feedback": "Wichtig! Wir müssen wissen, ob Strom fließt."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Der Kunden-Profi",
+          "status": "locked",
+          "icon": "🗣️",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du bist direkt beim Kunden (z.B. in Kempten). Er fragt: 'Warum blinkt die Lampe da rot?'. Du hast keine Ahnung. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich erfinde eine Ausrede 🤥",
+                  "correct": false,
+                  "feedback": "Lieber ehrlich sein! Ehrlichkeit zählt bei uns."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich sage: 'Gute Frage, ich checke das und löse es!' 💪",
+                  "correct": true,
+                  "feedback": "Top Einstellung! Lösungsorientiert arbeiten wir am liebsten."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Deine Extras",
+          "status": "locked",
+          "icon": "🚲",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Als Systemelektroniker bist du viel auf Achse. Was bieten wir dir?",
+              "imageUrl": "https://images.unsplash.com/photo-1571204829887-3b8d69e4094d?w=800",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Bike Leasing",
+                  "value": "Hol dir dein Traum-Bike über uns.",
+                  "icon": "🚲",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Rabatte",
+                  "value": "Corporate Benefits zum Sparen.",
+                  "icon": "🏷️",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Gesundheit",
+                  "value": "Fitnessangebote für deinen Ausgleich.",
+                  "icon": "💪",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Mach mit!",
+          "status": "locked",
+          "icon": "✅",
+          "row": 3,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Handwerk + IT = Dein Traumjob? Dann bewirb dich jetzt!",
+              "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich will anpacken! 🛠️",
+                  "feedback": "Klasse! Wir freuen uns auf deine Bewerbung."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "checkChances": "Checke meine Chancen",
+    "expressApply": "Direkt bewerben",
+    "jobMerken": "Job merken",
+    "submit": "Ergebnisse senden",
+    "submitSuccess": "Mega! Wir haben deine Infos und melden uns.",
+    "victoryHeadline": "Du hast es drauf! 🏆",
+    "victorySubtext": "Du passt super in unser Team. Wir sollten uns kennenlernen!",
+    "nudgeHeadline": "Ganz ehrlich...",
+    "nudgeText": "Du hast Talent. Lass uns quatschen, ganz ohne Stress. ✨",
+    "firstName": "Wie heißt du?",
+    "phoneType": "Dein Smartphone?",
+    "schoolType": "Deine Schule?",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule",
+    "gymnasium": "Gymnasium",
+    "andere": "Andere / Abschluss",
+    "expressApplyIntro": "Lass uns kurz Daten tauschen – wir melden uns bei dir!",
+    "exploreOtherJobs": "Andere Jobs ansehen"
+  }
+}
