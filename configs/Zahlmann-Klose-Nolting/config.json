@@ -1,6 +1,10 @@
 {
-  "_instructions": "Zahlmann Klose Nolting - Hybrid Mode (Messe & Home)",
-  "_filename": "configs/zahlmann/config.json",
+  "_instructions": "Zahlmann Klose Nolting - Hybrid Mode (Messe & Home) + Probetag Integration",
+  "_filename": "configs/zahlmann/config_merged.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schemaVersion": 2,
+  "state": "published",
+  "organizationSlug": "zahlmann-klose-nolting",
 
   "company": {
     "name": "Zahlmann Klose Nolting",
@@ -11,7 +15,7 @@
     "secondaryColor": "#FFFFFF",
     "city": "Löhne",
     "website": "https://www.zahlmann.de/karriere",
-    "industryVibe": "Steuerberatung ist trocken? Nicht bei uns. Wir sind #TeamZahlmann: Digitaler Vorreiter, familiär wie beste Freunde und erfolgreich seit 1958. Hier wirst du nicht verwaltet, hier gestaltest du mit.",
+    "industryVibe": "Steuerberatung ist trocken? Nicht bei uns. Wir sind #TeamZahlmann: Digitaler Vorreiter, familiär wie beste Freunde und erfolgreich seit 1958.",
     "organizationFacts": [
       {
         "title": "Digital & Modern",
@@ -33,14 +37,19 @@
 
   "landing": {
     "headline": "Dein Match. Deine Zukunft. Dein #TeamZahlmann.",
-    "subline": "Bist du der Praxis-Macher oder der Strategie-Denker? Finde heraus, ob du in unsere Kanzlei passt – in 60 Sekunden.",
-    "startButtonText": "Zeig mir meine Story 🚀"
+    "subline": "Bist du der Praxis-Macher, der Strategie-Denker oder willst du den Vibe erst testen?",
+    "startButtonText": "Story starten 🚀"
   },
 
   "campus": {
     "headline": "Wähle deinen Einstieg",
     "subline": "Welcher Weg führt dich nach Löhne?",
     "categories": [
+      {
+        "id": "probetag",
+        "title": "🦁 Virtueller Probetag (Neu!)",
+        "jobId": "zahlmann-klose-nolting-probetag"
+      },
       {
         "id": "messe",
         "title": "⚡ Speed-Dating (Live am Stand)",
@@ -72,6 +81,7 @@
             "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGZ5SYb9fBvV6qo4HUW3RwAsagPDYz9tJjSKxF",
             "score": {
               "messe-match": 50,
+              "zahlmann-klose-nolting-probetag": 10,
               "azubi-hero": 0,
               "dual-student": 0
             }
@@ -83,6 +93,7 @@
             "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqJAbNc97Aj1hznsJlaW5tFZHNPDuCodmTU2",
             "score": {
               "messe-match": 0,
+              "zahlmann-klose-nolting-probetag": 50,
               "azubi-hero": 2,
               "dual-student": 2
             }
@@ -156,12 +167,290 @@
 
   "jobs": [
     {
+      "id": "zahlmann-klose-nolting-probetag",
+      "slug": "zahlmann-klose-nolting-probetag",
+      "title": "Dein Probetag im #TeamZahlmann",
+      "description": "Erlebe einen virtuellen Tag bei ZKN. Vom Team-Frühstück bis zum Jahresabschluss. Passt der Vibe? Finde es heraus.",
+      "color": "#1E3A8A",
+      "icon": "🦁",
+      "tags": [
+        "Steuerfach",
+        "Ausbildung",
+        "Karriere",
+        "Probetag"
+      ],
+      "biomeThemeId": "modern-office",
+      "pathModeId": "graph",
+      "positionIds": [
+        "azubi-hero",
+        "dual-student",
+        "career-vision"
+      ],
+      "nodes": [
+        {
+          "id": "node-welcome-chat",
+          "type": "level",
+          "data": {
+            "title": "Der Empfang",
+            "icon": {
+              "type": "emoji",
+              "value": "👋"
+            },
+            "completionText": "Cooler erster Eindruck! Volker zeigt dir jetzt deinen Platz.",
+            "badges": [
+              "Networker"
+            ],
+            "steps": [
+              {
+                "id": "step-intro-llm",
+                "type": "llm-interactive",
+                "data": {
+                  "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGZ5SYb9fBvV6qo4HUW3RwAsagPDYz9tJjSKxF",
+                  "initialScenario": "Hey! 👋 Ich bin Volker. Willkommen bei Zahlmann Klose Nolting. Du siehst ja, hier läuft niemand im Anzug rum. Wir sind eher Team Hoodie & Sneaker. \n\nHand aufs Herz: Was hast du gedacht, als du 'Steuerbüro' gehört hast? Dass wir Aktenordner durch die Gegend tragen?",
+                  "initialQuickReplies": [
+                    "Ehrlich gesagt: Ja! 😅",
+                    "Ne, ich weiß, dass das heute digital läuft.",
+                    "Ich hoffe auf ein cooles Team."
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "node-culture-check",
+          "type": "level",
+          "data": {
+            "title": "Team & Vibe",
+            "icon": {
+              "type": "emoji",
+              "value": "☕"
+            },
+            "completionText": "Wir ticken ähnlich. Weiter geht's an die Arbeit.",
+            "badges": [
+              "Teamplayer"
+            ],
+            "steps": [
+              {
+                "id": "step-culture-multi",
+                "type": "multiple-choice",
+                "data": {
+                  "question": "Wir frühstücken jeden Monat zusammen und haben eine Darts-Scheibe im Flur. Was ist DIR bei der Arbeit wichtig, damit du dich wohlfühlst? (Wähle bis zu 3)",
+                  "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqJAbNc97Aj1hznsJlaW5tFZHNPDuCodmTU2",
+                  "options": [
+                    "Gutes Gehalt 💸",
+                    "Ein Mentor, den ich alles fragen kann 🦁",
+                    "Ruhe zum Konzentrieren 🎧",
+                    "Events & Feiern 🎉",
+                    "Modernste Technik (Apple/DATEV) 💻",
+                    "Dass ich früh Feierabend habe clock"
+                  ]
+                }
+              },
+              {
+                "id": "step-input-motivation",
+                "type": "text-field",
+                "data": {
+                  "question": "Kurze Frage zwischendurch: Was ist deine 'Superkraft' im Büro? (z.B. 'Ich finde jeden Tippfehler' oder 'Ich kann gut mit schwierigen Menschen')",
+                  "placeholder": "Meine Stärke ist...",
+                  "maxLength": 100
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "node-hard-skills",
+          "type": "level",
+          "data": {
+            "title": "Der Realitäts-Check",
+            "icon": {
+              "type": "emoji",
+              "value": "🧠"
+            },
+            "completionText": "Stark! Du hast das Auge fürs Detail.",
+            "badges": [
+              "Adlerauge",
+              "Problemlöser"
+            ],
+            "steps": [
+              {
+                "id": "step-receipt-check",
+                "type": "single-choice-rw",
+                "data": {
+                  "question": "Szenario: Ein Mandant lädt einen Bewirtungsbeleg hoch. Datum passt, Betrag passt. Aber: Die Unterschrift fehlt und es ist keine detaillierte Rechnung, sondern nur der Kreditkartenbeleg. Was machst du?",
+                  "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGtmnJuz1qTZ7VdmgwaGhY1XcyqSC4ArUIjzOf",
+                  "options": [
+                    "Buchen. Ist ja bezahlt worden. 🤷‍♂️",
+                    "Ablehnen / Rückfrage stellen. Ohne Detailnachweis kein Abzug. 🛑",
+                    "Ich male schnell eine Unterschrift drauf. ✍️"
+                  ],
+                  "correctAnswer": "Ablehnen / Rückfrage stellen. Ohne Detailnachweis kein Abzug. 🛑"
+                }
+              },
+              {
+                "id": "step-error-culture",
+                "type": "single-choice-rw",
+                "data": {
+                  "question": "Upsi. Du hast eine Frist verpasst und erst 2 Tage zu spät gemerkt. Der Brief vom Finanzamt ist da. Wie reagierst du intern?",
+                  "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGZ5SYb9fBvV6qo4HUW3RwAsagPDYz9tJjSKxF",
+                  "options": [
+                    "Ich schredder den Brief und hoffe das Beste.",
+                    "Ich gehe sofort zu meinem Paten Volker und beichte.",
+                    "Ich sage, die Post hat geschlampt."
+                  ],
+                  "correctAnswer": "Ich gehe sofort zu meinem Paten Volker und beichte."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "node-benefits-bento",
+          "type": "level",
+          "data": {
+            "title": "Was du bekommst",
+            "icon": {
+              "type": "emoji",
+              "value": "🎁"
+            },
+            "completionText": "Klingt gut? Dann lass uns Nägel mit Köpfen machen.",
+            "badges": [],
+            "steps": [
+              {
+                "id": "step-bento-offer",
+                "type": "bento-information",
+                "data": {
+                  "title": "Dein Vertrag bei ZKN",
+                  "description": "Leistung muss sich lohnen. Das packen wir standardmäßig in deinen Rucksack:",
+                  "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGNYHSO40KfuPD5hzmcYAwiEXGTQM8FOvojVyZ",
+                  "data": [
+                    {
+                      "key": "tech",
+                      "title": "Tech-Stack",
+                      "value": "iPad & iPhone (auch privat)",
+                      "icon": {
+                        "type": "emoji",
+                        "value": "📱"
+                      },
+                      "layout": {
+                        "colSpan": 2,
+                        "rowSpan": 1
+                      }
+                    },
+                    {
+                      "key": "health",
+                      "title": "Wellness",
+                      "value": "Massagen & Gym",
+                      "icon": {
+                        "type": "emoji",
+                        "value": "💆"
+                      },
+                      "layout": {
+                        "colSpan": 1,
+                        "rowSpan": 1
+                      }
+                    },
+                    {
+                      "key": "money",
+                      "title": "Bonus",
+                      "value": "13. Gehalt",
+                      "icon": {
+                        "type": "emoji",
+                        "value": "💰"
+                      },
+                      "layout": {
+                        "colSpan": 1,
+                        "rowSpan": 1
+                      }
+                    },
+                    {
+                      "key": "career",
+                      "title": "Aufstieg",
+                      "value": "Bezahlte Fortbildung",
+                      "icon": {
+                        "type": "emoji",
+                        "value": "🚀"
+                      },
+                      "layout": {
+                        "colSpan": 2,
+                        "rowSpan": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "node-final-commitment",
+          "type": "level",
+          "data": {
+            "title": "Finale",
+            "icon": {
+              "type": "emoji",
+              "value": "🏁"
+            },
+            "completionText": "Deine Bewerbung ist raus! Bianca meldet sich in 24h.",
+            "badges": [
+              "Zukunftsmacher"
+            ],
+            "steps": [
+              {
+                "id": "step-final-decision",
+                "type": "single-choice",
+                "data": {
+                  "question": "Genug gecheckt. Du hast den Vibe, du hast das Köpfchen. Wollen wir uns auf einen echten Kaffee treffen?",
+                  "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGZTi2mPfBvV6qo4HUW3RwAsagPDYz9tJjSKxF",
+                  "options": [
+                    "Absolut! Bewerbung absenden. 🚀",
+                    "Ich habe noch eine Frage (Kontakt aufnehmen)."
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge-intro-to-culture",
+          "source": "node-welcome-chat",
+          "target": "node-culture-check",
+          "type": "default"
+        },
+        {
+          "id": "edge-culture-to-hard",
+          "source": "node-culture-check",
+          "target": "node-hard-skills",
+          "type": "default"
+        },
+        {
+          "id": "edge-hard-to-benefits",
+          "source": "node-hard-skills",
+          "target": "node-benefits-bento",
+          "type": "default"
+        },
+        {
+          "id": "edge-benefits-to-final",
+          "source": "node-benefits-bento",
+          "target": "node-final-commitment",
+          "type": "default"
+        }
+      ]
+    },
+    {
       "id": "messe-match",
       "title": "Der ZKN-Vibe-Check",
       "description": "Passt du ins Team? Finde es in 60 Sekunden heraus (live am Stand).",
       "icon": "🦁",
       "color": "#E11D48",
-      "tags": ["Speed-Dating", "Live", "Messe"],
+      "tags": [
+        "Speed-Dating",
+        "Live",
+        "Messe"
+      ],
       "biomeThemeId": "modern-office",
       "pathModeId": "linear",
       "levels": [
@@ -239,7 +528,11 @@
       "description": "Der Klassiker, neu gedacht. Werde zum digitalen Finanz-Profi und Mandanten-Liebling.",
       "icon": "🦁",
       "color": "#1E3A8A",
-      "tags": ["Praxis", "Team", "Digital"],
+      "tags": [
+        "Praxis",
+        "Team",
+        "Digital"
+      ],
       "biomeThemeId": "modern-office",
       "pathModeId": "branching",
       "levels": [
@@ -249,7 +542,10 @@
           "status": "unlocked",
           "icon": "🔀",
           "row": 0,
-          "nextLevelIds": [2, 10],
+          "nextLevelIds": [
+            2,
+            10
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -271,14 +567,15 @@
             }
           ]
         },
-
         {
           "id": 2,
           "title": "Zweig 1: Onboarding & Team",
           "status": "locked",
           "icon": "👋",
           "row": 1,
-          "nextLevelIds": [3],
+          "nextLevelIds": [
+            3
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -308,7 +605,9 @@
           "status": "locked",
           "icon": "💻",
           "row": 2,
-          "nextLevelIds": [4],
+          "nextLevelIds": [
+            4
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -344,7 +643,9 @@
           "status": "locked",
           "icon": "🎉",
           "row": 3,
-          "nextLevelIds": [20],
+          "nextLevelIds": [
+            20
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -366,14 +667,15 @@
             }
           ]
         },
-
         {
           "id": 10,
           "title": "Zweig 2: Der Einstieg",
           "status": "locked",
           "icon": "🌱",
           "row": 1,
-          "nextLevelIds": [11],
+          "nextLevelIds": [
+            11
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -385,19 +687,28 @@
                   "title": "Grundlagen",
                   "value": "Lohn, Fibu, Steuern - das Handwerk.",
                   "icon": "🛠️",
-                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
                 },
                 {
                   "title": "Netzwerk",
                   "value": "Kontakt zu 500+ Mittelständlern.",
                   "icon": "🌐",
-                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
                 },
                 {
                   "title": "Mentor",
                   "value": "Volker & Michael fördern dich.",
                   "icon": "👨‍🏫",
-                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
                 }
               ]
             }
@@ -409,7 +720,9 @@
           "status": "locked",
           "icon": "🚀",
           "row": 2,
-          "nextLevelIds": [12],
+          "nextLevelIds": [
+            12
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -439,7 +752,9 @@
           "status": "locked",
           "icon": "🏆",
           "row": 3,
-          "nextLevelIds": [20],
+          "nextLevelIds": [
+            20
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -451,19 +766,24 @@
                   "title": "Steuerberater",
                   "value": "Du hast deine eigenen Mandanten und unterschreibst die Bilanzen.",
                   "icon": "✒️",
-                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
                 },
                 {
                   "title": "Partnerschaft",
                   "value": "Vielleicht wirst du wie Herr Nolting Teil der Geschäftsführung?",
                   "icon": "🤝",
-                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
                 }
               ]
             }
           ]
         },
-
         {
           "id": 20,
           "title": "Dein Fazit",
@@ -494,14 +814,17 @@
         }
       ]
     },
-
     {
       "id": "dual-student",
       "title": "Duales Studium (Steuerrecht)",
       "description": "Theorie trifft Hardcore-Praxis. Studiere und arbeite parallel an echten Fällen.",
       "icon": "🎓",
       "color": "#333333",
-      "tags": ["Bachelor", "Karriere", "Recht"],
+      "tags": [
+        "Bachelor",
+        "Karriere",
+        "Recht"
+      ],
       "biomeThemeId": "university",
       "pathModeId": "branching",
       "levels": [
@@ -511,7 +834,10 @@
           "status": "unlocked",
           "icon": "🔀",
           "row": 0,
-          "nextLevelIds": [2, 10],
+          "nextLevelIds": [
+            2,
+            10
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -533,14 +859,15 @@
             }
           ]
         },
-
         {
           "id": 2,
           "title": "Zweig 1: Der Switch",
           "status": "locked",
           "icon": "🔄",
           "row": 1,
-          "nextLevelIds": [3],
+          "nextLevelIds": [
+            3
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -570,7 +897,9 @@
           "status": "locked",
           "icon": "🧘",
           "row": 2,
-          "nextLevelIds": [4],
+          "nextLevelIds": [
+            4
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -600,7 +929,9 @@
           "status": "locked",
           "icon": "💥",
           "row": 3,
-          "nextLevelIds": [20],
+          "nextLevelIds": [
+            20
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -622,14 +953,15 @@
             }
           ]
         },
-
         {
           "id": 10,
           "title": "Zweig 2: Bachelor & More",
           "status": "locked",
           "icon": "🎓",
           "row": 1,
-          "nextLevelIds": [11],
+          "nextLevelIds": [
+            11
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -641,13 +973,19 @@
                   "title": "Master-Studium",
                   "value": "Berufsbegleitend zum Master? Wir unterstützen dich.",
                   "icon": "📜",
-                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
                 },
                 {
                   "title": "Steuerberater-Examen",
                   "value": "Die Königsklasse. Mit Master verkürzt sich die Wartezeit!",
                   "icon": "👑",
-                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
                 }
               ]
             }
@@ -659,7 +997,9 @@
           "status": "locked",
           "icon": "📊",
           "row": 2,
-          "nextLevelIds": [12],
+          "nextLevelIds": [
+            12
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -689,7 +1029,9 @@
           "status": "locked",
           "icon": "🤝",
           "row": 3,
-          "nextLevelIds": [20],
+          "nextLevelIds": [
+            20
+          ],
           "scenarios": [
             {
               "id": 1,
@@ -711,7 +1053,6 @@
             }
           ]
         },
-
         {
           "id": 20,
           "title": "Deine Entscheidung",
@@ -743,7 +1084,6 @@
       ]
     }
   ],
-
   "copy": {
     "checkChances": "Passt das zu mir?",
     "expressApply": "Jetzt bewerben 🚀",
