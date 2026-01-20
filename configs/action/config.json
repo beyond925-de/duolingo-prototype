@@ -1,0 +1,193 @@
+{
+  "_instructions": "Action Deutschland Komplett-Konfiguration",
+  "_filename": "configs/action/config.json",
+
+  "company": {
+    "name": "Action Deutschland",
+    "slug": "action-de",
+    "logoUrl": "https://www.stadt-galerie-hameln.de/fileadmin/user_upload/GLOBAL/brand_stores/logos/action.jpg",
+    "primaryColor": "#004691",
+    "secondaryColor": "#FFFFFF",
+    "city": "Deutschlandweit (über 600 Filialen)",
+    "website": "https://de.action.jobs/ausbildung",
+    "industryVibe": "Action ist kein normaler Discounter. Wir sind die Schatzsuche für Millionen Kunden. Bei uns ist es schnell, bunt und niemals langweilig. Wer bei uns anfängt, liebt das Tempo und den Zusammenhalt im Team.",
+    "organizationFacts": [
+      {
+        "title": "Wachstumschampion",
+        "value": "Über 2.650 Filialen in Europa und jede Woche kommen neue dazu.",
+        "icon": "📈"
+      },
+      {
+        "title": "Action Academy",
+        "value": "Wir bilden dich aus. 40% unserer Trainings fördern deine Soft Skills.",
+        "icon": "🎓"
+      },
+      {
+        "title": "Personalrabatt",
+        "value": "15% auf das gesamte Sortiment für deinen eigenen Einkauf.",
+        "icon": "🛍️"
+      }
+    ]
+  },
+
+  "landing": {
+    "headline": "Work at Action. Be surprised! ⚡",
+    "subline": "Erlebe den Kick von 150 neuen Produkten pro Woche. Werde Teil des Teams, das Deutschland jeden Tag aufs Neue überrascht.",
+    "startButtonText": "Check deinen Action-Vibe 🚀"
+  },
+
+  "campus": {
+    "headline": "Wähle deine Action-Bahn",
+    "subline": "Willst du den Highspeed-Alltag erleben, die Karriereleiter hochschießen oder unsere Kultur kennenlernen?",
+    "categories": [
+      {
+        "id": "daily-life",
+        "title": "Pfad 1: The Wednesday Sprint (Alltag)",
+        "jobId": "wednesday-sprint"
+      },
+      {
+        "id": "career",
+        "title": "Pfad 2: The 3-Year Rocket (Management)",
+        "jobId": "handelsfachwirt"
+      },
+      {
+        "id": "culture",
+        "title": "Pfad 3: The Safety Net (Kultur)",
+        "jobId": "action-culture"
+      }
+    ]
+  },
+
+  "jobs": [
+    {
+      "id": "wednesday-sprint",
+      "title": "In a Day of: Der Wednesday Sprint",
+      "description": "Erlebe 24 Stunden pure Energie. Von der Laderampe bis zum Kassen-Rausch.",
+      "icon": "🏃",
+      "color": "#004691",
+      "tags": ["Tempo", "Action", "Teamwork"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "06:30 – Die Ruhe vor dem Sturm",
+          "status": "unlocked",
+          "icon": "🚛",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Es ist Mittwochmorgen. Die Laderampe öffnet sich. 150 neue Produkte warten. Die Kunden kommen in 90 Minuten. Plan?",
+              "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                { "id": 1, "text": "Erstmal die Reste von gestern wegräumen.", "correct": false, "feedback": "Zu langsam! Bei Action zählt das Neue. Fokus auf die Aktionsware!" },
+                { "id": 2, "text": "Ärmel hoch! Wir bringen die neue Ware sofort auf die Fläche.", "correct": true, "feedback": "Genau! Das ist die Anpacker-Mentalität." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "09:00 – Das Regal-Puzzle",
+          "status": "locked",
+          "icon": "🧩",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein Deko-Display passt nicht an den Platz. Wir lieben Einfachheit. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                { "id": 1, "text": "Pragmatisch improvisieren, damit es gut aussieht.", "correct": true, "feedback": "Top! Praktische Veranlagung ist einer unserer Grundwerte." },
+                { "id": 2, "text": "Stehen lassen und auf Anweisungen warten.", "correct": false, "feedback": "Bei Action übernehmen wir Verantwortung. Trau dich!" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "11:00 – Der Kassen-Rausch",
+          "status": "locked",
+          "icon": "🛒",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Lange Schlange! Ein Kunde fragt nach Werkzeug, der nächste nach Solarleuchten. Wie bleibst du cool?",
+              "imageUrl": "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                { "role": "assistant", "content": "Entschuldigung, warum dauert das an der Kasse so lange? Und haben Sie noch Akku-Schrauber?" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "15:00 – Feierabend-Vibe",
+          "status": "locked",
+          "icon": "🙌",
+          "row": 3,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Schicht Ende! Regale voll, Kunden glücklich. Dein Highlight?",
+              "imageUrl": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                { "id": 1, "text": "Das Team-Gefühl: Wir haben es gerockt!", "feedback": "Teamwork ist unser Motor." },
+                { "id": 2, "text": "Mein 15% Rabatt: Jetzt gehe ich selbst shoppen.", "feedback": "Viel Spaß beim Schnäppchenjagen!" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "handelsfachwirt",
+      "title": "Karriere: The 3-Year Rocket",
+      "description": "3 Jahre, 3 IHK-Abschlüsse. Dein Turbo-Start ins Management.",
+      "icon": "🚀",
+      "color": "#004691",
+      "tags": ["Management", "Abitur", "Highspeed"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Jahr 1: Das Fundament",
+          "status": "unlocked",
+          "icon": "🏗️",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bevor du führst, lernst du die Basis. Ein Kunde sucht ein Produkt, das laut System ausverkauft ist. Du findest noch einen Karton im Lager. Deine Reaktion?",
+              "imageUrl": "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                { "id": 1, "text": "Karton holen und ansprechend präsentieren.", "correct": true, "feedback": "Kundenorientierung zuerst! Werden sie fündig, kommen sie wieder." },
+                { "id": 2, "text": "Sagen, er soll morgen wiederkommen.", "correct": false, "feedback": "Falsch. Wir nutzen jede Chance, Kunden zu überraschen." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Jahr 2: Theorie in Springe",
+          "status": "locked",
+          "icon": "📚",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Im Bildungszentrum Springe lernst du BWL. Warum ist Kostenbewusstsein bei Action so wichtig?",
+              "imageUrl": "
