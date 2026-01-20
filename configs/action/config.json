@@ -190,4 +190,186 @@
             {
               "id": 1,
               "scenario": "Im Bildungszentrum Springe lernst du BWL. Warum ist Kostenbewusstsein bei Action so wichtig?",
-              "imageUrl": "
+              "imageUrl": "https://images.unsplash.com/photo-1523240715639-99a86d4945e0?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                { "id": 1, "text": "Um die Preise für Kunden niedrig zu halten.", "correct": true, "feedback": "Exzellent. Nur so können wir 1.500 Produkte unter 1€ anbieten." },
+                { "id": 2, "text": "Um mehr Geld für Werbung zu haben.", "correct": false, "feedback": "Nicht ganz. Effizienz sichert unsere Tiefpreise." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Jahr 3: Die Kapitänsbinde",
+          "status": "locked",
+          "icon": "👨‍✈️",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Dein Gehalt steigt auf 2.250 €. Personalplanung am Wochenende: Drei Krankschreibungen gleichzeitig. Dein Plan?",
+              "imageUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                { "role": "assistant", "content": "Chef/Chefin, wir sind unterbesetzt und die Kasse wird voll. Wie gehen wir das an?" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Abschluss: Deine Filiale",
+          "status": "locked",
+          "icon": "🔑",
+          "row": 3,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "3 Jahre geschafft! Du bist Handelsfachwirt. Bereit für die erste eigene Filiale?",
+              "imageUrl": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                { "id": 1, "text": "Absolut! Ich will mein eigenes Team führen. 🏆", "feedback": "Top Einstellung. Bewirb dich jetzt!" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "action-culture",
+      "title": "Kultur: The Safety Net",
+      "description": "Erlebe das 'Du' und unseren Zusammenhalt.",
+      "icon": "🤝",
+      "color": "#004691",
+      "tags": ["Werte", "Zusammenhalt", "Fairness"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Action-Familie",
+          "status": "unlocked",
+          "icon": "👋",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Erster Tag. Der Chef sagt: 'Ich bin Markus. Bei uns sagen alle Du.'",
+              "imageUrl": "https://images.unsplash.com/photo-1521791136364-758a4d31794b?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                { "id": 1, "text": "Cool! Macht die Arbeit direkter.", "feedback": "Das stärkt unseren Teamgeist." },
+                { "id": 2, "text": "Ungewohnt, aber Augenhöhe ist super.", "feedback": "Respekt wird bei uns großgeschrieben." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Die Fairness-Regel",
+          "status": "locked",
+          "icon": "🛠️",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Kassenfehler: 10 Euro fehlen am Abend. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                { "id": 1, "text": "Sofort Bescheid sagen. Wir bügeln das aus.", "correct": true, "feedback": "Richtig! Wir lernen gemeinsam aus Fehlern." },
+                { "id": 2, "text": "Verstecken, damit es keiner merkt.", "correct": false, "feedback": "Ehrlichkeit ist einer unserer Kernwerte." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Action Academy",
+          "status": "locked",
+          "icon": "🏫",
+          "row": 2,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Training: Ein Kunde meckert, weil Aktionsware weg ist. Dein niederländischer Charme?",
+              "imageUrl": "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                { "role": "assistant", "content": "Das ist doch ein Witz! Alles schon nach 2 Stunden weg!" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Das Highlight: Team-Power",
+          "status": "locked",
+          "icon": "🎁",
+          "row": 3,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Weihnachtsbox und Party! Was motiviert dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                { "id": 1, "text": "Die Wertschätzung und Extras.", "feedback": "Das freut uns sehr!" },
+                { "id": 2, "text": "Verlass auf die Kollegen.", "feedback": "Gemeinsam sind wir Action!" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "work-style",
+        "question": "Wie arbeitest du am liebsten?",
+        "options": [
+          {
+            "id": "hands-on",
+            "label": "Mittendrin und anpacken! 🏃",
+            "score": { "wednesday-sprint": 2, "handelsfachwirt": 1, "action-culture": 1 }
+          },
+          {
+            "id": "planning",
+            "label": "Planen und Verantwortung übernehmen 🧠",
+            "score": { "wednesday-sprint": 0, "handelsfachwirt": 2, "action-culture": 1 }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Dein Action-Match:",
+      "startButtonText": "Tour starten",
+      "viewAllButtonText": "Alle Wege sehen"
+    }
+  },
+
+  "copy": {
+    "submit": "Jetzt Bewerbung 'schnappen' 🛒",
+    "submitSuccess": "Schatzsuche erfolgreich! Wir melden uns bei dir.",
+    "victoryHeadline": "Du hast den Action-Vibe! ⚡",
+    "victorySubtext": "Egal ob Fläche oder Management – du passt zu uns.",
+    "firstName": "Wie heißt du?",
+    "schoolType": "Dein Abschluss?",
+    "gymnasium": "Abi/Fachabi",
+    "realschule": "Realschule",
+    "andere": "Hauptschule/BBR",
+    "expressApplyIntro": "Kein Papierkram – wir brauchen nur deine Basics!"
+  }
+}
