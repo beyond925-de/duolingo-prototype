@@ -1,0 +1,318 @@
+{
+  "_instructions": "Baugesellschaft Hanau - Deep Dive Journey",
+  "_filename": "configs/hanau/config.json",
+
+  "company": {
+    "name": "Baugesellschaft Hanau",
+    "slug": "bau-hanau",
+    "logoUrl": "https://bau-hanau.de/wp-content/uploads/2017/05/logo-bauhu-225.png",
+    "primaryColor": "#009640",
+    "secondaryColor": "#FFFFFF",
+    "city": "Hanau",
+    "industryVibe": "Wir sind die Macher hinter dem Wohnraum von 11.500 Hanauern. Kein Luxus-Chichi, sondern echte Lebensqualität, Klimaschutz und sozialer Zusammenhalt. Mit einer 37-Stunden-Woche und viel Herz für unsere Stadt.",
+    "organizationFacts": [
+      {
+        "title": "37h Work-Life-Hero",
+        "value": "Vollzeit heißt bei uns 37 Stunden. Mehr Zeit für dein Leben, dein Gym, deine Freunde.",
+        "icon": "⏰"
+      },
+      {
+        "title": "Klima-Vorreiter",
+        "value": "Photovoltaik, Wärmepumpen, E-Bikes. Wir bauen Hanau grün.",
+        "icon": "🌱"
+      },
+      {
+        "title": "Vielfalt-Check",
+        "value": "Unterzeichner der Charta der Vielfalt. Bei uns zählt der Mensch, nicht die Herkunft.",
+        "icon": "🌈"
+      }
+    ]
+  },
+
+  "landing": {
+    "headline": "Gestalte das Hanau von morgen. 🏠✨",
+    "subline": "Erlebe 3 Pfade zwischen High-Tech Sanierung, sozialem Impact und echtem Teamspirit. Werde Immobilien-Profi mit Sinn.",
+    "startButtonText": "Mission Hanau starten 🚀"
+  },
+
+  "campus": {
+    "headline": "Wähle dein Spezialgebiet",
+    "subline": "Wo willst du den größten Unterschied machen?",
+    "categories": [
+      {
+        "id": "social",
+        "title": "Pfad 1: Der Community-Manager (Soziales & Mieter)",
+        "jobId": "path-social"
+      },
+      {
+        "id": "tech",
+        "title": "Pfad 2: The Future Builder (Technik & Klima)",
+        "jobId": "path-tech"
+      },
+      {
+        "id": "culture",
+        "title": "Pfad 3: BHG Inside (Kultur & Lifestyle)",
+        "jobId": "path-culture"
+      }
+    ]
+  },
+
+  "jobs": [
+    {
+      "id": "path-social",
+      "title": "Community-Manager",
+      "description": "Von der Wohnungsübergabe bis zum Nachbarschaftsstreit – du bist die Stimme der BHG.",
+      "icon": "🤝",
+      "color": "#009640",
+      "tags": ["Kommunikation", "Empathie", "Action"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Die erste Schlüsselübergabe",
+          "status": "unlocked",
+          "icon": "🔑",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein junges Paar bezieht ihre erste eigene Wohnung. Sie sind nervös und haben tausend Fragen zum Mietvertrag. Wie gehst du vor?",
+              "imageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                { "id": 1, "text": "Dienst nach Vorschrift: Unterschrift holen und fertig.", "correct": false, "feedback": "Zu trocken! Wir wollen, dass sich Mieter ab Minute 1 zu Hause fühlen." },
+                { "id": 2, "text": "Erkläre ihnen alles auf Augenhöhe und gib Tipps für die Mieter-App.", "correct": true, "feedback": "Top! So bauen wir Vertrauen auf." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Konflikt im Quartier",
+          "status": "locked",
+          "icon": "📣",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein Mieter beschwert sich über die Lautstärke spielender Kinder im Innenhof. Dein Statement?",
+              "imageUrl": "https://images.unsplash.com/photo-1473649085228-583485e6e4d7?auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "conversationHistory": [
+                { "role": "assistant", "content": "Das ist unerträglich! Kann man diesen Lärm nicht verbieten? Ich zahle schließlich Miete!" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Event-Manager: Kinder-Kino",
+          "status": "locked",
+          "icon": "🎬",
+          "row": 2,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Das große Mieter-Event steht an. Du planst das Catering. Worauf achtest du, um unsere Vielfalt-Werte zu zeigen?",
+              "imageUrl": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=1350&q=80",
+              "type": "multiple-select",
+              "options": [
+                { "id": 1, "text": "Regionale Snacks aus Hanau", "correct": true },
+                { "id": 2, "text": "Vielfältiges Angebot (vegan/halal/vegetarisch)", "correct": true },
+                { "id": 3, "text": "Nur billiges Fast-Food, um Kosten zu sparen", "correct": false }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "path-tech",
+      "title": "Future Builder",
+      "description": "Mache unsere Liegenschaften fit für die Zukunft. Solar, Wärme, Innovation.",
+      "icon": "⚡",
+      "color": "#009640",
+      "tags": ["Nachhaltigkeit", "Technik", "Planung"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Check: Photovoltaik-Potenzial",
+          "status": "unlocked",
+          "icon": "☀️",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Wir wollen ein altes Gebäude in der Innenstadt energetisch sanieren. Was ist der erste Schritt für mehr Unabhängigkeit?",
+              "imageUrl": "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                { "id": 1, "text": "Dachflächen analysieren für Solaranlagen.", "correct": true, "feedback": "Genau! Wir produzieren unseren Strom am liebsten selbst." },
+                { "id": 2, "text": "Einfach die Heizung höher drehen.", "correct": false, "feedback": "Nicht dein Ernst, oder? Wir denken nachhaltig!" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "The Chickens of Hanau",
+          "status": "locked",
+          "icon": "🐔",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hühnerhaltung in der Stadt? Bei uns gibt es das! Wie erklärst du einem Investor den Vorteil von Urban Gardening?",
+              "imageUrl": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "conversationHistory": [
+                { "role": "assistant", "content": "Ist das nicht nur Spielerei? Warum investieren wir Geld in Hühnerställe statt in mehr Parkplätze?" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Digitalisierung: App-Rollout",
+          "status": "locked",
+          "icon": "📱",
+          "row": 2,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Wir ersetzen das 'schwarze Brett' durch digitale Screens. Ein älterer Mieter hat Angst, wichtige Infos zu verpassen. Wie hilfst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                { "id": 1, "text": "Ich biete ihm eine kurze Einführung am Screen an.", "correct": true, "feedback": "Top. Wir nehmen jeden mit!" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "path-culture",
+      "title": "BHG Inside",
+      "description": "Erlebe die Benefits und den Vibe im Team.",
+      "icon": "🥳",
+      "color": "#009640",
+      "tags": ["Lifestyle", "37h", "Benefits"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Dein Onboarding-Start",
+          "status": "unlocked",
+          "icon": "🚀",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Tag 1: Du lernst in 2 Wochen alle Abteilungen kennen – vom Handwerker bis zur Geschäftsführung. Warum machen wir das?",
+              "imageUrl": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                { "id": 1, "text": "Damit ich das große Ganze verstehe und jeden im Team kenne.", "correct": true, "feedback": "Richtig! Zusammenhalt ist unser Fundament." },
+                { "id": 2, "text": "Damit ich möglichst lange keine echte Arbeit machen muss.", "correct": false, "feedback": "Nette Idee, aber falsch. Es geht um Wertschätzung und Wissen!" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Der 37h-Freitag",
+          "status": "locked",
+          "icon": "🚲",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Es ist Freitag, 13:00 Uhr. Dank 37h-Woche hast du jetzt frei. Wie nutzt du die Fahrrad-Leasing-Flat der BHG?",
+              "imageUrl": "https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                { "id": 1, "text": "Mit dem E-Bike ab in die Hanauer City.", "feedback": "Grimmscheck nicht vergessen!" },
+                { "id": 2, "text": "Radtour an den Main zum Abschalten.", "feedback": "Genau das meinen wir mit Work-Life-Balance." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Grimmscheck-Shopping",
+          "status": "locked",
+          "icon": "🎁",
+          "row": 2,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du hast deinen monatlichen Grimmscheck erhalten. Was kaufst du dir heute?",
+              "imageUrl": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                { "id": 1, "text": "Einen neuen Hoodie im Laden um die Ecke.", "feedback": "Support your local Hanau!" },
+                { "id": 2, "text": "Ein schickes Dinner mit Freunden.", "feedback": "Lass es dir schmecken – verdient hast du es!" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "motivation",
+        "question": "Was ist dir im Job am wichtigsten?",
+        "options": [
+          {
+            "id": "people",
+            "label": "Mit Menschen arbeiten und direkt helfen. 🤝",
+            "score": { "path-social": 3, "path-tech": 1, "path-culture": 1 }
+          },
+          {
+            "id": "tech",
+            "label": "Zukunft gestalten und Klima schützen. 🌱",
+            "score": { "path-social": 1, "path-tech": 3, "path-culture": 1 }
+          },
+          {
+            "id": "balance",
+            "label": "Ein cooles Team und Zeit für mich. ⏰",
+            "score": { "path-social": 1, "path-tech": 1, "path-culture": 3 }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Dein Hanau-Match:",
+      "startButtonText": "Tour starten",
+      "viewAllButtonText": "Andere Wege entdecken"
+    }
+  },
+
+  "copy": {
+    "submit": "Jetzt Hanau-Gestalter werden 🌳",
+    "submitSuccess": "Schachmatt, Vorurteil! Wir melden uns bei dir für das nächste Level.",
+    "victoryHeadline": "Du hast das Hanau-Gen! 🧬",
+    "victorySubtext": "Egal ob Klima-Check oder Mieter-Support – du verstehst, was unsere Stadt braucht.",
+    "firstName": "Wie heißt du?",
+    "schoolType": "Dein aktueller Stand?",
+    "gymnasium": "Abi / Fachabi",
+    "realschule": "Realschule",
+    "andere": "Andere",
+    "expressApplyIntro": "Keine Lust auf endlose Anschreiben? Wir brauchen nur deine Basics."
+  }
+}
