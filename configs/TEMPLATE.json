@@ -1,56 +1,61 @@
 {
-  "_instructions": "Copy this template to create a new company config. Replace all placeholder values with your company's information.",
-  "_filename": "Save as: configs/[company-name]/config.json (e.g., configs/bosch/config.json)",
+  "_instructions": "Sparkasse Minden-Lübbecke - Hybrid Mode (Messe & Home). Fokus: Top-Gehalt, iPad-First & Mühlenkreis-Stolz.",
+  "_filename": "configs/sparkasse-minden-luebbecke/config.json",
 
   "company": {
-    "name": "YOUR_COMPANY_NAME",
-    "slug": "your-company-slug",
-    "logoUrl": "🏢",
-    "logoImageUrl": "https://example.com/logo.png",
-    "signatureEmoji": "🏢",
-    "primaryColor": "#3b82f6",
-    "secondaryColor": "#10b981",
-    "city": "YOUR_CITY",
-    "website": "https://your-company.com",
-    "industryVibe": "A short, catchy description of what makes your company unique. Keep it under 2 sentences.",
+    "name": "Sparkasse Minden-Lübbecke",
+    "slug": "sparkasse-minden-luebbecke",
+    "logoUrl": "🏦",
+    "logoImageUrl": "https://www.sparkasse-minden-luebbecke.de/content/dam/myif/sk-minden-luebbecke/work/bilder/nbf-logos/logo_rot.svg",
+    "signatureEmoji": "🏦",
+    "primaryColor": "#E2001A",
+    "secondaryColor": "#FFFFFF",
+    "city": "Minden & Lübbecke",
+    "website": "https://www.spk-mi-lk.de/karriere",
+    "industryVibe": "Vergiss das Klischee vom langweiligen Schalter. Wir sind der Finanz-Motor im Mühlenkreis – mit iPads ab Tag 1, Top-Gehalt und echter Verantwortung.",
     "organizationFacts": [
       {
-        "title": "Benefit Title 1",
-        "value": "A compelling description of this benefit or company perk.",
-        "icon": "🚗"
+        "title": "High-Score Gehalt",
+        "value": "Startest mit 1.268 €! Bis zu 1.377 € im 3. Jahr. Das ist Spitze in DE.",
+        "icon": "💸"
       },
       {
-        "title": "Benefit Title 2",
-        "value": "Another great reason to work at your company.",
-        "icon": "⏰"
+        "title": "Digital First",
+        "value": "iPad Pro inklusive. Für die Schule, für den Job, für dich.",
+        "icon": "📱"
       },
       {
-        "title": "Benefit Title 3",
-        "value": "What else makes your company stand out?",
-        "icon": "🔥"
+        "title": "Heimat & Karriere",
+        "value": "Wir managen den Mühlenkreis. Hier machst du einen echten Unterschied.",
+        "icon": "🏰"
       }
     ]
   },
 
   "landing": {
-    "headline": "Your catchy headline here! 🚀",
-    "subline": "A brief explanation of what this experience is about. Keep it engaging!",
-    "startButtonText": "Let's Start! 🎯"
+    "headline": "Dein Upgrade zum Finanz-Profi. 🚀",
+    "subline": "Check in 60 Sekunden, ob du das Zeug hast, den Mühlenkreis zu managen. Vom iPad-Setup bis zum ersten großen Deal. Bist du liquide für die Zukunft?",
+    "startButtonText": "Simulation starten 🎯"
   },
 
   "campus": {
-    "headline": "Choose Your Path",
-    "subline": "What type of role interests you?",
+    "headline": "Wähle deinen Server",
+    "subline": "Auf welchem Weg willst du durchstarten?",
     "categories": [
       {
-        "id": "category-1",
-        "title": "Category 1 Title",
-        "jobId": "job-1-id"
+        "id": "messe",
+        "title": "⚡ Speed-Check (Live am Stand)",
+        "jobId": "messe-match"
       },
       {
-        "id": "category-2",
-        "title": "Category 2 Title",
-        "jobId": "job-2-id"
+        "id": "ausbildung",
+        "title": "Bankkaufleute (Digital & Vertrieb)",
+        "jobId": "bankkaufmann"
+      },
+      {
+        "id": "studium",
+        "title": "Duales Studium (Banking & Sales)",
+        "jobId": "duales-studium"
       }
     ]
   },
@@ -58,75 +63,309 @@
   "questionnaire": {
     "questions": [
       {
-        "id": "example-question-1",
-        "question": "What type of work environment do you prefer?",
-        "imageUrl": "https://example.com/question-image.jpg",
+        "id": "context_check",
+        "question": "Kurzer Check: Wo bist du gerade?",
+        "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1350&q=80",
         "options": [
           {
-            "id": "option-1",
-            "label": "Option 1 Label",
-            "icon": "🛠️",
-            "imageUrl": "https://example.com/option-image.jpg",
+            "id": "messe",
+            "label": "Auf der Messe (High-Speed Modus) 🏃💨",
+            "icon": "🎪",
+            "imageUrl": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=1350&q=80",
             "score": {
-              "example-job": 2,
-              "another-job": 0
+              "messe-match": 10,
+              "bankkaufmann": 0,
+              "duales-studium": 0
             }
           },
           {
-            "id": "option-2",
-            "label": "Option 2 Label",
-            "icon": "💻",
+            "id": "home",
+            "label": "Zuhause / Unterwegs (Deep Dive) 🛋️",
+            "icon": "☕",
+            "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1350&q=80",
             "score": {
-              "example-job": 0,
-              "another-job": 2
+              "messe-match": 0,
+              "bankkaufmann": 5,
+              "duales-studium": 5
+            }
+          }
+        ]
+      },
+      {
+        "id": "type",
+        "question": "Welcher Typ bist du?",
+        "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1350&q=80",
+        "options": [
+          {
+            "id": "action",
+            "label": "Macher: Ich will Ergebnisse & Menschen begeistern. 🗣️",
+            "icon": "🚀",
+            "imageUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "bankkaufmann": 5,
+              "duales-studium": 2,
+              "messe-match": 0
+            }
+          },
+          {
+            "id": "brain",
+            "label": "Analytiker: Ich will Hintergründe verstehen & planen. 🧠",
+            "icon": "♟️",
+            "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1350&q=80",
+            "score": {
+              "bankkaufmann": 2,
+              "duales-studium": 5,
+              "messe-match": 0
             }
           }
         ]
       }
     ],
     "suggestionText": {
-      "headline": "We recommend:",
-      "startButtonText": "Start First Job",
-      "viewAllButtonText": "View All Jobs",
-      "skipButtonText": "Skip to see all jobs"
+      "headline": "Unsere Empfehlung für deine Zukunft:",
+      "startButtonText": "Karriere starten",
+      "viewAllButtonText": "Alles ansehen",
+      "skipButtonText": "Direkt bewerben"
     }
   },
 
   "jobs": [
     {
-      "id": "example-job",
-      "title": "Job Title",
-      "description": "Brief job description that appears on the job card",
-      "icon": "🛠️",
-      "color": "#3b82f6",
-      "tags": ["Tag 1", "Tag 2", "Tag 3"],
+      "id": "messe-match",
+      "title": "Der Gehalt & Vibe Check",
+      "description": "iPad, Cash & Karriere? Finde in 60 Sekunden raus, ob die Sparkasse gönnt.",
+      "icon": "🔥",
+      "color": "#E2001A",
+      "tags": ["Speed-Dating", "Live", "Messe"],
       "pathModeId": "branching",
       "levels": [
         {
           "id": 1,
-          "title": "Level Title",
+          "title": "Klischee vs. Realität",
           "status": "unlocked",
-          "icon": "🏁",
+          "icon": "⚡",
           "row": 0,
           "nextLevelIds": [2],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Your scenario question or text goes here. Make it engaging!",
-              "imageUrl": "https://example.com/image.jpg",
+              "scenario": "Hand aufs Herz: Was denkst du, wenn du 'Sparkasse' hörst?",
+              "imageUrl": "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=1350&q=80",
               "type": "single-select-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Option 1",
-                  "correct": true,
-                  "feedback": "Feedback for this option"
+                  "text": "Staubige Akten & Krawatten-Zwang.",
+                  "correct": false,
+                  "feedback": "Voll daneben! ❌ Wir arbeiten mit iPads, duzen uns und tragen auch mal Sneaker."
                 },
                 {
                   "id": 2,
-                  "text": "Option 2",
+                  "text": "Kohle, Karriere & modernster Tech-Stack.",
+                  "correct": true,
+                  "feedback": "Bingo! 🎯 Du hast den Durchblick. Wir sind digitaler als du denkst."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Der Cash-Check",
+          "status": "locked",
+          "icon": "💰",
+          "row": 1,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Butter bei die Fische 🐟: Wie viel verdienst du hier wohl im 1. Ausbildungsjahr?",
+              "imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "So 800 - 900 Euro?",
                   "correct": false,
-                  "feedback": "Feedback explaining why this isn't correct"
+                  "feedback": "Viel zu wenig! Leg noch ne Schippe drauf. Wir zahlen nach Tarif – und zwar ganz oben. 😉"
+                },
+                {
+                  "id": 2,
+                  "text": "Starke 1.268 Euro!",
+                  "correct": true,
+                  "feedback": "Exakt! 💸 Damit gehören wir zur Spitzenklasse in Deutschland. Plus Weihnachtsgeld!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bankkaufmann",
+      "title": "Bankkaufmann/-frau (m/w/d)",
+      "description": "Berater, Psychologe & Tech-Nerd in einem. Mach Träume im Mühlenkreis wahr.",
+      "icon": "💳",
+      "color": "#E2001A",
+      "tags": ["Finanzen", "Lifestyle", "Beratung"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Tag 1: The Unboxing",
+          "status": "unlocked",
+          "icon": "📦",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Welcome im Team! 🔴 Bevor du den ersten Kunden siehst, kriegst du dein Arbeitsgerät. Ein nagelneues iPad. Wie richtest du es ein?",
+              "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich lade erstmal Games runter. Zocken muss sein.",
+                  "correct": false,
+                  "feedback": "Nice try, aber wir nutzen das Ding für echte Beratung. (Okay, in der Pause vielleicht kurz zocken 😉)"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich checke 'Prüfungs.TV' und die Finanz-Apps. Ich will vorbereitet sein.",
+                  "correct": true,
+                  "feedback": "Starker Start! Prüfungs.TV zahlen wir dir komplett – lernen, wann und wo du willst."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Der erste Kunden-Kontakt",
+          "status": "locked",
+          "icon": "🤝",
+          "row": 1,
+          "nextLevelIds": [3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du stehst in der Filiale in Bad Oeynhausen. Ein junger Typ will 'irgendwas mit Geld' machen. Er hat null Plan. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich dreh ihm den Bausparer an, egal ob's passt.",
+                  "correct": false,
+                  "feedback": "Stop! 🛑 Wir verkaufen nicht auf Krampf, wir beraten. Hör ihm erst zu."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich nehme das iPad, wir machen den Finanz-Check und finden, was zu IHM passt.",
+                  "correct": true,
+                  "feedback": "Bingo! 🎯 Das ist moderne Beratung. Individuell und visuell am Tablet."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Work-Life & Benefits",
+          "status": "locked",
+          "icon": "🏖️",
+          "row": 2,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Puh, harte Woche. Aber der Blick auf dein Konto und den Kalender heitert dich auf. Warum?",
+              "imageUrl": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Weil ich 30 Tage Urlaub habe und 1.268€ Gehalt drauf sind.",
+                  "correct": true,
+                  "feedback": "Richtig! Und im November gibt's noch 90% Weihnachtsgeld on top. 🎅"
+                },
+                {
+                  "id": 2,
+                  "text": "Weil ich umsonst Kaffee trinken darf.",
+                  "correct": false,
+                  "feedback": "Kaffee gibt's auch, aber die 30 Tage Urlaub und das Top-Gehalt sind der wahre Luxus! 🌴"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "duales-studium",
+      "title": "Duales Studium (B.A.)",
+      "description": "Fast-Lane ins Management. Bachelor & Ausbildung in 3,5 Jahren.",
+      "icon": "🎓",
+      "color": "#333333",
+      "tags": ["Bachelor", "Management", "High-Performer"],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Doppelbelastung?",
+          "status": "unlocked",
+          "icon": "⚖️",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du studierst an der Hochschule und arbeitest in der Filiale. Deine Kumpels chillen in den Semesterferien. Du arbeitest. Warum machst du das?",
+              "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Weil ich 1.268€ verdiene, während die anderen BAföG beantragen. 💸",
+                  "correct": true,
+                  "feedback": "Genau das! Finanzielle Unabhängigkeit ab Tag 1 ist unbezahlbar."
+                },
+                {
+                  "id": 2,
+                  "text": "Weil ich gerne lerne.",
+                  "correct": false,
+                  "feedback": "Auch gut. Aber das Gehalt ist der echte Gamechanger im Vergleich zum normalen Studium."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Strategie-Meeting",
+          "status": "locked",
+          "icon": "📊",
+          "row": 1,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du sitzt im Meeting mit der Geschäftsleitung. Es geht um die Zinswende. Du hast in der Uni gerade Theorien dazu gelernt. Traust du dich, was zu sagen?",
+              "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Klar, ich bringe frischen Wind und Fakten rein! 💡",
+                  "correct": true,
+                  "feedback": "Top! Wir suchen keine Ja-Sager, sondern Mit-Denker. Mut wird bei uns belohnt."
+                },
+                {
+                  "id": 2,
+                  "text": "Lieber Mund halten, bin ja nur Student.",
+                  "correct": false,
+                  "feedback": "Falsch. Bei uns zählen gute Ideen, egal ob vom Vorstand oder vom Dualen Studenten."
                 }
               ]
             }
@@ -137,24 +376,24 @@
   ],
 
   "copy": {
-    "checkChances": "Check My Fit",
-    "expressApply": "Quick Apply",
-    "jobMerken": "Save Job",
-    "submit": "Submit",
-    "submitSuccess": "Thanks! We'll get back to you within 24 hours.",
-    "victoryHeadline": "Great job! 🎉",
-    "victorySubtext": "You've shown what we're looking for. Let's talk!",
-    "nudgeHeadline": "Honestly...",
-    "nudgeText": "You're doing better than most. We should get to know each other!",
-    "firstName": "What's your name?",
-    "phoneType": "What phone do you use?",
-    "schoolType": "What school are you attending?",
+    "checkChances": "Check deine Skills",
+    "expressApply": "Fast-Track Bewerbung ⚡",
+    "jobMerken": "Job speichern",
+    "submit": "Jetzt Durchstarten 🚀",
+    "submitSuccess": "Daten sind sicher übertragen! Wir checken das und melden uns asap.",
+    "victoryHeadline": "Jackpot! Du passt zu uns. 🎰",
+    "victorySubtext": "Du hast das Mindset, das wir brauchen. Hol dir den Vertrag!",
+    "nudgeHeadline": "Zweifelst du noch?",
+    "nudgeText": "1.268€ Startgehalt + iPad + sicherer Job. Was gibt's da zu überlegen?",
+    "firstName": "Dein Vorname?",
+    "phoneType": "Wie erreichen wir dich?",
+    "schoolType": "Dein Schulabschluss?",
     "android": "Android",
     "iphone": "iPhone",
-    "realschule": "Secondary School",
-    "gymnasium": "High School",
-    "andere": "Other / Already Graduated",
-    "expressApplyIntro": "Just a few quick details and we'll reach out!",
-    "exploreOtherJobs": "Explore Other Roles"
+    "realschule": "Realschule / MSA",
+    "gymnasium": "Abitur / Fachabi",
+    "andere": "Anderer Abschluss",
+    "expressApplyIntro": "Lass das Anschreiben weg. Deine Skills zählen.",
+    "exploreOtherJobs": "Andere Wege ansehen"
   }
 }
