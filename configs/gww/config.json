@@ -1,0 +1,261 @@
+{
+  "_instructions": "GWW Wiesbaden Ausbildungskonfiguration - Fokus: Immobilien & Soziales",
+  "_filename": "configs/gww-wiesbaden/config.json",
+
+  "company": {
+    "name": "GWW Wiesbaden",
+    "slug": "gww-wiesbaden",
+    "logoUrl": "https://www.gww-wiesbaden.de/images/Logo/GWW_Logo.svg",
+    "primaryColor": "#005A94",
+    "secondaryColor": "#FFFFFF",
+    "city": "Wiesbaden",
+    "website": "https://www.gww-wiesbaden.de/karriere/ausbildung",
+    "industryVibe": "Wir sind mehr als eine Wohnbaugesellschaft. Wir sind Wiesbadens größter Vermieter und gestalten das Gesicht der Stadt. Bei uns triffst du auf Tradition, soziale Verantwortung und ein Team, das füreinander einsteht.",
+    "organizationFacts": [
+      {
+        "title": "Wiesbaden-Power",
+        "value": "Über 14.000 Wohnungen – wir geben der Stadt ein Zuhause.",
+        "icon": "🏢"
+      },
+      {
+        "title": "Work-Life-Balance",
+        "value": "37-Stunden-Woche & 50% mobiles Arbeiten für echte Flexibilität.",
+        "icon": "⚖️"
+      },
+      {
+        "title": "Volle Ausstattung",
+        "value": "Diensthandy und Laptop für jeden – auch für dich als Azubi.",
+        "icon": "💻"
+      }
+    ]
+  },
+
+  "landing": {
+    "headline": "Wiesbaden wohnt bei uns. Gestalte mit uns die Zukunft. 🏘️",
+    "subline": "Vom modernen Neubauprojekt bis zum sozialen Engagement – entdecke die Welt der Immobilienkaufleute bei der GWW.",
+    "startButtonText": "Entdecke dein Wiesbaden-Match 🚀"
+  },
+
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "work-location",
+        "question": "Wo ziehst du die Fäden?",
+        "options": [
+          {
+            "id": "office",
+            "label": "Im modernen Office: Verträge, Strategien und Planung. 📊",
+            "icon": "🖥️",
+            "imageUrl": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80",
+            "score": { "real-estate-manager": 2, "urban-explorer": 0, "community-hero": 1 }
+          },
+          {
+            "id": "on-site",
+            "label": "Direkt vor Ort: An der Immobilie, auf der Baustelle, beim Mieter. 🏗️",
+            "icon": "🏗️",
+            "imageUrl": "https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&w=800&q=80",
+            "score": { "real-estate-manager": 0, "urban-explorer": 2, "community-hero": 1 }
+          }
+        ]
+      },
+      {
+        "id": "focus-topic",
+        "question": "Was liegt dir mehr am Herzen?",
+        "options": [
+          {
+            "id": "social",
+            "label": "Der Mensch: Mieterberatung, Integration und Projekte. ❤️",
+            "icon": "🤝",
+            "imageUrl": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80",
+            "score": { "real-estate-manager": 0, "urban-explorer": 1, "community-hero": 2 }
+          },
+          {
+            "id": "business",
+            "label": "Das Business: Vermarktung, Finanzen und Management. 📈",
+            "icon": "💸",
+            "imageUrl": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80",
+            "score": { "real-estate-manager": 2, "urban-explorer": 1, "community-hero": 0 }
+          }
+        ]
+      },
+      {
+        "id": "city-vibe",
+        "question": "Was liebst du an Wiesbaden?",
+        "options": [
+          {
+            "id": "heritage",
+            "label": "Den Erhalt: Historische Bausubstanz modernisieren. 🏛️",
+            "icon": "🏛️",
+            "imageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80",
+            "score": { "real-estate-manager": 1, "urban-explorer": 1, "community-hero": 1 }
+          },
+          {
+            "id": "future",
+            "label": "Den Fortschritt: Bezahlbaren Wohnraum für alle schaffen. 🌇",
+            "icon": "🏗️",
+            "imageUrl": "https://images.unsplash.com/photo-1449156006071-7056247c617b?auto=format&fit=crop&w=800&q=80",
+            "score": { "real-estate-manager": 1, "urban-explorer": 1, "community-hero": 1 }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Dein GWW-Zuhause ist:",
+      "startButtonText": "Tour starten",
+      "viewAllButtonText": "GWW Welt ansehen"
+    }
+  },
+
+  "campus": {
+    "headline": "Wähle deinen Kiez-Pfad",
+    "subline": "Welcher Bereich der GWW passt zu deiner Persönlichkeit?",
+    "categories": [
+      {
+        "id": "explorer",
+        "title": "Pfad 1: Urban Explorer (Fokus: Vor Ort)",
+        "jobId": "urban-explorer"
+      },
+      {
+        "id": "manager",
+        "title": "Pfad 2: Real Estate Manager (Fokus: Büro)",
+        "jobId": "real-estate-manager"
+      },
+      {
+        "id": "hero",
+        "title": "Pfad 3: Community Hero (Fokus: Soziales)",
+        "jobId": "community-hero"
+      }
+    ]
+  },
+
+  "jobs": [
+    {
+      "id": "urban-explorer",
+      "title": "Urban Explorer: Zwischen Büro & Beton",
+      "description": "Erlebe den Alltag zwischen Neubau-Projekten und Mieter-Terminen in ganz Wiesbaden.",
+      "icon": "🗺️",
+      "color": "#005A94",
+      "tags": ["Abwechslung", "Wiesbaden", "Macher"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der erste Außentermin",
+          "status": "unlocked",
+          "icon": "🚗",
+          "row": 0,
+          "nextLevelIds": [2],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Heute geht's raus! Eine Wohnungsübergabe steht an. Ein Mieter ist unsicher wegen einer kleinen Macke im Parkett. Wie reagierst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-correct",
+              "options": [
+                { "id": 1, "text": "Ich erkläre es sachlich und finde eine faire Lösung direkt vor Ort.", "correct": true, "feedback": "Perfekt! Souveränität und Fairness sind bei uns das A und O." },
+                { "id": 2, "text": "Ich sage, das ist nicht mein Problem und er soll die Zentrale anrufen.", "correct": false, "feedback": "Wir sind Dienstleister. Wir lösen Probleme vor Ort!" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Neubau-Action",
+          "status": "locked",
+          "icon": "🏗️",
+          "row": 1,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Baustellenbegehung eines neuen Wohnblocks. Du merkst, dass ein Gewerk hinter dem Zeitplan liegt. Wie sprichst du es an?",
+              "imageUrl": "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=1350&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "conversationHistory": [
+                { "role": "assistant", "content": "Azubi, keine Sorge, wir werden morgen fertig. Ist doch nur ein Tag Verzug!" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "real-estate-manager",
+      "title": "Real Estate Manager: Die Strategen",
+      "description": "Management, Finanzen und Immobilienbewertung – hier wird die Strategie gemacht.",
+      "icon": "📊",
+      "color": "#005A94",
+      "tags": ["Strategie", "Zahlen", "Management"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Die perfekte Kalkulation",
+          "status": "unlocked",
+          "icon": "📈",
+          "row": 0,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein neues Modernisierungsprojekt wird geplant. Wir müssen die Kosten gegen die Mietpreise abwägen. Was priorisierst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                { "id": 1, "text": "Höchste Qualität, um den Wert der Immobilie langfristig zu steigern.", "feedback": "Ein guter Ansatz für die Nachhaltigkeit unseres Bestands." },
+                { "id": 2, "text": "Geringere Kosten, um die Mieten für unsere Mieter bezahlbar zu halten.", "feedback": "Das entspricht genau unserem sozialen Auftrag als städtische Gesellschaft." }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "community-hero",
+      "title": "Community Hero: Herz der GWW",
+      "description": "Integration, Weihnachtstombola und bürgerschaftliches Engagement – du machst den Unterschied.",
+      "icon": "❤️",
+      "color": "#005A94",
+      "tags": ["Soziales", "Events", "Menschlich"],
+      "pathModeId": "linear",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Die Weihnachtstombola",
+          "status": "unlocked",
+          "icon": "🎁",
+          "row": 0,
+          "nextLevelIds": [],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du organisierst als Azubi eigenverantwortlich die Tombola für den guten Zweck. Wen willst du als Partner gewinnen?",
+              "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1350&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                { "id": 1, "text": "Lokale Wiesbadener Geschäfte, um die Region zu stärken.", "feedback": "Klasse! So fördern wir den Zusammenhalt in der Stadt." },
+                { "id": 2, "text": "Große überregionale Sponsoren für maximale Reichweite.", "feedback": "Ehrgeizig! Das bringt unserem sozialen Zweck viel Aufmerksamkeit." }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "copy": {
+    "submit": "Jetzt Platz für 2027 sichern! 📑",
+    "submitSuccess": "Deine Unterlagen sind im Posteingang gelandet. Wir melden uns schnell bei dir!",
+    "victoryHeadline": "Du bist ein echter GWWler! 🏠",
+    "victorySubtext": "Du bringst genau die richtige Mischung aus Professionalität und Herz mit.",
+    "firstName": "Wie steht's in deinem Ausweis?",
+    "schoolType": "Wo stehst du gerade?",
+    "gymnasium": "Abi / Fachabi",
+    "realschule": "Mittlere Reife",
+    "andere": "Anderer Abschluss",
+    "expressApplyIntro": "Wiesbaden braucht dich. Kurz ausfüllen und fertig!",
+    "nudgeHeadline": "2026 ist voll, aber 2027 wartet!",
+    "nudgeText": "Bewirb dich jetzt schon für das nächste Jahr und sicher dir deinen Platz im Team."
+  }
+}
