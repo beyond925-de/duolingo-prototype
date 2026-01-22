@@ -1,460 +1,460 @@
 {
-  "company": {
-    "name": "Baugesellschaft Hanau",
-    "slug": "bau-hanau",
-    "logoUrl": "🏘️",
-    "logoImageUrl": "https://source.unsplash.com/featured/?logo",
-    "signatureEmoji": "🔑",
-    "primaryColor": "#e30613",
-    "secondaryColor": "#333333",
-    "city": "Hanau",
-    "website": "https://bau-hanau.de",
-    "industryVibe": "Wohnen ist Menschenrecht. Wir sind der soziale Herzschlag von Hanau – stabil, nahbar und gemeinwohlorientiert statt profitgetrieben.",
-    "organizationFacts": [
-      {
-        "title": "37h-Woche",
-        "value": "Mehr Freizeit für dich: Wir arbeiten Vollzeit 37 Stunden statt 40.",
-        "icon": "⏰"
-      },
-      {
-        "title": "Tarif & Extras",
-        "value": "Bezahlung nach Immobilientarif, plus Weihnachtsgeld, Erfolgsbeteiligung & Grimmschecks.",
-        "icon": "💰"
-      },
-      {
-        "title": "Großer Impact",
-        "value": "Über 4.250 Wohnungen und 11.500 Mieter:innen verlassen sich auf uns.",
-        "icon": "🏙️"
-      },
-      {
-        "title": "Stabile Basis",
-        "value": "Seit 1942 am Markt. Wir gehören der Stadt Hanau – krisensicher und lokal verwurzelt.",
-        "icon": "⚓"
-      },
-      {
-        "title": "Soziales Herz",
-        "value": "Kino-Events, Hühner im Hof oder Urban Gardening – wir machen mehr als nur Vermietung.",
-        "icon": "❤️"
-      },
-      {
-        "title": "Mobilität",
-        "value": "Fahrradfreundlicher Arbeitgeber (Silber-Zertifikat) & top Anbindung in Hanau.",
-        "icon": "🚲"
-      }
-    ]
-  },
-  "landing": {
-    "headline": "Dein Impact für Hanau. 🏘️",
-    "subline": "Werde Immobilien-Profi (w/m/d) und manage mehr als nur vier Wände. 37h-Woche, Tarifgehalt und echte Verantwortung für deine Stadt.",
-    "startButtonText": "Challenge starten 🚀"
-  },
-  "campus": {
-    "headline": "Dein Kiez. Dein Job.",
-    "subline": "Bist du der Stratege im Büro oder der Kümmerer vor Ort?",
-    "categories": [
-      {
-        "id": "verwaltung",
-        "title": "Management & Orga",
-        "jobId": "immobilienkaufmann"
-      }
-    ]
-  },
-  "questionnaire": {
-    "questions": [
-      {
-        "id": "environment",
-        "question": "Wo bist du am liebsten?",
-        "options": [
-          {
-            "id": "onsite",
-            "label": "Draußen im Quartier",
-            "icon": "🌳",
-            "imageUrl": "https://source.unsplash.com/featured/?neighborhood",
-            "score": {
-              "immobilienkaufmann": 2
-            }
-          },
-          {
-            "id": "office",
-            "label": "Im modernen Büro",
-            "icon": "💻",
-            "imageUrl": "https://source.unsplash.com/featured/?office",
-            "score": {
-              "immobilienkaufmann": 2
-            }
-          }
-        ]
-      },
-      {
-        "id": "workstyle",
-        "question": "Ein Mieter ruft wütend an. Du...",
-        "options": [
-          {
-            "id": "empathy",
-            "label": "Hörst zu und beruhigst ihn",
-            "icon": "👂",
-            "imageUrl": "https://source.unsplash.com/featured/?talking",
-            "score": {
-              "immobilienkaufmann": 2
-            }
-          },
-          {
-            "id": "action",
-            "label": "Schickst sofort Hilfe raus",
-            "icon": "⚡",
-            "imageUrl": "https://source.unsplash.com/featured/?running",
-            "score": {
-              "immobilienkaufmann": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "teamwork",
-        "question": "Wie arbeitest du am liebsten?",
-        "options": [
-          {
-            "id": "team",
-            "label": "Im Team vernetzt",
-            "icon": "🤝",
-            "imageUrl": "https://source.unsplash.com/featured/?meeting",
-            "score": {
-              "immobilienkaufmann": 2
-            }
-          },
-          {
-            "id": "solo",
-            "label": "Eigenverantwortlich",
-            "icon": "🦁",
-            "imageUrl": "https://source.unsplash.com/featured/?man",
-            "score": {
-              "immobilienkaufmann": 1
-            }
-          }
-        ]
-      }
-    ],
-    "suggestionText": {
-      "headline": "Dein Match:",
-      "startButtonText": "Ausbildung checken",
-      "viewAllButtonText": "Alles ansehen",
-      "skipButtonText": "Überspringen"
-    }
-  },
-  "jobs": [
-    {
-      "id": "immobilienkaufmann",
-      "title": "Immobilienkaufmann/-frau (w/m/d)",
-      "description": "Verwalte 4.250+ Wohnungen, plane Sanierungen und organisiere Mieter-Events. 3 Jahre, Büro & Außendienst Mix. Sozial, sicher, Hanau. 🔑🏙️",
-      "icon": "🏢",
-      "color": "#e30613",
-      "tags": [
-        "🏙️ Hanau gestalten",
-        "❤️ Soziales Miteinander",
-        "⏰ 37h Woche",
-        "💰 Tarifvergütung"
-      ],
-      "pathModeId": "branching",
-      "levels": [
-        {
-          "id": 1,
-          "title": "Vibe Check",
-          "status": "unlocked",
-          "icon": "👀",
-          "row": 0,
-          "nextLevelIds": [
-            2,
-            3
-          ],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Hi! 👋 Immobilien sind bei uns mehr als Beton. Es geht um Zuhause. Stell dir vor, du hast einen Termin zur Wohnungsübergabe mit einer jungen Familie. Was nimmst du als Erstes mit?",
-              "imageUrl": "https://source.unsplash.com/featured/?keys",
-              "type": "single-select-correct",
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Nur den Mietvertrag 📄",
-                  "correct": false,
-                  "feedback": "Wichtig, aber nicht alles! Ohne Schlüssel kommen sie nicht rein. 😉"
-                },
-                {
-                  "id": 2,
-                  "text": "Schlüssel, Protokoll & ein Lächeln 🔑",
-                  "correct": true,
-                  "feedback": "Perfekt! 🎯 Das Übergabeprotokoll ist juristisch wichtig, die Freundlichkeit für den Vibe."
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "scenario": "Als Immobilienprofi musst du auch rechnen können. Eine Wohnung hat 60m² und kostet 10,00 € pro m² kalt. Wie hoch ist die Kaltmiete?",
-              "imageUrl": "https://source.unsplash.com/featured/?calculator",
-              "type": "single-select-correct",
-              "options": [
-                {
-                  "id": 1,
-                  "text": "600,00 € 💶",
-                  "correct": true,
-                  "feedback": "Korrekt! 🧠 Mathe ist wichtig für Mietberechnungen und Betriebskosten."
-                },
-                {
-                  "id": 2,
-                  "text": "660,00 € 💶",
-                  "correct": false,
-                  "feedback": "Knapp daneben. 60 x 10 = 600. Aber keine Sorge, das lernst du bei uns!"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "title": "Mission: Konflikt",
-          "status": "locked",
-          "icon": "🔥",
-          "row": 1,
-          "nextLevelIds": [
-            4
-          ],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Es ist Winter. ❄️ Ein Mieter aus der Weststadt ruft wütend an: 'Meine Heizung geht nicht und ich friere! Seit zwei Stunden erreiche ich niemanden!' Er ist laut und ungehalten. Du bist am Telefon. Wie reagierst du? Deeskalation ist deine Superkraft.",
-              "imageUrl": "https://source.unsplash.com/featured/?winter",
-              "type": "llm-interactive",
-              "options": [],
-              "initialQuickReplies": [
-                "Ich sage ihm, er soll sich beruhigen, sonst lege ich auf.",
-                "Ich entschuldige mich und nehme sofort die Daten auf.",
-                "Ich erkläre ihm, dass die Technik nicht meine Abteilung ist."
-              ],
-              "conversationHistory": [
-                {
-                  "role": "assistant",
-                  "content": "Hier spricht Herr Müller. Es ist eiskalt hier! Was machen Sie jetzt? Ich zahle schließlich Miete!"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "title": "Mission: Event",
-          "status": "locked",
-          "icon": "🍿",
-          "row": 1,
-          "nextLevelIds": [
-            4
-          ],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Wir organisieren das jährliche Kinder-Kino-Event für unsere Mieter-Kids. 🎬 Du bist für die Snacks zuständig. 30 Minuten vor Start sagt der Popcorn-Lieferant ab! 😱 Panik? Nicht bei uns. Du musst das retten. Was schlägst du vor?",
-              "imageUrl": "https://source.unsplash.com/featured/?popcorn",
-              "type": "llm-interactive",
-              "options": [],
-              "initialQuickReplies": [
-                "Wir sagen das Event ab.",
-                "Ich fahre schnell zum Supermarkt und kaufe Chips & Flips.",
-                "Wir leihen uns eine Maschine vom Nachbarverein."
-              ],
-              "conversationHistory": [
-                {
-                  "role": "assistant",
-                  "content": "Oh nein! Die Kids kommen gleich und wir haben kein Popcorn. Was machen wir jetzt? Du hast das Budget."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "title": "Der Hanau-Deal",
-          "status": "locked",
-          "icon": "✅",
-          "row": 2,
-          "nextLevelIds": [
-            5,
-            6
-          ],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Puh, gut gelöst! 😅 Als Azubi bei der Baugesellschaft bist du mittendrin statt nur dabei. Aber Arbeit ist nicht alles. Check mal, was wir dir bieten:",
-              "imageUrl": "https://source.unsplash.com/featured/?happiness",
-              "type": "bento-grid",
-              "options": [],
-              "facts": [
-                {
-                  "title": "Arbeitszeit",
-                  "value": "37h-Woche & Gleitzeit.",
-                  "icon": "⏰",
-                  "layout": {
-                    "colSpan": 1,
-                    "rowSpan": 1
-                  }
-                },
-                {
-                  "title": "Urlaub",
-                  "value": "30 Tage + Heiligabend/Silvester frei.",
-                  "icon": "🏖️",
-                  "layout": {
-                    "colSpan": 1,
-                    "rowSpan": 1
-                  }
-                },
-                {
-                  "title": "Cash & Goodies",
-                  "value": "Tarifgehalt, Weihnachtsgeld & Grimmschecks.",
-                  "icon": "💳",
-                  "layout": {
-                    "colSpan": 2,
-                    "rowSpan": 1
-                  }
-                },
-                {
-                  "title": "Team",
-                  "value": "80 Kollegen, flache Hierarchien, 'Du'-Kultur.",
-                  "icon": "🤜🤛",
-                  "layout": {
-                    "colSpan": 2,
-                    "rowSpan": 1
-                  }
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "scenario": "Klingt fair? Was ist dir persönlich am wichtigsten?",
-              "imageUrl": "https://source.unsplash.com/featured/?choice",
-              "type": "single-select-no-correct",
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Sicherheit & Gehalt 💰",
-                  "feedback": "Verstehen wir. Als kommunales Unternehmen sind wir krisensicher."
-                },
-                {
-                  "id": 2,
-                  "text": "Sinnvolle Arbeit & Soziales ❤️",
-                  "feedback": "Dann passt du perfekt zu uns! Wir schaffen Wohnraum für alle."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 5,
-          "title": "Weg: Spezialist",
-          "status": "locked",
-          "icon": "📈",
-          "row": 3,
-          "nextLevelIds": [
-            7
-          ],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Nach der Ausbildung (3 Jahre) stehen dir viele Türen offen. Du kannst dich zum Immobilienfachwirt (IHK) weiterbilden und Experte für bestimmte Quartiere oder Technik werden. Welcher Bereich klingt spannender?",
-              "imageUrl": "https://source.unsplash.com/featured/?stairs",
-              "type": "single-select-no-correct",
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Sozialmanagement & Mieterbetreuung 🗣️",
-                  "feedback": "Sehr wichtig! Du bist das Bindeglied zwischen Mietern und Technik."
-                },
-                {
-                  "id": 2,
-                  "text": "Technik & Sanierung 🏗️",
-                  "feedback": "Spannend! Da geht es um energetische Sanierung und Modernisierung."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 6,
-          "title": "Weg: Studium",
-          "status": "locked",
-          "icon": "🎓",
-          "row": 3,
-          "nextLevelIds": [
-            7
-          ],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Du willst noch mehr Theorie? Viele nutzen die Ausbildung als Basis für ein Studium im Bereich Immobilienmanagement oder Bauingenieurwesen. Wir unterstützen dich bei deiner Entwicklung!",
-              "imageUrl": "https://source.unsplash.com/featured/?university",
-              "type": "single-select-no-correct",
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Erst Ausbildung, dann weitersehen. 👀",
-                  "feedback": "Guter Plan. Praxiserfahrung ist im Studium Gold wert."
-                },
-                {
-                  "id": 2,
-                  "text": "Ich will Karriere machen! 🚀",
-                  "feedback": "Bei uns bauen wir nicht nur Wohnungen, sondern auch Karrieren mit Zukunft."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 7,
-          "title": "Dein Start",
-          "status": "locked",
-          "icon": "🚀",
-          "row": 4,
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Bist du bereit, Hanau mitzugestalten? Ausbildungsstart ist immer am 1. August. Wir suchen echte Charaktere, keine reinen Noten-Optimierer. Unser Azubi-Test zählt mehr als das Zeugnis. Lust bekommen?",
-              "imageUrl": "https://source.unsplash.com/featured/?celebration",
-              "type": "single-select-or-text",
-              "allowTextInput": true,
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Ja, ich bewerbe mich! 📝",
-                  "feedback": "Klasse! Bewirb dich zwischen November und Februar. Einfach online oder per Mail an karriere@bau-hanau.de. Mareike Förtsch (Personal) freut sich auf dich!"
-                },
-                {
-                  "id": 2,
-                  "text": "Gibt's auch Praktika? 🔍",
-                  "feedback": "Klar! Wir bieten Schulpraktika zur Orientierung an. Schreib uns einfach an info@bau-hanau.de."
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "copy": {
-    "checkChances": "Meine Chancen checken",
-    "expressApply": "Express Bewerbung",
-    "jobMerken": "Job merken",
-    "submit": "Ergebnis ansehen",
-    "submitSuccess": "Top! Deine Bewerbung ist raus.",
-    "victoryHeadline": "Du passt nach Hanau! 🏘️",
-    "victorySubtext": "Du hast das Herz am richtigen Fleck und Köpfchen für Immobilien.",
-    "nudgeHeadline": "Fast geschafft!",
-    "nudgeText": "Beende den Check, um dein Ergebnis zu sehen.",
-    "firstName": "Vorname",
-    "phoneType": "Telefon",
-    "schoolType": "Schulabschluss",
-    "android": "Android",
-    "iphone": "iPhone",
-    "realschule": "Realschule",
-    "gymnasium": "Abitur / Fachabitur",
-    "andere": "Anderer Abschluss",
-    "expressApplyIntro": "Hinterlass uns deine Nummer, wir melden uns.",
-    "exploreOtherJobs": "Andere Jobs checken"
-  }
+"company": {
+"name": "Baugesellschaft Hanau",
+"slug": "bau-hanau",
+"logoUrl": "🏘️",
+"logoImageUrl": "[https://bau-hanau.de/wp-content/uploads/2017/05/logo-bauhu-225.png]",
+"signatureEmoji": "🔑",
+"primaryColor": "#e30613",
+"secondaryColor": "#333333",
+"city": "Hanau",
+"website": "[https://bau-hanau.de](https://bau-hanau.de)",
+"industryVibe": "Wohnen ist Menschenrecht. Wir sind der soziale Herzschlag von Hanau – stabil, nahbar und gemeinwohlorientiert statt profitgetrieben.",
+"organizationFacts": [
+{
+"title": "37h-Woche",
+"value": "Mehr Freizeit für dich: Wir arbeiten Vollzeit 37 Stunden statt 40.",
+"icon": "⏰"
+},
+{
+"title": "Tarif & Extras",
+"value": "Bezahlung nach Immobilientarif, plus Weihnachtsgeld, Erfolgsbeteiligung & Grimmschecks.",
+"icon": "💰"
+},
+{
+"title": "Großer Impact",
+"value": "Über 4.250 Wohnungen und 11.500 Mieter:innen verlassen sich auf uns.",
+"icon": "🏙️"
+},
+{
+"title": "Stabile Basis",
+"value": "Seit 1942 am Markt. Wir gehören der Stadt Hanau – krisensicher und lokal verwurzelt.",
+"icon": "⚓"
+},
+{
+"title": "Soziales Herz",
+"value": "Kino-Events, Hühner im Hof oder Urban Gardening – wir machen mehr als nur Vermietung.",
+"icon": "❤️"
+},
+{
+"title": "Mobilität",
+"value": "Fahrradfreundlicher Arbeitgeber (Silber-Zertifikat) & top Anbindung in Hanau.",
+"icon": "🚲"
+}
+]
+},
+"landing": {
+"headline": "Dein Impact für Hanau. 🏘️",
+"subline": "Werde Immobilien-Profi (w/m/d) und manage mehr als nur vier Wände. 37h-Woche, Tarifgehalt und echte Verantwortung für deine Stadt.",
+"startButtonText": "Challenge starten 🚀"
+},
+"campus": {
+"headline": "Dein Kiez. Dein Job.",
+"subline": "Bist du der Stratege im Büro oder der Kümmerer vor Ort?",
+"categories": [
+{
+"id": "verwaltung",
+"title": "Management & Orga",
+"jobId": "immobilienkaufmann"
+}
+]
+},
+"questionnaire": {
+"questions": [
+{
+"id": "environment",
+"question": "Wo bist du am liebsten?",
+"options": [
+{
+"id": "onsite",
+"label": "Draußen im Quartier",
+"icon": "🌳",
+"imageUrl": "[https://source.unsplash.com/featured/?neighborhood](https://source.unsplash.com/featured/?neighborhood)",
+"score": {
+"immobilienkaufmann": 2
+}
+},
+{
+"id": "office",
+"label": "Im modernen Büro",
+"icon": "💻",
+"imageUrl": "[https://source.unsplash.com/featured/?office](https://source.unsplash.com/featured/?office)",
+"score": {
+"immobilienkaufmann": 2
+}
+}
+]
+},
+{
+"id": "workstyle",
+"question": "Ein Mieter ruft wütend an. Du...",
+"options": [
+{
+"id": "empathy",
+"label": "Hörst zu und beruhigst ihn",
+"icon": "👂",
+"imageUrl": "[https://source.unsplash.com/featured/?talking](https://source.unsplash.com/featured/?talking)",
+"score": {
+"immobilienkaufmann": 2
+}
+},
+{
+"id": "action",
+"label": "Schickst sofort Hilfe raus",
+"icon": "⚡",
+"imageUrl": "[https://source.unsplash.com/featured/?running](https://source.unsplash.com/featured/?running)",
+"score": {
+"immobilienkaufmann": 1
+}
+}
+]
+},
+{
+"id": "teamwork",
+"question": "Wie arbeitest du am liebsten?",
+"options": [
+{
+"id": "team",
+"label": "Im Team vernetzt",
+"icon": "🤝",
+"imageUrl": "[https://source.unsplash.com/featured/?meeting](https://source.unsplash.com/featured/?meeting)",
+"score": {
+"immobilienkaufmann": 2
+}
+},
+{
+"id": "solo",
+"label": "Eigenverantwortlich",
+"icon": "🦁",
+"imageUrl": "[https://source.unsplash.com/featured/?man](https://source.unsplash.com/featured/?man)",
+"score": {
+"immobilienkaufmann": 1
+}
+}
+]
+}
+],
+"suggestionText": {
+"headline": "Dein Match:",
+"startButtonText": "Ausbildung checken",
+"viewAllButtonText": "Alles ansehen",
+"skipButtonText": "Überspringen"
+}
+},
+"jobs": [
+{
+"id": "immobilienkaufmann",
+"title": "Immobilienkaufmann/-frau (w/m/d)",
+"description": "Verwalte 4.250+ Wohnungen, plane Sanierungen und organisiere Mieter-Events. 3 Jahre, Büro & Außendienst Mix. Sozial, sicher, Hanau. 🔑🏙️",
+"icon": "🏢",
+"color": "#e30613",
+"tags": [
+"🏙️ Hanau gestalten",
+"❤️ Soziales Miteinander",
+"⏰ 37h Woche",
+"💰 Tarifvergütung"
+],
+"pathModeId": "branching",
+"levels": [
+{
+"id": 1,
+"title": "Vibe Check",
+"status": "unlocked",
+"icon": "👀",
+"row": 0,
+"nextLevelIds": [
+2,
+3
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Hi! 👋 Immobilien sind bei uns mehr als Beton. Es geht um Zuhause. Stell dir vor, du hast einen Termin zur Wohnungsübergabe mit einer jungen Familie. Was nimmst du als Erstes mit?",
+"imageUrl": "[https://source.unsplash.com/featured/?keys](https://source.unsplash.com/featured/?keys)",
+"type": "single-select-correct",
+"options": [
+{
+"id": 1,
+"text": "Nur den Mietvertrag 📄",
+"correct": false,
+"feedback": "Wichtig, aber nicht alles! Ohne Schlüssel kommen sie nicht rein. 😉"
+},
+{
+"id": 2,
+"text": "Schlüssel, Protokoll & ein Lächeln 🔑",
+"correct": true,
+"feedback": "Perfekt! 🎯 Das Übergabeprotokoll ist juristisch wichtig, die Freundlichkeit für den Vibe."
+}
+]
+},
+{
+"id": 2,
+"scenario": "Als Immobilienprofi musst du auch rechnen können. Eine Wohnung hat 60m² und kostet 10,00 € pro m² kalt. Wie hoch ist die Kaltmiete?",
+"imageUrl": "[https://source.unsplash.com/featured/?calculator](https://source.unsplash.com/featured/?calculator)",
+"type": "single-select-correct",
+"options": [
+{
+"id": 1,
+"text": "600,00 € 💶",
+"correct": true,
+"feedback": "Korrekt! 🧠 Mathe ist wichtig für Mietberechnungen und Betriebskosten."
+},
+{
+"id": 2,
+"text": "660,00 € 💶",
+"correct": false,
+"feedback": "Knapp daneben. 60 x 10 = 600. Aber keine Sorge, das lernst du bei uns!"
+}
+]
+}
+]
+},
+{
+"id": 2,
+"title": "Mission: Konflikt",
+"status": "locked",
+"icon": "🔥",
+"row": 1,
+"nextLevelIds": [
+4
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Es ist Winter. ❄️ Ein Mieter aus der Weststadt ruft wütend an: 'Meine Heizung geht nicht und ich friere! Seit zwei Stunden erreiche ich niemanden!' Er ist laut und ungehalten. Du bist am Telefon. Wie reagierst du? Deeskalation ist deine Superkraft.",
+"imageUrl": "[https://source.unsplash.com/featured/?winter](https://source.unsplash.com/featured/?winter)",
+"type": "llm-interactive",
+"options": [],
+"initialQuickReplies": [
+"Ich sage ihm, er soll sich beruhigen, sonst lege ich auf.",
+"Ich entschuldige mich und nehme sofort die Daten auf.",
+"Ich erkläre ihm, dass die Technik nicht meine Abteilung ist."
+],
+"conversationHistory": [
+{
+"role": "assistant",
+"content": "Hier spricht Herr Müller. Es ist eiskalt hier! Was machen Sie jetzt? Ich zahle schließlich Miete!"
+}
+]
+}
+]
+},
+{
+"id": 3,
+"title": "Mission: Event",
+"status": "locked",
+"icon": "🌻",
+"row": 1,
+"nextLevelIds": [
+4
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Wir machen Hanau bunter! 🐔 Du organisierst das 'Urban Gardening' Projekt im Innenhof einer Wohnanlage. Die neuen Pflanzen sind da, aber der Transporter mit der Erde steckt im Stau. Die Mieter stehen schon mit Schaufeln bereit. Was machst du?",
+"imageUrl": "[https://source.unsplash.com/featured/?garden](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fgarden)",
+"type": "llm-interactive",
+"options": [],
+"initialQuickReplies": [
+"Ich schicke alle nach Hause.",
+"Ich organisiere Kaffee & Kuchen zur Überbrückung.",
+"Wir fangen schonmal an, den Bereich zu säubern."
+],
+"conversationHistory": [
+{
+"role": "assistant",
+"content": "Hey, wir stehen hier alle bereit, aber ohne Erde können wir nichts einpflanzen. Die Leute werden langsam ungeduldig. Was ist der Plan?"
+}
+]
+}
+]
+},
+{
+"id": 4,
+"title": "Der Hanau-Deal",
+"status": "locked",
+"icon": "✅",
+"row": 2,
+"nextLevelIds": [
+5,
+6
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Puh, gut gelöst! 😅 Als Azubi bei der Baugesellschaft bist du mittendrin statt nur dabei. Aber Arbeit ist nicht alles. Check mal, was wir dir bieten:",
+"imageUrl": "[https://source.unsplash.com/featured/?happiness](https://source.unsplash.com/featured/?happiness)",
+"type": "bento-grid",
+"options": [],
+"facts": [
+{
+"title": "Arbeitszeit",
+"value": "37h-Woche & Gleitzeit.",
+"icon": "⏰",
+"layout": {
+"colSpan": 1,
+"rowSpan": 1
+}
+},
+{
+"title": "Urlaub",
+"value": "30 Tage + Heiligabend/Silvester frei.",
+"icon": "🏖️",
+"layout": {
+"colSpan": 1,
+"rowSpan": 1
+}
+},
+{
+"title": "Cash & Goodies",
+"value": "Tarifgehalt, Weihnachtsgeld & Grimmschecks.",
+"icon": "💳",
+"layout": {
+"colSpan": 2,
+"rowSpan": 1
+}
+},
+{
+"title": "Team",
+"value": "80 Kollegen, flache Hierarchien, 'Du'-Kultur.",
+"icon": "🤜🤛",
+"layout": {
+"colSpan": 2,
+"rowSpan": 1
+}
+}
+]
+},
+{
+"id": 2,
+"scenario": "Klingt fair? Was ist dir persönlich am wichtigsten?",
+"imageUrl": "[https://source.unsplash.com/featured/?choice](https://source.unsplash.com/featured/?choice)",
+"type": "single-select-no-correct",
+"options": [
+{
+"id": 1,
+"text": "Sicherheit & Gehalt 💰",
+"feedback": "Verstehen wir. Als kommunales Unternehmen sind wir krisensicher."
+},
+{
+"id": 2,
+"text": "Sinnvolle Arbeit & Soziales ❤️",
+"feedback": "Dann passt du perfekt zu uns! Wir schaffen Wohnraum für alle."
+}
+]
+}
+]
+},
+{
+"id": 5,
+"title": "Weg: Spezialist",
+"status": "locked",
+"icon": "📈",
+"row": 3,
+"nextLevelIds": [
+7
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Nach der Ausbildung (3 Jahre) stehen dir viele Türen offen. Du kannst dich zum Immobilienfachwirt (IHK) weiterbilden und Experte für bestimmte Quartiere oder Technik werden. Welcher Bereich klingt spannender?",
+"imageUrl": "[https://source.unsplash.com/featured/?stairs](https://source.unsplash.com/featured/?stairs)",
+"type": "single-select-no-correct",
+"options": [
+{
+"id": 1,
+"text": "Sozialmanagement & Mieterbetreuung 🗣️",
+"feedback": "Sehr wichtig! Du bist das Bindeglied zwischen Mietern und Technik."
+},
+{
+"id": 2,
+"text": "Technik & Sanierung 🏗️",
+"feedback": "Spannend! Da geht es um energetische Sanierung und Modernisierung."
+}
+]
+}
+]
+},
+{
+"id": 6,
+"title": "Weg: Studium",
+"status": "locked",
+"icon": "🎓",
+"row": 3,
+"nextLevelIds": [
+7
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Du willst noch mehr Theorie? Viele nutzen die Ausbildung als Basis für ein Studium im Bereich Immobilienmanagement oder Bauingenieurwesen. Wir unterstützen dich bei deiner Entwicklung!",
+"imageUrl": "[https://source.unsplash.com/featured/?university](https://source.unsplash.com/featured/?university)",
+"type": "single-select-no-correct",
+"options": [
+{
+"id": 1,
+"text": "Erst Ausbildung, dann weitersehen. 👀",
+"feedback": "Guter Plan. Praxiserfahrung ist im Studium Gold wert."
+},
+{
+"id": 2,
+"text": "Ich will Karriere machen! 🚀",
+"feedback": "Bei uns bauen wir nicht nur Wohnungen, sondern auch Karrieren mit Zukunft."
+}
+]
+}
+]
+},
+{
+"id": 7,
+"title": "Dein Start",
+"status": "locked",
+"icon": "🚀",
+"row": 4,
+"scenarios": [
+{
+"id": 1,
+"scenario": "Bist du bereit, Hanau mitzugestalten? Ausbildungsstart ist immer am 1. August. Wir suchen echte Charaktere, keine reinen Noten-Optimierer. Unser Azubi-Test zählt mehr als das Zeugnis. Lust bekommen?",
+"imageUrl": "[https://source.unsplash.com/featured/?celebration](https://source.unsplash.com/featured/?celebration)",
+"type": "single-select-or-text",
+"allowTextInput": true,
+"options": [
+{
+"id": 1,
+"text": "Ja, ich bewerbe mich! 📝",
+"feedback": "Klasse! Bewirb dich zwischen November und Februar. Einfach online oder per Mail an karriere@bau-hanau.de. Mareike Förtsch (Personal) freut sich auf dich!"
+},
+{
+"id": 2,
+"text": "Gibt's auch Praktika? 🔍",
+"feedback": "Klar! Wir bieten Schulpraktika zur Orientierung an. Schreib uns einfach an info@bau-hanau.de."
+}
+]
+}
+]
+}
+]
+}
+],
+"copy": {
+"checkChances": "Meine Chancen checken",
+"expressApply": "Express Bewerbung",
+"jobMerken": "Job merken",
+"submit": "Ergebnis ansehen",
+"submitSuccess": "Top! Deine Bewerbung ist raus.",
+"victoryHeadline": "Du passt nach Hanau! 🏘️",
+"victorySubtext": "Du hast das Herz am richtigen Fleck und Köpfchen für Immobilien.",
+"nudgeHeadline": "Fast geschafft!",
+"nudgeText": "Beende den Check, um dein Ergebnis zu sehen.",
+"firstName": "Vorname",
+"phoneType": "Telefon",
+"schoolType": "Schulabschluss",
+"android": "Android",
+"iphone": "iPhone",
+"realschule": "Realschule",
+"gymnasium": "Abitur / Fachabitur",
+"andere": "Anderer Abschluss",
+"expressApplyIntro": "Hinterlass uns deine Nummer, wir melden uns.",
+"exploreOtherJobs": "Andere Jobs checken"
+}
 }
