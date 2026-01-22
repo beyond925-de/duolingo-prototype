@@ -1,14 +1,16 @@
 {
+"_instructions": "Baugesellschaft Hanau - Fokus: Soziales Vermieten, 37h-Woche & Hanau-Liebe.",
+"_filename": "configs/bau-hanau/config.json",
 "company": {
 "name": "Baugesellschaft Hanau",
 "slug": "bau-hanau",
 "logoUrl": "🏘️",
-"logoImageUrl": "[https://bau-hanau.de/wp-content/uploads/2017/05/logo-bauhu-225.png]",
+"logoImageUrl": "[https://source.unsplash.com/featured/?logo](https://source.unsplash.com/featured/?logo)",
 "signatureEmoji": "🔑",
 "primaryColor": "#e30613",
 "secondaryColor": "#333333",
 "city": "Hanau",
-"website": "[https://bau-hanau.de](https://bau-hanau.de)",
+"website": "[https://bau-hanau.de/karriere](https://www.google.com/search?q=https://bau-hanau.de/karriere)",
 "industryVibe": "Wohnen ist Menschenrecht. Wir sind der soziale Herzschlag von Hanau – stabil, nahbar und gemeinwohlorientiert statt profitgetrieben.",
 "organizationFacts": [
 {
@@ -25,21 +27,6 @@
 "title": "Großer Impact",
 "value": "Über 4.250 Wohnungen und 11.500 Mieter:innen verlassen sich auf uns.",
 "icon": "🏙️"
-},
-{
-"title": "Stabile Basis",
-"value": "Seit 1942 am Markt. Wir gehören der Stadt Hanau – krisensicher und lokal verwurzelt.",
-"icon": "⚓"
-},
-{
-"title": "Soziales Herz",
-"value": "Kino-Events, Hühner im Hof oder Urban Gardening – wir machen mehr als nur Vermietung.",
-"icon": "❤️"
-},
-{
-"title": "Mobilität",
-"value": "Fahrradfreundlicher Arbeitgeber (Silber-Zertifikat) & top Anbindung in Hanau.",
-"icon": "🚲"
 }
 ]
 },
@@ -53,8 +40,8 @@
 "subline": "Bist du der Stratege im Büro oder der Kümmerer vor Ort?",
 "categories": [
 {
-"id": "verwaltung",
-"title": "Management & Orga",
+"id": "ausbildung",
+"title": "Immobilienkaufleute (Management & Soziales)",
 "jobId": "immobilienkaufmann"
 }
 ]
@@ -64,10 +51,11 @@
 {
 "id": "environment",
 "question": "Wo bist du am liebsten?",
+"imageUrl": "[https://source.unsplash.com/featured/?city](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fcity)",
 "options": [
 {
 "id": "onsite",
-"label": "Draußen im Quartier",
+"label": "Draußen im Quartier 🌳",
 "icon": "🌳",
 "imageUrl": "[https://source.unsplash.com/featured/?neighborhood](https://source.unsplash.com/featured/?neighborhood)",
 "score": {
@@ -76,7 +64,7 @@
 },
 {
 "id": "office",
-"label": "Im modernen Büro",
+"label": "Im modernen Büro 💻",
 "icon": "💻",
 "imageUrl": "[https://source.unsplash.com/featured/?office](https://source.unsplash.com/featured/?office)",
 "score": {
@@ -88,21 +76,22 @@
 {
 "id": "workstyle",
 "question": "Ein Mieter ruft wütend an. Du...",
+"imageUrl": "[https://source.unsplash.com/featured/?phone](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fphone)",
 "options": [
 {
 "id": "empathy",
-"label": "Hörst zu und beruhigst ihn",
+"label": "Hörst zu und beruhigst ihn 👂",
 "icon": "👂",
-"imageUrl": "[https://source.unsplash.com/featured/?talking](https://source.unsplash.com/featured/?talking)",
+"imageUrl": "[https://source.unsplash.com/featured/?listening](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Flistening)",
 "score": {
 "immobilienkaufmann": 2
 }
 },
 {
 "id": "action",
-"label": "Schickst sofort Hilfe raus",
+"label": "Schickst sofort Hilfe raus ⚡",
 "icon": "⚡",
-"imageUrl": "[https://source.unsplash.com/featured/?running](https://source.unsplash.com/featured/?running)",
+"imageUrl": "[https://source.unsplash.com/featured/?technician](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Ftechnician)",
 "score": {
 "immobilienkaufmann": 1
 }
@@ -112,10 +101,11 @@
 {
 "id": "teamwork",
 "question": "Wie arbeitest du am liebsten?",
+"imageUrl": "[https://source.unsplash.com/featured/?team](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fteam)",
 "options": [
 {
 "id": "team",
-"label": "Im Team vernetzt",
+"label": "Im Team vernetzt 🤝",
 "icon": "🤝",
 "imageUrl": "[https://source.unsplash.com/featured/?meeting](https://source.unsplash.com/featured/?meeting)",
 "score": {
@@ -124,7 +114,7 @@
 },
 {
 "id": "solo",
-"label": "Eigenverantwortlich",
+"label": "Eigenverantwortlich 🦁",
 "icon": "🦁",
 "imageUrl": "[https://source.unsplash.com/featured/?man](https://source.unsplash.com/featured/?man)",
 "score": {
@@ -145,14 +135,14 @@
 {
 "id": "immobilienkaufmann",
 "title": "Immobilienkaufmann/-frau (w/m/d)",
-"description": "Verwalte 4.250+ Wohnungen, plane Sanierungen und organisiere Mieter-Events. 3 Jahre, Büro & Außendienst Mix. Sozial, sicher, Hanau. 🔑🏙️",
+"description": "Verwalte 4.250+ Wohnungen, plane Sanierungen und organisiere Mieter-Events. 3 Jahre, Büro & Außendienst Mix. Sozial, sicher, Hanau.",
 "icon": "🏢",
 "color": "#e30613",
 "tags": [
-"🏙️ Hanau gestalten",
-"❤️ Soziales Miteinander",
-"⏰ 37h Woche",
-"💰 Tarifvergütung"
+"Hanau gestalten",
+"Soziales Miteinander",
+"37h Woche",
+"Tarifvergütung"
 ],
 "pathModeId": "branching",
 "levels": [
@@ -186,26 +176,6 @@
 "feedback": "Perfekt! 🎯 Das Übergabeprotokoll ist juristisch wichtig, die Freundlichkeit für den Vibe."
 }
 ]
-},
-{
-"id": 2,
-"scenario": "Als Immobilienprofi musst du auch rechnen können. Eine Wohnung hat 60m² und kostet 10,00 € pro m² kalt. Wie hoch ist die Kaltmiete?",
-"imageUrl": "[https://source.unsplash.com/featured/?calculator](https://source.unsplash.com/featured/?calculator)",
-"type": "single-select-correct",
-"options": [
-{
-"id": 1,
-"text": "600,00 € 💶",
-"correct": true,
-"feedback": "Korrekt! 🧠 Mathe ist wichtig für Mietberechnungen und Betriebskosten."
-},
-{
-"id": 2,
-"text": "660,00 € 💶",
-"correct": false,
-"feedback": "Knapp daneben. 60 x 10 = 600. Aber keine Sorge, das lernst du bei uns!"
-}
-]
 }
 ]
 },
@@ -221,19 +191,21 @@
 "scenarios": [
 {
 "id": 1,
-"scenario": "Es ist Winter. ❄️ Ein Mieter aus der Weststadt ruft wütend an: 'Meine Heizung geht nicht und ich friere! Seit zwei Stunden erreiche ich niemanden!' Er ist laut und ungehalten. Du bist am Telefon. Wie reagierst du? Deeskalation ist deine Superkraft.",
+"scenario": "Es ist Winter. ❄️ Ein Mieter ruft wütend an: 'Meine Heizung geht nicht und ich friere! Seit zwei Stunden erreiche ich niemanden!' Er ist laut. Wie reagierst du?",
 "imageUrl": "[https://source.unsplash.com/featured/?winter](https://source.unsplash.com/featured/?winter)",
-"type": "llm-interactive",
-"options": [],
-"initialQuickReplies": [
-"Ich sage ihm, er soll sich beruhigen, sonst lege ich auf.",
-"Ich entschuldige mich und nehme sofort die Daten auf.",
-"Ich erkläre ihm, dass die Technik nicht meine Abteilung ist."
-],
-"conversationHistory": [
+"type": "single-select-correct",
+"options": [
 {
-"role": "assistant",
-"content": "Hier spricht Herr Müller. Es ist eiskalt hier! Was machen Sie jetzt? Ich zahle schließlich Miete!"
+"id": 1,
+"text": "Ich sage ihm, er soll sich beruhigen, sonst lege ich auf. 😤",
+"correct": false,
+"feedback": "Vorsicht! Das eskaliert die Situation nur. Er friert, er hat Stress."
+},
+{
+"id": 2,
+"text": "Ich höre zu, zeige Verständnis und schicke den Notdienst. 🚒",
+"correct": true,
+"feedback": "Genau richtig. Deeskalation ist deine Superkraft. Wir lassen niemanden im Kalten sitzen."
 }
 ]
 }
@@ -243,7 +215,7 @@
 "id": 3,
 "title": "Mission: Event",
 "status": "locked",
-"icon": "🌻",
+"icon": "🍿",
 "row": 1,
 "nextLevelIds": [
 4
@@ -251,19 +223,21 @@
 "scenarios": [
 {
 "id": 1,
-"scenario": "Wir machen Hanau bunter! 🐔 Du organisierst das 'Urban Gardening' Projekt im Innenhof einer Wohnanlage. Die neuen Pflanzen sind da, aber der Transporter mit der Erde steckt im Stau. Die Mieter stehen schon mit Schaufeln bereit. Was machst du?",
-"imageUrl": "[https://source.unsplash.com/featured/?garden](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fgarden)",
-"type": "llm-interactive",
-"options": [],
-"initialQuickReplies": [
-"Ich schicke alle nach Hause.",
-"Ich organisiere Kaffee & Kuchen zur Überbrückung.",
-"Wir fangen schonmal an, den Bereich zu säubern."
-],
-"conversationHistory": [
+"scenario": "Wir organisieren das jährliche Kinder-Kino-Event. 🎬 30 Minuten vor Start sagt der Popcorn-Lieferant ab! Die Kids kommen gleich. Was tust du?",
+"imageUrl": "[https://source.unsplash.com/featured/?popcorn](https://source.unsplash.com/featured/?popcorn)",
+"type": "single-select-correct",
+"options": [
 {
-"role": "assistant",
-"content": "Hey, wir stehen hier alle bereit, aber ohne Erde können wir nichts einpflanzen. Die Leute werden langsam ungeduldig. Was ist der Plan?"
+"id": 1,
+"text": "Event absagen. Ohne Popcorn kein Kino. 🚫",
+"correct": false,
+"feedback": "Niemals! Wir finden immer eine Lösung für die Kids."
+},
+{
+"id": 2,
+"text": "Ab zum Supermarkt: Chips & Flips kaufen! 🏃💨",
+"correct": true,
+"feedback": "Retter in der Not! Improvisationstalent ist bei uns gerne gesehen."
 }
 ]
 }
@@ -282,7 +256,7 @@
 "scenarios": [
 {
 "id": 1,
-"scenario": "Puh, gut gelöst! 😅 Als Azubi bei der Baugesellschaft bist du mittendrin statt nur dabei. Aber Arbeit ist nicht alles. Check mal, was wir dir bieten:",
+"scenario": "Puh, gut gelöst! 😅 Als Azubi bei uns bist du mittendrin. Aber was bekommst du dafür zurück? Check mal unsere Facts:",
 "imageUrl": "[https://source.unsplash.com/featured/?happiness](https://source.unsplash.com/featured/?happiness)",
 "type": "bento-grid",
 "options": [],
@@ -357,7 +331,7 @@
 "scenarios": [
 {
 "id": 1,
-"scenario": "Nach der Ausbildung (3 Jahre) stehen dir viele Türen offen. Du kannst dich zum Immobilienfachwirt (IHK) weiterbilden und Experte für bestimmte Quartiere oder Technik werden. Welcher Bereich klingt spannender?",
+"scenario": "Nach der Ausbildung (3 Jahre) stehen dir viele Türen offen. Du kannst dich zum Immobilienfachwirt (IHK) weiterbilden. Welcher Bereich reizt dich?",
 "imageUrl": "[https://source.unsplash.com/featured/?stairs](https://source.unsplash.com/featured/?stairs)",
 "type": "single-select-no-correct",
 "options": [
@@ -387,7 +361,7 @@
 "scenarios": [
 {
 "id": 1,
-"scenario": "Du willst noch mehr Theorie? Viele nutzen die Ausbildung als Basis für ein Studium im Bereich Immobilienmanagement oder Bauingenieurwesen. Wir unterstützen dich bei deiner Entwicklung!",
+"scenario": "Du willst noch mehr Theorie? Viele nutzen die Ausbildung als Basis für ein späteres Studium (z.B. Bauingenieurwesen). Wie ist dein Plan?",
 "imageUrl": "[https://source.unsplash.com/featured/?university](https://source.unsplash.com/featured/?university)",
 "type": "single-select-no-correct",
 "options": [
@@ -411,10 +385,11 @@
 "status": "locked",
 "icon": "🚀",
 "row": 4,
+"nextLevelIds": [],
 "scenarios": [
 {
 "id": 1,
-"scenario": "Bist du bereit, Hanau mitzugestalten? Ausbildungsstart ist immer am 1. August. Wir suchen echte Charaktere, keine reinen Noten-Optimierer. Unser Azubi-Test zählt mehr als das Zeugnis. Lust bekommen?",
+"scenario": "Bist du bereit, Hanau mitzugestalten? Ausbildungsstart ist am 1. August. Unser Azubi-Test zählt mehr als das Zeugnis. Lust bekommen?",
 "imageUrl": "[https://source.unsplash.com/featured/?celebration](https://source.unsplash.com/featured/?celebration)",
 "type": "single-select-or-text",
 "allowTextInput": true,
@@ -422,12 +397,12 @@
 {
 "id": 1,
 "text": "Ja, ich bewerbe mich! 📝",
-"feedback": "Klasse! Bewirb dich zwischen November und Februar. Einfach online oder per Mail an karriere@bau-hanau.de. Mareike Förtsch (Personal) freut sich auf dich!"
+"feedback": "Klasse! Bewirb dich zwischen November und Februar online."
 },
 {
 "id": 2,
 "text": "Gibt's auch Praktika? 🔍",
-"feedback": "Klar! Wir bieten Schulpraktika zur Orientierung an. Schreib uns einfach an info@bau-hanau.de."
+"feedback": "Klar! Wir bieten Schulpraktika zur Orientierung an."
 }
 ]
 }
@@ -438,7 +413,7 @@
 ],
 "copy": {
 "checkChances": "Meine Chancen checken",
-"expressApply": "Express Bewerbung",
+"expressApply": "Express Bewerbung ⚡",
 "jobMerken": "Job merken",
 "submit": "Ergebnis ansehen",
 "submitSuccess": "Top! Deine Bewerbung ist raus.",
