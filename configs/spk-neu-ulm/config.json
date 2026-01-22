@@ -1,0 +1,627 @@
+{
+  "company": {
+    "name": "Sparkasse Neu-Ulm – Illertissen",
+    "slug": "sparkasse-nui",
+    "logoUrl": "🔴",
+    "logoImageUrl": "https://image.pollinations.ai/prompt/minimalist%20red%20bank%20logo%20icon%20vector%20white%20background?width=500&height=500&nologo=true",
+    "signatureEmoji": "🔴",
+    "primaryColor": "#E2001A",
+    "secondaryColor": "#ffffff",
+    "city": "Neu-Ulm / Illertissen",
+    "website": "https://www.sparkasse-neu-ulm-illertissen.de",
+    "industryVibe": "Mehr als nur Kontoauszüge. Wir sind der rote Fels in der Brandung für die Region – seit 200 Jahren und trotzdem voll digital mit iPads und Apps.",
+    "organizationFacts": [
+      {
+        "title": "Sabbatical-Garantie",
+        "value": "Einmalig: Nach der Ausbildung bis zu 3 Monate bezahlte Auszeit für Reisen oder Hobbys!",
+        "icon": "✈️"
+      },
+      {
+        "title": "iPad & Digital",
+        "value": "Lernen mit Tablets und Prüfungs.TV – keine verstaubten Bücher, sondern High-Tech Training.",
+        "icon": "📱"
+      },
+      {
+        "title": "International",
+        "value": "3 Wochen Auslandspraktikum (Erasmus+) während der Ausbildung? Bei uns Standard.",
+        "icon": "🌍"
+      },
+      {
+        "title": "Top Arbeitgeber",
+        "value": "Ausgezeichnet als einer der besten Ausbildungsbetriebe Deutschlands (Focus Money).",
+        "icon": "🏆"
+      },
+      {
+        "title": "Social Skills",
+        "value": "Projekt 'Blickwechsel': Engagiere dich sozial und schau über den Tellerrand hinaus.",
+        "icon": "🤝"
+      },
+      {
+        "title": "Sicherheit",
+        "value": "Teil der größten Finanzgruppe Deutschlands. Krisensicherer geht’s kaum.",
+        "icon": "🛡️"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Deine Karriere im roten Bereich? 🔴 (Im positiven Sinne!)",
+    "subline": "Starte beim Marktführer der Region. Digitales Lernen am iPad, Auslandspraktika und 3 Monate bezahltes Sabbatical nach dem Abschluss. Deal?",
+    "startButtonText": "Mein Konto checken 🚀"
+  },
+  "campus": {
+    "headline": "Dein Weg zur Bank",
+    "subline": "Lieber direkt in die Praxis oder Studium und Ausbildung kombinieren?",
+    "categories": [
+      {
+        "id": "ausbildung",
+        "title": "Ausbildung (Praxis)",
+        "jobId": "bankkaufmann"
+      },
+      {
+        "id": "studium",
+        "title": "Duales Studium (Theorie+)",
+        "jobId": "duales-studium"
+      }
+    ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "workstyle",
+        "question": "Wie lernst du am besten?",
+        "options": [
+          {
+            "id": "practice",
+            "label": "Learning by Doing & Kundenkontakt",
+            "icon": "🗣️",
+            "imageUrl": "https://image.pollinations.ai/prompt/young%20bank%20apprentice%20talking%20to%20friendly%20customer%20in%20modern%20bright%20office%20photorealistic%20cinematic%20lighting?width=800&height=600&nologo=true",
+            "score": {
+              "bankkaufmann": 2,
+              "duales-studium": 1
+            }
+          },
+          {
+            "id": "theory",
+            "label": "Tiefe Theorie & komplexe Zusammenhänge",
+            "icon": "📚",
+            "imageUrl": "https://image.pollinations.ai/prompt/focused%20student%20in%20modern%20university%20library%20with%20laptop%20and%20books%20photorealistic%20warm%20lighting?width=800&height=600&nologo=true",
+            "score": {
+              "bankkaufmann": 0,
+              "duales-studium": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "motivation",
+        "question": "Was treibt dich an?",
+        "options": [
+          {
+            "id": "people",
+            "label": "Menschen helfen & Wünsche erfüllen",
+            "icon": "🤝",
+            "imageUrl": "https://image.pollinations.ai/prompt/bank%20advisor%20shaking%20hands%20with%20happy%20couple%20consulting%20room%20bright%20photorealistic?width=800&height=600&nologo=true",
+            "score": {
+              "bankkaufmann": 2,
+              "duales-studium": 1
+            }
+          },
+          {
+            "id": "business",
+            "label": "Wirtschaft verstehen & Unternehmen steuern",
+            "icon": "📈",
+            "imageUrl": "https://image.pollinations.ai/prompt/stock%20market%20data%20analysis%20on%20tablet%20screen%20business%20context%20photorealistic?width=800&height=600&nologo=true",
+            "score": {
+              "bankkaufmann": 1,
+              "duales-studium": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "vibe",
+        "question": "Dein Ziel nach dem Abschluss?",
+        "options": [
+          {
+            "id": "sabbatical",
+            "label": "Erstmal Weltreise! 🌏",
+            "icon": "✈️",
+            "imageUrl": "https://image.pollinations.ai/prompt/backpacker%20standing%20on%20mountain%20looking%20at%20sunset%20freedom%20travel%20photorealistic?width=800&height=600&nologo=true",
+            "score": {
+              "bankkaufmann": 1,
+              "duales-studium": 1
+            }
+          },
+          {
+            "id": "career",
+            "label": "Direkt die Karriereleiter hoch 🧗",
+            "icon": "👔",
+            "imageUrl": "https://image.pollinations.ai/prompt/young%20confident%20business%20person%20walking%20up%20stairs%20in%20modern%20corporate%20building%20photorealistic?width=800&height=600&nologo=true",
+            "score": {
+              "bankkaufmann": 1,
+              "duales-studium": 2
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Unser Anlagetipp für dich:",
+      "startButtonText": "Beruf entdecken",
+      "viewAllButtonText": "Alle Optionen",
+      "skipButtonText": "Überspringen"
+    }
+  },
+  "jobs": [
+    {
+      "id": "bankkaufmann",
+      "title": "Bankkaufmann/-frau",
+      "description": "Der Klassiker, neu gedacht. 2,5 Jahre, iPad-Learning, Kundenwünsche erfüllen. Und danach? 3 Monate bezahlte Weltreise. 🌍💰",
+      "icon": "💶",
+      "color": "#E2001A",
+      "tags": [
+        "📱 Digital Learning",
+        "✈️ Sabbatical-Option",
+        "🤝 Menschen & Finanzen",
+        "🏘️ Regional stark"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Startblock",
+          "status": "unlocked",
+          "icon": "🏦",
+          "row": 0,
+          "nextLevelIds": [
+            2,
+            3
+          ],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hi! 👋 Willkommen in der Sparkasse Neu-Ulm – Illertissen. Viele denken bei Bankkaufleuten an staubige Akten und Erbsenzähler. Aber eigentlich sind wir 'Wunscherfüller'. Was glaubst du, was machst du hier am häufigsten?",
+              "imageUrl": "https://image.pollinations.ai/prompt/interior%20of%20modern%20bank%20branch%20sparkasse%20style%20red%20accents%20friendly%20atmosphere%20photorealistic?width=1280&height=720&nologo=true",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Geld zählen im Tresor 💰",
+                  "correct": false,
+                  "feedback": "Fast nur im Film! Das machen heute Maschinen. Wir kümmern uns um die Menschen."
+                },
+                {
+                  "id": 2,
+                  "text": "Kunden beraten & Lösungen finden 🗣️",
+                  "correct": true,
+                  "feedback": "Bingo! Ob erstes Auto, Hausbau oder Geldanlage – du bist der Guide im Finanz-Dschungel."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Beratung",
+          "status": "locked",
+          "icon": "💬",
+          "row": 1,
+          "nextLevelIds": [
+            4
+          ],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein junger Kunde, Tim (19), kommt zu dir an den Schalter. Er hat gerade seine Ausbildung angefangen und will sich 'irgendwie was sparen' für ein neues Gaming-Setup, blickt aber bei Aktien, ETFs und Bausparen nicht durch. Er fragt dich: 'Was soll ich machen?' Wie gehst du vor?",
+              "imageUrl": "https://image.pollinations.ai/prompt/young%20man%20in%20casual%20clothes%20looking%20confused%20at%20smartphone%20banking%20app%20modern%20lighting?width=1280&height=720&nologo=true",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich verkaufe ihm sofort einen Bausparvertrag.",
+                "Ich frage erst mal, wie viel er monatlich beiseitelegen kann.",
+                "Ich zeige ihm unsere Sparkassen-App und die ETF-Optionen."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Hi, ich bin Tim. Cool, dass du Zeit hast. Also, ich hab so 100€ im Monat über. Soll ich das einfach aufs Sparbuch packen oder was macht man da heute so? Ich hab null Plan. 🤷‍♂️"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Kredit",
+          "status": "locked",
+          "icon": "🚗",
+          "row": 1,
+          "nextLevelIds": [
+            4
+          ],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Es wird ernster. Ein Ehepaar möchte einen Kredit für eine neue Küche. 20.000€. Sie wirken sympathisch, aber dein Computer zeigt an, dass ihr Konto oft überzogen ist. Bei der Sparkasse sind wir 'nah am Menschen', aber wir müssen auch verantwortungsvoll mit Geld umgehen. Was ist dein erster Schritt?",
+              "imageUrl": "https://image.pollinations.ai/prompt/young%20couple%20sitting%20at%20bank%20desk%20looking%20hopeful%20but%20nervous%20consulting%20scene%20photorealistic?width=1280&height=720&nologo=true",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Kredit ablehnen, Computer sagt Nein. ❌",
+                  "correct": false,
+                  "feedback": "Zu voreilig! Wir schauen uns den Menschen an, nicht nur die Zahl."
+                },
+                {
+                  "id": 2,
+                  "text": "Einnahmen & Ausgaben gemeinsam prüfen. 🧐",
+                  "correct": true,
+                  "feedback": "Perfekt. Wir machen einen Kassensturz. Vielleicht können wir Raten umschulden oder den Plan anpassen. Das ist echte Beratung!"
+                },
+                {
+                  "id": 3,
+                  "text": "Einfach genehmigen, sind ja nette Leute. ✅",
+                  "correct": false,
+                  "feedback": "Gefährlich! Wenn sie die Raten nicht zahlen können, haben beide ein Problem. Schutz geht vor."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Der S-Check",
+          "status": "locked",
+          "icon": "✅",
+          "row": 2,
+          "nextLevelIds": [
+            5
+          ],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Puh, Finanzen geklärt! 😅 Aber was springt für dich dabei raus? Die Sparkasse Neu-Ulm – Illertissen bietet Dinge, die du bei keiner Großbank findest. Schau mal hier:",
+              "imageUrl": "https://image.pollinations.ai/prompt/group%20of%20happy%20young%20business%20people%20high%20fiving%20success%20team%20spirit%20photorealistic%20warm%20tones?width=1280&height=720&nologo=true",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Sabbatical",
+                  "value": "3 Monate bezahlte Auszeit direkt nach der Ausbildung!",
+                  "icon": "✈️",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "iPad Free",
+                  "value": "Lernen am Tablet statt Bücherschleppen.",
+                  "icon": "📱",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Ausland",
+                  "value": "3 Wochen Praktikum in Europa (Erasmus+).",
+                  "icon": "🌍",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Hand aufs Herz: Welcher dieser Benefits flasht dich am meisten?",
+              "imageUrl": "https://image.pollinations.ai/prompt/flatlay%20of%20travel%20gear%20passport%20ipad%20and%20credit%20card%20on%20wooden%20table%20travel%20planning%20photorealistic?width=1280&height=720&nologo=true",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Definitiv das Sabbatical! 🎒",
+                  "feedback": "Verstehen wir. Einfach mal raus nach dem Lernstress. Das gönnen wir dir."
+                },
+                {
+                  "id": 2,
+                  "text": "Die iPads & das moderne Lernen 📱",
+                  "feedback": "Wir hassen Papierkram genauso wie du. Digital ist besser."
+                },
+                {
+                  "id": 3,
+                  "text": "Die Sicherheit einer großen Bank 🏦",
+                  "feedback": "Spießer? Nö, clever! In unsicheren Zeiten ist ein sicherer Job Gold wert."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Dein Aufstieg",
+          "status": "locked",
+          "icon": "📈",
+          "row": 3,
+          "nextLevelIds": [
+            7
+          ],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nach den 2,5 Jahren Ausbildung bist du 'Banker'. Aber bei uns ist das erst der Anfang. Wir fördern dich weiter. Wohin soll die Reise gehen?",
+              "imageUrl": "https://image.pollinations.ai/prompt/view%20up%20a%20modern%20spiral%20staircase%20symbolizing%20career%20growth%20architecture%20photorealistic?width=1280&height=720&nologo=true",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Bankfachwirt:in werden 🎓",
+                  "feedback": "Der Klassiker! Damit steigst du ins mittlere Management auf und verdienst besser."
+                },
+                {
+                  "id": 2,
+                  "text": "Spezialist werden (z.B. Baufi oder Firmen) 🏗️",
+                  "feedback": "Experten werden immer gebraucht. Du wirst der Pro in deinem Fachgebiet."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hast du Bock auf 'Gut für die Region', iPad-Lernen und danach 3 Monate Weltreise? Anja Schneider und Judith Selzle aus dem HR-Team warten auf deine Bewerbung (online, ohne Papierkram!). 🔴",
+              "imageUrl": "https://image.pollinations.ai/prompt/two%20friendly%20hr%20managers%20women%20smiling%20welcoming%20gesture%20in%20office%20photorealistic?width=1280&height=720&nologo=true",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich bewerbe mich sofort! 📝",
+                  "feedback": "Mega! Geh auf 'Online-Check-In' auf unserer Website. Tipp: Sei einfach du selbst. Wir suchen Persönlichkeiten, keine Roboter."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich schau mir erst das virtuelle Praktikum an 👀",
+                  "feedback": "Gute Idee! Schreib uns bei WhatsApp (0151 28250556) und schau den Azubis über die Schulter."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "duales-studium",
+      "title": "Duales Studium (BWL Bank)",
+      "description": "Der Turbo für deine Karriere. 3 Jahre, Theorie an der DHBW, Praxis in der Bank. Semester im Ausland möglich. Bachelor of Arts in der Tasche. 🎓💼",
+      "icon": "🎓",
+      "color": "#333333",
+      "tags": [
+        "🎓 Bachelor B.A.",
+        "🚀 Fast Track",
+        "🌍 Auslandssemester",
+        "💰 Gehalt ab Tag 1"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Startblock",
+          "status": "unlocked",
+          "icon": "🏁",
+          "row": 0,
+          "nextLevelIds": [
+            2,
+            3
+          ],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Willkommen im High-Speed-Bereich! Duales Studium heißt: 3 Monate Uni (Theorie ballern), 3 Monate Bank (Praxis rocken). Immer im Wechsel. Klingt anstrengend oder spannend?",
+              "imageUrl": "https://image.pollinations.ai/prompt/split%20screen%20image%20left%20side%20university%20lecture%20hall%20right%20side%20modern%20bank%20office%20photorealistic?width=1280&height=720&nologo=true",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Klingt stressig... 🥵",
+                  "feedback": "Ist es auch manchmal. Aber dafür bist du nach 3 Jahren fertig, hast Berufserfahrung UND Geld verdient."
+                },
+                {
+                  "id": 2,
+                  "text": "Genau mein Ding! Keine Langeweile. ⚡",
+                  "feedback": "Das ist der Spirit! Du wendest das Gelernte sofort an. Besser geht's nicht."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Analyse",
+          "status": "locked",
+          "icon": "📊",
+          "row": 1,
+          "nextLevelIds": [
+            4
+          ],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du bist in der Praxisphase 'Firmenkunden'. Ein mittelständischer Maschinenbauer aus Illertissen braucht eine Million Euro für eine neue Halle. In der Uni hast du 'Bilanzanalyse' gelernt. Der Chef legt dir den Jahresabschluss vor. Was checkst du?",
+              "imageUrl": "https://image.pollinations.ai/prompt/financial%20report%20charts%20and%20graphs%20on%20desk%20with%20calculator%20business%20analysis%20photorealistic?width=1280&height=720&nologo=true",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich schaue auf den Gewinn und die Eigenkapitalquote.",
+                "Ich frage ihn erstmal, ob er privat auch bei uns ist.",
+                "Ich prüfe die Liquidität: Kann er die Raten zahlen?"
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Hier sind die Zahlen. Umsatz ist gestiegen, aber der Gewinn ist gesunken, weil die Rohstoffpreise hoch sind. Würdest du uns empfehlen, den Kredit zu geben? Worauf achten wir? 🤔"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Ausland",
+          "status": "locked",
+          "icon": "🌍",
+          "row": 1,
+          "nextLevelIds": [
+            4
+          ],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Die DHBW bietet dir die Chance, ein Theorie-Semester im Ausland zu verbringen. International Business is key! 🔑 Stell dir vor, du musst dich entscheiden. Wo geht's hin und warum?",
+              "imageUrl": "https://image.pollinations.ai/prompt/globe%20on%20a%20desk%20in%20a%20library%20with%20blurred%20background%20travel%20study%20concept%20photorealistic?width=1280&height=720&nologo=true",
+              "type": "text-field",
+              "allowTextInput": true,
+              "scenario": "Tipp kurz: Welches Land würde dich reizen, um Bankwesen mal anders zu erleben? (USA, Asien, Europa?)"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Deal or No Deal",
+          "status": "locked",
+          "icon": "🤝",
+          "row": 2,
+          "nextLevelIds": [
+            5
+          ],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Studieren kostet normalerweise Geld. Bei uns bekommst du Geld. Und nicht zu knapp. Hier sind die Hard Facts für dein Duales Studium:",
+              "imageUrl": "https://image.pollinations.ai/prompt/happy%20student%20working%20on%20laptop%20in%20coffee%20shop%20financial%20freedom%20photorealistic?width=1280&height=720&nologo=true",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Gehalt",
+                  "value": "Monatliche Vergütung – auch während der Uni-Phasen!",
+                  "icon": "💸",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Sabbatical",
+                  "value": "Auch für Dualis: Bis zu 3 Monate Auszeit nach Abschluss.",
+                  "icon": "🏝️",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Karriere-Turbo",
+                  "value": "Hohe Übernahmechancen und schnelle Aufstiegswege.",
+                  "icon": "🚀",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Next Steps",
+          "status": "locked",
+          "icon": "👣",
+          "row": 3,
+          "nextLevelIds": [
+            7
+          ],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Mit dem Bachelor of Arts in der Tasche stehen dir bei der Sparkasse alle Türen offen. Firmenkundenberatung, Asset Management oder sogar Filialleitung. Wie wichtig ist dir Verantwortung?",
+              "imageUrl": "https://image.pollinations.ai/prompt/modern%20glass%20meeting%20room%20in%20corporate%20office%20empty%20ready%20for%20business%20photorealistic?width=1280&height=720&nologo=true",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich will schnell entscheiden und führen! 🦁",
+                  "feedback": "Ehrgeizig! Das Duale Studium ist das perfekte Sprungbrett dafür."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich will fachlich der Beste sein. 🤓",
+                  "feedback": "Super. Spezialisten sind bei uns Gold wert."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Startschuss",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit für Theorie UND Praxis? Dann bewirb dich für das Duale Studium (Start immer 1. September). Du brauchst (Fach-)Abitur und Bock auf Wirtschaft. Wir freuen uns auf dich!",
+              "imageUrl": "https://image.pollinations.ai/prompt/university%20campus%20summer%20vibes%20students%20walking%20photorealistic%20cinematic?width=1280&height=720&nologo=true",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Bewerbung geht raus! 📤",
+                  "feedback": "Top! Check unsere Website für den 'Online-Check-In'. Melde dich ca. 1,5 Jahre vor Start – die Plätze sind heiß begehrt!"
+                },
+                {
+                  "id": 2,
+                  "text": "Gibt's noch Fragen? 🤔",
+                  "feedback": "Klar, meld dich bei Anja Schneider (0731 709-205) oder schreib uns bei WhatsApp."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "checkChances": "Passt die Bank zu mir?",
+    "expressApply": "Lass uns quatschen",
+    "jobMerken": "Job merken",
+    "submit": "Teamfit prüfen",
+    "submitSuccess": "Top! Wir schauen uns das an und melden uns. Vielleicht sehen wir uns bald in Neu-Ulm!",
+    "victoryHeadline": "Konto im Plus! 📈",
+    "victorySubtext": "Du hast den Dreh raus. Finanzen sind genau dein Ding.",
+    "nudgeHeadline": "Mal ehrlich...",
+    "nudgeText": "Du hast Talent für Geld & Menschen. Wir sollten uns kennenlernen. Ganz locker, ohne steifen Anzug beim ersten Hallo. ✨",
+    "firstName": "Wie heißt du?",
+    "phoneType": "Welches Handy nutzt du? (Egal, nur Neugier)",
+    "schoolType": "Auf welcher Schule bist du?",
+    "android": "Android Team",
+    "iphone": "iPhone Team",
+    "realschule": "Realschule",
+    "gymnasium": "Gymnasium / FOS",
+    "andere": "Andere / Hab schon Abschluss",
+    "expressApplyIntro": "Ein paar kurze Infos genügen. Wir melden uns bei dir!",
+    "exploreOtherJobs": "Erstmal andere Jobs entdecken"
+  }
+}
