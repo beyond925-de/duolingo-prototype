@@ -1,318 +1,332 @@
 {
-  "_instructions": "Baugesellschaft Hanau - Deep Dive Journey",
-  "_filename": "configs/hanau/config.json",
-
   "company": {
-    "name": "Baugesellschaft Hanau",
+    "name": "Baugesellschaft Hanau GmbH",
     "slug": "bau-hanau",
-    "logoUrl": "https://bau-hanau.de/wp-content/uploads/2017/05/logo-bauhu-225.png",
-    "primaryColor": "#009640",
-    "secondaryColor": "#FFFFFF",
-    "city": "Hanau",
-    "industryVibe": "Wir sind die Macher hinter dem Wohnraum von 11.500 Hanauern. Kein Luxus-Chichi, sondern echte Lebensqualität, Klimaschutz und sozialer Zusammenhalt. Mit einer 37-Stunden-Woche und viel Herz für unsere Stadt.",
+    "logoUrl": "https://bau-hanau.de/assets/images/logo.svg",
     "organizationFacts": [
       {
-        "title": "37h Work-Life-Hero",
-        "value": "Vollzeit heißt bei uns 37 Stunden. Mehr Zeit für dein Leben, dein Gym, deine Freunde.",
-        "icon": "⏰"
+        "title": "History",
+        "value": "Seit 1942",
+        "icon": "history"
       },
       {
-        "title": "Klima-Vorreiter",
-        "value": "Photovoltaik, Wärmepumpen, E-Bikes. Wir bauen Hanau grün.",
-        "icon": "🌱"
+        "title": "Team",
+        "value": "75+ Mates",
+        "icon": "users"
       },
       {
-        "title": "Vielfalt-Check",
-        "value": "Unterzeichner der Charta der Vielfalt. Bei uns zählt der Mensch, nicht die Herkunft.",
-        "icon": "🌈"
+        "title": "Impact",
+        "value": "4.250+ Wohnungen",
+        "icon": "home"
+      },
+      {
+        "title": "Community",
+        "value": "11.5k Bewohner",
+        "icon": "heart"
       }
-    ]
+    ],
+    "industryVibe": "Mehr als nur Vermieten: Wir sind der Herzschlag von Hanau. Wir schaffen Zuhause, fördern Nachbarschaft und bauen nachhaltig für die Zukunft. Sozialer Impact trifft auf Immobilien-Business.",
+    "primaryColor": "#E3000F",
+    "secondaryColor": "#333333"
   },
-
   "landing": {
-    "headline": "Gestalte das Hanau von morgen. 🏠✨",
-    "subline": "Erlebe 3 Pfade zwischen High-Tech Sanierung, sozialem Impact und echtem Teamspirit. Werde Immobilien-Profi mit Sinn.",
-    "startButtonText": "Mission Hanau starten 🚀"
+    "title": "Dein Impact für Hanau",
+    "subTitle": "Werde Immobilien-Profi mit Herz",
+    "description": "Wir verwalten nicht nur Wände, wir gestalten Lebensräume. Checke, ob du das Zeug zum Immobilien-Allrounder hast!",
+    "imageUrl": "https://image.pollinations.ai/prompt/happy%20apprentices%20in%20front%20of%20modern%20residential%20building%20sunny%20weather%20wide%20angle%20cinematic%20lighting%20photorealistic%204k%20warm%20tones?width=1280&height=720&nologo=true&apiKey=sk_d5rrY8gMI0a1ZhLgJbshuNHX2nEaSp6w",
+    "videoUrl": ""
   },
-
   "campus": {
-    "headline": "Wähle dein Spezialgebiet",
-    "subline": "Wo willst du den größten Unterschied machen?",
-    "categories": [
+    "title": "BauHanau HQ",
+    "description": "Mitten in der City, direkt am Puls der Stadt. Hier laufen alle Fäden zusammen – vom Bauplan bis zum Mieterfest.",
+    "imageUrl": "https://image.pollinations.ai/prompt/exterior%20view%20modern%20administration%20office%20building%20inviting%20architecture%20urban%20cinematic%20lighting%20photorealistic%204k%20warm%20tones?width=1280&height=720&nologo=true&apiKey=sk_d5rrY8gMI0a1ZhLgJbshuNHX2nEaSp6w",
+    "mapCoordinates": {
+      "lat": 50.132,
+      "lng": 8.916
+    }
+  },
+  "questionnaire": {
+    "questions": [
       {
-        "id": "social",
-        "title": "Pfad 1: Der Community-Manager (Soziales & Mieter)",
-        "jobId": "path-social"
+        "id": "q1",
+        "text": "Wo siehst du dich am liebsten?",
+        "trait": "environment",
+        "options": [
+          {
+            "text": "Im Büro Strategien entwickeln",
+            "score": {
+              "1": 1
+            }
+          },
+          {
+            "text": "Draußen bei den Leuten",
+            "score": {
+              "1": 2
+            }
+          },
+          {
+            "text": "Mix aus beidem",
+            "score": {
+              "1": 3
+            }
+          }
+        ]
       },
       {
-        "id": "tech",
-        "title": "Pfad 2: The Future Builder (Technik & Klima)",
-        "jobId": "path-tech"
+        "id": "q2",
+        "text": "Wie arbeitest du am besten?",
+        "trait": "workstyle",
+        "options": [
+          {
+            "text": "Klare Zahlen & Fakten",
+            "score": {
+              "1": 1
+            }
+          },
+          {
+            "text": "Empathisch & kommunikativ",
+            "score": {
+              "1": 2
+            }
+          },
+          {
+            "text": "Organisiert & flexibel",
+            "score": {
+              "1": 3
+            }
+          }
+        ]
       },
       {
-        "id": "culture",
-        "title": "Pfad 3: BHG Inside (Kultur & Lifestyle)",
-        "jobId": "path-culture"
+        "id": "q3",
+        "text": "Teamwork bedeutet für dich...",
+        "trait": "teamwork",
+        "options": [
+          {
+            "text": "Jeder macht sein Ding",
+            "score": {
+              "1": 0
+            }
+          },
+          {
+            "text": "Gemeinsam Lösungen finden",
+            "score": {
+              "1": 3
+            }
+          },
+          {
+            "text": "Ich leite die Gruppe an",
+            "score": {
+              "1": 1
+            }
+          }
+        ]
       }
     ]
   },
-
   "jobs": [
     {
-      "id": "path-social",
-      "title": "Community-Manager",
-      "description": "Von der Wohnungsübergabe bis zum Nachbarschaftsstreit – du bist die Stimme der BHG.",
-      "icon": "🤝",
-      "color": "#009640",
-      "tags": ["Kommunikation", "Empathie", "Action"],
-      "pathModeId": "linear",
+      "id": 1,
+      "title": "Immobilienkaufmann/-kauffrau (w/m/d)",
+      "pathModeId": "branching",
+      "matchScore": 95,
+      "tags": [
+        "Organisation",
+        "Kommunikation",
+        "Verwaltung"
+      ],
       "levels": [
         {
           "id": 1,
-          "title": "Die erste Schlüsselübergabe",
-          "status": "unlocked",
-          "icon": "🔑",
           "row": 0,
-          "nextLevelIds": [2],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Ein junges Paar bezieht ihre erste eigene Wohnung. Sie sind nervös und haben tausend Fragen zum Mietvertrag. Wie gehst du vor?",
-              "imageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-correct",
-              "options": [
-                { "id": 1, "text": "Dienst nach Vorschrift: Unterschrift holen und fertig.", "correct": false, "feedback": "Zu trocken! Wir wollen, dass sich Mieter ab Minute 1 zu Hause fühlen." },
-                { "id": 2, "text": "Erkläre ihnen alles auf Augenhöhe und gib Tipps für die Mieter-App.", "correct": true, "feedback": "Top! So bauen wir Vertrauen auf." }
-              ]
-            }
+          "type": "quiz-single-choice",
+          "title": "Icebreaker",
+          "description": "Starten wir mit einem Quick-Fact über uns.",
+          "imageUrl": "https://image.pollinations.ai/prompt/Hanau%20city%20skyline%20panoramic%20view%20germany%20landmark%20cinematic%20lighting%20photorealistic%204k%20warm%20tones?width=1280&height=720&nologo=true&apiKey=sk_d5rrY8gMI0a1ZhLgJbshuNHX2nEaSp6w",
+          "content": {
+            "question": "Wir sind mehr als nur Vermieter. Was glaubst du, wie viele Menschen in unseren Wohnungen leben?",
+            "options": [
+              {
+                "text": "Ca. 2.000",
+                "isCorrect": false,
+                "feedback": "Mehr! Wir sind einer der größten Player im Rhein-Main-Gebiet."
+              },
+              {
+                "text": "Über 11.500",
+                "isCorrect": true,
+                "feedback": "Bämm! Richtig. Das ist fast eine Kleinstadt für sich."
+              },
+              {
+                "text": "Rund 500",
+                "isCorrect": false,
+                "feedback": "Viel zu wenig. Wir managen über 4.250 Wohnungen!"
+              }
+            ]
+          },
+          "nextLevelIds": [
+            2,
+            3
           ]
         },
         {
           "id": 2,
-          "title": "Konflikt im Quartier",
-          "status": "locked",
-          "icon": "📣",
           "row": 1,
-          "nextLevelIds": [3],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Ein Mieter beschwert sich über die Lautstärke spielender Kinder im Innenhof. Dein Statement?",
-              "imageUrl": "https://images.unsplash.com/photo-1473649085228-583485e6e4d7?auto=format&fit=crop&w=1350&q=80",
-              "type": "llm-interactive",
-              "conversationHistory": [
-                { "role": "assistant", "content": "Das ist unerträglich! Kann man diesen Lärm nicht verbieten? Ich zahle schließlich Miete!" }
-              ]
-            }
+          "type": "single-select-correct",
+          "title": "Mission: Heizungsausfall",
+          "description": "Ein Mieter ruft panisch an: 'Die Heizung geht nicht und es friert!' Was tust du?",
+          "imageUrl": "https://image.pollinations.ai/prompt/close%20up%20smartphone%20and%20notepad%20on%20clean%20office%20desk%20professional%20work%20cinematic%20lighting%20photorealistic%204k%20warm%20tones?width=1280&height=720&nologo=true&apiKey=sk_d5rrY8gMI0a1ZhLgJbshuNHX2nEaSp6w",
+          "content": {
+            "question": "Wähle die beste Reaktion:",
+            "options": [
+              {
+                "text": "Ihn bitten, eine E-Mail zu schreiben und aufzulegen.",
+                "isCorrect": false,
+                "feedback": "Zu kalt! Wir sind serviceorientiert und lassen niemanden frieren."
+              },
+              {
+                "text": "Den Mieter beruhigen, Daten aufnehmen und sofort den Handwerkerservice beauftragen.",
+                "isCorrect": true,
+                "feedback": "Perfekt! Empathie und schnelle Lösung – genau das brauchen wir."
+              },
+              {
+                "text": "Selbst hinfahren und versuchen, die Heizung zu reparieren.",
+                "isCorrect": false,
+                "feedback": "Engagiert, aber gefährlich. Dafür haben wir Profis im Handwerk!"
+              }
+            ]
+          },
+          "nextLevelIds": [
+            4
           ]
         },
         {
           "id": 3,
-          "title": "Event-Manager: Kinder-Kino",
-          "status": "locked",
-          "icon": "🎬",
-          "row": 2,
-          "nextLevelIds": [],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Das große Mieter-Event steht an. Du planst das Catering. Worauf achtest du, um unsere Vielfalt-Werte zu zeigen?",
-              "imageUrl": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=1350&q=80",
-              "type": "multiple-select",
-              "options": [
-                { "id": 1, "text": "Regionale Snacks aus Hanau", "correct": true },
-                { "id": 2, "text": "Vielfältiges Angebot (vegan/halal/vegetarisch)", "correct": true },
-                { "id": 3, "text": "Nur billiges Fast-Food, um Kosten zu sparen", "correct": false }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "path-tech",
-      "title": "Future Builder",
-      "description": "Mache unsere Liegenschaften fit für die Zukunft. Solar, Wärme, Innovation.",
-      "icon": "⚡",
-      "color": "#009640",
-      "tags": ["Nachhaltigkeit", "Technik", "Planung"],
-      "pathModeId": "linear",
-      "levels": [
-        {
-          "id": 1,
-          "title": "Check: Photovoltaik-Potenzial",
-          "status": "unlocked",
-          "icon": "☀️",
-          "row": 0,
-          "nextLevelIds": [2],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Wir wollen ein altes Gebäude in der Innenstadt energetisch sanieren. Was ist der erste Schritt für mehr Unabhängigkeit?",
-              "imageUrl": "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-correct",
-              "options": [
-                { "id": 1, "text": "Dachflächen analysieren für Solaranlagen.", "correct": true, "feedback": "Genau! Wir produzieren unseren Strom am liebsten selbst." },
-                { "id": 2, "text": "Einfach die Heizung höher drehen.", "correct": false, "feedback": "Nicht dein Ernst, oder? Wir denken nachhaltig!" }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "title": "The Chickens of Hanau",
-          "status": "locked",
-          "icon": "🐔",
           "row": 1,
-          "nextLevelIds": [3],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Hühnerhaltung in der Stadt? Bei uns gibt es das! Wie erklärst du einem Investor den Vorteil von Urban Gardening?",
-              "imageUrl": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=1350&q=80",
-              "type": "llm-interactive",
-              "conversationHistory": [
-                { "role": "assistant", "content": "Ist das nicht nur Spielerei? Warum investieren wir Geld in Hühnerställe statt in mehr Parkplätze?" }
-              ]
-            }
+          "type": "single-select-correct",
+          "title": "Mission: Nachbarschaft",
+          "description": "Wir planen ein Sommerfest für eine Wohnanlage. Deine Idee für gutes Community-Building?",
+          "imageUrl": "https://image.pollinations.ai/prompt/community%20summer%20party%20outside%20happy%20diverse%20neighbors%20bbq%20cinematic%20lighting%20photorealistic%204k%20warm%20tones?width=1280&height=720&nologo=true&apiKey=sk_d5rrY8gMI0a1ZhLgJbshuNHX2nEaSp6w",
+          "content": {
+            "question": "Was kommt am besten an?",
+            "options": [
+              {
+                "text": "Ein offizieller Vortrag über die Hausordnung.",
+                "isCorrect": false,
+                "feedback": "Langweilig! Wir wollen, dass sich die Leute wohlfühlen."
+              },
+              {
+                "text": "Ein Fußball-Camp für Kids und Grillen für alle.",
+                "isCorrect": true,
+                "feedback": "Volltreffer! So schaffen wir echte Begegnungen und Zusammenhalt."
+              },
+              {
+                "text": "Wir verteilen nur Flyer in die Briefkästen.",
+                "isCorrect": false,
+                "feedback": "Zu unpersönlich. Wir wollen 'Live' dabei sein."
+              }
+            ]
+          },
+          "nextLevelIds": [
+            4
           ]
         },
         {
-          "id": 3,
-          "title": "Digitalisierung: App-Rollout",
-          "status": "locked",
-          "icon": "📱",
+          "id": 4,
           "row": 2,
-          "nextLevelIds": [],
-          "scenarios": [
+          "type": "bento-grid",
+          "title": "Deine Benefits",
+          "description": "Gönn dir Benefits, die wirklich zählen.",
+          "imageUrl": "https://image.pollinations.ai/prompt/flatlay%20composition%20lifestyle%20objects%20clock%20bicycle%20money%20suitcase%20organized%20cinematic%20lighting%20photorealistic%204k%20warm%20tones?width=1280&height=720&nologo=true&apiKey=sk_d5rrY8gMI0a1ZhLgJbshuNHX2nEaSp6w",
+          "facts": [
             {
-              "id": 1,
-              "scenario": "Wir ersetzen das 'schwarze Brett' durch digitale Screens. Ein älterer Mieter hat Angst, wichtige Infos zu verpassen. Wie hilfst du?",
-              "imageUrl": "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-or-text",
-              "allowTextInput": true,
-              "options": [
-                { "id": 1, "text": "Ich biete ihm eine kurze Einführung am Screen an.", "correct": true, "feedback": "Top. Wir nehmen jeden mit!" }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "path-culture",
-      "title": "BHG Inside",
-      "description": "Erlebe die Benefits und den Vibe im Team.",
-      "icon": "🥳",
-      "color": "#009640",
-      "tags": ["Lifestyle", "37h", "Benefits"],
-      "pathModeId": "linear",
-      "levels": [
-        {
-          "id": 1,
-          "title": "Dein Onboarding-Start",
-          "status": "unlocked",
-          "icon": "🚀",
-          "row": 0,
-          "nextLevelIds": [2],
-          "scenarios": [
+              "title": "37h Woche",
+              "value": "Work-Life",
+              "icon": "clock",
+              "description": "Mehr Freizeit für dich als anderswo!"
+            },
             {
-              "id": 1,
-              "scenario": "Tag 1: Du lernst in 2 Wochen alle Abteilungen kennen – vom Handwerker bis zur Geschäftsführung. Warum machen wir das?",
-              "imageUrl": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-correct",
-              "options": [
-                { "id": 1, "text": "Damit ich das große Ganze verstehe und jeden im Team kenne.", "correct": true, "feedback": "Richtig! Zusammenhalt ist unser Fundament." },
-                { "id": 2, "text": "Damit ich möglichst lange keine echte Arbeit machen muss.", "correct": false, "feedback": "Nette Idee, aber falsch. Es geht um Wertschätzung und Wissen!" }
-              ]
+              "title": "30+ Tage",
+              "value": "Urlaub",
+              "icon": "sun",
+              "description": "+ Heiligabend & Silvester for free."
+            },
+            {
+              "title": "Grimmscheck",
+              "value": "Extra Cash",
+              "icon": "wallet",
+              "description": "Monatlicher Sachbezug zum Shoppen in Hanau."
+            },
+            {
+              "title": "Bike Leasing",
+              "value": "Mobilität",
+              "icon": "bicycle",
+              "description": "Wir sind als fahrradfreundlich zertifiziert!"
             }
+          ],
+          "nextLevelIds": [
+            5,
+            6
           ]
         },
         {
-          "id": 2,
-          "title": "Der 37h-Freitag",
-          "status": "locked",
-          "icon": "🚲",
-          "row": 1,
-          "nextLevelIds": [3],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Es ist Freitag, 13:00 Uhr. Dank 37h-Woche hast du jetzt frei. Wie nutzt du die Fahrrad-Leasing-Flat der BHG?",
-              "imageUrl": "https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-no-correct",
-              "options": [
-                { "id": 1, "text": "Mit dem E-Bike ab in die Hanauer City.", "feedback": "Grimmscheck nicht vergessen!" },
-                { "id": 2, "text": "Radtour an den Main zum Abschalten.", "feedback": "Genau das meinen wir mit Work-Life-Balance." }
-              ]
-            }
+          "id": 5,
+          "row": 3,
+          "type": "info-card",
+          "title": "Karriereweg: Der Macher",
+          "description": "Nach der Ausbildung ist vor dem Aufstieg. Bilde dich weiter zum Immobilienfachwirt (IHK).",
+          "imageUrl": "https://image.pollinations.ai/prompt/proud%20young%20professional%20holding%20certificate%20in%20modern%20office%20smiling%20cinematic%20lighting%20photorealistic%204k%20warm%20tones?width=1280&height=720&nologo=true&apiKey=sk_d5rrY8gMI0a1ZhLgJbshuNHX2nEaSp6w",
+          "content": {
+            "text": "Mit dem Fachwirt in der Tasche übernimmst du Führungspositionen und leitest eigene Projekte."
+          },
+          "nextLevelIds": [
+            7
           ]
         },
         {
-          "id": 3,
-          "title": "Grimmscheck-Shopping",
-          "status": "locked",
-          "icon": "🎁",
-          "row": 2,
-          "nextLevelIds": [],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Du hast deinen monatlichen Grimmscheck erhalten. Was kaufst du dir heute?",
-              "imageUrl": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1350&q=80",
-              "type": "single-select-no-correct",
-              "options": [
-                { "id": 1, "text": "Einen neuen Hoodie im Laden um die Ecke.", "feedback": "Support your local Hanau!" },
-                { "id": 2, "text": "Ein schickes Dinner mit Freunden.", "feedback": "Lass es dir schmecken – verdient hast du es!" }
-              ]
-            }
+          "id": 6,
+          "row": 3,
+          "type": "info-card",
+          "title": "Karriereweg: Der Akademiker",
+          "description": "Du willst noch tiefer rein? Häng ein Studium dran!",
+          "imageUrl": "https://image.pollinations.ai/prompt/university%20students%20collaborating%20in%20library%20with%20laptops%20focused%20cinematic%20lighting%20photorealistic%204k%20warm%20tones?width=1280&height=720&nologo=true&apiKey=sk_d5rrY8gMI0a1ZhLgJbshuNHX2nEaSp6w",
+          "content": {
+            "text": "Real Estate Management oder BWL – dein Fundament aus der Ausbildung hilft dir im Studium extrem."
+          },
+          "nextLevelIds": [
+            7
           ]
+        },
+        {
+          "id": 7,
+          "row": 4,
+          "type": "cta",
+          "title": "Ready for Hanau?",
+          "description": "Wir suchen echte Charaktere, keine Notenblätter. Bewirb dich jetzt!",
+          "imageUrl": "https://image.pollinations.ai/prompt/friendly%20diverse%20team%20waving%20hello%20outdoor%20sunny%20company%20campus%20cinematic%20lighting%20photorealistic%204k%20warm%20tones?width=1280&height=720&nologo=true&apiKey=sk_d5rrY8gMI0a1ZhLgJbshuNHX2nEaSp6w",
+          "nextLevelIds": []
         }
       ]
     }
   ],
-
-  "questionnaire": {
-    "questions": [
-      {
-        "id": "motivation",
-        "question": "Was ist dir im Job am wichtigsten?",
-        "options": [
-          {
-            "id": "people",
-            "label": "Mit Menschen arbeiten und direkt helfen. 🤝",
-            "score": { "path-social": 3, "path-tech": 1, "path-culture": 1 }
-          },
-          {
-            "id": "tech",
-            "label": "Zukunft gestalten und Klima schützen. 🌱",
-            "score": { "path-social": 1, "path-tech": 3, "path-culture": 1 }
-          },
-          {
-            "id": "balance",
-            "label": "Ein cooles Team und Zeit für mich. ⏰",
-            "score": { "path-social": 1, "path-tech": 1, "path-culture": 3 }
-          }
-        ]
-      }
-    ],
-    "suggestionText": {
-      "headline": "Dein Hanau-Match:",
-      "startButtonText": "Tour starten",
-      "viewAllButtonText": "Andere Wege entdecken"
-    }
-  },
-
   "copy": {
-    "submit": "Jetzt Hanau-Gestalter werden 🌳",
-    "submitSuccess": "Schachmatt, Vorurteil! Wir melden uns bei dir für das nächste Level.",
-    "victoryHeadline": "Du hast das Hanau-Gen! 🧬",
-    "victorySubtext": "Egal ob Klima-Check oder Mieter-Support – du verstehst, was unsere Stadt braucht.",
-    "firstName": "Wie heißt du?",
-    "schoolType": "Dein aktueller Stand?",
-    "gymnasium": "Abi / Fachabi",
+    "checkChances": "Check deine Chancen",
+    "expressApply": "Express Bewerbung",
+    "jobMerken": "Job merken",
+    "submit": "Absenden",
+    "submitSuccess": "Erfolgreich gesendet!",
+    "victoryHeadline": "It's a Match!",
+    "victorySubtext": "Du passt super in unser Team. Lass uns quatschen!",
+    "nudgeHeadline": "Nicht sicher?",
+    "nudgeText": "Kein Stress, probier's einfach aus. Wir beißen nicht.",
+    "firstName": "Vorname",
+    "phoneType": "Handynummer",
+    "schoolType": "Schulform",
+    "android": "Android",
+    "iphone": "iPhone",
     "realschule": "Realschule",
+    "gymnasium": "Gymnasium",
     "andere": "Andere",
-    "expressApplyIntro": "Keine Lust auf endlose Anschreiben? Wir brauchen nur deine Basics."
+    "expressApplyIntro": "Hinterlass uns deine Infos, wir melden uns ASAP.",
+    "exploreOtherJobs": "Andere Jobs checken"
   }
 }
