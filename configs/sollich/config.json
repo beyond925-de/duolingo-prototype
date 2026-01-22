@@ -1,66 +1,61 @@
 {
   "company": {
-    "name": "Sollich",
-    "slug": "sollich",
-    "logoUrl": "🍫",
-    "logoImageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sollich.com%2Ffileadmin%2Fimages%2Fsollich-logo.png&f=1&nofb=1&ipt=8de60a20c164c16dceb58cf1273f841cdda463ddd61badc6ef65ec9b174d0335",
-    "signatureEmoji": "🍫",
-    "primaryColor": "#c8102e",
-    "secondaryColor": "#10b981",
-    "city": "Bad Salzuflen",
-    "website": "https://sollich.com",
-    "industryVibe": "Weltmarktführer für Schokoladen- und Süßwarenmaschinen. Über 100 Jahre Tradition, jetzt in der 3. Generation. High-Tech aus Bad Salzuflen für Kunden weltweit.",
+    "name": "Baugesellschaft Hanau",
+    "slug": "bau-hanau",
+    "logoUrl": "🏘️",
+    "logoImageUrl": "https://source.unsplash.com/featured/?logo",
+    "signatureEmoji": "🔑",
+    "primaryColor": "#e30613",
+    "secondaryColor": "#333333",
+    "city": "Hanau",
+    "website": "https://bau-hanau.de",
+    "industryVibe": "Wohnen ist Menschenrecht. Wir sind der soziale Herzschlag von Hanau – stabil, nahbar und gemeinwohlorientiert statt profitgetrieben.",
     "organizationFacts": [
       {
-        "title": "35h-Woche & Gleitzeit",
-        "value": "Vollzeit heißt bei uns 35 Stunden pro Woche mit flexibler Zeiteinteilung. Keine Überstunden für Azubis!",
+        "title": "37h-Woche",
+        "value": "Mehr Freizeit für dich: Wir arbeiten Vollzeit 37 Stunden statt 40.",
         "icon": "⏰"
       },
       {
-        "title": "Metall-Tarif + Extras",
-        "value": "Tarifvertrag Metall NRW plus Fahrtgeld zur Firma & Berufsschule, Sonderzahlungen und Urlaubsprämie.",
+        "title": "Tarif & Extras",
+        "value": "Bezahlung nach Immobilientarif, plus Weihnachtsgeld, Erfolgsbeteiligung & Grimmschecks.",
         "icon": "💰"
       },
       {
-        "title": "Weltmarktführer",
-        "value": "Wir bauen Maschinen für Schokoriegel, Pralinen & Kekse, die weltweit laufen. Deine Arbeit hat internationale Wirkung.",
-        "icon": "🌍"
+        "title": "Großer Impact",
+        "value": "Über 4.250 Wohnungen und 11.500 Mieter:innen verlassen sich auf uns.",
+        "icon": "🏙️"
       },
       {
-        "title": "Über 100 Jahre Tradition",
-        "value": "Familienunternehmen in 3. Generation, die 4. arbeitet schon mit. Langfristige Perspektive statt Startup-Unsicherheit.",
-        "icon": "🏛️"
+        "title": "Stabile Basis",
+        "value": "Seit 1942 am Markt. Wir gehören der Stadt Hanau – krisensicher und lokal verwurzelt.",
+        "icon": "⚓"
       },
       {
-        "title": "IHK-Auszeichnungen",
-        "value": "Unsere Azubis gewinnen regelmäßig IHK-Preise. Wir unterstützen dich bis zur Prüfung und darüber hinaus.",
-        "icon": "🏆"
+        "title": "Soziales Herz",
+        "value": "Kino-Events, Hühner im Hof oder Urban Gardening – wir machen mehr als nur Vermietung.",
+        "icon": "❤️"
       },
       {
-        "title": "Sport & Gesundheit",
-        "value": "Firmen-Fußballteam, vergünstigtes Fitnessstudio, kostenlose Getränke & Mittagssubvention. Auch private Reisen sind versichert.",
-        "icon": "⚽"
+        "title": "Mobilität",
+        "value": "Fahrradfreundlicher Arbeitgeber (Silber-Zertifikat) & top Anbindung in Hanau.",
+        "icon": "🚲"
       }
     ]
   },
   "landing": {
-    "headline": "Deine Zukunft schmeckt süß. 🍫",
-    "subline": "Trainiere beim Weltmarktführer für Schokoladenmaschinen. 35h-Woche, keine Überstunden, Tarif plus Extras. Über 100 Jahre Tradition, jetzt in der 3. Generation.",
-    "startButtonText": "1. Tag bestreiten 🚀"
+    "headline": "Dein Impact für Hanau. 🏘️",
+    "subline": "Werde Immobilien-Profi (w/m/d) und manage mehr als nur vier Wände. 37h-Woche, Tarifgehalt und echte Verantwortung für deine Stadt.",
+    "startButtonText": "Challenge starten 🚀"
   },
   "campus": {
-    "headline": "Dein Talent. Dein Job.",
-    "subline": "Bist du eher der Macher an der Maschine oder der Planer am PC?",
+    "headline": "Dein Kiez. Dein Job.",
+    "subline": "Bist du der Stratege im Büro oder der Kümmerer vor Ort?",
     "categories": [
       {
-        "id": "technik",
-        "title": "Für Macher (Handwerk)",
-        "jobId": "mechaniker"
-      },
-      {
-        "id": "planung",
-        "title": "Für Planer (Digital)",
-        "jobId": "zeichner"
+        "id": "verwaltung",
+        "title": "Management & Orga",
+        "jobId": "immobilienkaufmann"
       }
     ]
   },
@@ -68,150 +63,147 @@
     "questions": [
       {
         "id": "environment",
-        "question": "Wo fühlst du dich wohler?",
+        "question": "Wo bist du am liebsten?",
         "options": [
           {
-            "id": "workshop",
-            "label": "In der Werkstatt",
-            "icon": "🛠️",
-            "imageUrl": "https://cdn.pixabay.com/photo/2021/05/11/12/12/welding-6245746_1280.jpg",
+            "id": "onsite",
+            "label": "Draußen im Quartier",
+            "icon": "🌳",
+            "imageUrl": "https://source.unsplash.com/featured/?neighborhood",
             "score": {
-              "industriemechaniker": 2,
-              "technischer-produktdesigner": 0
+              "immobilienkaufmann": 2
             }
           },
           {
             "id": "office",
-            "label": "Am Computer",
-            "icon": "🖥️",
-            "imageUrl": "https://cdn.pixabay.com/photo/2018/09/18/19/55/woman-3687080_1280.jpg",
+            "label": "Im modernen Büro",
+            "icon": "💻",
+            "imageUrl": "https://source.unsplash.com/featured/?office",
             "score": {
-              "industriemechaniker": 0,
-              "technischer-produktdesigner": 2
+              "immobilienkaufmann": 2
             }
           }
         ]
       },
       {
         "id": "workstyle",
-        "question": "Wie arbeitest du lieber?",
+        "question": "Ein Mieter ruft wütend an. Du...",
         "options": [
           {
-            "id": "hands-on",
-            "label": "Hands-on, praktisch",
-            "icon": "✋",
-            "imageUrl": "https://cdn.pixabay.com/photo/2020/11/12/16/58/worker-5736096_1280.jpg",
+            "id": "empathy",
+            "label": "Hörst zu und beruhigst ihn",
+            "icon": "👂",
+            "imageUrl": "https://source.unsplash.com/featured/?talking",
             "score": {
-              "industriemechaniker": 2,
-              "technischer-produktdesigner": 1
+              "immobilienkaufmann": 2
             }
           },
           {
-            "id": "planning",
-            "label": "Digital, planen, sauber und ordentlich",
-            "icon": "📐",
-            "imageUrl": "https://cdn.pixabay.com/photo/2016/11/24/20/30/floor-plan-1857175_1280.jpg",
+            "id": "action",
+            "label": "Schickst sofort Hilfe raus",
+            "icon": "⚡",
+            "imageUrl": "https://source.unsplash.com/featured/?running",
             "score": {
-              "industriemechaniker": 1,
-              "technischer-produktdesigner": 2
+              "immobilienkaufmann": 1
             }
           }
         ]
       },
       {
         "id": "teamwork",
-        "question": "Team oder alleine?",
+        "question": "Wie arbeitest du am liebsten?",
         "options": [
           {
             "id": "team",
-            "label": "Mit vielen Menschen, im (lauten) Team",
-            "icon": "👥",
-            "imageUrl": "https://images.pexels.com/photos/3184428/pexels-photo-3184428.jpeg",
+            "label": "Im Team vernetzt",
+            "icon": "🤝",
+            "imageUrl": "https://source.unsplash.com/featured/?meeting",
             "score": {
-              "industriemechaniker": 1,
-              "technischer-produktdesigner": 1
+              "immobilienkaufmann": 2
             }
           },
           {
             "id": "solo",
-            "label": "In Ruhe, fokussiert",
-            "icon": "🎯",
-            "imageUrl": "https://cdn.pixabay.com/photo/2021/01/28/03/13/person-5956897_1280.jpg",
+            "label": "Eigenverantwortlich",
+            "icon": "🦁",
+            "imageUrl": "https://source.unsplash.com/featured/?man",
             "score": {
-              "industriemechaniker": 1,
-              "technischer-produktdesigner": 1
+              "immobilienkaufmann": 1
             }
           }
         ]
       }
     ],
     "suggestionText": {
-      "headline": "Wir empfehlen dir:",
-      "startButtonText": "Ersten Beruf erleben",
-      "viewAllButtonText": "Alle Berufe ansehen",
-      "skipButtonText": "Überspringen um alle Berufe zu sehen"
+      "headline": "Dein Match:",
+      "startButtonText": "Ausbildung checken",
+      "viewAllButtonText": "Alles ansehen",
+      "skipButtonText": "Überspringen"
     }
   },
   "jobs": [
     {
-      "id": "technischer-produktdesigner",
-      "title": "Technische:r Produktdesigner:in",
-      "description": "Designe die Schoko-Fabriken der Zukunft am PC! 3,5 Jahre (verkürzbar auf 3), CAD-Expertise, räumliches Denken. Weltmarktführer-Technologie. 🖥️🍫",
-      "icon": "📐",
-      "color": "#8b5cf6",
+      "id": "immobilienkaufmann",
+      "title": "Immobilienkaufmann/-frau (w/m/d)",
+      "description": "Verwalte 4.250+ Wohnungen, plane Sanierungen und organisiere Mieter-Events. 3 Jahre, Büro & Außendienst Mix. Sozial, sicher, Hanau. 🔑🏙️",
+      "icon": "🏢",
+      "color": "#e30613",
       "tags": [
-        "🖥️ CAD & 3D",
-        "🧠 Räumliches Denken",
-        "🍫 Weltmarktführer",
-        "📐 Präzision"
+        "🏙️ Hanau gestalten",
+        "❤️ Soziales Miteinander",
+        "⏰ 37h Woche",
+        "💰 Tarifvergütung"
       ],
       "pathModeId": "branching",
       "levels": [
         {
           "id": 1,
-          "title": "Startblock",
+          "title": "Vibe Check",
           "status": "unlocked",
           "icon": "👀",
           "row": 0,
-          "nextLevelIds": [2, 3],
+          "nextLevelIds": [
+            2,
+            3
+          ],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Hi! 👋 Als Technische:r Produktdesigner:in bist du das Bindeglied zwischen Ingenieurs-Idee und fertiger Maschine. Ein Entwickler gibt dir eine Skizze für einen neuen Keks-Greifer, der in unsere Pralinen-Anlage soll. Was ist dein erster Schritt?",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGsI4iyqZSOa5oGfeQw0igHmDClury4RAtNT1b",
+              "scenario": "Hi! 👋 Immobilien sind bei uns mehr als Beton. Es geht um Zuhause. Stell dir vor, du hast einen Termin zur Wohnungsübergabe mit einer jungen Familie. Was nimmst du als Erstes mit?",
+              "imageUrl": "https://source.unsplash.com/featured/?keys",
               "type": "single-select-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Ich baue das Teil sofort in der Werkstatt zusammen 🔨",
+                  "text": "Nur den Mietvertrag 📄",
                   "correct": false,
-                  "feedback": "Nicht ganz! Du arbeitest digital. Erst muss das Modell am Computer stehen. 💻"
+                  "feedback": "Wichtig, aber nicht alles! Ohne Schlüssel kommen sie nicht rein. 😉"
                 },
                 {
                   "id": 2,
-                  "text": "Ich erstelle ein 3D-Modell am CAD-Computer 🖥️",
+                  "text": "Schlüssel, Protokoll & ein Lächeln 🔑",
                   "correct": true,
-                  "feedback": "Volltreffer! 🎯 Du konstruierst das Bauteil virtuell, bevor es gebaut wird."
+                  "feedback": "Perfekt! 🎯 Das Übergabeprotokoll ist juristisch wichtig, die Freundlichkeit für den Vibe."
                 }
               ]
             },
             {
               "id": 2,
-              "scenario": "Bei SOLLICH arbeitest du an High-Tech-Maschinen für Kunden weltweit. Damit alles passt, brauchst du ein super räumliches Vorstellungsvermögen – genau das wird auch in der Bewerbung geprüft. Stell dir einen Würfel vor. Wir schneiden eine Ecke gerade ab. Wie sieht die Schnittfläche aus?",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGrQ3UmIoLx1pZiT3K4VDNbFJalWARdm6foQGr",
+              "scenario": "Als Immobilienprofi musst du auch rechnen können. Eine Wohnung hat 60m² und kostet 10,00 € pro m² kalt. Wie hoch ist die Kaltmiete?",
+              "imageUrl": "https://source.unsplash.com/featured/?calculator",
               "type": "single-select-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Quadratisch ▪️",
-                  "correct": false,
-                  "feedback": "Knapp daneben! Denk an die drei Seiten, die an der Ecke zusammentreffen."
+                  "text": "600,00 € 💶",
+                  "correct": true,
+                  "feedback": "Korrekt! 🧠 Mathe ist wichtig für Mietberechnungen und Betriebskosten."
                 },
                 {
                   "id": 2,
-                  "text": "Dreieckig 🔺",
-                  "correct": true,
-                  "feedback": "Stark! 🧠 Genau diesen 'Röntgenblick' brauchst du, wenn du komplexe Anlagen planst."
+                  "text": "660,00 € 💶",
+                  "correct": false,
+                  "feedback": "Knapp daneben. 60 x 10 = 600. Aber keine Sorge, das lernst du bei uns!"
                 }
               ]
             }
@@ -219,27 +211,29 @@
         },
         {
           "id": 2,
-          "title": "Mission: Konstruktion",
+          "title": "Mission: Konflikt",
           "status": "locked",
-          "icon": "🖱️",
+          "icon": "🔥",
           "row": 1,
-          "nextLevelIds": [4],
+          "nextLevelIds": [
+            4
+          ],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Du arbeitest an einer neuen Pralinen-Anlage für einen Kunden in den USA. 🍬 Plötzlich siehst du im 3D-CAD-Modell ein Problem: Der Motor für das Förderband ist zu groß und ragt in den Tunnel, wo die Pralinen langfahren. Das nennt man 'Kollision' – ein No-Go bei SOLLICH. Wir liefern maßgeschneiderte Lösungen, keine Fehler. Du musst das lösen, bevor die Teile gefertigt werden! Sprich mit dem Projektleiter.",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGm3Oq6HMFodsMg0pf6abPAN8Q57e1OcDqvuwL",
+              "scenario": "Es ist Winter. ❄️ Ein Mieter aus der Weststadt ruft wütend an: 'Meine Heizung geht nicht und ich friere! Seit zwei Stunden erreiche ich niemanden!' Er ist laut und ungehalten. Du bist am Telefon. Wie reagierst du? Deeskalation ist deine Superkraft.",
+              "imageUrl": "https://source.unsplash.com/featured/?winter",
               "type": "llm-interactive",
               "options": [],
               "initialQuickReplies": [
-                "Wir könnten den Motor kleiner wählen.",
-                "Vielleicht den Tunnel anpassen oder verbreitern.",
-                "Lass uns prüfen, ob wir die Einbaulage ändern können."
+                "Ich sage ihm, er soll sich beruhigen, sonst lege ich auf.",
+                "Ich entschuldige mich und nehme sofort die Daten auf.",
+                "Ich erkläre ihm, dass die Technik nicht meine Abteilung ist."
               ],
               "conversationHistory": [
                 {
                   "role": "assistant",
-                  "content": "Mist, gut, dass du das gesehen hast! Wenn wir das so bauen, gibt es Pralinen-Matsch. 🍫 Was schlägst du vor? Sollen wir einen kleineren, schwächeren Motor suchen oder den Tunnel breiter konstruieren?"
+                  "content": "Hier spricht Herr Müller. Es ist eiskalt hier! Was machen Sie jetzt? Ich zahle schließlich Miete!"
                 }
               ]
             }
@@ -247,27 +241,29 @@
         },
         {
           "id": 3,
-          "title": "Mission: Werkstatt-Call",
+          "title": "Mission: Event",
           "status": "locked",
-          "icon": "📞",
+          "icon": "🍿",
           "row": 1,
-          "nextLevelIds": [4],
+          "nextLevelIds": [
+            4
+          ],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Alarm! 🚨 Dein Telefon klingelt. Dominik, ein Industriemechaniker aus der Montagehalle, ist dran. Er will gerade die Welle für eine Keks-Maschine fertigen, aber auf deiner Zeichnung fehlt ein wichtiges Maß. Die Montage steht still – bei SOLLICH zählt jede Minute. Du bist der zentrale Informationshub. Du musst reagieren – schnell und präzise.",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGl4XVzAEhsMuDVbkoejf1IAxSiQ96ZycP2nBL",
+              "scenario": "Wir organisieren das jährliche Kinder-Kino-Event für unsere Mieter-Kids. 🎬 Du bist für die Snacks zuständig. 30 Minuten vor Start sagt der Popcorn-Lieferant ab! 😱 Panik? Nicht bei uns. Du musst das retten. Was schlägst du vor?",
+              "imageUrl": "https://source.unsplash.com/featured/?popcorn",
               "type": "llm-interactive",
               "options": [],
               "initialQuickReplies": [
-                "Ich messe das fehlende Maß im 3D-Modell nach.",
-                "Ich prüfe die Zeichnung und rufe Dominik sofort zurück.",
-                "Ich frage nach der Artikelnummer und hole alle Daten aus dem System."
+                "Wir sagen das Event ab.",
+                "Ich fahre schnell zum Supermarkt und kaufe Chips & Flips.",
+                "Wir leihen uns eine Maschine vom Nachbarverein."
               ],
               "conversationHistory": [
                 {
                   "role": "assistant",
-                  "content": "Hier ist Alex aus der Fertigung. Sag mal, ich steh hier an der Drehbank. Auf Zeichnung 204 fehlt der Durchmesser für den Lagerzapfen. Soll ich das schätzen oder kannst du das im 3D-Modell nachmessen? Wir haben Zeitdruck!"
+                  "content": "Oh nein! Die Kids kommen gleich und wir haben kein Popcorn. Was machen wir jetzt? Du hast das Budget."
                 }
               ]
             }
@@ -275,31 +271,25 @@
         },
         {
           "id": 4,
-          "title": "Der SOLLICH-Check",
+          "title": "Der Hanau-Deal",
           "status": "locked",
           "icon": "✅",
           "row": 2,
-          "nextLevelIds": [5, 6],
+          "nextLevelIds": [
+            5,
+            6
+          ],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Puh, Problem gelöst! 😅 Als Technische:r Produktdesigner:in arbeitest du viel mit dem Kopf – die ersten 1,5 Jahre lernst du praktisches Zeichnen und Modellieren, später wird es methodischer mit Projektmanagement. Damit du fit bleibst, schauen wir, was SOLLICH dir bietet:",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqoCmdz97Aj1hznsJlaW5tFZHNPDuCodmTU2",
+              "scenario": "Puh, gut gelöst! 😅 Als Azubi bei der Baugesellschaft bist du mittendrin statt nur dabei. Aber Arbeit ist nicht alles. Check mal, was wir dir bieten:",
+              "imageUrl": "https://source.unsplash.com/featured/?happiness",
               "type": "bento-grid",
               "options": [],
               "facts": [
                 {
-                  "title": "Arbeitsplatz",
-                  "value": "High-End CAD-Rechner & moderne Büros.",
-                  "icon": "🖥️",
-                  "layout": {
-                    "colSpan": 2,
-                    "rowSpan": 1
-                  }
-                },
-                {
                   "title": "Arbeitszeit",
-                  "value": "35h-Woche & Gleitzeit.",
+                  "value": "37h-Woche & Gleitzeit.",
                   "icon": "⏰",
                   "layout": {
                     "colSpan": 1,
@@ -307,11 +297,29 @@
                   }
                 },
                 {
-                  "title": "No Overtime",
-                  "value": "Keine Überstunden für Azubis!",
-                  "icon": "🧘",
+                  "title": "Urlaub",
+                  "value": "30 Tage + Heiligabend/Silvester frei.",
+                  "icon": "🏖️",
                   "layout": {
                     "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Cash & Goodies",
+                  "value": "Tarifgehalt, Weihnachtsgeld & Grimmschecks.",
+                  "icon": "💳",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Team",
+                  "value": "80 Kollegen, flache Hierarchien, 'Du'-Kultur.",
+                  "icon": "🤜🤛",
+                  "layout": {
+                    "colSpan": 2,
                     "rowSpan": 1
                   }
                 }
@@ -319,19 +327,19 @@
             },
             {
               "id": 2,
-              "scenario": "Neben der Technik ist uns das Miteinander wichtig. Bei SOLLICH arbeiten über 450 Mitarbeiter:innen täglich als ein großes Team. Wir vertrauen, helfen und schätzen uns gegenseitig. Was denkst du, wie läuft es hier?",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqoCmdz97Aj1hznsJlaW5tFZHNPDuCodmTU2",
+              "scenario": "Klingt fair? Was ist dir persönlich am wichtigsten?",
+              "imageUrl": "https://source.unsplash.com/featured/?choice",
               "type": "single-select-no-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Jeder kämpft für sich allein 🐺",
-                  "feedback": "Zum Glück nicht! Wir arbeiten als ein großes Team zusammen."
+                  "text": "Sicherheit & Gehalt 💰",
+                  "feedback": "Verstehen wir. Als kommunales Unternehmen sind wir krisensicher."
                 },
                 {
                   "id": 2,
-                  "text": "Familiär und unterstützend 🤝",
-                  "feedback": "Genau so ist es. Wir sind per Du und helfen uns gegenseitig."
+                  "text": "Sinnvolle Arbeit & Soziales ❤️",
+                  "feedback": "Dann passt du perfekt zu uns! Wir schaffen Wohnraum für alle."
                 }
               ]
             }
@@ -339,27 +347,29 @@
         },
         {
           "id": 5,
-          "title": "Weg: Weiterbildung",
+          "title": "Weg: Spezialist",
           "status": "locked",
           "icon": "📈",
           "row": 3,
-          "nextLevelIds": [7],
+          "nextLevelIds": [
+            7
+          ],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Nach den 3,5 Jahren Ausbildung (oder 3, wenn du gut bist und verkürzt!) stehen dir alle Türen offen. SOLLICH beschreibt klare Entwicklungswege für Produktdesigner:innen. Welcher dieser Titel klingt spannender für dich?",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGfkCcPxmOlGwh2tk47Nmb0FcsyoQ9DzXpJLdu",
+              "scenario": "Nach der Ausbildung (3 Jahre) stehen dir viele Türen offen. Du kannst dich zum Immobilienfachwirt (IHK) weiterbilden und Experte für bestimmte Quartiere oder Technik werden. Welcher Bereich klingt spannender?",
+              "imageUrl": "https://source.unsplash.com/featured/?stairs",
               "type": "single-select-no-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Staatlich geprüfte:r Techniker:in 🎓",
-                  "feedback": "Sehr beliebt! Damit übernimmst du komplexere Projekte und mehr Verantwortung bei SOLLICH."
+                  "text": "Sozialmanagement & Mieterbetreuung 🗣️",
+                  "feedback": "Sehr wichtig! Du bist das Bindeglied zwischen Mietern und Technik."
                 },
                 {
                   "id": 2,
-                  "text": "Kooperatives Studium 📚",
-                  "feedback": "Perfekt! Erst Ausbildung, dann Bachelor (z.B. Maschinenbau) parallel zur Arbeit. Theorie & Praxis kombiniert."
+                  "text": "Technik & Sanierung 🏗️",
+                  "feedback": "Spannend! Da geht es um energetische Sanierung und Modernisierung."
                 }
               ]
             }
@@ -371,23 +381,25 @@
           "status": "locked",
           "icon": "🎓",
           "row": 3,
-          "nextLevelIds": [7],
+          "nextLevelIds": [
+            7
+          ],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Du willst noch tiefer in die Theorie? Bei SOLLICH kannst du das 'Kooperative Studium' machen. Erst die Ausbildung zum Produktdesigner, dann parallel ein Bachelor-Studium (Maschinenbau, Elektrotechnik oder Verfahrenstechnik) in Kooperation mit nahegelegenen Hochschulen. Theorie und Praxis kombiniert, und du verdienst schon Geld. 📚",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxG8fM8EUKpVATEMkn9gidZwvPHcrDbsyI0F1XB",
+              "scenario": "Du willst noch mehr Theorie? Viele nutzen die Ausbildung als Basis für ein Studium im Bereich Immobilienmanagement oder Bauingenieurwesen. Wir unterstützen dich bei deiner Entwicklung!",
+              "imageUrl": "https://source.unsplash.com/featured/?university",
               "type": "single-select-no-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Das klingt hart, aber lohnt sich! 💪",
-                  "feedback": "Stimmt! Es ist fordernd, aber du hast Theorie & Praxis und verdienst schon Geld."
+                  "text": "Erst Ausbildung, dann weitersehen. 👀",
+                  "feedback": "Guter Plan. Praxiserfahrung ist im Studium Gold wert."
                 },
                 {
                   "id": 2,
-                  "text": "Lieber erst Ausbildung, dann mal sehen. 👀",
-                  "feedback": "Auch ein super Weg. Viele entscheiden sich erst später für ein Studium."
+                  "text": "Ich will Karriere machen! 🚀",
+                  "feedback": "Bei uns bauen wir nicht nur Wohnungen, sondern auch Karrieren mit Zukunft."
                 }
               ]
             }
@@ -402,303 +414,20 @@
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Bist du bereit, die Schoko-Welt digital zu gestalten? Bei SOLLICH lernst du, wie aus Ingenieurs-Ideen fertige High-Tech-Maschinen werden, die weltweit laufen. Uwe Heiland, unser Ausbildungsleiter für Produktdesigner:innen (Tel. +49 5222 950213), freut sich auf dich! 😎",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGolmmMys8YWEkrBcDVnqv7lxtwb9CGjsIUPNK",
+              "scenario": "Bist du bereit, Hanau mitzugestalten? Ausbildungsstart ist immer am 1. August. Wir suchen echte Charaktere, keine reinen Noten-Optimierer. Unser Azubi-Test zählt mehr als das Zeugnis. Lust bekommen?",
+              "imageUrl": "https://source.unsplash.com/featured/?celebration",
               "type": "single-select-or-text",
               "allowTextInput": true,
               "options": [
                 {
                   "id": 1,
-                  "text": "Ich bin dabei! Bewerbung geht raus. 📧",
-                  "feedback": "Klasse! Schick deine Bewerbung (Anschreiben, Lebenslauf, letzte 2 Zeugnisse) als PDF an bewerbung@sollich.com. Wichtig: Gute Rechtschreibung und saubere Form! Bewerbungsschluss ist meist 30.09. für Start 01.08. des nächsten Jahres."
+                  "text": "Ja, ich bewerbe mich! 📝",
+                  "feedback": "Klasse! Bewirb dich zwischen November und Februar. Einfach online oder per Mail an karriere@bau-hanau.de. Mareike Förtsch (Personal) freut sich auf dich!"
                 },
                 {
                   "id": 2,
-                  "text": "Ich möchte erst ein Praktikum machen. 🔍",
-                  "feedback": "Sehr gute Idee! SOLLICH lädt Schüler:innen explizit zu Praktika ein. So lernst du Technik, Team und Aufgaben live kennen. Beste Basis für die Entscheidung!"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "industriemechaniker",
-      "title": "Industriemechaniker:in",
-      "description": "Schrauben, Tüfteln, High-Tech – Deine Mission! 3,5 Jahre, Schritt für Schritt an große Maschinen. Weltmarktführer-Technologie für Schokolade weltweit. 🔧🍫",
-      "icon": "⚙️",
-      "color": "#3b82f6",
-      "tags": [
-        "🍫 Schoko-Tech",
-        "🔧 Hands-on",
-        "🌍 Weltmarktführer",
-        "⚙️ Präzision"
-      ],
-      "pathModeId": "branching",
-      "levels": [
-        {
-          "id": 1,
-          "title": "Startblock",
-          "status": "unlocked",
-          "icon": "🏁",
-          "row": 0,
-          "nextLevelIds": [2, 3],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Willkommen im Team! Wir bauen die Maschinen, die weltweit Schokoriegel, Pralinen und Kekse produzieren. SOLLICH ist Weltmarktführer – deine Arbeit hat internationale Wirkung. 🌍 Hast du schon mal an etwas herumgeschraubt?",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGl4XVzAEhsMuDVbkoejf1IAxSiQ96ZycP2nBL",
-              "type": "single-select-no-correct",
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Na klar! Am Fahrrad, Moped oder PC. 🚲",
-                  "feedback": "Perfekt! Genau dieses technische Verständnis brauchst du hier."
-                },
-                {
-                  "id": 2,
-                  "text": "Weniger, aber ich will lernen, wie Technik funktioniert. 🧐",
-                  "feedback": "Gute Einstellung! Wir bringen dir alles von der Pike auf bei."
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "scenario": "Bevor es in die Halle geht: Sicherheit ist Nr. 1. Bei SOLLICH arbeiten wir mit großen, komplexen Maschinen – da zählt jeder Handgriff. Du siehst eine ölverschmierte Stelle am Boden neben einer Fräsmaschine. Was machst du? (Wähle alle sinnvollen Optionen)",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGqQestfJmJFi6t8Hsn0RVKzcG9xNIuw2rOjXC",
-              "type": "multiple-select",
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Sofort sauber machen oder abstreuen 🧹",
-                  "correct": true,
-                  "feedback": "Richtig. Rutschgefahr ist in der Werkstatt extrem gefährlich."
-                },
-                {
-                  "id": 2,
-                  "text": "Dem Kollegen Bescheid sagen, damit keiner ausrutscht 🗣️",
-                  "correct": true,
-                  "feedback": "Kommunikation ist alles! Bei SOLLICH arbeiten über 450 Leute als ein großes Team. Wir vertrauen, helfen und schätzen uns gegenseitig."
-                },
-                {
-                  "id": 3,
-                  "text": "Drübersteigen, ist ja nicht mein Öl 🤷",
-                  "correct": false,
-                  "feedback": "No way! Bei SOLLICH achten wir aufeinander. Jeder übernimmt Verantwortung – das ist Teil unserer Kultur seit über 100 Jahren."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "title": "Mission: Montage",
-          "status": "locked",
-          "icon": "🏗️",
-          "row": 1,
-          "nextLevelIds": [4],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Du bist in der Montage. 🏗️ Wir bauen eine riesige 'Conbar'-Anlage für einen Kunden in den USA. Bei SOLLICH fertigen wir keine Serienproduktion – jede Maschine ist maßgeschneidert. Du sollst eine Seitenwand montieren, aber die Bohrlöcher sitzen 2mm zu weit links. Das Blech passt nicht. Der Meister ist gerade im Meeting. Du musst das lösen. Beschreibe mir, wie du vorgehst oder was du prüfst! 🛠️",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGm3Oq6HMFodsMg0pf6abPAN8Q57e1OcDqvuwL",
-              "type": "llm-interactive",
-              "options": [],
-              "initialQuickReplies": [
-                "Ich messe zuerst alle relevanten Abstände nach.",
-                "Ich vergleiche Zeichnung, Bauteil und Bohrbild genau.",
-                "Ich spreche mit dem Projektleiter, bevor wir neue Löcher bohren."
-              ],
-              "conversationHistory": [
-                {
-                  "role": "assistant",
-                  "content": "Mist, das Blech klemmt. Einfach neue Löcher bohren könnte das Bauteil ruinieren. Hast du eine Idee, was wir zuerst messen oder prüfen sollten?"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "title": "Mission: Wartung",
-          "status": "locked",
-          "icon": "🩺",
-          "row": 1,
-          "nextLevelIds": [4],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Du begleitest einen Techniker zur Wartung. Eine Überziehmaschine macht seltsame 'Klacker'-Geräusche im Antrieb. 🔊 Es klingt metallisch und rhythmisch. Wenn die Anlage ausfällt, steht die Schoko-Produktion beim Kunden still – bei SOLLICH zählt Qualität und Zuverlässigkeit. Du lernst Schritt für Schritt an großen Maschinen. Du darfst den Fehler suchen. Was schaust du dir an? 🕵️‍♂️",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGI58z2JNe8YP9rULlHW6twAGpNyO5KuodC1R0",
-              "type": "llm-interactive",
-              "options": [],
-              "initialQuickReplies": [
-                "Ich prüfe zuerst Riemen und Spannrolle.",
-                "Ich schaue mir Lager und Schmierung genauer an.",
-                "Ich höre mir das Geräusch im Leerlauf und unter Last an."
-              ],
-              "conversationHistory": [
-                {
-                  "role": "assistant",
-                  "content": "Okay, hör mal genau hin. Das Klackern kommt aus der Nähe des Hauptmotors. Sollen wir den Riemen prüfen oder eher das Lager? Was meinst du?"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "title": "Der SOLLICH-Deal",
-          "status": "locked",
-          "icon": "🤝",
-          "row": 2,
-          "nextLevelIds": [5, 6],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Gute Arbeit vorhin! 💪 Bei SOLLICH lernst du Schritt für Schritt: erst verschiedene Materialien kennen, dann eigene Teile fertigen und montieren, später Maschinen programmieren. Qualitätssicherung und Messmethoden sind zentral. Nach der Arbeit ist vor der Arbeit. Wie sieht dein Feierabend aus? Hier sind die Hard Facts:",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGJ18MJJmlpvPZCiHSaRuT75GFr4y1bM2gnDLX",
-              "type": "bento-grid",
-              "options": [],
-              "facts": [
-                {
-                  "title": "35h-Woche",
-                  "value": "Vollzeit = 35 Stunden mit Gleitzeit. Keine Überstunden für Azubis – garantiert!",
-                  "icon": "⏰",
-                  "layout": {
-                    "colSpan": 1,
-                    "rowSpan": 1
-                  }
-                },
-                {
-                  "title": "Tarif + Extras",
-                  "value": "Metall-Tarif NRW plus Fahrtgeld zur Firma & Berufsschule, Sonderzahlungen.",
-                  "icon": "💰",
-                  "layout": {
-                    "colSpan": 1,
-                    "rowSpan": 1
-                  }
-                },
-                {
-                  "title": "Arbeitsplatz",
-                  "value": "Moderne, ergonomische Arbeitsplätze. Gut ausgestattete Pausen- und Aufenthaltsräume. Kostenlose Arbeitskleidung inkl. Reinigung.",
-                  "icon": "🛠️",
-                  "layout": {
-                    "colSpan": 2,
-                    "rowSpan": 1
-                  }
-                },
-                {
-                  "title": "Schulvoraussetzung",
-                  "value": "Fachoberschulreife. Dauer: 3,5 Jahre. IHK-Abschluss.",
-                  "icon": "📚",
-                  "layout": {
-                    "colSpan": 2,
-                    "rowSpan": 1
-                  }
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "scenario": "Klingt fair, oder? Was wäre dir bei einem Arbeitgeber am wichtigsten?",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGpqoCmdz97Aj1hznsJlaW5tFZHNPDuCodmTU2",
-              "type": "single-select-no-correct",
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Dass ich pünktlich rauskomme und Freizeit habe 🕒",
-                  "feedback": "Das klappt hier definitiv. 35h-Woche regelt!"
-                },
-                {
-                  "id": 2,
-                  "text": "Dass das Geld stimmt 💰",
-                  "feedback": "Mit dem Metall-Tarif NRW bist du da sehr gut aufgestellt."
-                },
-                {
-                  "id": 3,
-                  "text": "Ein cooles Team, das zusammenhält 🤜🤛",
-                  "feedback": "Wir sind über 450 Leute, aber arbeiten wie eine große Familie. Bei SOLLICH arbeiten wir täglich als ein großes Team. Jeder übernimmt Verantwortung. Wir vertrauen, helfen und schätzen uns gegenseitig."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 5,
-          "title": "Weg: Praktiker",
-          "status": "locked",
-          "icon": "🎓",
-          "row": 3,
-          "nextLevelIds": [7],
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Du willst nach der Ausbildung richtig anpacken und aufsteigen? 🚀 Bei SOLLICH ist nach dem Gesellenbrief nicht Schluss. Wir beschreiben klare Entwicklungswege für Industriemechaniker:innen. Welcher Titel klingt für dich mächtiger?",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGfkCcPxmOlGwh2tk47Nmb0FcsyoQ9DzXpJLdu",
-              "type": "single-select-no-correct",
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Industriemeister:in – Der Chef in der Halle 🏭",
-                  "feedback": "Klassischer Weg! Du übernimmst Führung und Verantwortung bei SOLLICH."
-                },
-                {
-                  "id": 2,
-                  "text": "Techniker:in – Der Problemlöser mit Tiefgang 🧠",
-                  "feedback": "Sehr gut. Damit tauchst du noch tiefer in die Technik ein und übernimmst komplexere Aufgaben."
-                },
-                {
-                  "id": 3,
-                  "text": "Kooperatives Studium 📚",
-                  "feedback": "Perfekt! Erst Ausbildung, dann Bachelor (Maschinenbau) parallel zur Arbeit. Theorie & Praxis kombiniert."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 6,
-          "title": "Weg: Student",
-          "status": "locked",
-          "icon": "📚",
-          "row": 3,
-          "nextLevelIds": [7],
-          "scenarios": [
-            {
-              "id": 1,
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxG8fM8EUKpVATEMkn9gidZwvPHcrDbsyI0F1XB",
-              "type": "text-field",
-              "allowTextInput": true,
-              "options": [],
-              "scenario": "Was reizt dich an einem Studium in Kombination mit Arbeit? (Tipp einfach kurz deine Gedanken ein)"
-            }
-          ]
-        },
-        {
-          "id": 7,
-          "title": "Dein Start",
-          "status": "locked",
-          "icon": "🚀",
-          "row": 4,
-          "scenarios": [
-            {
-              "id": 1,
-              "scenario": "Ob Meister, Techniker oder kooperatives Studium – der erste Schritt ist die Ausbildung zum Industriemechaniker:in bei SOLLICH. Wir sind Weltmarktführer, über 100 Jahre Tradition, jetzt in der 3. Generation. Interesse geweckt? 😎",
-              "imageUrl": "https://f2ixrbf6u3.ufs.sh/f/YXvu0UBUfbxGsI4iyqZSOa5oGfeQw0igHmDClury4RAtNT1b",
-              "type": "single-select-or-text",
-              "allowTextInput": true,
-              "options": [
-                {
-                  "id": 1,
-                  "text": "Auf jeden Fall! Wo bewerbe ich mich? 📝",
-                  "feedback": "Klasse! Schick deine Bewerbung (Anschreiben, Lebenslauf, letzte 2 Zeugnisse) als PDF an bewerbung@sollich.com. Dominik Höke ist dein Ansprechpartner (Tel. +49 5222 950684). Wichtig: Gute Rechtschreibung und saubere Form! Bewerbungsschluss ist meist 30.09. für Start 01.08. des nächsten Jahres."
-                },
-                {
-                  "id": 2,
-                  "text": "Ich will erst mal schnuppern (Praktikum). 👀",
-                  "feedback": "Sehr gerne! SOLLICH lädt Schüler:innen explizit zu Praktika ein. So lernst du Technik, Team und Aufgaben live kennen. Beste Basis für die Entscheidung!"
+                  "text": "Gibt's auch Praktika? 🔍",
+                  "feedback": "Klar! Wir bieten Schulpraktika zur Orientierung an. Schreib uns einfach an info@bau-hanau.de."
                 }
               ]
             }
@@ -709,23 +438,23 @@
   ],
   "copy": {
     "checkChances": "Meine Chancen checken",
-    "expressApply": "Lass uns quatschen",
+    "expressApply": "Express Bewerbung",
     "jobMerken": "Job merken",
-    "submit": "Teamfit prüfen",
-    "submitSuccess": "Top! Wir schauen uns das an und melden uns in max. 24h.",
-    "victoryHeadline": "Sauber gelöst. 🍫",
-    "victorySubtext": "Du hast technisches Verständnis bewiesen. Genau diese Präzision suchen wir bei Sollich.",
-    "nudgeHeadline": "Mal ehrlich...",
-    "nudgeText": "Du stellst dich hier besser an als viele andere. Wir sollten uns kennenlernen. Ganz ohne Stress und Anzug. ✨",
-    "firstName": "Wie heißt du?",
-    "phoneType": "Welches Handy nutzt du? (Egal, nur Neugier)",
-    "schoolType": "Auf welcher Schule bist du?",
-    "android": "Android Team",
-    "iphone": "iPhone Team",
+    "submit": "Ergebnis ansehen",
+    "submitSuccess": "Top! Deine Bewerbung ist raus.",
+    "victoryHeadline": "Du passt nach Hanau! 🏘️",
+    "victorySubtext": "Du hast das Herz am richtigen Fleck und Köpfchen für Immobilien.",
+    "nudgeHeadline": "Fast geschafft!",
+    "nudgeText": "Beende den Check, um dein Ergebnis zu sehen.",
+    "firstName": "Vorname",
+    "phoneType": "Telefon",
+    "schoolType": "Schulabschluss",
+    "android": "Android",
+    "iphone": "iPhone",
     "realschule": "Realschule",
-    "gymnasium": "Gymnasium",
-    "andere": "Andere / Ich hab schon Abschluss",
-    "expressApplyIntro": "Ein paar kurze Infos genügen. Wir melden uns bei dir!",
-    "exploreOtherJobs": "Erstmal andere Jobs entdecken"
+    "gymnasium": "Abitur / Fachabitur",
+    "andere": "Anderer Abschluss",
+    "expressApplyIntro": "Hinterlass uns deine Nummer, wir melden uns.",
+    "exploreOtherJobs": "Andere Jobs checken"
   }
 }
