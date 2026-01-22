@@ -1,0 +1,724 @@
+{
+"company": {
+"name": "Grünbeck AG",
+"slug": "gruenbeck",
+"logoUrl": "💧",
+"logoImageUrl": "https://www.gc-gruppe.de/sites/default/files/lieferanten/logos/gruenbeck-logo.png",
+"signatureEmoji": "🌊",
+"primaryColor": "#009aa6",
+"secondaryColor": "#333333",
+"city": "Höchstädt a. d. Donau",
+"website": "[https://www.gruenbeck.de/karriere/praktika-ausbildung-studium](https://www.gruenbeck.de/karriere/praktika-ausbildung-studium)",
+"industryVibe": "Wasser ist Menschenrecht. Wir sorgen dafür, dass es sauber bleibt – weltweit. High-Tech trifft auf Verantwortung und eine Unternehmenskultur, die dich wirklich sieht.",
+"organizationFacts": [
+{
+"title": "Top Gehalt",
+"value": "Starte fett: 1.255 € schon im 1. Lehrjahr!",
+"icon": "💸"
+},
+{
+"title": "Krisensicher",
+"value": "Wir gehören einer Stiftung. Kein Ausverkauf, volle Sicherheit für dich.",
+"icon": "🛡️"
+},
+{
+"title": "Urlaub satt",
+"value": "30 Tage Urlaub für deine Erholung.",
+"icon": "🏖️"
+},
+{
+"title": "Innovation",
+"value": "Top 50 innovativste Mittelständler. Wir gestalten die Wasser-Zukunft.",
+"icon": "💡"
+},
+{
+"title": "Soziales",
+"value": "Urlaubs- & Weihnachtsgeld, Kantine und Fitness-Angebote.",
+"icon": "🤝"
+},
+{
+"title": "Weiterbildung",
+"value": "Eigenes 'Grünbeck Forum' & Stipendien für deinen Aufstieg.",
+"icon": "🎓"
+}
+]
+},
+"landing": {
+"headline": "Wir machen Wasser. 💧",
+"subline": "Werde Teil der Grünbeck-Family. Sichere Jobs, starke 1.255 € Einstiegsgehalt und Arbeit mit echtem Sinn. Finde deinen Platz im Team!",
+"startButtonText": "Check deine Zukunft 🚀"
+},
+"campus": {
+"headline": "Dein Einsatzgebiet.",
+"subline": "Bist du der Macher an der Anlage oder der Stratege im Office?",
+"categories": [
+{
+"id": "kaufmännisch",
+"title": "Business & Orga",
+"jobId": "industriekaufmann"
+},
+{
+"id": "technisch",
+"title": "Technik & Montage",
+"jobId": "anlagenmechaniker"
+}
+]
+},
+"questionnaire": {
+"questions": [
+{
+"id": "environment",
+"question": "Wo fühlst du dich am wohlsten?",
+"options": [
+{
+"id": "production",
+"label": "Werkstatt & Technik",
+"icon": "🛠️",
+"imageUrl": "[https://source.unsplash.com/featured/?workshop](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fworkshop)",
+"score": {
+"anlagenmechaniker": 2,
+"industriekaufmann": 0
+}
+},
+{
+"id": "office",
+"label": "Büro & Meeting",
+"icon": "💼",
+"imageUrl": "[https://source.unsplash.com/featured/?desk](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fdesk)",
+"score": {
+"anlagenmechaniker": 0,
+"industriekaufmann": 2
+}
+}
+]
+},
+{
+"id": "task",
+"question": "Was liegt dir mehr?",
+"options": [
+{
+"id": "hands_on",
+"label": "Zusammenbauen & Tüfteln",
+"icon": "🔧",
+"imageUrl": "[https://source.unsplash.com/featured/?tools](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Ftools)",
+"score": {
+"anlagenmechaniker": 2,
+"industriekaufmann": 0
+}
+},
+{
+"id": "organize",
+"label": "Planen & Kommunizieren",
+"icon": "🗣️",
+"imageUrl": "[https://source.unsplash.com/featured/?planning](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fplanning)",
+"score": {
+"anlagenmechaniker": 0,
+"industriekaufmann": 2
+}
+}
+]
+},
+{
+"id": "focus",
+"question": "Worauf achtest du?",
+"options": [
+{
+"id": "detail",
+"label": "Technische Präzision",
+"icon": "📏",
+"imageUrl": "[https://source.unsplash.com/featured/?measurement](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fmeasurement)",
+"score": {
+"anlagenmechaniker": 2,
+"industriekaufmann": 1
+}
+},
+{
+"id": "big_picture",
+"label": "Kosten & Ablauf",
+"icon": "📊",
+"imageUrl": "[https://source.unsplash.com/featured/?chart](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fchart)",
+"score": {
+"anlagenmechaniker": 0,
+"industriekaufmann": 2
+}
+}
+]
+}
+],
+"suggestionText": {
+"headline": "Dein Wasser-Match:",
+"startButtonText": "Job erkunden",
+"viewAllButtonText": "Alle Jobs",
+"skipButtonText": "Überspringen"
+}
+},
+"jobs": [
+{
+"id": "industriekaufmann",
+"title": "Industriekaufmann (w/m/d)",
+"description": "Organisiere den weltweiten Export von Wasseranlagen, steuere den Einkauf und manage Projekte. 1.255 € Startgehalt! 💼🌍",
+"icon": "📊",
+"color": "#009aa6",
+"tags": [
+"💰 1.255 € Start",
+"🌍 International",
+"🛡️ Sicherer Job",
+"🎓 Top Weiterbildung"
+],
+"pathModeId": "branching",
+"levels": [
+{
+"id": 1,
+"title": "Der Auftrag",
+"status": "unlocked",
+"icon": "📞",
+"row": 0,
+"nextLevelIds": [
+2,
+3
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Moin! 👋 Bei uns dreht sich alles um reines Wasser. Ein Kunde ruft an: 'Meine Produktion steht still, das Wasser ist zu kalkhaltig! Ich brauche sofort eine Enthärtungsanlage!' Was ist dein erster Schritt?",
+"imageUrl": "[https://source.unsplash.com/featured/?phone](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fphone)",
+"type": "single-select-correct",
+"options": [
+{
+"id": 1,
+"text": "Sofort irgendwas losschicken. 🚚",
+"correct": false,
+"feedback": "Vorsicht! Erst müssen wir wissen, was er genau braucht. Sonst passt die Anlage nicht."
+},
+{
+"id": 2,
+"text": "Bedarf klären & Daten checken. 📝",
+"correct": true,
+"feedback": "Genau! 🎯 Erst die Analyse, dann das Angebot. Du denkst mit!"
+}
+]
+}
+]
+},
+{
+"id": 2,
+"title": "Mission: Einkauf",
+"status": "locked",
+"icon": "📦",
+"row": 1,
+"nextLevelIds": [
+4
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Für die neue Filterserie fehlen wichtige Bauteile. Der Lieferant meldet Verzug. Die Produktion wartet auf dein Signal. Du musst verhandeln. Was schreibst du?",
+"imageUrl": "[https://source.unsplash.com/featured/?negotiation](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fnegotiation)",
+"type": "llm-interactive",
+"options": [],
+"initialQuickReplies": [
+"Das ist inakzeptabel, ich storniere alles!",
+"Können wir eine Teillieferung per Express vereinbaren?",
+"Ich warte einfach ab, bis es kommt."
+],
+"conversationHistory": [
+{
+"role": "assistant",
+"content": "Hallo, hier Lieferant Müller. Wir haben Rohstoffmangel. Lieferung verzögert sich um 3 Wochen. Ist das ein Problem?"
+}
+]
+}
+]
+},
+{
+"id": 3,
+"title": "Mission: Export",
+"status": "locked",
+"icon": "🚢",
+"row": 1,
+"nextLevelIds": [
+4
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Eine riesige Anlage geht nach Italien. 🇮🇹 Du musst den Transport organisieren. Der LKW-Fahrer spricht nur Italienisch und Englisch. Es gibt Probleme mit den Zollpapieren. Wie löst du das?",
+"imageUrl": "[https://source.unsplash.com/featured/?logistics](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Flogistics)",
+"type": "llm-interactive",
+"options": [],
+"initialQuickReplies": [
+"Ich rufe unseren Zoll-Experten dazu.",
+"Ich versuche es auf Englisch zu klären.",
+"Ich lasse den LKW einfach stehen."
+],
+"conversationHistory": [
+{
+"role": "assistant",
+"content": "Prego? Papers not correct. No border crossing! What do I do?"
+}
+]
+}
+]
+},
+{
+"id": 4,
+"title": "Deine Vorteile",
+"status": "locked",
+"icon": "💎",
+"row": 2,
+"nextLevelIds": [
+5,
+6
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Super Job! 👍 Wer Leistung bringt, kriegt bei Grünbeck auch ordentlich was zurück. Check mal deine Stats:",
+"imageUrl": "[https://source.unsplash.com/featured/?money](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fmoney)",
+"type": "bento-grid",
+"options": [],
+"facts": [
+{
+"title": "Gehalt",
+"value": "1.255 € im 1. Jahr, bis zu 1.447 € im 4. Jahr!",
+"icon": "💸",
+"layout": {
+"colSpan": 2,
+"rowSpan": 1
+}
+},
+{
+"title": "Freizeit",
+"value": "30 Tage Urlaub & 38h-Woche.",
+"icon": "🏖️",
+"layout": {
+"colSpan": 1,
+"rowSpan": 1
+}
+},
+{
+"title": "Sicherheit",
+"value": "Stiftungsunternehmen = Sicherer Job.",
+"icon": "🛡️",
+"layout": {
+"colSpan": 1,
+"rowSpan": 1
+}
+},
+{
+"title": "Extras",
+"value": "Urlaubsgeld, Weihnachtsgeld & Kantine.",
+"icon": "🎁",
+"layout": {
+"colSpan": 2,
+"rowSpan": 1
+}
+}
+]
+},
+{
+"id": 2,
+"scenario": "Nicht schlecht, oder? Was feierst du am meisten?",
+"imageUrl": "[https://source.unsplash.com/featured/?happy](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fhappy)",
+"type": "single-select-no-correct",
+"options": [
+{
+"id": 1,
+"text": "Das Gehalt! 🤑",
+"feedback": "Verständlich! Damit liegst du weit über dem Durchschnitt."
+},
+{
+"id": 2,
+"text": "Die Sicherheit 🛡️",
+"feedback": "Absolut. Bei uns plant man langfristig, ohne Investor-Druck."
+}
+]
+}
+]
+},
+{
+"id": 5,
+"title": "Weg: Karriere",
+"status": "locked",
+"icon": "📈",
+"row": 3,
+"nextLevelIds": [
+7
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Nach der Ausbildung ist noch lange nicht Schluss. Die Grünbeck Akademie pusht dich. Willst du dich spezialisieren?",
+"imageUrl": "[https://source.unsplash.com/featured/?stairs](https://source.unsplash.com/featured/?stairs)",
+"type": "single-select-no-correct",
+"options": [
+{
+"id": 1,
+"text": "Fachwirt werden 🎓",
+"feedback": "Guter Plan! Wir unterstützen dich mit Stipendien."
+},
+{
+"id": 2,
+"text": "Projektleitung übernehmen 🚀",
+"feedback": "Verantwortung übernehmen liegt in unserer DNA."
+}
+]
+}
+]
+},
+{
+"id": 6,
+"title": "Weg: Studium",
+"status": "locked",
+"icon": "🎓",
+"row": 3,
+"nextLevelIds": [
+7
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Du willst noch studieren? Wir bieten Stipendien für Bachelor & Master an. Dein Weg steht dir offen.",
+"imageUrl": "[https://source.unsplash.com/featured/?university](https://source.unsplash.com/featured/?university)",
+"type": "single-select-no-correct",
+"options": [
+{
+"id": 1,
+"text": "Berufsbegleitend studieren 📚",
+"feedback": "Hart, aber lohnt sich. Wir helfen dir dabei!"
+},
+{
+"id": 2,
+"text": "Erstmal Praxiserfahrung sammeln 💼",
+"feedback": "Absolut. Nichts ersetzt die Erfahrung im Job."
+}
+]
+}
+]
+},
+{
+"id": 7,
+"title": "Startschuss",
+"status": "locked",
+"icon": "🏁",
+"row": 4,
+"scenarios": [
+{
+"id": 1,
+"scenario": "Bereit für den Einstieg beim Wasser-Profi? Bewirb dich in 1 Minute über unser Formular. Wir freuen uns auf dich!",
+"imageUrl": "[https://source.unsplash.com/featured/?team](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fteam)",
+"type": "single-select-or-text",
+"allowTextInput": true,
+"options": [
+{
+"id": 1,
+"text": "Bewerbung geht raus! 📨",
+"feedback": "Klasse! Wir melden uns schnell bei dir."
+},
+{
+"id": 2,
+"text": "Ich hab noch Fragen. ❓",
+"feedback": "Kein Problem. Ruf einfach an oder schreib uns eine Mail!"
+}
+]
+}
+]
+}
+]
+},
+{
+"id": "anlagenmechaniker",
+"title": "Anlagenmechaniker (w/m/d)",
+"description": "Baue High-Tech Wasseranlagen, sorge für sauberes Trinkwasser und tüftle an der Technik von morgen. 1.255 € Start! 🔧💧",
+"icon": "🔧",
+"color": "#e84e1b",
+"tags": [
+"💰 1.255 € Start",
+"🔧 High-Tech",
+"🚰 Wassertechnik",
+"🏫 Eigene Akademie"
+],
+"pathModeId": "branching",
+"levels": [
+{
+"id": 1,
+"title": "Der Check",
+"status": "unlocked",
+"icon": "👀",
+"row": 0,
+"nextLevelIds": [
+2,
+3
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Servus! 👋 Willkommen in der Werkstatt. Wir bauen hier Anlagen, die ganze Städte mit sauberem Wasser versorgen. Vor dir liegt ein Plan für eine Rohrleitung. Was checkst du als Erstes?",
+"imageUrl": "[https://source.unsplash.com/featured/?blueprint](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fblueprint)",
+"type": "single-select-correct",
+"options": [
+{
+"id": 1,
+"text": "Ich säge einfach mal los. 🪚",
+"correct": false,
+"feedback": "Halt! Ohne Plan verschwendest du Material. Erst messen, dann sägen."
+},
+{
+"id": 2,
+"text": "Maße prüfen & Material holen. 📏",
+"correct": true,
+"feedback": "Perfekt. Präzision ist bei uns alles. Wasser findet jeden Weg raus! 😉"
+}
+]
+}
+]
+},
+{
+"id": 2,
+"title": "Mission: Montage",
+"status": "locked",
+"icon": "🔩",
+"row": 1,
+"nextLevelIds": [
+4
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Du baust eine Enthärtungsanlage zusammen. Ein Ventil klemmt und lässt sich nicht festziehen. Gewalt ist keine Lösung. Wie gehst du vor?",
+"imageUrl": "[https://source.unsplash.com/featured/?valve](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fvalve)",
+"type": "llm-interactive",
+"options": [],
+"initialQuickReplies": [
+"Ich hole das große Werkzeug.",
+"Ich prüfe das Gewinde auf Schmutz oder Schäden.",
+"Ich lasse es locker, merkt keiner."
+],
+"conversationHistory": [
+{
+"role": "assistant",
+"content": "Das Ventil sitzt schief. Wenn du weiter drehst, geht das Gewinde kaputt. Was nun?"
+}
+]
+}
+]
+},
+{
+"id": 3,
+"title": "Mission: Wartung",
+"status": "locked",
+"icon": "🚑",
+"row": 1,
+"nextLevelIds": [
+4
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Einsatz beim Kunden! 🚨 Eine Anlage meldet 'Druckabfall'. Du stehst davor. Es tropft nirgends offensichtlich. Wie findest du den Fehler?",
+"imageUrl": "[https://source.unsplash.com/featured/?pipes](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fpipes)",
+"type": "llm-interactive",
+"options": [],
+"initialQuickReplies": [
+"Ich tausche auf Verdacht die Pumpe.",
+"Ich prüfe systematisch die Manometer und Filter.",
+"Ich fülle einfach Wasser nach."
+],
+"conversationHistory": [
+{
+"role": "assistant",
+"content": "Der Druck ist bei 0,5 bar. Sollte aber 4 bar sein. Die Filter sehen sauber aus. Was checkst du als nächstes?"
+}
+]
+}
+]
+},
+{
+"id": 4,
+"title": "Dein Lohn",
+"status": "locked",
+"icon": "💰",
+"row": 2,
+"nextLevelIds": [
+5,
+6
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Saubere Arbeit! 🛠️ Bei Grünbeck lohnt sich Einsatz richtig. Schau dir das an:",
+"imageUrl": "[https://source.unsplash.com/featured/?payday](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fpayday)",
+"type": "bento-grid",
+"options": [],
+"facts": [
+{
+"title": "Startgehalt",
+"value": "1.255 € brutto im 1. Lehrjahr!",
+"icon": "💸",
+"layout": {
+"colSpan": 2,
+"rowSpan": 1
+}
+},
+{
+"title": "Steigerung",
+"value": "Bis zu 1.447 € im 4. Jahr.",
+"icon": "📈",
+"layout": {
+"colSpan": 1,
+"rowSpan": 1
+}
+},
+{
+"title": "Urlaub",
+"value": "30 Tage frei.",
+"icon": "🏖️",
+"layout": {
+"colSpan": 1,
+"rowSpan": 1
+}
+},
+{
+"title": "Benefits",
+"value": "Jobrad, Kantine & Weihnachts-/Urlaubsgeld.",
+"icon": "🚲",
+"layout": {
+"colSpan": 2,
+"rowSpan": 1
+}
+}
+]
+},
+{
+"id": 2,
+"scenario": "Starkes Paket, oder? Was motiviert dich am meisten?",
+"imageUrl": "[https://source.unsplash.com/featured/?motivation](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fmotivation)",
+"type": "single-select-no-correct",
+"options": [
+{
+"id": 1,
+"text": "Das hohe Gehalt 💶",
+"feedback": "Damit kannst du dir was leisten! 1.255 € ist echt stark."
+},
+{
+"id": 2,
+"text": "Die Technik & Innovation 🔧",
+"feedback": "Wir sind Top 50 Innovator. Hier lernst du von den Besten."
+}
+]
+}
+]
+},
+{
+"id": 5,
+"title": "Weg: Meister",
+"status": "locked",
+"icon": "🎓",
+"row": 3,
+"nextLevelIds": [
+7
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Du hast den Abschluss in der Tasche. Und dann? Meister oder Techniker? Wir unterstützen dich mit Stipendien!",
+"imageUrl": "[https://source.unsplash.com/featured/?certificate](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fcertificate)",
+"type": "single-select-no-correct",
+"options": [
+{
+"id": 1,
+"text": "Ich will Techniker werden. 📐",
+"feedback": "Cool! Dann gehst du tiefer in die Planung und Konstruktion."
+},
+{
+"id": 2,
+"text": "Meister machen! 👷",
+"feedback": "Führung übernehmen und Azubis ausbilden. Gute Wahl."
+}
+]
+}
+]
+},
+{
+"id": 6,
+"title": "Weg: Studium",
+"status": "locked",
+"icon": "📚",
+"row": 3,
+"nextLevelIds": [
+7
+],
+"scenarios": [
+{
+"id": 1,
+"scenario": "Du willst Ingenieur werden? Kombinier es! Wir bieten duale Studiengänge wie Maschinenbau oder Mechatronik.",
+"imageUrl": "[https://source.unsplash.com/featured/?study](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fstudy)",
+"type": "single-select-no-correct",
+"options": [
+{
+"id": 1,
+"text": "Duales Studium klingt gut. 🎓",
+"feedback": "Theorie & Praxis im Mix + Gehalt. Besser geht's nicht."
+},
+{
+"id": 2,
+"text": "Lieber erst Praxiserfahrung. 🛠️",
+"feedback": "Auch gut. Viele unserer Ingenieure haben mal in der Werkstatt angefangen."
+}
+]
+}
+]
+},
+{
+"id": 7,
+"title": "Dein Start",
+"status": "locked",
+"icon": "🚀",
+"row": 4,
+"scenarios": [
+{
+"id": 1,
+"scenario": "Bock auf Wasser, Technik und gutes Geld? Bewirb dich jetzt ganz easy online. Wir warten auf dich!",
+"imageUrl": "[https://source.unsplash.com/featured/?start](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fstart)",
+"type": "single-select-or-text",
+"allowTextInput": true,
+"options": [
+{
+"id": 1,
+"text": "Bin dabei! 📝",
+"feedback": "Super! Klick auf 'Ergebnis ansehen' für den Link."
+},
+{
+"id": 2,
+"text": "Ich check erst Social Media. 📱",
+"feedback": "Mach das! Aber vergiss nicht, dich zu bewerben. 😉"
+}
+]
+}
+]
+}
+]
+}
+],
+"copy": {
+"checkChances": "Chancen prüfen",
+"expressApply": "Express Bewerbung",
+"jobMerken": "Job merken",
+"submit": "Zum Ergebnis",
+"submitSuccess": "Top! Wir freuen uns.",
+"victoryHeadline": "Passt perfekt! 💧",
+"victorySubtext": "Du hast das Zeug zum Wasser-Profi bei Grünbeck.",
+"nudgeHeadline": "Fast fertig!",
+"nudgeText": "Mach den Check fertig und sicher dir deinen Platz.",
+"firstName": "Vorname",
+"phoneType": "Telefonnummer",
+"schoolType": "Schulabschluss",
+"android": "Android",
+"iphone": "iPhone",
+"realschule": "Realschule",
+"gymnasium": "Abitur",
+"andere": "Anderer",
+"expressApplyIntro": "Hinterlass deine Nummer, wir rufen zurück.",
+"exploreOtherJobs": "Andere Jobs ansehen"
+}
+}
