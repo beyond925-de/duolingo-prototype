@@ -3,7 +3,7 @@
     "name": "Sparkasse Neu-Ulm – Illertissen",
     "slug": "sparkasse-nui",
     "logoUrl": "🔴",
-    "logoImageUrl": "https://www.sparkasse-neu-ulm-illertissen.de/content/dam/myif/spk-neu-ulm-illertissen/work/bilder/nbf-logos/logo_weiss.svg",
+    "logoImageUrl": "https://image.pollinations.ai/prompt/minimalist%20red%20circle%20logo%20icon%20for%20Sparkasse%20bank%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
     "signatureEmoji": "🔴",
     "primaryColor": "#E2001A",
     "secondaryColor": "#ffffff",
@@ -74,7 +74,7 @@
             "id": "practice",
             "label": "Learning by Doing & Kundenkontakt",
             "icon": "🗣️",
-            "imageUrl": "https://image.pollinations.ai/prompt/young%20bank%20apprentice%20talking%20to%20friendly%20customer%20in%20modern%20bright%20office%20photorealistic%20cinematic%20lighting?width=800&height=600&nologo=true",
+            "imageUrl": "https://image.pollinations.ai/prompt/young%20bank%20apprentice%20in%20a%20customer%20consultation%20meeting%2C%20smiling%2C%20modern%20office%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
             "score": {
               "bankkaufmann": 2,
               "duales-studium": 1
@@ -84,7 +84,7 @@
             "id": "theory",
             "label": "Tiefe Theorie & komplexe Zusammenhänge",
             "icon": "📚",
-            "imageUrl": "https://image.pollinations.ai/prompt/focused%20student%20in%20modern%20university%20library%20with%20laptop%20and%20books%20photorealistic%20warm%20lighting?width=800&height=600&nologo=true",
+            "imageUrl": "https://image.pollinations.ai/prompt/university%20student%20studying%20in%20a%20large%20modern%20library%2C%20books%20and%20laptop%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
             "score": {
               "bankkaufmann": 0,
               "duales-studium": 2
@@ -100,7 +100,7 @@
             "id": "people",
             "label": "Menschen helfen & Wünsche erfüllen",
             "icon": "🤝",
-            "imageUrl": "https://image.pollinations.ai/prompt/bank%20advisor%20shaking%20hands%20with%20happy%20couple%20consulting%20room%20bright%20photorealistic?width=800&height=600&nologo=true",
+            "imageUrl": "https://image.pollinations.ai/prompt/friendly%20bank%20advisor%20consulting%20a%20couple%2C%20everyone%20smiling%2C%20warm%20atmosphere%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
             "score": {
               "bankkaufmann": 2,
               "duales-studium": 1
@@ -110,7 +110,7 @@
             "id": "business",
             "label": "Wirtschaft verstehen & Unternehmen steuern",
             "icon": "📈",
-            "imageUrl": "https://image.pollinations.ai/prompt/stock%20market%20data%20analysis%20on%20tablet%20screen%20business%20context%20photorealistic?width=800&height=600&nologo=true",
+            "imageUrl": "https://image.pollinations.ai/prompt/close-up%20of%20stock%20market%20charts%20and%20financial%20balance%20sheets%20on%20a%20screen%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
             "score": {
               "bankkaufmann": 1,
               "duales-studium": 2
@@ -126,7 +126,7 @@
             "id": "sabbatical",
             "label": "Erstmal Weltreise! 🌏",
             "icon": "✈️",
-            "imageUrl": "https://image.pollinations.ai/prompt/backpacker%20standing%20on%20mountain%20looking%20at%20sunset%20freedom%20travel%20photorealistic?width=800&height=600&nologo=true",
+            "imageUrl": "https://image.pollinations.ai/prompt/happy%20backpacker%20relaxing%20on%20a%20tropical%20beach%20at%20sunset%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
             "score": {
               "bankkaufmann": 1,
               "duales-studium": 1
@@ -136,7 +136,7 @@
             "id": "career",
             "label": "Direkt die Karriereleiter hoch 🧗",
             "icon": "👔",
-            "imageUrl": "https://image.pollinations.ai/prompt/young%20confident%20business%20person%20walking%20up%20stairs%20in%20modern%20corporate%20building%20photorealistic?width=800&height=600&nologo=true",
+            "imageUrl": "https://image.pollinations.ai/prompt/confident%20young%20business%20executive%20in%20a%20modern%20skyscraper%20office%20overlooking%20a%20city%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
             "score": {
               "bankkaufmann": 1,
               "duales-studium": 2
@@ -181,7 +181,7 @@
             {
               "id": 1,
               "scenario": "Hi! 👋 Willkommen in der Sparkasse Neu-Ulm – Illertissen. Viele denken bei Bankkaufleuten an staubige Akten und Erbsenzähler. Aber eigentlich sind wir 'Wunscherfüller'. Was glaubst du, was machst du hier am häufigsten?",
-              "imageUrl": "https://image.pollinations.ai/prompt/interior%20of%20modern%20bank%20branch%20sparkasse%20style%20red%20accents%20friendly%20atmosphere%20photorealistic?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/interior%20view%20of%20a%20modern%2C%20bright%20Sparkasse%20bank%20branch%20with%20digital%20displays%20and%20comfortable%20seating%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
               "type": "single-select-correct",
               "options": [
                 {
@@ -213,7 +213,7 @@
             {
               "id": 1,
               "scenario": "Ein junger Kunde, Tim (19), kommt zu dir an den Schalter. Er hat gerade seine Ausbildung angefangen und will sich 'irgendwie was sparen' für ein neues Gaming-Setup, blickt aber bei Aktien, ETFs und Bausparen nicht durch. Er fragt dich: 'Was soll ich machen?' Wie gehst du vor?",
-              "imageUrl": "https://image.pollinations.ai/prompt/young%20man%20in%20casual%20clothes%20looking%20confused%20at%20smartphone%20banking%20app%20modern%20lighting?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/young%20male%20customer%20(age%2019)%20sitting%20at%20a%20bank%20consultation%20desk%20looking%20confused%20about%20financial%20documents%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
               "type": "llm-interactive",
               "options": [],
               "initialQuickReplies": [
@@ -243,7 +243,7 @@
             {
               "id": 1,
               "scenario": "Es wird ernster. Ein Ehepaar möchte einen Kredit für eine neue Küche. 20.000€. Sie wirken sympathisch, aber dein Computer zeigt an, dass ihr Konto oft überzogen ist. Bei der Sparkasse sind wir 'nah am Menschen', aber wir müssen auch verantwortungsvoll mit Geld umgehen. Was ist dein erster Schritt?",
-              "imageUrl": "https://image.pollinations.ai/prompt/young%20couple%20sitting%20at%20bank%20desk%20looking%20hopeful%20but%20nervous%20consulting%20scene%20photorealistic?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/middle-aged%20couple%20sitting%20across%20from%20a%20bank%20advisor%2C%20looking%20slightly%20worried%20during%20a%20financial%20discussion%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
               "type": "single-select-correct",
               "options": [
                 {
@@ -281,7 +281,7 @@
             {
               "id": 1,
               "scenario": "Puh, Finanzen geklärt! 😅 Aber was springt für dich dabei raus? Die Sparkasse Neu-Ulm – Illertissen bietet Dinge, die du bei keiner Großbank findest. Schau mal hier:",
-              "imageUrl": "https://image.pollinations.ai/prompt/group%20of%20happy%20young%20business%20people%20high%20fiving%20success%20team%20spirit%20photorealistic%20warm%20tones?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/group%20of%20happy%20diverse%20bank%20apprentices%20hold%20tablets%20and%20point%20to%20icons%20representing%20travel%20and%20technology%20benefits%2C%20smiling%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
               "type": "bento-grid",
               "options": [],
               "facts": [
@@ -317,7 +317,7 @@
             {
               "id": 2,
               "scenario": "Hand aufs Herz: Welcher dieser Benefits flasht dich am meisten?",
-              "imageUrl": "https://image.pollinations.ai/prompt/flatlay%20of%20travel%20gear%20passport%20ipad%20and%20credit%20card%20on%20wooden%20table%20travel%20planning%20photorealistic?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/abstract%20composition%20with%20floating%20icons%20representing%20travel%20(airplane)%2C%20technology%20(tablet)%2C%20and%20money%20(euro%20coins)%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -352,7 +352,7 @@
             {
               "id": 1,
               "scenario": "Nach den 2,5 Jahren Ausbildung bist du 'Banker'. Aber bei uns ist das erst der Anfang. Wir fördern dich weiter. Wohin soll die Reise gehen?",
-              "imageUrl": "https://image.pollinations.ai/prompt/view%20up%20a%20modern%20spiral%20staircase%20symbolizing%20career%20growth%20architecture%20photorealistic?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/modern%20architectural%20staircase%20leading%20upwards%2C%20symbolizing%20career%20progression%20in%20a%20corporate%20building%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -379,7 +379,7 @@
             {
               "id": 1,
               "scenario": "Hast du Bock auf 'Gut für die Region', iPad-Lernen und danach 3 Monate Weltreise? Anja Schneider und Judith Selzle aus dem HR-Team warten auf deine Bewerbung (online, ohne Papierkram!). 🔴",
-              "imageUrl": "https://image.pollinations.ai/prompt/two%20friendly%20hr%20managers%20women%20smiling%20welcoming%20gesture%20in%20office%20photorealistic?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/two%20professional%20HR%20women%2C%20Anja%20and%20Judith%2C%20standing%20in%20a%20modern%20bank%20lobby%20and%20waving%20friendly%20at%20the%20camera%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
               "type": "single-select-or-text",
               "allowTextInput": true,
               "options": [
@@ -427,7 +427,7 @@
             {
               "id": 1,
               "scenario": "Willkommen im High-Speed-Bereich! Duales Studium heißt: 3 Monate Uni (Theorie ballern), 3 Monate Bank (Praxis rocken). Immer im Wechsel. Klingt anstrengend oder spannend?",
-              "imageUrl": "https://image.pollinations.ai/prompt/split%20screen%20image%20left%20side%20university%20lecture%20hall%20right%20side%20modern%20bank%20office%20photorealistic?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/split%20screen%20image%2C%20left%20side%20showing%20a%20university%20lecture%20hall%2C%20right%20side%20showing%20a%20modern%20bank%20office%2C%20split%20by%20a%20vertical%20line%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -457,7 +457,7 @@
             {
               "id": 1,
               "scenario": "Du bist in der Praxisphase 'Firmenkunden'. Ein mittelständischer Maschinenbauer aus Illertissen braucht eine Million Euro für eine neue Halle. In der Uni hast du 'Bilanzanalyse' gelernt. Der Chef legt dir den Jahresabschluss vor. Was checkst du?",
-              "imageUrl": "https://image.pollinations.ai/prompt/financial%20report%20charts%20and%20graphs%20on%20desk%20with%20calculator%20business%20analysis%20photorealistic?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/overhead%20view%20of%20complex%20financial%20balance%20sheets%20and%20annual%20reports%20spread%20out%20on%20a%20wooden%20conference%20table%2C%20accompanied%20by%20a%20calculator%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
               "type": "llm-interactive",
               "options": [],
               "initialQuickReplies": [
@@ -487,7 +487,7 @@
             {
               "id": 1,
               "scenario": "Die DHBW bietet dir die Chance, ein Theorie-Semester im Ausland zu verbringen. International Business is key! 🔑 Stell dir vor, du musst dich entscheiden. Wo geht's hin und warum?",
-              "imageUrl": "https://image.pollinations.ai/prompt/globe%20on%20a%20desk%20in%20a%20library%20with%20blurred%20background%20travel%20study%20concept%20photorealistic?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/large%20world%20map%20on%20a%20wall%20with%20colorful%20push%20pins%20marking%20various%20international%20locations%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
               "type": "text-field",
               "allowTextInput": true,
               "scenario": "Tipp kurz: Welches Land würde dich reizen, um Bankwesen mal anders zu erleben? (USA, Asien, Europa?)"
@@ -507,7 +507,7 @@
             {
               "id": 1,
               "scenario": "Studieren kostet normalerweise Geld. Bei uns bekommst du Geld. Und nicht zu knapp. Hier sind die Hard Facts für dein Duales Studium:",
-              "imageUrl": "https://image.pollinations.ai/prompt/happy%20student%20working%20on%20laptop%20in%20coffee%20shop%20financial%20freedom%20photorealistic?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/dual%20student%20sitting%20in%20a%20cozy%20coffee%20shop%20working%20on%20a%20laptop%20with%20notes%2C%20looking%20relaxed%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
               "type": "bento-grid",
               "options": [],
               "facts": [
@@ -555,7 +555,7 @@
             {
               "id": 1,
               "scenario": "Mit dem Bachelor of Arts in der Tasche stehen dir bei der Sparkasse alle Türen offen. Firmenkundenberatung, Asset Management oder sogar Filialleitung. Wie wichtig ist dir Verantwortung?",
-              "imageUrl": "https://image.pollinations.ai/prompt/modern%20glass%20meeting%20room%20in%20corporate%20office%20empty%20ready%20for%20business%20photorealistic?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/serious%20corporate%20boardroom%20meeting%20with%20executives%20discussing%20strategy%20at%20a%20large%20table%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=sk_d5rrY8gMI0a1ZhLgJbshuNHX2nEaSp6w",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -582,7 +582,7 @@
             {
               "id": 1,
               "scenario": "Bereit für Theorie UND Praxis? Dann bewirb dich für das Duale Studium (Start immer 1. September). Du brauchst (Fach-)Abitur und Bock auf Wirtschaft. Wir freuen uns auf dich!",
-              "imageUrl": "https://image.pollinations.ai/prompt/university%20campus%20summer%20vibes%20students%20walking%20photorealistic%20cinematic?width=1280&height=720&nologo=true",
+              "imageUrl": "https://image.pollinations.ai/prompt/modern%20DHBW%20university%20campus%20building%20exterior%20with%20diverse%20students%20walking%20and%20talking%20outside%20cinematic%20lighting%2C%20photorealistic%2C%204k?width=1280&height=720&nologo=true&key=HIER_DEIN_API_KEY_EINFUEGEN",
               "type": "single-select-or-text",
               "allowTextInput": true,
               "options": [
