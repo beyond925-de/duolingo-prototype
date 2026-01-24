@@ -8,7 +8,7 @@
 "primaryColor": "#009aa6",
 "secondaryColor": "#333333",
 "city": "Höchstädt a. d. Donau",
-"website": "[https://www.gruenbeck.de/karriere/praktika-ausbildung-studium](https://www.gruenbeck.de/karriere/praktika-ausbildung-studium)",
+"website": "https://www.gruenbeck.de/karriere/praktika-ausbildung-studium",
 "industryVibe": "Wasser ist Menschenrecht. Wir sorgen dafür, dass es sauber bleibt – weltweit. High-Tech trifft auf Verantwortung und eine Unternehmenskultur, die dich wirklich sieht.",
 "organizationFacts": [
 {
@@ -74,7 +74,7 @@
 "id": "production",
 "label": "Werkstatt & Technik",
 "icon": "🛠️",
-"imageUrl": "[https://source.unsplash.com/featured/?workshop](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fworkshop)",
+"imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
 "score": {
 "anlagenmechaniker": 2,
 "industriekaufmann": 0
@@ -84,7 +84,7 @@
 "id": "office",
 "label": "Büro & Meeting",
 "icon": "💼",
-"imageUrl": "[https://source.unsplash.com/featured/?desk](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fdesk)",
+"imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
 "score": {
 "anlagenmechaniker": 0,
 "industriekaufmann": 2
@@ -100,7 +100,7 @@
 "id": "hands_on",
 "label": "Zusammenbauen & Tüfteln",
 "icon": "🔧",
-"imageUrl": "[https://source.unsplash.com/featured/?tools](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Ftools)",
+"imageUrl": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80",
 "score": {
 "anlagenmechaniker": 2,
 "industriekaufmann": 0
@@ -110,7 +110,7 @@
 "id": "organize",
 "label": "Planen & Kommunizieren",
 "icon": "🗣️",
-"imageUrl": "[https://source.unsplash.com/featured/?planning](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fplanning)",
+"imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
 "score": {
 "anlagenmechaniker": 0,
 "industriekaufmann": 2
@@ -126,7 +126,7 @@
 "id": "detail",
 "label": "Technische Präzision",
 "icon": "📏",
-"imageUrl": "[https://source.unsplash.com/featured/?measurement](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fmeasurement)",
+"imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
 "score": {
 "anlagenmechaniker": 2,
 "industriekaufmann": 1
@@ -136,7 +136,7 @@
 "id": "big_picture",
 "label": "Kosten & Ablauf",
 "icon": "📊",
-"imageUrl": "[https://source.unsplash.com/featured/?chart](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fchart)",
+"imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
 "score": {
 "anlagenmechaniker": 0,
 "industriekaufmann": 2
@@ -181,7 +181,7 @@
 {
 "id": 1,
 "scenario": "Moin! 👋 Bei uns dreht sich alles um reines Wasser. Ein Kunde ruft an: 'Meine Produktion steht still, das Wasser ist zu kalkhaltig! Ich brauche sofort eine Enthärtungsanlage!' Was ist dein erster Schritt?",
-"imageUrl": "[https://source.unsplash.com/featured/?phone](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fphone)",
+"imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
 "type": "single-select-correct",
 "options": [
 {
@@ -213,7 +213,7 @@
 {
 "id": 1,
 "scenario": "Für die neue Filterserie fehlen wichtige Bauteile. Der Lieferant meldet Verzug. Die Produktion wartet auf dein Signal. Du musst verhandeln. Was schreibst du?",
-"imageUrl": "[https://source.unsplash.com/featured/?negotiation](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fnegotiation)",
+"imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
 "type": "llm-interactive",
 "options": [],
 "initialQuickReplies": [
@@ -243,7 +243,7 @@
 {
 "id": 1,
 "scenario": "Eine riesige Anlage geht nach Italien. 🇮🇹 Du musst den Transport organisieren. Der LKW-Fahrer spricht nur Italienisch und Englisch. Es gibt Probleme mit den Zollpapieren. Wie löst du das?",
-"imageUrl": "[https://source.unsplash.com/featured/?logistics](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Flogistics)",
+"imageUrl": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=800&q=80",
 "type": "llm-interactive",
 "options": [],
 "initialQuickReplies": [
@@ -274,7 +274,7 @@
 {
 "id": 1,
 "scenario": "Super Job! 👍 Wer Leistung bringt, kriegt bei Grünbeck auch ordentlich was zurück. Check mal deine Stats:",
-"imageUrl": "[https://source.unsplash.com/featured/?money](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fmoney)",
+"imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
 "type": "bento-grid",
 "options": [],
 "facts": [
@@ -319,7 +319,7 @@
 {
 "id": 2,
 "scenario": "Nicht schlecht, oder? Was feierst du am meisten?",
-"imageUrl": "[https://source.unsplash.com/featured/?happy](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fhappy)",
+"imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
 "type": "single-select-no-correct",
 "options": [
 {
@@ -349,7 +349,7 @@
 {
 "id": 1,
 "scenario": "Nach der Ausbildung ist noch lange nicht Schluss. Die Grünbeck Akademie pusht dich. Willst du dich spezialisieren?",
-"imageUrl": "[https://source.unsplash.com/featured/?stairs](https://source.unsplash.com/featured/?stairs)",
+"imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
 "type": "single-select-no-correct",
 "options": [
 {
@@ -379,7 +379,7 @@
 {
 "id": 1,
 "scenario": "Du willst noch studieren? Wir bieten Stipendien für Bachelor & Master an. Dein Weg steht dir offen.",
-"imageUrl": "[https://source.unsplash.com/featured/?university](https://source.unsplash.com/featured/?university)",
+"imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80",
 "type": "single-select-no-correct",
 "options": [
 {
@@ -406,7 +406,7 @@
 {
 "id": 1,
 "scenario": "Bereit für den Einstieg beim Wasser-Profi? Bewirb dich in 1 Minute über unser Formular. Wir freuen uns auf dich!",
-"imageUrl": "[https://source.unsplash.com/featured/?team](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fteam)",
+"imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
 "type": "single-select-or-text",
 "allowTextInput": true,
 "options": [
@@ -454,7 +454,7 @@
 {
 "id": 1,
 "scenario": "Servus! 👋 Willkommen in der Werkstatt. Wir bauen hier Anlagen, die ganze Städte mit sauberem Wasser versorgen. Vor dir liegt ein Plan für eine Rohrleitung. Was checkst du als Erstes?",
-"imageUrl": "[https://source.unsplash.com/featured/?blueprint](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fblueprint)",
+"imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
 "type": "single-select-correct",
 "options": [
 {
@@ -486,7 +486,7 @@
 {
 "id": 1,
 "scenario": "Du baust eine Enthärtungsanlage zusammen. Ein Ventil klemmt und lässt sich nicht festziehen. Gewalt ist keine Lösung. Wie gehst du vor?",
-"imageUrl": "[https://source.unsplash.com/featured/?valve](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fvalve)",
+"imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
 "type": "llm-interactive",
 "options": [],
 "initialQuickReplies": [
@@ -516,7 +516,7 @@
 {
 "id": 1,
 "scenario": "Einsatz beim Kunden! 🚨 Eine Anlage meldet 'Druckabfall'. Du stehst davor. Es tropft nirgends offensichtlich. Wie findest du den Fehler?",
-"imageUrl": "[https://source.unsplash.com/featured/?pipes](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fpipes)",
+"imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
 "type": "llm-interactive",
 "options": [],
 "initialQuickReplies": [
@@ -547,7 +547,7 @@
 {
 "id": 1,
 "scenario": "Saubere Arbeit! 🛠️ Bei Grünbeck lohnt sich Einsatz richtig. Schau dir das an:",
-"imageUrl": "[https://source.unsplash.com/featured/?payday](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fpayday)",
+"imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
 "type": "bento-grid",
 "options": [],
 "facts": [
@@ -592,7 +592,7 @@
 {
 "id": 2,
 "scenario": "Starkes Paket, oder? Was motiviert dich am meisten?",
-"imageUrl": "[https://source.unsplash.com/featured/?motivation](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fmotivation)",
+"imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
 "type": "single-select-no-correct",
 "options": [
 {
@@ -622,7 +622,7 @@
 {
 "id": 1,
 "scenario": "Du hast den Abschluss in der Tasche. Und dann? Meister oder Techniker? Wir unterstützen dich mit Stipendien!",
-"imageUrl": "[https://source.unsplash.com/featured/?certificate](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fcertificate)",
+"imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
 "type": "single-select-no-correct",
 "options": [
 {
@@ -652,7 +652,7 @@
 {
 "id": 1,
 "scenario": "Du willst Ingenieur werden? Kombinier es! Wir bieten duale Studiengänge wie Maschinenbau oder Mechatronik.",
-"imageUrl": "[https://source.unsplash.com/featured/?study](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fstudy)",
+"imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80",
 "type": "single-select-no-correct",
 "options": [
 {
@@ -679,7 +679,7 @@
 {
 "id": 1,
 "scenario": "Bock auf Wasser, Technik und gutes Geld? Bewirb dich jetzt ganz easy online. Wir warten auf dich!",
-"imageUrl": "[https://source.unsplash.com/featured/?start](https://www.google.com/search?q=https://source.unsplash.com/featured/%3Fstart)",
+"imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
 "type": "single-select-or-text",
 "allowTextInput": true,
 "options": [
