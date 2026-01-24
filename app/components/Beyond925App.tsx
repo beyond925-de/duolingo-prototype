@@ -41,7 +41,7 @@ export function Beyond925App({ config, companyId }: Beyond925AppProps) {
   const STORAGE_KEY = `${STORAGE_KEY_PREFIX}-${companyId}`;
   const [isLoaded, setIsLoaded] = useState(false);
   const [currentScreen, setCurrentScreen] = useState<Screen>("campus");
-  const [showLanding, setShowLanding] = useState(true);
+  const [showLanding, setShowLanding] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   // Per-job progress persistence
