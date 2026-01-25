@@ -1,0 +1,426 @@
+{
+  "company": {
+    "name": "Deppe Kallenberg Bedachung",
+    "slug": "deppe-kallenberg",
+    "logoUrl": "🏠",
+    "logoImageUrl": "https://www.deppe-kallenberg.de/logo.png",
+    "signatureEmoji": "🔨",
+    "primaryColor": "#c8102e",
+    "secondaryColor": "#2c3e50",
+    "city": "Salzkotten",
+    "website": "https://www.deppe-kallenberg.de/karriere",
+    "industryVibe": "Junger Meisterbetrieb aus OWL. Wir machen mehr als Ziegel aufs Dach legen – von Solar über Dachbegrünung bis Metallbau. Handwerk mit Zukunft.",
+    "organizationFacts": [
+      {
+        "title": "Regional & Persönlich",
+        "value": "Kein Papierkram, keine Vorzimmer. Ruf an, komm vorbei, fertig.",
+        "icon": "🤝"
+      },
+      {
+        "title": "Breites Spektrum",
+        "value": "Von klassischer Dachdeckung bis Solar, Begrünung & Metallbau.",
+        "icon": "🌱"
+      },
+      {
+        "title": "Vollwertiges Team",
+        "value": "Ab Tag 1 bist du Teil des Teams, kein Kaffee-Kocher.",
+        "icon": "👷"
+      },
+      {
+        "title": "Übernahmegarantie",
+        "value": "Bei erfolgreichem Abschluss übernehmen wir dich fest.",
+        "icon": "✅"
+      },
+      {
+        "title": "Modernes Handwerk",
+        "value": "Drohnen-Vermessung, digitale Planung – nicht nur Hammer & Ziegel.",
+        "icon": "🚁"
+      },
+      {
+        "title": "Freitags früher",
+        "value": "Mo-Do bis 16 Uhr, Fr bis 13 Uhr. Wochenende ist heilig.",
+        "icon": "⏰"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Ohne uns läuft's rein. 🏠",
+    "subline": "Dachdecker ist mehr als Ziegel stapeln. Wir bauen Solar-Anlagen, begrünen Dächer und sorgen dafür, dass nichts durchregnet. Handwerk mit Zukunft – bei einem jungen Meisterbetrieb aus OWL.",
+    "startButtonText": "Check den Job 🔨"
+  },
+  "campus": {
+    "headline": "Dein Arbeitsplatz.",
+    "subline": "Nur ein Beruf, aber viele Facetten. Bist du bereit?",
+    "categories": [
+      {
+        "id": "dachdecker",
+        "title": "Dachdecker/in",
+        "jobId": "dachdecker"
+      }
+    ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "work_environment",
+        "question": "Wo siehst du dich?",
+        "options": [
+          {
+            "id": "outdoor",
+            "label": "Draußen, bei Wind und Wetter",
+            "icon": "🌤️",
+            "imageUrl": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+            "score": {
+              "dachdecker": 2
+            }
+          },
+          {
+            "id": "indoor",
+            "label": "Drinnen, klimatisiert",
+            "icon": "🏢",
+            "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+            "score": {
+              "dachdecker": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "work_style",
+        "question": "Wie arbeitest du am liebsten?",
+        "options": [
+          {
+            "id": "hands_on",
+            "label": "Mit den Händen, sichtbare Ergebnisse",
+            "icon": "🔨",
+            "imageUrl": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
+            "score": {
+              "dachdecker": 2
+            }
+          },
+          {
+            "id": "digital",
+            "label": "Am Computer, digitale Projekte",
+            "icon": "💻",
+            "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+            "score": {
+              "dachdecker": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "mindset",
+        "question": "Was motiviert dich?",
+        "options": [
+          {
+            "id": "tangible",
+            "label": "Am Abend sehen, was ich geschafft habe",
+            "icon": "🏗️",
+            "imageUrl": "https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?w=800&q=80",
+            "score": {
+              "dachdecker": 2
+            }
+          },
+          {
+            "id": "abstract",
+            "label": "An langfristigen Konzepten arbeiten",
+            "icon": "📊",
+            "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+            "score": {
+              "dachdecker": 0
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Dein Match:",
+      "startButtonText": "Job erkunden",
+      "viewAllButtonText": "Alle Jobs",
+      "skipButtonText": "Überspringen"
+    }
+  },
+  "jobs": [
+    {
+      "id": "dachdecker",
+      "title": "Dachdecker/in (m/w/d)",
+      "description": "Bau Solar-Anlagen, dichte Dächer ab, begrüne Flachdächer und lerne Metallbau. Modernes Handwerk mit Zukunft – nicht nur Ziegel stapeln. 🏠🌱",
+      "icon": "🔨",
+      "color": "#c8102e",
+      "tags": [
+        "🌱 Energiewende-Job",
+        "💪 Handwerk trifft Technik",
+        "✅ Übernahmegarantie",
+        "⏰ Freitags früher"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der erste Check",
+          "status": "unlocked",
+          "icon": "🔍",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Moin! 👋 Willkommen auf der Baustelle. Heute sanieren wir ein altes Dach in Paderborn. Bevor wir loslegen, musst du das Dach checken. Der Kunde sagt: 'Es tropft irgendwo, aber ich weiß nicht wo.' Was machst du zuerst?",
+              "imageUrl": "https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?w=800&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Direkt aufs Dach und drauflos reparieren. 🔨",
+                  "correct": false,
+                  "feedback": "Whoa! Erst analysieren, dann handeln. Sonst reparierst du die falsche Stelle."
+                },
+                {
+                  "id": 2,
+                  "text": "Dach von innen prüfen, Wasserschäden suchen, dann rauf. 🔍",
+                  "correct": true,
+                  "feedback": "Genau! Profis denken mit. Von innen siehst du, wo's durchkommt. 🎯"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Materialkalkulation",
+          "status": "locked",
+          "icon": "📐",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du sollst ein Flachdach neu eindecken. 12m x 8m. Die Dachpappe kommt in Rollen à 10m². Der Chef fragt: 'Wie viele Rollen brauchst du? Denk dran: 10% Verschnitt einrechnen!' Was antwortest du?",
+              "imageUrl": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Einfach 10 Rollen bestellen, passt schon.",
+                "Rechne: 12x8 = 96m², +10% = 105,6m², also 11 Rollen.",
+                "Frag den Chef nochmal, bin unsicher."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Der Chef wartet auf deine Antwort. Kalkulierst du zu knapp, müssen wir nachbestellen – kostet Zeit und Geld. Zu viel? Verschwendung. Was ist deine Rechnung?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Sicherheitscheck",
+          "status": "locked",
+          "icon": "⚠️",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Baustelle in Salzkotten, steiles Dach (45° Neigung), 8m Höhe. Du sollst aufs Dach. Dein Kollege sagt: 'Komm, wir machen das schnell, Gerüst bauen dauert zu lang.' Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Okay, ist ja nur kurz, geht schon.",
+                "Nein. Erst Gerüst, dann arbeiten. Sicherheit geht vor.",
+                "Ich frag den Chef, was er sagt."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Dein Kollege wird ungeduldig: 'Jetzt stell dich nicht so an, das machen wir immer so!' Was sagst du?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Dein Alltag",
+          "status": "locked",
+          "icon": "💼",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Stark gemacht! 💪 Dachdecker bei Deppe Kallenberg ist kein 08/15-Job. Schau dir an, was dich erwartet:",
+              "imageUrl": "https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?w=800&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Vielfalt",
+                  "value": "Von Ziegel über Solar bis Dachbegrünung – jeden Tag was Neues.",
+                  "icon": "🌱",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Vergütung",
+                  "value": "Ca. 850-950 € im 1. Jahr, steigend bis über 1.200 € im 3. Jahr.",
+                  "icon": "💶",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Arbeitszeit",
+                  "value": "Mo-Do bis 16 Uhr, Fr bis 13 Uhr. Wochenende gehört dir.",
+                  "icon": "⏰",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Ausrüstung",
+                  "value": "Arbeitskleidung, Sicherheitsausrüstung & Werkzeug – alles gestellt.",
+                  "icon": "🦺",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Ehrlich gefragt: Was ist dir wichtig?",
+              "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Dass ich am Abend sehe, was ich geschafft habe. 🏗️",
+                  "feedback": "Genau das ist Handwerk. Kein abstraktes Blabla, sondern echte Ergebnisse."
+                },
+                {
+                  "id": 2,
+                  "text": "Dass ich draußen bin, nicht im Büro. 🌤️",
+                  "feedback": "Bei uns bist du an der frischen Luft – Sommer wie Winter. Ehrlich: Im Winter auch mal kalt."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Spezialisierung",
+          "status": "locked",
+          "icon": "🌱",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nach der Ausbildung kannst du dich spezialisieren: Solar-Experte, Dachbegrünung, Metallbau oder Altbausanierung. Oder du machst den Meister. Was reizt dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Solar – Energiewende mitgestalten. ☀️",
+                  "feedback": "Guter Move! Solar boomt, die Nachfrage explodiert. Zukunftssicher."
+                },
+                {
+                  "id": 2,
+                  "text": "Meister machen und selbst Chef werden. 👷",
+                  "feedback": "Respekt! Mit Meister kannst du dich selbstständig machen oder führen."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Moderne Technik",
+          "status": "locked",
+          "icon": "🚁",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Dachdecker ist nicht mehr nur Hammer und Ziegel. Wir nutzen Drohnen für Dachvermessung, digitale Planungstools und 3D-Modelle. Bock auf Tech im Handwerk?",
+              "imageUrl": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja! Handwerk + Digitalisierung = perfekt. 🚁",
+                  "feedback": "Genau! Moderne Dachdecker sind High-Tech-Handwerker."
+                },
+                {
+                  "id": 2,
+                  "text": "Lieber klassisch bleiben, ohne Schnickschnack. 🔨",
+                  "feedback": "Auch okay. Handwerk bleibt Handwerk. Aber Tech macht's leichter."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit für echtes Handwerk? Ruf uns an oder schreib uns – ohne Papierkram, ohne Vorzimmer. Wir freuen uns auf dich!",
+              "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich ruf an! Wo finde ich die Nummer? 📞",
+                  "feedback": "Top! Klick auf 'Ergebnis ansehen' für Kontaktdaten: 05258 9839-0"
+                },
+                {
+                  "id": 2,
+                  "text": "Kann ich vorher mal vorbeikommen? 👀",
+                  "feedback": "Klar! Ruf an und mach einen Termin. Komm vorbei, schau dir alles an."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "checkChances": "Chancen prüfen",
+    "expressApply": "Express Bewerbung",
+    "jobMerken": "Job merken",
+    "submit": "Zum Ergebnis",
+    "submitSuccess": "Stark! Wir melden uns.",
+    "victoryHeadline": "Du packst an! 🔨",
+    "victorySubtext": "Du hast das Zeug zum Dachdecker bei Deppe Kallenberg.",
+    "nudgeHeadline": "Fast geschafft!",
+    "nudgeText": "Mach den Check fertig und sicher dir deinen Ausbildungsplatz.",
+    "firstName": "Vorname",
+    "phoneType": "Telefonnummer",
+    "schoolType": "Schulabschluss",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule",
+    "gymnasium": "Abitur",
+    "andere": "Anderer",
+    "expressApplyIntro": "Hinterlass deine Nummer, wir rufen zurück.",
+    "exploreOtherJobs": "Andere Jobs ansehen"
+  }
+}
