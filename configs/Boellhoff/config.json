@@ -368,3 +368,329 @@
               "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
               "type": "single-select-no-correct",
               "options": [
+                {
+                  "id": 1,
+                  "text": "Klingt spannend – ich will früh führen. 💼",
+                  "feedback": "Perfekt. Hier lernst du, was es heißt, Boss zu sein – mit Sicherheitsnetz."
+                },
+                {
+                  "id": 2,
+                  "text": "Lieber erstmal Fachexperte werden. 🎯",
+                  "feedback": "Auch gut. Böllhoff hat Platz für Spezialisten UND Führungskräfte."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit, die Welt zusammenzuhalten? Bewirb dich jetzt – ganz einfach über unser Portal. Oder schreib uns auf WhatsApp. Wir freuen uns auf dich!",
+              "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Bin dabei! Wo kann ich mich bewerben? 📝",
+                  "feedback": "Top! Klick auf 'Ergebnis ansehen' für den Link zu jobs.boellhoff.com"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich hab noch Fragen. 💬",
+                  "feedback": "Kein Problem! WhatsApp an Verena Großert: +49 172 6413740"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maschinen-anlagenfuehrer",
+      "title": "Maschinen- und Anlagenführer/in (m/w/d)",
+      "description": "Steuere High-Tech-Produktionsanlagen, halte Millionen-Maschinen am Laufen und sorge für Präzision auf den Mikrometer. Kein Knopfdrücker – ein Tech-Profi. ⚙️🔧",
+      "icon": "⚙️",
+      "color": "#e84e1b",
+      "tags": [
+        "🤖 KI & Robotik",
+        "🔧 High-Tech",
+        "⚡ Echte Verantwortung",
+        "🎓 Bildungscampus"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der erste Tag",
+          "status": "unlocked",
+          "icon": "👀",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Willkommen in der Produktion! 👋 Vor dir steht eine CNC-gesteuerte Anlage, die pro Stunde 50.000 Spezialnieten für die Luftfahrt produziert. Ein Teil davon landet im Airbus A350. Dein Ausbilder zeigt dir die Maschine. Was checkst du als Erstes?",
+              "imageUrl": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich drück einfach auf Start. Learning by doing! 🚀",
+                  "correct": false,
+                  "feedback": "Whoa! Diese Maschine kostet mehr als ein Haus. Erst verstehen, dann starten."
+                },
+                {
+                  "id": 2,
+                  "text": "Sicherheitscheck, Programm prüfen, Materialqualität testen. ✅",
+                  "correct": true,
+                  "feedback": "Perfekt! Präzision beginnt vor dem ersten Teil. Du denkst wie ein Profi. 🎯"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Fehlersuche",
+          "status": "locked",
+          "icon": "🔍",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Alarm! 🚨 Die Anlage stoppt mitten in der Produktion. Display zeigt: 'Störung Sensor 3B'. Die Schicht endet in 2 Stunden, der Auftrag MUSS heute raus. Dein Meister ist in einem Meeting. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich starte die Maschine einfach neu.",
+                "Ich checke den Sensor und die Verkabelung.",
+                "Ich warte auf den Meister."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Du öffnest die Abdeckung. Der Sensor sitzt locker. Einfach festdrehen? Oder könnte das ein größeres Problem sein?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Qualität",
+          "status": "locked",
+          "icon": "🎯",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du produzierst gerade Spezialschrauben für E-Autos. Qualitätskontrolle: Du misst stichprobenartig. Ein Teil ist 0,02 mm zu dünn. Toleranz ist 0,01 mm. Das sind 2.000 Teile in dieser Charge. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "0,02 mm? Merkt doch keiner. Weiter geht's.",
+                "Maschine stoppen, Meister informieren, Charge prüfen.",
+                "Nur das eine Teil aussortieren."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Dein Kollege sagt: 'Komm, das ist so minimal, da passiert nichts. Wir haben Druck.' Was antwortest du?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Deine Technik-Welt",
+          "status": "locked",
+          "icon": "🤖",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Stark! 💪 Maschinen- und Anlagenführung bei Böllhoff ist High-Tech pur. Das erwartet dich:",
+              "imageUrl": "https://images.unsplash.com/photo-1581092918484-8313a6e1f03e?w=800&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "KI & Robotik",
+                  "value": "Im neuen Bildungscampus: KI-gesteuerte Maschinen, Robotik, Industrie 4.0.",
+                  "icon": "🤖",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Verantwortung",
+                  "value": "Wenn deine Anlage steht: Tausende Euro Verlust pro Stunde.",
+                  "icon": "⚡",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Vielfalt",
+                  "value": "Von Standardteilen bis Luft- & Raumfahrt: Jeden Tag neue Herausforderungen.",
+                  "icon": "🚀",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Moderne Hallen",
+                  "value": "Keine dreckigen Fabrikhallen – moderne Produktionsumgebung mit Präzisionstechnik.",
+                  "icon": "✨",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Was findest du am spannendsten?",
+              "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Dass meine Teile in Flugzeugen oder E-Autos landen. 🚗✈️",
+                  "feedback": "Hidden High-Tech! Du siehst sie nicht, aber ohne sie läuft nichts."
+                },
+                {
+                  "id": 2,
+                  "text": "Die Technik – Programmierung, Wartung, Optimierung. ⚙️",
+                  "feedback": "Du bist Techniker, kein Knopfdrücker. Genau richtig hier."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Techniker",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nach der Ausbildung: Industriemeister, Techniker oder duales Studium (Maschinenbau, Mechatronik). Böllhoff zahlt Semestergebühren und du bleibst im Unternehmen. Dein Move?",
+              "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Techniker oder Meister – ich will tiefer in die Materie. 🔧",
+                  "feedback": "Respekt! Von der Werkstatt zur Entwicklung – bei Böllhoff möglich."
+                },
+                {
+                  "id": 2,
+                  "text": "Dual studieren – Maschinenbau oder Mechatronik. 📚",
+                  "feedback": "Beste Kombi: Praxis UND Theorie. Böllhoff zahlt das Studium."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Spezialisierung",
+          "status": "locked",
+          "icon": "⚡",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Oder du spezialisierst dich: CNC-Programmierung, Robotik, Qualitätsmanagement, Instandhaltung. Böllhoff hat ein riesiges Weiterbildungsprogramm. Du entscheidest.",
+              "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "CNC & Robotik – ich will der Tech-Guru werden. 🤖",
+                  "feedback": "Im Bildungscampus hast du die neueste Technik. Los geht's!"
+                },
+                {
+                  "id": 2,
+                  "text": "Qualität & Instandhaltung – Präzision ist mein Ding. 🎯",
+                  "feedback": "0,01 mm können über Erfolg oder Absturz entscheiden. Respekt!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Einstieg",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit für High-Tech-Produktion und echte Verantwortung? Bewirb dich jetzt online oder melde dich per WhatsApp. Wir warten auf dich!",
+              "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Let's go! Wo bewerbe ich mich? 🔥",
+                  "feedback": "Stark! Klick auf 'Ergebnis ansehen' für den Link zu jobs.boellhoff.com"
+                },
+                {
+                  "id": 2,
+                  "text": "Kann ich vorher mal vorbeikommen? 👀",
+                  "feedback": "Klar! WhatsApp an Verena Großert: +49 172 6413740 für Schnuppertage."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "checkChances": "Chancen prüfen",
+    "expressApply": "Express Bewerbung",
+    "jobMerken": "Job merken",
+    "submit": "Zum Ergebnis",
+    "submitSuccess": "Stark! Wir freuen uns.",
+    "victoryHeadline": "Perfect Match! 🔩",
+    "victorySubtext": "Du hast das Zeug zum Böllhoff-Profi. Weltklasse aus Ostwestfalen.",
+    "nudgeHeadline": "Fast am Ziel!",
+    "nudgeText": "Mach den Check fertig und sicher dir deinen Platz bei Böllhoff.",
+    "firstName": "Vorname",
+    "phoneType": "Telefonnummer",
+    "schoolType": "Schulabschluss",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule",
+    "gymnasium": "Abitur",
+    "andere": "Anderer",
+    "expressApplyIntro": "Hinterlass deine Nummer, wir rufen zurück.",
+    "exploreOtherJobs": "Andere Jobs ansehen"
+  }
+}
