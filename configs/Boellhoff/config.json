@@ -1,0 +1,370 @@
+{
+  "company": {
+    "name": "Böllhoff Gruppe",
+    "slug": "boellhoff",
+    "logoUrl": "🔩",
+    "logoImageUrl": "https://www.boellhoff.com/de-de/themes/custom/boellhoff/logo.svg",
+    "signatureEmoji": "⚙️",
+    "primaryColor": "#0066b3",
+    "secondaryColor": "#333333",
+    "city": "Bielefeld",
+    "website": "https://www.boellhoff.com/karriere",
+    "industryVibe": "Wir halten die Welt zusammen. Ohne uns läuft in der Auto- und Luftfahrtindustrie nichts. Weltklasse aus Ostwestfalen – seit 1877.",
+    "organizationFacts": [
+      {
+        "title": "Tradition trifft Zukunft",
+        "value": "Familienunternehmen seit 1877 – 4. Generation, kein Ausverkauf.",
+        "icon": "🏛️"
+      },
+      {
+        "title": "Weltweite Präsenz",
+        "value": "44 Standorte in 26 Ländern. Deine Arbeit hat globale Wirkung.",
+        "icon": "🌍"
+      },
+      {
+        "title": "Bildungscampus",
+        "value": "1.600 m² High-Tech-Lernwelt mit KI, Robotik & eigener Azubi-Firma.",
+        "icon": "🚀"
+      },
+      {
+        "title": "Urlaub",
+        "value": "Bis zu 30 Tage Urlaub + vierwöchiger Auslandsaufenthalt im 2. Jahr möglich!",
+        "icon": "✈️"
+      },
+      {
+        "title": "Du-Kultur",
+        "value": "Vom Azubi bis zum Chef: Alle per Du, offene Türen, echte Gespräche.",
+        "icon": "🤝"
+      },
+      {
+        "title": "Persönliche Betreuung",
+        "value": "Ausbildungspaten, WhatsApp-Kontakt zur Leitung, keine Anonymität.",
+        "icon": "💬"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Wir halten die Welt zusammen. 🔩",
+    "subline": "Ohne unsere Verbindungstechnik? Kein E-Auto. Kein Flugzeug. Kein Smartphone. Werde Teil eines Familienunternehmens, das seit 1877 weltweit für Qualität steht – und dabei jeden Namen kennt.",
+    "startButtonText": "Finde deinen Platz 🎯"
+  },
+  "campus": {
+    "headline": "Dein Einsatzgebiet.",
+    "subline": "Steuerst du den Flow oder baust du die Maschinen?",
+    "categories": [
+      {
+        "id": "logistik",
+        "title": "Lager & Logistik",
+        "jobId": "lagerlogistik"
+      },
+      {
+        "id": "produktion",
+        "title": "Produktion & Technik",
+        "jobId": "maschinen-anlagenfuehrer"
+      }
+    ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "working_style",
+        "question": "Was reizt dich mehr?",
+        "options": [
+          {
+            "id": "overview",
+            "label": "Den Überblick behalten",
+            "icon": "📦",
+            "imageUrl": "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80",
+            "score": {
+              "lagerlogistik": 2,
+              "maschinen-anlagenfuehrer": 0
+            }
+          },
+          {
+            "id": "hands_on_tech",
+            "label": "Maschinen steuern & warten",
+            "icon": "⚙️",
+            "imageUrl": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
+            "score": {
+              "lagerlogistik": 0,
+              "maschinen-anlagenfuehrer": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "problem_solving",
+        "question": "Wenn's stressig wird: Was ist dein Move?",
+        "options": [
+          {
+            "id": "organize",
+            "label": "Neu planen & umorganisieren",
+            "icon": "📋",
+            "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+            "score": {
+              "lagerlogistik": 2,
+              "maschinen-anlagenfuehrer": 1
+            }
+          },
+          {
+            "id": "troubleshoot",
+            "label": "Fehler finden & reparieren",
+            "icon": "🔧",
+            "imageUrl": "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&q=80",
+            "score": {
+              "lagerlogistik": 0,
+              "maschinen-anlagenfuehrer": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "impact",
+        "question": "Womit fühlst du dich gut?",
+        "options": [
+          {
+            "id": "supply_chain",
+            "label": "Sicherstellen, dass alles pünktlich ankommt",
+            "icon": "🚚",
+            "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
+            "score": {
+              "lagerlogistik": 2,
+              "maschinen-anlagenfuehrer": 0
+            }
+          },
+          {
+            "id": "production",
+            "label": "Dafür sorgen, dass die Produktion läuft",
+            "icon": "⚡",
+            "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+            "score": {
+              "lagerlogistik": 1,
+              "maschinen-anlagenfuehrer": 2
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Dein Böllhoff-Match:",
+      "startButtonText": "Job erkunden",
+      "viewAllButtonText": "Alle Jobs",
+      "skipButtonText": "Überspringen"
+    }
+  },
+  "jobs": [
+    {
+      "id": "lagerlogistik",
+      "title": "Fachkraft für Lagerlogistik (m/w/d)",
+      "description": "Steuere globale Warenströme, optimiere Lagerplätze und sorge dafür, dass Millionen Teile pünktlich ankommen – weltweit. High-Tech trifft Organisation. 📦🌍",
+      "icon": "📦",
+      "color": "#0066b3",
+      "tags": [
+        "🌍 Globale Supply Chain",
+        "💻 Digitale Systeme",
+        "✈️ Ausland möglich",
+        "🎯 Echte Verantwortung"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Notfall",
+          "status": "unlocked",
+          "icon": "🚨",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Moin! 👋 Willkommen im Lager. Hier lagern 20 Millionen Verbindungselemente – von der Mini-Schraube bis zum XXL-Niet. Gerade kommt ein Anruf aus den USA: 'Wo bleibt unsere Lieferung? Unsere Produktion steht!' Du checkst das System. Die Palette steht noch hier. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Sofort irgendwas rausschicken. 📦",
+                  "correct": false,
+                  "feedback": "Stop! Erst prüfen, was schief lief. Falsche Teile verschlimmern alles. Zeit für Analyse."
+                },
+                {
+                  "id": 2,
+                  "text": "Ursache finden, Spediteur kontaktieren, Update geben. 📞",
+                  "correct": true,
+                  "feedback": "Genau! Transparent kommunizieren, Problem lösen. So funktioniert globale Logistik. 🎯"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Wareneingang",
+          "status": "locked",
+          "icon": "📥",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Große LKW-Lieferung aus China ist da. 80 Paletten mit Spezialnieten für die Automobilindustrie. Der Fahrer hat's eilig, will Unterschrift. Dein Kollege sagt: 'Komm, unterschreib einfach, Kontrolle machen wir später.' Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1586528116493-a029325540fa?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Unterschreibe. Zeit ist Geld.",
+                "Stichprobe nehmen – dann unterschreiben.",
+                "Komplette Kontrolle, auch wenn's dauert."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Der Fahrer wird ungeduldig: 'Ich hab noch 3 Stopps heute! Unterschreib jetzt oder ich fahr weiter!' Was sagst du?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Kommissionierung",
+          "status": "locked",
+          "icon": "🎯",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Eilauftrag aus Italien: 15 verschiedene Teiletypen für eine Flugzeugwartung. Deadline: Heute 16 Uhr, sonst bleibt ein Flieger am Boden. Du bist bei Teil 12 von 15. Plötzlich: Scanner zeigt 'Artikel nicht am Lagerplatz'. Was jetzt?",
+              "imageUrl": "https://images.unsplash.com/photo-1601598851547-4302969d0614?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Andere ähnliche Teile nehmen, merkt keiner.",
+                "Lagerplatz-Check & Bestandskorrektur starten.",
+                "Chef fragen, was ich machen soll."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Es ist 14:30 Uhr. Der Kunde ruft an: 'Ist das Paket unterwegs?' Du hast noch 3 Teile zu finden. Wie antwortest du?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Dein Arbeitsplatz",
+          "status": "locked",
+          "icon": "🏢",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Gut gemacht! 💪 Logistik bei Böllhoff ist kein 'Kisten schieben'. Schau dir an, was dich erwartet:",
+              "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "High-Tech",
+                  "value": "Scanner, Warenwirtschaftssysteme, digitale Routenoptimierung.",
+                  "icon": "💻",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Globaler Impact",
+                  "value": "Deine Arbeit beeinflusst Produktionen weltweit.",
+                  "icon": "🌍",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Teamwork",
+                  "value": "Du arbeitest mit Einkauf, Produktion & Versand zusammen.",
+                  "icon": "🤝",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Bildungscampus",
+                  "value": "1.600 m² mit modernster Logistik-Simulation & Junior Company.",
+                  "icon": "🎓",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Ehrlich: Was reizt dich am meisten?",
+              "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Die Verantwortung – wenn ich Mist baue, merkt man's sofort. 💥",
+                  "feedback": "Genau die richtige Einstellung. Bei uns zählt jede Entscheidung."
+                },
+                {
+                  "id": 2,
+                  "text": "Die internationale Dimension. 🌍",
+                  "feedback": "Du denkst in China, USA, Europa. Weltklasse aus Bielefeld – das ist Böllhoff."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Spezialisierung",
+          "status": "locked",
+          "icon": "📊",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nach der Ausbildung kannst du dich spezialisieren: Zoll & Export, Disposition, Lean Management, Gefahrgut. Oder du gehst in die Junior Company als Mentor. Böllhoff zahlt deine Weiterbildung. Worauf hast du Bock?",
+              "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Logistikmeister oder Fachwirt werden. 📈",
+                  "feedback": "Starker Move! Böllhoff unterstützt dich mit Seminaren und Zeit."
+                },
+                {
+                  "id": 2,
+                  "text": "Ins Ausland gehen – z.B. USA oder China. 🌏",
+                  "feedback": "44 Standorte weltweit. Deine Chance, die Welt zu sehen."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Junior Company",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du kannst in der Junior Company Verantwortung übernehmen: Azubis leiten dort eine echte Firma – Einkauf, Verkauf, Lager. Wenn du Bock auf Unternehmertum hast, ist das dein Spielplatz.",
+              "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
