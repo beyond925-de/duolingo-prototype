@@ -25,6 +25,17 @@ function validateConfig(filePath) {
       return false;
     }
 
+    // Validate state field if present
+    if (config.state !== undefined) {
+      const validStates = ["published", "unpublished", "draft"];
+      if (!validStates.includes(config.state)) {
+        console.error(
+          `❌ state must be one of: ${validStates.join(", ")}, got: ${config.state}`
+        );
+        return false;
+      }
+    }
+
     // Validate company
     if (!config.company.name || !config.company.slug || !config.company.primaryColor) {
       console.error("❌ Company must have name, slug, and primaryColor");

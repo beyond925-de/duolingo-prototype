@@ -1,7 +1,7 @@
 {
   "_instructions": "Action Deutschland Komplett-Konfiguration",
   "_filename": "configs/action/config.json",
-  "state": "published",
+  "state": "unpublished",
   "company": {
     "name": "Action Deutschland",
     "slug": "action-de",

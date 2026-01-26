@@ -34,6 +34,16 @@ function validateConfig(filePath) {
       errors.push(`Missing required top-level fields: ${missing.join(", ")}`);
     }
 
+    // Validate state field if present
+    if (config.state !== undefined) {
+      const validStates = ["published", "unpublished", "draft"];
+      if (!validStates.includes(config.state)) {
+        errors.push(
+          `state must be one of: ${validStates.join(", ")}, got: ${config.state}`
+        );
+      }
+    }
+
     // Validate company
     if (config.company) {
       const companyRequired = [
