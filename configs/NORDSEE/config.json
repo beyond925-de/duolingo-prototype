@@ -1,7 +1,7 @@
 {
   "_instructions": "Copy this template to create a new company config. Replace all placeholder values with your company's information.",
   "_filename": "configs/nordsee/config.json",
-
+  "state": "published",
   "company": {
     "name": "NORDSEE",
     "slug": "nordsee",

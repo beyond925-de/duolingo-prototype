@@ -1,7 +1,7 @@
 {
   "_instructions": "GWW Wiesbaden Ausbildungskonfiguration - Fokus: Immobilien & Soziales",
   "_filename": "configs/gww-wiesbaden/config.json",
-
+  "state": "published",
   "company": {
     "name": "GWW Wiesbaden",
     "slug": "gww-wiesbaden",

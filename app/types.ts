@@ -205,7 +205,10 @@ export interface CopyConfig {
   exploreOtherJobs: string;
 }
 
+export type ConfigState = "published" | "unpublished" | "draft";
+
 export interface CompanyConfig {
+  state?: ConfigState; // Defaults to "published" if not specified
   company: CompanyInfo;
   landing: LandingConfig;
   campus: CampusConfig;

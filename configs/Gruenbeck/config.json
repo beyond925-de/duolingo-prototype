@@ -1,5 +1,6 @@
 {
-"company": {
+  "state": "published",
+  "company": {
 "name": "Grünbeck AG",
 "slug": "gruenbeck",
 "logoUrl": "💧",

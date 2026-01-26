@@ -1,7 +1,7 @@
 {
   "_instructions": "Copy this template to create a new company config. Replace all placeholder values with your company's information.",
   "_filename": "configs/berliner-baeder/config.json",
-
+  "state": "published",
   "company": {
     "name": "Berliner Bäder",
     "slug": "berliner-baeder",

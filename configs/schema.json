@@ -5,6 +5,12 @@
   "type": "object",
   "required": ["company", "landing", "campus", "jobs", "copy"],
   "properties": {
+    "state": {
+      "type": "string",
+      "enum": ["published", "unpublished", "draft"],
+      "description": "Publication state of the config. Defaults to 'published' if not specified.",
+      "default": "published"
+    },
     "company": {
       "type": "object",
       "required": [

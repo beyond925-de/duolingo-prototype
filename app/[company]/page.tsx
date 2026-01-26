@@ -9,7 +9,7 @@ export default function CompanyPage({
 }) {
   const companyId = params.company;
 
-  // Try to load config, redirect to not-found if it doesn't exist
+  // Try to load config, redirect to not-found if it doesn't exist or is unpublished
   let config;
   try {
     config = loadCompanyConfig(companyId);

@@ -1,7 +1,7 @@
 {
   "_instructions": "Sparkasse Minden-Lübbecke - Hybrid Mode (Messe & Home). Fokus: Top-Gehalt, iPad-First & Mühlenkreis-Stolz.",
   "_filename": "configs/sparkasse-minden-luebbecke/config.json",
-
+  "state": "published",
   "company": {
     "name": "Sparkasse Minden-Lübbecke",
     "slug": "sparkasse-minden-luebbecke",

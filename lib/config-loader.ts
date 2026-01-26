@@ -3,11 +3,22 @@ import fs from "fs";
 import path from "path";
 
 /**
+ * Check if a config is published (defaults to true if state is not set)
+ * @param config - The company config
+ * @returns boolean indicating if config is published
+ */
+function isConfigPublished(config: CompanyConfig): boolean {
+  // Default to published if state is not specified (backward compatibility)
+  return config.state === undefined || config.state === "published";
+}
+
+/**
  * Find config file by slug
  * @param slug - The company slug
+ * @param includeUnpublished - Whether to include unpublished configs (default: false)
  * @returns Path to config file or null if not found
  */
-function findConfigBySlug(slug: string): string | null {
+function findConfigBySlug(slug: string, includeUnpublished: boolean = false): string | null {
   const configsDir = path.join(process.cwd(), "configs");
 
   if (!fs.existsSync(configsDir)) {
@@ -26,7 +37,10 @@ function findConfigBySlug(slug: string): string | null {
         const configContent = fs.readFileSync(configPath, "utf8");
         const config = JSON.parse(configContent) as CompanyConfig;
         if (config.company.slug === slug) {
-          return configPath;
+          // Only return if published or if includeUnpublished is true
+          if (includeUnpublished || isConfigPublished(config)) {
+            return configPath;
+          }
         }
       } catch (error) {
         // Skip invalid configs
@@ -41,15 +55,26 @@ function findConfigBySlug(slug: string): string | null {
 /**
  * Load a company config from the configs directory by slug
  * Falls back to folder name for backward compatibility
+ * Only loads published configs by default
  * @param companySlug - The company slug (or folder name for backward compatibility)
+ * @param includeUnpublished - Whether to include unpublished configs (default: false)
  * @returns The company configuration object
+ * @throws Error if config is not found or is unpublished (unless includeUnpublished is true)
  */
-export function loadCompanyConfig(companySlug: string): CompanyConfig {
+export function loadCompanyConfig(companySlug: string, includeUnpublished: boolean = false): CompanyConfig {
   // First try to find by slug
-  const configPathBySlug = findConfigBySlug(companySlug);
+  const configPathBySlug = findConfigBySlug(companySlug, includeUnpublished);
   if (configPathBySlug) {
     const configContent = fs.readFileSync(configPathBySlug, "utf8");
     const config = JSON.parse(configContent) as CompanyConfig;
+    
+    // Double-check published status if not including unpublished
+    if (!includeUnpublished && !isConfigPublished(config)) {
+      throw new Error(
+        `Config for company slug "${companySlug}" is not published`
+      );
+    }
+    
     return config;
   }
 
@@ -70,14 +95,23 @@ export function loadCompanyConfig(companySlug: string): CompanyConfig {
   const configContent = fs.readFileSync(configPath, "utf8");
   const config = JSON.parse(configContent) as CompanyConfig;
 
+  // Check published status if not including unpublished
+  if (!includeUnpublished && !isConfigPublished(config)) {
+    throw new Error(
+      `Config for company slug "${companySlug}" is not published`
+    );
+  }
+
   return config;
 }
 
 /**
  * Get a list of all available company slugs
+ * Only returns published configs by default
+ * @param includeUnpublished - Whether to include unpublished configs (default: false)
  * @returns Array of company slugs
  */
-export function getAvailableCompanies(): string[] {
+export function getAvailableCompanies(includeUnpublished: boolean = false): string[] {
   const configsDir = path.join(process.cwd(), "configs");
 
   if (!fs.existsSync(configsDir)) {
@@ -98,7 +132,10 @@ export function getAvailableCompanies(): string[] {
         const configContent = fs.readFileSync(configPath, "utf8");
         const config = JSON.parse(configContent) as CompanyConfig;
         if (config.company.slug) {
-          slugs.push(config.company.slug);
+          // Only include if published or if includeUnpublished is true
+          if (includeUnpublished || isConfigPublished(config)) {
+            slugs.push(config.company.slug);
+          }
         }
       } catch (error) {
         // Skip invalid configs
@@ -112,11 +149,13 @@ export function getAvailableCompanies(): string[] {
 
 /**
  * Check if a company config exists by slug
+ * Only checks published configs by default
  * @param companySlug - The company slug
+ * @param includeUnpublished - Whether to include unpublished configs (default: false)
  * @returns boolean indicating if config exists
  */
-export function companyConfigExists(companySlug: string): boolean {
-  return findConfigBySlug(companySlug) !== null;
+export function companyConfigExists(companySlug: string, includeUnpublished: boolean = false): boolean {
+  return findConfigBySlug(companySlug, includeUnpublished) !== null;
 }
 
 /**
