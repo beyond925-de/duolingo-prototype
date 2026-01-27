@@ -1,175 +1,186 @@
 {
-  "state": "unpublished",
   "company": {
     "name": "Eisenführ Speiser",
+    "slug": "eisenfuhr-speiser",
     "logoUrl": "⚖️",
     "logoImageUrl": "https://files.lbr.cloud/public/media/images/300_dpi_eisenfuhr_speiser_characterized_by_ip_kurzer_winkel_negativ_petrol.jpg",
-    "primaryColor": "#003056",
-    "secondaryColor": "#009fe3",
+    "signatureEmoji": "💡",
+    "primaryColor": "#003366",
+    "secondaryColor": "#0099cc",
     "city": "Bremen, München, Berlin, Hamburg",
     "website": "https://www.eisenfuhr.com/karriere",
-    "industryVibe": "Wir beschützen die Erfindungen der Zukunft. Ob Sneakers, Autos oder Software – wir sichern die Ideen ab.",
+    "industryVibe": "Keine klassische Anwaltskanzlei, sondern eine IP-Boutique. Wir schützen Innovationen – von Tesla-Batterien bis zu neuen Medikamenten. Digital seit 2011, international seit Tag 1.",
     "organizationFacts": [
       {
-        "title": "Voll Digital",
-        "value": "Keine verstaubten Aktenberge. Wir arbeiten seit 2011 komplett digital und papierlos.",
+        "title": "Digitale Pioniere",
+        "value": "Erste deutsche Patentanwaltskanzlei mit elektronischer Aktenführung (2011).",
         "icon": "💻"
       },
       {
-        "title": "International",
-        "value": "Wir arbeiten mit Partnern auf der ganzen Welt. Englisch gehört bei uns dazu.",
+        "title": "4 Standorte",
+        "value": "Bremen, München, Berlin, Hamburg – du wählst deine Stadt.",
         "icon": "🌍"
       },
       {
-        "title": "Bleib bei uns",
-        "value": "Wir bilden aus, um zu übernehmen. Deine Zukunft ist hier sicher.",
-        "icon": "🤝"
+        "title": "Über 300 Mitarbeiter",
+        "value": "70+ Anwälte, großes Team – aber familiär und wertschätzend.",
+        "icon": "👥"
+      },
+      {
+        "title": "Internationale Korrespondenz",
+        "value": "E-Mails ans Europäische Patentamt, USA, China, Japan – dein Alltag.",
+        "icon": "📧"
+      },
+      {
+        "title": "Übernahmegarantie",
+        "value": "Nach erfolgreicher Ausbildung wollen wir dich langfristig halten.",
+        "icon": "✅"
+      },
+      {
+        "title": "Innovation schützen",
+        "value": "Du sorgst dafür, dass Erfindungen nicht geklaut werden – echter Impact.",
+        "icon": "🔐"
       }
     ]
   },
   "landing": {
-    "headline": "Manager:in für Weltneuheiten. 💡",
-    "subline": "Erfindungen schützen und international managen – komplett digital. Finde heraus, ob du ins Team passt.",
-    "startButtonText": "Mission starten 🚀"
+    "headline": "Wir schützen die Zukunft. 💡",
+    "subline": "Keine verstaubten Akten, keine Gerichtssäle. Als Patentanwaltsfachangestellte/r schützt du Innovationen – von E-Auto-Batterien bis zu neuen Medikamenten. Digital seit 2011, international seit Tag 1.",
+    "startButtonText": "Innovation erleben ⚖️"
   },
   "campus": {
-    "headline": "Dein Talent?",
-    "subline": "Was liegt dir mehr? Finde deinen Einstieg.",
+    "headline": "Dein Einsatzgebiet.",
+    "subline": "Nur ein Beruf, aber die Welt der Innovation.",
     "categories": [
       {
-        "id": "org",
-        "title": "Organisieren & Planen",
-        "jobId": "pafa"
-      },
-      {
-        "id": "law",
-        "title": "Recht & Genauigkeit",
-        "jobId": "pafa"
-      },
-      {
-        "id": "tech",
-        "title": "Digitales & Innovation",
-        "jobId": "pafa"
+        "id": "ip-law",
+        "title": "IP & Patentrecht",
+        "jobId": "patentanwaltsfachangestellter"
       }
     ]
   },
   "questionnaire": {
     "questions": [
       {
-        "id": "workstyle",
-        "question": "Wie sieht dein perfekter Schreibtisch aus?",
-        "options": [
-          {
-            "id": "digital",
-            "label": "Clean, modern, zwei Bildschirme, kein Papierkram",
-            "icon": "🖥️",
-            "imageUrl": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800",
-            "score": {
-              "pafa": 3
-            }
-          },
-          {
-            "id": "chaos",
-            "label": "Bunte Zettel überall, kreatives Chaos",
-            "icon": "🎨",
-            "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800",
-            "score": {
-              "pafa": 0
-            }
-          }
-        ]
-      },
-      {
-        "id": "interest",
-        "question": "Worum kümmerst du dich lieber?",
+        "id": "work_environment",
+        "question": "Was reizt dich mehr?",
         "options": [
           {
             "id": "innovation",
-            "label": "Die neusten Erfindungen und Marken schützen",
+            "label": "Innovation schützen & internationale Korrespondenz",
             "icon": "💡",
-            "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800",
+            "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
             "score": {
-              "pafa": 2
+              "patentanwaltsfachangestellter": 2
             }
           },
           {
-            "id": "people",
-            "label": "Nur Menschen beraten, ohne Technik",
-            "icon": "🗣️",
-            "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800",
+            "id": "courtroom",
+            "label": "Gerichtsverhandlungen & Drama wie in 'Suits'",
+            "icon": "⚖️",
+            "imageUrl": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80",
             "score": {
-              "pafa": 1
+              "patentanwaltsfachangestellter": 0
             }
           }
         ]
       },
       {
-        "id": "team",
-        "question": "Wie arbeitest du?",
+        "id": "precision",
+        "question": "Wie gehst du mit Verantwortung um?",
         "options": [
           {
-            "id": "together",
-            "label": "Im Team, unterstützend und verlässlich",
-            "icon": "🤝",
-            "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800",
+            "id": "detail_oriented",
+            "label": "Ich arbeite präzise, Deadlines sind heilig",
+            "icon": "📅",
+            "imageUrl": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
             "score": {
-              "pafa": 2
+              "patentanwaltsfachangestellter": 2
             }
           },
           {
-            "id": "solo",
-            "label": "Ich mache mein Ding alleine",
-            "icon": "🐺",
-            "imageUrl": "https://images.unsplash.com/photo-1507537297725-24a1c434c67b?w=800",
+            "id": "relaxed",
+            "label": "Ich bin eher locker, 'wird schon passen'",
+            "icon": "😎",
+            "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
             "score": {
-              "pafa": 0
+              "patentanwaltsfachangestellter": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "tech_affinity",
+        "question": "Wie stehst du zu Technik & Digitalisierung?",
+        "options": [
+          {
+            "id": "digital_native",
+            "label": "Digitale Tools & internationale E-Mails – mein Ding",
+            "icon": "💻",
+            "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+            "score": {
+              "patentanwaltsfachangestellter": 2
+            }
+          },
+          {
+            "id": "analog",
+            "label": "Ich arbeite lieber mit Papier & Stift",
+            "icon": "📝",
+            "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80",
+            "score": {
+              "patentanwaltsfachangestellter": 0
             }
           }
         ]
       }
     ],
     "suggestionText": {
-      "headline": "Wir haben ein Match!",
-      "startButtonText": "Beruf entdecken",
-      "viewAllButtonText": "Alles ansehen",
-      "skipButtonText": "Direkt zu den Fakten"
+      "headline": "Dein Match:",
+      "startButtonText": "Job erkunden",
+      "viewAllButtonText": "Alle Jobs",
+      "skipButtonText": "Überspringen"
     }
   },
   "jobs": [
     {
-      "id": "pafa",
-      "title": "Patentanwaltsfachangestellte:r",
-      "description": "Manager:in für Erfindungen. Schütze Ideen weltweit! 🌍⚖️",
+      "id": "patentanwaltsfachangestellter",
+      "title": "Patentanwaltsfachangestellte/r (m/w/d)",
+      "description": "Schütze Innovationen weltweit, kommuniziere mit Patentämtern in USA, China & Europa und arbeite digital seit 2011. Kein Gerichtssaal, sondern der Maschinenraum der Tech-Zukunft. ⚖️💡",
       "icon": "⚖️",
-      "color": "#003056",
-      "tags": ["💻 Digital", "🌍 International", "🚀 Zukunftssicher"],
-      "pathModeId": "linear",
+      "color": "#003366",
+      "tags": [
+        "💡 Innovation schützen",
+        "🌍 Internationale Korrespondenz",
+        "💻 Digital seit 2011",
+        "✅ Übernahme nach Ausbildung"
+      ],
+      "pathModeId": "branching",
       "levels": [
         {
           "id": 1,
-          "title": "Die Idee",
+          "title": "Der erste Kontakt",
           "status": "unlocked",
-          "icon": "💡",
+          "icon": "📞",
           "row": 0,
-          "nextLevelIds": [2],
+          "nextLevelIds": [2, 3],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Stell dir vor: Ein Mandant hat einen Sneaker erfunden, der nie schmutzig wird. 👟✨ Damit das keiner klaut, kommt er zu uns. Was ist dein erster Job?",
-              "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+              "scenario": "Willkommen bei Eisenführ Speiser! 👋 Ein Mandant ruft an: 'Unsere Patent-Anmeldung für eine neue Batterietechnologie muss MORGEN raus, sonst verlieren wir den Schutz!' Deadline ist in 18 Stunden. Was ist dein erster Move?",
+              "imageUrl": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80",
               "type": "single-select-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Ich rufe sofort die Zeitung an! 📰",
+                  "text": "Sagen: 'Wird knapp, aber wir versuchen's.' 🤷",
                   "correct": false,
-                  "feedback": "Halt, stopp! 🤫 Erfindungen müssen geheim bleiben, bis sie angemeldet sind."
+                  "feedback": "Nope! In IP-Law bedeutet 'versuchen' = Millionenverlust. Du musst SOFORT handeln."
                 },
                 {
                   "id": 2,
-                  "text": "Ich bereite die Anmeldung beim Patentamt vor 📝",
+                  "text": "Anwalt informieren, Unterlagen prüfen, Frist im System markieren. 🚨",
                   "correct": true,
-                  "feedback": "Genau! Wir sorgen dafür, dass die Idee rechtlich geschützt wird."
+                  "feedback": "Genau! Präzision rettet hier Millionen. Willkommen im Maschinenraum der Innovation. 🎯"
                 }
               ]
             }
@@ -177,29 +188,27 @@
         },
         {
           "id": 2,
-          "title": "Digital First",
+          "title": "Mission: Fristenmanagement",
           "status": "locked",
-          "icon": "💻",
+          "icon": "📅",
           "row": 1,
-          "nextLevelIds": [3],
+          "nextLevelIds": [4],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Bei Eisenführ Speiser arbeiten wir anders als viele andere Kanzleien. Der Anwalt gibt dir wichtige Dokumente für den Fall. Wohin damit?",
-              "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800",
-              "type": "single-select-correct",
-              "options": [
+              "scenario": "Du verwaltest 15 laufende Patent-Anmeldungen. Dein elektronisches Fristenmanagement-System zeigt: Patent DE123456 läuft in 3 Tagen ab. Verlängerung nötig! Aber der zuständige Anwalt ist im Urlaub. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Warte, bis der Anwalt zurück ist.",
+                "Kontaktiere Vertretung, prüfe Akte, bereite Verlängerung vor.",
+                "Ignoriere es, wird schon nicht so schlimm sein."
+              ],
+              "conversationHistory": [
                 {
-                  "id": 1,
-                  "text": "Lochen und in den dicken Ordner heften 📂",
-                  "correct": false,
-                  "feedback": "Das war gestern! Wir sind seit 2011 Vorreiter und arbeiten komplett digital."
-                },
-                {
-                  "id": 2,
-                  "text": "In die elektronische Akte einsortieren 💾",
-                  "correct": true,
-                  "feedback": "Exakt! 🚀 Wir sind 'Digital Natives'. Kein Papierchaos, volle Übersicht am PC."
+                  "role": "assistant",
+                  "content": "Das System zeigt: Frist läuft in 72 Stunden ab. Nach Ablauf: Patent verfällt, Mandant verliert Millionen. Der Anwalt ist erst in 5 Tagen zurück. Was ist dein nächster Schritt?"
                 }
               ]
             }
@@ -207,22 +216,27 @@
         },
         {
           "id": 3,
-          "title": "International",
+          "title": "Mission: Internationale Korrespondenz",
           "status": "locked",
-          "icon": "🌍",
-          "row": 2,
+          "icon": "📧",
+          "row": 1,
           "nextLevelIds": [4],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Der 'Unschmutzbar-Sneaker' soll auch in Japan verkauft werden. 🇯🇵 Ein Brief muss nach Tokio. Wie fit bist du?",
-              "imageUrl": "https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?w=800",
+              "scenario": "Du musst eine E-Mail ans Europäische Patentamt (EPA) schreiben. Es geht um eine Nachfrist für eine Patent-Anmeldung aus den USA. Dein Anwalt hat dir die Infos gegeben, aber die E-Mail musst DU schreiben. Wie startest du?",
+              "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
               "type": "llm-interactive",
               "options": [],
+              "initialQuickReplies": [
+                "Hey EPA, we need an extension, thanks!",
+                "Dear Sir or Madam, we hereby request...",
+                "Ich schreib auf Deutsch, die verstehen das schon."
+              ],
               "conversationHistory": [
                 {
                   "role": "assistant",
-                  "content": "Ein Brief nach Japan! 🌏 Auf Deutsch verstehen die uns dort wohl nicht. Was meinst du, welche Sprache nutzen wir im Büro dafür?"
+                  "content": "Das EPA arbeitet offiziell auf Englisch, Französisch und Deutsch. Aber informelle Sprache ist ein No-Go. Wie formulierst du die Anfrage professionell?"
                 }
               ]
             }
@@ -230,29 +244,72 @@
         },
         {
           "id": 4,
-          "title": "Deadline!",
+          "title": "Dein Arbeitsalltag",
           "status": "locked",
-          "icon": "⏳",
-          "row": 3,
-          "nextLevelIds": [5],
+          "icon": "💼",
+          "row": 2,
+          "nextLevelIds": [5, 6],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Das Patentamt hat eine Frist gesetzt: Bis Montag muss eine Antwort da sein. Wenn wir das verpassen, ist das Patent weg! 😱 Wie gehst du damit um?",
-              "imageUrl": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800",
-              "type": "single-select-correct",
+              "scenario": "Starke Leistung! 💪 Patentanwaltsfachangestellte bei Eisenführ Speiser ist kein 0815-Bürojob. Schau dir an, was dich erwartet:",
+              "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Digital seit 2011",
+                  "value": "Keine Aktenschränke. Elektronisches Fristenmanagement & digitale Akten.",
+                  "icon": "💻",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Vergütung",
+                  "value": "Ca. 950-1.050 € im 1. Jahr, steigend (IHK-Standard).",
+                  "icon": "💶",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "4 Standorte",
+                  "value": "Bremen, München, Berlin, Hamburg – du wählst deine Stadt.",
+                  "icon": "🌍",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Internationale Korrespondenz",
+                  "value": "E-Mails ans EPA, USPTO (USA), CNIPA (China) – dein Alltag.",
+                  "icon": "📧",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Ehrlich gefragt: Was reizt dich am meisten?",
+              "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+              "type": "single-select-no-correct",
               "options": [
                 {
                   "id": 1,
-                  "text": "Ich schreibe mir einen Zettel und hoffe, dass ich dran denke 📝",
-                  "correct": false,
-                  "feedback": "Zu riskant! Bei uns geht es um Millionenwerte."
+                  "text": "Innovation schützen – ich bin im Tech-Game, ohne zu coden. 💡",
+                  "feedback": "Genau! Du bist die erste Reihe beim Fortschritt – ohne ein einziges Patent selbst zu erfinden."
                 },
                 {
                   "id": 2,
-                  "text": "Ich trage die Frist sofort ins digitale System ein 🛡️",
-                  "correct": true,
-                  "feedback": "Richtig. Unser System überwacht alles. Genauigkeit ist deine Superkraft."
+                  "text": "Internationale Arbeit – USA, China, Europa. 🌍",
+                  "feedback": "Bingo! Mit 18 hast du mehr internationale Business-Experience als die meisten 30-Jährigen."
                 }
               ]
             }
@@ -260,54 +317,27 @@
         },
         {
           "id": 5,
-          "title": "Deine Benefits",
+          "title": "Weg: Digitalisierung & Tech",
           "status": "locked",
-          "icon": "🎁",
-          "row": 4,
-          "nextLevelIds": [6],
+          "icon": "💻",
+          "row": 3,
+          "nextLevelIds": [7],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Puh, Frist eingehalten! 🎉 Gute Arbeit wird bei uns belohnt. Was erwartet dich hier?",
-              "imageUrl": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800",
-              "type": "bento-grid",
-              "options": [],
-              "facts": [
+              "scenario": "Eisenführ Speiser war 2011 die ERSTE deutsche Patentanwaltskanzlei mit elektronischer Aktenführung. Während andere heute noch Papier schleppen, bist du hier 10 Jahre voraus. Willst du die Zukunft gestalten?",
+              "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
                 {
-                  "title": "Karriere-Turbo",
-                  "value": "Mit Abi kannst du die Ausbildung auf 2 Jahre verkürzen.",
-                  "icon": "⏩",
-                  "layout": {
-                    "colSpan": 2,
-                    "rowSpan": 1
-                  }
+                  "id": 1,
+                  "text": "Ja! Digitales Arbeiten ist die Zukunft. 💻",
+                  "feedback": "Stark! Du lernst Tools, die in 10 Jahren Standard sind – aber heute kaum jemand kann."
                 },
                 {
-                  "title": "Bleib hier",
-                  "value": "Hohe Übernahmechancen nach der Ausbildung.",
-                  "icon": "🤝",
-                  "layout": {
-                    "colSpan": 1,
-                    "rowSpan": 1
-                  }
-                },
-                {
-                  "title": "Top Lage",
-                  "value": "Büros direkt in der City (München, Berlin, HH, Bremen).",
-                  "icon": "🏙️",
-                  "layout": {
-                    "colSpan": 1,
-                    "rowSpan": 1
-                  }
-                },
-                {
-                  "title": "Events",
-                  "value": "Ausflüge & Feiern mit allen Standorten.",
-                  "icon": "🥂",
-                  "layout": {
-                    "colSpan": 2,
-                    "rowSpan": 1
-                  }
+                  "id": 2,
+                  "text": "Lieber klassisch mit Papier & Aktenordnern. 📂",
+                  "feedback": "Ehrlich: Das wäre hier der falsche Ort. Eisenführ Speiser ist 100% digital."
                 }
               ]
             }
@@ -315,27 +345,55 @@
         },
         {
           "id": 6,
-          "title": "Dein Start",
+          "title": "Weg: Internationale Karriere",
           "status": "locked",
-          "icon": "🚀",
-          "row": 5,
+          "icon": "🌍",
+          "row": 3,
+          "nextLevelIds": [7],
           "scenarios": [
             {
               "id": 1,
-              "scenario": "Du passt perfekt zu uns! Du magst Technik, bist genau und willst digital arbeiten? Dann bewirb dich jetzt für 2026.",
-              "imageUrl": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800",
+              "scenario": "Nach der Ausbildung stehen dir viele Wege offen: Patentanwaltsfachwirt, internationale Kanzleien, Tech-Unternehmen. Oder du bleibst bei Eisenführ Speiser – die wollen dich langfristig. Was reizt dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Hier bleiben und aufsteigen – Sicherheit & Perspektive. ✅",
+                  "feedback": "Eisenführ Speiser sagt klar: Wir wollen dich nach der Ausbildung behalten."
+                },
+                {
+                  "id": 2,
+                  "text": "Mit dem Skillset die Welt erobern – ins Ausland, zu Tech-Firmen. 🚀",
+                  "feedback": "Mit IP-Know-how & internationaler Erfahrung stehen dir alle Türen offen."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit, Innovation zu schützen? Bewirb dich jetzt für 2026 – an einem der 4 Standorte. Aber Achtung: Das ist kein 'chill Bürojob'. Fristen sind heilig, Präzision ist Pflicht. Bist du dabei?",
+              "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
               "type": "single-select-or-text",
               "allowTextInput": true,
               "options": [
                 {
                   "id": 1,
-                  "text": "Klingt super, ich will mich bewerben! 📝",
-                  "feedback": "Klasse! Wir freuen uns auf deine Bewerbung (gerne per Mail)."
+                  "text": "Ja! Wo kann ich mich bewerben? 📝",
+                  "feedback": "Top! Klick auf 'Ergebnis ansehen' für den Link zum Bewerbungsportal."
                 },
                 {
                   "id": 2,
-                  "text": "Ich hab noch Fragen. 🤔",
-                  "feedback": "Kein Problem! Frau Franker aus dem HR-Team hilft dir gerne weiter."
+                  "text": "Ich hab noch Fragen zur Ausbildung. ❓",
+                  "feedback": "Kein Problem! Kontaktiere Bettina Franker (HR): +49 421 3635-0"
                 }
               ]
             }
@@ -345,24 +403,24 @@
     }
   ],
   "copy": {
-    "checkChances": "Checke meine Chancen",
-    "expressApply": "Direkt bewerben",
+    "checkChances": "Chancen prüfen",
+    "expressApply": "Express Bewerbung",
     "jobMerken": "Job merken",
-    "submit": "Ergebnisse senden",
-    "submitSuccess": "Top! Wir melden uns schnellstmöglich bei dir.",
-    "victoryHeadline": "Mission erfüllt! 🏆",
-    "victorySubtext": "Du hast das Zeug zum Patent-Profi. Genauigkeit und digitales Denken liegen dir.",
-    "nudgeHeadline": "Mal ehrlich...",
-    "nudgeText": "Du hast echt Talent für den Job. Wir sind keine verstaubte Kanzlei – lern uns kennen! ✨",
-    "firstName": "Wie heißt du?",
-    "phoneType": "Dein Smartphone?",
-    "schoolType": "Deine Schule?",
+    "submit": "Zum Ergebnis",
+    "submitSuccess": "Stark! Wir freuen uns.",
+    "victoryHeadline": "Innovation ist dein Ding! 💡",
+    "victorySubtext": "Du hast das Zeug zur Patentanwaltsfachangestellten bei Eisenführ Speiser.",
+    "nudgeHeadline": "Fast geschafft!",
+    "nudgeText": "Mach den Check fertig und sicher dir deinen Ausbildungsplatz.",
+    "firstName": "Vorname",
+    "phoneType": "Telefonnummer",
+    "schoolType": "Schulabschluss",
     "android": "Android",
     "iphone": "iPhone",
     "realschule": "Realschule",
-    "gymnasium": "Gymnasium / Fachabi",
-    "andere": "Andere / Hab schon Abschluss",
-    "expressApplyIntro": "Lass uns kurz Daten tauschen – wir melden uns bei dir!",
-    "exploreOtherJobs": "Noch mal schauen"
+    "gymnasium": "Abitur",
+    "andere": "Anderer",
+    "expressApplyIntro": "Hinterlass deine Nummer, wir rufen zurück.",
+    "exploreOtherJobs": "Andere Jobs ansehen"
   }
 }
