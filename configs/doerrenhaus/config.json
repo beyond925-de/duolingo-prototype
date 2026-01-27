@@ -1,0 +1,426 @@
+{
+  "company": {
+    "name": "Dörrenhaus",
+    "slug": "doerrenhaus",
+    "logoUrl": "🚛",
+    "logoImageUrl": "https://www.doerrenhaus.com/wp-content/uploads/sites/8/2025/06/Doerrenhaus_logo_RGB-1030x222.png",
+    "signatureEmoji": "🌍",
+    "primaryColor": "#004a99",
+    "secondaryColor": "#e30613",
+    "city": "Velbert (Zentrale), Köln, Hamburg",
+    "website": "https://www.doerrenhaus.com/karriere",
+    "industryVibe": "Logistik-Wohnzimmer mit Weltanschluss. Wir sind die Schaltzentrale des Welthandels – aber mit Handschlag-Mentalität und echten Namen statt Personalnummern.",
+    "organizationFacts": [
+      {
+        "title": "50 Jahre",
+        "value": "Ein Fels in der Brandung. Krisensicher seit einem halben Jahrhundert.",
+        "icon": "⚓"
+      },
+      {
+        "title": "Family Business",
+        "value": "Hier laufen die Chefs Lars und Arne noch selbst durch den Flur.",
+        "icon": "👨‍👩‍👧‍👦"
+      },
+      {
+        "title": "Global Player",
+        "value": "Velbert ist die Basis, die Welt dein Spielfeld (China, USA, überall).",
+        "icon": "🌐"
+      },
+      {
+        "title": "Eigene Power",
+        "value": "Wir haben eigene Lager & LKW – wir sind unabhängig und stark.",
+        "icon": "🚛"
+      },
+      {
+        "title": "Echte Projekte",
+        "value": "Kein Kaffeekochen. Du managst echte Fracht ab Tag 1.",
+        "icon": "🚀"
+      },
+      {
+        "title": "Persönlich",
+        "value": "Partner statt Nummern. Bei uns zählt das menschliche Miteinander.",
+        "icon": "🤝"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Manager der Weltwirtschaft. 📦",
+    "subline": "Vergiss 'Kistenschleppen'. Bei Dörrenhaus steuerst du globale Warenströme. Vom Schreibtisch in Velbert aus die Welt bewegen – familiär, sicher, international.",
+    "startButtonText": "Logistik-Check starten 🚢"
+  },
+  "campus": {
+    "headline": "Dein Tower.",
+    "subline": "Hier übernimmst du das Steuer des Welthandels.",
+    "categories": [
+      {
+        "id": "logistics-management",
+        "title": "Logistik & Management",
+        "jobId": "kaufmann-spedition"
+      }
+    ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "work_environment",
+        "question": "Wo fühlst du dich wohl?",
+        "options": [
+          {
+            "id": "family",
+            "label": "Im 'Wohnzimmer': Familiär, man kennt sich, kurze Wege.",
+            "icon": "🏠",
+            "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
+            "score": {
+              "kaufmann-spedition": 2
+            }
+          },
+          {
+            "id": "anonymous",
+            "label": "In der anonymen Masse eines Großraumbüros.",
+            "icon": "🏢",
+            "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+            "score": {
+              "kaufmann-spedition": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "task_type",
+        "question": "Was willst du tun?",
+        "options": [
+          {
+            "id": "manage",
+            "label": "Strategie & Planen: Dafür sorgen, dass Dinge ankommen.",
+            "icon": "🗺️",
+            "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
+            "score": {
+              "kaufmann-spedition": 2
+            }
+          },
+          {
+            "id": "carry",
+            "label": "Nur körperlich arbeiten, Kopf aus.",
+            "icon": "📦",
+            "imageUrl": "https://images.unsplash.com/photo-1505663919830-4740e29082be?w=800&q=80",
+            "score": {
+              "kaufmann-spedition": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "mindset",
+        "question": "Wie wichtig ist dir 'Impact'?",
+        "options": [
+          {
+            "id": "systemrelevant",
+            "label": "Sehr! Ohne mich stehen Bänder still und Regale sind leer.",
+            "icon": "⚡",
+            "imageUrl": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80",
+            "score": {
+              "kaufmann-spedition": 2
+            }
+          },
+          {
+            "id": "egal",
+            "label": "Egal, hauptsache die Zeit vergeht.",
+            "icon": "zzz",
+            "imageUrl": "https://images.unsplash.com/photo-1453738773917-9c3eff1db985?w=800&q=80",
+            "score": {
+              "kaufmann-spedition": 0
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Dein Match:",
+      "startButtonText": "Mission starten",
+      "viewAllButtonText": "Alle Jobs",
+      "skipButtonText": "Überspringen"
+    }
+  },
+  "jobs": [
+    {
+      "id": "kaufmann-spedition",
+      "title": "Kaufmann/-frau für Spedition & Logistik (m/w/d)",
+      "description": "Du bist der Architekt des Transports. Seefracht, Luftfracht, Zoll – du organisierst, dass Waren von A nach B kommen. International, digital und mit echter Verantwortung. 🚢✈️",
+      "icon": "📦",
+      "color": "#004a99",
+      "tags": [
+        "🌍 Internationales Netzwerk",
+        "🤝 Familiäres Team",
+        "💼 Echte Verantwortung",
+        "⚓ Sicherer Arbeitsplatz"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Ernstfall",
+          "status": "unlocked",
+          "icon": "🚨",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein Kunde ruft an: 'Unser Container hängt im Hafen von Shanghai fest! Wenn die Teile nicht in 3 Tagen hier sind, steht unsere Produktion still.' Du bist erst im 1. Lehrjahr. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1494412574643-35d3d4018909?w=800&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Auflegen und hoffen, dass es keiner merkt. 🙈",
+                  "correct": false,
+                  "feedback": "No way! In der Logistik ducken wir uns nicht weg. Wir lösen Probleme."
+                },
+                {
+                  "id": 2,
+                  "text": "Ruhe bewahren, Partner in China kontaktieren, Alternativen prüfen. 📞",
+                  "correct": true,
+                  "feedback": "Bingo! Genau das ist der Job. Du bist Manager, Problemlöser und Retter in der Not."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Global Connect",
+          "status": "locked",
+          "icon": "🌐",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du musst eine E-Mail an einen Partner in New York schreiben, um eine Luftfracht zu klären. Dein Schul-Englisch ist 'okay', aber du bist nervös. Wie gehst du ran?",
+              "imageUrl": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich nutze Google Translate und schick's einfach ab.",
+                "Ich trau mich! 'Hello partner, we need a solution...'",
+                "Ich lass das lieber den Chef machen."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Hier bei Dörrenhaus werfen wir dich ins kalte Wasser – aber mit Schwimmweste. Wir kommunizieren täglich weltweit. Wie startest du die Mail?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Family Vibe",
+          "status": "locked",
+          "icon": "🤝",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Dir ist ein Fehler unterlaufen: Eine Palette wurde falsch gebucht. Der LKW steht schon an der Rampe. Du hast Angst vor Ärger. Was passiert bei Dörrenhaus?",
+              "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich werde bestimmt gefeuert. 😨",
+                  "feedback": "Quatsch! Wir sind ein Familienunternehmen. Fehler passieren, wir lernen draus und lösen es gemeinsam."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich geh zum Kollegen: 'Mist gebaut, hilfst du mir?' 🛠️",
+                  "feedback": "Genau so! 'Partnerschaftliches Handeln' gilt auch intern. Wir halten zusammen."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Inside Dörrenhaus",
+          "status": "locked",
+          "icon": "🏢",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Logistik ist mehr als LKW. Schau dir an, was dich hier erwartet:",
+              "imageUrl": "https://images.unsplash.com/photo-1566576912902-192187313042?w=800&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "50 Jahre sicher",
+                  "value": "Kein Start-up-Risiko. Wir sind etabliert und wachsen stetig.",
+                  "icon": "🛡️",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "International",
+                  "value": "Täglicher Kontakt mit der ganzen Welt.",
+                  "icon": "🌍",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Family",
+                  "value": "Kurze Wege, offene Türen, echte Gemeinschaft.",
+                  "icon": "👨‍👩‍👧‍👦",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Verantwortung",
+                  "value": "Du wirst schnell in echte Projekte eingebunden.",
+                  "icon": "🚀",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Was catcht dich am meisten?",
+              "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Dass ich Teil eines echten Teams bin, keine Nummer. 💙",
+                  "feedback": "Das ist unsere DNA. Persönlich & nah."
+                },
+                {
+                  "id": 2,
+                  "text": "Dass ich die Welt managen kann. 🌏",
+                  "feedback": "Logistik ist der Motor der Weltwirtschaft – und du sitzt am Steuer."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Der Experte",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nach der Ausbildung stehen dir alle Türen offen. Dörrenhaus wächst weiter. Wo siehst du dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Als Profi für Seefracht oder Luftfracht spezialisieren. ✈️",
+                  "feedback": "Top! Experten werden immer gesucht und gefördert."
+                },
+                {
+                  "id": 2,
+                  "text": "Verantwortung für eigene Kunden übernehmen. 🤝",
+                  "feedback": "Bei uns kriegt jeder Kunde einen persönlichen Ansprechpartner – vielleicht bald dich."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Das Netzwerk",
+          "status": "locked",
+          "icon": "🔗",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du baust dir über Jahre ein Netzwerk auf. Spediteure kennen Leute überall. Was reizt dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Kontakte in alle Welt zu haben. 🌐",
+                  "feedback": "Ein unbezahlbarer Vorteil für dein ganzes Berufsleben."
+                },
+                {
+                  "id": 2,
+                  "text": "Problemlöser für alles zu sein. 🧩",
+                  "feedback": "Wer Logistik kann, den wirft im Leben so schnell nichts mehr um."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit, die Welt zu bewegen? Wir suchen Macher, keine Zuschauer. Schick deine Bewerbung an ausbildung@doerrenhaus.com",
+              "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Bin dabei! Bewerbung geht raus. 📧",
+                  "feedback": "Klasse! Klick auf 'Ergebnis ansehen' für alle Infos."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich hab noch Fragen. ❓",
+                  "feedback": "Ruf uns einfach an: +49 2051 28080. Wir beißen nicht!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "checkChances": "Check starten",
+    "expressApply": "Express Bewerbung",
+    "jobMerken": "Job merken",
+    "submit": "Zum Ergebnis",
+    "submitSuccess": "Klasse! Wir freuen uns.",
+    "victoryHeadline": "Du bist ein Macher! 🚛",
+    "victorySubtext": "Du passt perfekt zu Dörrenhaus – Hände hochkrempeln und Welt bewegen.",
+    "nudgeHeadline": "Fast am Ziel!",
+    "nudgeText": "Mach den Check fertig und starte deine Karriere in der Logistik.",
+    "firstName": "Vorname",
+    "phoneType": "Mobilnummer",
+    "schoolType": "Schulabschluss",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule",
+    "gymnasium": "Abitur",
+    "andere": "Anderer",
+    "expressApplyIntro": "Hinterlass deine Nummer, wir melden uns.",
+    "exploreOtherJobs": "Andere Jobs ansehen"
+  }
+}
