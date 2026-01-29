@@ -1,0 +1,426 @@
+{
+  "company": {
+    "name": "Landkreis Osnabrück",
+    "slug": "landkreis-osnabrueck",
+    "logoUrl": "🏛️",
+    "logoImageUrl": "https://www.landkreis-osnabrueck-mobilitaet.de/media/logo_lk_osnabrueck.png",
+    "signatureEmoji": "🌍",
+    "primaryColor": "#005ca9",
+    "secondaryColor": "#78be20",
+    "city": "Osnabrück",
+    "website": "https://www.landkreis-osnabrueck.de/karriere",
+    "industryVibe": "Verwaltung? Alles. Außer sinnlos. Wir sind 360.000 Menschen – und du gestaltest mit, wie unsere Region lebt, lernt und sich entwickelt. Modern, krisensicher, mit Impact.",
+    "organizationFacts": [
+      {
+        "title": "360.000 Menschen",
+        "value": "Deine Arbeit hat direkten Einfluss auf eine ganze Region – kein Bullshit-Job.",
+        "icon": "🌍"
+      },
+      {
+        "title": "Eigenes Tablet/Laptop",
+        "value": "Ab Tag 1 kriegst du dein eigenes mobiles Endgerät – kein Kopieren, sondern Digital Native.",
+        "icon": "💻"
+      },
+      {
+        "title": "Krisensicher",
+        "value": "Öffentlicher Dienst = sichere Zukunft, keine Kündigungsangst.",
+        "icon": "🛡️"
+      },
+      {
+        "title": "Azubi-Gang",
+        "value": "Mehrtägige Ausbildungsfahrt + Events – du bist Teil eines Netzwerks, nicht allein.",
+        "icon": "🤝"
+      },
+      {
+        "title": "Modern & flexibel",
+        "value": "Keine Kernarbeitszeiten, Homeoffice möglich – nicht das Behörden-Klischee.",
+        "icon": "⏰"
+      },
+      {
+        "title": "Benefits",
+        "value": "Firmenfitness, Fahrradleasing, Betriebskita – familienfreundlich zertifiziert.",
+        "icon": "🚴"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Verwaltung? Alles. Außer sinnlos. 🏛️",
+    "subline": "Während andere für Quartalszahlen schuften, gestaltest du die Zukunft von 360.000 Menschen. Krisenmanager, Digitalisierungs-Profi, Sozial-Architekt – alles in einem dualen Studium.",
+    "startButtonText": "Zukunft gestalten 🌍"
+  },
+  "campus": {
+    "headline": "Dein Einsatzgebiet.",
+    "subline": "Ein Beruf, unendliche Möglichkeiten.",
+    "categories": [
+      {
+        "id": "verwaltung",
+        "title": "Verwaltung & Management",
+        "jobId": "verwaltungswirt"
+      }
+    ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "motivation",
+        "question": "Was treibt dich an?",
+        "options": [
+          {
+            "id": "impact",
+            "label": "Arbeit mit echtem gesellschaftlichem Sinn",
+            "icon": "🌍",
+            "imageUrl": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80",
+            "score": {
+              "verwaltungswirt": 2
+            }
+          },
+          {
+            "id": "profit",
+            "label": "Hauptsache Geld, egal wofür",
+            "icon": "💰",
+            "imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
+            "score": {
+              "verwaltungswirt": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "work_style",
+        "question": "Wie arbeitest du am liebsten?",
+        "options": [
+          {
+            "id": "structured",
+            "label": "Strukturiert mit klaren Prozessen",
+            "icon": "📋",
+            "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+            "score": {
+              "verwaltungswirt": 2
+            }
+          },
+          {
+            "id": "chaos",
+            "label": "Chaotisch, jeden Tag was Neues",
+            "icon": "🎲",
+            "imageUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+            "score": {
+              "verwaltungswirt": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "values",
+        "question": "Was ist dir wichtig?",
+        "options": [
+          {
+            "id": "security",
+            "label": "Sicherheit & Work-Life-Balance",
+            "icon": "🛡️",
+            "imageUrl": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&q=80",
+            "score": {
+              "verwaltungswirt": 2
+            }
+          },
+          {
+            "id": "risk",
+            "label": "Risiko & schneller Aufstieg um jeden Preis",
+            "icon": "🚀",
+            "imageUrl": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80",
+            "score": {
+              "verwaltungswirt": 0
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Dein Match:",
+      "startButtonText": "Job erkunden",
+      "viewAllButtonText": "Alle Jobs",
+      "skipButtonText": "Überspringen"
+    }
+  },
+  "jobs": [
+    {
+      "id": "verwaltungswirt",
+      "title": "Verwaltungswirt/in (m/w/d)",
+      "description": "Duales Studium mit Impact: Gestalte Klimaschutz-Projekte, Kinderbetreuung für Tausende und die Digitalisierung einer ganzen Region. Krisensicher, modern, mit eigenem Tablet ab Tag 1. 🏛️🌍",
+      "icon": "🏛️",
+      "color": "#005ca9",
+      "tags": [
+        "🌍 360.000 Menschen Impact",
+        "💻 Eigenes Tablet ab Tag 1",
+        "🛡️ Krisensicher",
+        "🤝 Azubi-Netzwerk"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der erste Tag",
+          "status": "unlocked",
+          "icon": "📞",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Willkommen beim Landkreis Osnabrück! 👋 Dein erster Tag im Jugendamt. Eine verzweifelte Mutter ruft an: 'Ich schaff's allein nicht mehr mit meinen drei Kindern. Können Sie mir helfen?' Was ist dein erster Gedanke?",
+              "imageUrl": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Das ist nicht mein Problem, ich bin nur Azubi. 🤷",
+                  "correct": false,
+                  "feedback": "Falsch! Hier geht's um echte Menschen. Du bist Teil der Lösung, nicht Zuschauer."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich höre zu, notiere Details und hole meinen Mentor dazu. 📝",
+                  "correct": true,
+                  "feedback": "Genau! Empathie + System = Verwaltung mit Herz. Willkommen im Impact-Job. 🎯"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Krisenmanagement",
+          "status": "locked",
+          "icon": "🚨",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Starkregen-Warnung! Mehrere Schulen in der Region melden überflutete Keller. Du bist im Schulamt. Eltern rufen an: 'Fällt die Schule aus? Muss ich mein Kind abholen?' Es ist 7:30 Uhr morgens. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1527482797697-8795b05a13fe?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Warte auf Anweisungen vom Chef.",
+                "Rufe die betroffenen Schulen an, kläre Lage, informiere Eltern.",
+                "Sage: 'Keine Ahnung, rufen Sie später nochmal an.'"
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Du hast drei Schulen in der Leitung, die alle gleichzeitig melden: 'Keller voll, Heizung droht auszufallen.' Eltern bombardieren dich mit Anrufen. Wie priorisierst du?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Digitalisierung",
+          "status": "locked",
+          "icon": "💻",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du arbeitest im Projekt 'Service digital'. Bürger beschweren sich: 'Ich will online einen Termin buchen, aber die Website ist total unübersichtlich!' Du sollst Verbesserungen vorschlagen. Wie gehst du vor?",
+              "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich sage: 'Das ist halt so, da kann man nichts machen.'",
+                "Ich teste die Website selbst, sammle Feedback, erstelle Verbesserungsvorschläge.",
+                "Ich ignoriere es, ist ja nur eine Beschwerde."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Du testest die Website. Tatsächlich: Der Buchungsprozess hat 7 Schritte, ist unlogisch aufgebaut. Wie präsentierst du deine Verbesserungen dem Team?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Dein Arbeitsalltag",
+          "status": "locked",
+          "icon": "🏢",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Starke Leistung! 💪 Verwaltungswirt beim Landkreis Osnabrück ist kein grauer Bürojob. Schau dir an, was dich erwartet:",
+              "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Eigenes Tablet/Laptop",
+                  "value": "Ab Tag 1 dein eigenes mobiles Endgerät – Digital Native, kein Kopierer.",
+                  "icon": "💻",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Vergütung",
+                  "value": "Ca. 1.200 € im 1. Jahr, steigend (TVöD).",
+                  "icon": "💶",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Urlaub",
+                  "value": "30 Tage Urlaub + keine Kernarbeitszeiten.",
+                  "icon": "🏖️",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Azubi-Gang",
+                  "value": "Mehrtägige Ausbildungsfahrt + Events – du bist Teil eines Netzwerks.",
+                  "icon": "🤝",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Ehrlich gefragt: Was reizt dich am meisten?",
+              "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Die Sinnhaftigkeit – ich helfe echten Menschen, nicht Quartalszahlen. 🌍",
+                  "feedback": "Genau! Nicht für Profit, sondern für 360.000 Menschen. Das ist Impact."
+                },
+                {
+                  "id": 2,
+                  "text": "Die Sicherheit – krisensicher, keine Kündigungsangst. 🛡️",
+                  "feedback": "Real Talk: Öffentlicher Dienst = Anker im Sturm. Du kannst ruhig schlafen."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Soziales & Jugend",
+          "status": "locked",
+          "icon": "❤️",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du kannst dich spezialisieren: Jugendamt (Kinder schützen), Sozialamt (Menschen in Not helfen), Migration (Integration gestalten). Wo siehst du dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Jugendamt – ich will Kinder schützen. 👶",
+                  "feedback": "Krass. Du rettest buchstäblich Leben. Das ist keine Phrase, das ist Realität."
+                },
+                {
+                  "id": 2,
+                  "text": "Migration – ich will Integration gestalten. 🌍",
+                  "feedback": "Mega wichtig. Du sorgst dafür, dass Menschen ankommen können – im echten Sinne."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Umwelt & Digitalisierung",
+          "status": "locked",
+          "icon": "🌱",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Oder du gehst in Richtung Klimaschutz, Umweltamt oder digitale Verwaltung. E-Mobilität, Nachhaltigkeit, Smart City – die Zukunft gestalten. Dabei?",
+              "imageUrl": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja! Klimaschutz für eine ganze Region. 🌱",
+                  "feedback": "Stark! Verwaltung ist nicht sexy, aber du rettest die Welt – leise, aber wirksam."
+                },
+                {
+                  "id": 2,
+                  "text": "Digitalisierung – ich bin der Change Agent. 💻",
+                  "feedback": "Genau! Du baust die Verwaltung von morgen. Die 'alten Hasen' brauchen dich."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit, 360.000 Menschen zu gestalten? Bewirb dich jetzt für 2026. Aber real talk: Das ist kein Startup-Chaos. Hier ist's strukturiert, sicher – aber nicht langweilig. Bist du dabei?",
+              "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja! Wo kann ich mich bewerben? 📝",
+                  "feedback": "Top! Klick auf 'Ergebnis ansehen' für den Link zur Bewerbung."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich hab noch Fragen zur Ausbildung. ❓",
+                  "feedback": "Kein Problem! Kontaktiere das Ausbildungsteam über die Website."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "checkChances": "Chancen prüfen",
+    "expressApply": "Express Bewerbung",
+    "jobMerken": "Job merken",
+    "submit": "Zum Ergebnis",
+    "submitSuccess": "Stark! Wir freuen uns.",
+    "victoryHeadline": "Du gestaltest Zukunft! 🌍",
+    "victorySubtext": "Du hast das Zeug zur Verwaltungswirtin beim Landkreis Osnabrück.",
+    "nudgeHeadline": "Fast am Ziel!",
+    "nudgeText": "Mach den Check fertig und sicher dir deinen Studienplatz.",
+    "firstName": "Vorname",
+    "phoneType": "Telefonnummer",
+    "schoolType": "Schulabschluss",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule",
+    "gymnasium": "Abitur",
+    "andere": "Anderer",
+    "expressApplyIntro": "Hinterlass deine Nummer, wir rufen zurück.",
+    "exploreOtherJobs": "Andere Jobs ansehen"
+  }
+}
