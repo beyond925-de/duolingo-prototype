@@ -1,0 +1,693 @@
+{
+  "company": {
+    "name": "Alunorf",
+    "slug": "alunorf",
+    "logoUrl": "⚙️",
+    "logoImageUrl": "https://www.alunorf.de/fileadmin/user_upload/Alunorf/Downloads/Vektorgrafik_Alunorf_Logo_b.gif",
+    "signatureEmoji": "🏭",
+    "primaryColor": "#003d7a",
+    "secondaryColor": "#fdb913",
+    "city": "Neuss",
+    "website": "https://www.alunorf.de/karriere",
+    "industryVibe": "Weltgrößte Aluminiumhütte, aber alle kennen deinen Namen. Jede zweite Getränkedose in Europa kommt von hier. Industriegigant mit Dorfcharakter – seit 1965.",
+    "organizationFacts": [
+      {
+        "title": "Weltmarktführer",
+        "value": "Größte Aluminiumhütte der Welt – 1,5 Mio. Tonnen pro Jahr.",
+        "icon": "🏭"
+      },
+      {
+        "title": "Jede 2. Dose",
+        "value": "Jede zweite Getränkedose in Europa kommt aus Neuss. Dein Material, überall.",
+        "icon": "🥤"
+      },
+      {
+        "title": "Sofort unbefristet",
+        "value": "Note 1,x? Unbefristeter Vertrag direkt nach Ausbildung. Mit 21.",
+        "icon": "✅"
+      },
+      {
+        "title": "Top Gehalt",
+        "value": "1.065 € Start, 30 Tage Urlaub, Urlaubs- & Weihnachtsgeld (Tarif).",
+        "icon": "💶"
+      },
+      {
+        "title": "Früh in Produktion",
+        "value": "Nach 4-12 Monaten raus aus der Werkstatt, rein in echte Schichtarbeit.",
+        "icon": "🔥"
+      },
+      {
+        "title": "Du-Kultur",
+        "value": "Vom Azubi bis zum Chef – alle per Du. Keine Hierarchie-Spielchen.",
+        "icon": "🤝"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Wir halten die Welt beweglich. 🏭",
+    "subline": "Weltgrößte Aluminiumhütte, aber Familie statt Konzern. Jede zweite Dose in Europa, Tesla-Karosserien, E-Auto-Leichtbau – dein Material, überall. Freitags 13 Uhr Feierabend, 1.065 € Start, unbefristet bei guten Noten.",
+    "startButtonText": "Zukunft bauen ⚙️"
+  },
+  "campus": {
+    "headline": "Dein Einsatzgebiet.",
+    "subline": "Steuerst du die Technik oder hältst du die Maschinen am Laufen?",
+    "categories": [
+      {
+        "id": "elektronik",
+        "title": "Elektronik & Steuerung",
+        "jobId": "elektroniker"
+      },
+      {
+        "id": "mechanik",
+        "title": "Mechanik & Instandhaltung",
+        "jobId": "industriemechaniker"
+      }
+    ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "tech_preference",
+        "question": "Was reizt dich mehr?",
+        "options": [
+          {
+            "id": "electronics",
+            "label": "Steuerungen programmieren, Elektronik verstehen",
+            "icon": "💻",
+            "imageUrl": "https://images.unsplash.com/photo-1581092918484-8313a6e1f03e?w=800&q=80",
+            "score": {
+              "elektroniker": 2,
+              "industriemechaniker": 0
+            }
+          },
+          {
+            "id": "mechanics",
+            "label": "Maschinen reparieren, mit den Händen arbeiten",
+            "icon": "🔧",
+            "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+            "score": {
+              "elektroniker": 0,
+              "industriemechaniker": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "problem_solving",
+        "question": "Wie löst du Probleme?",
+        "options": [
+          {
+            "id": "analytical",
+            "label": "Systematisch analysieren, Schaltpläne lesen",
+            "icon": "📐",
+            "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+            "score": {
+              "elektroniker": 2,
+              "industriemechaniker": 1
+            }
+          },
+          {
+            "id": "hands_on",
+            "label": "Direkt anpacken, auseinanderbauen, reparieren",
+            "icon": "🛠️",
+            "imageUrl": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+            "score": {
+              "elektroniker": 0,
+              "industriemechaniker": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "work_environment",
+        "question": "Wo siehst du dich?",
+        "options": [
+          {
+            "id": "control_room",
+            "label": "Am Schaltschrank, Steuerungen optimieren",
+            "icon": "⚡",
+            "imageUrl": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
+            "score": {
+              "elektroniker": 2,
+              "industriemechaniker": 0
+            }
+          },
+          {
+            "id": "workshop",
+            "label": "An der Maschine, Ersatzteile fertigen",
+            "icon": "🏭",
+            "imageUrl": "https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?w=800&q=80",
+            "score": {
+              "elektroniker": 0,
+              "industriemechaniker": 2
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Dein Alunorf-Match:",
+      "startButtonText": "Job erkunden",
+      "viewAllButtonText": "Alle Jobs",
+      "skipButtonText": "Überspringen"
+    }
+  },
+  "jobs": [
+    {
+      "id": "elektroniker",
+      "title": "Elektroniker für Betriebstechnik (m/w/d)",
+      "description": "Halte die größte Aluminiumhütte der Welt am Laufen: Steuerungen programmieren, Motoren warten, Anlagen am Leben halten. Nach 1 Jahr raus aus der Werkstatt, rein in echte Schichtarbeit. ⚡🏭",
+      "icon": "⚡",
+      "color": "#003d7a",
+      "tags": [
+        "⚡ Steuerungstechnik",
+        "💶 1.065 € Start",
+        "✅ Unbefristet bei 1,x",
+        "🏭 Schichtarbeit ab Jahr 2"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Notfall",
+          "status": "unlocked",
+          "icon": "🚨",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Willkommen bei Alunorf! 👋 Du bist in der Nachtschicht (3 Uhr morgens). Eine Steuerung für die Walzanlage fällt aus. Ohne sie steht die Produktion – 1,5 Mio. Tonnen Aluminium pro Jahr hängen an solchen Momenten. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1581092918484-8313a6e1f03e?w=800&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Panik. Ich ruf den Chef an. 😰",
+                  "correct": false,
+                  "feedback": "Nope! In der Nachtschicht bist DU der Boss. Du musst handeln, nicht warten."
+                },
+                {
+                  "id": 2,
+                  "text": "Schaltplan checken, Fehler isolieren, Backup aktivieren. 🔍",
+                  "correct": true,
+                  "feedback": "Genau! Ruhe bewahren, System verstehen, handeln. Willkommen im echten Job. 🎯"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Schaltplan",
+          "status": "locked",
+          "icon": "📐",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du sollst eine Steuerung für einen neuen Motor anpassen. Der Schaltplan liegt vor dir – 50 Leitungen, 20 Relais, SPS-Programmierung nötig. Dein Kollege sagt: 'Komm, probier einfach mal, wird schon passen.' Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Okay, ich probier einfach mal.",
+                "Nein. Erst Plan lesen, dann verkabeln. Sonst Kurzschluss.",
+                "Ich frag nochmal jemand anderen."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Dein Kollege wird ungeduldig: 'Dauert mir zu lang, mach einfach!' Der Motor kostet 50.000 €. Ein Fehler und er ist kaputt. Was ist dein Move?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Wartung",
+          "status": "locked",
+          "icon": "🔧",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Planmäßige Wartung einer Walzanlage. Du sollst Motoren prüfen, bevor die Schicht wieder startet. Einer zeigt seltsame Geräusche. Zeit ist knapp – in 2 Stunden startet die Produktion. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Läuft doch noch, lass laufen.",
+                "Motor austauschen – Sicherheit geht vor.",                "Ich notiere es für die nächste Wartung."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Das Geräusch klingt nach einem Lagerschaden. Wenn der Motor ausfällt, steht die komplette Linie. Aber ein Austausch dauert 3 Stunden. Was entscheidest du?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Dein Arbeitsplatz",
+          "status": "locked",
+          "icon": "💼",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Starke Leistung! 💪 Elektroniker bei Alunorf ist High-Tech pur. Schau dir an, was dich erwartet:",
+              "imageUrl": "https://images.unsplash.com/photo-1581092918484-8313a6e1f03e?w=800&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Gehalt",
+                  "value": "1.065 € im 1. Jahr bis 1.300 € im 4. Jahr (Tarif).",
+                  "icon": "💶",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Urlaub",
+                  "value": "30 Tage Urlaub + Urlaubs- & Weihnachtsgeld.",
+                  "icon": "🏖️",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }                },
+                {
+                  "title": "Arbeitszeit",
+                  "value": "35h-Woche, Mo-Do 7-15:30, Fr 7-13 Uhr (Werkstatt).",
+                  "icon": "⏰",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Schichtarbeit",
+                  "value": "Ab 2. Jahr: Schichtbetrieb in echter Produktion. Real Job.",
+                  "icon": "🔥",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Ehrlich gefragt: Was motiviert dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Die Sicherheit – unbefristet bei Note 1,x. ✅",
+                  "feedback": "Real talk: Mit 21 unbefristet. Versuch das mal woanders. Das ist Gold wert."
+                },
+                {
+                  "id": 2,
+                  "text": "Die Verantwortung – ich halte die größte Hütte der Welt am Laufen. ⚡",
+                  "feedback": "Genau! 1,5 Mio. Tonnen Aluminium/Jahr. Deine Arbeit zählt wirklich."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Spezialisierung",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nach der Ausbildung: Meister, Techniker oder direkt in die Spezialisierung (SPS-Programmierung, Automatisierung). Alunorf unterstützt dich. Was reizt dich?",
+              "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {                  "id": 1,
+                  "text": "Meister machen – Führung übernehmen. 👷",
+                  "feedback": "Stark! Meister bei Alunorf = Verantwortung für Millionen-Maschinen."
+                },
+                {
+                  "id": 2,
+                  "text": "SPS-Spezialist werden – die Technik ist mein Ding. 💻",
+                  "feedback": "Geil! SPS-Programmierung ist die Zukunft. Du bist dann unverzichtbar."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Karriere",
+          "status": "locked",
+          "icon": "📈",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Oder du bleibst und steigst intern auf. Viele Kollegen sind seit Jahrzehnten dabei – nicht aus Faulheit, sondern aus Loyalität. Hier gibt's echte Karrierewege. Dabei?",
+              "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja! Ich will bei Alunorf bleiben und aufsteigen. 🏭",
+                  "feedback": "Nice! Loyalität wird hier belohnt. Du baust dir was auf, langfristig."
+                },
+                {
+                  "id": 2,
+                  "text": "Erstmal schauen, was sich ergibt. 🤷",
+                  "feedback": "Fair. Aber denk dran: Unbefristet bei 1,x ist ein krasses Angebot."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit für die größte Aluminiumhütte der Welt? Bewirb dich jetzt für August 2026. Aber Achtung: Schichtarbeit ab Jahr 2 ist Pflicht. Nachts um 3 Uhr Steuerungen reparieren – dabei?",
+              "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja! Wo kann ich mich bewerben? 📝",
+                  "feedback": "Top! Klick auf 'Ergebnis ansehen' für den Link zu jobs.alunorf.de"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich hab noch Fragen zur Ausbildung. ❓",
+                  "feedback": "Kein Problem! Kontaktiere Thorsten Rex: +49 2131 937 4444"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industriemechaniker",
+      "title": "Industriemechaniker (m/w/d)",
+      "description": "Halte Maschinen so groß wie Häuser am Laufen. Reparieren, warten, Ersatzteile fertigen – in der größten Aluminiumhütte der Welt. Nach 1 Jahr raus aus der Werkstatt, rein in echte Produktion. 🔧🏭",
+      "icon": "🔧",
+      "color": "#fdb913",
+      "tags": [
+        "🔧 Handwerk trifft High-Tech",
+        "💶 1.065 € Start",
+        "✅ Unbefristet bei 1,x",
+        "🏭 Schichtarbeit ab Jahr 2"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Der Maschinenausfall",
+          "status": "unlocked",
+          "icon": "🚨",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Moin! 👋 Willkommen in der Produktion. Eine Walzanlage (so groß wie ein Haus) macht seltsame Geräusche. Dein Kollege sagt: 'Läuft noch, lass mal.' Aber du weißt: Wenn die ausfällt, kostet das tausende Euro pro Stunde. Was tust du?",
+              "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Läuft ja noch, lass laufen. 🤷",
+                  "correct": false,
+                  "feedback": "Falsch! 'Läuft noch' heißt oft 'Gleich kaputt'. Profis hören hin."
+                },
+                {
+                  "id": 2,
+                  "text": "Maschine stoppen, Fehler suchen, reparieren. 🔧",
+                  "correct": true,
+                  "feedback": "Genau! Präventiv handeln rettet Millionen. Willkommen bei den Profis. 🎯"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Ersatzteil",
+          "status": "locked",
+          "icon": "⚙️",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ein Zahnrad ist gebrochen. Ersatzteil kommt erst in 3 Tagen, aber die Produktion muss morgen weiterlaufen. Dein Meister sagt: 'Kannst du das nachbauen?' Was ist dein Plan?",
+              "imageUrl": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Klar, ich probier's einfach mal.",
+                "Ich nehme Maß, erstelle technische Zeichnung, fräse nach Plan.",
+                "Zu kompliziert, lass uns warten."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Das Zahnrad hat 48 Zähne, Modul 3, gehärtet. Falsche Maße = Maschine zerstört. Wie gehst du vor?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Hydraulik",
+          "status": "locked",
+          "icon": "💧",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hydraulikanlage verliert Druck. Du hast den Plan vor dir, aber 20 Leitungen, 10 Ventile. Wo ist das Leck? Zeit läuft – Produktion wartet. Was machst du?",
+              "imageUrl": "https://images.unsplash.com/photo-1581092918484-8313a6e1f03e?w=800&q=80",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich tausche alle Leitungen aus Sicherheit.",
+                "Ich prüfe systematisch: Manometer, Ventile, Leitungen isolieren.",
+                "Ich pumpe einfach mehr Öl nach."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Du findest eine undichte Leitung. Schnellreparatur mit Dichtmittel oder komplette Leitung tauschen? Was ist deine Entscheidung?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Dein Alltag",
+          "status": "locked",
+          "icon": "🏭",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Starke Arbeit! 💪 Industriemechaniker bei Alunorf ist Handwerk auf höchstem Niveau. Das erwartet dich:",
+              "imageUrl": "https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?w=800&q=80",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Vergütung",
+                  "value": "1.065 € Start bis 1.300 € im 4. Jahr (Tarifvertrag).",
+                  "icon": "💶",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Freizeit",
+                  "value": "30 Tage Urlaub, Freitag 13 Uhr Feierabend (Werkstatt).",
+                  "icon": "🏖️",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Schnell in Praxis",
+                  "value": "Nach ~1 Jahr raus aus der Werkstatt, rein in echte Produktion.",
+                  "icon": "🔥",
+                  "layout": {
+                    "colSpan": 1,
+                    "rowSpan": 1
+                  }
+                },
+                {
+                  "title": "Weltklasse",
+                  "value": "Größte Aluminiumhütte der Welt – deine Arbeit zählt.",
+                  "icon": "🏭",
+                  "layout": {
+                    "colSpan": 2,
+                    "rowSpan": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Was reizt dich am meisten?",
+              "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Die Sicherheit – unbefristet bei guten Noten. ✅",
+                  "feedback": "Smart! Mit 21 unbefristet bei einem Weltmarktführer – das ist selten."
+                },
+                {
+                  "id": 2,
+                  "text": "Die Maschinen – so groß wie Häuser, ich halte sie am Laufen. 🔧",
+                  "feedback": "Respekt! Das ist echtes Handwerk auf Weltklasse-Niveau."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Meister",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nach der Ausbildung: Industriemeister Metall oder Techniker? Alunorf unterstützt dich mit Weiterbildung. Du kannst Führung übernehmen oder Spezialist werden. Was passt zu dir?",
+              "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Meister – ich will führen und ausbilden. 👷",
+                  "feedback": "Stark! Meister bei Alunorf bedeutet: Verantwortung für Millionen-Anlagen."
+                },
+                {
+                  "id": 2,
+                  "text": "Techniker – ich will tiefer in die Technik. 🔧",
+                  "feedback": "Nice! Techniker = Spezialist. Du wirst unverzichtbar."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Instandhaltung",
+          "status": "locked",
+          "icon": "⚙️",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Oder du spezialisierst dich: Hydraulik-Experte, Schweißfachmann, Prüfingenieur. Bei Alunorf gibt's viele Wege. Du entscheidest, wo's langgeht.",
+              "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich will Spezialist werden! 🛠️",
+                  "feedback": "Guter Plan! Spezialisten werden immer gebraucht, besonders in der Hydraulik."
+                },
+                {
+                  "id": 2,
+                  "text": "Lieber Allrounder bleiben. 🔄",
+                  "feedback": "Auch stark. Wer alles kann, ist überall einsetzbar."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hand aufs Herz: Bist du bereit für den 'Real Deal'? Echte Maschinen, echte Schicht, echtes Geld. Startest du 2026 bei uns?",
+              "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ja, ich will zu Alunorf! 🚀",
+                  "feedback": "Wir freuen uns! Klick auf 'Ergebnis anzeigen' und bewirb dich."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich brauche noch Infos. 🧐",
+                  "feedback": "Kein Thema. Thorsten Rex hilft dir gerne weiter: +49 2131 937 4444"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "checkChances": "Check deinen Fit",
+    "expressApply": "WhatsApp Kontakt",
+    "jobMerken": "Job speichern",
+    "submit": "Ergebnis ansehen",
+    "submitSuccess": "Top! Wir freuen uns.",
+    "victoryHeadline": "Perfektes Match! 🏭",
+    "victorySubtext": "Du passt in unser Team und zur Alunorf-Mentalität.",
+    "nudgeHeadline": "Nicht aufgeben!",
+    "nudgeText": "Beende den Check und starte deine Zukunft in Neuss.",
+    "firstName": "Vorname",
+    "phoneType": "Handynummer",
+    "schoolType": "Schulabschluss",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule",
+    "gymnasium": "Abi / Fachabi",
+    "andere": "Anderer",
+    "expressApplyIntro": "Lass deine Nummer da, Thorsten Rex meldet sich per WhatsApp!",
+    "exploreOtherJobs": "Andere Jobs prüfen"
+  }
+}
