@@ -74,7 +74,7 @@
             "id": "outdoor",
             "label": "Draußen bei Wind & Wetter",
             "icon": "🌲",
-            "imageUrl": "https://source.unsplash.com/featured/?nature,road",
+            "imageUrl": "https://picsum.photos/seed/forest-road/800/600",
             "score": {
               "strassenwaerter": 2,
               "umwelttechnologe": 2,
@@ -86,7 +86,7 @@
             "id": "office",
             "label": "Im modernen Büro",
             "icon": "🏢",
-            "imageUrl": "https://source.unsplash.com/featured/?office,modern",
+            "imageUrl": "https://picsum.photos/seed/modern-office/800/600",
             "score": {
               "strassenwaerter": 0,
               "umwelttechnologe": 0,
@@ -104,7 +104,7 @@
             "id": "handson",
             "label": "Packst selbst mit an",
             "icon": "🔧",
-            "imageUrl": "https://source.unsplash.com/featured/?work,tools",
+            "imageUrl": "https://picsum.photos/seed/tools-work/800/600",
             "score": {
               "strassenwaerter": 2,
               "umwelttechnologe": 2,
@@ -116,7 +116,7 @@
             "id": "organize",
             "label": "Koordinierst & organisierst",
             "icon": "📋",
-            "imageUrl": "https://source.unsplash.com/featured/?planning,meeting",
+            "imageUrl": "https://picsum.photos/seed/planning-meeting/800/600",
             "score": {
               "strassenwaerter": 0,
               "umwelttechnologe": 0,
@@ -134,7 +134,7 @@
             "id": "people",
             "label": "Menschen helfen & beraten",
             "icon": "🤝",
-            "imageUrl": "https://source.unsplash.com/featured/?helping,service",
+            "imageUrl": "https://picsum.photos/seed/helping-people/800/600",
             "score": {
               "verwaltungsfachangestellter": 2,
               "dualesstudium": 2,
@@ -146,7 +146,7 @@
             "id": "environment",
             "label": "Umwelt & Infrastruktur",
             "icon": "🌍",
-            "imageUrl": "https://source.unsplash.com/featured/?environment,infrastructure",
+            "imageUrl": "https://picsum.photos/seed/environment-infra/800/600",
             "score": {
               "strassenwaerter": 2,
               "umwelttechnologe": 2,
@@ -190,7 +190,7 @@
             {
               "id": 1,
               "scenario": "Hey! 💚 Willkommen beim Landkreis Uelzen. Wir sind für 93.000 Menschen da – vom Führerschein bis zur Baugenehmigung. Eine Bürgerin ruft an: Sie braucht dringend einen neuen Personalausweis für ihre Urlaubsreise nächste Woche. Was machst du?",
-              "imageUrl": "https://source.unsplash.com/featured/?government,office",
+              "imageUrl": "https://picsum.photos/seed/gov-office/800/600",
               "type": "single-select-correct",
               "options": [
                 {
@@ -220,7 +220,7 @@
             {
               "id": 1,
               "scenario": "Im Sozialamt hilfst du Menschen in schwierigen Situationen. Eine alleinerziehende Mutter kommt zu dir – sie hat ihren Job verloren und weiß nicht, wie sie die Miete zahlen soll. Wie gehst du vor?",
-              "imageUrl": "https://source.unsplash.com/featured/?help,social",
+              "imageUrl": "https://picsum.photos/seed/social-help/800/600",
               "type": "llm-interactive",
               "options": [],
               "initialQuickReplies": [
@@ -248,7 +248,7 @@
             {
               "id": 1,
               "scenario": "Die Verwaltung wird digital! 🚀 Dein Amt führt ein neues Online-Portal ein, über das Bürger:innen Anträge stellen können. Ein älterer Kollege hat Bedenken: 'Das wird doch nie funktionieren!' Wie reagierst du?",
-              "imageUrl": "https://source.unsplash.com/featured/?digital,computer",
+              "imageUrl": "https://picsum.photos/seed/digital-work/800/600",
               "type": "llm-interactive",
               "options": [],
               "initialQuickReplies": [
@@ -276,7 +276,7 @@
             {
               "id": 1,
               "scenario": "Stark gemacht! 💪 Beim Landkreis Uelzen bekommst du mehr als nur einen Job. Check das aus:",
-              "imageUrl": "https://source.unsplash.com/featured/?benefits,happy",
+              "imageUrl": "https://picsum.photos/seed/happy-work/800/600",
               "type": "bento-grid",
               "options": [],
               "facts": [
@@ -309,7 +309,7 @@
             {
               "id": 2,
               "scenario": "Ziemlich gut, oder? Was spricht dich am meisten an?",
-              "imageUrl": "https://source.unsplash.com/featured/?choice",
+              "imageUrl": "https://picsum.photos/seed/choice-happy/800/600",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -337,7 +337,7 @@
             {
               "id": 1,
               "scenario": "Nach der Ausbildung kannst du dich zum Verwaltungsfachwirt weiterbilden und in den gehobenen Dienst aufsteigen. Welcher Bereich reizt dich?",
-              "imageUrl": "https://source.unsplash.com/featured/?career,success",
+              "imageUrl": "https://picsum.photos/seed/career-success/800/600",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -365,7 +365,7 @@
             {
               "id": 1,
               "scenario": "Du willst mehr? Wir unterstützen berufsbegleitende Studiengänge oder du startest direkt mit unserem dualen Studium Verwaltungswissenschaften.",
-              "imageUrl": "https://source.unsplash.com/featured/?university,study",
+              "imageUrl": "https://picsum.photos/seed/university-study/800/600",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -392,7 +392,7 @@
             {
               "id": 1,
               "scenario": "Bereit für den Landkreis Uelzen? 💚 Schick deine Bewerbung an Sebastian Arning oder komm erst mal zum Schnupperpraktikum!",
-              "imageUrl": "https://source.unsplash.com/featured/?start,beginning",
+              "imageUrl": "https://picsum.photos/seed/new-start/800/600",
               "type": "single-select-or-text",
               "allowTextInput": true,
               "options": [
@@ -437,7 +437,7 @@
             {
               "id": 1,
               "scenario": "Hey! 🎓 Als Kreisinspektoranwärter:in studierst du Verwaltungswissenschaften und arbeitest parallel beim Landkreis. Du bist gerade in der Praxisphase im Bauamt. Ein Architekt ruft an – er versteht den Bebauungsplan nicht. Was tust du?",
-              "imageUrl": "https://source.unsplash.com/featured/?architecture,planning",
+              "imageUrl": "https://picsum.photos/seed/architecture-plan/800/600",
               "type": "single-select-correct",
               "options": [
                 {
@@ -467,7 +467,7 @@
             {
               "id": 1,
               "scenario": "Im Studium lernst du Projektmanagement. Jetzt sollst du für den Landkreis ein Konzept erstellen: Wie können wir mehr junge Menschen für die Verwaltung begeistern? Dein Dezernent will in einer Woche Ergebnisse sehen.",
-              "imageUrl": "https://source.unsplash.com/featured/?brainstorm,project",
+              "imageUrl": "https://picsum.photos/seed/brainstorm-project/800/600",
               "type": "llm-interactive",
               "options": [],
               "initialQuickReplies": [
@@ -495,7 +495,7 @@
             {
               "id": 1,
               "scenario": "Im Finanzamt lernst du, wie öffentliche Gelder verwaltet werden. Der Kämmerer erklärt dir: 'Wir haben 5 Millionen Euro weniger als geplant. Wo können wir sparen?' Deine Idee?",
-              "imageUrl": "https://source.unsplash.com/featured/?finance,budget",
+              "imageUrl": "https://picsum.photos/seed/finance-budget/800/600",
               "type": "llm-interactive",
               "options": [],
               "initialQuickReplies": [
@@ -523,7 +523,7 @@
             {
               "id": 1,
               "scenario": "Studieren UND Geld verdienen? Bei uns geht das! 🎉 Check deine Vorteile:",
-              "imageUrl": "https://source.unsplash.com/featured/?student,happy",
+              "imageUrl": "https://picsum.photos/seed/student-happy/800/600",
               "type": "bento-grid",
               "options": [],
               "facts": [
@@ -566,7 +566,7 @@
             {
               "id": 1,
               "scenario": "Mit dem Bachelor hast du alle Möglichkeiten. Viele unserer Führungskräfte haben so angefangen. Welcher Bereich interessiert dich?",
-              "imageUrl": "https://source.unsplash.com/featured/?leadership",
+              "imageUrl": "https://picsum.photos/seed/leadership-team/800/600",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -594,7 +594,7 @@
             {
               "id": 1,
               "scenario": "Du willst noch höher hinaus? Ein Master-Studium öffnet dir Türen zum höheren Dienst.",
-              "imageUrl": "https://source.unsplash.com/featured/?graduation",
+              "imageUrl": "https://picsum.photos/seed/graduation-cap/800/600",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -621,7 +621,7 @@
             {
               "id": 1,
               "scenario": "Ready für Studium & Karriere? 🎓 Bewirb dich bis Ende September für den Start im nächsten August!",
-              "imageUrl": "https://source.unsplash.com/featured/?start,university",
+              "imageUrl": "https://picsum.photos/seed/start-uni/800/600",
               "type": "single-select-or-text",
               "allowTextInput": true,
               "options": [
@@ -666,7 +666,7 @@
             {
               "id": 1,
               "scenario": "Moin! 🛣️ Als Straßenwärter:in sorgst du dafür, dass 370 km Kreisstraßen sicher sind. Es ist November, der erste Frost kommt. Dein Meister sagt: 'Morgen früh um 4 Uhr Winterdienst!' Was packst du ein?",
-              "imageUrl": "https://source.unsplash.com/featured/?winter,road",
+              "imageUrl": "https://picsum.photos/seed/winter-road/800/600",
               "type": "single-select-correct",
               "options": [
                 {
@@ -696,7 +696,7 @@
             {
               "id": 1,
               "scenario": "Sommer heißt: Grünpflege! Die Hecken an der Kreisstraße 12 wachsen in die Fahrbahn. Du hast den Freischneider dabei. Was ist vor dem Start wichtig?",
-              "imageUrl": "https://source.unsplash.com/featured/?hedge,cutting",
+              "imageUrl": "https://picsum.photos/seed/hedge-cutting/800/600",
               "type": "llm-interactive",
               "options": [],
               "initialQuickReplies": [
@@ -724,7 +724,7 @@
             {
               "id": 1,
               "scenario": "Eine Kreisstraße hat ein tiefes Schlagloch. Ihr müsst es schnell reparieren, damit kein Unfall passiert. Der Bauhof-LKW ist beladen. Was kommt zuerst?",
-              "imageUrl": "https://source.unsplash.com/featured/?road,repair",
+              "imageUrl": "https://picsum.photos/seed/road-repair/800/600",
               "type": "llm-interactive",
               "options": [],
               "initialQuickReplies": [
@@ -752,7 +752,7 @@
             {
               "id": 1,
               "scenario": "Klasse Arbeit! 🚧 Check mal, was du bei uns bekommst:",
-              "imageUrl": "https://source.unsplash.com/featured/?truck,driver",
+              "imageUrl": "https://picsum.photos/seed/truck-driver/800/600",
               "type": "bento-grid",
               "options": [],
               "facts": [
@@ -785,7 +785,7 @@
             {
               "id": 2,
               "scenario": "Was findest du am coolsten?",
-              "imageUrl": "https://source.unsplash.com/featured/?choice",
+              "imageUrl": "https://picsum.photos/seed/outdoor-choice/800/600",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -813,7 +813,7 @@
             {
               "id": 1,
               "scenario": "Nach der Ausbildung kannst du den Meister machen und selbst ein Team leiten. Was reizt dich?",
-              "imageUrl": "https://source.unsplash.com/featured/?leader,team",
+              "imageUrl": "https://picsum.photos/seed/team-leader/800/600",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -841,7 +841,7 @@
             {
               "id": 1,
               "scenario": "Du willst noch mehr Technik? Als staatlich geprüfter Techniker planst du selbst Straßenbauprojekte.",
-              "imageUrl": "https://source.unsplash.com/featured/?engineer,planning",
+              "imageUrl": "https://picsum.photos/seed/engineer-plan/800/600",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -868,7 +868,7 @@
             {
               "id": 1,
               "scenario": "Bereit für echte Arbeit draußen? 🛣️ Die Kreisstraßenmeisterei in Uelzen freut sich auf dich!",
-              "imageUrl": "https://source.unsplash.com/featured/?road,sunrise",
+              "imageUrl": "https://picsum.photos/seed/road-sunrise/800/600",
               "type": "single-select-or-text",
               "allowTextInput": true,
               "options": [
@@ -913,7 +913,7 @@
             {
               "id": 1,
               "scenario": "Hey! ♻️ Als Umwelttechnologe sorgst du dafür, dass aus Müll wieder Rohstoffe werden. Du bist am Wertstoffhof in Oldenstadt. Ein Bürger will einen alten Kühlschrank abgeben. Was ist wichtig?",
-              "imageUrl": "https://source.unsplash.com/featured/?recycling,waste",
+              "imageUrl": "https://picsum.photos/seed/recycling-center/800/600",
               "type": "single-select-correct",
               "options": [
                 {
@@ -943,7 +943,7 @@
             {
               "id": 1,
               "scenario": "Im Entsorgungszentrum Borg überwachst du die Deponie. Ein LKW liefert Bauschutt an – aber du siehst etwas Verdächtiges zwischen den Steinen. Wie reagierst du?",
-              "imageUrl": "https://source.unsplash.com/featured/?landfill,construction",
+              "imageUrl": "https://picsum.photos/seed/landfill-site/800/600",
               "type": "llm-interactive",
               "options": [],
               "initialQuickReplies": [
@@ -971,7 +971,7 @@
             {
               "id": 1,
               "scenario": "Teil deiner Arbeit: Umweltproben nehmen und analysieren. Heute nimmst du Sickerwasser-Proben an der Deponie. Warum ist das wichtig?",
-              "imageUrl": "https://source.unsplash.com/featured/?laboratory,water",
+              "imageUrl": "https://picsum.photos/seed/lab-water/800/600",
               "type": "llm-interactive",
               "options": [],
               "initialQuickReplies": [
@@ -999,7 +999,7 @@
             {
               "id": 1,
               "scenario": "Starke Sache! 🌍 Du machst echten Umweltschutz – und bekommst dafür einiges:",
-              "imageUrl": "https://source.unsplash.com/featured/?nature,green",
+              "imageUrl": "https://picsum.photos/seed/nature-green/800/600",
               "type": "bento-grid",
               "options": [],
               "facts": [
@@ -1032,7 +1032,7 @@
             {
               "id": 2,
               "scenario": "Was motiviert dich am meisten?",
-              "imageUrl": "https://source.unsplash.com/featured/?motivation",
+              "imageUrl": "https://picsum.photos/seed/motivation-eco/800/600",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -1060,7 +1060,7 @@
             {
               "id": 1,
               "scenario": "Mit dem Meister für Kreislauf- und Abfallwirtschaft leitest du eigene Teams und Projekte. Was interessiert dich?",
-              "imageUrl": "https://source.unsplash.com/featured/?supervisor,team",
+              "imageUrl": "https://picsum.photos/seed/supervisor-work/800/600",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -1088,7 +1088,7 @@
             {
               "id": 1,
               "scenario": "Du willst mehr Theorie? Umwelttechnik oder Verfahrenstechnik – mit der Ausbildung hast du gute Grundlagen.",
-              "imageUrl": "https://source.unsplash.com/featured/?environmental,science",
+              "imageUrl": "https://picsum.photos/seed/environmental-science/800/600",
               "type": "single-select-no-correct",
               "options": [
                 {
@@ -1115,7 +1115,7 @@
             {
               "id": 1,
               "scenario": "Bereit für echten Umweltschutz? ♻️ Der Abfallwirtschaftsbetrieb des Landkreises Uelzen wartet auf dich!",
-              "imageUrl": "https://source.unsplash.com/featured/?environment,future",
+              "imageUrl": "https://picsum.photos/seed/eco-future/800/600",
               "type": "single-select-or-text",
               "allowTextInput": true,
               "options": [
