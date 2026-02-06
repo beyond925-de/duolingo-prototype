@@ -1,0 +1,1161 @@
+{
+  "company": {
+    "name": "Landkreis Uelzen",
+    "slug": "landkreis-uelzen",
+    "logoUrl": "🏛️",
+    "logoImageUrl": "https://openkreishaus.landkreis-uelzen.de/image/layout_set_logo?img_id=92013&t=1769892863621",
+    "signatureEmoji": "💚",
+    "primaryColor": "#1a5c38",
+    "secondaryColor": "#f5a623",
+    "city": "Uelzen",
+    "website": "https://www.landkreis-uelzen.de/ausbildung",
+    "industryVibe": "Wir gestalten Zukunft – für 93.000 Menschen in der Lüneburger Heide. 🌿 Als moderner Dienstleister sind wir einer der größten Arbeitgeber der Region.",
+    "organizationFacts": [
+      {
+        "title": "Öffentlicher Dienst",
+        "value": "Teil des größten Arbeitgebers Deutschlands mit ~550 Kolleg:innen.",
+        "icon": "🏛️"
+      },
+      {
+        "title": "Lüneburger Heide",
+        "value": "Arbeiten zwischen Natur, Hundertwasser-Bahnhof & Hansestadt-Flair.",
+        "icon": "🌳"
+      },
+      {
+        "title": "Work-Life-Balance",
+        "value": "30 Tage Urlaub, flexible Arbeitszeiten & Hansefit.",
+        "icon": "⚖️"
+      },
+      {
+        "title": "Familiensiegel",
+        "value": "Mehrfach ausgezeichnet für Vereinbarkeit von Beruf & Familie.",
+        "icon": "👨‍👩‍👧"
+      },
+      {
+        "title": "Sichere Zukunft",
+        "value": "Krisensicherer Job mit sehr guten Übernahmechancen.",
+        "icon": "🔒"
+      },
+      {
+        "title": "Digitale Verwaltung",
+        "value": "Gestalte die Zukunft der modernen Verwaltung mit.",
+        "icon": "💻"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Deine Zukunft. Für die Region. 💚",
+    "subline": "Starte deine Karriere beim Landkreis Uelzen – zwischen Lüneburger Heide und Hundertwasser-Bahnhof. Sicherer Job, echte Verantwortung und ein Team, das zusammenhält.",
+    "startButtonText": "Job-Match starten 🚀"
+  },
+  "campus": {
+    "headline": "Dein Arbeitsplatz.",
+    "subline": "Büro oder Baustelle? Akten oder Asphalt? Wo siehst du dich?",
+    "categories": [
+      {
+        "id": "verwaltung",
+        "title": "Büro & Verwaltung",
+        "jobId": "verwaltungsfachangestellter"
+      },
+      {
+        "id": "outdoor",
+        "title": "Draußen & Technik",
+        "jobId": "strassenwaerter"
+      }
+    ]
+  },
+  "questionnaire": {
+    "questions": [
+      {
+        "id": "environment",
+        "question": "Wo fühlst du dich wohl?",
+        "options": [
+          {
+            "id": "outdoor",
+            "label": "Draußen bei Wind & Wetter",
+            "icon": "🌲",
+            "imageUrl": "https://source.unsplash.com/featured/?nature,road",
+            "score": {
+              "strassenwaerter": 2,
+              "umwelttechnologe": 2,
+              "verwaltungsfachangestellter": 0,
+              "dualesstudium": 0
+            }
+          },
+          {
+            "id": "office",
+            "label": "Im modernen Büro",
+            "icon": "🏢",
+            "imageUrl": "https://source.unsplash.com/featured/?office,modern",
+            "score": {
+              "strassenwaerter": 0,
+              "umwelttechnologe": 0,
+              "verwaltungsfachangestellter": 2,
+              "dualesstudium": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "workstyle",
+        "question": "Ein Problem taucht auf. Du...",
+        "options": [
+          {
+            "id": "handson",
+            "label": "Packst selbst mit an",
+            "icon": "🔧",
+            "imageUrl": "https://source.unsplash.com/featured/?work,tools",
+            "score": {
+              "strassenwaerter": 2,
+              "umwelttechnologe": 2,
+              "verwaltungsfachangestellter": 0,
+              "dualesstudium": 0
+            }
+          },
+          {
+            "id": "organize",
+            "label": "Koordinierst & organisierst",
+            "icon": "📋",
+            "imageUrl": "https://source.unsplash.com/featured/?planning,meeting",
+            "score": {
+              "strassenwaerter": 0,
+              "umwelttechnologe": 0,
+              "verwaltungsfachangestellter": 2,
+              "dualesstudium": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "focus",
+        "question": "Was treibt dich an?",
+        "options": [
+          {
+            "id": "people",
+            "label": "Menschen helfen & beraten",
+            "icon": "🤝",
+            "imageUrl": "https://source.unsplash.com/featured/?helping,service",
+            "score": {
+              "verwaltungsfachangestellter": 2,
+              "dualesstudium": 2,
+              "strassenwaerter": 0,
+              "umwelttechnologe": 1
+            }
+          },
+          {
+            "id": "environment",
+            "label": "Umwelt & Infrastruktur",
+            "icon": "🌍",
+            "imageUrl": "https://source.unsplash.com/featured/?environment,infrastructure",
+            "score": {
+              "strassenwaerter": 2,
+              "umwelttechnologe": 2,
+              "verwaltungsfachangestellter": 0,
+              "dualesstudium": 1
+            }
+          }
+        ]
+      }
+    ],
+    "suggestionText": {
+      "headline": "Dein Landkreis-Match:",
+      "startButtonText": "Ausbildung entdecken",
+      "viewAllButtonText": "Alle Jobs",
+      "skipButtonText": "Überspringen"
+    }
+  },
+  "jobs": [
+    {
+      "id": "verwaltungsfachangestellter",
+      "title": "Verwaltungsfachangestellte/r (w/m/d)",
+      "description": "Berate Bürger:innen, bearbeite Anträge und gestalte die digitale Verwaltung mit. 3 Jahre, Uelzen. 📋🤝",
+      "icon": "📋",
+      "color": "#1a5c38",
+      "tags": [
+        "🏛️ Öffentlicher Dienst",
+        "🤝 Bürgerkontakt",
+        "💻 Digitalisierung",
+        "📚 Weiterbildung"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Willkommen im Kreishaus",
+          "status": "unlocked",
+          "icon": "👋",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hey! 💚 Willkommen beim Landkreis Uelzen. Wir sind für 93.000 Menschen da – vom Führerschein bis zur Baugenehmigung. Eine Bürgerin ruft an: Sie braucht dringend einen neuen Personalausweis für ihre Urlaubsreise nächste Woche. Was machst du?",
+              "imageUrl": "https://source.unsplash.com/featured/?government,office",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich sage, das geht nicht so schnell. 🤷",
+                  "correct": false,
+                  "feedback": "Hmm, lieber erstmal prüfen! Es gibt Express-Optionen."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich prüfe die Express-Optionen & erkläre den Prozess. ✅",
+                  "correct": true,
+                  "feedback": "Genau! 🎯 Service-Orientierung ist bei uns alles. Es gibt tatsächlich einen Express-Service!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Sozialamt",
+          "status": "locked",
+          "icon": "🤝",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Im Sozialamt hilfst du Menschen in schwierigen Situationen. Eine alleinerziehende Mutter kommt zu dir – sie hat ihren Job verloren und weiß nicht, wie sie die Miete zahlen soll. Wie gehst du vor?",
+              "imageUrl": "https://source.unsplash.com/featured/?help,social",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich höre ihr erstmal zu und zeige Verständnis.",
+                "Ich sage ihr sofort, welche Formulare sie braucht.",
+                "Ich schicke sie zum Jobcenter."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Die Frau sagt unter Tränen: 'Ich weiß einfach nicht mehr weiter. Meine Kinder brauchen neue Winterjacken und ich kann kaum noch Essen kaufen.' Was antwortest du?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Digitalisierung",
+          "status": "locked",
+          "icon": "💻",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Die Verwaltung wird digital! 🚀 Dein Amt führt ein neues Online-Portal ein, über das Bürger:innen Anträge stellen können. Ein älterer Kollege hat Bedenken: 'Das wird doch nie funktionieren!' Wie reagierst du?",
+              "imageUrl": "https://source.unsplash.com/featured/?digital,computer",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich biete an, ihm das System zu zeigen.",
+                "Ich sage, er soll sich nicht so anstellen.",
+                "Ich ignoriere seine Bedenken."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Dein Kollege sagt: 'In meinem Alter lerne ich das doch nicht mehr. Außerdem kommen dann ja noch weniger Menschen persönlich vorbei.' Was sagst du dazu?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Dein Benefits-Paket",
+          "status": "locked",
+          "icon": "🎁",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Stark gemacht! 💪 Beim Landkreis Uelzen bekommst du mehr als nur einen Job. Check das aus:",
+              "imageUrl": "https://source.unsplash.com/featured/?benefits,happy",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Work-Life-Balance",
+                  "value": "30 Tage Urlaub & flexible Gleitzeit.",
+                  "icon": "⚖️",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Hansefit",
+                  "value": "Fitness & Wellness deutschlandweit.",
+                  "icon": "💪",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Sicherheit",
+                  "value": "Krisensicherer Job im öffentlichen Dienst.",
+                  "icon": "🔒",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Vergütung",
+                  "value": "Tarifgehalt TVöD + Jahressonderzahlung (Weihnachtsgeld).",
+                  "icon": "💶",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Ziemlich gut, oder? Was spricht dich am meisten an?",
+              "imageUrl": "https://source.unsplash.com/featured/?choice",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Die Sicherheit & Stabilität 🔒",
+                  "feedback": "Verständlich! Der öffentliche Dienst ist krisensicher."
+                },
+                {
+                  "id": 2,
+                  "text": "Die Work-Life-Balance ⚖️",
+                  "feedback": "Klasse! Wir sind mehrfach mit dem Familiensiegel ausgezeichnet."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Aufstieg",
+          "status": "locked",
+          "icon": "📈",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nach der Ausbildung kannst du dich zum Verwaltungsfachwirt weiterbilden und in den gehobenen Dienst aufsteigen. Welcher Bereich reizt dich?",
+              "imageUrl": "https://source.unsplash.com/featured/?career,success",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Personalwesen & Organisation 👥",
+                  "feedback": "Spannend! Du sorgst dafür, dass das Team funktioniert."
+                },
+                {
+                  "id": 2,
+                  "text": "Finanzen & Haushalt 💰",
+                  "feedback": "Wichtig! Du verwaltest die Gelder des Landkreises."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Studium",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du willst mehr? Wir unterstützen berufsbegleitende Studiengänge oder du startest direkt mit unserem dualen Studium Verwaltungswissenschaften.",
+              "imageUrl": "https://source.unsplash.com/featured/?university,study",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Erst Ausbildung, dann Studium. 📚",
+                  "feedback": "Guter Plan! Mit Praxiserfahrung studiert es sich besser."
+                },
+                {
+                  "id": 2,
+                  "text": "Ich will direkt dual studieren! 🚀",
+                  "feedback": "Ambitioniert! Schau dir unseren Studiengang an."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🏁",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit für den Landkreis Uelzen? 💚 Schick deine Bewerbung an Sebastian Arning oder komm erst mal zum Schnupperpraktikum!",
+              "imageUrl": "https://source.unsplash.com/featured/?start,beginning",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Bewerbung geht raus! 📨",
+                  "feedback": "Super! Mail an ausbildung@landkreis-uelzen.de oder ruf Sebastian an (0581-82 2999)!"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich will erst ein Praktikum machen. 🔍",
+                  "feedback": "Gerne! Schülerpraktika sind jederzeit möglich. Melde dich einfach!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dualesstudium",
+      "title": "Duales Studium Verwaltungswissenschaften (w/m/d)",
+      "description": "Studiere an der Hochschule und arbeite beim Landkreis – der direkte Weg in den gehobenen Dienst. 3 Jahre, Uelzen & Hannover. 🎓💼",
+      "icon": "🎓",
+      "color": "#2c3e50",
+      "tags": [
+        "🎓 Bachelor of Arts",
+        "💼 Gehobener Dienst",
+        "📚 Theorie & Praxis",
+        "💶 Vergütung während Studium"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Studium + Praxis",
+          "status": "unlocked",
+          "icon": "📚",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hey! 🎓 Als Kreisinspektoranwärter:in studierst du Verwaltungswissenschaften und arbeitest parallel beim Landkreis. Du bist gerade in der Praxisphase im Bauamt. Ein Architekt ruft an – er versteht den Bebauungsplan nicht. Was tust du?",
+              "imageUrl": "https://source.unsplash.com/featured/?architecture,planning",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich sage, er soll einen Termin machen. 📅",
+                  "correct": false,
+                  "feedback": "Hmm, vielleicht kannst du ja schon erstmal helfen?"
+                },
+                {
+                  "id": 2,
+                  "text": "Ich höre zu, prüfe die Unterlagen und erkläre die wichtigsten Punkte. 🔍",
+                  "correct": true,
+                  "feedback": "Perfekt! 🎯 Du nutzt dein Fachwissen aus dem Studium direkt in der Praxis!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Projektarbeit",
+          "status": "locked",
+          "icon": "📊",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Im Studium lernst du Projektmanagement. Jetzt sollst du für den Landkreis ein Konzept erstellen: Wie können wir mehr junge Menschen für die Verwaltung begeistern? Dein Dezernent will in einer Woche Ergebnisse sehen.",
+              "imageUrl": "https://source.unsplash.com/featured/?brainstorm,project",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich starte mit einer Umfrage unter Schüler:innen.",
+                "Ich schaue mir an, was andere Landkreise machen.",
+                "Ich schlage Social-Media-Kampagnen vor."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Dein Dezernent fragt: 'Was glaubst du, warum junge Leute oft nicht an den öffentlichen Dienst denken?' Was antwortest du?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Haushaltsrecht",
+          "status": "locked",
+          "icon": "💰",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Im Finanzamt lernst du, wie öffentliche Gelder verwaltet werden. Der Kämmerer erklärt dir: 'Wir haben 5 Millionen Euro weniger als geplant. Wo können wir sparen?' Deine Idee?",
+              "imageUrl": "https://source.unsplash.com/featured/?finance,budget",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Weniger in Digitalisierung investieren.",
+                "Prüfen, welche Projekte verschoben werden können.",
+                "Personal abbauen."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Der Kämmerer sagt: 'Wir wollen auf keinen Fall bei Bildung und Sozialem sparen. Das ist uns als Landkreis wichtig.' Welche Bereiche könntest du dir anschauen?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Dein Studien-Paket",
+          "status": "locked",
+          "icon": "🎒",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Studieren UND Geld verdienen? Bei uns geht das! 🎉 Check deine Vorteile:",
+              "imageUrl": "https://source.unsplash.com/featured/?student,happy",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Bezahlung",
+                  "value": "Anwärterbezüge während des gesamten Studiums.",
+                  "icon": "💶",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Karriere",
+                  "value": "Direkter Einstieg in den gehobenen Dienst.",
+                  "icon": "🚀",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Hochschule",
+                  "value": "Studium an der HSVN in Hannover.",
+                  "icon": "🏛️",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Übernahme",
+                  "value": "Sehr hohe Übernahmechancen nach dem Studium.",
+                  "icon": "✅",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Führung",
+          "status": "locked",
+          "icon": "👔",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Mit dem Bachelor hast du alle Möglichkeiten. Viele unserer Führungskräfte haben so angefangen. Welcher Bereich interessiert dich?",
+              "imageUrl": "https://source.unsplash.com/featured/?leadership",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Amtsleitung & Personalverantwortung 👥",
+                  "feedback": "Perfekt für Führungstalente!"
+                },
+                {
+                  "id": 2,
+                  "text": "Projektmanagement & Strategie 📊",
+                  "feedback": "Gestalte die Zukunft des Landkreises mit!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Master",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du willst noch höher hinaus? Ein Master-Studium öffnet dir Türen zum höheren Dienst.",
+              "imageUrl": "https://source.unsplash.com/featured/?graduation",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Erst Berufserfahrung sammeln. 💼",
+                  "feedback": "Clever! Praxis macht vieles klarer."
+                },
+                {
+                  "id": 2,
+                  "text": "Direkt den Master dranhängen! 📚",
+                  "feedback": "Ambitioniert! Wir unterstützen dich dabei."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Ready für Studium & Karriere? 🎓 Bewirb dich bis Ende September für den Start im nächsten August!",
+              "imageUrl": "https://source.unsplash.com/featured/?start,university",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich bewerbe mich! 📨",
+                  "feedback": "Top! Mail an ausbildung@landkreis-uelzen.de. Fragen? Ruf Sebastian an (0581-82 2999)!"
+                },
+                {
+                  "id": 2,
+                  "text": "Was brauche ich für die Bewerbung? 📋",
+                  "feedback": "Abitur oder Fachhochschulreife, Anschreiben, Lebenslauf und dein letztes Zeugnis. Das war's!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "strassenwaerter",
+      "title": "Straßenwärter/in (w/m/d)",
+      "description": "Halte die Straßen des Landkreises in Schuss – Winterdienst, Grünpflege und Verkehrssicherheit. 3 Jahre, Uelzen & Region. 🚧🛣️",
+      "icon": "🛣️",
+      "color": "#e67e22",
+      "tags": [
+        "🚜 Schwere Technik",
+        "🌲 Draußen arbeiten",
+        "🚗 LKW-Führerschein inklusive",
+        "❄️ Winterdienst"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Raus auf die Straße",
+          "status": "unlocked",
+          "icon": "🚧",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Moin! 🛣️ Als Straßenwärter:in sorgst du dafür, dass 370 km Kreisstraßen sicher sind. Es ist November, der erste Frost kommt. Dein Meister sagt: 'Morgen früh um 4 Uhr Winterdienst!' Was packst du ein?",
+              "imageUrl": "https://source.unsplash.com/featured/?winter,road",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Sonnenbrille und Flip-Flops 🩴",
+                  "correct": false,
+                  "feedback": "Hmm, das wird kalt! Warme Arbeitskleidung ist Pflicht."
+                },
+                {
+                  "id": 2,
+                  "text": "Warme Kleidung, Thermoskanne und gute Laune ☕",
+                  "correct": true,
+                  "feedback": "Genau! 🎯 Früh aufstehen lohnt sich – du machst die Straßen für alle sicher!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Grünpflege",
+          "status": "locked",
+          "icon": "🌳",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Sommer heißt: Grünpflege! Die Hecken an der Kreisstraße 12 wachsen in die Fahrbahn. Du hast den Freischneider dabei. Was ist vor dem Start wichtig?",
+              "imageUrl": "https://source.unsplash.com/featured/?hedge,cutting",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Schutzausrüstung anlegen!",
+                "Einfach loslegen, Zeit ist Geld.",
+                "Erst mal Pause machen."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Dein Kollege fragt: 'Hast du gecheckt, ob hinter der Hecke ein Radweg ist? Da könnten Steine fliegen...' Was antwortest du?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Baustelle",
+          "status": "locked",
+          "icon": "🚜",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Eine Kreisstraße hat ein tiefes Schlagloch. Ihr müsst es schnell reparieren, damit kein Unfall passiert. Der Bauhof-LKW ist beladen. Was kommt zuerst?",
+              "imageUrl": "https://source.unsplash.com/featured/?road,repair",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Baustelle absichern mit Schildern und Pylonen.",
+                "Direkt mit der Reparatur anfangen.",
+                "Warten bis weniger Verkehr ist."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Dein Meister sagt: 'Gut gemacht mit der Absicherung! Jetzt das Loch reinigen und mit Kaltasphalt auffüllen. Weißt du, warum wir das Loch erst reinigen müssen?'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Deine Vorteile",
+          "status": "locked",
+          "icon": "🎁",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Klasse Arbeit! 🚧 Check mal, was du bei uns bekommst:",
+              "imageUrl": "https://source.unsplash.com/featured/?truck,driver",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Führerschein",
+                  "value": "LKW-Führerschein C/CE – wir zahlen das!",
+                  "icon": "🚛",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Motorsäge",
+                  "value": "Motorsägen- & Freischneider-Schein inklusive.",
+                  "icon": "🪚",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Team",
+                  "value": "Arbeiten in einem starken Trupp.",
+                  "icon": "👷",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Natur",
+                  "value": "Jeden Tag draußen in der Lüneburger Heide.",
+                  "icon": "🌲",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Was findest du am coolsten?",
+              "imageUrl": "https://source.unsplash.com/featured/?choice",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Der LKW-Führerschein! 🚛",
+                  "feedback": "Richtig nice! Den kannst du auch privat nutzen."
+                },
+                {
+                  "id": 2,
+                  "text": "Draußen arbeiten in der Natur! 🌲",
+                  "feedback": "Die Lüneburger Heide ist dein Büro – nicht schlecht, oder?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Meister",
+          "status": "locked",
+          "icon": "🏆",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Nach der Ausbildung kannst du den Meister machen und selbst ein Team leiten. Was reizt dich?",
+              "imageUrl": "https://source.unsplash.com/featured/?leader,team",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Straßenmeister werden! 🛣️",
+                  "feedback": "Top! Du leitest dann eine eigene Straßenmeisterei."
+                },
+                {
+                  "id": 2,
+                  "text": "Spezialisierung auf Winterdienst ❄️",
+                  "feedback": "Wichtig! Du koordinierst den Einsatz bei Schnee und Eis."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Techniker",
+          "status": "locked",
+          "icon": "🔧",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du willst noch mehr Technik? Als staatlich geprüfter Techniker planst du selbst Straßenbauprojekte.",
+              "imageUrl": "https://source.unsplash.com/featured/?engineer,planning",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Tiefbau-Techniker 🏗️",
+                  "feedback": "Perfekt! Du planst Straßen und Brücken."
+                },
+                {
+                  "id": 2,
+                  "text": "Erst mal Berufserfahrung sammeln. 👷",
+                  "feedback": "Gute Entscheidung! Praxis ist das beste Fundament."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit für echte Arbeit draußen? 🛣️ Die Kreisstraßenmeisterei in Uelzen freut sich auf dich!",
+              "imageUrl": "https://source.unsplash.com/featured/?road,sunrise",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich bewerbe mich! 📨",
+                  "feedback": "Stark! Mail an ausbildung@landkreis-uelzen.de. Für Fragen: Sebastian Arning (0581-82 2999)!"
+                },
+                {
+                  "id": 2,
+                  "text": "Kann ich vorher reinschnuppern? 👀",
+                  "feedback": "Klar! Ein Schülerpraktikum bei der Straßenmeisterei ist jederzeit möglich."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "umwelttechnologe",
+      "title": "Umwelttechnologe für Kreislauf- und Abfallwirtschaft (w/m/d)",
+      "description": "Sorge für saubere Umwelt – vom Wertstoffhof bis zum Entsorgungszentrum. 3 Jahre, Uelzen & Borg. ♻️🌍",
+      "icon": "♻️",
+      "color": "#27ae60",
+      "tags": [
+        "🌍 Umweltschutz",
+        "🚛 Technik & Logistik",
+        "♻️ Recycling",
+        "🔬 Labor & Analyse"
+      ],
+      "pathModeId": "branching",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Welcome to Recycling",
+          "status": "unlocked",
+          "icon": "♻️",
+          "row": 0,
+          "nextLevelIds": [2, 3],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Hey! ♻️ Als Umwelttechnologe sorgst du dafür, dass aus Müll wieder Rohstoffe werden. Du bist am Wertstoffhof in Oldenstadt. Ein Bürger will einen alten Kühlschrank abgeben. Was ist wichtig?",
+              "imageUrl": "https://source.unsplash.com/featured/?recycling,waste",
+              "type": "single-select-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Einfach auf den Haufen werfen 🤷",
+                  "correct": false,
+                  "feedback": "Stopp! Kühlschränke enthalten Kühlmittel – die müssen separat entsorgt werden!"
+                },
+                {
+                  "id": 2,
+                  "text": "Prüfen, ob das Kühlmittel schon abgesaugt wurde ❄️",
+                  "correct": true,
+                  "feedback": "Genau! 🎯 Umweltschutz heißt: Gefahrstoffe richtig behandeln. Guter Start!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mission: Deponie Borg",
+          "status": "locked",
+          "icon": "🏭",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Im Entsorgungszentrum Borg überwachst du die Deponie. Ein LKW liefert Bauschutt an – aber du siehst etwas Verdächtiges zwischen den Steinen. Wie reagierst du?",
+              "imageUrl": "https://source.unsplash.com/featured/?landfill,construction",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Ich halte den LKW an und prüfe die Ladung.",
+                "Ich lasse ihn abladen, wird schon passen.",
+                "Ich rufe meinen Vorgesetzten."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Du findest in der Ladung Dosen mit unbekannter Flüssigkeit. Der Fahrer sagt: 'Ach, das ist nur Altöl von der Baustelle.' Was machst du jetzt?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Mission: Probenanalyse",
+          "status": "locked",
+          "icon": "🔬",
+          "row": 1,
+          "nextLevelIds": [4],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Teil deiner Arbeit: Umweltproben nehmen und analysieren. Heute nimmst du Sickerwasser-Proben an der Deponie. Warum ist das wichtig?",
+              "imageUrl": "https://source.unsplash.com/featured/?laboratory,water",
+              "type": "llm-interactive",
+              "options": [],
+              "initialQuickReplies": [
+                "Um zu prüfen, ob Schadstoffe ins Grundwasser gelangen.",
+                "Weil es Vorschrift ist.",
+                "Keine Ahnung, machen wir halt so."
+              ],
+              "conversationHistory": [
+                {
+                  "role": "assistant",
+                  "content": "Richtig! Die Proben zeigen, ob unsere Abdichtung funktioniert. Heute sind die Werte leicht erhöht. Was könnten Gründe sein?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Dein Umwelt-Paket",
+          "status": "locked",
+          "icon": "🎁",
+          "row": 2,
+          "nextLevelIds": [5, 6],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Starke Sache! 🌍 Du machst echten Umweltschutz – und bekommst dafür einiges:",
+              "imageUrl": "https://source.unsplash.com/featured/?nature,green",
+              "type": "bento-grid",
+              "options": [],
+              "facts": [
+                {
+                  "title": "Sinn",
+                  "value": "Echter Beitrag zum Umwelt- und Klimaschutz.",
+                  "icon": "🌱",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                },
+                {
+                  "title": "Technik",
+                  "value": "Arbeiten mit modernen Maschinen und Labortechnik.",
+                  "icon": "🔬",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Abwechslung",
+                  "value": "Wertstoffhof, Deponie, Labor – kein Tag wie der andere.",
+                  "icon": "🔄",
+                  "layout": { "colSpan": 1, "rowSpan": 1 }
+                },
+                {
+                  "title": "Zukunft",
+                  "value": "Kreislaufwirtschaft ist DAS Thema der Zukunft.",
+                  "icon": "🚀",
+                  "layout": { "colSpan": 2, "rowSpan": 1 }
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "scenario": "Was motiviert dich am meisten?",
+              "imageUrl": "https://source.unsplash.com/featured/?motivation",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Etwas für die Umwelt tun! 🌍",
+                  "feedback": "Genau dafür brauchen wir dich!"
+                },
+                {
+                  "id": 2,
+                  "text": "Die Technik und Vielfalt! 🔬",
+                  "feedback": "Von Bagger bis Labor – hier wird's nie langweilig."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Weg: Meister",
+          "status": "locked",
+          "icon": "🏆",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Mit dem Meister für Kreislauf- und Abfallwirtschaft leitest du eigene Teams und Projekte. Was interessiert dich?",
+              "imageUrl": "https://source.unsplash.com/featured/?supervisor,team",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Betriebsleitung Wertstoffhof 🏭",
+                  "feedback": "Du organisierst den gesamten Betrieb!"
+                },
+                {
+                  "id": 2,
+                  "text": "Deponiemanagement 📊",
+                  "feedback": "Verantwortung für sichere Entsorgung – wichtiger Job!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Weg: Studium",
+          "status": "locked",
+          "icon": "🎓",
+          "row": 3,
+          "nextLevelIds": [7],
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Du willst mehr Theorie? Umwelttechnik oder Verfahrenstechnik – mit der Ausbildung hast du gute Grundlagen.",
+              "imageUrl": "https://source.unsplash.com/featured/?environmental,science",
+              "type": "single-select-no-correct",
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Umwelttechnik studieren! 🌍",
+                  "feedback": "Perfekt! Du wirst zum Experten für nachhaltige Technologien."
+                },
+                {
+                  "id": 2,
+                  "text": "Erstmal in der Praxis bleiben. 👷",
+                  "feedback": "Auch gut! Erfahrung ist unbezahlbar."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Dein Start",
+          "status": "locked",
+          "icon": "🚀",
+          "row": 4,
+          "scenarios": [
+            {
+              "id": 1,
+              "scenario": "Bereit für echten Umweltschutz? ♻️ Der Abfallwirtschaftsbetrieb des Landkreises Uelzen wartet auf dich!",
+              "imageUrl": "https://source.unsplash.com/featured/?environment,future",
+              "type": "single-select-or-text",
+              "allowTextInput": true,
+              "options": [
+                {
+                  "id": 1,
+                  "text": "Ich bewerbe mich! 📨",
+                  "feedback": "Super! Mail an ausbildung@landkreis-uelzen.de. Ansprechpartner: Sebastian Arning (0581-82 2999)!"
+                },
+                {
+                  "id": 2,
+                  "text": "Kann ich ein Praktikum machen? 👀",
+                  "feedback": "Na klar! Am Wertstoffhof Oldenstadt oder im Entsorgungszentrum Borg. Melde dich einfach!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copy": {
+    "checkChances": "Check deine Chancen",
+    "expressApply": "Express Kontakt",
+    "jobMerken": "Job speichern",
+    "submit": "Ergebnis anzeigen",
+    "submitSuccess": "Klasse! Wir melden uns.",
+    "victoryHeadline": "It's a Match! 💚",
+    "victorySubtext": "Du passt super zu uns beim Landkreis Uelzen.",
+    "nudgeHeadline": "Dranbleiben!",
+    "nudgeText": "Beende den Check und finde deinen Traumjob.",
+    "firstName": "Vorname",
+    "phoneType": "Handynummer",
+    "schoolType": "Schulabschluss",
+    "android": "Android",
+    "iphone": "iPhone",
+    "realschule": "Realschule",
+    "gymnasium": "Abi / Fachabi",
+    "hauptschule": "Hauptschule",
+    "andere": "Anderer",
+    "expressApplyIntro": "Lass deine Nummer da – wir rufen dich an oder schreiben dir!",
+    "exploreOtherJobs": "Andere Berufe ansehen"
+  }
+}
